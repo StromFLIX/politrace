@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+import type { Program, TreeNode, Criterion } from '../lib/types';
+interface Props { node: TreeNode; program: Program; criteria: Criterion[]; depth?: number }
+const { node, program, criteria, depth = 0 } = Astro.props;
+---
+<div class="tree"><details open={depth < 2} id={node.id}><summary>{node.title}</summary>
+{node.leaf_ids.map(id => { const leaf = program.leaves.find(p => p.id === id)!; const linked = criteria.filter(c => c.leaf_id === id); return <article class="tree-leaf" id={leaf.id}><div class="leaf-header"><span>PDF-Seite {leaf.reference.page}</span><span>Markdown L{leaf.reference.line_start}–L{leaf.reference.line_end}</span></div><p>{leaf.text}</p>{linked.map(c => <a href={`/${program.dataset}/kriterien/${c.id}/`} class="text-link"><Icon name="check" size={13} /> {c.title} <Icon name="arrow" size={12} /></a>)}{!linked.length && <small class="subtle-link" style="font-size:10px;margin-top:10px">{program.criteria_extraction?.find(a => a.leaf_id === id)?.abstention_reason || 'Noch kein prüfbares Kriterium zugeordnet.'}</small>}</article>; })}
+{node.children.map(child => <Astro.self node={child} program={program} criteria={criteria} depth={depth + 1} />)}
+</details></div>
+<script>
+  function reveal() {
+    let anchor: string;
+    try { anchor = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    let element = document.getElementById(anchor);
+    if (!element) return;
+    while (element) {
+      if (element instanceof HTMLDetailsElement) element.open = true;
+      element = element.parentElement;
+    }
+  }
+  reveal(); window.addEventListener('hashchange', reveal);
+</script>

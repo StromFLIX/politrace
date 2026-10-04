@@ -1,0 +1,39 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "short_name": {
+      "title": "Short Name",
+      "type": "string"
+    },
+    "color": {
+      "pattern": "^#[a-fA-F0-9]{6}$",
+      "title": "Color",
+      "type": "string"
+    },
+    "website": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Website",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "short_name",
+    "color",
+    "website"
+  ],
+  "title": "Party",
+  "type": "object"
+}

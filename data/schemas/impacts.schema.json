@@ -1,0 +1,185 @@
+{
+  "$defs": {
+    "Generation": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt_version": {
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "input_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "prompt_version",
+        "input_sha256"
+      ],
+      "title": "Generation",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "reviewed",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "Review",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "dataset": {
+      "enum": [
+        "demo",
+        "live"
+      ],
+      "title": "Dataset",
+      "type": "string"
+    },
+    "criterion_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Criterion Id",
+      "type": "string"
+    },
+    "law_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Law Id",
+      "type": "string"
+    },
+    "score": {
+      "enum": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "title": "Score",
+      "type": "integer"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "rationale": {
+      "minLength": 15,
+      "title": "Rationale",
+      "type": "string"
+    },
+    "law_passage_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Law Passage Id",
+      "type": "string"
+    },
+    "law_quote": {
+      "minLength": 10,
+      "title": "Law Quote",
+      "type": "string"
+    },
+    "criterion_quote": {
+      "minLength": 10,
+      "title": "Criterion Quote",
+      "type": "string"
+    },
+    "caveats": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Caveats",
+      "type": "array"
+    },
+    "verification": {
+      "enum": [
+        "passed",
+        "needs_review"
+      ],
+      "title": "Verification",
+      "type": "string"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    },
+    "generation": {
+      "items": {
+        "$ref": "#/$defs/Generation"
+      },
+      "title": "Generation",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "dataset",
+    "criterion_id",
+    "law_id",
+    "score",
+    "confidence",
+    "rationale",
+    "law_passage_id",
+    "law_quote",
+    "criterion_quote",
+    "verification"
+  ],
+  "title": "Impact",
+  "type": "object"
+}

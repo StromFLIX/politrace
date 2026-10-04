@@ -1,0 +1,35 @@
+---
+import Icon from './Icon.astro';
+import Stats from './Stats.astro';
+import PartyCard from './PartyCard.astro';
+import PeriodSwitch from './PeriodSwitch.astro';
+import { metrics, formatDate, repoUrl } from '../lib/data';
+import type { Data } from '../lib/types';
+interface Props { data: Data }
+const { data } = Astro.props;
+const years = [...new Set(data.programs.filter(p => p.review.status !== 'rejected').map(p => p.election_year))].sort((a, b) => b - a);
+if (!years.length) years.push(2025);
+---
+<section class="hero">
+  <div><div class="eyebrow"><span class="blue-dot" /> Politik. Nachvollziehbar.</div><h1>Vom Versprechen<br />zur <span>Wirklichkeit.</span></h1><p class="hero-description">Was Parteien versprechen, steht im Wahlprogramm.<br />Was davon ankommt, machen wir sichtbar. Mit klaren Kriterien, echten Quellen und einem offenen Blick.</p><div class="hero-links"><a href="#parteien" class="text-link">Parteien entdecken <Icon name="chevron" size={15} /></a><a href="/methodik/" class="subtle-link"><Icon name="info" size={15} /> Wie wir prüfen</a></div></div>
+  <div class="hero-diagram" aria-label="Wahlprogramm wird in Kriterien aufgeteilt und mit Gesetzesbelegen verglichen"><div class="diagram-label"><span>Jedes Versprechen hat eine Spur</span><Icon name="branch" size={13} /></div><div class="diagram-node"><span class="node-icon"><Icon name="file" size={19} /></span><div><strong>Das Wahlprogramm</strong><small>Originalquelle, strukturiert & zitierbar</small></div><span class="node-number">01</span></div><div class="diagram-connector">IN PRÜFBARE ZUSAGEN ÜBERSETZT</div><div class="diagram-node"><span class="node-icon"><Icon name="check" size={20} /></span><div><strong>Das konkrete Kriterium</strong><small>Was müsste tatsächlich passieren?</small></div><span class="node-number">02</span></div><div class="diagram-connector">MIT BELEGEN ABGEGLICHEN</div><div class="diagram-node"><span class="node-icon"><Icon name="parties" size={19} /></span><div><strong>Die gesetzliche Wirkung</strong><small>Unterstützt, widerspricht – oder offen</small></div><span class="node-number">03</span></div></div>
+</section>
+{years.map((year, index) => {
+  const programs = data.programs.filter(p => p.election_year === year && p.review.status !== 'rejected');
+  const criteria = data.criteria.filter(c => programs.some(p => p.id === c.program_id));
+  const stats = metrics(criteria, data.impacts, programs);
+  return <section data-period-panel={year} hidden={index !== 0}>
+    <Stats items={[
+      { value: new Set(programs.map(p => p.party_id)).size, label: 'Parteien mit Programm', detail: `Bundestagswahl ${year}`, icon: 'parties' },
+      { value: stats.total, label: 'Prüfbare Kriterien', detail: 'Jede Zusage einzeln nachvollziehbar', icon: 'check' },
+      { value: data.laws.length, label: 'Gesetze im Datensatz', detail: data.dataset === 'demo' ? 'Fiktive Beispiele, alle Zeiträume' : 'Amtliche Verkündungen, alle Zeiträume', icon: 'file' },
+      { value: stats.coverage === null ? '—' : `${stats.coverage}%`, label: 'Belegabdeckung', detail: `${stats.covered} von ${stats.total} Kriterien mit geprüften Links`, icon: 'shield' },
+    ]} />
+    <div class="section-heading" id={index === 0 ? 'parteien' : undefined}><div><h2>Versprechen im Überblick</h2><p>Keine Rangliste. Ein offener Blick auf jede Partei.</p></div><div class="heading-side"><PeriodSwitch years={years} selected={year} /></div></div>
+    <div class="party-grid">{data.parties.map(party => <PartyCard party={party} year={year} data={data} />)}</div>
+    <div class="legend"><span><i style="--dot:#389574" /> Erfüllt</span><span><i style="--dot:#769be8" /> Teilweise erfüllt</span><span><i style="--dot:#d99858" /> Widersprochen</span><span><i style="--dot:#e5e9ef" /> Offen / nicht bewertet</span></div>
+    <p class="method-note"><Icon name="info" size={14} />Die Zählung berücksichtigt nur redaktionell geprüfte Erfüllungsbewertungen. Fehlende Belege sind kein gebrochenes Versprechen. Regierungsverantwortung, Zeit und externe Faktoren müssen mitgelesen werden.</p>
+  </section>;
+})}
+<div class="bottom-grid"><section class="latest-panel"><div class="section-heading"><h2>Zuletzt im Gesetzblatt</h2><a class="text-link" href={`/${data.dataset}/aktivitaet/`}>Alle Aktivitäten <Icon name="arrow" size={14} /></a></div>{data.laws.slice(0, 3).map(law => <a class="latest-item" href={`/${data.dataset}/gesetze/${law.id}/`}><span class="latest-icon"><Icon name="file" size={17} /></span><div><h3>{law.title}</h3><small>{formatDate(law.published_at)} · {data.dataset === 'demo' ? 'Beispielgesetz' : 'Verkündet'}</small></div><Icon name="chevron" size={15} /></a>)}{!data.laws.length && <p>Noch keine Gesetze importiert.</p>}</section><section class="trust-panel"><Icon name="shield" size={24} /><h2>Vertrauen braucht Belege.</h2><p>KI hilft uns, Zusammenhänge zu finden. Sie hat nicht das letzte Wort. Jede Zuordnung ist einsehbar, jede Quelle verlinkt und jede Korrektur willkommen.</p><a href="/methodik/" class="text-link">Unsere Methodik kennenlernen <Icon name="arrow" size={15} /></a></section></div>
+<section class="contribute-banner"><div><h2>Politik ist öffentlich. Unsere Daten auch.</h2><p>Eine Zuordnung fehlt? Eine Bewertung stimmt nicht? Hilf mit, die Spur zu vervollständigen.</p></div><a class="button dark" href={`${repoUrl}/blob/main/CONTRIBUTING.md`}><Icon name="github" size={17} /> Auf GitHub mitwirken <Icon name="arrow" size={14} /></a></section>

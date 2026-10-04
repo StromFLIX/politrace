@@ -1,0 +1,94 @@
+name: Propose new laws & evidence
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Maximum new laws (1–100)
+        default: '10'
+        type: string
+      since:
+        description: Optional oldest publication date (YYYY-MM-DD)
+        type: string
+      budget:
+        description: Maximum reserved OpenRouter USD per run
+        default: '5'
+        type: string
+  # Daily schedule intentionally awaits the operator's clock time + IANA timezone.
+  # Set both cron and timezone when supplied; see docs/pipelines.md.
+
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: politrace-data-updates
+  cancel-in-progress: false
+jobs:
+  propose:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Preserve an already open data review (never overwrite its edits)
+        id: pending
+        env:
+          GH_TOKEN: ${{ secrets.DATA_PR_TOKEN || github.token }}
+        run: |
+          count=$(gh pr list --repo "$GITHUB_REPOSITORY" --head data/law-feed --state open --json number --jq 'length')
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [ "$count" -gt 0 ]; then echo 'An existing data PR awaits review. No sources or model calls made.' >> "$GITHUB_STEP_SUMMARY"; fi
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        if: steps.pending.outputs.count == '0'
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - name: Restore validated model responses
+        if: steps.pending.outputs.count == '0'
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/llm
+          key: llm-laws-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            llm-laws-
+            llm-programs-
+      - if: steps.pending.outputs.count == '0'
+        run: uv sync --frozen
+      - name: Import → retrieve → judge → challenge → validate
+        if: steps.pending.outputs.count == '0'
+        run: uv run python scripts/workflow_entry.py laws
+        env:
+          INPUT_LIMIT: ${{ inputs.limit || '10' }}
+          INPUT_SINCE: ${{ inputs.since }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
+          OPENROUTER_REVIEW_MODEL: ${{ vars.OPENROUTER_REVIEW_MODEL || 'openai/gpt-4.1-mini' }}
+          POLITRACE_MAX_USD: ${{ inputs.budget || '5' }}
+          POLITRACE_MAX_CALLS: ${{ vars.POLITRACE_MAX_CALLS || '200' }}
+      - name: Cache completed calls even after a budget stop
+        if: always() && steps.pending.outputs.count == '0'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/llm
+          key: llm-laws-${{ github.run_id }}-${{ github.run_attempt }}
+      - if: success() && steps.pending.outputs.count == '0'
+        run: uv run pytest
+      - name: Open a PR only when canonical data changed
+        if: success() && steps.pending.outputs.count == '0'
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          token: ${{ secrets.DATA_PR_TOKEN || github.token }}
+          branch: data/law-feed
+          base: main
+          add-paths: data/live/**
+          commit-message: 'data: propose official laws and evidence links'
+          title: 'data: new law publications and proposed evidence'
+          body: |
+            Automated proposals from the official Bundesgesetzblatt I feed.
+            - Exact source quotations and graph contracts validated in this run.
+            - AI links remain `proposed`; no automatic fulfilment assessments or voting guesses.
+            - Inspect source PDFs, legal context, comparison windows and the retrieval omissions.
+            - Do not auto-merge. Citizen corrections on this open PR are preserved: later runs wait.
+            - See the workflow summary for source counts and reserved model budget.
+          delete-branch: true

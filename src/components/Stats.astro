@@ -1,0 +1,6 @@
+---
+import Icon from './Icon.astro';
+interface Props { items: { value: number | string; label: string; detail: string; icon: string }[] }
+const { items } = Astro.props;
+---
+<div class="stats-strip">{items.map(item => <div class="stat"><div class="stat-top"><span class="stat-value">{item.value}</span><Icon name={item.icon} size={19} /></div><div class="stat-label">{item.label}</div><div class="stat-detail">{item.detail}</div></div>)}</div>

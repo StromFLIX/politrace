@@ -1,0 +1,64 @@
+name: Validate & test
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run politrace validate
+      - name: Ensure published JSON Schemas are current
+        run: |
+          uv run politrace schemas
+          git diff --exit-code -- data/schemas
+      - run: uv run pytest
+      - run: npm ci --no-audit --no-fund
+      - run: npm audit --audit-level=high
+      - run: npm test
+      - run: npm run build
+        env:
+          ASTRO_TELEMETRY_DISABLED: '1'
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - name: Build and smoke-test the production Compose stack
+        run: |
+          docker compose config --quiet
+          docker compose up --build --wait --wait-timeout 180
+          curl --fail http://127.0.0.1:8080/api/health.json
+          curl --fail http://127.0.0.1:8080/api/v1/live/laws.json
+          status=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/api/v1/live/missing.json)
+          test "$status" = "404"
+      - name: Container diagnostics
+        if: failure()
+        run: docker compose logs --no-color
+      - name: Browser diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 7
+      - if: always()
+        run: docker compose down

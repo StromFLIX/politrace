@@ -1,0 +1,8 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PartyOverview from '../../../components/PartyOverview.astro';
+import { datasets, getData } from '../../../lib/data';
+export function getStaticPaths() { return datasets.map(dataset => ({ params: { dataset }, props: { data: getData(dataset) } })); }
+const { data } = Astro.props;
+---
+<Layout title="Parteien im Überblick" active="parties" dataset={data.dataset}><PartyOverview data={data} /></Layout>

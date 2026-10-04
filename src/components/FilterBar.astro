@@ -1,0 +1,58 @@
+---
+import Icon from './Icon.astro';
+import { topics, statusLabels } from '../lib/data';
+import type { Party } from '../lib/types';
+interface Props { parties?: Party[]; mode?: 'criteria' | 'activity'; placeholder?: string }
+const { parties = [], mode = 'criteria', placeholder = 'Kriterien, Themen oder Schlagworte suchen …' } = Astro.props;
+const statuses = mode === 'criteria' ? statusLabels : { linked: 'Mit Verknüpfungen', pending: 'Noch ohne Verknüpfung' };
+---
+<form class="filters" data-filters role="search">
+  <label class="search-field"><Icon name="search" size={18} /><span class="sr-only">Suche</span><input type="search" name="q" placeholder={placeholder} autocomplete="off" /></label>
+  <select name="thema" aria-label="Thema"><option value="">Alle Themen</option>{Object.entries(topics).map(([id, label]) => <option value={id}>{label}</option>)}</select>
+  {parties.length > 0 && <select name="partei" aria-label="Partei"><option value="">Alle Parteien</option>{parties.map(p => <option value={p.id}>{p.short_name}</option>)}</select>}
+  <select name="status" aria-label="Status"><option value="">Alle Status</option>{Object.entries(statuses).map(([id, label]) => <option value={id}>{label}</option>)}</select>
+</form>
+<noscript><p class="notice">Die Suche benötigt JavaScript. Alle Einträge sind darunter vollständig lesbar.</p></noscript>
+<script>
+  const normalize = (text: string) => text.toLocaleLowerCase('de').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('ß', 'ss');
+  document.querySelectorAll<HTMLElement>('[data-filter-root]').forEach(root => {
+    const form = root.querySelector<HTMLFormElement>('[data-filters]');
+    if (!form) return;
+    const items = root.querySelectorAll<HTMLElement>('[data-filter-item]');
+    const controls = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
+    const params = new URLSearchParams(location.search);
+    controls.forEach(control => {
+      const value = params.get(control.name);
+      if (value && (!(control instanceof HTMLSelectElement) || [...control.options].some(o => o.value === value))) control.value = value;
+    });
+    function filter(update: boolean) {
+      const data = new FormData(form!);
+      const words = normalize(String(data.get('q') || '')).split(/\s+/).filter(Boolean);
+      const topic = String(data.get('thema') || '');
+      const party = String(data.get('partei') || '');
+      const status = String(data.get('status') || '');
+      let visible = 0;
+      items.forEach(item => {
+        const matches = words.every(word => normalize(item.dataset.search || '').includes(word)) &&
+          (!topic || (item.dataset.topic || '').split(' ').includes(topic)) &&
+          (!party || (item.dataset.party || '').split(' ').includes(party)) &&
+          (!status || item.dataset.status === status);
+        item.hidden = !matches;
+        if (matches) visible++;
+      });
+      const count = root.querySelector('[data-result-count]');
+      if (count) count.textContent = `${visible} von ${items.length} Einträgen`;
+      const empty = root.querySelector<HTMLElement>('[data-no-results]');
+      if (empty) empty.hidden = visible !== 0;
+      if (update) {
+        const url = new URL(location.href);
+        controls.forEach(control => control.value ? url.searchParams.set(control.name, control.value) : url.searchParams.delete(control.name));
+        history.replaceState(null, '', url);
+      }
+    }
+    form.addEventListener('submit', event => { event.preventDefault(); filter(true); });
+    form.addEventListener('input', () => filter(true));
+    form.addEventListener('change', () => filter(true));
+    filter(false);
+  });
+</script>

@@ -1,0 +1,8 @@
+---
+import type { metrics } from '../lib/metrics';
+interface Props { stats: ReturnType<typeof metrics> }
+const { stats } = Astro.props;
+---
+<div class="meter" role="img" aria-label={`${stats.fulfilled} erfüllt, ${stats.partial} teilweise erfüllt, ${stats.contradicted} widersprochen, ${stats.unknown} offen`}>
+  <span class="fulfilled" style={`flex:${stats.fulfilled}`} /><span class="partial" style={`flex:${stats.partial}`} /><span class="contradicted" style={`flex:${stats.contradicted}`} /><span class="unassessed" style={`flex:${stats.unknown || (stats.total ? 0 : 1)}`} />
+</div>

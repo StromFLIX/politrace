@@ -1,0 +1,35 @@
+name: politrace
+
+# Entire production stack: static frontend + versioned, read-only API in one service.
+# In Coolify, set the web service domain to https://politrace.stromflix.com:8080.
+# OpenRouter is used ONLY in GitHub Actions. Never pass it to this stack.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        POLITRACE_DATASET: ${POLITRACE_DATASET:-auto}
+    restart: unless-stopped
+    expose:
+      - "8080"
+    ports:
+      - "127.0.0.1:${PORT:-8080}:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/api/health.json"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

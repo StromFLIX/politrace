@@ -1,0 +1,20 @@
+---
+import Icon from './Icon.astro';
+import Meter from './Meter.astro';
+import { metrics } from '../lib/metrics';
+import type { Data, Party } from '../lib/types';
+interface Props { party: Party; year: number; data: Data }
+const { party, year, data } = Astro.props;
+const programs = data.programs.filter(p => p.party_id === party.id && p.election_year === year && p.review.status !== 'rejected');
+const criteria = data.criteria.filter(c => programs.some(p => p.id === c.program_id));
+const stats = metrics(criteria, data.impacts, programs);
+---
+<a class="party-card" href={`/${data.dataset}/parteien/${party.id}/?jahr=${year}`} style={`--party:${party.color}`} aria-label={`${party.short_name}: Partei und Kriterien ansehen`}>
+  <div class="party-card-top"><span class="party-logo">{party.short_name}</span><span class="program-year"><Icon name="file" size={12} /> {year}</span></div>
+  <h3>Wahlversprechen im Check</h3>
+  <div class="metric-line"><span class="metric-big">{stats.total ? String(stats.fulfilled).padStart(2, '0') : '—'}</span><span class="metric-denom">/ {stats.total || '—'}</span></div>
+  <div class="metric-caption">{stats.total ? 'Kriterien nachweislich erfüllt' : 'Noch kein Programm importiert'}</div>
+  <Meter stats={stats} />
+  <div class="card-coverage"><Icon name="shield" size={12} />{stats.covered} von {stats.total} mit geprüften Gesetzesbelegen</div>
+  <div class="party-card-bottom"><span>Partei im Detail</span><Icon name="arrow" size={16} /></div>
+</a>

@@ -1,0 +1,295 @@
+{
+  "$defs": {
+    "Assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "unassessed",
+          "enum": [
+            "unassessed",
+            "partial",
+            "fulfilled",
+            "contradicted"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "rationale": {
+          "default": "Noch keine redaktionelle Bewertung.",
+          "title": "Rationale",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "assessed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Assessed At"
+        },
+        "evidence_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "title": "Assessment",
+      "type": "object"
+    },
+    "Generation": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt_version": {
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "input_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "prompt_version",
+        "input_sha256"
+      ],
+      "title": "Generation",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "reviewed",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "Review",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "page",
+        "line_start",
+        "line_end",
+        "quote"
+      ],
+      "title": "Span",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "dataset": {
+      "enum": [
+        "demo",
+        "live"
+      ],
+      "title": "Dataset",
+      "type": "string"
+    },
+    "program_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Program Id",
+      "type": "string"
+    },
+    "party_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Party Id",
+      "type": "string"
+    },
+    "leaf_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Leaf Id",
+      "type": "string"
+    },
+    "title": {
+      "maxLength": 240,
+      "minLength": 5,
+      "title": "Title",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 10,
+      "title": "Description",
+      "type": "string"
+    },
+    "test": {
+      "minLength": 10,
+      "title": "Test",
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "enum": [
+          "arbeit",
+          "wirtschaft",
+          "steuern",
+          "soziales",
+          "klima",
+          "energie",
+          "mobilitaet",
+          "wohnen",
+          "bildung",
+          "gesundheit",
+          "migration",
+          "digitales",
+          "demokratie",
+          "sicherheit",
+          "europa"
+        ],
+        "type": "string"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "title": "Tags",
+      "type": "array"
+    },
+    "keywords": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 15,
+      "title": "Keywords",
+      "type": "array"
+    },
+    "reference": {
+      "$ref": "#/$defs/Span"
+    },
+    "deadline": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deadline"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    },
+    "assessment": {
+      "$ref": "#/$defs/Assessment"
+    },
+    "generation": {
+      "items": {
+        "$ref": "#/$defs/Generation"
+      },
+      "title": "Generation",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "dataset",
+    "program_id",
+    "party_id",
+    "leaf_id",
+    "title",
+    "description",
+    "test",
+    "tags",
+    "reference"
+  ],
+  "title": "Criterion",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+---
+import { impactLabels } from '../lib/data';
+interface Props { score: number }
+const { score } = Astro.props;
+const colors = ['#bc6666', '#d5a66f', '#b5becc', '#80aba3', '#419076'];
+---
+<div class="impact-scale" role="img" aria-label={`Gesetzeswirkung: ${score > 0 ? '+' : ''}${score} von −2 bis +2, ${impactLabels[score]}`}><div class="scale-track" aria-hidden="true">{[-2, -1, 0, 1, 2].map((n, i) => <span class:list={[{ selected: n === score }]} style={`background:${colors[i]}`} />)}</div><div class="scale-labels" aria-hidden="true"><span>−2 · widerspricht</span><span>0 · gemischt</span><span>+2 · setzt um</span></div></div>

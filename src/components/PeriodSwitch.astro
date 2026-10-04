@@ -1,0 +1,21 @@
+---
+interface Props { years: number[]; selected: number }
+const { years, selected } = Astro.props;
+---
+<label class="select-wrap">Programm <select data-period-select aria-label="Programmjahr">{years.map(year => <option value={year} selected={year === selected}>Bundestagswahl {year}</option>)}</select></label>
+<script>
+  const switches = document.querySelectorAll<HTMLSelectElement>('[data-period-select]');
+  const panels = document.querySelectorAll<HTMLElement>('[data-period-panel]');
+  function choose(year: string, updateUrl: boolean) {
+    if (![...panels].some(p => p.dataset.periodPanel === year)) return;
+    panels.forEach(panel => panel.hidden = panel.dataset.periodPanel !== year);
+    switches.forEach(input => input.value = year);
+    if (updateUrl) {
+      const url = new URL(window.location.href); url.searchParams.set('jahr', year);
+      history.replaceState(null, '', url);
+    }
+  }
+  const initial = new URLSearchParams(location.search).get('jahr');
+  if (initial) choose(initial, false);
+  switches.forEach(input => input.addEventListener('change', () => choose(input.value, true)));
+</script>

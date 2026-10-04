@@ -1,0 +1,371 @@
+{
+  "$defs": {
+    "Generation": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt_version": {
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "input_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "prompt_version",
+        "input_sha256"
+      ],
+      "title": "Generation",
+      "type": "object"
+    },
+    "Leaf": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/$defs/Span"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "reference"
+      ],
+      "title": "Leaf",
+      "type": "object"
+    },
+    "LeafExtraction": {
+      "additionalProperties": false,
+      "properties": {
+        "leaf_id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Leaf Id",
+          "type": "string"
+        },
+        "criterion_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+            "type": "string"
+          },
+          "title": "Criterion Ids",
+          "type": "array"
+        },
+        "abstention_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Abstention Reason"
+        },
+        "generation": {
+          "$ref": "#/$defs/Generation"
+        }
+      },
+      "required": [
+        "leaf_id",
+        "criterion_ids",
+        "abstention_reason",
+        "generation"
+      ],
+      "title": "LeafExtraction",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "reviewed",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "Review",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "license_note": {
+          "default": "Rights remain with the source publisher; quotations for verification.",
+          "title": "License Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "title",
+        "publisher",
+        "retrieved_at"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "page",
+        "line_start",
+        "line_end",
+        "quote"
+      ],
+      "title": "Span",
+      "type": "object"
+    },
+    "TreeNode": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "children": {
+          "items": {
+            "$ref": "#/$defs/TreeNode"
+          },
+          "title": "Children",
+          "type": "array"
+        },
+        "leaf_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+            "type": "string"
+          },
+          "title": "Leaf Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ],
+      "title": "TreeNode",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "dataset": {
+      "enum": [
+        "demo",
+        "live"
+      ],
+      "title": "Dataset",
+      "type": "string"
+    },
+    "party_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Party Id",
+      "type": "string"
+    },
+    "election_year": {
+      "maximum": 2100,
+      "minimum": 1949,
+      "title": "Election Year",
+      "type": "integer"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "published_at": {
+      "format": "date",
+      "title": "Published At",
+      "type": "string"
+    },
+    "period_start": {
+      "format": "date",
+      "title": "Period Start",
+      "type": "string"
+    },
+    "period_end": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Period End"
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    },
+    "markdown_path": {
+      "title": "Markdown Path",
+      "type": "string"
+    },
+    "leaves": {
+      "items": {
+        "$ref": "#/$defs/Leaf"
+      },
+      "minItems": 1,
+      "title": "Leaves",
+      "type": "array"
+    },
+    "tree": {
+      "$ref": "#/$defs/TreeNode"
+    },
+    "criteria_extraction": {
+      "items": {
+        "$ref": "#/$defs/LeafExtraction"
+      },
+      "title": "Criteria Extraction",
+      "type": "array"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    },
+    "generation": {
+      "items": {
+        "$ref": "#/$defs/Generation"
+      },
+      "title": "Generation",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "dataset",
+    "party_id",
+    "election_year",
+    "title",
+    "published_at",
+    "period_start",
+    "source",
+    "markdown_path",
+    "leaves",
+    "tree"
+  ],
+  "title": "Program",
+  "type": "object"
+}

@@ -1,0 +1,224 @@
+{
+  "$defs": {
+    "GroupVote": {
+      "additionalProperties": false,
+      "properties": {
+        "group": {
+          "title": "Group",
+          "type": "string"
+        },
+        "party_id": {
+          "anyOf": [
+            {
+              "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Party Id"
+        },
+        "yes": {
+          "minimum": 0,
+          "title": "Yes",
+          "type": "integer"
+        },
+        "no": {
+          "minimum": 0,
+          "title": "No",
+          "type": "integer"
+        },
+        "abstain": {
+          "minimum": 0,
+          "title": "Abstain",
+          "type": "integer"
+        },
+        "absent": {
+          "minimum": 0,
+          "title": "Absent",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "group",
+        "yes",
+        "no",
+        "abstain",
+        "absent"
+      ],
+      "title": "GroupVote",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "reviewed",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "Review",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "license_note": {
+          "default": "Rights remain with the source publisher; quotations for verification.",
+          "title": "License Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "title",
+        "publisher",
+        "retrieved_at"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "dataset": {
+      "enum": [
+        "demo",
+        "live"
+      ],
+      "title": "Dataset",
+      "type": "string"
+    },
+    "law_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Law Id",
+      "type": "string"
+    },
+    "date": {
+      "format": "date",
+      "title": "Date",
+      "type": "string"
+    },
+    "motion": {
+      "title": "Motion",
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "roll_call",
+        "group_record"
+      ],
+      "title": "Type",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    },
+    "groups": {
+      "items": {
+        "$ref": "#/$defs/GroupVote"
+      },
+      "minItems": 1,
+      "title": "Groups",
+      "type": "array"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    }
+  },
+  "required": [
+    "id",
+    "dataset",
+    "law_id",
+    "date",
+    "motion",
+    "type",
+    "source",
+    "groups",
+    "review"
+  ],
+  "title": "Vote",
+  "type": "object"
+}

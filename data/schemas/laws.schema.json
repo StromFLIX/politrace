@@ -1,0 +1,369 @@
+{
+  "$defs": {
+    "Leaf": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "reference": {
+          "$ref": "#/$defs/Span"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "reference"
+      ],
+      "title": "Leaf",
+      "type": "object"
+    },
+    "MatchAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "no_programs",
+            "no_candidates",
+            "proposed",
+            "no_supported_links",
+            "needs_ocr"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "retrieval_version": {
+          "default": "bm25-de-v1",
+          "title": "Retrieval Version",
+          "type": "string"
+        },
+        "candidate_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+            "type": "string"
+          },
+          "title": "Candidate Ids",
+          "type": "array"
+        },
+        "eligible_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Eligible Count",
+          "type": "integer"
+        },
+        "omitted_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Omitted Count",
+          "type": "integer"
+        },
+        "criteria_sha256": {
+          "default": "",
+          "title": "Criteria Sha256",
+          "type": "string"
+        },
+        "analysis_sha256": {
+          "default": "",
+          "title": "Analysis Sha256",
+          "type": "string"
+        },
+        "note": {
+          "default": "No match is not evidence of no impact.",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "MatchAudit",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "reviewed",
+            "rejected"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reviewer": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewer"
+        },
+        "reviewed_at": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reviewed At"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "title": "Review",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "retrieved_at": {
+          "format": "date",
+          "title": "Retrieved At",
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "license_note": {
+          "default": "Rights remain with the source publisher; quotations for verification.",
+          "title": "License Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "title",
+        "publisher",
+        "retrieved_at"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "Span": {
+      "additionalProperties": false,
+      "properties": {
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "page",
+        "line_start",
+        "line_end",
+        "quote"
+      ],
+      "title": "Span",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "dataset": {
+      "enum": [
+        "demo",
+        "live"
+      ],
+      "title": "Dataset",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "official_title": {
+      "title": "Official Title",
+      "type": "string"
+    },
+    "published_at": {
+      "format": "date",
+      "title": "Published At",
+      "type": "string"
+    },
+    "status": {
+      "const": "promulgated",
+      "default": "promulgated",
+      "title": "Status",
+      "type": "string"
+    },
+    "kind": {
+      "default": "law",
+      "enum": [
+        "law",
+        "regulation",
+        "correction"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "citation": {
+      "title": "Citation",
+      "type": "string"
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    },
+    "pdf_url": {
+      "anyOf": [
+        {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Pdf Url"
+    },
+    "markdown_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Markdown Path"
+    },
+    "text_status": {
+      "enum": [
+        "available",
+        "needs_ocr"
+      ],
+      "title": "Text Status",
+      "type": "string"
+    },
+    "passages": {
+      "items": {
+        "$ref": "#/$defs/Leaf"
+      },
+      "title": "Passages",
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "enum": [
+          "arbeit",
+          "wirtschaft",
+          "steuern",
+          "soziales",
+          "klima",
+          "energie",
+          "mobilitaet",
+          "wohnen",
+          "bildung",
+          "gesundheit",
+          "migration",
+          "digitales",
+          "demokratie",
+          "sicherheit",
+          "europa"
+        ],
+        "type": "string"
+      },
+      "title": "Tags",
+      "type": "array"
+    },
+    "summary": {
+      "title": "Summary",
+      "type": "string"
+    },
+    "matching": {
+      "$ref": "#/$defs/MatchAudit"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    }
+  },
+  "required": [
+    "id",
+    "dataset",
+    "title",
+    "official_title",
+    "published_at",
+    "citation",
+    "source",
+    "text_status",
+    "summary"
+  ],
+  "title": "Law",
+  "type": "object"
+}

@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PartyOverview from '../components/PartyOverview.astro';
+import { getData, defaultDataset } from '../lib/data';
+const dataset = defaultDataset();
+---
+<Layout title="Vom Versprechen zur Wirklichkeit" active="parties" dataset={dataset}><PartyOverview data={getData(dataset)} /></Layout>
