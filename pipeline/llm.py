@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import re
 import time
 from pathlib import Path
 from threading import Lock
@@ -60,7 +61,25 @@ class ProviderError(RuntimeError):
             if pattern in message:
                 self.category = category
                 break
+        # Credit errors can distinguish an invalid key from an oversized preflight reservation.
+        # Extract only bounded integers; never include the provider's free-form message in logs.
+        self.requested_output_tokens = self._tokens(message, r'requested (?:up to )?([\d,]+) tokens')
+        self.affordable_output_tokens = self._tokens(message, r'(?:can only afford|can afford) ([\d,]+)')
         super().__init__(f'OpenRouter returned HTTP {status_code} ({self.category}); check model access and limits')
+
+    @staticmethod
+    def _tokens(message, pattern):
+        match = re.search(pattern, message)
+        if match:
+            value = int(match[1].replace(',', ''))
+            if 0 <= value <= 10_000_000:
+                return value
+        return None
+
+    def safe_details(self):
+        return {'http_status': self.status_code, 'category': self.category,
+                'requested_output_tokens': self.requested_output_tokens,
+                'affordable_output_tokens': self.affordable_output_tokens}
 
 
 class Agent:
@@ -87,6 +106,28 @@ class Agent:
         self.subdivision_cache_hits = 0
         self._budget_lock = Lock()
         self.client = client or httpx.Client(timeout=httpx.Timeout(180, connect=15))
+
+    def key_status(self):
+        """Non-secret diagnostic flags only: never expose labels, key material or account balances."""
+        if not self.key:
+            return {'key_configured': False}
+        try:
+            response = self.client.get('https://openrouter.ai/api/v1/key',
+                                       headers={'Authorization': f'Bearer {self.key}'})
+            if response.is_error:
+                return {'key_configured': True, 'diagnostic_http_status': response.status_code}
+            data = response.json()['data']
+            remaining = data.get('limit_remaining')
+            known = (isinstance(remaining, (int, float)) and not isinstance(remaining, bool)
+                     and math.isfinite(remaining))
+            reset = data.get('limit_reset')
+            return {'key_configured': True, 'diagnostic_http_status': response.status_code,
+                    'key_has_spending_limit': data.get('limit') is not None,
+                    'key_limit_exhausted': remaining <= 0 if known else None,
+                    'key_limit_covers_run_budget': remaining >= self.max_usd if known else None,
+                    'limit_reset': reset if reset in ('daily', 'weekly', 'monthly') else None}
+        except (httpx.TransportError, KeyError, TypeError, ValueError):
+            return {'key_configured': True, 'diagnostic_unavailable': True}
 
     @property
     def reserved_usd(self):

@@ -9,7 +9,7 @@ from typing import Literal
 
 from pipeline.archive import ingest_archive
 from pipeline.catalog import load_catalog
-from pipeline.llm import Agent
+from pipeline.llm import Agent, ProviderError
 from pipeline.models import Model
 from pipeline.programs import extract_criteria, ingest_program
 from pipeline.store import ROOT, load_records, validate_store, write_json
@@ -80,11 +80,14 @@ if __name__ == "__main__":
     logging.getLogger('pipeline').setLevel(logging.INFO)
     target = os.environ.get("BACKFILL_TARGET") or sys.argv[1]
     agent = None if target == 'laws' else Agent(cache=ROOT / '.cache' / 'llm')
+    if agent:
+        report(target + '-provider-check', {'provider_check': agent.key_status()})
     try:
         result = run(target, agent=agent)
     except Exception as error:
         # Report charges and outstanding exposure separately, never free-form provider bodies.
         report(target, {'status': 'failed', 'error_type': type(error).__name__,
+                        'provider_error': error.safe_details() if isinstance(error, ProviderError) else None,
                         'budget': agent.summary() if agent else None})
         raise
     report(target, result)
