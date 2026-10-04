@@ -1,5 +1,6 @@
 {
   "request": "compare-current-models-on-identical-source-paragraphs",
-  "attempt": 2,
-  "note": "Operator requested a task-specific cost/quality check before the bulk retry. Compare Gemini 3.8 Flash and Claude Sonnet 5.5 on six inspected official-source paragraphs, with $0.50 maximum exposure per model. No automatic model promotion, political approval or canonical publication."
+  "attempt": 3,
+  "models": ["google/gemini-3.8-flash", "openai/gpt-5.6-luna"],
+  "note": "The inspected Sonnet 5.5 baseline is saved under docs/model-evaluations; do not pay to repeat it. Diagnose the Flash HTTP 400 and compare another current lower-cost model on the same version-2 sample, with $0.50 maximum exposure per model. No automatic model promotion, political approval or canonical publication."
 }

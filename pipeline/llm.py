@@ -44,12 +44,18 @@ class ProviderError(RuntimeError):
         self.status_code = status_code
         error = body.get('error') if isinstance(body, dict) else None
         message = str(error.get('message', '')).lower() if isinstance(error, dict) else ''
+        metadata = error.get('metadata') if isinstance(error, dict) else None
+        if isinstance(metadata, dict):
+            # Providers often wrap the useful reason in metadata.raw. Classify it in memory;
+            # never return/log this free-form text or any nested request/credential material.
+            message += ' ' + str(metadata.get('raw', '')).lower()
         self.category = 'unspecified'
         for pattern, category in [
             ('data policy', 'privacy_policy'), ('data collection', 'privacy_policy'),
             ('not a valid model', 'invalid_model'), ('no endpoints', 'no_eligible_route'),
-            ('reasoning', 'reasoning_parameters'), ('schema', 'schema_parameters'),
-            ('credits', 'credits'), ('rate limit', 'rate_limit'),
+            ('reasoning', 'reasoning_parameters'), ('thinking', 'reasoning_parameters'),
+            ('schema', 'schema_parameters'), ('credits', 'credits'), ('rate limit', 'rate_limit'),
+            ('invalid_argument', 'invalid_parameters'),
         ]:
             if pattern in message:
                 self.category = category

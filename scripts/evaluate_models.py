@@ -22,7 +22,7 @@ from pipeline.models import Program, Source, TreeNode
 from pipeline.programs import extract_criteria
 from pipeline.store import ROOT, digest, load_records, save_record, validate_store, write_json
 
-MODELS = ['google/gemini-3.8-flash', 'anthropic/claude-sonnet-5.5']
+ALLOWED_MODELS = {'google/gemini-3.8-flash', 'anthropic/claude-sonnet-5.5', 'openai/gpt-5.6-luna'}
 # Stable source IDs and page numbers, checked against the inspected official PDF edition.
 CASES = [
     ('contents', 'gruene-2025-p-168d109017e0ae8b', 4, 'Inhaltsverzeichnis', True),
@@ -135,9 +135,13 @@ def evaluate(model, prepared):
 
 
 def main():
+    config = json.loads((ROOT / '.github' / 'backfills' / 'model-evaluation.json').read_text())
+    models = config.get('models', ['google/gemini-3.8-flash', 'anthropic/claude-sonnet-5.5'])
+    if not 1 <= len(models) <= 2 or len(set(models)) != len(models) or not set(models) <= ALLOWED_MODELS:
+        raise ValueError('Select one or two explicitly supported comparison models')
     prepared = prepare()
     with ThreadPoolExecutor(max_workers=2) as pool:
-        results = list(pool.map(lambda model: evaluate(model, prepared), MODELS))
+        results = list(pool.map(lambda model: evaluate(model, prepared), models))
     report = {'sample_version': 2, 'source_url': str(prepared[0].pdf_url),
               'source_sha256': prepared[0].sha256,
               'limitations': 'Six deliberately selected paragraphs from one programme, not a balanced benchmark. '
