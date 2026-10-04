@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import math
 import re
 from collections import Counter, defaultdict
@@ -13,6 +14,8 @@ from pipeline.llm import PROMPT_VERSION, Agent
 from pipeline.models import Impact, MatchAudit, Model
 from pipeline.store import digest, json_text, load_records, save_record, stable_id, write_json
 
+logger = logging.getLogger(__name__)
+MATCHING_VERSION = 'evidence-links-v2'
 STEMMER = snowballstemmer.stemmer("german")
 STOP = set("der die das ein eine einer eines und oder ist sind wird werden mit für von im in an auf zu des den dem "
            "als nach über durch zum zur sich bei auch nicht nur sowie es wir soll sollen mehr diesem diese".split())
@@ -129,25 +132,41 @@ class Verification(Model):
     caveats: list[str]
 
 
-def match_laws(*, root: Path, agent: Agent, per_program=6):
+def match_laws(*, root: Path, agent: Agent, per_program=6, law_ids=None, limit=None):
     if not 1 <= per_program <= 50:
         raise ValueError("per_program must be between 1 and 50")
+    if limit is not None and (isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 2000):
+        raise ValueError("Matching limit must be between 1 and 2000 laws")
     criteria = load_records(root, "live", "criteria")
     programs = load_records(root, "live", "programs")
     laws = load_records(root, "live", "laws")
+    if law_ids is not None:
+        by_id = {law.id: law for law in laws}
+        if not law_ids or len(set(law_ids)) != len(law_ids) or not set(law_ids) <= by_id.keys():
+            raise ValueError("Select unique existing law IDs; an empty selection is not an exhaustive run")
+        laws = [by_id[identifier] for identifier in law_ids]
+    else:
+        # New publications first; unchanged laws do not consume a batch slot on later runs.
+        laws.sort(key=lambda law: (law.published_at, law.id), reverse=True)
     existing = {(i.criterion_id, i.law_id) for i in load_records(root, "live", "impacts")}
     corpus_hash = digest(json_text({"criteria": [c.model_dump(mode="json") for c in criteria],
                                   "periods": [p.model_dump(mode="json", exclude={"leaves", "tree"})
                                               for p in programs], "per_program": per_program}))
-    created = 0
+    created, candidate_pairs_checked = 0, 0
+    processed, unchanged, deferred = [], [], []
     for law in laws:
         analysis_hash = digest(json_text({
             "law": law.model_dump(mode="json", exclude={"matching"}),
             "criteria_sha256": corpus_hash, "retrieval_version": "bm25-de-v1",
+            "matching_version": MATCHING_VERSION,
             "prompt_version": PROMPT_VERSION, "model": getattr(agent, "model", None),
             "review_model": getattr(agent, "review_model", None),
         }))
         if law.matching.analysis_sha256 == analysis_hash and law.matching.status != "pending":
+            unchanged.append(law.id)
+            continue
+        if limit is not None and len(processed) >= limit:
+            deferred.append(law.id)
             continue
         eligible = eligible_criteria(law, criteria, programs)
         if law.text_status != "available":
@@ -174,6 +193,17 @@ def match_laws(*, root: Path, agent: Agent, per_program=6):
             passages, truncated = context_for(law, criterion)
             if not passages:
                 continue
+            def check_judgment(result):
+                if not result.supported:
+                    return
+                passage = next((p for p in passages if p.id == result.law_passage_id), None)
+                if (not passage or not result.law_quote or len(result.law_quote) < 10
+                        or result.law_quote not in passage.text):
+                    raise ValueError("Supported law quote must be a verbatim substring of the supplied passage")
+                if (not result.criterion_quote or len(result.criterion_quote) < 10
+                        or result.criterion_quote not in criterion.reference.quote):
+                    raise ValueError("Supported criterion quote must be a verbatim substring of the programme quote")
+
             result, generation = agent.ask(
                 "Judge whether the ACTUAL enacted legal text changes this specific testable commitment. "
                 "Topic similarity alone is not a link. Amendments referring to missing base legislation, "
@@ -185,14 +215,13 @@ def match_laws(*, root: Path, agent: Agent, per_program=6):
                 {"criterion": criterion.model_dump(mode="json"), "law_title": law.official_title,
                  "published_at": str(law.published_at), "partial_law_context": truncated,
                  "passages": [{"id": p.id, "text": p.text} for p in passages]}, Judgment,
+                validator=check_judgment,
             )
+            check_judgment(result)  # Offline agents must satisfy the same source contract.
+            candidate_pairs_checked += 1
             if not result.supported:
                 continue
-            passage = next((p for p in passages if p.id == result.law_passage_id), None)
-            if not passage or not result.law_quote or result.law_quote not in passage.text:
-                raise ValueError(f"Unanchored law quote from model: {law.id}")
-            if not result.criterion_quote or result.criterion_quote not in criterion.reference.quote:
-                raise ValueError(f"Unanchored criterion quote from model: {criterion.id}")
+            passage = next(p for p in passages if p.id == result.law_passage_id)
             verifier, verification_generation = agent.ask(
                 "Independently challenge this proposed link using ONLY the quoted programme and the supplied "
                 "legal context. Check whether the signed effect and magnitude are actually supported, whether "
@@ -200,6 +229,7 @@ def match_laws(*, root: Path, agent: Agent, per_program=6):
                 "Reject topic-only similarity, speculative effects and overclaims. This is NOT human approval.",
                 {"proposal": result.model_dump(mode="json"), "criterion_test": criterion.test,
                  "program_quote": criterion.reference.quote, "partial_law_context": truncated,
+                 "law_title": law.official_title, "published_at": str(law.published_at),
                  "legal_context": [{"id": p.id, "text": p.text} for p in passages]}, Verification, review=True,
             )
             caveats = [*result.caveats, *verifier.caveats]
@@ -224,4 +254,10 @@ def match_laws(*, root: Path, agent: Agent, per_program=6):
         law.matching = audit
         # Only machine-owned retrieval bookkeeping is changed; never human fields, text or prior links.
         write_json(root / "live" / "laws" / f"{law.id}.json", law)
-    return {"new_impacts": created, **agent.summary()}
+        processed.append(law.id)
+        logger.info('%s: completed %s candidate checks, %s new proposed links; %s laws completed in this batch',
+                    law.id, len(candidates), len(staged), len(processed))
+    return {"new_impacts": created, "candidate_pairs_checked": candidate_pairs_checked,
+            "processed_laws": processed, "unchanged_laws": unchanged, "deferred_laws": deferred,
+            "selected_scope_only": law_ids is not None, "scope_complete": not deferred,
+            **agent.summary()}

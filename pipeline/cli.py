@@ -52,6 +52,8 @@ def parser():
     laws.add_argument("--feed-url", default=FEED_URL)
     matching = sub.add_parser("match", help="Cheap retrieval → evidence judgment → second-pass challenge")
     matching.add_argument("--per-program", type=int, default=6)
+    matching.add_argument("--limit", type=int, help="Maximum changed laws in this batch; unchanged audits cost no slot")
+    matching.add_argument("--law-ids", nargs="+", help="Explicit pilot scope; other laws are not marked checked")
     return cli
 
 

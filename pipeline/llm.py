@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import math
 import os
 import re
@@ -15,6 +16,7 @@ from pydantic import BaseModel
 from pipeline.models import Generation
 from pipeline.store import digest, json_text, write_json
 
+logger = logging.getLogger(__name__)
 PROMPT_VERSION = "politrace-evidence-v3"
 DEFAULT_MODEL = "anthropic/claude-sonnet-5.5"
 DEFAULT_REVIEW_MODEL = "openai/gpt-5.6-sol"
@@ -63,6 +65,7 @@ class ProviderError(RuntimeError):
                 break
         # Credit errors can distinguish an invalid key from an oversized preflight reservation.
         # Extract only bounded integers; never include the provider's free-form message in logs.
+        self.upstream_provider_error = bool(isinstance(metadata, dict) and metadata.get('provider_name'))
         self.requested_output_tokens = self._tokens(message, r'requested (?:up to )?([\d,]+) tokens')
         self.affordable_output_tokens = self._tokens(message, r'(?:can only afford|can afford) ([\d,]+)')
         super().__init__(f'OpenRouter returned HTTP {status_code} ({self.category}); check model access and limits')
@@ -78,6 +81,7 @@ class ProviderError(RuntimeError):
 
     def safe_details(self):
         return {'http_status': self.status_code, 'category': self.category,
+                'upstream_provider_error': self.upstream_provider_error,
                 'requested_output_tokens': self.requested_output_tokens,
                 'affordable_output_tokens': self.affordable_output_tokens}
 
@@ -104,6 +108,7 @@ class Agent:
         self.calls = 0
         self.cache_hits = 0
         self.subdivision_cache_hits = 0
+        self.funded_credit_retries = 0
         self._budget_lock = Lock()
         self.client = client or httpx.Client(timeout=httpx.Timeout(180, connect=15))
 
@@ -121,11 +126,24 @@ class Agent:
             known = (isinstance(remaining, (int, float)) and not isinstance(remaining, bool)
                      and math.isfinite(remaining))
             reset = data.get('limit_reset')
-            return {'key_configured': True, 'diagnostic_http_status': response.status_code,
-                    'key_has_spending_limit': data.get('limit') is not None,
-                    'key_limit_exhausted': remaining <= 0 if known else None,
-                    'key_limit_covers_run_budget': remaining >= self.max_usd if known else None,
-                    'limit_reset': reset if reset in ('daily', 'weekly', 'monthly') else None}
+            unlimited = data.get('limit') is None
+            status = {'key_configured': True, 'diagnostic_http_status': response.status_code,
+                      'key_has_spending_limit': not unlimited,
+                      'key_limit_exhausted': remaining <= 0 if known else None,
+                      'key_limit_covers_run_budget': remaining >= self.max_usd if known else (True if unlimited else None),
+                      'limit_reset': reset if reset in ('daily', 'weekly', 'monthly') else None}
+            # A key's configured ceiling and the account's funded balance are different.
+            credits = self.client.get('https://openrouter.ai/api/v1/credits',
+                                      headers={'Authorization': f'Bearer {self.key}'})
+            status['account_diagnostic_http_status'] = credits.status_code
+            if not credits.is_error:
+                account = credits.json()['data']
+                total, used = account.get('total_credits'), account.get('total_usage')
+                if all(isinstance(value, (int, float)) and not isinstance(value, bool)
+                       and math.isfinite(value) for value in (total, used)):
+                    status['account_credit_exhausted'] = total - used <= 0
+                    status['account_credit_covers_run_budget'] = total - used >= self.max_usd
+            return status
         except (httpx.TransportError, KeyError, TypeError, ValueError):
             return {'key_configured': True, 'diagnostic_unavailable': True}
 
@@ -263,7 +281,21 @@ class Agent:
                 time.sleep(2 ** attempt)
                 continue
             if response.is_error or (isinstance(body, dict) and body.get('error')):
-                raise ProviderError(response.status_code, body)
+                error = ProviderError(response.status_code, body)
+                if response.status_code == 402 and attempt < 2:
+                    # Some routes return an upstream/transient credit error despite a funded
+                    # account. Recheck BOTH limits before bounded retry; never retry an actual
+                    # credit exhaustion or raise any cap, and retain unknown-charge exposure.
+                    status = self.key_status()
+                    if (status.get('key_limit_covers_run_budget') is True
+                            and status.get('account_credit_covers_run_budget') is True):
+                        with self._budget_lock:
+                            self.funded_credit_retries += 1
+                        logger.warning('HTTP 402 despite sufficient key/account capacity; bounded retry %s/2',
+                                       attempt + 1)
+                        time.sleep(2 ** attempt)
+                        continue
+                raise error
             try:
                 choice = body["choices"][0]
                 if choice.get("finish_reason") != "stop":
@@ -294,6 +326,7 @@ class Agent:
             return {"model": self.model, "review_model": self.review_model,
                     "calls": self.calls, "cache_hits": self.cache_hits,
                     "subdivision_cache_hits": self.subdivision_cache_hits,
+                    "funded_credit_retries": self.funded_credit_retries,
                     "reported_cost_usd": round(self.reported_cost_usd, 6),
                     "reported_cost_calls": self.reported_cost_calls,
                     "pending_reserved_usd": round(self.pending_reserved_usd, 6),

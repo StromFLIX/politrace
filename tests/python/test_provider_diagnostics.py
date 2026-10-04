@@ -11,6 +11,7 @@ def test_credit_error_reports_only_safe_affordability_integers():
         'This request requires more credits. You requested up to 9,000 tokens, '
         'but can only afford 1,234. PRIVATE provider credential: do-not-print'}})
     assert error.safe_details() == {'http_status': 402, 'category': 'credits',
+                                    'upstream_provider_error': False,
                                     'requested_output_tokens': 9000, 'affordable_output_tokens': 1234}
     assert 'PRIVATE' not in str(error) + json.dumps(error.safe_details())
     nested = ProviderError(402, {'error': {'metadata': {'raw':
@@ -24,7 +25,10 @@ def test_credit_error_reports_only_safe_affordability_integers():
 def test_key_status_never_exposes_financial_or_secret_values(tmp_path, monkeypatch, remaining, exhausted, covers):
     monkeypatch.setenv('OPENROUTER_API_KEY', 'private-unit-test-only')
     def handler(request):
-        assert request.url.path == '/api/v1/key' and request.method == 'GET'
+        assert request.method == 'GET'
+        if request.url.path == '/api/v1/credits':
+            return httpx.Response(200, json={'data': {'total_credits': 200000, 'total_usage': 123456.789}})
+        assert request.url.path == '/api/v1/key'
         return httpx.Response(200, json={'data': {'label': 'private-key-label',
             'key': 'do-not-print', 'usage': 123456.789, 'limit': 100,
             'limit_remaining': remaining, 'limit_reset': 'daily'}})
@@ -33,6 +37,7 @@ def test_key_status_never_exposes_financial_or_secret_values(tmp_path, monkeypat
     assert status['key_limit_exhausted'] is exhausted
     assert status['key_limit_covers_run_budget'] is covers
     assert status['limit_reset'] == 'daily'
+    assert status['account_credit_covers_run_budget'] is True
     for secret in ('private', 'do-not-print', '123456.789'):
         assert secret not in json.dumps(status)
     assert agent.calls == 0

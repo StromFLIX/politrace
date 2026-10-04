@@ -25,7 +25,8 @@ def run(mode):
         options = {'snapshot_fallback': True} if use_archive else {}
         result = importer(root=root, limit=int(os.environ.get("INPUT_LIMIT", "10")),
                           since=date.fromisoformat(since) if since else date(2025, 3, 25), **options)
-        result["matching"] = match_laws(root=root, agent=agent)
+        result["matching"] = match_laws(root=root, agent=agent,
+                                         limit=int(os.environ.get('INPUT_MATCH_LIMIT', '3')))
     elif mode == "program":
         pdf = os.environ["INPUT_PDF"]
         source_url = os.environ["INPUT_SOURCE_URL"]

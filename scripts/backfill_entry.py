@@ -10,6 +10,7 @@ from typing import Literal
 from pipeline.archive import ingest_archive
 from pipeline.catalog import load_catalog
 from pipeline.llm import Agent, ProviderError
+from pipeline.matching import match_laws
 from pipeline.models import Model
 from pipeline.programs import extract_criteria, ingest_program
 from pipeline.store import ROOT, load_records, validate_store, write_json
@@ -19,7 +20,22 @@ class Probe(Model):
     status: Literal["ready"]
 
 
-def run(target, *, root=ROOT / "data", agent=None):
+def pilot_leaves(program, terms):
+    """Explicit, deterministic source-term sample; never select on predicted political effect."""
+    if (not isinstance(terms, list) or not 1 <= len(terms) <= 12
+            or any(not isinstance(term, str) or not 3 <= len(term) <= 80 for term in terms)):
+        raise ValueError('Pilot terms must be 1–12 explicit source terms of 3–80 characters')
+    selected = set()
+    for term in terms:
+        matching = [leaf.id for leaf in program.leaves if term.casefold() in leaf.text.casefold()
+                    and len(leaf.text) >= 80]
+        selected.update(matching[:2])
+    if not selected:
+        raise ValueError('Pilot terms found no source paragraphs; never report an empty pilot as complete')
+    return [leaf.id for leaf in program.leaves if leaf.id in selected]
+
+
+def run(target, *, root=ROOT / "data", agent=None, criteria_terms=None, match_law_ids=None):
     validate_store(root)
     catalog = load_catalog(root)
     if target == "probe":
@@ -59,8 +75,25 @@ def run(target, *, root=ROOT / "data", agent=None):
             shutil.copy(root / 'live' / 'programs' / f'{target}.{extension}', checkpoint / f'{target}.{extension}')
         report(target + '-tree', {'stage': 'complete-tree', **result,
                                  'budget': agent.summary(), 'validation': tree_validation})
+        program = next(p for p in load_records(root, 'live', 'programs') if p.id == target)
+        selected = pilot_leaves(program, criteria_terms) if criteria_terms is not None else None
         result["criteria"] = extract_criteria(root=root, program_id=target, agent=agent,
-                                              batch_size=6, workers=4)
+                                              batch_size=6, workers=4, leaf_ids=selected)
+        result['criteria_scope'] = {'mode': 'source-term-pilot' if selected is not None else 'all-leaves',
+                                    'terms': criteria_terms, 'selected_leaf_ids': selected}
+        validate_store(root)
+        # A completed bounded criteria stage is useful even if the independent law stage fails.
+        proposal = ROOT / '.cache' / 'backfill-criteria' / target
+        for collection in ('programs', 'criteria'):
+            for path in (root / 'live' / collection).glob('*'):
+                if path.suffix in ('.json', '.md'):
+                    destination = proposal / collection / path.name
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy(path, destination)
+        report(target + '-criteria', {'stage': 'complete-selected-criteria', **result,
+                                     'budget': agent.summary()})
+        if match_law_ids is not None:
+            result['matching'] = match_laws(root=root, agent=agent, law_ids=match_law_ids, per_program=6)
         result["budget"] = agent.summary()
     result["validation"] = validate_store(root)
     return result
@@ -82,8 +115,13 @@ if __name__ == "__main__":
     agent = None if target == 'laws' else Agent(cache=ROOT / '.cache' / 'llm')
     if agent:
         report(target + '-provider-check', {'provider_check': agent.key_status()})
+    options = {}
+    if os.environ.get('GITHUB_EVENT_NAME') == 'push':
+        request = json.loads((ROOT / '.github/backfills/bundestag-21.json').read_text())
+        if request.get('scope') == target:
+            options = {key: request[key] for key in ('criteria_terms', 'match_law_ids') if key in request}
     try:
-        result = run(target, agent=agent)
+        result = run(target, agent=agent, **options)
     except Exception as error:
         # Report charges and outstanding exposure separately, never free-form provider bodies.
         report(target, {'status': 'failed', 'error_type': type(error).__name__,

@@ -148,6 +148,16 @@ jobs:
             .cache/backfill-*-tree.json
           include-hidden-files: true
           retention-days: 30
+      - name: Retain completed criterion scope independently of law-stage success
+        if: always() && steps.pending.outputs.count == '0' && hashFiles('.cache/backfill-criteria/**') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: completed-criteria-${{ matrix.target }}
+          path: |
+            .cache/backfill-criteria/
+            .cache/backfill-*-criteria.json
+          include-hidden-files: true
+          retention-days: 30
       - if: success() && steps.pending.outputs.count == '0'
         run: uv run pytest && uv run ruff check .
       - if: success() && steps.pending.outputs.count == '0'
@@ -179,7 +189,10 @@ jobs:
           title: 'data: 21st Bundestag backfill — ${{ matrix.target }}'
           body: |
             Historical, source-backed proposal. See the workflow summary and `data/sources/bundestag-21.json`.
-            All imported records remain proposed. Verify programme transcription/sections, every criterion's
+            All imported records remain proposed. The committed request may select a source-term pilot:
+            consult `criteria_scope`, processed/remaining leaves and selected law IDs in the run summary.
+            A completed pilot is NOT complete manifesto extraction or exhaustive law matching.
+            Verify programme transcription/sections, every criterion's
             observability and verbatim citation, PDF edition and reuse conditions. Law scope is publication
             in BGBl I/II from 2025-03-25, not vote date or entry into force. When GitHub cannot access
             the public search, the dated checked inventory supplies the historical scope; official PDFs
