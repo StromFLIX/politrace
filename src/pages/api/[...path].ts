@@ -66,8 +66,10 @@ export const getStaticPaths: GetStaticPaths = () => {
     }
     for (const law of data.laws) if (law.markdown_path) add(`${prefix}/laws/${law.id}/source.md`, markdown(law.markdown_path, dataset), 'text/markdown; charset=utf-8');
   }
-  const catalog = path.join(dataRoot, 'sources', 'bundestag-21.json');
-  if (fs.existsSync(catalog)) add('v1/sources/bundestag-21.json', JSON.parse(fs.readFileSync(catalog, 'utf8')));
+  const sourcesDir = path.join(dataRoot, 'sources');
+  if (fs.existsSync(sourcesDir)) for (const file of fs.readdirSync(sourcesDir).filter(f => f.endsWith('.json')).sort()) {
+    add(`v1/sources/${file}`, JSON.parse(fs.readFileSync(path.join(sourcesDir, file), 'utf8')));
+  }
   for (const schema of fs.readdirSync(path.join(dataRoot, 'schemas')).filter(f => f.endsWith('.json'))) {
     add(`v1/schemas/${schema}`, JSON.parse(fs.readFileSync(path.join(dataRoot, 'schemas', schema), 'utf8')));
   }
@@ -90,6 +92,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       '/v1/{dataset}/search.json': { get: { operationId: 'getSearchIndex', parameters: [datasetParameter], responses: response('Searchable criteria index') } },
       '/v1/{dataset}/coverage.json': { get: { operationId: 'getCoverage', parameters: [datasetParameter], responses: response('Archive counts, source snapshots and explicit remaining law IDs') } },
       '/v1/sources/bundestag-21.json': { get: { operationId: 'getSourceCatalog', responses: response('21st Bundestag scope, programme URLs, PDF hashes and inspection notes') } },
+      '/v1/sources/laws-bundestag-21.json': { get: { operationId: 'getArchiveInventory', responses: response('Dated, count-reconciled official archive inventory; not a fresh scan on every run') } },
     },
   });
   add('v1/index.json', { schema_version: '1.0', default_dataset: defaultDataset(), datasets: datasets.map(d => `/api/v1/${d}/index.json`), documentation: '/daten/', openapi: '/api/v1/openapi.json', sources: '/api/v1/sources/bundestag-21.json' });

@@ -3,13 +3,14 @@ from __future__ import annotations
 import json
 import logging
 import re
+from collections import deque
 from datetime import date
 from pathlib import Path
 
 from pydantic import Field
 
 from pipeline.documents import download, extract_pdf, pages_to_markdown
-from pipeline.llm import Agent
+from pipeline.llm import Agent, InvalidModelResponse
 from pipeline.models import Criterion, Leaf, LeafExtraction, Model, Program, Source, Span, Topic, TreeNode
 from pipeline.parallel import ordered_map
 from pipeline.store import digest, load_records, save_record, stable_id, tree_paths, write_json
@@ -65,7 +66,9 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
     leaves, provenance, known_paths = [], [], []
     lines = markdown.splitlines()
     completed = 0
-    for batch in chunks(raw_leaves):
+    batches = deque(chunks(raw_leaves))
+    while batches:
+        batch = batches.popleft()
         def group_text(group):
             first, last = batch[group.start], batch[group.end]
             if group.start == group.end:
@@ -76,7 +79,8 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
             cursor = 0
             for group in result.groups:
                 if group.start != cursor or not group.start <= group.end < len(batch):
-                    raise ValueError("Paragraph groups must cover all input blocks once and in order")
+                    raise ValueError(f'Expected the next range to start at {cursor}; received '
+                                     f'[{group.start}, {group.end}] for {len(batch)} blocks (0-based indexes)')
                 if any(not s.strip() or len(s) > 120 for s in group.sections):
                     raise ValueError("Invalid section title")
                 cursor = group.end + 1
@@ -98,20 +102,30 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
                         start = end
                 yield group.model_copy(update={'start': start})
 
-        result, generation = agent.ask(
-            "Structure these numbered PDF layout blocks into a readable section tree and paragraphs. "
-            "Join consecutive fragments of ONE paragraph, not separate policy commitments; PDF line "
-            "wrapping often splits a sentence into many blocks. Preserve ALL blocks, including headers, "
-            "contents, footnotes and rhetoric. Return consecutive inclusive start/end index ranges, "
-            "covering every input index exactly once in input order. A continued paragraph may span pages: "
-            "the importer will split it at PDF page/size boundaries to preserve exact citations. "
-            "Use document headings as section paths "
-            "and reuse existing paths. Never write replacement source text. Contents/front matter should "
-            "be grouped under clearly identified front-matter sections, not substantive policy sections.",
-            {"blocks": [{"index": i, "page": leaf.reference.page, "text": leaf.text}
-                        for i, leaf in enumerate(batch)], "existing_sections": known_paths[-80:]},
-            StructuredParagraphs, validator=check, max_output=9000,
-        )
+        try:
+            result, generation = agent.ask(
+                "Structure these numbered PDF layout blocks into a readable section tree and paragraphs. "
+                "Join consecutive fragments of ONE paragraph, not separate policy commitments; PDF line "
+                "wrapping often splits a sentence into many blocks. Preserve ALL blocks, including headers, "
+                "contents, footnotes and rhetoric. Return consecutive inclusive start/end index ranges, "
+                "covering every input index exactly once in input order. A continued paragraph may span pages: "
+                "the importer will split it at PDF page/size boundaries to preserve exact citations. "
+                "Use document headings as section paths "
+                "and reuse existing paths. Never write replacement source text. Contents/front matter should "
+                "be grouped under clearly identified front-matter sections, not substantive policy sections.",
+                {"blocks": [{"index": i, "page": leaf.reference.page, "text": leaf.text}
+                            for i, leaf in enumerate(batch)], "existing_sections": known_paths[-80:]},
+                StructuredParagraphs, validator=check, max_output=9000,
+            )
+        except InvalidModelResponse:
+            if len(batch) <= 4:
+                raise
+            midpoint = len(batch) // 2
+            logger.warning('%s: subdividing an invalid %s-block outline batch; source checks stay strict',
+                           program_id, len(batch))
+            batches.appendleft(batch[midpoint:])
+            batches.appendleft(batch[:midpoint])
+            continue
         check(result)
         for group in cited_groups(result.groups):
             first, last = batch[group.start], batch[group.end]
@@ -260,6 +274,17 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
     )
     positions = {leaf.id: i for i, leaf in enumerate(program.leaves)}
     def evaluate(batch):
+        try:
+            return evaluate_once(batch)
+        except InvalidModelResponse:
+            if len(batch) == 1:
+                raise
+            midpoint = len(batch) // 2
+            logger.warning('%s: subdividing an invalid %s-leaf criteria batch; source checks stay strict',
+                           program_id, len(batch))
+            return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
+
+    def evaluate_once(batch):
         def check(result):
             responses = [result] if batch_size == 1 else result.paragraphs
             if batch_size != 1 and [r.leaf_id for r in responses] != [leaf.id for leaf in batch]:

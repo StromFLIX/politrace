@@ -51,13 +51,15 @@ Every unprocessed leaf is evaluated with its ancestor sections. Bounded batches 
 
 Run **Propose new laws & evidence**, with a maximum number of new publications (default 10) and optional earliest publication date. It:
 
-1. reconciles the paginated official BGBl I **and II** archive from 2025-03-25 by default (the publication window, not the vote date), rejecting incomplete/duplicate/mismatched inventories;
+1. reconciles the paginated official BGBl I **and II** archive from 2025-03-25 by default (the publication window, not the vote date), rejecting incomplete/duplicate/mismatched inventories; if that search alone returns HTTP 403, uses the explicitly dated, count-reconciled inventory in `data/sources/laws-bundestag-21.json` plus both official RSS feeds;
 2. obtains and transcribes their own official PDFs;
 3. retrieves applicable criteria, judges candidate effects, and challenges supported links;
 4. validates citations and graph constraints;
 5. proposes only canonical changes through `data/law-feed`.
 
 Existing laws are also reconsidered when relevant source/corpus/model/prompt inputs change; they are not re-imported. Existing impacts and editorial fields are never overwritten. The run can publish new official law metadata with **no key** when no criterion requires an AI call. If an AI call is necessary and the secret is missing, it fails explicitly; it does not claim a successful no-op.
+
+**Verified runner limitation:** the public archive search returns HTTP 403 from GitHub-hosted runners, while RSS and individual publication PDFs return 200. `Diagnose official source access` is a read-only troubleshooting action. A fallback run reports `source_mode: snapshot-and-rss`; its `coverage.as_of` remains the saved archive date, **not today**. RSS can find new laws but does not establish complete archive coverage after that date; missed feed windows must not be presented as complete. To refresh the full inventory from a network that can reach the official public search, run `uv run politrace snapshot-archive --since 2025-03-25`, validate and commit the source inventory. The CLI `archive` requires `--snapshot-fallback` to opt into this behaviour; Actions enable it explicitly. Parse errors, inconsistent inventories, other HTTP errors and source/PDF failures still fail the job. No proxy, authentication bypass or alternative law publisher is used.
 
 An unchanged run opens no PR. An initial matching audit or newly applicable criteria may change data even when the feed has no new law. `no_candidates` is not a conclusion of no legal impact.
 
@@ -79,7 +81,7 @@ The checked terms permit the **Grünen text for attributed noncommercial use (CC
 
 Each successful target opens its own **draft** review PR, never merges political annotations, and preserves an existing open PR. Up to two target jobs can run in parallel, separate from the daily update concurrency group. The default $12 limit is per permitted programme (currently one), not a blanket grant to spend $72; cache-backed retries have additional per-run limits. The law target needs no model key. Validated proposal artifacts are retained for 14 days even if repository policy refuses PR creation. Budget-failed response caches are retained, but no partial data PR is opened.
 
-The archive records `expected_ids`, `pending_ids`, official/imported counts, source-page hashes and an `as_of` date under `data/live/coverage/`. Complete inventory does **not** mean complete OCR, impact matching or human review. Unchanged scans do not rewrite timestamps/hashes or open empty daily PRs; the coverage date is the last inventory-changing scan.
+The archive records `expected_ids`, `pending_ids`, official/imported counts, `inventory_mode`, source-page hashes and an `as_of` date under `data/live/coverage/`. A saved-inventory/RSS run retains the snapshot date and says so in its result; it never certifies today's complete archive based only on RSS. Complete inventory does **not** mean complete OCR, impact matching or human review. Unchanged scans do not rewrite timestamps/hashes or open empty daily PRs; the coverage date is the last inventory-changing scan.
 
 ## Safety, cost and resumability
 
@@ -88,7 +90,7 @@ The archive records `expected_ids`, `pending_ids`, official/imported counts, sou
 - The model/provider must support structured JSON output. Provider routing requires parameter support and disallows data collection according to OpenRouter's provider policy; independently review the chosen provider's actual privacy terms.
 - Provider routing is capped at **$1 per million prompt tokens and $4 per million output tokens**. A model above those rates has no eligible route; use a supported model rather than silently raising spending limits.
 - The script conservatively reserves input bytes plus schema/system overhead and max output tokens against the budget **before every attempt**, including retries. Reported `reserved_usd_upper_bound` is not the actual provider invoice. Also set a provider-side key/account spending limit; local accounting is not an absolute guarantee against changed provider billing semantics.
-- Cache keys include system prompt, task, model, input, schema and output limit. Semantic source/order failures receive up to three total attempts; only validated results are cached and invalid cached results are not endlessly replayed. Structured completed responses are cached under `.cache/llm`, with no credentials. Treat cached public source/model text as untrusted. Caches are not published in the site or committed to Git.
+- Cache keys include system prompt, task, model, input, schema and output limit. Semantic source/order failures receive up to three attempts per batch. Invalid outline/criterion batches are then subdivided down to four-block/single-leaf bounds, under the same shared spending/call cap; provider/authentication/budget errors do not cause subdivision. Page-spanning paragraph groups are split into exact page-bound citations deterministically. Only validated results are cached and invalid cached results are not endlessly replayed. Structured completed responses are cached under `.cache/llm`, with no credentials. Treat cached public source/model text as untrusted. Caches are not published in the site or committed to Git.
 - Actions restore/save caches even after a failed budget-limited run. A fresh retry can reuse completed calls and continue. Budget/call limits apply to each run, so repeatedly resuming increases the cumulative cost. Large programmes may need a deliberate limit increase or multiple cache-backed retries.
 - A stage validates its proposed records before completion. A failed pipeline never opens a partial PR, even if its disposable checkout contains partial files. When using the CLI locally, inspect/discard only your own partial new outputs and preserve existing work; do not reset the whole repository.
 - Each pipeline checks for its own open PR before network/model work, then waits for review rather than overwriting citizen edits. The ordinary single-PR data actions share one concurrency group; historical backfills have their own target-specific review branches. GitHub concurrency queues are not guaranteed to preserve arbitrarily many manual submissions; submit/import programmes one at a time and wait for completion/review.
@@ -105,6 +107,9 @@ uv run politrace schemas
 # Source ingestion without a model
 uv run politrace laws --limit 3
 uv run politrace archive --since 2025-03-25 --limit 2000
+# Explicit public-search snapshot for runner environments where search is unavailable
+uv run politrace snapshot-archive --since 2025-03-25
+uv run politrace archive --since 2025-03-25 --limit 2000 --snapshot-fallback
 
 # Programme input example: replace every SOURCE/DATE placeholder with verified metadata
 uv run politrace program \

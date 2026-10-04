@@ -98,6 +98,9 @@ test('source inventory distinguishes located programmes, reuse gaps and archive 
   expect(catalog.programs).toHaveLength(6);
   expect(catalog.programs.flatMap((p: { members: string[] }) => p.members)).toHaveLength(7);
   expect(catalog.programs.some((p: { party_id: string }) => p.party_id === 'ssw')).toBe(true);
+  const inventory = await (await page.request.get('/api/v1/sources/laws-bundestag-21.json')).json();
+  expect(inventory.total).toBe(inventory.entries.length);
+  expect(new Set(inventory.entries.map((e: { id: string }) => e.id)).size).toBe(inventory.total);
   const coverage = await (await page.request.get('/api/v1/live/coverage.json')).json();
   for (const record of coverage.items) {
     expect(record.official_count).toBe(record.expected_ids.length);

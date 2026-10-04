@@ -28,6 +28,10 @@ class BudgetExceeded(RuntimeError):
     pass
 
 
+class InvalidModelResponse(RuntimeError):
+    """A bounded input batch can be subdivided; never used for HTTP/auth/budget failures."""
+
+
 class Agent:
     def __init__(self, *, cache: Path, model: str | None = None, max_usd: float | None = None,
                  max_calls: int | None = None, client: httpx.Client | None = None):
@@ -114,13 +118,13 @@ class Agent:
                     raise ValueError("Incomplete model output")
                 result = schema.model_validate_json(choice["message"]["content"])
             except (KeyError, IndexError, TypeError, ValueError):
-                raise RuntimeError("OpenRouter response was incomplete or violated the JSON contract") from None
+                raise InvalidModelResponse("OpenRouter response was incomplete or violated the JSON contract") from None
             if validator:
                 try:
                     validator(result)
                 except ValueError as error:
                     if attempt == 2:
-                        raise RuntimeError(
+                        raise InvalidModelResponse(
                             f"Model output failed source/order validation after bounded retries: {str(error)[:180]}"
                         ) from None
                     payload["messages"].append({"role": "assistant", "content": choice["message"]["content"]})

@@ -74,6 +74,8 @@ See [pipeline setup, budgets and retry behaviour](docs/pipelines.md), including 
 
 **Backfill the 21st Bundestag** imports the official law archive from **2025-03-25** and proposes licence-cleared programme trees/criteria in separate draft PRs. It can be manually dispatched or started by a committed `.github/backfills/bundestag-21.json` request on `main`. A separate integration step verifies production and the OpenRouter secret without exposing it.
 
+The archive search returns HTTP 403 from GitHub runners; official RSS and law PDFs remain accessible. A [dated, count-reconciled inventory](data/sources/laws-bundestag-21.json) allows the historical job to import those official records. Both RSS feeds support daily additions, but **do not extend the verified full-archive coverage date**. Fallback mode and this limitation are public; refresh the inventory from a network that can reach the search when needed.
+
 The checked source inventory covers **CDU/CSU, SPD, Grüne, AfD, Linke and SSW**. That is six programmes for seven parties, not six completed imports. Five sources still need a documented public full-transcription reuse basis. The Grünen text has a noncommercial CC BY-NC 3.0 DE licence, excluding artwork. See [source inventory](data/sources/bundestag-21.json), [pipeline details](docs/pipelines.md) and the website's `/quellen/` page. Unknown data and unreviewed AI proposals never become fulfilment scores.
 
 ## API examples
@@ -88,6 +90,7 @@ GET /api/v1/demo/criteria/demo-spd-2025-ac-001.json
 GET /api/v1/live/stats.json
 GET /api/v1/live/coverage.json
 GET /api/v1/sources/bundestag-21.json
+GET /api/v1/sources/laws-bundestag-21.json
 GET /api/v1/openapi.json
 ```
 

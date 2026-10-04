@@ -20,9 +20,11 @@ def run(mode):
     agent = Agent(cache=ROOT / ".cache" / "llm")
     if mode == "laws":
         since = os.environ.get("INPUT_SINCE", "")
-        importer = ingest_archive if os.environ.get("INPUT_ARCHIVE", "false").lower() == "true" else ingest_laws
+        use_archive = os.environ.get("INPUT_ARCHIVE", "false").lower() == "true"
+        importer = ingest_archive if use_archive else ingest_laws
+        options = {'snapshot_fallback': True} if use_archive else {}
         result = importer(root=root, limit=int(os.environ.get("INPUT_LIMIT", "10")),
-                          since=date.fromisoformat(since) if since else date(2025, 3, 25))
+                          since=date.fromisoformat(since) if since else date(2025, 3, 25), **options)
         result["matching"] = match_laws(root=root, agent=agent)
     elif mode == "program":
         pdf = os.environ["INPUT_PDF"]

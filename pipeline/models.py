@@ -249,6 +249,7 @@ class LawCoverage(Model):
     period_start: date
     as_of: date
     date_basis: Literal["promulgation"]
+    inventory_mode: Literal['archive', 'snapshot-and-rss'] = 'archive'
     parts: list[Literal["I", "II"]]
     kind: Literal["Gesetz"]
     official_count: int = Field(ge=0)

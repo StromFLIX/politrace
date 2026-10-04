@@ -52,6 +52,15 @@
       "title": "Date Basis",
       "type": "string"
     },
+    "inventory_mode": {
+      "default": "archive",
+      "enum": [
+        "archive",
+        "snapshot-and-rss"
+      ],
+      "title": "Inventory Mode",
+      "type": "string"
+    },
     "parts": {
       "items": {
         "enum": [

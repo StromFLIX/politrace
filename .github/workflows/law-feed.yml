@@ -88,9 +88,11 @@ jobs:
           commit-message: 'data: propose official laws and evidence links'
           title: 'data: new law publications and proposed evidence'
           body: |
-            Automated proposals from the complete paginated Bundesgesetzblatt I/II archive.
+            Automated proposals from the official Bundesgesetzblatt I/II archive or, when its public
+            search rejects runner access, the dated checked inventory plus both official RSS feeds.
             Publication-date scope starts at 2025-03-25 by default, not the parliamentary vote date.
-            Coverage records report the exact official inventory and any limit-related remainder.
+            Coverage records report the actual archive date and any limit-related remainder;
+            RSS additions never establish complete archive coverage after the saved inventory date.
             - Exact source quotations and graph contracts validated in this run.
             - AI links remain `proposed`; no automatic fulfilment assessments or voting guesses.
             - Inspect source PDFs, legal context, comparison windows and the retrieval omissions.

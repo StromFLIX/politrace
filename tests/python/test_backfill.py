@@ -1,17 +1,19 @@
 import json
 from datetime import date
 
+import httpx
 import pymupdf
 import pytest
 
-from pipeline.archive import SEARCH_URL, archive_entries, ingest_archive
+from pipeline.archive import INVENTORY_FILE, SEARCH_URL, ArchiveInventory, archive_entries, ingest_archive
 from pipeline.catalog import load_catalog
 from pipeline.documents import NeedsOCR, extract_pdf, pages_to_markdown
 from pipeline.laws import parse_feed, pdf_link
+from pipeline.llm import BudgetExceeded, InvalidModelResponse
 from pipeline.models import Generation
 from pipeline.parallel import ordered_map
 from pipeline.programs import extract_criteria, ingest_program, structure_paragraphs
-from pipeline.store import ROOT, load_records, validate_store
+from pipeline.store import ROOT, load_records, validate_store, write_json
 
 GEN = Generation(model="offline-test", prompt_version="test", input_sha256="0" * 64)
 
@@ -102,6 +104,78 @@ def test_archive_coverage_is_a_noop_without_new_data_and_records_remainder(corpu
     validate_store(root)
 
 
+def saved_inventory():
+    return {'schema_version': '1.0', 'since': '2025-03-25', 'until': '2025-05-30', 'total': 1,
+            'entries': [{'id': 'bgbl-1-2025-100', 'title': 'Testgesetz',
+                         'url': 'https://www.recht.bund.de/eli/bund/bgbl-1/2025/100',
+                         'published_at': '2025-05-30', 'citation': 'BGBl. 2025 I Nr. 100'}],
+            'source_pages': [{'url': SEARCH_URL, 'sha256': '0' * 64}], 'note': 'Synthetic fixture.'}
+
+
+def test_archive_fallback_is_explicit_and_never_advances_verified_coverage_to_the_rss_date(corpus, monkeypatch):
+    root, *_ = corpus
+    write_json(root / 'sources' / INVENTORY_FILE, saved_inventory())
+    def forbidden(**kwargs):
+        response = httpx.Response(403, request=httpx.Request('GET', SEARCH_URL))
+        response.raise_for_status()
+    monkeypatch.setattr('pipeline.archive.archive_entries', forbidden)
+    with pytest.raises(httpx.HTTPStatusError):
+        ingest_archive(root=root, since=date(2025, 3, 25), until=date(2025, 6, 1))
+    feed = b'''<rss xmlns:meta="http://recht.bund.de/rss/meta"><channel><item><title>Neues Gesetz</title>
+      <link>https://www.recht.bund.de/eli/bund/bgbl-1/2025/101</link><pubDate>2025-06-01</pubDate>
+      <meta:typ>Gesetz</meta:typ></item></channel></rss>'''
+    monkeypatch.setattr('pipeline.archive.download', lambda url, **kw: feed if 'bgbl-1' in url else
+                        b'<rss><channel><item><title>No new laws</title></item></channel></rss>')
+    imported = []
+    def ingest(**kwargs):
+        imported.extend(kwargs['entries'])
+        return {'new_laws': [], 'notify': False}
+    monkeypatch.setattr('pipeline.archive.ingest_entries', ingest)
+    result = ingest_archive(root=root, since=date(2025, 3, 25), until=date(2025, 6, 1), snapshot_fallback=True)
+    assert {r['id'] for r in imported} == {'bgbl-1-2025-100', 'bgbl-1-2025-101'}
+    assert result['source_mode'] == 'snapshot-and-rss' and result['rss_laws_beyond_inventory'] == 1
+    assert result['until'] == '2025-05-30' and result['requested_until'] == '2025-06-01'
+    coverage = json.loads((root / 'live/coverage/laws-since-2025-03-25.json').read_text())
+    assert coverage['complete'] and coverage['as_of'] == '2025-05-30' and coverage['official_count'] == 1
+    validate_store(root)
+    with pytest.raises(ValueError, match='requested start'):
+        ingest_archive(root=root, since=date(2025, 1, 1), snapshot_fallback=True)
+
+
+@pytest.mark.parametrize('fault', ['duplicate', 'wrong_id', 'out_of_window', 'wrong_source', 'wrong_total'])
+def test_inventory_rejects_false_or_inconsistent_provenance(fault):
+    inventory = saved_inventory()
+    if fault == 'duplicate':
+        inventory['entries'] *= 2
+        inventory['total'] = 2
+    elif fault == 'wrong_id':
+        inventory['entries'][0]['id'] = 'bgbl-2-2025-100'
+    elif fault == 'out_of_window':
+        inventory['entries'][0]['published_at'] = '2026-01-01'
+    elif fault == 'wrong_source':
+        inventory['source_pages'][0]['url'] = 'https://example.org/search'
+    else:
+        inventory['total'] = 2
+    with pytest.raises(ValueError):
+        ArchiveInventory.model_validate(inventory)
+
+
+def test_archive_does_not_use_a_snapshot_for_parse_errors_or_other_http_errors(corpus, monkeypatch):
+    root, *_ = corpus
+    write_json(root / 'sources' / INVENTORY_FILE, saved_inventory())
+    for status in [401, 404, 500]:
+        def failure(**kw):
+            httpx.Response(status, request=httpx.Request('GET', SEARCH_URL)).raise_for_status()
+        monkeypatch.setattr('pipeline.archive.archive_entries', failure)
+        with pytest.raises(httpx.HTTPStatusError):
+            ingest_archive(root=root, since=date(2025, 3, 25), snapshot_fallback=True)
+    def malformed(**kw):
+        raise ValueError('Archive result count missing')
+    monkeypatch.setattr('pipeline.archive.archive_entries', malformed)
+    with pytest.raises(ValueError, match='result count missing'):
+        ingest_archive(root=root, since=date(2025, 3, 25), snapshot_fallback=True)
+
+
 def test_bgbl_part_two_feed_and_pdf_are_supported():
     feed = b'''<rss xmlns:meta="http://recht.bund.de/rss/meta"><channel><item><title>Vertragsgesetz</title>
     <link>https://www.recht.bund.de/eli/bund/bgbl-2/2025/22</link><pubDate>2025-06-01</pubDate>
@@ -167,6 +241,51 @@ def test_model_paragraph_groups_are_split_without_duplicating_long_source_blocks
     markdown, raw = pages_to_markdown(['A' * 3000 + '\n\n' + 'B' * 3000], 'test-program')
     leaves, _, _ = structure_paragraphs(raw, markdown, 'Title', 'test-program', Stub(groups))
     assert [p.text for p in leaves] == ['A' * 3000, 'B' * 3000]
+
+
+def test_invalid_outline_batches_are_subdivided_without_losing_blocks():
+    class SmallBatchAgent:
+        calls = 0
+        def ask(self, task, data, schema, **kwargs):
+            self.calls += 1
+            if len(data['blocks']) > 4:
+                raise InvalidModelResponse('Test source/order failure')
+            return schema.model_validate({'groups': [
+                {'start': b['index'], 'end': b['index'], 'sections': ['Section']}
+                for b in data['blocks']]}), GEN
+    md, raw = pages_to_markdown(['\n\n'.join(f'Paragraph {i}.' for i in range(12))], 'test-program')
+    agent = SmallBatchAgent()
+    leaves, _, _ = structure_paragraphs(raw, md, 'Title', 'test-program', agent)
+    assert [p.text for p in leaves] == [p.text for p in raw]
+    assert agent.calls == 7
+    class BudgetAgent:
+        def ask(self, *args, **kw):
+            raise BudgetExceeded('No more spending')
+    with pytest.raises(BudgetExceeded):
+        structure_paragraphs(raw, md, 'Title', 'test-program', BudgetAgent())
+
+
+def test_invalid_criterion_batches_are_subdivided_but_remain_source_checked(corpus):
+    root, program, criterion, _ = corpus
+    (root / f'live/criteria/{criterion.id}.json').unlink()
+    class SingleLeafAgent:
+        calls = 0
+        def ask(self, task, data, schema, **kwargs):
+            self.calls += 1
+            if len(data['paragraphs']) > 1:
+                raise InvalidModelResponse('Test quotation failure')
+            leaf = data['paragraphs'][0]
+            draft = {'title': 'Mindestlohn erhöhen', 'description': 'Den Mindestlohn auf 15 Euro anheben.',
+                     'test': 'Der Mindestlohn beträgt 15 Euro.', 'quote': leaf['paragraph'],
+                     'tags': ['arbeit'], 'keywords': [], 'deadline': None}
+            policy = leaf['leaf_id'] == program.leaves[0].id
+            return schema.model_validate({'paragraphs': [
+                {'leaf_id': leaf['leaf_id'], 'criteria': [draft] if policy else [],
+                 'abstention_reason': None if policy else 'Nur Rhetorik.'}]}), GEN
+    agent = SingleLeafAgent()
+    result = extract_criteria(root=root, program_id=program.id, agent=agent, batch_size=6)
+    assert agent.calls == 3 and result['new_criteria'] == 1 and result['abstained_leaves'] == 1
+    validate_store(root)
 
 
 def test_batched_criteria_cover_every_leaf_and_remain_unassessed(corpus):

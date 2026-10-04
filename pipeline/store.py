@@ -76,6 +76,11 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
 
         if not {p.party_id for p in load_catalog(root).programs} <= party_ids:
             raise ValueError("Source catalog references an unknown party")
+    inventory = root / 'sources' / 'laws-bundestag-21.json'
+    if inventory.exists():
+        from pipeline.archive import ArchiveInventory
+
+        ArchiveInventory.model_validate_json(inventory.read_text())
     counts = {}
     for dataset in ("live", "demo"):
         data = {}
@@ -194,8 +199,9 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
 
 
 def export_schemas(root: Path = ROOT / "data" / "schemas"):
+    from pipeline.archive import ArchiveInventory
     from pipeline.catalog import SourceCatalog
 
     for name, model in {**RECORD_TYPES, "parties": Party, "coverage": LawCoverage,
-                        "source-catalog": SourceCatalog}.items():
+                        "source-catalog": SourceCatalog, 'archive-inventory': ArchiveInventory}.items():
         write_json(root / f"{name}.schema.json", model.model_json_schema())

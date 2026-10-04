@@ -27,7 +27,7 @@ def run(target, *, root=ROOT / "data", agent=None):
                               {"purpose": "integration smoke test"}, Probe, max_output=256)
         return {"provider": result.status, "budget": agent.summary()}
     if target == "laws":
-        result = ingest_archive(root=root, since=catalog.period_start)
+        result = ingest_archive(root=root, since=catalog.period_start, snapshot_fallback=True)
     else:
         source = next((p for p in catalog.programs if p.id == target), None)
         if source is None:

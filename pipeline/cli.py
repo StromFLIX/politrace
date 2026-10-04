@@ -5,7 +5,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-from pipeline.archive import ingest_archive
+from pipeline.archive import ingest_archive, snapshot_archive
 from pipeline.laws import FEED_URL, ingest_laws
 from pipeline.llm import Agent
 from pipeline.matching import match_laws
@@ -42,6 +42,10 @@ def parser():
     archive.add_argument("--since", required=True, type=date.fromisoformat)
     archive.add_argument("--until", type=date.fromisoformat)
     archive.add_argument("--limit", type=int, default=2000)
+    archive.add_argument('--snapshot-fallback', action='store_true', help='On search HTTP 403 only, use the dated checked inventory plus RSS; never claim a fresh complete scan')
+    snapshot = sub.add_parser('snapshot-archive', help='Save a count-reconciled official inventory from a network that can reach the public archive')
+    snapshot.add_argument('--since', required=True, type=date.fromisoformat)
+    snapshot.add_argument('--until', type=date.fromisoformat)
     laws = sub.add_parser("laws", help="Import official BGBl I/II feed laws, without a model or API key")
     laws.add_argument("--limit", type=int, default=10)
     laws.add_argument("--since", type=date.fromisoformat)
@@ -59,9 +63,10 @@ def main():
     elif command == "schemas":
         export_schemas(root / "schemas")
         result = {"exported": True}
-    elif command in {"laws", "archive"}:
+    elif command in {"laws", "archive", "snapshot-archive"}:
         validate_store(root)
-        result = (ingest_laws if command == "laws" else ingest_archive)(root=root, **args)
+        importer = {'laws': ingest_laws, 'archive': ingest_archive, 'snapshot-archive': snapshot_archive}[command]
+        result = importer(root=root, **args)
         validate_store(root)
     else:
         validate_store(root)
