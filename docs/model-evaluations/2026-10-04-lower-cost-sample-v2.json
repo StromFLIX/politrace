@@ -1,0 +1,1012 @@
+{
+  "sample_version": 2,
+  "source_url": "https://cms.gruene.de/uploads/assets/20250318_Regierungsprogramm_DIGITAL_DINA5.pdf",
+  "source_sha256": "bf8d15021d8cc2695cb97d0d4a4bc9b7b93de54b86d491d8536b1325354dc213",
+  "limitations": "Six deliberately selected paragraphs from one programme, not a balanced benchmark. Checks test citations, negative controls and selected commitment coverage; regex coverage is not semantic equivalence or a precision/recall estimate. Manual review of atomicity, conditions, wording and omissions is still required. No legal-impact accuracy or general Pareto efficiency is established.",
+  "results": [
+    {
+      "model": "google/gemini-3.8-flash",
+      "status": "failed",
+      "error_type": "ProviderError",
+      "http_status": 400,
+      "error_category": "invalid_parameters",
+      "budget": {
+        "model": "google/gemini-3.8-flash",
+        "review_model": "openai/gpt-5.6-sol",
+        "calls": 1,
+        "cache_hits": 0,
+        "subdivision_cache_hits": 0,
+        "reported_cost_usd": 0.0,
+        "reported_cost_calls": 0,
+        "pending_reserved_usd": 0.0,
+        "in_flight_calls": 0,
+        "unknown_cost_reserved_usd": 0.207012,
+        "unknown_cost_calls": 1,
+        "cost_accounting_complete": false,
+        "budget_exposure_usd": 0.207012,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "max_usd": 0.5
+      },
+      "elapsed_seconds": 1.99
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "status": "completed",
+      "checks": [
+        {
+          "check": "contents: abstain/commitment",
+          "passed": true
+        },
+        {
+          "check": "contents: no invented calendar date",
+          "passed": true
+        },
+        {
+          "check": "rhetoric: abstain/commitment",
+          "passed": true
+        },
+        {
+          "check": "rhetoric: no invented calendar date",
+          "passed": true
+        },
+        {
+          "check": "status-quo: abstain/commitment",
+          "passed": true
+        },
+        {
+          "check": "status-quo: no invented calendar date",
+          "passed": true
+        },
+        {
+          "check": "minimum-wage: abstain/commitment",
+          "passed": true
+        },
+        {
+          "check": "minimum-wage: 15 Euro",
+          "passed": true
+        },
+        {
+          "check": "minimum-wage: under-18 applicability",
+          "passed": true
+        },
+        {
+          "check": "minimum-wage: 60-percent median reference",
+          "passed": true
+        },
+        {
+          "check": "minimum-wage: examination, not implementation, of funding criteria",
+          "passed": true
+        },
+        {
+          "check": "minimum-wage: amount and eligibility are independently testable",
+          "passed": false
+        },
+        {
+          "check": "minimum-wage: no invented calendar date",
+          "passed": true
+        },
+        {
+          "check": "speed-limits: abstain/commitment",
+          "passed": true
+        },
+        {
+          "check": "speed-limits: autobahn 130",
+          "passed": true
+        },
+        {
+          "check": "speed-limits: municipal 30",
+          "passed": true
+        },
+        {
+          "check": "speed-limits: rural 80",
+          "passed": true
+        },
+        {
+          "check": "speed-limits: no invented European fine baseline",
+          "passed": true
+        },
+        {
+          "check": "speed-limits: no invented calendar date",
+          "passed": true
+        },
+        {
+          "check": "investment-fund: abstain/commitment",
+          "passed": true
+        },
+        {
+          "check": "investment-fund: establish the fund",
+          "passed": true
+        },
+        {
+          "check": "investment-fund: no invented calendar date",
+          "passed": true
+        }
+      ],
+      "samples": [
+        {
+          "case": "contents",
+          "page": 4,
+          "source_leaf_id": "gruene-2025-p-168d109017e0ae8b",
+          "source_text": "**B. Ein modernes und digitales Land\b** **32**\nFür einen Staat, der für die ­Menschen funktioniert\b 32\nFür eine serviceorientierte ­Verwaltung\b 33\nFür eine schnelle und umfassende Digitalisierung\b 34\nFür einen Deutschlandfonds und eine Reform der Schuldenbremse\b 36",
+          "abstention_reason": "Der Absatz ist ein Inhaltsverzeichnis und enthält keine eigenständige, überprüfbare politische Maßnahme.",
+          "criteria": []
+        },
+        {
+          "case": "rhetoric",
+          "page": 9,
+          "source_leaf_id": "gruene-2025-p-c8714e049b540476",
+          "source_text": "Es geht jetzt darum, diese Kraft als Zukunftskraft aufzunehmen: ökologisch und\nökonomisch, solidarisch und europäisch.\nAls Kraft, die sich den Herausforderungen\nstellt und die Probleme löst. Mit einer\nZuversicht, die aus dem gemeinsamen\nHandeln und mit Blick auf eine gelingende\nZukunft kommt.",
+          "abstention_reason": "Der Absatz enthält allgemeine programmatische und wertende Aussagen, aber keine konkrete, überprüfbare politische Maßnahme.",
+          "criteria": []
+        },
+        {
+          "case": "status-quo",
+          "page": 38,
+          "source_leaf_id": "gruene-2025-p-d529a0fdad5d7ec8",
+          "source_text": "Die Anstrengungen lohnen sich: Die klimaschädlichen Emissionen sinken. Erstmals\nist Deutschland auf einem Kurs hin zum Erreichen der eigenen Klimaziele. Es kommt\nnun darauf an, diesen Kurs zu halten, um\nweiterhin Verlässlichkeit und Planungssicherheit herzustellen und eine Orientierung für die klimaneutrale Modernisierung\nunseres ganzen Kontinents zu geben.",
+          "abstention_reason": "Der Absatz beschreibt eine positive Entwicklung und fordert allgemein dazu auf, den bisherigen Kurs zu halten. Er enthält keine eigenständig beobachtbare politische Maßnahme oder ein hinreichend bestimmtes Ziel, das sich diesem Absatz allein zuordnen lässt.",
+          "criteria": []
+        },
+        {
+          "case": "minimum-wage",
+          "page": 67,
+          "source_leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+          "source_text": "Faire Löhne verlangen nach einem fairen\nMindestlohn, damit Leistung auch anerkannt wird. Um die Inflation der vergangenen Jahre auszugleichen, braucht\nes jetzt einen schrittweise steigenden\nMindestlohn von zunächst 15 Euro in\n2025 und das auch für unter 18-Jährige.\nHierfür verankern wir den Referenzwert\nvon 60 Prozent des Medianlohns aus der\nEU-Mindestlohnrichtlinie in das deutsche\nMindestlohngesetz. Und es braucht eine\nstärkere Tarifbindung. Denn wer nach Tarif\narbeitet, verdient im Schnitt mehr und das\nunter besseren Arbeitsbedingungen. Deshalb wollen wir die Allgemeinverbindlichkeitserklärung von Tarifverträgen erleichtern. Durch ein Tariftreuegesetz werden wir\ngrößere öffentliche Aufträge des Bundes\nan Unternehmen vergeben, die nach Tarif\nbezahlen, was deutlich mehr als 90 Prozent des gesamten Auftragsvolumens des\nBundes umfasst. Wir wollen prüfen, wie wir\nbürokratiearm soziale Kriterien bei großvolumiger Fördermittelvergabe verankern\nkönnen. Durch eine Angleichung der Lebens- und Arbeitsbedingungen in Ost und\nWest wollen wir die Lohn- und Gehaltsunterschiede langfristig überwinden.",
+          "abstention_reason": "Die angekündigte langfristige Überwindung der Lohn- und Gehaltsunterschiede zwischen Ost und West wird wegen des fehlenden messbaren Zielwerts und Zeitplans nicht als eigenständiges Kriterium aufgenommen.",
+          "criteria": [
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-1257f0f66e9a769d",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Tariftreue bei größeren öffentlichen Aufträgen des Bundes sicherstellen",
+              "description": "Durch ein Tariftreuegesetz sollen größere öffentliche Aufträge des Bundes an Unternehmen vergeben werden, die nach Tarif bezahlen; das soll deutlich mehr als 90 Prozent des gesamten Auftragsvolumens des Bundes umfassen.",
+              "test": "Ein Tariftreuegesetz oder eine entsprechende Regelung verpflichtet bei größeren öffentlichen Aufträgen des Bundes zur Vergabe an tarifzahlende Unternehmen, und das davon erfasste Auftragsvolumen beträgt deutlich mehr als 90 Prozent des gesamten Auftragsvolumens des Bundes.",
+              "tags": [
+                "arbeit",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Tariftreuegesetz",
+                "öffentliche Aufträge",
+                "Bund",
+                "Tarifzahlung",
+                "90 Prozent",
+                "Auftragsvolumen"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "Durch ein Tariftreuegesetz werden wir\ngrößere öffentliche Aufträge des Bundes\nan Unternehmen vergeben, die nach Tarif\nbezahlen, was deutlich mehr als 90 Prozent des gesamten Auftragsvolumens des\nBundes umfasst."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-21158dcbe7d306ad",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Mindestlohn auch auf unter 18-Jährige anwenden",
+              "description": "Die Anhebung des Mindestlohns soll auch für Personen unter 18 Jahren gelten.",
+              "test": "Personen unter 18 Jahren sind vom vorgesehenen Mindestlohn von zunächst 15 Euro im Jahr 2025 erfasst.",
+              "tags": [
+                "arbeit",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Mindestlohn",
+                "unter 18-Jährige"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "2025 und das auch für unter 18-Jährige."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-36315d94951e0eb9",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Mindestlohn schrittweise weiter erhöhen",
+              "description": "Der Mindestlohn soll nach dem vorgesehenen Einstieg schrittweise weiter steigen.",
+              "test": "Die geltende oder beschlossene Mindestlohnregelung sieht nach dem Einstieg weitere Erhöhungen in mehreren Stufen vor.",
+              "tags": [
+                "arbeit",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Mindestlohn",
+                "schrittweise Erhöhung"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "braucht\nes jetzt einen schrittweise steigenden\nMindestlohn von zunächst 15 Euro in\n2025"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-3be60aecf35a8e2a",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Referenzwert von 60 Prozent des Medianlohns im Mindestlohngesetz verankern",
+              "description": "Der Referenzwert von 60 Prozent des Medianlohns aus der EU-Mindestlohnrichtlinie soll in das deutsche Mindestlohngesetz aufgenommen werden.",
+              "test": "Das deutsche Mindestlohngesetz enthält den Referenzwert von 60 Prozent des Medianlohns aus der EU-Mindestlohnrichtlinie.",
+              "tags": [
+                "arbeit",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Referenzwert",
+                "60 Prozent",
+                "Medianlohn",
+                "EU-Mindestlohnrichtlinie",
+                "Mindestlohngesetz"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "Hierfür verankern wir den Referenzwert\nvon 60 Prozent des Medianlohns aus der\nEU-Mindestlohnrichtlinie in das deutsche\nMindestlohngesetz."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-4cb8491c2632c946",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Prüfen, wie soziale Kriterien bürokratiearm bei großvolumiger Fördermittelvergabe verankert werden können",
+              "description": "Es soll geprüft werden, auf welche Weise soziale Kriterien bürokratiearm in der Vergabe großer Fördermittel verankert werden können.",
+              "test": "Eine dokumentierte Prüfung legt dar, wie soziale Kriterien bürokratiearm bei der großvolumigen Fördermittelvergabe verankert werden können.",
+              "tags": [
+                "soziales",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Prüfung",
+                "soziale Kriterien",
+                "Fördermittelvergabe",
+                "bürokratiearm"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "Wir wollen prüfen, wie wir\nbürokratiearm soziale Kriterien bei großvolumiger Fördermittelvergabe verankern\nkönnen."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-744a45b89f8a1366",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Allgemeinverbindlichkeitserklärung von Tarifverträgen erleichtern",
+              "description": "Die rechtlichen Voraussetzungen oder Verfahren für die Allgemeinverbindlichkeitserklärung von Tarifverträgen sollen erleichtert werden.",
+              "test": "Es sind rechtliche oder verfahrensbezogene Änderungen beschlossen oder in Kraft, die die Allgemeinverbindlichkeitserklärung von Tarifverträgen erleichtern.",
+              "tags": [
+                "arbeit",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Tarifverträge",
+                "Allgemeinverbindlichkeitserklärung",
+                "Tarifbindung"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "Deshalb wollen wir die Allgemeinverbindlichkeitserklärung von Tarifverträgen erleichtern."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-c8b25002c98a4e86",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-b67e3d1d8d1efdff",
+              "title": "Mindestlohn zunächst auf 15 Euro im Jahr 2025 erhöhen",
+              "description": "Der gesetzliche Mindestlohn soll im Jahr 2025 zunächst auf 15 Euro erhöht werden.",
+              "test": "Es ist eine Regelung in Kraft oder beschlossen, nach der der Mindestlohn im Jahr 2025 zunächst 15 Euro beträgt.",
+              "tags": [
+                "arbeit",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Mindestlohn",
+                "15 Euro",
+                "2025"
+              ],
+              "reference": {
+                "page": 67,
+                "line_start": 4204,
+                "line_end": 4222,
+                "quote": "braucht\nes jetzt einen schrittweise steigenden\nMindestlohn von zunächst 15 Euro in\n2025"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "64a04cded6a90aeac374112f763923587ff6ddffd0c9c0e795ea79f893f8d575"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "case": "speed-limits",
+          "page": 48,
+          "source_leaf_id": "gruene-2025-p-f73bea62b99b208f",
+          "source_text": "wenn überhöhte Geschwindigkeiten reduziert werden. In der Regierung haben wir\nmit der Reform des Straßenverkehrsrechts\nfür Kommunen in einem ersten Schritt die\nChance geschaffen, leichter Tempo-30-Strecken einzurichten, den Fuß- und Radverkehr zu stärken sowie verkehrsberuhigte\nund lebenswerte Quartiere zu schaffen. In\neinem nächsten Schritt wollen wir unseren\nKommunen noch mehr Spielräume einräumen, etwa um flächendeckend innerorts\nTempo 30 zu ermöglichen. Als einziges\nLand weltweit erlaubt Deutschland das\nunbegrenzte Rasen auf Autobahnen – zum\nSchaden von Menschenleben und Umwelt.\nEin Sicherheitstempo von 130 km/h auf\nAutobahnen als generelles Tempolimit ist\ndeshalb überfällig. Für Landstraßen wollen\nwir die Spielräume für Tempo 80 aus ortsspezifischen Gründen deutlich erweitern, um\ndie Verkehrssicherheit zu erhöhen. Den Bußgeldkatalog für schwere Verkehrsverstöße\nwollen wir auf europäisches Niveau bringen.",
+          "abstention_reason": "Für die angekündigte Anhebung des Bußgeldkatalogs auf „europäisches Niveau“ fehlt ein bestimmter, beobachtbarer Vergleichsmaßstab. Die übrigen Aussagen beschreiben bereits erfolgte Reformen, allgemeine Zielsetzungen oder Folgen und sind keine eigenständigen zukünftigen Maßnahmen.",
+          "criteria": [
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-7fd274c491ce661b",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-f73bea62b99b208f",
+              "title": "Spielräume für Tempo 80 auf Landstraßen erweitern",
+              "description": "Die Spielräume für Tempo 80 auf Landstraßen sollen aus ortsspezifischen Gründen deutlich erweitert werden, um die Verkehrssicherheit zu erhöhen.",
+              "test": "Es ist eine Regelung nachweisbar, die gegenüber der bisherigen Rechtslage deutlich mehr ortsspezifische Anordnungen von Tempo 80 auf Landstraßen zulässt.",
+              "tags": [
+                "mobilitaet",
+                "sicherheit"
+              ],
+              "keywords": [
+                "Landstraßen",
+                "Tempo 80",
+                "ortspezifische Gründe",
+                "Verkehrssicherheit"
+              ],
+              "reference": {
+                "page": 48,
+                "line_start": 2989,
+                "line_end": 3005,
+                "quote": "Für Landstraßen wollen\nwir die Spielräume für Tempo 80 aus ortsspezifischen Gründen deutlich erweitern, um\ndie Verkehrssicherheit zu erhöhen."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "700f230fdb2c113ac1e94e5fc507be7a098a23897da48c067013f902ecdb17f5"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-e462a54cc3d3b970",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-f73bea62b99b208f",
+              "title": "Generelles Tempolimit von 130 km/h auf Autobahnen einführen",
+              "description": "Auf Autobahnen soll ein allgemeines Sicherheitstempo von 130 km/h als generelles Tempolimit gelten.",
+              "test": "Es gilt eine Regelung, nach der auf Autobahnen grundsätzlich ein Tempolimit von 130 km/h als generelle Höchstgeschwindigkeit vorgeschrieben ist.",
+              "tags": [
+                "mobilitaet"
+              ],
+              "keywords": [
+                "Tempolimit",
+                "130 km/h",
+                "Autobahnen",
+                "Sicherheitstempo"
+              ],
+              "reference": {
+                "page": 48,
+                "line_start": 2989,
+                "line_end": 3005,
+                "quote": "Ein Sicherheitstempo von 130 km/h auf\nAutobahnen als generelles Tempolimit ist\ndeshalb überfällig."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "700f230fdb2c113ac1e94e5fc507be7a098a23897da48c067013f902ecdb17f5"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-eb56fe3e92db477c",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-f73bea62b99b208f",
+              "title": "Kommunalen Spielraum für innerörtliches Tempo 30 erweitern",
+              "description": "Den Kommunen sollen zusätzliche Spielräume eingeräumt werden, damit flächendeckend innerorts Tempo 30 ermöglicht werden kann.",
+              "test": "Es ist nachweisbar, dass eine rechtliche oder administrative Regelung den Kommunen zusätzliche Spielräume einräumt und dadurch flächendeckendes Tempo 30 innerhalb geschlossener Ortschaften ermöglicht.",
+              "tags": [
+                "mobilitaet"
+              ],
+              "keywords": [
+                "Kommunen",
+                "Spielräume",
+                "Tempo 30",
+                "innerorts"
+              ],
+              "reference": {
+                "page": 48,
+                "line_start": 2989,
+                "line_end": 3005,
+                "quote": "In\neinem nächsten Schritt wollen wir unseren\nKommunen noch mehr Spielräume einräumen, etwa um flächendeckend innerorts\nTempo 30 zu ermöglichen."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "700f230fdb2c113ac1e94e5fc507be7a098a23897da48c067013f902ecdb17f5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "case": "investment-fund",
+          "page": 36,
+          "source_leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+          "source_text": "Wir werden in der Regierung entschlossen\ndie Investitionen in tragfähige Infrastrukturen nachholen, die unser Land so\ndringend braucht. Die schwarze Null im\nHaushalt ist eine Hypothek für die Zukunftsfähigkeit unseres Landes. Wir werden\ndeshalb einen Deutschlandfonds für Bund,\nLänder und Kommunen errichten. Daraus\nwerden wir die Schienen bauen, auf denen\nZüge die Menschen pünktlich an ihr Ziel\nbringen, die Kitas, Schulen und Hochschulen sanieren, in denen gleiche Chancen für\nalle entstehen, die Forschung finanzieren,\ndie die Ideen und Technologien für den\nWohlstand von morgen begründet, und\nUnternehmen den Raum für Investitionen\nin ihre Zukunft ermöglichen. Mittel aus\ndem Deutschlandfonds werden reguläre\nHaushaltsmittel ergänzen.",
+          "abstention_reason": null,
+          "criteria": [
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-2bbaa8493c569a53",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Hochschulen aus Mitteln des Deutschlandfonds sanieren",
+              "description": "Aus Mitteln des Deutschlandfonds sollen Hochschulen saniert werden.",
+              "test": "Es wurden aus Mitteln des Deutschlandfonds Hochschulen saniert.",
+              "tags": [
+                "bildung"
+              ],
+              "keywords": [
+                "Hochschulen",
+                "sanieren",
+                "Deutschlandfonds"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "die Kitas, Schulen und Hochschulen sanieren, in denen gleiche Chancen für\nalle entstehen,"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-32d50ea8e203e20f",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Deutschlandfonds für Bund, Länder und Kommunen errichten",
+              "description": "Ein Deutschlandfonds soll als gemeinsamer Fonds für Bund, Länder und Kommunen errichtet werden.",
+              "test": "Es ist ein Deutschlandfonds eingerichtet, der für Bund, Länder und Kommunen bestimmt ist.",
+              "tags": [
+                "wirtschaft",
+                "digitales",
+                "mobilitaet",
+                "bildung"
+              ],
+              "keywords": [
+                "Deutschlandfonds",
+                "Bund",
+                "Länder",
+                "Kommunen",
+                "errichten"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "Wir werden\ndeshalb einen Deutschlandfonds für Bund,\nLänder und Kommunen errichten."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-3f5c829148254908",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Forschung aus Mitteln des Deutschlandfonds finanzieren",
+              "description": "Aus Mitteln des Deutschlandfonds soll Forschung finanziert werden, die Ideen und Technologien für den Wohlstand von morgen hervorbringt.",
+              "test": "Es wurde Forschung aus Mitteln des Deutschlandfonds finanziert.",
+              "tags": [
+                "bildung",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Forschung",
+                "Technologien",
+                "Deutschlandfonds",
+                "finanzieren"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "die Forschung finanzieren,\ndie die Ideen und Technologien für den\nWohlstand von morgen begründet,"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-544d944f0ec87d83",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Schienen aus Mitteln des Deutschlandfonds bauen",
+              "description": "Aus Mitteln des Deutschlandfonds sollen Schienen gebaut werden, damit Züge Menschen pünktlich an ihr Ziel bringen.",
+              "test": "Es wurden aus Mitteln des Deutschlandfonds Schienen gebaut, die dem Zugverkehr dienen.",
+              "tags": [
+                "mobilitaet",
+                "wirtschaft"
+              ],
+              "keywords": [
+                "Schienen",
+                "Züge",
+                "Deutschlandfonds",
+                "Infrastruktur"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "Daraus\nwerden wir die Schienen bauen, auf denen\nZüge die Menschen pünktlich an ihr Ziel\nbringen,"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-617966695b2f0372",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Kitas aus Mitteln des Deutschlandfonds sanieren",
+              "description": "Aus Mitteln des Deutschlandfonds sollen Kindertagesstätten saniert werden.",
+              "test": "Es wurden aus Mitteln des Deutschlandfonds Kitas saniert.",
+              "tags": [
+                "bildung"
+              ],
+              "keywords": [
+                "Kitas",
+                "sanieren",
+                "Deutschlandfonds"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "die Kitas, Schulen und Hochschulen sanieren, in denen gleiche Chancen für\nalle entstehen,"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-b737aef1990e9adf",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Schulen aus Mitteln des Deutschlandfonds sanieren",
+              "description": "Aus Mitteln des Deutschlandfonds sollen Schulen saniert werden.",
+              "test": "Es wurden aus Mitteln des Deutschlandfonds Schulen saniert.",
+              "tags": [
+                "bildung"
+              ],
+              "keywords": [
+                "Schulen",
+                "sanieren",
+                "Deutschlandfonds"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "die Kitas, Schulen und Hochschulen sanieren, in denen gleiche Chancen für\nalle entstehen,"
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            },
+            {
+              "schema_version": "1.0",
+              "id": "gruene-2025-ac-f2a2f2313f22264d",
+              "dataset": "live",
+              "program_id": "gruene-2025",
+              "party_id": "gruene",
+              "leaf_id": "gruene-2025-p-197ea8ce4364cbe7",
+              "title": "Reguläre Haushaltsmittel durch Mittel des Deutschlandfonds ergänzen",
+              "description": "Mittel aus dem Deutschlandfonds sollen reguläre Haushaltsmittel ergänzen und diese nicht lediglich ersetzen.",
+              "test": "Bei der Finanzierung der vorgesehenen Investitionen werden Mittel des Deutschlandfonds zusätzlich zu regulären Haushaltsmitteln eingesetzt.",
+              "tags": [
+                "wirtschaft",
+                "steuern"
+              ],
+              "keywords": [
+                "Deutschlandfonds",
+                "Haushaltsmittel",
+                "ergänzen"
+              ],
+              "reference": {
+                "page": 36,
+                "line_start": 2067,
+                "line_end": 2082,
+                "quote": "Mittel aus\ndem Deutschlandfonds werden reguläre\nHaushaltsmittel ergänzen."
+              },
+              "deadline": null,
+              "review": {
+                "status": "proposed",
+                "reviewer": null,
+                "reviewed_at": null,
+                "note": ""
+              },
+              "assessment": {
+                "status": "unassessed",
+                "rationale": "Noch keine redaktionelle Bewertung.",
+                "reviewer": null,
+                "assessed_at": null,
+                "evidence_ids": []
+              },
+              "generation": [
+                {
+                  "model": "openai/gpt-5.6-luna",
+                  "prompt_version": "politrace-evidence-v3",
+                  "input_sha256": "31a675778a1d645421ce2cfaebbfa6c0e91edfa4f3583c7bef69cd8896ac10dc"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "gates_passed": false,
+      "passed_checks": 21,
+      "total_checks": 22,
+      "exact_citations_validated": true,
+      "criterion_count": 17,
+      "budget": {
+        "model": "openai/gpt-5.6-luna",
+        "review_model": "openai/gpt-5.6-sol",
+        "calls": 7,
+        "cache_hits": 0,
+        "subdivision_cache_hits": 0,
+        "reported_cost_usd": 0.016451,
+        "reported_cost_calls": 7,
+        "pending_reserved_usd": 0.0,
+        "in_flight_calls": 0,
+        "unknown_cost_reserved_usd": 0.0,
+        "unknown_cost_calls": 0,
+        "cost_accounting_complete": true,
+        "budget_exposure_usd": 0.016451,
+        "prompt_tokens": 12230,
+        "completion_tokens": 11205,
+        "max_usd": 0.5
+      },
+      "elapsed_seconds": 125.39
+    }
+  ]
+}

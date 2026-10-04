@@ -6,7 +6,7 @@ from threading import Event
 import httpx
 import pytest
 
-from pipeline.llm import PRICE_CEILINGS, Agent, BudgetExceeded, InvalidModelResponse
+from pipeline.llm import PRICE_CEILINGS, Agent, BudgetExceeded, InvalidModelResponse, ProviderError
 from pipeline.models import Model
 
 
@@ -108,6 +108,27 @@ def test_parallel_inflight_exposure_is_reserved_atomically(tmp_path, monkeypatch
             release.set()
         pending.result()
     assert a.calls == 1 and a.reserved_usd == 0
+
+
+def test_provider_error_classifies_nested_reason_without_exposing_raw_text(tmp_path, monkeypatch):
+    body = {'error': {'message': 'Provider returned error', 'metadata': {
+        'raw': '{"error":{"message":"thinking budget invalid, SECRET-NOT-TO-PRINT"}}'}}}
+    a = agent(tmp_path, monkeypatch, lambda _: httpx.Response(400, json=body))
+    with pytest.raises(ProviderError) as failure:
+        a.ask('test', {}, Reply, max_output=256)
+    assert failure.value.status_code == 400 and failure.value.category == 'reasoning_parameters'
+    assert 'SECRET' not in str(failure.value)
+    assert a.summary()['unknown_cost_calls'] == 1
+
+
+def test_comparison_does_not_mistake_generic_check_verbs_for_examination_commitments():
+    import re
+
+    from scripts.evaluate_models import CONCEPTS
+
+    pattern = CONCEPTS['minimum-wage']['examination, not implementation, of funding criteria']
+    assert not re.search(pattern, 'Prüfe, ob ein Mindestlohn eingeführt wurde.', re.I)
+    assert re.search(pattern, 'Eine dokumentierte Prüfung liegt vor.', re.I)
 
 
 def test_current_models_do_not_require_unsupported_temperature(tmp_path, monkeypatch):
