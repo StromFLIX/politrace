@@ -102,8 +102,8 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
                         start = end
                 yield group.model_copy(update={'start': start})
 
-        try:
-            result, generation = agent.ask(
+        def request(review=False):
+            return agent.ask(
                 "Structure these numbered PDF layout blocks into a readable section tree and paragraphs. "
                 "Join consecutive fragments of ONE paragraph, not separate policy commitments; PDF line "
                 "wrapping often splits a sentence into many blocks. Preserve ALL blocks, including headers, "
@@ -116,16 +116,21 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
                 {"blocks": [{"index": i, "page": leaf.reference.page, "text": leaf.text}
                             for i, leaf in enumerate(batch)], "existing_sections": known_paths[-80:]},
                 StructuredParagraphs, validator=check, max_output=9000, subdivide=len(batch) > 4,
+                review=review,
             )
+        try:
+            result, generation = request()
         except InvalidModelResponse:
             if len(batch) <= 4:
-                raise
-            midpoint = len(batch) // 2
-            logger.warning('%s: subdividing an invalid %s-block outline batch; source checks stay strict',
-                           program_id, len(batch))
-            batches.appendleft(batch[midpoint:])
-            batches.appendleft(batch[:midpoint])
-            continue
+                logger.warning('%s: bounded stronger-model outline fallback; source checks unchanged', program_id)
+                result, generation = request(review=True)
+            else:
+                midpoint = len(batch) // 2
+                logger.warning('%s: subdividing an invalid %s-block outline batch; source checks stay strict',
+                               program_id, len(batch))
+                batches.appendleft(batch[midpoint:])
+                batches.appendleft(batch[:midpoint])
+                continue
         check(result)
         for group in cited_groups(result.groups):
             first, last = batch[group.start], batch[group.end]
@@ -218,7 +223,7 @@ def ingest_program(*, root: Path, agent: Agent, pdf: str, party: str, year: int,
     if not 1949 <= year <= 2100:
         raise ValueError("Election year outside supported range")
     if not license_note or len(license_note.strip()) < 20:
-        raise ValueError("Record an actual public full-text reuse licence/permission in license_note before importing")
+        raise ValueError("Record source attribution and actual source terms in license_note before importing")
     # Validate source metadata before downloading or spending the model budget.
     Source(url=source_url, title=title, publisher=party, retrieved_at=date.today())
     if textless_pages and (not expected_sha256 or not transcription_note):

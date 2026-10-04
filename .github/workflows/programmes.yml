@@ -1,0 +1,97 @@
+name: Complete remaining Bundestag programmes
+on:
+  push:
+    branches: [main]
+    paths: ['.github/backfills/programmes.json']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: politrace-remaining-programmes
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      targets: ${{ steps.plan.outputs.targets }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: plan
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path('.github/backfills/programmes.json').read_text())
+          allowed = {'cdu-csu-2025', 'spd-2025', 'afd-2025', 'linke-2025', 'ssw-2025'}
+          targets = r['targets']
+          assert targets and len(set(targets)) == len(targets) and set(targets) <= allowed
+          assert r['source_mode'] == 'attributed-transcription'
+          assert os.environ['GITHUB_RUN_ATTEMPT'] == '1', 'Use a new checkpoint continuation'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('targets=' + json.dumps(targets) + '\n')
+          PY
+  import:
+    needs: plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        target: ${{ fromJSON(needs.plan.outputs.targets) }}
+    env:
+      PROGRAMME_TARGET: ${{ matrix.target }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: request
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path('.github/backfills/programmes.json').read_text())
+          previous = r['resume_runs'].get(os.environ['PROGRAMME_TARGET'])
+          assert previous is None or (type(previous) is int and previous > 0)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('resume=' + (str(previous) if previous else '') + '\n')
+          PY
+      - name: Refuse stale or missing spending checkpoints
+        run: python scripts/check_checkpoint.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESUME_RUN: ${{ steps.request.outputs.resume }}
+      - name: Restore only this source and its cumulative ledger
+        if: steps.request.outputs.resume != ''
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: programme-checkpoint-${{ matrix.target }}
+          run-id: ${{ steps.request.outputs.resume }}
+          github-token: ${{ github.token }}
+          path: .
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - run: uv run politrace validate && uv run pytest
+      - name: Import source and extract every leaf
+        run: uv run python scripts/programmes_batch.py
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_REVIEW_MODEL: anthropic/claude-sonnet-5.5
+      - name: Preserve complete source, validated leaves and cost even on failure
+        if: always() && hashFiles(format('.cache/programmes/{0}/budget.json', matrix.target)) != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: programme-checkpoint-${{ matrix.target }}
+          path: |
+            data/live/programs/${{ matrix.target }}.*
+            data/live/criteria/${{ matrix.target }}-*.json
+            .cache/programmes/${{ matrix.target }}/
+          include-hidden-files: true
+          retention-days: 30
+      - if: success()
+        run: uv run politrace validate && uv run ruff check .

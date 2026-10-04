@@ -315,14 +315,14 @@ def test_bad_criterion_batch_writes_no_partial_data(corpus):
     assert not load_records(root, 'live', 'programs')[0].criteria_extraction
 
 
-def test_source_hash_and_reuse_basis_fail_before_pdf_or_model_work(corpus, tmp_path):
+def test_source_hash_and_terms_fail_before_pdf_or_model_work(corpus, tmp_path):
     root, *_ = corpus
     pdf = tmp_path / 'changed.pdf'
     pdf.write_bytes(b'%PDF-not-the-inspected-edition')
     kwargs = dict(root=root, agent=Stub({}), pdf=str(pdf), program_id='spd-new', party='spd', year=2025,
                   title='A test programme', source_url='https://example.org/programme', published=date(2025, 1, 1),
                   period_start=date(2025, 3, 25), period_end=None)
-    with pytest.raises(ValueError, match='reuse licence'):
+    with pytest.raises(ValueError, match='source attribution'):
         ingest_program(**kwargs)
     kwargs['license_note'] = 'Synthetic test fixture with explicit reuse permission.'
     with pytest.raises(ValueError, match='changed since'):
