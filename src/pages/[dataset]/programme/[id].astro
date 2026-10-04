@@ -4,9 +4,55 @@ import Icon from '../../../components/Icon.astro';
 import ProgramTree from '../../../components/ProgramTree.astro';
 import ExtractionStatus from '../../../components/ExtractionStatus.astro';
 import { datasets, getData, formatDate, editUrl, mdUrl, reviewLabels } from '../../../lib/data';
-export function getStaticPaths() { return datasets.flatMap(dataset => { const data = getData(dataset); return data.programs.map(program => ({ params: { dataset, id: program.id }, props: { data, program } })); }); }
+import { extractionCoverage } from '../../../lib/metrics';
+export function getStaticPaths() {
+  return datasets.flatMap(dataset => {
+    const data = getData(dataset);
+    return data.programs.map(program => ({ params: { dataset, id: program.id }, props: { data, program } }));
+  });
+}
 const { data, program } = Astro.props;
 const party = data.parties.find(p => p.id === program.party_id)!;
 const criteria = data.criteria.filter(c => c.program_id === program.id);
+const coverage = extractionCoverage(program, criteria);
+const api = `/api/v1/${data.dataset}/programs/${program.id}`;
 ---
-<Layout title={`${party.short_name} · Wahlprogramm ${program.election_year}`} dataset={data.dataset} active="parties"><div class="page-heading"><div class="breadcrumbs"><a href={`/${data.dataset}/parteien/${party.id}/`}>{party.short_name}</a><Icon name="chevron" size={12} /><span>Wahlprogramm {program.election_year}</span></div><div class="eyebrow">Das erste Datenprodukt · Programmbaum</div><h1>{program.title}</h1><p>Die vollständige extrahierte Textspur, als lesbarer Baum. Absätze und Seiten bleiben nachvollziehbar, auch wenn sie kein messbares Versprechen enthalten.</p><div class="page-actions" style="margin-top:20px"><a class="button primary" href={`/api/v1/${data.dataset}/programs/${program.id}/tree.json`}><Icon name="code" size={15} /> Textbaum als JSON</a><a class="button" href={`/api/v1/${data.dataset}/programs/${program.id}/source.md`}><Icon name="download" size={15} /> Extrahiertes Markdown</a></div></div><div class="two-column"><section><ExtractionStatus program={program} criteria={criteria} /><div class="notice"><Icon name="info" size={17} /><span>Die KI ordnet Absätze in Abschnitte ein, formuliert sie aber nicht um. Die extrahierte Transkription kann dennoch PDF-Layoutfehler enthalten. {program.transcription_note && `${program.transcription_note} `}{data.dataset === 'demo' && 'Diese Texte sind fiktive Beispiele und keine echten Parteizitate.'}</span></div><ProgramTree node={program.tree} program={program} criteria={criteria} /></section><aside><div class="side-card"><h2>Quellenpass</h2><dl><dt>Partei / Jahr</dt><dd>{party.short_name} · {program.election_year}</dd><dt>Veröffentlicht</dt><dd>{formatDate(program.published_at)}</dd><dt>Absätze</dt><dd>{program.leaves.length}</dd><dt>Abgeleitete Kriterien</dt><dd>{criteria.length}</dd><dt>Review</dt><dd>{reviewLabels[program.review.status]}</dd><dt>Herkunft</dt><dd>{program.source.publisher}</dd></dl>{data.dataset !== 'demo' && <p class="small muted">{program.source.license_note}</p>}{data.dataset !== 'demo' && <><a class="text-link" href={program.source.url}>Offizielle Quelle <Icon name="arrow" size={13} /></a>{program.pdf_url && <a class="text-link" href={program.pdf_url}>Original-PDF <Icon name="download" size={13} /></a>}</>}<a class="text-link" href={mdUrl(program.markdown_path)}>Markdown auf GitHub <Icon name="github" size={13} /></a><a class="text-link" href={editUrl(data.dataset, 'programs', program.id)}>Struktur korrigieren <Icon name="branch" size={13} /></a></div></aside></div></Layout>
+<Layout title={`${party.short_name} · Wahlprogramm ${program.election_year}`} dataset={data.dataset} active="parties">
+  <header class="programme-heading">
+    <div class="breadcrumbs"><a href={`/${data.dataset}/parteien/`}>Parteien</a><Icon name="chevron" size={12} /><a href={`/${data.dataset}/parteien/${party.id}/`}>{party.short_name}</a><Icon name="chevron" size={12} /><span>Wahlprogramm {program.election_year}</span></div>
+    <div class="programme-kicker"><span class="party-logo" style={`--party:${party.color}`}>{party.short_name}</span><span>Bundestagswahl {program.election_year}</span><span>Programm & Quellen</span></div>
+    <h1>{program.title}</h1>
+    <p class="programme-description">Das Programm lesen, die Zusagen nachvollziehen. Jeder Absatz führt zurück zur Quelle und zu den daraus abgeleiteten Kriterien.</p>
+    <div class="programme-summary">
+      <div class="programme-numbers"><span><strong>{program.leaves.length}</strong>Absätze im Text</span><span><strong>{coverage.processed_leaves}</strong>für Kriterien ausgewertet</span><span><strong>{criteria.length}</strong>Kriterien abgeleitet</span></div>
+      <div class="page-actions">
+        <a class="button primary" href={`/${data.dataset}/parteien/${party.id}/?jahr=${program.election_year}#kriterien`}>Kriterien ansehen <Icon name="arrow" size={14} /></a>
+        {data.dataset === 'live' && program.pdf_url
+          ? <a class="button" href={program.pdf_url}><Icon name="file" size={15} /> Original-PDF</a>
+          : <a class="button" href={`${api}/source.md`}><Icon name="download" size={15} /> Markdown</a>}
+      </div>
+    </div>
+  </header>
+  <details class="programme-provenance">
+    <summary><Icon name="info" size={17} /><span><strong>{data.dataset === 'demo' ? 'Fiktiver Beispieltext.' : `${reviewLabels[program.review.status]}.`}</strong> {data.dataset === 'live' && 'Automatisch übertragener Text; PDF-Layoutfehler sind möglich. '}Quelle, Daten & Bearbeitungsstand</span><Icon name="down" size={17} /></summary>
+    <div class="programme-provenance-body">
+      <div><ExtractionStatus program={program} criteria={criteria} />
+        <p>Die Lesefassung formatiert Markdown und lässt Zeilen im Text fließen. Sie schreibt keine Zusagen um. Die unveränderte Textspur bleibt an jedem Absatz unter „Quelle & exaktes Zitat“ und als Markdown verfügbar.</p>
+        {program.transcription_note && <p>{program.transcription_note}</p>}
+        <p>Die Kapitel stammen aus dem automatisch erstellten Baum. Die Absätze bleiben in der Reihenfolge der Quelle; wiederkehrende Kapitel werden als Fortsetzung kenntlich gemacht.</p>
+      </div>
+      <div>
+        <dl><dt>Herausgeber</dt><dd>{program.source.publisher}</dd><dt>Programmdatum</dt><dd>{formatDate(program.published_at)}</dd><dt>Quellenprüfung</dt><dd>{reviewLabels[program.review.status]}</dd></dl>
+        {data.dataset === 'live' && <p>{program.source.license_note}</p>}
+        <div class="programme-source-actions">
+          {data.dataset === 'live' && <a class="text-link" href={program.source.url}>Offizielle Quelle <Icon name="arrow" size={13} /></a>}
+          <a class="text-link" href={`${api}/tree.json`}>Textbaum als JSON <Icon name="code" size={14} /></a>
+          <a class="text-link" href={`${api}/source.md`}>Extrahiertes Markdown <Icon name="download" size={14} /></a>
+          <a class="text-link" href={mdUrl(program.markdown_path)}>Markdown auf GitHub <Icon name="github" size={14} /></a>
+          <a class="text-link" href={editUrl(data.dataset, 'programs', program.id)}>Struktur korrigieren <Icon name="branch" size={14} /></a>
+        </div>
+      </div>
+    </div>
+  </details>
+  <ProgramTree program={program} criteria={criteria} />
+</Layout>

@@ -8,13 +8,15 @@ Politrace connects **a manifesto paragraph → a testable commitment → legal e
 
 An OpenRouter agent assigns every leaf to a readable section/subsection path, with previous section paths available for continuity. It has no tools and cannot change the paragraph text. The response must include every input leaf exactly once and in input order. The store validator checks tree coverage, duplicate IDs and exact citations. Full Markdown remains the authoritative reading order if the thematic tree groups passages differently.
 
+The website's programme reader follows the original leaf order, with readable Markdown and a chapter navigator rather than a nested box for every branch. It labels a returning thematic branch as a continuation. Exact source text, Markdown lines and PDF-page links remain available at every paragraph; IDs and the API are unchanged. Raw HTML is escaped, remote images are reduced to alt text and links allow only HTTP(S). Display formatting does not rewrite words or repair OCR. Short heading/page furniture whose tokens are all present in its source titles, publisher and page number is compacted behind an explicit disclosure, never deleted or counted as an extraction abstention; search and direct leaf links reveal it.
+
 These guarantees are about the **stored transcription**, not PDF extraction accuracy. Column order, footnotes, tables and headings can still be wrong. Empty/image-only pages block programme generation until reviewed OCR is supplied. A human must compare the original PDF with the transcription before marking the programme reviewed.
 
 ## 2. Derive atomic acceptance criteria
 
 Every unprocessed leaf is submitted with its ancestor sections. The model must either produce observable commitments, each with one falsifiable test, or explain an abstention. Rhetoric, status-quo descriptions and unmeasurable aspirations should yield no criteria. Numbers and deadlines cannot be invented.
 
-Each criterion has a stable ID, exact source quote, programme/party/leaf IDs, topic tags, searchable keywords, optional source-backed deadline and independent review metadata. Absence of a criterion is **not** proof that the paragraph makes no promise; the extraction audit can be challenged through a PR.
+Each criterion has a stable ID, exact source quote, programme/party/leaf IDs, topic tags, searchable keywords, optional source-backed deadline and independent review metadata. The generator does **not yet deduplicate semantically equivalent commitments across leaves**. The same promise repeated in a preamble and a chapter can therefore produce multiple criteria; current totals must not be advertised as counts of unique political promises. See the [full-coverage and non-destructive grouping plan](full-coverage.md). Absence of a criterion is **not** proof that the paragraph makes no promise; the extraction audit can be challenged through a PR.
 
 ## 3. Import enacted publications, not voting guesses
 

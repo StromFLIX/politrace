@@ -9,6 +9,7 @@ An evidence-first proof of concept for German election manifestos: preserve each
 ## First iteration
 
 - **Party view**: programme tree, searchable criteria, evidence coverage, separate fulfilment statistics, previous programme periods and direct source/API/edit links.
+- **Programme reader**: chapter navigation, readable Markdown in source order, programme search, a criterion-bearing-paragraph filter and expandable exact-source/page citations. Works without JavaScript for reading; untrusted HTML and remote images are not rendered.
 - **Activity view**: official law publications, signed criterion impacts on a −2…+2 scale, and independently sourced voting tables when data exists.
 - **Open data**: versioned static JSON/Markdown API, schemas, programme trees, criteria search index and programme-level statistics.
 - **Python pipeline**: PDF → page/line-anchored Markdown → agent-structured tree → atomic criteria. Paginated official BGBl I/II archive (plus RSS CLI) → German-stemmed BM25 candidate retrieval → two-pass legal assessment, with exact-quote validation, review states, caching and bounded budgets.
@@ -17,11 +18,15 @@ An evidence-first proof of concept for German election manifestos: preserve each
 
 Design previews (**fictional demo data**): [overview](docs/screenshots/overview.png) · [party detail](docs/screenshots/party.png) · [activity](docs/screenshots/activity.png).
 
+Programme reader (**real, unreviewed Grünen transcription**): [desktop](docs/screenshots/programme-reader-desktop.png) · [desktop chapter](docs/screenshots/programme-chapter-desktop.png) · [mobile](docs/screenshots/programme-reader-mobile.png) · [mobile chapter](docs/screenshots/programme-chapter-mobile.png). Screenshots preserve known PDF extraction defects; this reader redesign is not a source correction.
+
 ### What is real, and what is not?
 
 `data/live/` contains **171 official BGBl I/II laws**, the complete **Grünen 2025 programme transcription/tree**, **41 proposed criteria** and **6 proposed law links** from the first real end-to-end pilot. Only **8 of 337 source leaves** and **6 selected laws / 36 candidate pairs** were evaluated in that pilot; this is not full manifesto or cross-party coverage. Three links passed a second-model challenge and three retain explicit model disagreements. **No criterion has a human-reviewed fulfilment assessment, and no live votes have been imported.** See the [pilot result, actual cost and open quality findings](docs/pilots/2026-10-04-gruene.md).
 
 An OpenRouter key is needed for further model stages. The real pilot demonstrates an operating extraction/matching path, not measured legal accuracy; automated tests and exact quotations do not prove that a model's interpretation is correct.
+
+**Semantic deduplication is not implemented yet.** Stable per-leaf IDs and unique law/criterion pairs are not unique political commitments. See the [full-coverage plan, deduplication design and pilot-based cost estimates](docs/full-coverage.md) before increasing the paid backfill scope.
 
 `data/demo/` contains **fictional** programmes, criteria, laws, votes and assessments for seven party views, including an older sample programme period. The UI and API label this namespace explicitly. These examples are not claims about actual party policy or parliamentary decisions.
 
@@ -44,6 +49,7 @@ Open <http://localhost:4321>. Useful routes:
 - `/demo/parteien/spd/` — criteria, programme links and earlier sample period
 - `/demo/aktivitaet/` — impact/vote UI demonstration
 - `/live/aktivitaet/` — real sourced publications
+- `/live/programme/gruene-2025/` — source-order programme reader, search and exact citations
 - `/daten/` — API documentation
 - `/quellen/` — 21st-Bundestag source inventory, archive coverage and explicit rights/import gaps
 - `/methodik/` — evidence and scoring rules
