@@ -17,7 +17,7 @@ from tempfile import TemporaryDirectory
 
 from pipeline.catalog import load_catalog
 from pipeline.documents import download, extract_pdf, pages_to_markdown
-from pipeline.llm import Agent
+from pipeline.llm import Agent, ProviderError
 from pipeline.models import Program, Source, TreeNode
 from pipeline.programs import extract_criteria
 from pipeline.store import ROOT, digest, load_records, save_record, validate_store, write_json
@@ -37,7 +37,7 @@ CONCEPTS = {
         '15 Euro': r'\b15\s*(?:Euro|€)',
         'under-18 applicability': r'unter\s*18|Minderjähr|unter\s*achtzehn',
         '60-percent median reference': r'60\s*(?:Prozent|%).*Median|Median.*60\s*(?:Prozent|%)',
-        'examination, not implementation, of funding criteria': r'prüf|Prüfung|untersuch',
+        'examination, not implementation, of funding criteria': r'Prüfung|geprüft|untersucht|Untersuchung',
     },
     'speed-limits': {'autobahn 130': r'\b130\b', 'municipal 30': r'\b30\b', 'rural 80': r'\b80\b'},
     'investment-fund': {'establish the fund': r'Deutschlandfonds'},
@@ -106,6 +106,14 @@ def evaluate(model, prepared):
                 for name, pattern in CONCEPTS.get(label, {}).items():
                     checks.append({'check': f'{label}: {name}',
                                    'passed': any(bool(re.search(pattern, t, re.I | re.S)) for t in texts)})
+                if label == 'minimum-wage':
+                    checks.append({'check': 'minimum-wage: amount and eligibility are independently testable',
+                                   'passed': len(rows) >= 6 and any(
+                                       re.search(r'unter\s*18|Minderjähr', c.test, re.I)
+                                       and not re.search(r'\b15\s*(?:Euro|€)', c.test, re.I) for c in rows)})
+                if label == 'speed-limits':
+                    checks.append({'check': 'speed-limits: no invented European fine baseline',
+                                   'passed': not any(re.search(r'Bußgeld|Bussgeld', t, re.I) for t in texts)})
                 checks.append({'check': f'{label}: no invented calendar date',
                                'passed': all(c.deadline is None for c in rows)})
                 samples.append({'case': label, 'page': page, 'source_leaf_id': identifier,
@@ -119,6 +127,8 @@ def evaluate(model, prepared):
     except Exception as error:
         # Do not print arbitrary HTTP bodies/request headers or silently call a failed model a no-op.
         output.update(error_type=type(error).__name__)
+        if isinstance(error, ProviderError):
+            output.update(http_status=error.status_code, error_category=error.category)
     finally:
         output.update(budget=agent.summary(), elapsed_seconds=round(time.monotonic() - start, 2))
     return output
@@ -128,7 +138,7 @@ def main():
     prepared = prepare()
     with ThreadPoolExecutor(max_workers=2) as pool:
         results = list(pool.map(lambda model: evaluate(model, prepared), MODELS))
-    report = {'sample_version': 1, 'source_url': str(prepared[0].pdf_url),
+    report = {'sample_version': 2, 'source_url': str(prepared[0].pdf_url),
               'source_sha256': prepared[0].sha256,
               'limitations': 'Six deliberately selected paragraphs from one programme, not a balanced benchmark. '
                             'Checks test citations, negative controls and selected commitment coverage; '

@@ -270,13 +270,19 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
     task = (
         "Extract atomic, observable acceptance criteria from each manifesto paragraph. "
         "Write titles, descriptions, tests and abstention reasons in German. "
-        "One policy commitment per criterion, with a falsifiable test and VERBATIM supporting quote, "
+        "One independently enactable policy action per criterion: separate changing an amount from "
+        "extending eligibility to another group; preserve all source conditions. Do not omit a "
+        "concrete commitment just because it shares a paragraph with others. Use a falsifiable test and "
+        "VERBATIM supporting quote, "
         "including source line breaks and Markdown. Do not invent quantities, dates, promises or use "
         "your knowledge of the party. Return an empty list with an abstention reason for rhetoric, "
         "headings, tables of contents, descriptions of the status quo, ambiguous aspirations or "
         "non-testable statements. A deadline may only come from the cited source; otherwise null. "
         "If only a year is specified, preserve it in the test but set deadline=null rather than inventing "
-        "an exact calendar day. A promise to examine an option is NOT a promise to implement it. "
+        "an exact calendar day. A promise to examine an option calls for a documented examination, "
+        "NOT implementation of the option; extract the examination as its own criterion. Do not "
+        "turn an undefined comparison such as 'European level' into 'any increase': abstain on that "
+        "claim unless the source specifies an observable target or comparison baseline. "
         "Neighbouring context helps interpret a continuation but is NOT citable for this leaf."
     )
     positions = {leaf.id: i for i, leaf in enumerate(program.leaves)}

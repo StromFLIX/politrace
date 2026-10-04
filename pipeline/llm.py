@@ -38,6 +38,25 @@ class InvalidModelResponse(RuntimeError):
     """A bounded input batch can be subdivided; never used for HTTP/auth/budget failures."""
 
 
+class ProviderError(RuntimeError):
+    """Safe diagnostics: a status and allowlisted category, never free-form provider text."""
+    def __init__(self, status_code, body):
+        self.status_code = status_code
+        error = body.get('error') if isinstance(body, dict) else None
+        message = str(error.get('message', '')).lower() if isinstance(error, dict) else ''
+        self.category = 'unspecified'
+        for pattern, category in [
+            ('data policy', 'privacy_policy'), ('data collection', 'privacy_policy'),
+            ('not a valid model', 'invalid_model'), ('no endpoints', 'no_eligible_route'),
+            ('reasoning', 'reasoning_parameters'), ('schema', 'schema_parameters'),
+            ('credits', 'credits'), ('rate limit', 'rate_limit'),
+        ]:
+            if pattern in message:
+                self.category = category
+                break
+        super().__init__(f'OpenRouter returned HTTP {status_code} ({self.category}); check model access and limits')
+
+
 class Agent:
     def __init__(self, *, cache: Path, model: str | None = None, max_usd: float | None = None,
                  max_calls: int | None = None, client: httpx.Client | None = None):
@@ -196,9 +215,8 @@ class Agent:
             if response.status_code in (429, 502, 503, 504) and attempt < 2:
                 time.sleep(2 ** attempt)
                 continue
-            if response.is_error:
-                # Never print free-form provider bodies or request headers, which may contain secrets.
-                raise RuntimeError(f"OpenRouter returned HTTP {response.status_code}; check model access and limits")
+            if response.is_error or (isinstance(body, dict) and body.get('error')):
+                raise ProviderError(response.status_code, body)
             try:
                 choice = body["choices"][0]
                 if choice.get("finish_reason") != "stop":
