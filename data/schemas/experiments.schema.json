@@ -1,0 +1,497 @@
+{
+  "$defs": {
+    "DedupDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "left_id": {
+          "title": "Left Id",
+          "type": "string"
+        },
+        "right_id": {
+          "title": "Right Id",
+          "type": "string"
+        },
+        "decision": {
+          "$ref": "#/$defs/Equivalent"
+        },
+        "generation": {
+          "$ref": "#/$defs/Generation"
+        }
+      },
+      "required": [
+        "left_id",
+        "right_id",
+        "decision",
+        "generation"
+      ],
+      "title": "DedupDecision",
+      "type": "object"
+    },
+    "Equivalent": {
+      "additionalProperties": false,
+      "properties": {
+        "pair_id": {
+          "title": "Pair Id",
+          "type": "string"
+        },
+        "equivalent": {
+          "title": "Equivalent",
+          "type": "boolean"
+        },
+        "rationale": {
+          "minLength": 15,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "left_quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Left Quote"
+        },
+        "right_quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Right Quote"
+        }
+      },
+      "required": [
+        "pair_id",
+        "equivalent",
+        "rationale",
+        "left_quote",
+        "right_quote"
+      ],
+      "title": "Equivalent",
+      "type": "object"
+    },
+    "Generation": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "prompt_version": {
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "input_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "model",
+        "prompt_version",
+        "input_sha256"
+      ],
+      "title": "Generation",
+      "type": "object"
+    },
+    "Group": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "canonical_criterion_id": {
+          "title": "Canonical Criterion Id",
+          "type": "string"
+        },
+        "member_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Member Ids",
+          "type": "array"
+        },
+        "status": {
+          "const": "proposed",
+          "default": "proposed",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "canonical_criterion_id",
+        "member_ids"
+      ],
+      "title": "Group",
+      "type": "object"
+    },
+    "LawAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "law_id": {
+          "title": "Law Id",
+          "type": "string"
+        },
+        "analysis_sha256": {
+          "title": "Analysis Sha256",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "needs_ocr"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "eligible_count": {
+          "minimum": 0,
+          "title": "Eligible Count",
+          "type": "integer"
+        },
+        "candidate_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Candidate Ids",
+          "type": "array"
+        },
+        "omitted_count": {
+          "minimum": 0,
+          "title": "Omitted Count",
+          "type": "integer"
+        },
+        "pairs": {
+          "items": {
+            "$ref": "#/$defs/PairAudit"
+          },
+          "title": "Pairs",
+          "type": "array"
+        }
+      },
+      "required": [
+        "law_id",
+        "analysis_sha256",
+        "status",
+        "eligible_count",
+        "candidate_ids",
+        "omitted_count",
+        "pairs"
+      ],
+      "title": "LawAudit",
+      "type": "object"
+    },
+    "PairAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "criterion_id": {
+          "title": "Criterion Id",
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "proposed_link",
+            "no_supported_link",
+            "missing_context",
+            "preserved_link"
+          ],
+          "title": "Disposition",
+          "type": "string"
+        },
+        "rationale": {
+          "title": "Rationale",
+          "type": "string"
+        },
+        "input_sha256": {
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "generation": {
+          "items": {
+            "$ref": "#/$defs/Generation"
+          },
+          "title": "Generation",
+          "type": "array"
+        },
+        "impact_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Impact Id"
+        },
+        "judgment": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PairJudgment"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "verification": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PairVerification"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "criterion_id",
+        "disposition",
+        "rationale",
+        "input_sha256",
+        "generation"
+      ],
+      "title": "PairAudit",
+      "type": "object"
+    },
+    "PairJudgment": {
+      "additionalProperties": false,
+      "properties": {
+        "supported": {
+          "title": "Supported",
+          "type": "boolean"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "enum": [
+                -2,
+                -1,
+                0,
+                1,
+                2
+              ],
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Score"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "rationale": {
+          "minLength": 15,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "law_passage_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Law Passage Id"
+        },
+        "law_quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Law Quote"
+        },
+        "criterion_quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Criterion Quote"
+        },
+        "caveats": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Caveats",
+          "type": "array"
+        },
+        "criterion_id": {
+          "title": "Criterion Id",
+          "type": "string"
+        },
+        "disposition": {
+          "enum": [
+            "proposed_link",
+            "no_supported_link",
+            "missing_context"
+          ],
+          "title": "Disposition",
+          "type": "string"
+        }
+      },
+      "required": [
+        "supported",
+        "score",
+        "confidence",
+        "rationale",
+        "law_passage_id",
+        "law_quote",
+        "criterion_quote",
+        "caveats",
+        "criterion_id",
+        "disposition"
+      ],
+      "title": "PairJudgment",
+      "type": "object"
+    },
+    "PairVerification": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted": {
+          "title": "Accepted",
+          "type": "boolean"
+        },
+        "rationale": {
+          "minLength": 10,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "caveats": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Caveats",
+          "type": "array"
+        },
+        "criterion_id": {
+          "title": "Criterion Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "accepted",
+        "rationale",
+        "caveats",
+        "criterion_id"
+      ],
+      "title": "PairVerification",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "dataset": {
+      "const": "live",
+      "default": "live",
+      "title": "Dataset",
+      "type": "string"
+    },
+    "program_id": {
+      "title": "Program Id",
+      "type": "string"
+    },
+    "version": {
+      "default": "gruene-wide-v1",
+      "title": "Version",
+      "type": "string"
+    },
+    "criteria_sha256": {
+      "title": "Criteria Sha256",
+      "type": "string"
+    },
+    "law_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Law Ids",
+      "type": "array"
+    },
+    "processed_leaves": {
+      "minimum": 0,
+      "title": "Processed Leaves",
+      "type": "integer"
+    },
+    "total_leaves": {
+      "minimum": 0,
+      "title": "Total Leaves",
+      "type": "integer"
+    },
+    "groups": {
+      "items": {
+        "$ref": "#/$defs/Group"
+      },
+      "title": "Groups",
+      "type": "array"
+    },
+    "deduplication": {
+      "items": {
+        "$ref": "#/$defs/DedupDecision"
+      },
+      "title": "Deduplication",
+      "type": "array"
+    },
+    "laws": {
+      "items": {
+        "$ref": "#/$defs/LawAudit"
+      },
+      "title": "Laws",
+      "type": "array"
+    },
+    "cost": {
+      "additionalProperties": true,
+      "title": "Cost",
+      "type": "object"
+    },
+    "note": {
+      "default": "Proposed equivalence groups, not a verified unique-promise denominator. All selected laws are screened using whole-law, provision-window and reverse BM25 retrieval. Unselected pairs are unknown; recall is not measured. Missing base-law context is explicit. No human approval, inferred votes or automatic fulfilment.",
+      "title": "Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "program_id",
+    "criteria_sha256",
+    "law_ids",
+    "processed_leaves",
+    "total_leaves",
+    "groups",
+    "deduplication"
+  ],
+  "title": "Experiment",
+  "type": "object"
+}

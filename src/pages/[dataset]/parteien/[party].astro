@@ -6,6 +6,7 @@ import FilterBar from '../../../components/FilterBar.astro';
 import CriterionRow from '../../../components/CriterionRow.astro';
 import PeriodSwitch from '../../../components/PeriodSwitch.astro';
 import ExtractionStatus from '../../../components/ExtractionStatus.astro';
+import { experiments, experimentTotals } from '../../../lib/experiments';
 import { datasets, getData, metrics, formatDate, repoUrl } from '../../../lib/data';
 export function getStaticPaths() { return datasets.flatMap(dataset => { const data = getData(dataset); return data.parties.map(party => ({ params: { dataset, party: party.id }, props: { party, data } })); }); }
 const { party, data } = Astro.props;
@@ -22,6 +23,14 @@ const years = [...new Set(programs.map(p => p.election_year))];
     const stats = metrics(criteria, data.impacts, selected);
     return <section data-period-panel={year} hidden={index !== 0}>
       {selected.map(program => <ExtractionStatus program={program} criteria={criteria} />)}
+      {experiments(data.dataset).filter(report => selected.some(p => p.id === report.program_id)).map(report => {
+        const totals = experimentTotals(report);
+        return <div class="evidence-box"><h2>Programmweite Auswertung · ungeprüfte Vorschläge</h2>
+          <p>{report.processed_leaves}/{report.total_leaves} Absätze verarbeitet · {totals.grouped} vorgeschlagene Zusagengruppen aus {totals.criteria} Kriterien · {totals.lawsCompleted}/{report.law_ids.length} Gesetze durchsucht.</p>
+          <p>Gruppierung ist keine redaktionelle Freigabe. Nicht ausgewählte Gesetz/Kriterium-Paare bleiben unbekannt.</p>
+          <a class="button primary" href={`/${data.dataset}/auswertung/${report.program_id}/`}>Gruppierte Übersicht, Lücken & Kosten <Icon name="arrow" size={14} /></a>
+        </div>;
+      })}
       <Stats items={[
         { value: stats.total, label: 'Prüfbare Kriterien', detail: `Programmjahr ${year}`, icon: 'check' },
         { value: stats.fulfilled, label: 'Nachweislich erfüllt', detail: `Von insgesamt ${stats.total} Kriterien`, icon: 'shield' },

@@ -187,6 +187,14 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
                 if not law or not coverage.period_start <= law.published_at <= coverage.as_of:
                     raise ValueError(f"Coverage claims an absent/out-of-window law: {identifier}")
 
+        for path in (root / dataset / 'experiments').glob('*.json'):
+            from pipeline.experiment import Experiment, validate_experiment
+
+            report = Experiment.model_validate_json(path.read_text())
+            if dataset != 'live' or path.stem != report.program_id:
+                raise ValueError('Experiment dataset or filename mismatch')
+            validate_experiment(report, data)
+
         pairs = [(i.criterion_id, i.law_id) for i in data["impacts"].values()]
         if len(set(pairs)) != len(pairs):
             raise ValueError("Only one canonical impact per criterion/law; revise it through a PR")
@@ -201,7 +209,9 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
 def export_schemas(root: Path = ROOT / "data" / "schemas"):
     from pipeline.archive import ArchiveInventory
     from pipeline.catalog import SourceCatalog
+    from pipeline.experiment import Experiment
 
     for name, model in {**RECORD_TYPES, "parties": Party, "coverage": LawCoverage,
-                        "source-catalog": SourceCatalog, 'archive-inventory': ArchiveInventory}.items():
+                        "source-catalog": SourceCatalog, 'archive-inventory': ArchiveInventory,
+                        'experiments': Experiment}.items():
         write_json(root / f"{name}.schema.json", model.model_json_schema())

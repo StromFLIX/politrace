@@ -47,6 +47,10 @@ This POC has unit tests for retrieval and citation safety, **not a measured real
 
 Before relying on aggregate results: build a cross-party, expert-adjudicated reference set; measure candidate recall separately from final-link precision; inspect a random sample of omitted pairs; compare a hybrid lexical/embedding retriever; measure disagreement and abstention by topic; and publish versions, costs and error rates. Do not optimise merely for the number of links found.
 
+### Programme-wide Luna Flex experiment
+
+The separately capped [Grünen experiment](experiments-gruene-luna.md) adds proposed equivalence groups without changing raw criterion IDs or the reviewed denominator. Every merge is source-backed and complete-link checked, not a transitive topic cluster. Its all-law candidate search combines whole-law, overlapping provision-window and reverse retrieval; it records per-pair `missing_context`, unsupported and proposed-link outcomes. It remains lexical retrieval with unmeasured recall, not a guarantee of every true link or complete semantic deduplication. Existing six-candidate daily matching is a separate path; its audit must not be confused with the experiment report. The experiment retains its own frozen coverage and cumulative cost.
+
 ## Three quantities that must not be conflated
 
 ### Signed legal impact (ordinal, per law and criterion)

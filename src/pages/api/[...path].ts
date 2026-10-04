@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
 import { extractionCoverage } from '../../lib/metrics';
+import { experiments } from '../../lib/experiments';
 
 export const prerender = true;
 
@@ -28,7 +29,10 @@ export const getStaticPaths: GetStaticPaths = () => {
     const coverageDir = path.join(dataRoot, dataset, 'coverage');
     const coverage = fs.existsSync(coverageDir) ? fs.readdirSync(coverageDir).filter(f => f.endsWith('.json')).sort().map(f => JSON.parse(fs.readFileSync(path.join(coverageDir, f), 'utf8'))) : [];
     add(`${prefix}/coverage.json`, { schema_version: '1.0', dataset, total: coverage.length, items: coverage });
-    const dataDigest = createHash('sha256').update(JSON.stringify(data)).digest('hex');
+    const reports = experiments(dataset);
+    add(`${prefix}/experiments.json`, { schema_version: '1.0', dataset, total: reports.length, items: reports });
+    for (const report of reports) add(`${prefix}/experiments/${report.program_id}.json`, report);
+    const dataDigest = createHash('sha256').update(JSON.stringify(reports.length ? { ...data, experiments: reports } : data)).digest('hex');
     const statistics = data.programs.map(p => ({
       program_id: p.id, party_id: p.party_id, election_year: p.election_year,
       period_start: p.period_start, period_end: p.period_end,
@@ -47,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
       counts: Object.fromEntries(collections.map(c => [c, data[c].length])),
       statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
-      extraction: `/api/${prefix}/extraction.json`,
+      extraction: `/api/${prefix}/extraction.json`, experiments: `/api/${prefix}/experiments.json`,
       filters: 'Static snapshot API. No server-side query parameters. Filter items client-side or use the search index.',
     });
     for (const collection of collections) {
@@ -105,6 +109,8 @@ export const getStaticPaths: GetStaticPaths = () => {
       '/v1/{dataset}/search.json': { get: { operationId: 'getSearchIndex', parameters: [datasetParameter], responses: response('Searchable criteria index') } },
       '/v1/{dataset}/coverage.json': { get: { operationId: 'getCoverage', parameters: [datasetParameter], responses: response('Archive counts, source snapshots and explicit remaining law IDs') } },
       '/v1/{dataset}/extraction.json': { get: { operationId: 'getExtractionCoverage', parameters: [datasetParameter], responses: response('Processed and remaining source leaves, for imported programmes only; not human review') } },
+      '/v1/{dataset}/experiments.json': { get: { operationId: 'getExperiments', parameters: [datasetParameter], responses: response('Frozen grouping proposals, all-law coverage, pair dispositions and cumulative reported cost') } },
+      '/v1/{dataset}/experiments/{id}.json': { get: { operationId: 'getExperiment', parameters: [datasetParameter, idParameter], responses: response('Programme-scoped experiment with all source criteria retained') } },
       '/v1/sources/bundestag-21.json': { get: { operationId: 'getSourceCatalog', responses: response('21st Bundestag scope, programme URLs, PDF hashes and inspection notes') } },
       '/v1/sources/laws-bundestag-21.json': { get: { operationId: 'getArchiveInventory', responses: response('Dated, count-reconciled official archive inventory; not a fresh scan on every run') } },
     },
