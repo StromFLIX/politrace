@@ -16,7 +16,8 @@ test('demo overview labels fictional data and switches periods', async ({ page }
   await page.goto('/demo/parteien/');
   await expect(page.getByRole('heading', { name: /Vom Versprechen/ })).toBeVisible();
   await expect(page.locator('.dataset-banner')).toContainText('Fiktive Programme');
-  await expect(page.locator('[data-period-panel="2025"] .party-card')).toHaveCount(7);
+  const parties = await (await page.request.get('/api/v1/demo/parties.json')).json();
+  await expect(page.locator('[data-period-panel="2025"] .party-card')).toHaveCount(parties.total);
   await page.screenshot({ path: `test-results/home-${testInfo.project.name}.png`, fullPage: true });
   await page.locator('[data-period-panel="2025"] [data-period-select]').selectOption('2021');
   await expect(page.locator('[data-period-panel="2021"]')).toBeVisible();
@@ -90,6 +91,46 @@ test('API exposes separate datasets, exact text, schemas and real 404s', async (
   const contract = await (await request.get('/api/v1/schemas/criteria.schema.json')).json();
   expect(contract.additionalProperties).toBe(false);
   expect((await request.get('/api/v1/live/does-not-exist.json')).status()).toBe(404);
+});
+
+test('source inventory distinguishes located programmes, reuse gaps and archive coverage', async ({ page }) => {
+  const catalog = await (await page.request.get('/api/v1/sources/bundestag-21.json')).json();
+  expect(catalog.programs).toHaveLength(6);
+  expect(catalog.programs.flatMap((p: { members: string[] }) => p.members)).toHaveLength(7);
+  expect(catalog.programs.some((p: { party_id: string }) => p.party_id === 'ssw')).toBe(true);
+  const coverage = await (await page.request.get('/api/v1/live/coverage.json')).json();
+  for (const record of coverage.items) {
+    expect(record.official_count).toBe(record.expected_ids.length);
+    expect(record.imported_count + record.pending_ids.length).toBe(record.official_count);
+    expect(record.complete).toBe(record.pending_ids.length === 0);
+  }
+  await page.goto('/quellen/');
+  await expect(page.getByRole('heading', { name: /Quellen sichtbar machen/ })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'SSW', exact: true })).toBeVisible();
+  const blocked = catalog.programs.filter((p: { rights: { status: string } }) => p.rights.status === 'permission-required');
+  await expect(page.getByRole('link', { name: 'Freigabe offen', exact: true })).toHaveCount(blocked.length);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test('live programme criteria retain exact citations and do not imply reviewed fulfilment', async ({ page, request }) => {
+  const programs = await (await request.get('/api/v1/live/programs.json')).json();
+  test.skip(!programs.total, 'No live programme proposal has been published yet');
+  const program = programs.items[0];
+  const tree = await (await request.get(`/api/v1/live/programs/${program.id}/tree.json`)).json();
+  const markdown = await (await request.get(tree.markdown)).text();
+  expect(tree.leaves.length).toBeGreaterThan(0);
+  for (const leaf of tree.leaves) expect(markdown).toContain(leaf.reference.quote);
+  const criteria = await (await request.get('/api/v1/live/criteria.json')).json();
+  const first = criteria.items.find((c: { program_id: string }) => c.program_id === program.id);
+  await page.goto(`/live/programme/${program.id}/`);
+  await expect(page.getByRole('heading', { name: program.title, exact: true }).first()).toBeVisible();
+  if (first) {
+    expect(tree.leaves.find((l: { id: string }) => l.id === first.leaf_id).text).toContain(first.reference.quote);
+    await page.goto(`/live/kriterien/${first.id}/`);
+    await expect(page.getByRole('heading', { name: first.title, exact: true })).toBeVisible();
+    await page.getByRole('link', { name: 'Absatz im Textbaum' }).click();
+    await expect(page.locator(':target')).toContainText(first.reference.quote);
+  }
 });
 
 test('search index UI handles shared URL filters without HTML injection', async ({ page }) => {

@@ -22,6 +22,9 @@ export const getStaticPaths: GetStaticPaths = () => {
   for (const dataset of datasets) {
     const data = getData(dataset);
     const prefix = `v1/${dataset}`;
+    const coverageDir = path.join(dataRoot, dataset, 'coverage');
+    const coverage = fs.existsSync(coverageDir) ? fs.readdirSync(coverageDir).filter(f => f.endsWith('.json')).sort().map(f => JSON.parse(fs.readFileSync(path.join(coverageDir, f), 'utf8'))) : [];
+    add(`${prefix}/coverage.json`, { schema_version: '1.0', dataset, total: coverage.length, items: coverage });
     const dataDigest = createHash('sha256').update(JSON.stringify(data)).digest('hex');
     const statistics = data.programs.map(p => ({
       program_id: p.id, party_id: p.party_id, election_year: p.election_year,
@@ -32,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       schema_version: '1.0', dataset, data_sha256: dataDigest,
       disclaimer: dataset === 'demo' ? 'FICTIONAL fixture data. Not actual party programmes, votes or law assessments.' : 'AI links are proposals until explicitly reviewed. Missing evidence is unknown, not failure.',
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
-      statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`,
+      statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
       filters: 'Static snapshot API. No server-side query parameters. Filter items client-side or use the search index.',
     });
     for (const collection of collections) {
@@ -55,12 +58,16 @@ export const getStaticPaths: GetStaticPaths = () => {
     for (const program of data.programs) {
       add(`${prefix}/programs/${program.id}/tree.json`, {
         schema_version: '1.0', dataset, program_id: program.id, tree: program.tree, leaves: program.leaves,
-        source: program.source, review: program.review, markdown: `/api/${prefix}/programs/${program.id}/source.md`,
+        source: program.source, review: program.review, pdf_url: program.pdf_url ?? null,
+        textless_pages: program.textless_pages ?? [], transcription_note: program.transcription_note ?? '',
+        markdown: `/api/${prefix}/programs/${program.id}/source.md`,
       });
       add(`${prefix}/programs/${program.id}/source.md`, markdown(program.markdown_path, dataset), 'text/markdown; charset=utf-8');
     }
     for (const law of data.laws) if (law.markdown_path) add(`${prefix}/laws/${law.id}/source.md`, markdown(law.markdown_path, dataset), 'text/markdown; charset=utf-8');
   }
+  const catalog = path.join(dataRoot, 'sources', 'bundestag-21.json');
+  if (fs.existsSync(catalog)) add('v1/sources/bundestag-21.json', JSON.parse(fs.readFileSync(catalog, 'utf8')));
   for (const schema of fs.readdirSync(path.join(dataRoot, 'schemas')).filter(f => f.endsWith('.json'))) {
     add(`v1/schemas/${schema}`, JSON.parse(fs.readFileSync(path.join(dataRoot, 'schemas', schema), 'utf8')));
   }
@@ -81,9 +88,11 @@ export const getStaticPaths: GetStaticPaths = () => {
       '/v1/{dataset}/{collection}/{id}/source.md': { get: { operationId: 'getMarkdown', parameters: [datasetParameter, { ...collectionParameter, schema: { type: 'string', enum: ['programs', 'laws'] } }, idParameter], responses: response('Verbatim extracted Markdown with PDF page markers', 'text/markdown') } },
       '/v1/{dataset}/stats.json': { get: { operationId: 'getStatistics', parameters: [datasetParameter], responses: response('Statistics by programme and period') } },
       '/v1/{dataset}/search.json': { get: { operationId: 'getSearchIndex', parameters: [datasetParameter], responses: response('Searchable criteria index') } },
+      '/v1/{dataset}/coverage.json': { get: { operationId: 'getCoverage', parameters: [datasetParameter], responses: response('Archive counts, source snapshots and explicit remaining law IDs') } },
+      '/v1/sources/bundestag-21.json': { get: { operationId: 'getSourceCatalog', responses: response('21st Bundestag scope, programme URLs, PDF hashes and inspection notes') } },
     },
   });
-  add('v1/index.json', { schema_version: '1.0', default_dataset: defaultDataset(), datasets: datasets.map(d => `/api/v1/${d}/index.json`), documentation: '/daten/', openapi: '/api/v1/openapi.json' });
+  add('v1/index.json', { schema_version: '1.0', default_dataset: defaultDataset(), datasets: datasets.map(d => `/api/v1/${d}/index.json`), documentation: '/daten/', openapi: '/api/v1/openapi.json', sources: '/api/v1/sources/bundestag-21.json' });
   add('health.json', { status: 'ok', service: 'politrace-static', schema_version: '1.0' });
   return routes;
 };

@@ -3,11 +3,12 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: Maximum new laws (1–100)
+        description: Maximum new laws (1–2000; archive reports any remainder)
         default: '10'
         type: string
       since:
-        description: Optional oldest publication date (YYYY-MM-DD)
+        description: Oldest publication date (YYYY-MM-DD); first sitting of the 21st Bundestag by default
+        default: '2025-03-25'
         type: string
       budget:
         description: Maximum reserved OpenRouter USD per run
@@ -61,7 +62,8 @@ jobs:
         run: uv run python scripts/workflow_entry.py laws
         env:
           INPUT_LIMIT: ${{ inputs.limit || '10' }}
-          INPUT_SINCE: ${{ inputs.since }}
+          INPUT_SINCE: ${{ inputs.since || '2025-03-25' }}
+          INPUT_ARCHIVE: 'true'
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
           OPENROUTER_REVIEW_MODEL: ${{ vars.OPENROUTER_REVIEW_MODEL || 'openai/gpt-4.1-mini' }}
@@ -86,7 +88,9 @@ jobs:
           commit-message: 'data: propose official laws and evidence links'
           title: 'data: new law publications and proposed evidence'
           body: |
-            Automated proposals from the official Bundesgesetzblatt I feed.
+            Automated proposals from the complete paginated Bundesgesetzblatt I/II archive.
+            Publication-date scope starts at 2025-03-25 by default, not the parliamentary vote date.
+            Coverage records report the exact official inventory and any limit-related remainder.
             - Exact source quotations and graph contracts validated in this run.
             - AI links remain `proposed`; no automatic fulfilment assessments or voting guesses.
             - Inspect source PDFs, legal context, comparison windows and the retrieval omissions.

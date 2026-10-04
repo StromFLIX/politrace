@@ -58,7 +58,7 @@ def download(url: str, *, allowed_hosts: set[str] | None = None, limit=MAX_DOWNL
     raise ValueError("Too many source redirects")
 
 
-def extract_pdf(pdf: bytes) -> list[str]:
+def extract_pdf(pdf: bytes, *, textless_pages: set[int] | None = None) -> list[str]:
     import pymupdf
     import pymupdf4llm
 
@@ -72,11 +72,20 @@ def extract_pdf(pdf: bytes) -> list[str]:
                 raise ValueError("Encrypted PDFs are not supported")
             if not 1 <= document.page_count <= MAX_PDF_PAGES:
                 raise ValueError("PDF page count outside the supported range (1–400)")
+            if any(p < 1 or p > document.page_count for p in (textless_pages or set())):
+                raise ValueError("Textless-page declaration is outside the PDF")
+            native_pages = [page.get_text(sort=True).strip() for page in document]
         chunks = pymupdf4llm.to_markdown(str(path), page_chunks=True, show_progress=False)
-        pages = [chunk["text"].strip() for chunk in chunks]
-        # Never silently omit image-only pages from a manifesto. OCR must be supplied/reviewed first.
-        if any(not page.strip() for page in pages):
-            raise NeedsOCR("PDF contains pages without extractable text; a reviewed OCR transcription is required")
+        # Some graphic chapter covers have a valid text layer but the layout converter drops it.
+        # Preserve that source text instead of treating these pages as blank or fabricating OCR.
+        pages = [chunk["text"].strip() or native for chunk, native in zip(chunks, native_pages, strict=True)]
+        # An explicitly inspected, SHA-pinned artwork/blank page is kept as a Markdown marker.
+        # Unknown textless pages still stop ingestion: they may contain scanned policy text.
+        unknown = {i for i, page in enumerate(pages, 1) if not page.strip()} - (textless_pages or set())
+        if unknown:
+            raise NeedsOCR(f"PDF has unverified textless pages {sorted(unknown)}; inspect or supply reviewed OCR")
+        if not any(page.strip() for page in pages):
+            raise NeedsOCR("PDF has no extractable text")
         return pages
 
 
@@ -113,8 +122,11 @@ def pages_to_markdown(pages: list[str], prefix: str) -> tuple[str, list[Leaf]]:
             if block:
                 parts.append(block)
             for part in parts:
-                seen[(page, part)] += 1
-                leaf_id = stable_id(f"{prefix}-p", f"{page}:{seen[(page, part)]}:{part}")
+                # Match stable_id's whitespace/case normalization when counting occurrences.
+                # Otherwise tables repeating 'Text' and 'TEXT' can generate the same passage ID.
+                occurrence = (page, " ".join(part.split()).casefold())
+                seen[occurrence] += 1
+                leaf_id = stable_id(f"{prefix}-p", f"{page}:{seen[occurrence]}:{part}")
                 leaves.append(Leaf(id=leaf_id, text=part, reference=Span(
                     page=page, line_start=offset + start + 1, line_end=offset + index, quote=part,
                 )))

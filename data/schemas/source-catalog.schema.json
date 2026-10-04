@@ -1,0 +1,205 @@
+{
+  "$defs": {
+    "ProgrammeSource": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "party_id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Party Id",
+          "type": "string"
+        },
+        "members": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Members",
+          "type": "array"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "pdf_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Pdf Url",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        },
+        "pages": {
+          "minimum": 1,
+          "title": "Pages",
+          "type": "integer"
+        },
+        "textless_pages": {
+          "items": {
+            "type": "integer"
+          },
+          "title": "Textless Pages",
+          "type": "array"
+        },
+        "published": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Published"
+        },
+        "publication_note": {
+          "title": "Publication Note",
+          "type": "string"
+        },
+        "transcription_note": {
+          "title": "Transcription Note",
+          "type": "string"
+        },
+        "rights": {
+          "$ref": "#/$defs/Rights"
+        }
+      },
+      "required": [
+        "id",
+        "party_id",
+        "members",
+        "title",
+        "pdf_url",
+        "sha256",
+        "pages",
+        "textless_pages",
+        "published",
+        "publication_note",
+        "transcription_note",
+        "rights"
+      ],
+      "title": "ProgrammeSource",
+      "type": "object"
+    },
+    "Rights": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "permission-required",
+            "noncommercial-text-permitted"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "terms_url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Terms Url",
+          "type": "string"
+        },
+        "license_url": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "maxLength": 2083,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "License Url"
+        },
+        "note": {
+          "minLength": 20,
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "terms_url",
+        "note"
+      ],
+      "title": "Rights",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "period_start": {
+      "format": "date",
+      "title": "Period Start",
+      "type": "string"
+    },
+    "election_year": {
+      "title": "Election Year",
+      "type": "integer"
+    },
+    "checked_at": {
+      "format": "date",
+      "title": "Checked At",
+      "type": "string"
+    },
+    "representation_source": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Representation Source",
+      "type": "string"
+    },
+    "period_source": {
+      "format": "uri",
+      "maxLength": 2083,
+      "minLength": 1,
+      "title": "Period Source",
+      "type": "string"
+    },
+    "scope_note": {
+      "title": "Scope Note",
+      "type": "string"
+    },
+    "law_date_basis": {
+      "title": "Law Date Basis",
+      "type": "string"
+    },
+    "programs": {
+      "items": {
+        "$ref": "#/$defs/ProgrammeSource"
+      },
+      "title": "Programs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "period_start",
+    "election_year",
+    "checked_at",
+    "representation_source",
+    "period_source",
+    "scope_note",
+    "law_date_basis",
+    "programs"
+  ],
+  "title": "SourceCatalog",
+  "type": "object"
+}

@@ -1,0 +1,131 @@
+{
+  "$defs": {
+    "ArchiveSourcePage": {
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "sha256"
+      ],
+      "title": "ArchiveSourcePage",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "dataset": {
+      "const": "live",
+      "title": "Dataset",
+      "type": "string"
+    },
+    "period_start": {
+      "format": "date",
+      "title": "Period Start",
+      "type": "string"
+    },
+    "as_of": {
+      "format": "date",
+      "title": "As Of",
+      "type": "string"
+    },
+    "date_basis": {
+      "const": "promulgation",
+      "title": "Date Basis",
+      "type": "string"
+    },
+    "parts": {
+      "items": {
+        "enum": [
+          "I",
+          "II"
+        ],
+        "type": "string"
+      },
+      "title": "Parts",
+      "type": "array"
+    },
+    "kind": {
+      "const": "Gesetz",
+      "title": "Kind",
+      "type": "string"
+    },
+    "official_count": {
+      "minimum": 0,
+      "title": "Official Count",
+      "type": "integer"
+    },
+    "imported_count": {
+      "minimum": 0,
+      "title": "Imported Count",
+      "type": "integer"
+    },
+    "complete": {
+      "title": "Complete",
+      "type": "boolean"
+    },
+    "expected_ids": {
+      "items": {
+        "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+        "type": "string"
+      },
+      "title": "Expected Ids",
+      "type": "array"
+    },
+    "pending_ids": {
+      "items": {
+        "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+        "type": "string"
+      },
+      "title": "Pending Ids",
+      "type": "array"
+    },
+    "source_pages": {
+      "items": {
+        "$ref": "#/$defs/ArchiveSourcePage"
+      },
+      "minItems": 1,
+      "title": "Source Pages",
+      "type": "array"
+    },
+    "note": {
+      "title": "Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "dataset",
+    "period_start",
+    "as_of",
+    "date_basis",
+    "parts",
+    "kind",
+    "official_count",
+    "imported_count",
+    "complete",
+    "expected_ids",
+    "pending_ids",
+    "source_pages",
+    "note"
+  ],
+  "title": "LawCoverage",
+  "type": "object"
+}

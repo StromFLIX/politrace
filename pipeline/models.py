@@ -114,6 +114,9 @@ class Program(Record):
     period_start: date
     period_end: date | None = None
     source: Source
+    pdf_url: HttpUrl | None = None
+    textless_pages: list[int] = Field(default_factory=list)
+    transcription_note: str = ""
     markdown_path: str
     leaves: list[Leaf] = Field(min_length=1)
     tree: TreeNode
@@ -233,6 +236,38 @@ class Vote(Record):
     source: Source
     groups: list[GroupVote] = Field(min_length=1)
     review: Review
+
+
+class ArchiveSourcePage(Model):
+    url: HttpUrl
+    sha256: Annotated[str, Field(pattern=r"^[a-f0-9]{64}$")]
+
+
+class LawCoverage(Model):
+    schema_version: Literal["1.0"] = "1.0"
+    dataset: Literal["live"]
+    period_start: date
+    as_of: date
+    date_basis: Literal["promulgation"]
+    parts: list[Literal["I", "II"]]
+    kind: Literal["Gesetz"]
+    official_count: int = Field(ge=0)
+    imported_count: int = Field(ge=0)
+    complete: bool
+    expected_ids: list[Identifier]
+    pending_ids: list[Identifier]
+    source_pages: list[ArchiveSourcePage] = Field(min_length=1)
+    note: str
+
+    @model_validator(mode="after")
+    def reconciled(self):
+        expected, pending = set(self.expected_ids), set(self.pending_ids)
+        if (len(expected) != len(self.expected_ids) or len(pending) != len(self.pending_ids)
+                or not pending <= expected or self.official_count != len(expected)
+                or self.imported_count != len(expected) - len(pending) or self.complete != (not pending)
+                or self.as_of < self.period_start or set(self.parts) != {"I", "II"}):
+            raise ValueError("Law archive coverage is inconsistent")
+        return self
 
 
 RECORD_TYPES = {"programs": Program, "criteria": Criterion, "laws": Law, "impacts": Impact, "votes": Vote}

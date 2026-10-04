@@ -10,6 +10,7 @@ export type Program = Base & {
   party_id: string; election_year: number; title: string; published_at: string;
   period_start: string; period_end: string | null; source: Source; markdown_path: string;
   leaves: Leaf[]; tree: TreeNode;
+  pdf_url?: string | null; textless_pages?: number[]; transcription_note?: string;
   criteria_extraction?: { leaf_id: string; criterion_ids: string[]; abstention_reason: string | null }[];
 };
 export type AssessmentStatus = 'unassessed' | 'partial' | 'fulfilled' | 'contradicted';

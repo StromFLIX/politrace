@@ -5,6 +5,7 @@ import json
 from datetime import date
 from pathlib import Path
 
+from pipeline.archive import ingest_archive
 from pipeline.laws import FEED_URL, ingest_laws
 from pipeline.llm import Agent
 from pipeline.matching import match_laws
@@ -29,9 +30,19 @@ def parser():
     program.add_argument("--period-start", required=True, type=date.fromisoformat)
     program.add_argument("--period-end", type=date.fromisoformat)
     program.add_argument("--id", dest="program_id")
+    program.add_argument("--license-note", required=True, help="Actual basis for public full-text reuse, not just a citation")
+    program.add_argument("--expected-sha256")
+    program.add_argument("--textless-pages", type=int, nargs="+", help="Visually checked PDF page numbers, bound to expected SHA-256")
+    program.add_argument("--transcription-note", default="")
     criteria = sub.add_parser("criteria", help="Every leaf + parent sections → atomic testable commitments")
     criteria.add_argument("--program", dest="program_id", required=True)
-    laws = sub.add_parser("laws", help="Import official BGBl I laws, without a model or API key")
+    criteria.add_argument("--batch-size", type=int, default=6)
+    criteria.add_argument("--workers", type=int, default=2)
+    archive = sub.add_parser("archive", help="Paginated official BGBl I/II historical law inventory and backfill")
+    archive.add_argument("--since", required=True, type=date.fromisoformat)
+    archive.add_argument("--until", type=date.fromisoformat)
+    archive.add_argument("--limit", type=int, default=2000)
+    laws = sub.add_parser("laws", help="Import official BGBl I/II feed laws, without a model or API key")
     laws.add_argument("--limit", type=int, default=10)
     laws.add_argument("--since", type=date.fromisoformat)
     laws.add_argument("--feed-url", default=FEED_URL)
@@ -48,9 +59,9 @@ def main():
     elif command == "schemas":
         export_schemas(root / "schemas")
         result = {"exported": True}
-    elif command == "laws":
+    elif command in {"laws", "archive"}:
         validate_store(root)
-        result = ingest_laws(root=root, **args)
+        result = (ingest_laws if command == "laws" else ingest_archive)(root=root, **args)
         validate_store(root)
     else:
         validate_store(root)

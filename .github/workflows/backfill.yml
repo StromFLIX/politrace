@@ -1,0 +1,175 @@
+name: Backfill the 21st Bundestag
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: permitted = laws plus licence-cleared programmes; other programmes are blocked pending permission
+        type: choice
+        default: permitted
+        options: [permitted, laws, gruene-2025, cdu-csu-2025, spd-2025, afd-2025, linke-2025, ssw-2025]
+  push:
+    branches: [main]
+    paths: ['.github/backfills/bundestag-21.json']
+
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: politrace-bundestag-21-backfill
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    outputs:
+      targets: ${{ steps.plan.outputs.targets }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - id: plan
+        env:
+          TARGET: ${{ inputs.target }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          catalog = json.loads(Path('data/sources/bundestag-21.json').read_text())
+          programs = catalog['programs']
+          permitted = [p['id'] for p in programs if p['rights']['status'] == 'noncommercial-text-permitted']
+          target = os.environ['TARGET'] or 'permitted'
+          if os.environ['EVENT_NAME'] == 'push':
+              target = json.loads(Path('.github/backfills/bundestag-21.json').read_text())['scope']
+          if target not in {'permitted', 'laws', *(p['id'] for p in programs)}:
+              raise ValueError('Unknown backfill target')
+          targets = ['laws', *permitted] if target == 'permitted' else [target]
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('targets=' + json.dumps(targets) + '\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('## Source scope\nThis run is not a claim of complete programme coverage.\n')
+              for p in programs:
+                  f.write(f"- {p['id']}: {p['rights']['status']} — {p['rights']['note']}\n")
+          PY
+
+  integration:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - name: Verify production health and public API
+        run: |
+          python - <<'PY'
+          import json, urllib.request
+          base = 'https://politrace.stromflix.com'
+          for path in ['/api/health.json', '/api/v1/live/index.json', '/api/v1/live/laws.json']:
+              with urllib.request.urlopen(base + path, timeout=30) as response:
+                  data = json.load(response)
+                  assert response.status == 200
+                  if path.endswith('health.json'): assert data['status'] == 'ok'
+          print('Production HTTPS/health/API checks passed')
+          PY
+      - name: Verify the repository OpenRouter secret with one tiny real JSON request
+        run: uv run python scripts/backfill_entry.py probe
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
+          POLITRACE_MAX_USD: '0.05'
+          POLITRACE_MAX_CALLS: '3'
+
+  import:
+    needs: [plan, integration]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        target: ${{ fromJSON(needs.plan.outputs.targets) }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Preserve pending review corrections
+        id: pending
+        env:
+          GH_TOKEN: ${{ secrets.DATA_PR_TOKEN || github.token }}
+          TARGET: ${{ matrix.target }}
+        run: |
+          count=$(gh pr list --repo "$GITHUB_REPOSITORY" --head "data/backfill-$TARGET" --state open --json number --jq 'length')
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          if [ "$count" -gt 0 ]; then echo 'Existing backfill PR awaits review; no source/model work performed.' >> "$GITHUB_STEP_SUMMARY"; fi
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        if: steps.pending.outputs.count == '0'
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - if: steps.pending.outputs.count == '0'
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/llm
+          key: llm-backfill-${{ matrix.target }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: llm-backfill-${{ matrix.target }}-
+      - if: steps.pending.outputs.count == '0'
+        run: uv sync --frozen
+      - name: Import checked source scope and validate every quotation
+        if: steps.pending.outputs.count == '0'
+        run: uv run python scripts/backfill_entry.py
+        env:
+          BACKFILL_TARGET: ${{ matrix.target }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
+          POLITRACE_MAX_USD: ${{ vars.POLITRACE_BACKFILL_MAX_USD || '12' }}
+          POLITRACE_MAX_CALLS: '600'
+      - name: Retain only completed, semantically valid model responses for retries
+        if: always() && steps.pending.outputs.count == '0'
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/llm
+          key: llm-backfill-${{ matrix.target }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - if: success() && steps.pending.outputs.count == '0'
+        run: uv run pytest && uv run ruff check .
+      - if: success() && steps.pending.outputs.count == '0'
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - if: success() && steps.pending.outputs.count == '0'
+        run: npm ci && npm test && npm run build
+      - name: Preserve the validated proposal even if repository PR creation is disabled
+        if: success() && steps.pending.outputs.count == '0'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: proposal-${{ matrix.target }}
+          path: |
+            data/live/
+            .cache/backfill-${{ matrix.target }}.json
+          include-hidden-files: true
+          retention-days: 14
+      - name: Open a human-review PR (never merge political annotations)
+        if: success() && steps.pending.outputs.count == '0'
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          token: ${{ secrets.DATA_PR_TOKEN || github.token }}
+          branch: data/backfill-${{ matrix.target }}
+          base: main
+          add-paths: data/live/**
+          commit-message: 'data: backfill ${{ matrix.target }} for the 21st Bundestag'
+          title: 'data: 21st Bundestag backfill — ${{ matrix.target }}'
+          body: |
+            Historical, source-backed proposal. See the workflow summary and `data/sources/bundestag-21.json`.
+            All imported records remain proposed. Verify programme transcription/sections, every criterion's
+            observability and verbatim citation, PDF edition and reuse conditions. Law scope is publication
+            in BGBl I/II from 2025-03-25, not vote date or entry into force.
+            No invented votes, automatic fulfilment judgments, political endorsements or automatic merge.
+            Missing/permission-blocked programmes are explicitly listed in the source catalog.
+          draft: true

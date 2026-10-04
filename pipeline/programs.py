@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import re
 from datetime import date
 from pathlib import Path
@@ -9,8 +10,11 @@ from pydantic import Field
 
 from pipeline.documents import download, extract_pdf, pages_to_markdown
 from pipeline.llm import Agent
-from pipeline.models import Criterion, LeafExtraction, Model, Program, Source, Topic, TreeNode
+from pipeline.models import Criterion, Leaf, LeafExtraction, Model, Program, Source, Span, Topic, TreeNode
+from pipeline.parallel import ordered_map
 from pipeline.store import digest, load_records, save_record, stable_id, tree_paths, write_json
+
+logger = logging.getLogger(__name__)
 
 
 class Placement(Model):
@@ -37,10 +41,98 @@ class CriteriaResponse(Model):
     abstention_reason: str | None
 
 
-def chunks(leaves, max_chars=12_000):
+class LeafCriteria(CriteriaResponse):
+    leaf_id: str
+
+
+class CriteriaBatch(Model):
+    paragraphs: list[LeafCriteria]
+
+
+class ParagraphGroup(Model):
+    start: int = Field(ge=0)
+    end: int = Field(ge=0)
+    sections: list[str] = Field(min_length=1, max_length=5)
+
+
+class StructuredParagraphs(Model):
+    groups: list[ParagraphGroup] = Field(min_length=1)
+
+
+def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
+    """Join layout fragments into paragraphs without letting the model rewrite source text."""
+    root = TreeNode(id=f"{program_id}-root", title=title)
+    leaves, provenance, known_paths = [], [], []
+    lines = markdown.splitlines()
+    completed = 0
+    for batch in chunks(raw_leaves):
+        def group_text(group):
+            first, last = batch[group.start], batch[group.end]
+            if group.start == group.end:
+                return first.text
+            return "\n".join(lines[first.reference.line_start - 1:last.reference.line_end])
+
+        def check(result):
+            cursor = 0
+            for group in result.groups:
+                if group.start != cursor or not group.start <= group.end < len(batch):
+                    raise ValueError("Paragraph groups must cover all input blocks once and in order")
+                first, last = batch[group.start], batch[group.end]
+                if first.reference.page != last.reference.page:
+                    raise ValueError("Paragraph groups cannot cross a PDF page citation boundary")
+                if any(not s.strip() or len(s) > 120 for s in group.sections):
+                    raise ValueError("Invalid section title")
+                if len(group_text(group)) > 4500:
+                    raise ValueError("Paragraph is too long; split into smaller consecutive groups")
+                cursor = group.end + 1
+            if cursor != len(batch):
+                raise ValueError("Paragraph groups omitted source blocks")
+
+        result, generation = agent.ask(
+            "Structure these numbered PDF layout blocks into a readable section tree and paragraphs. "
+            "Join consecutive fragments of ONE paragraph, not separate policy commitments; PDF line "
+            "wrapping often splits a sentence into many blocks. Preserve ALL blocks, including headers, "
+            "contents, footnotes and rhetoric. Return consecutive inclusive start/end index ranges, "
+            "covering every input index exactly once in input order. Never cross a PDF page boundary. "
+            "Keep each resulting paragraph below 4500 characters. Use document headings as section paths "
+            "and reuse existing paths. Never write replacement source text. Contents/front matter should "
+            "be grouped under clearly identified front-matter sections, not substantive policy sections.",
+            {"blocks": [{"index": i, "page": leaf.reference.page, "text": leaf.text}
+                        for i, leaf in enumerate(batch)], "existing_sections": known_paths[-80:]},
+            StructuredParagraphs, validator=check, max_output=9000,
+        )
+        check(result)
+        for group in result.groups:
+            first, last = batch[group.start], batch[group.end]
+            text = group_text(group)
+            leaf = first if group.start == group.end else Leaf(
+                id=stable_id(f"{program_id}-p", f"{first.id}:{last.id}:{text}"), text=text,
+                reference=Span(page=first.reference.page, line_start=first.reference.line_start,
+                               line_end=last.reference.line_end, quote=text))
+            leaves.append(leaf)
+            node, current = root, []
+            for section in group.sections:
+                current.append(section)
+                identifier = stable_id(f"{program_id}-s", "/".join(current))
+                child = next((c for c in node.children if c.id == identifier), None)
+                if child is None:
+                    child = TreeNode(id=identifier, title=section)
+                    node.children.append(child)
+                node = child
+            node.leaf_ids.append(leaf.id)
+            if current not in known_paths:
+                known_paths.append(current)
+        provenance.append(generation)
+        completed += len(batch)
+        logger.info('%s: structured %s/%s source blocks into %s paragraphs',
+                    program_id, completed, len(raw_leaves), len(leaves))
+    return leaves, root, provenance
+
+
+def chunks(leaves, max_chars=12_000, max_leaves=64):
     batch, size = [], 0
     for leaf in leaves:
-        if batch and size + len(leaf.text) > max_chars:
+        if batch and (size + len(leaf.text) > max_chars or len(batch) >= max_leaves):
             yield batch
             batch, size = [], 0
         batch.append(leaf)
@@ -84,33 +176,45 @@ def build_tree(leaves, title: str, program_id: str, agent: Agent):
 
 def ingest_program(*, root: Path, agent: Agent, pdf: str, party: str, year: int, title: str,
                    source_url: str, published: date, period_start: date, period_end: date | None,
-                   program_id: str | None = None):
+                   program_id: str | None = None, expected_sha256: str | None = None,
+                   textless_pages: list[int] | None = None, transcription_note: str = "",
+                   license_note: str | None = None, semantic_paragraphs=True):
     program_id = program_id or f"{party}-{year}"
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{1,69}", program_id) or program_id.startswith("demo-"):
         raise ValueError("Use a live program ID of 2–70 lowercase letters, digits or hyphens")
     path = root / "live" / "programs" / f"{program_id}.json"
     if path.exists():
         raise ValueError("Program already exists; preserve its IDs and corrections. Use a new ID for a new edition.")
-    if party not in {p["id"] for p in json.loads((root / "parties.json").read_text())}:
+    parties = {p["id"]: p for p in json.loads((root / "parties.json").read_text())}
+    if party not in parties:
         raise ValueError("Unknown party; add its metadata through a PR first")
     if period_start < published or (period_end and period_end <= period_start):
         raise ValueError("Invalid comparison window; validate dates before any paid model calls")
     if not 1949 <= year <= 2100:
         raise ValueError("Election year outside supported range")
+    if not license_note or len(license_note.strip()) < 20:
+        raise ValueError("Record an actual public full-text reuse licence/permission in license_note before importing")
     # Validate source metadata before downloading or spending the model budget.
     Source(url=source_url, title=title, publisher=party, retrieved_at=date.today())
+    if textless_pages and (not expected_sha256 or not transcription_note):
+        raise ValueError("Textless-page declarations require an expected PDF hash and an inspection note")
     content = download(pdf) if pdf.startswith("https://") else Path(pdf).read_bytes()
-    pages = extract_pdf(content)
-    if any(not page.strip() for page in pages):
-        raise ValueError("Some PDF pages have no text. Supply a reviewed OCR PDF before generating criteria.")
+    if expected_sha256 and digest(content) != expected_sha256:
+        raise ValueError("Programme PDF changed since source inspection; review the new edition before importing")
+    pages = extract_pdf(content, textless_pages=set(textless_pages or []))
     markdown, leaves = pages_to_markdown(pages, program_id)
-    tree, generation = build_tree(leaves, title, program_id, agent)
+    if semantic_paragraphs:
+        leaves, tree, generation = structure_paragraphs(leaves, markdown, title, program_id, agent)
+    else:
+        tree, generation = build_tree(leaves, title, program_id, agent)
     relative_md = f"live/programs/{program_id}.md"
     program = Program(
         id=program_id, dataset="live", party_id=party, election_year=year, title=title,
         published_at=published, period_start=period_start, period_end=period_end,
-        source=Source(url=source_url, title=title, publisher=party, retrieved_at=date.today(),
-                      sha256=digest(content)),
+        source=Source(url=source_url, title=title, publisher=parties[party]["name"], retrieved_at=date.today(),
+                      sha256=digest(content), license_note=license_note),
+        pdf_url=pdf if pdf.startswith("https://") else None,
+        textless_pages=sorted(textless_pages or []), transcription_note=transcription_note,
         markdown_path=relative_md, leaves=leaves, tree=tree, generation=generation,
     )
     (root / relative_md).parent.mkdir(parents=True, exist_ok=True)
@@ -119,7 +223,9 @@ def ingest_program(*, root: Path, agent: Agent, pdf: str, party: str, year: int,
     return {"program_id": program.id, "pages": len(pages), "paragraphs": len(leaves)}
 
 
-def extract_criteria(*, root: Path, program_id: str, agent: Agent):
+def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1, workers=1):
+    if not 1 <= batch_size <= 8 or not 1 <= workers <= 4:
+        raise ValueError("Criterion batches must be 1–8 leaves; workers 1–4")
     programs = {p.id: p for p in load_records(root, "live", "programs")}
     if program_id not in programs:
         raise ValueError("Unknown live program ID")
@@ -129,20 +235,53 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent):
     completed_leaves.update(a.leaf_id for a in program.criteria_extraction)
     paths = tree_paths(program.tree)
     created, audits = [], []
-    # Evaluate every leaf, not just paragraphs that contain a hand-picked keyword.
-    for leaf in program.leaves:
-        if leaf.id in completed_leaves:
-            continue
-        result, generation = agent.ask(
-            "Extract atomic, observable acceptance criteria from the given manifesto paragraph. "
-            "One policy commitment per criterion, with a falsifiable test and verbatim supporting quote. "
-            "Do not invent quantities, dates, promises or use your knowledge of the party. "
-            "Return an empty list with an abstention reason for rhetoric, headings, descriptions of "
-            "the status quo, ambiguous aspirations or non-testable statements. "
-            "A deadline may only come from the cited source; otherwise null.",
-            {"program": program.title, "sections": paths[leaf.id], "paragraph": leaf.text},
-            CriteriaResponse,
-        )
+    # Evaluate every leaf. Batching preserves one explicit result/abstention per leaf.
+    pending = [leaf for leaf in program.leaves if leaf.id not in completed_leaves]
+    task = (
+        "Extract atomic, observable acceptance criteria from each manifesto paragraph. "
+        "Write titles, descriptions, tests and abstention reasons in German. "
+        "One policy commitment per criterion, with a falsifiable test and VERBATIM supporting quote, "
+        "including source line breaks and Markdown. Do not invent quantities, dates, promises or use "
+        "your knowledge of the party. Return an empty list with an abstention reason for rhetoric, "
+        "headings, tables of contents, descriptions of the status quo, ambiguous aspirations or "
+        "non-testable statements. A deadline may only come from the cited source; otherwise null. "
+        "Neighbouring context helps interpret a continuation but is NOT citable for this leaf."
+    )
+    positions = {leaf.id: i for i, leaf in enumerate(program.leaves)}
+    def evaluate(batch):
+        def check(result):
+            responses = [result] if batch_size == 1 else result.paragraphs
+            if batch_size != 1 and [r.leaf_id for r in responses] != [leaf.id for leaf in batch]:
+                raise ValueError("Criterion batch must preserve every leaf ID in order")
+            for leaf, response in zip(batch, responses, strict=True):
+                if not response.criteria and not response.abstention_reason:
+                    raise ValueError("Empty criterion extraction must explain its abstention")
+                for draft in response.criteria:
+                    if draft.quote not in leaf.text:
+                        raise ValueError("Model invented a programme quote")
+        if batch_size == 1:
+            leaf = batch[0]
+            result, generation = agent.ask(task,
+                {"program": program.title, "sections": paths[leaf.id], "paragraph": leaf.text},
+                CriteriaResponse, validator=check)
+            responses = [result]
+        else:
+            paragraphs = []
+            for leaf in batch:
+                index = positions[leaf.id]
+                paragraphs.append({"leaf_id": leaf.id, "sections": paths[leaf.id], "paragraph": leaf.text,
+                    "previous_context": program.leaves[index - 1].text[-1000:] if index else "",
+                    "next_context": program.leaves[index + 1].text[:1000] if index + 1 < len(program.leaves) else ""})
+            result, generation = agent.ask(task + " Return every input leaf_id exactly once, in input order.",
+                {"program": program.title, "paragraphs": paragraphs}, CriteriaBatch,
+                validator=check, max_output=10000)
+            responses = result.paragraphs
+        check(result)  # Also enforce contracts for non-network/offline agent implementations.
+        return list(zip(batch, responses, [generation] * len(batch), strict=True))
+    batches = chunks(pending, max_chars=10_000, max_leaves=batch_size)
+    for leaf, result, generation in (
+        item for batch in ordered_map(evaluate, batches, workers=workers) for item in batch
+    ):
         if not result.criteria and not result.abstention_reason:
             raise ValueError("Empty criterion extraction must explain its abstention")
         leaf_criteria = []
@@ -161,6 +300,9 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent):
                 leaf_criteria.append(criterion.id)
         audits.append(LeafExtraction(leaf_id=leaf.id, criterion_ids=leaf_criteria,
                                      abstention_reason=result.abstention_reason, generation=generation))
+        if len(audits) % 24 == 0 or len(audits) == len(pending):
+            logger.info('%s: processed %s/%s pending paragraphs, %s criteria proposed',
+                        program.id, len(audits), len(pending), len(created))
     # Write only after all calls/citations in this stage validate. No half-written criteria set.
     for criterion in created:
         save_record(root, "criteria", criterion)

@@ -320,6 +320,33 @@
     "source": {
       "$ref": "#/$defs/Source"
     },
+    "pdf_url": {
+      "anyOf": [
+        {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Pdf Url"
+    },
+    "textless_pages": {
+      "items": {
+        "type": "integer"
+      },
+      "title": "Textless Pages",
+      "type": "array"
+    },
+    "transcription_note": {
+      "default": "",
+      "title": "Transcription Note",
+      "type": "string"
+    },
     "markdown_path": {
       "title": "Markdown Path",
       "type": "string"

@@ -5,6 +5,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from pipeline.archive import ingest_archive
 from pipeline.documents import public_url
 from pipeline.laws import ingest_laws
 from pipeline.llm import Agent
@@ -19,8 +20,9 @@ def run(mode):
     agent = Agent(cache=ROOT / ".cache" / "llm")
     if mode == "laws":
         since = os.environ.get("INPUT_SINCE", "")
-        result = ingest_laws(root=root, limit=int(os.environ.get("INPUT_LIMIT", "10")),
-                             since=date.fromisoformat(since) if since else None)
+        importer = ingest_archive if os.environ.get("INPUT_ARCHIVE", "false").lower() == "true" else ingest_laws
+        result = importer(root=root, limit=int(os.environ.get("INPUT_LIMIT", "10")),
+                          since=date.fromisoformat(since) if since else date(2025, 3, 25))
         result["matching"] = match_laws(root=root, agent=agent)
     elif mode == "program":
         pdf = os.environ["INPUT_PDF"]
@@ -35,11 +37,13 @@ def run(mode):
             period_start=date.fromisoformat(os.environ["INPUT_PERIOD_START"]),
             period_end=date.fromisoformat(end) if end else None,
             program_id=os.environ.get("INPUT_PROGRAM_ID") or None,
+            license_note=os.environ.get("INPUT_LICENSE_NOTE"),
         )
-        if os.environ.get("INPUT_EXTRACT_CRITERIA", "true").lower() == "true":
+        if os.environ.get("INPUT_EXTRACT_CRITERIA", "false").lower() == "true":
             result["criteria"] = extract_criteria(root=root, program_id=result["program_id"], agent=agent)
     elif mode == "criteria":
-        result = extract_criteria(root=root, program_id=os.environ["INPUT_PROGRAM_ID"], agent=agent)
+        result = extract_criteria(root=root, program_id=os.environ["INPUT_PROGRAM_ID"], agent=agent,
+                                  batch_size=6, workers=2)
     else:
         raise ValueError("Unknown workflow mode")
     validate_store(root)

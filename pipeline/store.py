@@ -7,7 +7,7 @@ from pathlib import Path
 
 from pydantic import TypeAdapter
 
-from pipeline.models import RECORD_TYPES, Party, Record, TreeNode
+from pipeline.models import RECORD_TYPES, LawCoverage, Party, Record, TreeNode
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -71,6 +71,11 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
     party_ids = {p.id for p in parties}
     if len(party_ids) != len(parties):
         raise ValueError("Duplicate party IDs")
+    if (root / "sources" / "bundestag-21.json").exists():
+        from pipeline.catalog import load_catalog
+
+        if not {p.party_id for p in load_catalog(root).programs} <= party_ids:
+            raise ValueError("Source catalog references an unknown party")
     counts = {}
     for dataset in ("live", "demo"):
         data = {}
@@ -168,6 +173,15 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
             if impact.criterion_quote not in criterion.reference.quote:
                 raise ValueError(f"Criterion quote not in source: {impact.id}")
 
+        for path in (root / dataset / "coverage").glob("*.json"):
+            coverage = LawCoverage.model_validate_json(path.read_text())
+            if dataset != "live":
+                raise ValueError("Official archive coverage cannot be demo data")
+            for identifier in set(coverage.expected_ids) - set(coverage.pending_ids):
+                law = data["laws"].get(identifier)
+                if not law or not coverage.period_start <= law.published_at <= coverage.as_of:
+                    raise ValueError(f"Coverage claims an absent/out-of-window law: {identifier}")
+
         pairs = [(i.criterion_id, i.law_id) for i in data["impacts"].values()]
         if len(set(pairs)) != len(pairs):
             raise ValueError("Only one canonical impact per criterion/law; revise it through a PR")
@@ -180,5 +194,8 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
 
 
 def export_schemas(root: Path = ROOT / "data" / "schemas"):
-    for name, model in {**RECORD_TYPES, "parties": Party}.items():
+    from pipeline.catalog import SourceCatalog
+
+    for name, model in {**RECORD_TYPES, "parties": Party, "coverage": LawCoverage,
+                        "source-catalog": SourceCatalog}.items():
         write_json(root / f"{name}.schema.json", model.model_json_schema())

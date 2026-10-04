@@ -11,7 +11,7 @@ An evidence-first proof of concept for German election manifestos: preserve each
 - **Party view**: programme tree, searchable criteria, evidence coverage, separate fulfilment statistics, previous programme periods and direct source/API/edit links.
 - **Activity view**: official law publications, signed criterion impacts on a −2…+2 scale, and independently sourced voting tables when data exists.
 - **Open data**: versioned static JSON/Markdown API, schemas, programme trees, criteria search index and programme-level statistics.
-- **Python pipeline**: PDF → page/line-anchored Markdown → agent-structured tree → atomic criteria. Official BGBl I RSS ingestion → German-stemmed BM25 candidate retrieval → two-pass legal assessment, with exact-quote validation, review states, caching and bounded budgets.
+- **Python pipeline**: PDF → page/line-anchored Markdown → agent-structured tree → atomic criteria. Paginated official BGBl I/II archive (plus RSS CLI) → German-stemmed BM25 candidate retrieval → two-pass legal assessment, with exact-quote validation, review states, caching and bounded budgets.
 - **GitHub Actions**: one-click programme import, separate criteria extraction and law/evidence updates; data is proposed through PRs, never auto-merged. Existing open review branches are preserved.
 - **Deployment**: one `docker-compose.yml`, serving prebuilt HTML/API files through unprivileged Nginx. No database, runtime model calls or runtime API keys.
 
@@ -43,6 +43,7 @@ Open <http://localhost:4321>. Useful routes:
 - `/demo/aktivitaet/` — impact/vote UI demonstration
 - `/live/aktivitaet/` — real sourced publications
 - `/daten/` — API documentation
+- `/quellen/` — 21st-Bundestag source inventory, archive coverage and explicit rights/import gaps
 - `/methodik/` — evidence and scoring rules
 
 ## Run the complete production stack
@@ -61,13 +62,19 @@ The optional local override publishes a loopback port; production Compose publis
 
 1. Add repository Actions secret **`OPENROUTER_API_KEY`**.
 2. Enable Actions' permission to create PRs in the repository settings.
-3. Run **Propose a manifesto & criteria**, providing the actual PDF/source, party, year, publication date and comparison window. Turn criteria extraction off if you want to review the tree first.
-4. Review and merge the generated tree/criteria PR. To generate criteria later, run **Propose criteria for an imported manifesto**.
+3. Run **Propose a manifesto tree**, providing the actual PDF/source, party, year, publication date, comparison window and public full-text reuse basis.
+4. Review and merge the generated tree PR, then run **Propose criteria for an imported manifesto**.
 5. Run **Propose new laws & evidence**. Review proposed links before counting any as human-reviewed evidence.
 
 See [pipeline setup, budgets and retry behaviour](docs/pipelines.md), including the optional `DATA_PR_TOKEN` needed if bot-created PRs should automatically trigger further CI. The law feed itself needs no API key. No secret is stored in the repo, Docker image or frontend.
 
 **The law pipeline runs daily at 06:00 Europe/Berlin**, including seasonal clock changes. Manual actions remain available. Data proposals wait for review; the scheduler never auto-merges political assessments.
+
+## Historical backfill
+
+**Backfill the 21st Bundestag** imports the official law archive from **2025-03-25** and proposes licence-cleared programme trees/criteria in separate draft PRs. It can be manually dispatched or started by a committed `.github/backfills/bundestag-21.json` request on `main`. A separate integration step verifies production and the OpenRouter secret without exposing it.
+
+The checked source inventory covers **CDU/CSU, SPD, Grüne, AfD, Linke and SSW**. That is six programmes for seven parties, not six completed imports. Five sources still need a documented public full-transcription reuse basis. The Grünen text has a noncommercial CC BY-NC 3.0 DE licence, excluding artwork. See [source inventory](data/sources/bundestag-21.json), [pipeline details](docs/pipelines.md) and the website's `/quellen/` page. Unknown data and unreviewed AI proposals never become fulfilment scores.
 
 ## API examples
 
@@ -79,6 +86,8 @@ GET /api/v1/demo/programs/demo-spd-2025/tree.json
 GET /api/v1/demo/programs/demo-spd-2025/source.md
 GET /api/v1/demo/criteria/demo-spd-2025-ac-001.json
 GET /api/v1/live/stats.json
+GET /api/v1/live/coverage.json
+GET /api/v1/sources/bundestag-21.json
 GET /api/v1/openapi.json
 ```
 
@@ -114,7 +123,7 @@ deploy/nginx.conf     Static serving, headers and health endpoint
 ## Important limits before public launch
 
 - Retrieval is lexical and can miss relevant commitments. Missing evidence is unknown, not failure. Scores are ordinal, not summed or presented as a party ranking.
-- The BGBl feed describes promulgation, not every parliamentary vote or a complete historical archive. No automatic DIP/roll-call enrichment or consolidated-law resolver is implemented yet.
+- BGBl records describe promulgation, not every parliamentary vote. The historical archive covers I/II laws by publication date and records any remaining IDs. No automatic DIP/roll-call enrichment or consolidated-law resolver is implemented yet.
 - History compares programme periods at the current data revision; earlier assessment states live in Git, not a point-in-time chart.
 - Programme republication rights and PDF-tool licensing need attention. See [data/source rights](DATA_LICENSE.md).
 - The operator must supply accurate legal/contact/hosting information before a public production launch; the privacy page explicitly marks these pilot limitations.

@@ -11,13 +11,20 @@ function records<T>(dataset: Dataset, collection: string): T[] {
   const dir = path.join(dataRoot, dataset, collection);
   return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort().map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
 }
+// Astro renders thousands of static record pages. Parse each immutable build snapshot once,
+// not once per route/module (which multiplies memory and I/O for historical law corpora).
+const snapshots = new Map<Dataset, Data>();
 export function getData(dataset: Dataset): Data {
-  return {
+  const cached = snapshots.get(dataset);
+  if (cached) return cached;
+  const data: Data = {
     dataset, parties: JSON.parse(fs.readFileSync(path.join(dataRoot, 'parties.json'), 'utf8')) as Party[],
     programs: records<Program>(dataset, 'programs'), criteria: records<Criterion>(dataset, 'criteria'),
     laws: records<Law>(dataset, 'laws').sort((a, b) => b.published_at.localeCompare(a.published_at)),
     impacts: records<Impact>(dataset, 'impacts'), votes: records<Vote>(dataset, 'votes'),
   };
+  snapshots.set(dataset, data);
+  return data;
 }
 export function defaultDataset(): Dataset {
   const selection = process.env.POLITRACE_DATASET;

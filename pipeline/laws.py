@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import re
 from datetime import date, datetime
 from email.utils import parsedate_to_datetime
@@ -16,6 +17,7 @@ from pipeline.store import digest, load_records, save_record
 FEED_URL = "https://www.recht.bund.de/rss/feeds/rss_bgbl-1.xml"
 OFFICIAL_HOSTS = {"www.recht.bund.de", "recht.bund.de"}
 META = "{http://recht.bund.de/rss/meta}"
+logger = logging.getLogger(__name__)
 
 
 def feed_date(value: str) -> date:
@@ -37,14 +39,15 @@ def parse_feed(content: bytes):
         title = item.findtext("title", "").strip()
         url = item.findtext("link", "").strip()
         parsed = urlparse(url)
-        match = re.fullmatch(r"/eli/bund/bgbl-1/(\d{4})/(\d+[a-z]?)/?", parsed.path)
+        match = re.fullmatch(r"/eli/bund/bgbl-([12])/(\d{4})/(\d+[a-z]?)/?", parsed.path)
         if parsed.scheme != "https" or parsed.hostname not in OFFICIAL_HOSTS or not match or not title:
             raise ValueError("Invalid or non-official law entry in feed")
-        year, number = match.groups()
+        part, year, number = match.groups()
+        roman = "I" if part == "1" else "II"
         records.append({
-            "id": f"bgbl-1-{year}-{number}", "title": title, "url": url,
+            "id": f"bgbl-{part}-{year}-{number}", "title": title, "url": url,
             "published_at": feed_date(item.findtext("pubDate", "")),
-            "citation": item.findtext(META + "fundstelle", f"BGBl. {year} I Nr. {number}").strip(),
+            "citation": item.findtext(META + "fundstelle", f"BGBl. {year} {roman} Nr. {number}").strip(),
         })
     if not root.findall("./channel/item"):
         raise ValueError("Official feed is unexpectedly empty")
@@ -66,8 +69,11 @@ class PdfLinks(HTMLParser):
 def pdf_link(html: bytes, url: str):
     parser = PdfLinks()
     parser.feed(html.decode("utf-8"))
-    year, number = urlparse(url).path.rstrip("/").split("/")[-2:]
-    expected = f"/bgbl/1/{year}/{number}/regelungstext.pdf"
+    match = re.fullmatch(r"/eli/bund/bgbl-([12])/(\d{4})/(\d+[a-z]?)/?", urlparse(url).path)
+    if not match:
+        raise ValueError("Expected a canonical BGBl I or II ELI URL")
+    part, year, number = match.groups()
+    expected = f"/bgbl/{part}/{year}/{number}/regelungstext.pdf"
     for href in parser.links:
         absolute = urljoin(url, href)
         parsed = urlparse(absolute)
@@ -80,9 +86,15 @@ def ingest_laws(*, root: Path, limit=10, since: date | None = None, feed_url=FEE
     if not 1 <= limit <= 100:
         raise ValueError("Law limit must be 1–100")
     records = parse_feed(download(feed_url, allowed_hosts=OFFICIAL_HOSTS, limit=8 * 1024 * 1024))
+    return ingest_entries(root=root, entries=records, limit=limit, since=since)
+
+
+def ingest_entries(*, root: Path, entries: list[dict], limit=1000, since: date | None = None):
+    if not 1 <= limit <= 2000:
+        raise ValueError("Archive import limit must be 1–2000")
     existing = {law.id for law in load_records(root, "live", "laws")}
     pending = sorted(
-        (r for r in records if r["id"] not in existing and r["published_at"] <= date.today()
+        (r for r in entries if r["id"] not in existing and r["published_at"] <= date.today()
          and (since is None or r["published_at"] >= since)),
         key=lambda r: (r["published_at"], r["id"]), reverse=True,
     )
@@ -115,5 +127,7 @@ def ingest_laws(*, root: Path, limit=10, since: date | None = None, feed_url=FEE
             (root / relative_md).write_text(markdown, encoding="utf-8")
         save_record(root, "laws", law)
         created.append(law.id)
+        logger.info('Imported law %s/%s: %s (%s)', len(created), min(len(pending), limit),
+                    law.id, law.text_status)
     return {"new_laws": created, "remaining_in_feed": max(0, len(pending) - limit),
             "notify": bool(created), "reason": "New official publications" if created else "No new laws in feed"}

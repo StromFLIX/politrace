@@ -119,3 +119,78 @@ def test_oversized_download_is_rejected(monkeypatch):
         transport=httpx.MockTransport(lambda _: httpx.Response(200, content=b"1234567890")), **kwargs))
     with pytest.raises(ValueError, match="size limit"):
         download("https://example.org", limit=5)
+
+
+def test_semantic_validation_repairs_before_caching_and_counts_all_requests(tmp_path, monkeypatch):
+    import json
+    monkeypatch.setenv("OPENROUTER_API_KEY", "unit-test-only")
+    requests = []
+    def handler(request):
+        requests.append(json.loads(request.content))
+        if len(requests) == 1:
+            return httpx.Response(200, json={"choices": [{"finish_reason": "stop", "message": {
+                "content": '{"value":"incorrect citation","optional":null}'}}]})
+        return model_response()
+    def check(reply):
+        if reply.value != "safe result":
+            raise ValueError("Quote must match the source verbatim")
+    agent = Agent(cache=tmp_path, client=httpx.Client(transport=httpx.MockTransport(handler)))
+    reply, _ = agent.ask("test", {}, Reply, validator=check, max_output=512)
+    assert reply.value == "safe result" and agent.calls == 2
+    assert len(requests[1]["messages"]) == 4
+    assert requests[1]["messages"][-2]["role"] == "assistant"
+    assert "Quote must match" in requests[1]["messages"][-1]["content"]
+    assert len(list(tmp_path.glob("*.json"))) == 1
+    agent.ask("test", {}, Reply, validator=check, max_output=512)
+    assert agent.calls == 2 and agent.cache_hits == 1
+
+
+def test_semantically_invalid_cache_is_not_replayed_forever(tmp_path, monkeypatch):
+    monkeypatch.setenv("OPENROUTER_API_KEY", "unit-test-only")
+    agent = Agent(cache=tmp_path, client=httpx.Client(transport=httpx.MockTransport(lambda _: model_response())))
+    agent.ask("test", {}, Reply)
+    path = next(tmp_path.glob("*.json"))
+    path.write_text('{"value":"bad cached citation","optional":null}')
+    def check(reply):
+        if reply.value != "safe result":
+            raise ValueError("Unverified citation")
+    result, _ = agent.ask("test", {}, Reply, validator=check)
+    assert result.value == "safe result" and agent.calls == 2 and agent.cache_hits == 0
+
+
+def test_semantic_failures_exhaust_bounded_retries_without_cache(tmp_path, monkeypatch):
+    monkeypatch.setenv("OPENROUTER_API_KEY", "unit-test-only")
+    agent = Agent(cache=tmp_path, client=httpx.Client(transport=httpx.MockTransport(lambda _: model_response())))
+    def reject(_):
+        raise ValueError("Missing source range")
+    with pytest.raises(RuntimeError, match="source/order validation"):
+        agent.ask("test", {}, Reply, validator=reject)
+    assert agent.calls == 3 and not list(tmp_path.glob("*.json"))
+
+
+def test_parallel_paid_calls_share_one_atomic_budget(tmp_path, monkeypatch):
+    from concurrent.futures import ThreadPoolExecutor
+    monkeypatch.setenv("OPENROUTER_API_KEY", "unit-test-only")
+    agent = Agent(cache=tmp_path, max_calls=2,
+                  client=httpx.Client(transport=httpx.MockTransport(lambda _: model_response())))
+    def ask(index):
+        try:
+            agent.ask("test", {"index": index}, Reply)
+            return True
+        except BudgetExceeded:
+            return False
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        completed = list(pool.map(ask, range(12)))
+    assert sum(completed) == agent.calls == 2
+    assert len(list(tmp_path.glob("*.json"))) == 2
+
+
+def test_output_limits_are_validated_and_participate_in_cache_identity(tmp_path, monkeypatch):
+    monkeypatch.setenv("OPENROUTER_API_KEY", "unit-test-only")
+    agent = Agent(cache=tmp_path, client=httpx.Client(transport=httpx.MockTransport(lambda _: model_response())))
+    with pytest.raises(ValueError, match="Output token limit"):
+        agent.ask("test", {}, Reply, max_output=100000)
+    assert agent.calls == 0
+    agent.ask("test", {}, Reply, max_output=256)
+    agent.ask("test", {}, Reply, max_output=512)
+    assert agent.calls == 2 and len(list(tmp_path.glob("*.json"))) == 2

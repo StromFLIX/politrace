@@ -1,4 +1,4 @@
-name: Propose a manifesto & criteria
+name: Propose a manifesto tree
 on:
   workflow_dispatch:
     inputs:
@@ -14,7 +14,7 @@ on:
         description: Party ID
         required: true
         type: choice
-        options: [cdu-csu, spd, gruene, fdp, afd, linke, bsw]
+        options: [cdu-csu, spd, gruene, fdp, afd, linke, bsw, ssw]
       year:
         description: Election year (e.g. 2025)
         required: true
@@ -37,10 +37,10 @@ on:
       program_id:
         description: Optional edition ID; defaults to party-year. Existing IDs are never overwritten.
         type: string
-      extract_criteria:
-        description: Also extract acceptance criteria after building the tree
-        default: true
-        type: boolean
+      license_note:
+        description: Actual permission/licence for public full-text reuse, with source and restrictions
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -80,7 +80,7 @@ jobs:
             llm-laws-
       - if: steps.pending.outputs.count == '0'
         run: uv sync --frozen
-      - name: Extract PDF, preserve paragraphs, structure tree and propose tests
+      - name: Extract PDF, preserve paragraphs and propose a section tree
         if: steps.pending.outputs.count == '0'
         run: uv run python scripts/workflow_entry.py program
         env:
@@ -93,7 +93,7 @@ jobs:
           INPUT_PERIOD_START: ${{ inputs.period_start }}
           INPUT_PERIOD_END: ${{ inputs.period_end }}
           INPUT_PROGRAM_ID: ${{ inputs.program_id }}
-          INPUT_EXTRACT_CRITERIA: ${{ inputs.extract_criteria }}
+          INPUT_LICENSE_NOTE: ${{ inputs.license_note }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
           OPENROUTER_REVIEW_MODEL: ${{ vars.OPENROUTER_REVIEW_MODEL || 'openai/gpt-4.1-mini' }}
@@ -114,8 +114,8 @@ jobs:
           branch: data/manifesto
           base: main
           add-paths: data/live/**
-          commit-message: 'data: propose manifesto tree and acceptance criteria'
-          title: 'data: new manifesto transcription and proposed criteria'
+          commit-message: 'data: propose manifesto transcription and tree'
+          title: 'data: new manifesto transcription and proposed tree'
           body: |
             New source-backed programme data. All model outputs remain proposals.
             Review the original PDF against the Markdown, the section hierarchy, and every criterion's
