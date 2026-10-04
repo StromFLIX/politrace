@@ -8,7 +8,8 @@ export default defineConfig({
   // Keep browser processes within small CI/container memory budgets.
   workers: 1,
   reporter: [['list']],
-  use: { baseURL: deployedUrl || 'http://127.0.0.1:4321', trace: 'retain-on-failure' },
+  // Full-programme DOM snapshots are large; capture diagnostics only on a failed retry.
+  use: { baseURL: deployedUrl || 'http://127.0.0.1:4321', trace: 'on-first-retry' },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 1080 } } },
     { name: 'mobile', use: { ...devices['iPhone 13'], defaultBrowserType: 'chromium' } },

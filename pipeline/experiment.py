@@ -171,13 +171,23 @@ def exact_ids(results, ids, field):
 def split_ask(agent, items, query):
     """Retries share the experiment budget. Failed parents are cached as subdivision hints."""
     task, data, schema, options = query(items)
+    # Preserve an already validated fallback rather than pay for the invalid primary again.
+    cached_review = (len(items) == 1 and hasattr(agent, 'has_cached')
+                     and agent.has_cached(task, data, schema, review=True, **options))
     try:
-        result, generation = agent.ask(task, data, schema, **options, subdivide=len(items) > 1)
+        result, generation = agent.ask(task, data, schema, **options,
+                                       review=cached_review, subdivide=len(items) > 1)
         options['validator'](result)
         return [(result, generation)]
     except InvalidModelResponse:
         if len(items) == 1:
-            raise
+            if cached_review:
+                raise
+            logger.warning('Single analysis item exhausted primary validation; bounded stronger-model '
+                           'retry with unchanged source checks and the same spending ledger')
+            result, generation = agent.ask(task, data, schema, **options, review=True)
+            options['validator'](result)
+            return [(result, generation)]
         middle = len(items) // 2
         return split_ask(agent, items[:middle], query) + split_ask(agent, items[middle:], query)
 
@@ -372,7 +382,9 @@ def analyze_law(law, criteria, candidates, eligible_count, agent, existing, root
                      'law_title': law.official_title, 'published_at': str(law.published_at),
                      'partial_law_context': partial,
                      'passages': [{'id': p.id, 'text': p.text} for p in passages]}, Verifications,
-                    review=True, validator=check_review, max_output=4000)
+                    # If the primary needed the stronger model, challenge with Luna instead:
+                    # never misrepresent two calls to the same model as an independent model check.
+                    review=generation.model != agent.review_model, validator=check_review, max_output=4000)
                 check_review(review)
                 verifications = {v.criterion_id: v for v in review.pairs}
             for pair in result.pairs:

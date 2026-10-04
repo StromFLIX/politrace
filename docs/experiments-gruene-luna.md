@@ -31,7 +31,20 @@ Every attempt retains artifact `gruene-e2e-checkpoint`: canonical source/results
 
 Do not start a new initial experiment with a blank ledger to get around a budget stop. Do not overwrite citizen edits with an older checkpoint: this is a controlled frozen-corpus experiment. Review/reconcile any canonical edits since the artifact before continuing. Source/data corrections should become an explicit new version retaining this snapshot, not invalidate and silently rerun paid work.
 
-The workflow retains artifacts rather than relying on repository PR creation permissions. The operator validates and publishes proposals to main through normal Git as authorized by the user. It never sets `reviewed` or an automatic fulfilment assessment.
+The workflow retains artifacts rather than relying on repository PR creation permissions. Monitor it with GitHub CLI (no Nautionette workflow or scheduler is required):
+
+```sh
+gh run list --repo StromFLIX/politrace --workflow gruene-e2e.yml
+gh run watch RUN_ID --repo StromFLIX/politrace --interval 45 --exit-status
+# On completion (success or failure), inspect the saved result before editing/resuming:
+gh run download RUN_ID --repo StromFLIX/politrace --name gruene-e2e-checkpoint --dir /tmp/politrace-checkpoint
+# Result: /tmp/politrace-checkpoint/.cache/e2e/result.json
+# Ledger: /tmp/politrace-checkpoint/.cache/e2e/budget.json
+```
+
+Do not use `gh run rerun` for a paid attempt; update the committed `resume_run` after reading its result. The monitor cannot survive the agent container being destroyed, and an authentication expiry is not evidence that the GitHub job stopped. Transient HTTP 200 error envelopes are bounded retries, with unknown charges retained. Single-item analysis validation failures may use the same bounded stronger-model fallback as extraction; its legal links are challenged with the *other* model so two calls to Sonnet are not mislabelled as a second-model check.
+
+The operator validates and publishes proposals to main through normal Git as authorized by the user. It never sets `reviewed` or an automatic fulfilment assessment.
 
 ## Costs and quality results
 
