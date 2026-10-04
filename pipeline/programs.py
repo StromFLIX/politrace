@@ -38,7 +38,7 @@ class DraftCriterion(Model):
 
 
 class CriteriaResponse(Model):
-    criteria: list[DraftCriterion] = Field(max_length=8)
+    criteria: list[DraftCriterion] = Field(max_length=32)
     abstention_reason: str | None
 
 
@@ -315,7 +315,7 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
                 "next_context": program.leaves[index + 1].text[:1000] if index + 1 < len(program.leaves) else ""})
         return (task + " Return every input leaf_id exactly once, in input order.",
                 {"program": program.title, "paragraphs": paragraphs}, CriteriaBatch,
-                {"validator": check, "max_output": 10000})
+                {"validator": check, "max_output": 16000})
 
     def cached(batch):
         if not hasattr(agent, 'has_cached'):
@@ -350,7 +350,7 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
         options['validator'](result)  # Also enforce contracts for offline/mock agents.
         responses = [result] if batch_size == 1 else result.paragraphs
         return list(zip(batch, responses, [generation] * len(batch), strict=True))
-    batches = chunks(pending, max_chars=10_000, max_leaves=batch_size)
+    batches = chunks(pending, max_chars=6_000, max_leaves=batch_size)
     for leaf, result, generation in (
         item for batch in ordered_map(evaluate, batches, workers=workers) for item in batch
     ):

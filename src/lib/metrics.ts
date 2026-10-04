@@ -17,6 +17,17 @@ export function metrics(criteria: Criterion[], impacts: Impact[], programs: Prog
   };
 }
 
+// Machine processing coverage is not semantic completeness or human review.
+export function extractionCoverage(program: Program, criteria: Criterion[]) {
+  const source = new Set(program.leaves.map(leaf => leaf.id));
+  const processed = new Set([
+    ...(program.criteria_extraction ?? []).map(audit => audit.leaf_id),
+    ...criteria.filter(c => c.program_id === program.id).map(c => c.leaf_id),
+  ].filter(id => source.has(id)));
+  return { source_leaves: source.size, processed_leaves: processed.size,
+    remaining_leaves: source.size - processed.size, complete: source.size > 0 && source.size === processed.size };
+}
+
 export function voteTotals(groups: { yes: number; no: number; abstain: number; absent: number }[]) {
   const totals = groups.reduce((acc, g) => ({
     yes: acc.yes + g.yes, no: acc.no + g.no, abstain: acc.abstain + g.abstain, absent: acc.absent + g.absent,

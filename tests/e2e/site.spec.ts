@@ -123,18 +123,42 @@ test('live programme criteria retain exact citations and do not imply reviewed f
   const program = programs.items[0];
   const tree = await (await request.get(`/api/v1/live/programs/${program.id}/tree.json`)).json();
   const markdown = await (await request.get(tree.markdown)).text();
+  const extraction = await (await request.get('/api/v1/live/extraction.json')).json();
+  const coverage = extraction.items.find((item: { program_id: string }) => item.program_id === program.id);
+  expect(coverage.source_leaves).toBe(tree.leaves.length);
+  expect(coverage.processed_leaves + coverage.remaining_leaves).toBe(coverage.source_leaves);
   expect(tree.leaves.length).toBeGreaterThan(0);
   for (const leaf of tree.leaves) expect(markdown).toContain(leaf.reference.quote);
   const criteria = await (await request.get('/api/v1/live/criteria.json')).json();
   const first = criteria.items.find((c: { program_id: string }) => c.program_id === program.id);
   await page.goto(`/live/programme/${program.id}/`);
   await expect(page.getByRole('heading', { name: program.title, exact: true }).first()).toBeVisible();
+  await expect(page.locator('[data-extraction-status]')).toContainText(`${coverage.processed_leaves} von ${coverage.source_leaves}`);
   if (first) {
     expect(tree.leaves.find((l: { id: string }) => l.id === first.leaf_id).text).toContain(first.reference.quote);
     await page.goto(`/live/kriterien/${first.id}/`);
     await expect(page.getByRole('heading', { name: first.title, exact: true })).toBeVisible();
     await page.getByRole('link', { name: 'Absatz im Textbaum' }).click();
     await expect(page.locator(':target')).toContainText(first.reference.quote);
+  }
+});
+
+test('real law-to-criterion links round-trip through both pages and exact source anchors', async ({ page, request }) => {
+  const { items: impacts } = await (await request.get('/api/v1/live/impacts.json')).json();
+  test.skip(!impacts.length, 'No live evidence proposal has been published yet');
+  for (const impact of impacts.slice(0, 3)) {
+    const law = await (await request.get(`/api/v1/live/laws/${impact.law_id}.json`)).json();
+    const criterion = await (await request.get(`/api/v1/live/criteria/${impact.criterion_id}.json`)).json();
+    const passage = law.passages.find((p: { id: string }) => p.id === impact.law_passage_id);
+    expect(passage.text).toContain(impact.law_quote);
+    expect(criterion.reference.quote).toContain(impact.criterion_quote);
+    await page.goto(`/live/gesetze/${law.id}/#${impact.id}`);
+    const card = page.locator(`[id="${impact.id}"]`);
+    await expect(card).toBeVisible();
+    await card.locator('h3 a').click();
+    await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
+    await page.locator(`[id="${impact.id}"]`).getByRole('link', { name: 'Gesetzespassage ansehen' }).click();
+    await expect(page.locator(':target')).toContainText(impact.law_quote);
   }
 });
 

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
+import { extractionCoverage } from '../../lib/metrics';
 
 export const prerender = true;
 
@@ -31,14 +32,22 @@ export const getStaticPaths: GetStaticPaths = () => {
     const statistics = data.programs.map(p => ({
       program_id: p.id, party_id: p.party_id, election_year: p.election_year,
       period_start: p.period_start, period_end: p.period_end,
+      extraction: extractionCoverage(p, data.criteria),
       ...metrics(data.criteria.filter(c => c.program_id === p.id), data.impacts, [p]),
     }));
+    add(`${prefix}/extraction.json`, {
+      schema_version: '1.0', dataset, total: data.programs.length, unit: 'source_leaf',
+      note: 'Only imported programmes. Processed leaves are not proof of complete commitment extraction or human review; unimported parties are not covered.',
+      items: data.programs.map(program => ({ program_id: program.id, party_id: program.party_id,
+        ...extractionCoverage(program, data.criteria) })),
+    });
     add(`${prefix}/index.json`, {
       schema_version: '1.0', dataset, data_sha256: dataDigest,
       disclaimer: dataset === 'demo' ? 'FICTIONAL fixture data. Not actual party programmes, votes or law assessments.' : 'AI links are proposals until explicitly reviewed. Missing evidence is unknown, not failure.',
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
       counts: Object.fromEntries(collections.map(c => [c, data[c].length])),
       statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
+      extraction: `/api/${prefix}/extraction.json`,
       filters: 'Static snapshot API. No server-side query parameters. Filter items client-side or use the search index.',
     });
     for (const collection of collections) {
@@ -63,6 +72,7 @@ export const getStaticPaths: GetStaticPaths = () => {
         schema_version: '1.0', dataset, program_id: program.id, tree: program.tree, leaves: program.leaves,
         source: program.source, review: program.review, pdf_url: program.pdf_url ?? null,
         textless_pages: program.textless_pages ?? [], transcription_note: program.transcription_note ?? '',
+        criteria_extraction_coverage: extractionCoverage(program, data.criteria),
         markdown: `/api/${prefix}/programs/${program.id}/source.md`,
       });
       add(`${prefix}/programs/${program.id}/source.md`, markdown(program.markdown_path, dataset), 'text/markdown; charset=utf-8');
@@ -94,6 +104,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       '/v1/{dataset}/stats.json': { get: { operationId: 'getStatistics', parameters: [datasetParameter], responses: response('Statistics by programme and period') } },
       '/v1/{dataset}/search.json': { get: { operationId: 'getSearchIndex', parameters: [datasetParameter], responses: response('Searchable criteria index') } },
       '/v1/{dataset}/coverage.json': { get: { operationId: 'getCoverage', parameters: [datasetParameter], responses: response('Archive counts, source snapshots and explicit remaining law IDs') } },
+      '/v1/{dataset}/extraction.json': { get: { operationId: 'getExtractionCoverage', parameters: [datasetParameter], responses: response('Processed and remaining source leaves, for imported programmes only; not human review') } },
       '/v1/sources/bundestag-21.json': { get: { operationId: 'getSourceCatalog', responses: response('21st Bundestag scope, programme URLs, PDF hashes and inspection notes') } },
       '/v1/sources/laws-bundestag-21.json': { get: { operationId: 'getArchiveInventory', responses: response('Dated, count-reconciled official archive inventory; not a fresh scan on every run') } },
     },

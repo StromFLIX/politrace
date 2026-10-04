@@ -66,6 +66,7 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 | `/{dataset}/stats.json` | Statistics for each programme/window, with denominator semantics |
 | `/{dataset}/search.json` | Searchable criterion text, tags, keywords and detail URLs |
 | `/{dataset}/coverage.json` | Dated law inventory, imported/pending IDs and source mode; RSS does not advance full-archive coverage |
+| `/{dataset}/extraction.json` | Processed and remaining source leaves for imported programmes; not semantic completeness, human review or coverage of unimported parties |
 | `/sources/bundestag-21.json` | Programme source/rights inventory for the seven elected parties |
 | `/sources/laws-bundestag-21.json` | Checked, dated official archive inventory with source-page hashes |
 | `/schemas/{collection}.schema.json` | Canonical record contract |

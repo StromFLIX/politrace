@@ -23,14 +23,14 @@ describe('honest denominators', () => {
     expect(m).toMatchObject({ total: 4, fulfilled: 1, partial: 1, covered: 2, coverage: 50, unknown: 2 });
   });
   it('requires both the programme and criterion to be reviewed', () => {
-    const data = getData('demo');
+    const data = structuredClone(getData('demo'));
     data.programs.forEach(p => p.review.status = 'proposed');
     const m = metrics(data.criteria, data.impacts, data.programs);
     expect(m.fulfilled).toBe(0);
     expect(m.covered).toBe(0);
   });
   it('rejects rejected criteria from counts', () => {
-    const data = getData('demo');
+    const data = structuredClone(getData('demo'));
     data.criteria.forEach(c => c.review.status = 'rejected');
     expect(metrics(data.criteria, data.impacts, data.programs).total).toBe(0);
   });

@@ -5,6 +5,7 @@ import Stats from '../../../components/Stats.astro';
 import FilterBar from '../../../components/FilterBar.astro';
 import CriterionRow from '../../../components/CriterionRow.astro';
 import PeriodSwitch from '../../../components/PeriodSwitch.astro';
+import ExtractionStatus from '../../../components/ExtractionStatus.astro';
 import { datasets, getData, metrics, formatDate, repoUrl } from '../../../lib/data';
 export function getStaticPaths() { return datasets.flatMap(dataset => { const data = getData(dataset); return data.parties.map(party => ({ params: { dataset, party: party.id }, props: { party, data } })); }); }
 const { party, data } = Astro.props;
@@ -20,6 +21,7 @@ const years = [...new Set(programs.map(p => p.election_year))];
     const criteria = data.criteria.filter(c => selected.some(p => p.id === c.program_id));
     const stats = metrics(criteria, data.impacts, selected);
     return <section data-period-panel={year} hidden={index !== 0}>
+      {selected.map(program => <ExtractionStatus program={program} criteria={criteria} />)}
       <Stats items={[
         { value: stats.total, label: 'Prüfbare Kriterien', detail: `Programmjahr ${year}`, icon: 'check' },
         { value: stats.fulfilled, label: 'Nachweislich erfüllt', detail: `Von insgesamt ${stats.total} Kriterien`, icon: 'shield' },

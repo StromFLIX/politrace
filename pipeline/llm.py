@@ -11,7 +11,7 @@ from pathlib import Path
 from threading import Lock
 
 import httpx
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 from pipeline.models import Generation
 from pipeline.store import digest, json_text, write_json
@@ -297,12 +297,29 @@ class Agent:
                         continue
                 raise error
             try:
-                choice = body["choices"][0]
-                if choice.get("finish_reason") != "stop":
-                    raise ValueError("Incomplete model output")
-                result = schema.model_validate_json(choice["message"]["content"])
-            except (KeyError, IndexError, TypeError, ValueError):
-                raise invalid("OpenRouter response was incomplete or violated the JSON contract") from None
+                choice = body['choices'][0]
+                content = choice['message']['content']
+                finish = choice.get('finish_reason')
+            except (KeyError, IndexError, TypeError, AttributeError):
+                raise invalid('OpenRouter response had an invalid completion envelope') from None
+            if finish != 'stop':
+                reason = finish if finish in ('length', 'max_tokens', 'content_filter', 'tool_calls', 'error') else 'unknown'
+                raise invalid(f'OpenRouter response was incomplete (finish_reason={reason})')
+            if not isinstance(content, str):
+                raise invalid('OpenRouter response did not contain JSON text')
+            try:
+                result = schema.model_validate_json(content)
+            except ValidationError as error:
+                # Field paths and Pydantic codes only: never values or provider free-form text.
+                details = safe_schema_errors(error, contract)
+                if subdivide or attempt == 2:
+                    raise invalid(f'Model JSON violated its schema: {details}') from None
+                payload['messages'].append({'role': 'assistant', 'content': content})
+                payload['messages'].append({'role': 'user', 'content':
+                    f'JSON schema validation failed: {details}. Return one complete JSON object '
+                    'conforming to the supplied response schema, without Markdown fences. '
+                    'Retain every input ID and exact source quotations; do not invent or paraphrase evidence.'})
+                continue
             if validator:
                 try:
                     validator(result)
@@ -337,6 +354,27 @@ class Agent:
                     "budget_exposure_usd": round(self.reported_cost_usd + self.reserved_usd, 6),
                     "prompt_tokens": self.prompt_tokens, "completion_tokens": self.completion_tokens,
                     "max_usd": self.max_usd}
+
+
+def safe_schema_errors(error: ValidationError, contract: dict) -> str:
+    """Actionable diagnostics without echoing unknown keys, model text or error context."""
+    known = set()
+    def fields(item):
+        if isinstance(item, dict):
+            known.update(item.get('properties', {}))
+            for child in item.values():
+                fields(child)
+        elif isinstance(item, list):
+            for child in item:
+                fields(child)
+    fields(contract)
+    issues = []
+    for item in error.errors(include_url=False, include_context=False, include_input=False)[:6]:
+        path = '.'.join(str(part) if isinstance(part, int) or part in known else '[field]'
+                        for part in item['loc']) or '$'
+        code = item['type'] if re.fullmatch('[a-z_]{1,64}', item['type']) else 'schema_error'
+        issues.append(f'{path}: {code}')
+    return '; '.join(issues)[:500]
 
 
 def strict_schema(value):

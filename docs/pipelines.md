@@ -45,7 +45,7 @@ Review and merge the tree first, then run the next action. This gives you the fi
 
 Run **Propose criteria for an imported manifesto**, giving its live `program_id` and a budget. The programme must already be on `main`; merging the tree does not itself mark it reviewed.
 
-Every unprocessed leaf is evaluated with its ancestor sections. Bounded batches of up to six leaves include neighbouring context but require a separate exact-source result or abstention for every leaf. Two worker threads share one locked cost/call budget; no unbounded queue of paid calls is submitted. Existing criteria and recorded abstentions are preserved. The result is a `data/criteria` PR. Nothing is marked fulfilled. If all leaves have already been processed, there are no model calls and no new data PR.
+Every unprocessed leaf is evaluated with its ancestor sections. Bounded batches of up to six leaves / 6,000 source characters include neighbouring context but require a separate exact-source result or abstention for every leaf. Dense leaves support up to 32 independent criteria rather than forcing an eight-item truncation; each batch has a 16,000-output-token ceiling. Schema failures expose only field paths and machine error codes (never source values or provider messages), and single-leaf repairs are bounded. None of these guards proves complete semantic extraction. Two worker threads share one locked cost/call budget; no unbounded queue of paid calls is submitted. Existing criteria and recorded abstentions are preserved. The result is a `data/criteria` PR. Nothing is marked fulfilled. If all leaves have already been processed, there are no model calls and no new data PR.
 
 ## 3. New laws → candidate impacts
 
