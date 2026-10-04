@@ -142,6 +142,32 @@ def test_incomplete_source_is_not_a_full_programme_experiment(corpus):
         analyse(root=root, agent=OfflineAgent(root), program_id=program.id)
 
 
+def test_strong_fallback_uses_same_citation_checks_and_never_overwrites(corpus):
+    from pipeline.llm import InvalidModelResponse
+    from pipeline.programs import CriteriaBatch, LeafCriteria, extract_criteria
+
+    root, program, _, _ = corpus
+    for path in (root / 'live/criteria').glob('*.json'):
+        path.unlink()
+    class Agent:
+        reviews = []
+        def ask(self, task, data, schema, **options):
+            self.reviews.append(options.get('review', False))
+            if not options.get('review'):
+                raise InvalidModelResponse('Cannot reproduce the source quotation')
+            assert len(data['paragraphs']) == 1
+            result = CriteriaBatch(paragraphs=[LeafCriteria(leaf_id=data['paragraphs'][0]['leaf_id'],
+                criteria=[], abstention_reason='No testable commitment in this fixture.')])
+            options['validator'](result)
+            return result, GEN
+    agent = Agent()
+    extract_criteria(root=root, program_id=program.id, agent=agent, batch_size=4,
+                     strong_fallback=True, checkpoint=True)
+    assert agent.reviews.count(True) == 2
+    assert len(load_records(root, 'live', 'programs')[0].criteria_extraction) == 2
+    validate_store(root)
+
+
 def test_criteria_checkpoint_survives_a_later_failed_leaf(corpus):
     from pipeline.programs import CriteriaResponse, extract_criteria
 

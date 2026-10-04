@@ -25,7 +25,7 @@ def main():
               'status': 'running', 'provider': agent.key_status()}
     try:
         result['criteria'] = extract_criteria(root=ROOT / 'data', program_id='gruene-2025',
-            agent=agent, batch_size=4, workers=4, checkpoint=True)
+            agent=agent, batch_size=4, workers=4, checkpoint=True, strong_fallback=True)
         validate_store()
         if request['phase'] == 'all':
             from pipeline.experiment import analyse

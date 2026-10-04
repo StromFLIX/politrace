@@ -9,7 +9,7 @@ Checked against OpenRouter's public [model endpoints](https://openrouter.ai/api/
 - `openai/gpt-6-luna`, provider **`openai/flex`**, advertises $0.05/M input and $0.25/M output tokens, structured output and reasoning parameters.
 - Requests use `provider.only: ["openai/flex"]`, `allow_fallbacks: false`, privacy restriction `data_collection: deny`, required parameters, and those price ceilings. No silent normal-price route when Flex is busy/unavailable.
 - Medium reasoning; up to 15 minutes per Flex request. Bounded retries, at most four tasks in flight. Actual provider-reported `usage.cost` is counted even when JSON/citations fail validation. A timeout can still be charged: reserve it as unknown, not free.
-- Supported law links alone receive a second-model **Claude Sonnet 5.5** challenge. It does not approve anything; disagreements remain visible. Most work stays on Luna; no expensive second call for obvious non-links/abstentions.
+- Supported law links receive a second-model **Claude Sonnet 5.5** challenge. It does not approve anything; disagreements remain visible. After Luna exhausts validated attempts for a single source leaf, Sonnet may retry that leaf using the same strict source validator and shared budget. Most work stays on Luna; no expensive second call for obvious non-links/abstentions.
 - Current catalogue prices are not promised bills, and low prices do not establish semantic quality. Inspect representative generated commitments and proposals before interpreting results.
 
 ## Coverage strategy
@@ -35,4 +35,4 @@ The workflow retains artifacts rather than relying on repository PR creation per
 
 ## Costs and quality results
 
-Actual results are populated by the run, not the planning estimates. The public report distinguishes `reported_cost_usd`, unknown/in-flight reservations, `budget_exposure_usd`, and `max_usd`. Previously completed work is reused; charges persist across resumes. Before scaling to other parties, inspect missed commitments, atomicity, false duplicate merges, unrelated/missing-context laws and signed-effect disagreements, and measure retrieval recall separately from link precision.
+The [first measured segment](pilots/2026-10-04-luna-flex.md) retained 233 new criteria for $0.042090 before a quotation-validation failure. This is partial extraction, not a completed all-law result. Actual results are populated by the run, not the planning estimates. The public report distinguishes `reported_cost_usd`, unknown/in-flight reservations, `budget_exposure_usd`, and `max_usd`. Previously completed work is reused; charges persist across resumes. Before scaling to other parties, inspect missed commitments, atomicity, false duplicate merges, unrelated/missing-context laws and signed-effect disagreements, and measure retrieval recall separately from link precision.

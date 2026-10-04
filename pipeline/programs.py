@@ -249,7 +249,7 @@ def ingest_program(*, root: Path, agent: Agent, pdf: str, party: str, year: int,
 
 
 def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1, workers=1,
-                     leaf_ids=None, checkpoint=False):
+                     leaf_ids=None, checkpoint=False, strong_fallback=False):
     if not 1 <= batch_size <= 8 or not 1 <= workers <= 4:
         raise ValueError("Criterion batches must be 1–8 leaves; workers 1–4")
     programs = {p.id: p for p in load_records(root, "live", "programs")}
@@ -340,14 +340,22 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
             # results before spending anything to rediscover the same invalid parent.
             return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
         prompt, data, schema, options = query(batch)
+        cached_review = (strong_fallback and len(batch) == 1 and hasattr(agent, 'has_cached')
+                         and agent.has_cached(prompt, data, schema, review=True, **options))
         try:
-            result, generation = agent.ask(prompt, data, schema, **options, subdivide=len(batch) > 1)
+            result, generation = agent.ask(prompt, data, schema, **options,
+                                           review=cached_review, subdivide=len(batch) > 1)
         except InvalidModelResponse:
             if len(batch) == 1:
-                raise
-            logger.warning('%s: subdividing an invalid %s-leaf criteria batch; source checks stay strict',
-                           program_id, len(batch))
-            return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
+                if not strong_fallback or cached_review:
+                    raise
+                logger.warning('%s: bounded stronger-model fallback for %s; same source validator and budget',
+                               program_id, batch[0].id)
+                result, generation = agent.ask(prompt, data, schema, **options, review=True)
+            else:
+                logger.warning('%s: subdividing an invalid %s-leaf criteria batch; source checks stay strict',
+                               program_id, len(batch))
+                return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
         options['validator'](result)  # Also enforce contracts for offline/mock agents.
         responses = [result] if batch_size == 1 else result.paragraphs
         return list(zip(batch, responses, [generation] * len(batch), strict=True))
