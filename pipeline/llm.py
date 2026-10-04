@@ -46,6 +46,14 @@ class ProviderError(RuntimeError):
     def __init__(self, status_code, body):
         self.status_code = status_code
         error = body.get('error') if isinstance(body, dict) else None
+        code = error.get('code') if isinstance(error, dict) else None
+        # OpenRouter may have sent HTTP 200 headers before the upstream fails.
+        # Prefer its bounded numeric error code; never classify credits/auth as transient.
+        try:
+            code = int(code)
+        except (TypeError, ValueError):
+            code = None
+        self.error_code = code if code in (400, 401, 402, 403, 408, 422, 429, 500, 502, 503, 504, 529) else None
         message = str(error.get('message', '')).lower() if isinstance(error, dict) else ''
         metadata = error.get('metadata') if isinstance(error, dict) else None
         if isinstance(metadata, dict):
@@ -79,8 +87,14 @@ class ProviderError(RuntimeError):
                 return value
         return None
 
+    @property
+    def retryable(self):
+        code = self.error_code or self.status_code
+        return (code in (408, 429, 500, 502, 503, 504, 529)
+                or (code == 200 and self.category == 'unspecified'))
+
     def safe_details(self):
-        return {'http_status': self.status_code, 'category': self.category,
+        return {'http_status': self.status_code, 'error_code': self.error_code, 'category': self.category,
                 'upstream_provider_error': self.upstream_provider_error,
                 'requested_output_tokens': self.requested_output_tokens,
                 'affordable_output_tokens': self.affordable_output_tokens}
@@ -335,7 +349,12 @@ class Agent:
                 continue
             if response.is_error or (isinstance(body, dict) and body.get('error')):
                 error = ProviderError(response.status_code, body)
-                if response.status_code == 402 and attempt < 2:
+                if error.retryable and attempt < 2:
+                    logger.warning('Transient OpenRouter response (HTTP %s, code %s); bounded retry %s/2',
+                                   error.status_code, error.error_code, attempt + 1)
+                    time.sleep(2 ** attempt)
+                    continue
+                if (error.error_code or response.status_code) == 402 and attempt < 2:
                     # Some routes return an upstream/transient credit error despite a funded
                     # account. Recheck BOTH limits before bounded retry; never retry an actual
                     # credit exhaustion or raise any cap, and retain unknown-charge exposure.

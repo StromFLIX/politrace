@@ -10,7 +10,7 @@ def test_credit_error_reports_only_safe_affordability_integers():
     error = ProviderError(402, {'error': {'message':
         'This request requires more credits. You requested up to 9,000 tokens, '
         'but can only afford 1,234. PRIVATE provider credential: do-not-print'}})
-    assert error.safe_details() == {'http_status': 402, 'category': 'credits',
+    assert error.safe_details() == {'http_status': 402, 'error_code': None, 'category': 'credits',
                                     'upstream_provider_error': False,
                                     'requested_output_tokens': 9000, 'affordable_output_tokens': 1234}
     assert 'PRIVATE' not in str(error) + json.dumps(error.safe_details())
