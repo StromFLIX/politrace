@@ -3,7 +3,7 @@
 The dedicated `programmes.yml` **GitHub Actions** job imports the five remaining SHA-pinned national programmes and extracts every source leaf. It runs independently of the existing Grünen all-law experiment. It does not schedule any Nautionette workflow and does not claim to have completed law matching for the other parties.
 
 - Primary model: GPT-6 Luna, pinned to `openai/flex`, no standard-route fallback.
-- A bounded Sonnet fallback is allowed after primary validation failures; exact quotations remain mandatory.
+- A bounded Sonnet fallback is allowed after primary validation failures; exact quotations remain mandatory. Whitespace-only differences (e.g. a model replacing a PDF line break with a space) are re-anchored deterministically to the unique original source span before validation. No words, numbers, punctuation, Markdown or conditions are repaired. Ambiguous or missing matches still fail; stored quotations are always verbatim source substrings.
 - Each programme has one durable **$5 cumulative** safety ceiling, including rejected outputs, retries and unknown-charge reservations. These five ledgers are separate from the existing $25 Grünen experiment. No independent paid probes are made.
 - Each programme stores completed source text/tree, completed criterion leaves and cached replies independently. A failed sibling does not cancel other programmes.
 - A push changing `.github/backfills/programmes.json` triggers the specified sources. For a continuation, set each selected source's `resume_runs` entry to its latest artifact-bearing run and increment `revision`. Never rerun a paid job with a fresh ledger. The preflight checks detect stale or lost spending checkpoints.

@@ -9,6 +9,7 @@ from pathlib import Path
 
 from pydantic import Field
 
+from pipeline.citations import source_quote
 from pipeline.documents import download, extract_pdf, pages_to_markdown
 from pipeline.llm import Agent, InvalidModelResponse
 from pipeline.models import Criterion, Leaf, LeafExtraction, Model, Program, Source, Span, Topic, TreeNode
@@ -307,8 +308,10 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
                 if not response.criteria and not response.abstention_reason:
                     raise ValueError("Empty criterion extraction must explain its abstention")
                 for draft in response.criteria:
-                    if draft.quote not in leaf.text:
-                        raise ValueError("Model invented a programme quote")
+                    try:
+                        draft.quote = source_quote(draft.quote, leaf.text)
+                    except ValueError as error:
+                        raise ValueError("Model invented or ambiguously located a programme quote") from error
         if batch_size == 1:
             leaf = batch[0]
             return (task, {"program": program.title, "sections": paths[leaf.id], "paragraph": leaf.text},

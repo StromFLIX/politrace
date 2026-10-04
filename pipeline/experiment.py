@@ -18,6 +18,7 @@ from typing import Literal
 import snowballstemmer
 from pydantic import Field
 
+from pipeline.citations import source_quote
 from pipeline.llm import Agent, InvalidModelResponse
 from pipeline.matching import STOP, Judgment, Verification, criterion_text, eligible_criteria
 from pipeline.models import Generation, Impact, MatchAudit, Model
@@ -218,10 +219,9 @@ def deduplicate(criteria, agent):
             exact_ids(result.pairs, ids, 'pair_id')
             for p in result.pairs:
                 left, right = (by_id[i] for i in pairs[p.pair_id])
-                if p.equivalent and (not p.left_quote or not p.right_quote
-                        or len(p.left_quote) < 10 or len(p.right_quote) < 10
-                        or p.left_quote not in left.reference.quote or p.right_quote not in right.reference.quote):
-                    raise ValueError('Equivalent commitments need two exact source quotations')
+                if p.equivalent:
+                    p.left_quote = source_quote(p.left_quote, left.reference.quote)
+                    p.right_quote = source_quote(p.right_quote, right.reference.quote)
         return ('Assess each pair for STRICT semantic equivalence, not topic similarity. Both commitments '
                 'must have exactly the same independently testable action, target, beneficiaries, scope, '
                 'amount, deadline, conditions, legal level and commitment strength in BOTH source quotes. '
@@ -343,11 +343,10 @@ def analyze_law(law, criteria, candidates, eligible_count, agent, existing, root
             for pair in result.pairs:
                 if pair.supported != (pair.disposition == 'proposed_link'):
                     raise ValueError('Supported flag and disposition must agree')
-                if pair.supported and (not pair.law_quote or len(pair.law_quote) < 10
-                        or pair.law_quote not in texts.get(pair.law_passage_id, '')
-                        or not pair.criterion_quote or len(pair.criterion_quote) < 10
-                        or pair.criterion_quote not in by_id[pair.criterion_id].reference.quote):
-                    raise ValueError('Supported links require verbatim law and programme quotations')
+                if pair.supported:
+                    pair.law_quote = source_quote(pair.law_quote, texts.get(pair.law_passage_id, ''))
+                    pair.criterion_quote = source_quote(pair.criterion_quote,
+                                                       by_id[pair.criterion_id].reference.quote)
         return ('For EACH criterion independently judge an actual effect of this law. Topic similarity '
                 'does not establish an effect. Output proposed_link only with direct source evidence and '
                 'verbatim quotes from a supplied passage and that criterion quote. score -2 directly '
