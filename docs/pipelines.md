@@ -20,7 +20,7 @@ Python performs the expensive/offline work. The website only serves a built snap
 4. Optional secret **`DATA_PR_TOKEN`**: a repository-scoped token with Contents and Pull requests read/write. If absent, workflows use `GITHUB_TOKEN`. GitHub normally suppresses new workflow runs triggered by `GITHUB_TOKEN` events, so a generated PR may not automatically receive CI checks. The generation job validates the data and runs Python tests, but this is not a replacement for full UI/Compose CI. With the default token, a maintainer must validate the proposed branch before merging. Do not weaken required checks or use unsafe `pull_request_target` execution to work around this.
 5. Recommended branch rules: protect `main`, require CI, require a human PR review, and require review of data/schema/workflow changes. CODEOWNERS does not enable branch protection by itself. Never auto-merge political evaluations.
 
-The action dependencies are pinned to commits. Paid work only runs via `workflow_dispatch` on `main` (and, once explicitly configured, a scheduled default-branch run). PR CI has no OpenRouter secret and read-only repository permissions. Workflow inputs are passed as environment values into Python, not interpolated into executable shell commands.
+The action dependencies are pinned to commits. Paid work runs via `workflow_dispatch` on `main` or the daily default-branch schedule. PR CI has no OpenRouter secret and read-only repository permissions. Workflow inputs are passed as environment values into Python, not interpolated into executable shell commands.
 
 ## 1. Programme PDF → Markdown and tree
 
@@ -62,9 +62,9 @@ An unchanged run opens no PR. An initial matching audit or newly applicable crit
 
 ### Scheduling
 
-**The daily trigger is intentionally not set yet: the operator's clock time and IANA timezone are required.** All actions can be run manually now. Do not copy a guessed midnight cron into production.
+**The law pipeline is scheduled daily at 06:00 `Europe/Berlin`**, as requested by the operator. `law-feed.yml` specifies `cron: '0 6 * * *'` and `timezone: Europe/Berlin` together. All actions also remain manually runnable.
 
-Once those two values are supplied, configure a daily trigger for `law-feed.yml` with both `cron` and the operator's explicit IANA `timezone`. [GitHub supports timezone-aware schedules](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule); omitting `timezone` means UTC. Let that setting handle seasonal offsets rather than hard-coding a summer/winter conversion. During a DST spring-forward gap GitHub advances to the next valid time. GitHub can also delay/drop scheduled jobs, especially around busy hour boundaries, and public-repository schedules may be disabled after inactivity. Monitor feed freshness rather than promising exact execution times.
+[GitHub supports timezone-aware schedules](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onschedule); the IANA timezone handles seasonal offsets rather than hard-coding a summer/winter conversion. During a DST spring-forward gap GitHub advances to the next valid time. GitHub can also delay/drop scheduled jobs, especially around busy hour boundaries, and public-repository schedules may be disabled after inactivity. Monitor feed freshness rather than promising exact execution times.
 
 Do not schedule the potentially expensive full-manifesto import every day. Programme ingestion is an explicit event; the law feed and matching are the recurring task.
 

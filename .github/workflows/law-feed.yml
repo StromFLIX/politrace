@@ -13,8 +13,9 @@ on:
         description: Maximum reserved OpenRouter USD per run
         default: '5'
         type: string
-  # Daily schedule intentionally awaits the operator's clock time + IANA timezone.
-  # Set both cron and timezone when supplied; see docs/pipelines.md.
+  schedule:
+    - cron: '0 6 * * *'
+      timezone: Europe/Berlin
 
 permissions:
   contents: write

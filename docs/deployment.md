@@ -8,13 +8,14 @@ The entire runtime is one `web` service: an unprivileged Nginx image containing 
 - Internal HTTP port: **8080**.
 - Health check: **`GET /api/health.json`** (200, JSON status `ok`).
 - Filesystem: read-only, with a temporary `/tmp`; all Linux capabilities dropped.
-- Host binding: `127.0.0.1:${PORT:-8080}:8080` for local smoke tests, not a public bind.
+- Host binding: **none in production**. The optional `docker-compose.local.yml` adds `127.0.0.1:${PORT:-8080}:8080` for local/CI smoke tests only. Publishing 8080 on the Coolify host conflicts with its existing services.
 - Proxy: Coolify connects to `web:8080` through its managed network and terminates TLS.
 - Assets: local fonts and scripts, no CDN, tracker or browser model calls. Security headers are in `deploy/nginx.conf`.
 
 ## Local production smoke test
 
 ```sh
+export COMPOSE_FILE=docker-compose.yml:docker-compose.local.yml
 docker compose config --quiet
 docker compose up --build -d --wait --wait-timeout 180
 curl --fail http://127.0.0.1:8080/api/health.json
@@ -39,7 +40,13 @@ The inspected legacy Coolify application is:
 
 Those old settings will **not** build this new repository. Redeploying the old application without changing its source will only redeploy the deprecated site.
 
-The available Coolify MCP lifecycle tools can inspect/redeploy/restart, but cannot change an application's source/build configuration or create a replacement. A Coolify operator must perform this one-time configuration step through the dashboard (or provide an appropriately scoped configuration tool). Do not delete the working old app merely to free its domain before a replacement is ready.
+A separate replacement application has been created using the official Coolify CLI (v1.8.0) and API:
+
+- Replacement UUID: `iwowpdg1qk96hugpif5eackd`
+- Repository: `StromFLIX/politrace`, branch `main`
+- Coolify instance: `https://coolify.admin.stromflix.com` (API base `/api/v1`, not the dashboard's `/security/api-tokens` page)
+
+Credentials are supplied only at invocation time, never committed or added to the web container. The CLI archive checksum was checked against the release's checksums. Keep the old application for rollback; only move the domain after the replacement is healthy.
 
 ### Target configuration
 

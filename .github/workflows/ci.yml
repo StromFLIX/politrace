@@ -14,6 +14,8 @@ jobs:
   test:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    env:
+      COMPOSE_FILE: docker-compose.yml:docker-compose.local.yml
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -47,7 +49,8 @@ jobs:
           docker compose config --quiet
           docker compose up --build --wait --wait-timeout 180
           curl --fail http://127.0.0.1:8080/api/health.json
-          curl --fail http://127.0.0.1:8080/api/v1/live/laws.json
+          curl --fail --output /tmp/politrace-laws.json http://127.0.0.1:8080/api/v1/live/laws.json
+          node -e "JSON.parse(require('fs').readFileSync('/tmp/politrace-laws.json', 'utf8'))"
           status=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:8080/api/v1/live/missing.json)
           test "$status" = "404"
       - name: Container diagnostics

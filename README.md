@@ -48,12 +48,12 @@ Open <http://localhost:4321>. Useful routes:
 ## Run the complete production stack
 
 ```sh
-docker compose up --build -d --wait
+docker compose -f docker-compose.yml -f docker-compose.local.yml up --build -d --wait
 ```
 
 Open <http://localhost:8080>. Health probe: `/api/health.json`.
 
-`PORT` changes the loopback host port. The application listens on container port **8080**; configure the Coolify proxy for that port. `POLITRACE_DATASET` is a **build-time** selection, so changing it requires a rebuild. No volumes or database migrations are needed. The image contains a snapshot: newly merged data appears only after rebuilding/redeploying.
+The optional local override publishes a loopback port; production Compose publishes none. `PORT` changes the local host port. The application listens on container port **8080**; configure the Coolify proxy for that port. `POLITRACE_DATASET` is a **build-time** selection, so changing it requires a rebuild. No volumes or database migrations are needed. The image contains a snapshot: newly merged data appears only after rebuilding/redeploying.
 
 **Do not put `OPENROUTER_API_KEY` in this stack.** See [Coolify deployment](docs/deployment.md) for the existing-domain cutover and smoke checks.
 
@@ -67,7 +67,7 @@ Open <http://localhost:8080>. Health probe: `/api/health.json`.
 
 See [pipeline setup, budgets and retry behaviour](docs/pipelines.md), including the optional `DATA_PR_TOKEN` needed if bot-created PRs should automatically trigger further CI. The law feed itself needs no API key. No secret is stored in the repo, Docker image or frontend.
 
-**Daily execution is not enabled yet.** It needs the operator's desired clock time and IANA timezone; manual actions already work. Do not assume a guessed UTC schedule is the requested local-time schedule.
+**The law pipeline runs daily at 06:00 Europe/Berlin**, including seasonal clock changes. Manual actions remain available. Data proposals wait for review; the scheduler never auto-merges political assessments.
 
 ## API examples
 

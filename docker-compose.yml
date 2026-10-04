@@ -13,8 +13,8 @@ services:
     restart: unless-stopped
     expose:
       - "8080"
-    ports:
-      - "127.0.0.1:${PORT:-8080}:8080"
+    # Coolify reaches this service through its proxy network. Do not bind a host port:
+    # 8080 may already belong to the proxy. See docker-compose.local.yml for local use.
     read_only: true
     tmpfs:
       - /tmp:rw,noexec,nosuid,size=16m
