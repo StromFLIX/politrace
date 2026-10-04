@@ -82,8 +82,9 @@ jobs:
         run: uv run python scripts/backfill_entry.py probe
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
-          POLITRACE_MAX_USD: '0.05'
+          OPENROUTER_MODEL: anthropic/claude-sonnet-5.5
+          OPENROUTER_REVIEW_MODEL: openai/gpt-5.6-sol
+          POLITRACE_MAX_USD: '0.10'
           POLITRACE_MAX_CALLS: '3'
 
   import:
@@ -127,7 +128,8 @@ jobs:
         env:
           BACKFILL_TARGET: ${{ matrix.target }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
+          OPENROUTER_MODEL: anthropic/claude-sonnet-5.5
+          OPENROUTER_REVIEW_MODEL: openai/gpt-5.6-sol
           POLITRACE_MAX_USD: ${{ vars.POLITRACE_BACKFILL_MAX_USD || '12' }}
           POLITRACE_MAX_CALLS: '600'
       - name: Retain only completed, semantically valid model responses for retries

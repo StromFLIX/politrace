@@ -7,7 +7,7 @@ on:
         required: true
         type: string
       budget:
-        description: Maximum reserved OpenRouter USD per run
+        description: OpenRouter USD limit (reported charges plus outstanding reservations)
         default: '5'
         type: string
 
@@ -55,7 +55,7 @@ jobs:
         env:
           INPUT_PROGRAM_ID: ${{ inputs.program_id }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'anthropic/claude-sonnet-5.5' }}
           POLITRACE_MAX_USD: ${{ inputs.budget || '5' }}
           POLITRACE_MAX_CALLS: ${{ vars.POLITRACE_MAX_CALLS || '200' }}
       - name: Preserve completed calls if the run stops on budget

@@ -1,0 +1,38 @@
+name: Compare source-backed extraction models
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/backfills/model-evaluation.json']
+permissions:
+  contents: read
+concurrency:
+  group: politrace-model-evaluation
+  cancel-in-progress: false
+jobs:
+  compare:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - name: Compare identical official-source paragraphs ($0.50 per model maximum)
+        run: uv run python scripts/evaluate_models.py
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      - name: Preserve evidence, outputs and provider-reported costs even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: model-comparison
+          path: .cache/model-evaluation/report.json
+          include-hidden-files: true
+          retention-days: 30
+          if-no-files-found: error

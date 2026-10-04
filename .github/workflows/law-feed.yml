@@ -11,7 +11,7 @@ on:
         default: '2025-03-25'
         type: string
       budget:
-        description: Maximum reserved OpenRouter USD per run
+        description: OpenRouter USD limit (reported charges plus outstanding reservations)
         default: '5'
         type: string
   schedule:
@@ -65,8 +65,8 @@ jobs:
           INPUT_SINCE: ${{ inputs.since || '2025-03-25' }}
           INPUT_ARCHIVE: 'true'
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'openai/gpt-4.1-mini' }}
-          OPENROUTER_REVIEW_MODEL: ${{ vars.OPENROUTER_REVIEW_MODEL || 'openai/gpt-4.1-mini' }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || 'anthropic/claude-sonnet-5.5' }}
+          OPENROUTER_REVIEW_MODEL: ${{ vars.OPENROUTER_REVIEW_MODEL || 'openai/gpt-5.6-sol' }}
           POLITRACE_MAX_USD: ${{ inputs.budget || '5' }}
           POLITRACE_MAX_CALLS: ${{ vars.POLITRACE_MAX_CALLS || '200' }}
       - name: Cache completed calls even after a budget stop
@@ -97,5 +97,5 @@ jobs:
             - AI links remain `proposed`; no automatic fulfilment assessments or voting guesses.
             - Inspect source PDFs, legal context, comparison windows and the retrieval omissions.
             - Do not auto-merge. Citizen corrections on this open PR are preserved: later runs wait.
-            - See the workflow summary for source counts and reserved model budget.
+            - See the workflow summary for source counts, provider-reported costs and outstanding reservations.
           delete-branch: true

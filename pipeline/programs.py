@@ -115,7 +115,7 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
                 "be grouped under clearly identified front-matter sections, not substantive policy sections.",
                 {"blocks": [{"index": i, "page": leaf.reference.page, "text": leaf.text}
                             for i, leaf in enumerate(batch)], "existing_sections": known_paths[-80:]},
-                StructuredParagraphs, validator=check, max_output=9000,
+                StructuredParagraphs, validator=check, max_output=9000, subdivide=len(batch) > 4,
             )
         except InvalidModelResponse:
             if len(batch) <= 4:
@@ -248,7 +248,7 @@ def ingest_program(*, root: Path, agent: Agent, pdf: str, party: str, year: int,
     return {"program_id": program.id, "pages": len(pages), "paragraphs": len(leaves)}
 
 
-def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1, workers=1):
+def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1, workers=1, leaf_ids=None):
     if not 1 <= batch_size <= 8 or not 1 <= workers <= 4:
         raise ValueError("Criterion batches must be 1–8 leaves; workers 1–4")
     programs = {p.id: p for p in load_records(root, "live", "programs")}
@@ -262,6 +262,11 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
     created, audits = [], []
     # Evaluate every leaf. Batching preserves one explicit result/abstention per leaf.
     pending = [leaf for leaf in program.leaves if leaf.id not in completed_leaves]
+    if leaf_ids is not None:
+        selected = set(leaf_ids)
+        if len(selected) != len(leaf_ids) or not selected <= {leaf.id for leaf in program.leaves}:
+            raise ValueError("Selected sample must contain unique existing leaf IDs")
+        pending = [leaf for leaf in pending if leaf.id in selected]
     task = (
         "Extract atomic, observable acceptance criteria from each manifesto paragraph. "
         "Write titles, descriptions, tests and abstention reasons in German. "
@@ -270,25 +275,22 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
         "your knowledge of the party. Return an empty list with an abstention reason for rhetoric, "
         "headings, tables of contents, descriptions of the status quo, ambiguous aspirations or "
         "non-testable statements. A deadline may only come from the cited source; otherwise null. "
+        "If only a year is specified, preserve it in the test but set deadline=null rather than inventing "
+        "an exact calendar day. A promise to examine an option is NOT a promise to implement it. "
         "Neighbouring context helps interpret a continuation but is NOT citable for this leaf."
     )
     positions = {leaf.id: i for i, leaf in enumerate(program.leaves)}
-    def evaluate(batch):
-        try:
-            return evaluate_once(batch)
-        except InvalidModelResponse:
-            if len(batch) == 1:
-                raise
-            midpoint = len(batch) // 2
-            logger.warning('%s: subdividing an invalid %s-leaf criteria batch; source checks stay strict',
-                           program_id, len(batch))
-            return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
-
-    def evaluate_once(batch):
+    def query(batch):
         def check(result):
+            if batch_size != 1:
+                ids = [r.leaf_id for r in result.paragraphs]
+                if len(ids) != len(batch) or set(ids) != {leaf.id for leaf in batch}:
+                    raise ValueError("Criterion batch must preserve every leaf ID exactly once")
+                # ID-based reordering is lossless; missing/duplicate IDs still fail. Never zip
+                # source citations to whichever paragraph the model happened to return first.
+                by_id = {r.leaf_id: r for r in result.paragraphs}
+                result.paragraphs = [by_id[leaf.id] for leaf in batch]
             responses = [result] if batch_size == 1 else result.paragraphs
-            if batch_size != 1 and [r.leaf_id for r in responses] != [leaf.id for leaf in batch]:
-                raise ValueError("Criterion batch must preserve every leaf ID in order")
             for leaf, response in zip(batch, responses, strict=True):
                 if not response.criteria and not response.abstention_reason:
                     raise ValueError("Empty criterion extraction must explain its abstention")
@@ -297,22 +299,50 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
                         raise ValueError("Model invented a programme quote")
         if batch_size == 1:
             leaf = batch[0]
-            result, generation = agent.ask(task,
-                {"program": program.title, "sections": paths[leaf.id], "paragraph": leaf.text},
-                CriteriaResponse, validator=check)
-            responses = [result]
-        else:
-            paragraphs = []
-            for leaf in batch:
-                index = positions[leaf.id]
-                paragraphs.append({"leaf_id": leaf.id, "sections": paths[leaf.id], "paragraph": leaf.text,
-                    "previous_context": program.leaves[index - 1].text[-1000:] if index else "",
-                    "next_context": program.leaves[index + 1].text[:1000] if index + 1 < len(program.leaves) else ""})
-            result, generation = agent.ask(task + " Return every input leaf_id exactly once, in input order.",
+            return (task, {"program": program.title, "sections": paths[leaf.id], "paragraph": leaf.text},
+                    CriteriaResponse, {"validator": check})
+        paragraphs = []
+        for leaf in batch:
+            index = positions[leaf.id]
+            paragraphs.append({"leaf_id": leaf.id, "sections": paths[leaf.id], "paragraph": leaf.text,
+                "previous_context": program.leaves[index - 1].text[-1000:] if index else "",
+                "next_context": program.leaves[index + 1].text[:1000] if index + 1 < len(program.leaves) else ""})
+        return (task + " Return every input leaf_id exactly once, in input order.",
                 {"program": program.title, "paragraphs": paragraphs}, CriteriaBatch,
-                validator=check, max_output=10000)
-            responses = result.paragraphs
-        check(result)  # Also enforce contracts for non-network/offline agent implementations.
+                {"validator": check, "max_output": 10000})
+
+    def cached(batch):
+        if not hasattr(agent, 'has_cached'):
+            return False
+        prompt, data, schema, options = query(batch)
+        return agent.has_cached(prompt, data, schema, **options)
+
+    def cached_subtree(batch):
+        if cached(batch):
+            return True
+        if len(batch) == 1:
+            return False
+        midpoint = len(batch) // 2
+        return cached_subtree(batch[:midpoint]) or cached_subtree(batch[midpoint:])
+
+    def evaluate(batch):
+        midpoint = len(batch) // 2
+        if len(batch) > 1 and not cached(batch) and (
+                cached_subtree(batch[:midpoint]) or cached_subtree(batch[midpoint:])):
+            # Older runs saved valid child batches but not the failed parent. Reuse those
+            # results before spending anything to rediscover the same invalid parent.
+            return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
+        prompt, data, schema, options = query(batch)
+        try:
+            result, generation = agent.ask(prompt, data, schema, **options, subdivide=len(batch) > 1)
+        except InvalidModelResponse:
+            if len(batch) == 1:
+                raise
+            logger.warning('%s: subdividing an invalid %s-leaf criteria batch; source checks stay strict',
+                           program_id, len(batch))
+            return evaluate(batch[:midpoint]) + evaluate(batch[midpoint:])
+        options['validator'](result)  # Also enforce contracts for offline/mock agents.
+        responses = [result] if batch_size == 1 else result.paragraphs
         return list(zip(batch, responses, [generation] * len(batch), strict=True))
     batches = chunks(pending, max_chars=10_000, max_leaves=batch_size)
     for leaf, result, generation in (
@@ -346,4 +376,5 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
         program.criteria_extraction.extend(audits)
         write_json(root / "live" / "programs" / f"{program.id}.json", program)
     return {"program_id": program.id, "new_criteria": len(created), "preserved_leaves": len(completed_leaves),
+            "processed_leaves": len(audits), "remaining_leaves": len(program.leaves) - len(completed_leaves) - len(audits),
             "abstained_leaves": sum(not a.criterion_ids for a in audits)}
