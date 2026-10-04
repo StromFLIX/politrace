@@ -147,11 +147,26 @@ def test_semantic_paragraphs_join_only_source_ranges_and_preserve_all_text():
     assert leaves[0].text == 'This is the first half\n\nof a continued sentence.'
     assert leaves[0].text in markdown and tree.children[0].leaf_ids == [leaves[0].id]
     other_md, other_raw = pages_to_markdown(['First page.', 'Second page.'], 'test-program')
-    with pytest.raises(ValueError, match='page citation'):
-        structure_paragraphs(other_raw, other_md, 'Title', 'test-program', Stub(groups))
+    continued, _, _ = structure_paragraphs(other_raw, other_md, 'Title', 'test-program', Stub(groups))
+    assert [p.reference.page for p in continued] == [1, 2]
+    assert [p.text for p in continued] == ['First page.', 'Second page.']
     with pytest.raises(ValueError, match='omitted'):
         structure_paragraphs(raw, markdown, 'Title', 'test-program', Stub({
             'groups': [{'start': 0, 'end': 0, 'sections': ['Section']}]}))
+
+
+def test_model_paragraph_groups_are_split_without_duplicating_long_source_blocks():
+    text = 'A long source sentence. ' * 350
+    markdown, raw = pages_to_markdown([text], 'test-program')
+    assert len(raw) > 1
+    groups = {'groups': [{'start': 0, 'end': len(raw) - 1, 'sections': ['Section']}]}
+    leaves, _, _ = structure_paragraphs(raw, markdown, 'Title', 'test-program', Stub(groups))
+    assert [p.text for p in leaves] == [p.text for p in raw]
+    assert all(len(p.text) <= 4500 for p in leaves)
+    # Distinct short blocks may be grouped semantically, but their combined citation stays bounded.
+    markdown, raw = pages_to_markdown(['A' * 3000 + '\n\n' + 'B' * 3000], 'test-program')
+    leaves, _, _ = structure_paragraphs(raw, markdown, 'Title', 'test-program', Stub(groups))
+    assert [p.text for p in leaves] == ['A' * 3000, 'B' * 3000]
 
 
 def test_batched_criteria_cover_every_leaf_and_remain_unassessed(corpus):

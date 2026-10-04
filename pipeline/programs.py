@@ -77,24 +77,35 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
             for group in result.groups:
                 if group.start != cursor or not group.start <= group.end < len(batch):
                     raise ValueError("Paragraph groups must cover all input blocks once and in order")
-                first, last = batch[group.start], batch[group.end]
-                if first.reference.page != last.reference.page:
-                    raise ValueError("Paragraph groups cannot cross a PDF page citation boundary")
                 if any(not s.strip() or len(s) > 120 for s in group.sections):
                     raise ValueError("Invalid section title")
-                if len(group_text(group)) > 4500:
-                    raise ValueError("Paragraph is too long; split into smaller consecutive groups")
                 cursor = group.end + 1
             if cursor != len(batch):
                 raise ValueError("Paragraph groups omitted source blocks")
+
+        def cited_groups(groups):
+            # Models often join continuations across PDF pages. Preserve their section assignment,
+            # but create page-bound, size-bound verbatim leaves deterministically. Overlapping
+            # ranges are pre-split pieces of a long source block and must never be joined twice.
+            for group in groups:
+                start = group.start
+                for end in range(start + 1, group.end + 1):
+                    candidate = group.model_copy(update={'start': start, 'end': end})
+                    if (batch[end].reference.page != batch[start].reference.page
+                            or batch[end].reference.line_start <= batch[end - 1].reference.line_end
+                            or len(group_text(candidate)) > 4500):
+                        yield group.model_copy(update={'start': start, 'end': end - 1})
+                        start = end
+                yield group.model_copy(update={'start': start})
 
         result, generation = agent.ask(
             "Structure these numbered PDF layout blocks into a readable section tree and paragraphs. "
             "Join consecutive fragments of ONE paragraph, not separate policy commitments; PDF line "
             "wrapping often splits a sentence into many blocks. Preserve ALL blocks, including headers, "
             "contents, footnotes and rhetoric. Return consecutive inclusive start/end index ranges, "
-            "covering every input index exactly once in input order. Never cross a PDF page boundary. "
-            "Keep each resulting paragraph below 4500 characters. Use document headings as section paths "
+            "covering every input index exactly once in input order. A continued paragraph may span pages: "
+            "the importer will split it at PDF page/size boundaries to preserve exact citations. "
+            "Use document headings as section paths "
             "and reuse existing paths. Never write replacement source text. Contents/front matter should "
             "be grouped under clearly identified front-matter sections, not substantive policy sections.",
             {"blocks": [{"index": i, "page": leaf.reference.page, "text": leaf.text}
@@ -102,7 +113,7 @@ def structure_paragraphs(raw_leaves, markdown, title, program_id, agent):
             StructuredParagraphs, validator=check, max_output=9000,
         )
         check(result)
-        for group in result.groups:
+        for group in cited_groups(result.groups):
             first, last = batch[group.start], batch[group.end]
             text = group_text(group)
             leaf = first if group.start == group.end else Leaf(

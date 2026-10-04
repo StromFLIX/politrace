@@ -5,7 +5,7 @@ A successful diagnostic job is not a successful ingestion; inspect each endpoint
 """
 import json
 from datetime import date
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 
 import httpx
 
@@ -13,12 +13,16 @@ from pipeline.archive import SEARCH_URL
 
 
 def main():
-    query = urlencode({"lastChangeVdAfter": "2025-03-25", "lastChangeVdBefore": date.today().isoformat(),
-                       "cl2Metadaten_cl2Categories_Typ": "gesetz", "resultsPerPage": "100",
-                       "sortOrder": "dateOfIssue_dt asc"})
+    params = {"lastChangeVdAfter": "2025-03-25", "lastChangeVdBefore": date.today().isoformat(),
+              "cl2Metadaten_cl2Categories_Typ": "gesetz", "resultsPerPage": "100",
+              "sortOrder": "dateOfIssue_dt asc"}
+    query = urlencode(params)
     endpoints = {
         "home": "https://www.recht.bund.de/",
         "archive": SEARCH_URL + "?" + query,
+        "archive_default_sort": SEARCH_URL + "?" + urlencode({k: v for k, v in params.items() if k != 'sortOrder'}),
+        "archive_percent_spaces": SEARCH_URL + "?" + urlencode(params, quote_via=quote),
+        "archive_form": SEARCH_URL,
         "rss": "https://www.recht.bund.de/rss/feeds/rss_bgbl-1.xml",
         "law": "https://www.recht.bund.de/bgbl/1/2026/285/VO.html",
         "pdf": "https://www.recht.bund.de/bgbl/1/2026/285/regelungstext.pdf?__blob=publicationFile&v=2",
@@ -32,7 +36,8 @@ def main():
                 results.append({"endpoint": name, "status": response.status_code,
                                 "content_type": response.headers.get("content-type"),
                                 "bytes": len(response.content),
-                                "server": response.headers.get("server")})
+                                "server": response.headers.get("server"),
+                                "error_excerpt": response.text[:200] if response.status_code == 403 else None})
             except httpx.TransportError as error:
                 results.append({"endpoint": name, "error_type": type(error).__name__})
     print(json.dumps(results, indent=2))
