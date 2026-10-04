@@ -155,6 +155,8 @@ test('real law-to-criterion links round-trip through both pages and exact source
     await page.goto(`/live/gesetze/${law.id}/#${impact.id}`);
     const card = page.locator(`[id="${impact.id}"]`);
     await expect(card).toBeVisible();
+    const headerHeight = (await page.locator('.site-header').boundingBox())!.height;
+    expect((await card.boundingBox())!.y).toBeGreaterThanOrEqual(headerHeight);
     await expect(card).toHaveAttribute('data-verification', impact.verification);
     if (impact.verification === 'needs_review') {
       await expect(card.locator('[data-model-disagreement]')).toBeVisible();

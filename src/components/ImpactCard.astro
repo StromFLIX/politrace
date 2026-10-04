@@ -22,5 +22,7 @@ const href = direction === 'law' ? `/${data.dataset}/gesetze/${law.id}/` : `/${d
   {i.caveats.length > 0 && <details style="margin-top:15px"><summary class="subtle-link" style="cursor:pointer">Einschränkungen & Modellprüfung</summary><ul style="padding-left:20px;color:var(--muted);font-size:11px">{i.caveats.map(caveat => <li>{caveat}</li>)}</ul><p style="font-size:10px">Zweiter Modellcheck: {i.verification === 'passed' ? 'bestätigt den Vorschlag' : 'weitere Prüfung nötig'}. Selbstberichtete Modellkonfidenz: {Math.round(i.confidence * 100)} % – keine kalibrierte Wahrscheinlichkeit.</p></details>}
 </article>
 <style>
+  .evidence-box { scroll-margin-top: 110px; }
+  .evidence-box:target { outline: 2px solid #9fb9f4; }
   .model-warning { margin: 12px 0; padding: 12px 14px; border: 1px solid #e4bf7d; border-radius: 8px; background: #fff8e9; color: #73501d; font-size: 12px; }
 </style>
