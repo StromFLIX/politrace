@@ -61,10 +61,12 @@ test('activity filters and separate vote sources', async ({ page }, testInfo) =>
 test('live activity is sourced and does not fabricate vote data', async ({ page }) => {
   await page.goto('/live/aktivitaet/');
   await expect(page.locator('.dataset-banner')).toContainText('LIVE-DATEN');
-  const laws = await (await page.request.get('/api/v1/live/laws.json')).json();
+  // The full law collection contains every verbatim passage (tens of MB after backfill).
+  // Use the lightweight inventory for navigation checks; bulk downloads are not browser fixtures.
+  const { counts } = await (await page.request.get('/api/v1/live/index.json')).json();
   const votes = await (await page.request.get('/api/v1/live/votes.json')).json();
-  await expect(page.locator('.activity-card')).toHaveCount(laws.total);
-  test.skip(!laws.total, 'No live publications yet');
+  await expect(page.locator('.activity-card')).toHaveCount(counts.laws);
+  test.skip(!counts.laws, 'No live publications yet');
   const firstId = await page.locator('.activity-card').first().getByRole('link', { name: 'Gesetz & Belege' }).getAttribute('href');
   await page.goto(firstId!);
   const lawId = firstId!.split('/').filter(Boolean).at(-1);

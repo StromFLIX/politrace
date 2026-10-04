@@ -14,9 +14,11 @@ function markdown(relative: string, dataset: string) {
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const routes: { params: { path: string }; props: { body: string; contentType: string } }[] = [];
+  // Keep shared canonical objects, not a serialized copy for every route plus every bulk list.
+  // Large law corpora otherwise multiply build memory before the first endpoint is written.
+  const routes: { params: { path: string }; props: { value: unknown; contentType: string } }[] = [];
   const add = (url: string, value: unknown, contentType = 'application/json; charset=utf-8') => routes.push({
-    params: { path: url }, props: { body: typeof value === 'string' ? value : JSON.stringify(value, null, 2) + '\n', contentType },
+    params: { path: url }, props: { value, contentType },
   });
   const collections = ['parties', 'programs', 'criteria', 'laws', 'impacts', 'votes'] as const;
   for (const dataset of datasets) {
@@ -35,6 +37,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       schema_version: '1.0', dataset, data_sha256: dataDigest,
       disclaimer: dataset === 'demo' ? 'FICTIONAL fixture data. Not actual party programmes, votes or law assessments.' : 'AI links are proposals until explicitly reviewed. Missing evidence is unknown, not failure.',
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
+      counts: Object.fromEntries(collections.map(c => [c, data[c].length])),
       statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
       filters: 'Static snapshot API. No server-side query parameters. Filter items client-side or use the search index.',
     });
@@ -100,6 +103,7 @@ export const getStaticPaths: GetStaticPaths = () => {
   return routes;
 };
 
-export const GET: APIRoute = ({ props }) => new Response(props.body, {
+export const GET: APIRoute = ({ props }) => new Response(
+  typeof props.value === 'string' ? props.value : JSON.stringify(props.value, null, 2) + '\n', {
   headers: { 'Content-Type': props.contentType, 'Access-Control-Allow-Origin': '*', 'X-Content-Type-Options': 'nosniff' },
 });

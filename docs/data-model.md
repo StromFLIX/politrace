@@ -17,7 +17,7 @@ Party ── Program ── Tree / Leaf ── Criterion
 - **Party**: ID, long/short names, colour and website. Adding a party is a metadata PR; it does not require a new schema or UI implementation. Update the optional Actions dropdown as well.
 - **Program**: party, election year, original source, publication date, explicit comparison window, Markdown path, immutable-identity leaves, a section tree, extraction audits, review and model provenance.
 - **Criterion**: programme/party/leaf IDs, atomic title and description, falsifiable test, tags/keywords, exact reference, optional deadline, review and independent fulfilment assessment.
-- **Law**: official publication ID/title/date/citation, source/PDF metadata, transcription status, bounded passages and a machine-owned matching audit. In this POC the importer supports only promulgated BGBl I laws.
+- **Law**: official publication ID/title/date/citation, source/PDF metadata, transcription status, bounded passages and a machine-owned matching audit. The importer supports promulgated laws from BGBl I and II, with dated archive coverage separate from RSS additions.
 - **Impact**: criterion and law IDs, signed ordinal score, uncalibrated confidence, rationale, exact law passage/quote and programme quote, caveats, second-pass verification, review and model provenance.
 - **Vote**: law ID, parliamentary motion/date, source, type and group counts, reviewed independently. There is no inference from impacts to votes.
 
@@ -57,7 +57,7 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 | Endpoint | Response |
 | --- | --- |
 | `/index.json` | Default dataset, dataset URLs and OpenAPI link |
-| `/{dataset}/index.json` | Dataset digest, collection URLs and disclaimers |
+| `/{dataset}/index.json` | Dataset digest, lightweight collection `counts`, URLs and disclaimers |
 | `/{dataset}/{collection}.json` | `{schema_version, dataset, total, items}` |
 | `/{dataset}/{collection}/{id}.json` | One canonical record (party detail also includes programme IDs and statistics) |
 | `/{dataset}/programs/{id}/tree.json` | Tree, leaves, source/review metadata and Markdown URL |
@@ -65,6 +65,9 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 | `/{dataset}/laws/{id}/source.md` | Law Markdown, only if text is available |
 | `/{dataset}/stats.json` | Statistics for each programme/window, with denominator semantics |
 | `/{dataset}/search.json` | Searchable criterion text, tags, keywords and detail URLs |
+| `/{dataset}/coverage.json` | Dated law inventory, imported/pending IDs and source mode; RSS does not advance full-archive coverage |
+| `/sources/bundestag-21.json` | Programme source/rights inventory for the seven elected parties |
+| `/sources/laws-bundestag-21.json` | Checked, dated official archive inventory with source-page hashes |
 | `/schemas/{collection}.schema.json` | Canonical record contract |
 | `/openapi.json` | OpenAPI 3.1 path documentation |
 
@@ -79,5 +82,7 @@ curl http://localhost:8080/api/v1/live/laws.json
 ```
 
 JSON uses `application/json`; Markdown uses `text/markdown`. Public GETs permit CORS without credentials. Unknown paths are real HTTP 404s, not a successful SPA response. There are no server-side query filters or pagination in v1: download the list/search index and filter client-side. JSON Schemas describe individual records, not collection envelopes.
+
+The law collection is a **bulk data export including every verbatim passage** and can be tens of megabytes after a backfill. Use the dataset index's `counts` for a lightweight inventory and individual record URLs when a full collection download is unnecessary. Normal website navigation serves prebuilt pages, not the bulk collection.
 
 The dataset digest covers the serialized canonical JSON records. Their cited text lives in the records; a source Markdown-only change outside cited leaves is not necessarily reflected in that digest. Use the Git commit and original PDF hashes for full provenance. Snapshots change only after a merge and rebuild/redeployment. Do not treat the API as a live connection to Parliament.

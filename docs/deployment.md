@@ -76,6 +76,10 @@ In Coolify's domain syntax, `:8080` selects the backend container port; the publ
 
 A domain change/build is not successful merely because Coolify queued a deployment. Inspect its deployment result and verify the public response.
 
+## Build memory
+
+The web runtime is small, but building a full legal corpus is not. Prefer at least 2 GiB of build memory. In a 1 GiB development container, the 171-law corpus was verified with `NODE_OPTIONS=--max-old-space-size=320 npm run build` and a single Playwright worker. Do not run heavy PDF extraction and browser/build checks simultaneously in that container. The API serializes one route at a time rather than retaining every JSON export twice; the dataset index offers lightweight `counts` without downloading all law text. Larger corpora may need more memory. None of these build settings belongs in a runtime model-secret configuration.
+
 ## Rebuild after data merges
 
 Enable Coolify's GitHub auto-deploy webhook for `main` if desired. Merged data requires a new image build; runtime containers do not read the Git checkout or poll GitHub. Protect `main` so source-backed data and reviews are validated before automatic deployment.
