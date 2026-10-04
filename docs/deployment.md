@@ -99,6 +99,14 @@ curl -I https://politrace.stromflix.com/api/v1/live/does-not-exist.json
 
 In a browser, check the demo warning, live-source links, party period switch, criterion → programme anchor, activity filters, law source/vote states and mobile navigation. Nginx must return JSON/Markdown with correct content types, not a catch-all HTML index. The CSP allows only local scripts; the application does not need inline JavaScript exceptions.
 
+The same read-only desktop/mobile browser suite can verify the deployed snapshot without starting a local server:
+
+```sh
+POLITRACE_TEST_BASE_URL=https://politrace.stromflix.com npm run test:e2e
+```
+
+First compare the deployed `/api/v1/live/index.json` `data_sha256` and counts against your built snapshot; passing browser tests against an older image is not proof that the new data was deployed. Live proposal checks follow law → criterion → exact programme/law anchors and require model disagreements to be visible without expanding caveats.
+
 ## Rollback and operations
 
 - Deploy an earlier Git commit/image or restore the previous app's domain routing. Do not force-push or delete later data history to roll back a website.

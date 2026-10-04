@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+const deployedUrl = process.env.POLITRACE_TEST_BASE_URL;
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
@@ -7,12 +8,12 @@ export default defineConfig({
   // Keep browser processes within small CI/container memory budgets.
   workers: 1,
   reporter: [['list']],
-  use: { baseURL: 'http://127.0.0.1:4321', trace: 'retain-on-failure' },
+  use: { baseURL: deployedUrl || 'http://127.0.0.1:4321', trace: 'retain-on-failure' },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 1080 } } },
     { name: 'mobile', use: { ...devices['iPhone 13'], defaultBrowserType: 'chromium' } },
   ],
-  webServer: {
+  webServer: deployedUrl ? undefined : {
     // Playwright owns this process; do not use Astro's background-server/lock lifecycle.
     command: 'npm run preview -- --host 127.0.0.1 --port 4321 --ignore-lock',
     url: 'http://127.0.0.1:4321', reuseExistingServer: !process.env.CI,

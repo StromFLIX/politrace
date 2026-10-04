@@ -19,7 +19,9 @@ Design previews (**fictional demo data**): [overview](docs/screenshots/overview.
 
 ### What is real, and what is not?
 
-`data/live/` initially contains **three official BGBl I publications with extracted text**. There are no live manifesto criteria, assessments or vote counts yet. An OpenRouter key is needed to run real model stages; the tests use deterministic mock responses and do not establish model accuracy.
+`data/live/` contains **171 official BGBl I/II laws**, the complete **Grünen 2025 programme transcription/tree**, **41 proposed criteria** and **6 proposed law links** from the first real end-to-end pilot. Only **8 of 337 source leaves** and **6 selected laws / 36 candidate pairs** were evaluated in that pilot; this is not full manifesto or cross-party coverage. Three links passed a second-model challenge and three retain explicit model disagreements. **No criterion has a human-reviewed fulfilment assessment, and no live votes have been imported.** See the [pilot result, actual cost and open quality findings](docs/pilots/2026-10-04-gruene.md).
+
+An OpenRouter key is needed for further model stages. The real pilot demonstrates an operating extraction/matching path, not measured legal accuracy; automated tests and exact quotations do not prove that a model's interpretation is correct.
 
 `data/demo/` contains **fictional** programmes, criteria, laws, votes and assessments for seven party views, including an older sample programme period. The UI and API label this namespace explicitly. These examples are not claims about actual party policy or parliamentary decisions.
 
@@ -84,6 +86,9 @@ The checked source inventory covers **CDU/CSU, SPD, Grüne, AfD, Linke and SSW**
 GET /api/v1/index.json
 GET /api/v1/live/laws.json
 GET /api/v1/live/criteria.json
+GET /api/v1/live/impacts.json
+GET /api/v1/live/programs/gruene-2025/tree.json
+GET /api/v1/live/extraction.json
 GET /api/v1/demo/programs/demo-spd-2025/tree.json
 GET /api/v1/demo/programs/demo-spd-2025/source.md
 GET /api/v1/demo/criteria/demo-spd-2025-ac-001.json

@@ -146,7 +146,7 @@ test('live programme criteria retain exact citations and do not imply reviewed f
 test('real law-to-criterion links round-trip through both pages and exact source anchors', async ({ page, request }) => {
   const { items: impacts } = await (await request.get('/api/v1/live/impacts.json')).json();
   test.skip(!impacts.length, 'No live evidence proposal has been published yet');
-  for (const impact of impacts.slice(0, 3)) {
+  for (const impact of impacts.slice(0, 12)) {
     const law = await (await request.get(`/api/v1/live/laws/${impact.law_id}.json`)).json();
     const criterion = await (await request.get(`/api/v1/live/criteria/${impact.criterion_id}.json`)).json();
     const passage = law.passages.find((p: { id: string }) => p.id === impact.law_passage_id);
@@ -155,8 +155,18 @@ test('real law-to-criterion links round-trip through both pages and exact source
     await page.goto(`/live/gesetze/${law.id}/#${impact.id}`);
     const card = page.locator(`[id="${impact.id}"]`);
     await expect(card).toBeVisible();
+    await expect(card).toHaveAttribute('data-verification', impact.verification);
+    if (impact.verification === 'needs_review') {
+      await expect(card.locator('[data-model-disagreement]')).toBeVisible();
+      await expect(card.locator('[data-model-disagreement]')).toContainText('Modelle widersprechen sich.');
+    }
+    if (impact.review.status === 'proposed') {
+      await expect(card).toContainText('Vorgeschlagene Wirkung:');
+      await expect(card).toContainText('KI-Vorschlag, keine Erfüllungsbewertung.');
+    }
     await card.locator('h3 a').click();
     await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
+    if (criterion.review.note) await expect(page.locator('[data-review-note]')).toContainText(criterion.review.note);
     await page.locator(`[id="${impact.id}"]`).getByRole('link', { name: 'Gesetzespassage ansehen' }).click();
     await expect(page.locator(':target')).toContainText(impact.law_quote);
   }
