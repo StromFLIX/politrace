@@ -1,0 +1,22 @@
+name: Diagnose official source access
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/source-check.yml', 'scripts/check_sources.py']
+permissions:
+  contents: read
+jobs:
+  diagnostics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - run: uv run python scripts/check_sources.py

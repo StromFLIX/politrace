@@ -56,14 +56,25 @@ def run(target, *, root=ROOT / "data", agent=None):
     return result
 
 
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.WARNING, format='%(message)s')
-    logging.getLogger('pipeline').setLevel(logging.INFO)
-    target = os.environ.get("BACKFILL_TARGET") or sys.argv[1]
-    result = run(target)
+def report(target, result):
     rendered = json.dumps(result, ensure_ascii=False, indent=2)
     print(rendered)
     write_json(ROOT / ".cache" / f"backfill-{target}.json", result)
     if summary := os.environ.get("GITHUB_STEP_SUMMARY"):
         with Path(summary).open("a") as file:
             file.write(f"\n## {target}\n```json\n{rendered}\n```\n")
+
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.WARNING, format='%(message)s')
+    logging.getLogger('pipeline').setLevel(logging.INFO)
+    target = os.environ.get("BACKFILL_TARGET") or sys.argv[1]
+    agent = None if target == 'laws' else Agent(cache=ROOT / '.cache' / 'llm')
+    try:
+        result = run(target, agent=agent)
+    except Exception as error:
+        # Report the failed run and its reserved budget, never free-form provider bodies.
+        report(target, {'status': 'failed', 'error_type': type(error).__name__,
+                        'budget': agent.summary() if agent else None})
+        raise
+    report(target, result)

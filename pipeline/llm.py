@@ -120,7 +120,9 @@ class Agent:
                     validator(result)
                 except ValueError as error:
                     if attempt == 2:
-                        raise RuntimeError("Model output failed source/order validation after bounded retries") from None
+                        raise RuntimeError(
+                            f"Model output failed source/order validation after bounded retries: {str(error)[:180]}"
+                        ) from None
                     payload["messages"].append({"role": "assistant", "content": choice["message"]["content"]})
                     payload["messages"].append({"role": "user", "content":
                         f"Validation failed: {str(error)[:180]}. Return each input ID "
