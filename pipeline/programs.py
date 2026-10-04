@@ -248,7 +248,8 @@ def ingest_program(*, root: Path, agent: Agent, pdf: str, party: str, year: int,
     return {"program_id": program.id, "pages": len(pages), "paragraphs": len(leaves)}
 
 
-def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1, workers=1, leaf_ids=None):
+def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1, workers=1,
+                     leaf_ids=None, checkpoint=False):
     if not 1 <= batch_size <= 8 or not 1 <= workers <= 4:
         raise ValueError("Criterion batches must be 1–8 leaves; workers 1–4")
     programs = {p.id: p for p in load_records(root, "live", "programs")}
@@ -357,6 +358,7 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
         if not result.criteria and not result.abstention_reason:
             raise ValueError("Empty criterion extraction must explain its abstention")
         leaf_criteria = []
+        leaf_records = []
         for draft in result.criteria:
             if draft.quote not in leaf.text:
                 raise ValueError(f"Model invented a programme quote for {leaf.id}")
@@ -369,18 +371,25 @@ def extract_criteria(*, root: Path, program_id: str, agent: Agent, batch_size=1,
             )
             if criterion.id not in {c.id for c in created}:
                 created.append(criterion)
+                leaf_records.append(criterion)
                 leaf_criteria.append(criterion.id)
         audits.append(LeafExtraction(leaf_id=leaf.id, criterion_ids=leaf_criteria,
                                      abstention_reason=result.abstention_reason, generation=generation))
+        if checkpoint:
+            for criterion in leaf_records:
+                save_record(root, 'criteria', criterion)
+            program.criteria_extraction.append(audits[-1])
+            write_json(root / 'live' / 'programs' / f'{program.id}.json', program)
         if len(audits) % 24 == 0 or len(audits) == len(pending):
             logger.info('%s: processed %s/%s pending paragraphs, %s criteria proposed',
                         program.id, len(audits), len(pending), len(created))
-    # Write only after all calls/citations in this stage validate. No half-written criteria set.
-    for criterion in created:
-        save_record(root, "criteria", criterion)
-    if audits:
-        program.criteria_extraction.extend(audits)
-        write_json(root / "live" / "programs" / f"{program.id}.json", program)
+    # Default remains atomic by selected stage; experiments can checkpoint validated leaves.
+    if not checkpoint:
+        for criterion in created:
+            save_record(root, "criteria", criterion)
+        if audits:
+            program.criteria_extraction.extend(audits)
+            write_json(root / "live" / "programs" / f"{program.id}.json", program)
     return {"program_id": program.id, "new_criteria": len(created), "preserved_leaves": len(completed_leaves),
             "processed_leaves": len(audits), "remaining_leaves": len(program.leaves) - len(completed_leaves) - len(audits),
             "abstained_leaves": sum(not a.criterion_ids for a in audits)}

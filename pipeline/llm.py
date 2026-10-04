@@ -88,11 +88,16 @@ class ProviderError(RuntimeError):
 
 class Agent:
     def __init__(self, *, cache: Path, model: str | None = None, max_usd: float | None = None,
-                 max_calls: int | None = None, client: httpx.Client | None = None):
+                 max_calls: int | None = None, client: httpx.Client | None = None,
+                 ledger: Path | None = None, flex=False):
         self.key = os.environ.get("OPENROUTER_API_KEY", "")
         self.model = model or os.environ.get("OPENROUTER_MODEL", DEFAULT_MODEL)
         self.review_model = os.environ.get("OPENROUTER_REVIEW_MODEL", DEFAULT_REVIEW_MODEL)
         self.cache = cache
+        self.flex = flex
+        if flex and self.model != 'openai/gpt-6-luna':
+            raise ValueError('Flex price contract is only verified for GPT-6 Luna')
+        self.ledger = ledger
         self.max_usd = float(max_usd if max_usd is not None else os.environ.get("POLITRACE_MAX_USD", "5"))
         self.max_calls = int(max_calls if max_calls is not None else os.environ.get("POLITRACE_MAX_CALLS", "200"))
         if not (0 < self.max_usd <= 100) or not (1 <= self.max_calls <= 2000):
@@ -110,7 +115,51 @@ class Agent:
         self.subdivision_cache_hits = 0
         self.funded_credit_retries = 0
         self._budget_lock = Lock()
-        self.client = client or httpx.Client(timeout=httpx.Timeout(180, connect=15))
+        self.client = client or httpx.Client(timeout=httpx.Timeout(900 if flex else 180, connect=15))
+        if ledger:
+            self._restore_ledger()
+
+    def _restore_ledger(self):
+        # An OS lock prevents two processes from spending against the same experiment ledger.
+        import fcntl
+
+        self.ledger.parent.mkdir(parents=True, exist_ok=True)
+        self._ledger_lock = self.ledger.with_suffix('.lock').open('a')
+        fcntl.flock(self._ledger_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        if self.ledger.exists():
+            data = json.loads(self.ledger.read_text())
+            if data['model'] != self.model or data['review_model'] != self.review_model:
+                raise ValueError('A resumed experiment must retain its model contract')
+            if self.max_usd > data['max_usd']:
+                raise ValueError('Cannot raise an existing experiment spending cap')
+            fields = ('reported_cost_usd', 'reported_cost_calls', 'unknown_cost_reserved_usd',
+                      'unknown_cost_calls', 'calls', 'cache_hits', 'prompt_tokens', 'completion_tokens')
+            for field in (*fields, 'pending_reserved_usd', 'in_flight_calls'):
+                value = data[field]
+                if (not isinstance(value, (int, float)) or isinstance(value, bool)
+                        or not math.isfinite(value) or value < 0):
+                    raise ValueError('Invalid durable cost ledger')
+            for field in fields:
+                setattr(self, field, data[field])
+            # A killed request may still have been billed: retain its pre-flight exposure.
+            self.unknown_cost_reserved_usd += data['pending_reserved_usd']
+            self.unknown_cost_calls += data['in_flight_calls']
+        with self._budget_lock:
+            self._persist_ledger()
+
+    def _persist_ledger(self):
+        # Caller holds the budget lock. Persist BEFORE a paid request, and after its settlement.
+        if self.ledger:
+            write_json(self.ledger, {key: getattr(self, key) for key in (
+                'model', 'review_model', 'max_usd', 'calls', 'cache_hits', 'reported_cost_usd',
+                'reported_cost_calls', 'pending_reserved_usd', 'in_flight_calls',
+                'unknown_cost_reserved_usd', 'unknown_cost_calls', 'prompt_tokens', 'completion_tokens')})
+
+    def routing(self, review=False):
+        if self.flex and not review:
+            return {'only': ['openai/flex'], 'allow_fallbacks': False,
+                    'max_price': {'prompt': 0.05, 'completion': 0.25}}
+        return {'max_price': PRICE_CEILINGS}
 
     def key_status(self):
         """Non-secret diagnostic flags only: never expose labels, key material or account balances."""
@@ -176,6 +225,7 @@ class Agent:
                 value = usage.get(field)
                 if isinstance(value, int) and not isinstance(value, bool) and value >= 0:
                     setattr(self, field, getattr(self, field) + value)
+            self._persist_ledger()
 
     def _request_context(self, task, data, schema, *, review=False, max_output=7000):
         if not 256 <= max_output <= 16000:
@@ -188,6 +238,7 @@ class Agent:
         fingerprint = digest(json_text({
             "version": PROMPT_VERSION, "model": model, "system": SYSTEM,
             "message": message, "schema": contract, "max_output": max_output, "reasoning": REASONING,
+            **({'routing': self.routing(review)} if self.flex else {}),
         }))
         provenance = Generation(model=model, prompt_version=PROMPT_VERSION, input_sha256=fingerprint)
         path = self.cache / f"{fingerprint}.json"
@@ -246,12 +297,13 @@ class Agent:
                 "name": schema.__name__, "strict": True, "schema": strict_schema(contract),
             }},
             "provider": {"require_parameters": True, "data_collection": "deny",
-                         "max_price": PRICE_CEILINGS},
+                         **self.routing(review)}, 
         }
         for attempt in range(3):
             # UTF-8 bytes bound input tokens, including repair messages, schema and overhead.
-            reserve = ((len(json_text(payload).encode()) + 2048) * PRICE_CEILINGS['prompt']
-                       + max_output * PRICE_CEILINGS['completion']) / 1_000_000
+            ceilings = payload['provider']['max_price']
+            reserve = ((len(json_text(payload).encode()) + 2048) * ceilings['prompt']
+                       + max_output * ceilings['completion']) / 1_000_000
             with self._budget_lock:
                 exposure = self.reported_cost_usd + self.reserved_usd
                 if self.calls >= self.max_calls or exposure + reserve > self.max_usd:
@@ -260,6 +312,7 @@ class Agent:
                 self.calls += 1
                 self.in_flight_calls += 1
                 self.pending_reserved_usd += reserve
+                self._persist_ledger()
             try:
                 response = self.client.post(
                     "https://openrouter.ai/api/v1/chat/completions", json=payload,

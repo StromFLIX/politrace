@@ -1,0 +1,63 @@
+name: Grünen Luna end-to-end experiment
+on:
+  push:
+    branches: [main]
+    paths: ['.github/experiments/gruene-luna.json']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: politrace-gruene-e2e
+  cancel-in-progress: false
+jobs:
+  experiment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: request
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path('.github/experiments/gruene-luna.json').read_text())
+          previous = r['resume_run']
+          assert previous is None or (isinstance(previous, int) and previous > 0)
+          assert os.environ['GITHUB_RUN_ATTEMPT'] == '1', 'Use an explicit checkpoint resume, not a paid job rerun'
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('resume=' + (str(previous) if previous else '') + '\n')
+          PY
+      - name: Restore data, validated responses and cumulative spending together
+        if: steps.request.outputs.resume != ''
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: gruene-e2e-checkpoint
+          run-id: ${{ steps.request.outputs.resume }}
+          github-token: ${{ github.token }}
+          path: .
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - name: Source checks and budget regression tests before any paid call
+        run: uv run pytest && uv run politrace validate
+      - name: Resume the single capped experiment
+        run: uv run python scripts/gruene_e2e.py
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_REVIEW_MODEL: anthropic/claude-sonnet-5.5
+      - name: Preserve results and charge ledger even after failure
+        if: always() && hashFiles('.cache/e2e/budget.json') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: gruene-e2e-checkpoint
+          path: |
+            data/live/
+            .cache/e2e/
+          include-hidden-files: true
+          retention-days: 30
+      - if: success()
+        run: uv run politrace validate && uv run pytest && uv run ruff check .
