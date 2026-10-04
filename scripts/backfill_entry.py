@@ -2,6 +2,7 @@
 import json
 import logging
 import os
+import shutil
 import sys
 from pathlib import Path
 from typing import Literal
@@ -49,8 +50,17 @@ def run(target, *, root=ROOT / "data", agent=None):
                 transcription_note=source.transcription_note,
                 license_note=f"{source.rights.note} Licence: {source.rights.license_url}; terms: {source.rights.terms_url}",
             )
+        # The complete transcription/tree is an independent product. Retain it even if the
+        # later criteria stage fails; never label an incomplete criteria stage successful.
+        tree_validation = validate_store(root)
+        checkpoint = ROOT / '.cache' / 'backfill-trees' / target
+        checkpoint.mkdir(parents=True, exist_ok=True)
+        for extension in ('json', 'md'):
+            shutil.copy(root / 'live' / 'programs' / f'{target}.{extension}', checkpoint / f'{target}.{extension}')
+        report(target + '-tree', {'stage': 'complete-tree', **result,
+                                 'budget': agent.summary(), 'validation': tree_validation})
         result["criteria"] = extract_criteria(root=root, program_id=target, agent=agent,
-                                              batch_size=6, workers=2)
+                                              batch_size=6, workers=4)
         result["budget"] = agent.summary()
     result["validation"] = validate_store(root)
     return result
@@ -73,7 +83,7 @@ if __name__ == "__main__":
     try:
         result = run(target, agent=agent)
     except Exception as error:
-        # Report the failed run and its reserved budget, never free-form provider bodies.
+        # Report charges and outstanding exposure separately, never free-form provider bodies.
         report(target, {'status': 'failed', 'error_type': type(error).__name__,
                         'budget': agent.summary() if agent else None})
         raise

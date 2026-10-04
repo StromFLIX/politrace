@@ -138,6 +138,16 @@ jobs:
         with:
           path: .cache/llm
           key: llm-backfill-${{ matrix.target }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Retain the completed tree independently of criteria-stage success
+        if: always() && steps.pending.outputs.count == '0' && hashFiles('.cache/backfill-trees/**') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: complete-tree-${{ matrix.target }}
+          path: |
+            .cache/backfill-trees/
+            .cache/backfill-*-tree.json
+          include-hidden-files: true
+          retention-days: 30
       - if: success() && steps.pending.outputs.count == '0'
         run: uv run pytest && uv run ruff check .
       - if: success() && steps.pending.outputs.count == '0'
