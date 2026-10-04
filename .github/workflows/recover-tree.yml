@@ -1,0 +1,79 @@
+name: Recover source tree without paid calls
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/backfills/recover-tree.json']
+
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: politrace-offline-source-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Preserve an open source review
+        id: pending
+        env:
+          GH_TOKEN: ${{ secrets.DATA_PR_TOKEN || github.token }}
+        run: |
+          count=$(gh pr list --repo "$GITHUB_REPOSITORY" --head data/recover-gruene-2025 --state open --json number --jq 'length')
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+      - if: steps.pending.outputs.count == '0'
+        uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - if: steps.pending.outputs.count == '0'
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/llm
+          key: llm-offline-recovery-${{ github.run_id }}
+          restore-keys: llm-backfill-gruene-2025-
+      - if: steps.pending.outputs.count == '0'
+        run: uv sync --frozen
+      - name: Recover exact text and explicitly mark unfinished sections
+        if: steps.pending.outputs.count == '0'
+        run: uv run python scripts/recover_tree.py
+        env:
+          OPENROUTER_MODEL: anthropic/claude-sonnet-5.5
+          # Deliberately no OpenRouter secret: recovery cannot make paid requests.
+      - if: steps.pending.outputs.count == '0'
+        run: uv run politrace validate && uv run pytest && uv run ruff check .
+      - name: Retain the validated source product even if PR creation is disabled
+        if: steps.pending.outputs.count == '0'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: recovered-source-tree
+          path: |
+            data/live/programs/
+            .cache/recovered-tree-result.json
+          include-hidden-files: true
+          retention-days: 30
+      - name: Propose the recovered source product, without merging
+        if: steps.pending.outputs.count == '0'
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          token: ${{ secrets.DATA_PR_TOKEN || github.token }}
+          branch: data/recover-gruene-2025
+          base: main
+          add-paths: data/live/programs/**
+          commit-message: 'data: recover source text and label incomplete AI structure'
+          title: 'data: recover Grünen programme source without further model charges'
+          body: |
+            Complete checked-source transcription, not a claim of completed AI analysis.
+            Cached source-validated section placements are reused. Missing AI placements retain
+            verbatim layout blocks under explicitly unfinished PDF-page branches.
+            No OpenRouter secret or model requests were used by the recovery job.
+            Review the original PDF, section boundaries, source permissions and transcription.
+            All review statuses remain proposed. No criteria, links, votes or fulfilment judgments are invented.
+          draft: true

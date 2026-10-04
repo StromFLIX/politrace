@@ -87,6 +87,10 @@ Each successful target opens its own **draft** review PR, never merges political
 
 The archive records `expected_ids`, `pending_ids`, official/imported counts, `inventory_mode`, source-page hashes and an `as_of` date under `data/live/coverage/`. This is canonical data, not test coverage: only repository-root `/coverage/` is ignored by Git, and a regression test guards this distinction. A saved-inventory/RSS run retains the snapshot date and says so in its result; it never certifies today's complete archive based only on RSS. Complete inventory does **not** mean complete OCR, impact matching or human review. Unchanged scans do not rewrite timestamps/hashes or open empty daily PRs; the coverage date is the last inventory-changing scan.
 
+### Offline source-product recovery
+
+`Recover source tree without paid calls` restores the validated outline cache and runs `scripts/recover_tree.py` **without an OpenRouter secret**. It recovers a full, source-checked Markdown/tree product even when later AI work is blocked. Cached assignments retain their model provenance. Missing assignments retain individual verbatim layout blocks under `Strukturierung noch offen` / PDF-page branches, with separate deterministic-recovery provenance. The transcription note and run report disclose cached/fallback block counts; this must not be called a complete AI outline. Recovery never invents criteria or legal links and never writes its fallback into the model cache. A draft PR and artifact preserve the independent source product.
+
 ## Safety, cost and resumability
 
 - Programme downloads: HTTPS, public addresses, checked redirect destinations, no embedded credentials, max 40 MiB / 400 PDF pages. Known blank/artwork pages require an inspected page list, expected PDF SHA-256 and an explicit transcription note; undeclared textless pages still fail. A native-text fallback preserves chapter titles dropped by the layout converter. Layout/OCR quality remains a human-review obligation. Law downloads additionally stay on the official host allowlist. This is an application-level guard, not a substitute for network egress isolation in hostile multi-tenant use.
