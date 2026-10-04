@@ -9,20 +9,43 @@ import logging
 import math
 import re
 from collections import Counter, defaultdict
+from functools import lru_cache
 from itertools import combinations
 from pathlib import Path
+from threading import local
 from typing import Literal
 
+import snowballstemmer
 from pydantic import Field
 
 from pipeline.llm import Agent, InvalidModelResponse
-from pipeline.matching import Judgment, Verification, criterion_text, eligible_criteria, tokens
+from pipeline.matching import STOP, Judgment, Verification, criterion_text, eligible_criteria
 from pipeline.models import Generation, Impact, MatchAudit, Model
 from pipeline.parallel import ordered_map
 from pipeline.store import digest, json_text, load_records, save_record, stable_id, write_json
 
 logger = logging.getLogger(__name__)
 VERSION = 'gruene-wide-v1'
+_STEMMERS = local()
+
+
+@lru_cache(maxsize=100_000)
+def _stem(word):
+    # Snowball stemmers mutate internal state: never share one across law workers.
+    if not hasattr(_STEMMERS, 'german'):
+        _STEMMERS.german = snowballstemmer.stemmer('german')
+    return _STEMMERS.german.stemWord(word)
+
+
+def tokens(text):
+    return [_stem(word) for word in re.findall(r'[\wäöüß]+', text.casefold())
+            if len(word) > 2 and word not in STOP]
+
+
+def corpus_fingerprint(criteria):
+    return digest(json_text([{**compact(c), 'search': criterion_text(c),
+                              'program_id': c.program_id, 'party_id': c.party_id}
+                             for c in sorted(criteria, key=lambda c: c.id)]))
 
 
 class Equivalent(Model):
@@ -394,7 +417,7 @@ def analyse(*, root: Path, agent: Agent, program_id: str):
         raise ValueError('Freeze a fully processed programme before all-law matching')
     criteria = [c for c in load_records(root, 'live', 'criteria')
                 if c.program_id == program_id and c.review.status != 'rejected']
-    corpus_hash = digest(json_text([compact(c) for c in criteria]))
+    corpus_hash = corpus_fingerprint(criteria)
     laws = sorted(load_records(root, 'live', 'laws'), key=lambda law: law.id)
     path = root / 'live/experiments' / f'{program_id}.json'
     if path.exists():
@@ -440,7 +463,7 @@ def validate_experiment(report, data):
         raise ValueError('Experiment source coverage is stale')
     criteria = {c.id: c for c in data['criteria'].values()
                 if c.program_id == program.id and c.review.status != 'rejected'}
-    if report.criteria_sha256 != digest(json_text([compact(criteria[i]) for i in sorted(criteria)])):
+    if report.criteria_sha256 != corpus_fingerprint(criteria.values()):
         raise ValueError('Experiment criterion snapshot is stale')
     all_members = [i for group in report.groups for i in group.member_ids]
     if len(all_members) != len(set(all_members)) or set(all_members) != set(criteria):
