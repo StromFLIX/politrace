@@ -112,14 +112,17 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.WARNING, format='%(message)s')
     logging.getLogger('pipeline').setLevel(logging.INFO)
     target = os.environ.get("BACKFILL_TARGET") or sys.argv[1]
-    agent = None if target == 'laws' else Agent(cache=ROOT / '.cache' / 'llm')
-    if agent:
-        report(target + '-provider-check', {'provider_check': agent.key_status()})
-    options = {}
+    options, budget = {}, None
     if os.environ.get('GITHUB_EVENT_NAME') == 'push':
         request = json.loads((ROOT / '.github/backfills/bundestag-21.json').read_text())
         if request.get('scope') == target:
             options = {key: request[key] for key in ('criteria_terms', 'match_law_ids') if key in request}
+            if 'max_usd' in request:
+                # A committed retry can tighten, never raise, the configured job ceiling.
+                budget = min(float(request['max_usd']), float(os.environ.get('POLITRACE_MAX_USD', '5')))
+    agent = None if target == 'laws' else Agent(cache=ROOT / '.cache' / 'llm', max_usd=budget)
+    if agent:
+        report(target + '-provider-check', {'provider_check': agent.key_status()})
     try:
         result = run(target, agent=agent, **options)
     except Exception as error:
