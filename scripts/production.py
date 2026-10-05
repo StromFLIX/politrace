@@ -15,7 +15,8 @@ def main():
     if config['model'] != 'openai/gpt-6-luna' or config['provider'] != 'openai/flex':
         raise ValueError('Change and test the model/price contract explicitly, not through a silent route fallback')
     os.environ['OPENROUTER_REVIEW_MODEL'] = config['review_model']
-    cap = migrate_budget(cache / 'budget.json', config['additional_budget_usd'])
+    cap = migrate_budget(cache / 'budget.json', config['additional_budget_usd'],
+                         topups=config.get('budget_topups', []))
     agent = Agent(cache=cache / 'llm', model=config['model'], max_usd=cap,
                   max_calls=10000, flex=True, ledger=cache / 'budget.json')
     result = run_final_slice(ROOT / 'data', agent, workers=config['workers'], seconds=config['slice_seconds'])
