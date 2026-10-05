@@ -248,3 +248,62 @@ def test_unknown_reviewer_cannot_make_final_decision():
         review_model = 'another/model'
     with pytest.raises(ValueError, match='Sol'):
         list(final_ask(Wrong(), ['id'], lambda _: None))
+
+
+def test_checkpoint_between_effect_change_and_synthesis_cannot_restore_stale_score(corpus, tmp_path, monkeypatch):
+    import shutil
+
+    from scripts.production_checkpoint import merge_live
+
+    root, _, criterion, law = ready(corpus, monkeypatch)
+    agent = Stub(tmp_path / 'cache/llm', law, criterion)
+    run_final_slice(root, agent, seconds=30)
+    published = tmp_path / 'published'
+    shutil.copytree(root, published)
+    criterion = load_records(root, 'live', 'criteria')[0]
+    prior = load_records(root, 'live', 'impacts')[0]
+    changed = FinalPair(criterion_id=criterion.id, outcome='accepted', score=-1,
+        rationale='Die spätere Einordnung ergibt ein Hindernis für diese Zusage.',
+        law_passage_id=law.passages[0].id, law_quote=law.passages[0].text,
+        criterion_quote=criterion.reference.quote)
+    apply_decision(root, law, criterion, draft(criterion, law), changed, gen(FINAL_MODEL),
+                   {(law.id, criterion.id): prior})
+    merge_live(root / 'live', published / 'live')
+    assert load_records(published, 'live', 'impacts')[0].score == -1
+    assert load_records(published, 'live', 'criteria')[0].assessment.status == 'unassessed'
+    validate_store(published)
+
+
+def test_checkpoint_respects_citizen_rejection_and_invalidates_incoming_automatic_score(corpus, tmp_path, monkeypatch):
+    import shutil
+
+    from scripts.production_checkpoint import merge_live
+
+    root, _, criterion, law = ready(corpus, monkeypatch)
+    agent = Stub(tmp_path / 'cache/llm', law, criterion)
+    run_final_slice(root, agent, seconds=30)
+    checkpoint = tmp_path / 'checkpoint'
+    shutil.copytree(root, checkpoint)
+    changed = load_records(root, 'live', 'impacts')[0]
+    changed.review = Review(status='rejected', reviewer='citizen', reviewed_at=date.today())
+    write_json(root / 'live/impacts' / f'{changed.id}.json', changed)
+    with pytest.raises(ValueError, match='stale source evidence'):
+        validate_store(root)
+    merge_live(checkpoint / 'live', root / 'live')
+    assert load_records(root, 'live', 'impacts')[0].review.status == 'rejected'
+    assert load_records(root, 'live', 'criteria')[0].assessment.status == 'unassessed'
+    validate_store(root)
+
+
+def test_credit_diagnostics_compare_new_funds_to_remaining_not_historical_budget(tmp_path, monkeypatch):
+    monkeypatch.setenv('OPENROUTER_API_KEY', 'test-not-a-real-key')
+    def handler(request):
+        if request.url.path.endswith('/key'):
+            return httpx.Response(200, json={'data': {'limit': 35, 'limit_remaining': 20}})
+        return httpx.Response(200, json={'data': {'total_credits': 40, 'total_usage': 20}})
+    agent = Agent(cache=tmp_path / 'llm', max_usd=35, client=httpx.Client(transport=httpx.MockTransport(handler)))
+    agent.reported_cost_usd = 14
+    agent.unknown_cost_reserved_usd = 1
+    status = agent.key_status()
+    assert status['key_limit_covers_run_budget'] and status['account_credit_covers_run_budget']
+    assert agent.calls == 0

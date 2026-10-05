@@ -195,6 +195,8 @@ class Agent:
         """Non-secret diagnostic flags only: never expose labels, key material or account balances."""
         if not self.key:
             return {'key_configured': False}
+        with self._budget_lock:
+            remaining_budget = max(0.0, self.max_usd - self.reported_cost_usd - self.reserved_usd)
         try:
             response = self.client.get('https://openrouter.ai/api/v1/key',
                                        headers={'Authorization': f'Bearer {self.key}'})
@@ -209,7 +211,7 @@ class Agent:
             status = {'key_configured': True, 'diagnostic_http_status': response.status_code,
                       'key_has_spending_limit': not unlimited,
                       'key_limit_exhausted': remaining <= 0 if known else None,
-                      'key_limit_covers_run_budget': remaining >= self.max_usd if known else (True if unlimited else None),
+                      'key_limit_covers_run_budget': remaining >= remaining_budget if known else (True if unlimited else None),
                       'limit_reset': reset if reset in ('daily', 'weekly', 'monthly') else None}
             # A key's configured ceiling and the account's funded balance are different.
             credits = self.client.get('https://openrouter.ai/api/v1/credits',
@@ -221,7 +223,7 @@ class Agent:
                 if all(isinstance(value, (int, float)) and not isinstance(value, bool)
                        and math.isfinite(value) for value in (total, used)):
                     status['account_credit_exhausted'] = total - used <= 0
-                    status['account_credit_covers_run_budget'] = total - used >= self.max_usd
+                    status['account_credit_covers_run_budget'] = total - used >= remaining_budget
             return status
         except (httpx.TransportError, KeyError, TypeError, ValueError):
             return {'key_configured': True, 'diagnostic_unavailable': True}

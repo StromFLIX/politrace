@@ -8,8 +8,9 @@ import subprocess
 import time
 from pathlib import Path
 
-from pipeline.models import Impact
-from pipeline.store import ROOT, digest, json_text, validate_store, write_json
+from pipeline.adjudication import assessment_context, assessment_signature
+from pipeline.models import Assessment, Impact
+from pipeline.store import ROOT, digest, json_text, load_records, validate_store, write_json
 
 
 def api(path):
@@ -79,7 +80,19 @@ def merge_live(incoming: Path, target: Path):
             write_json(output, proposed)
         elif collection in ('analysis', 'processing'):
             write_json(output, proposed)
-        # Existing criteria, impacts, votes and reading editions remain untouched.
+        # Existing source text, votes, reading editions and signed editorial corrections win.
+    # A checkpoint can stop after changing an effect but before rebuilding its overall score.
+    # It can also be rebased over a citizen's rejected effect. Never resurrect a stale automatic
+    # score in either case; preserve editorial assessments, and let Sol reassess the new context.
+    automated = [c for c in load_records(target.parent, 'live', 'criteria') if c.assessment.method == 'agent']
+    if automated:
+        laws = {law.id: law for law in load_records(target.parent, 'live', 'laws')}
+        impacts = load_records(target.parent, 'live', 'impacts')
+        for criterion in automated:
+            context = assessment_context(criterion, impacts, laws)
+            if criterion.assessment.input_sha256 != assessment_signature(context):
+                criterion.assessment = Assessment()
+                write_json(target / 'criteria' / f'{criterion.id}.json', criterion)
 
 
 def main():
