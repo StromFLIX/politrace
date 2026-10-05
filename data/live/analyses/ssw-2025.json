@@ -43775,7 +43775,7 @@
     {
       "law_id": "bgbl-1-2025-349",
       "analysis_sha256": "2d75c0379aba5028fa518c443e1b8e0c99e56482d74b119c16dda4a44a266421",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-169e5c0e8666dd18",
@@ -44069,6 +44069,38 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-860df1cbb894e5ed",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "proposed_link",
+          "rationale": "Für die Nutzung digitaler Eingabesysteme erlaubt die Vorschrift die erforderliche Verarbeitung personenbezogener Daten und deren Zwischenspeicherung ohne Richtervorbehalt oder konkreten Anhaltspunkt. Die Speicherung ist auf diese Systeme begrenzt; die Daten sind spätestens 30 Tage nach der letzten Bearbeitung zu löschen.",
+          "input_sha256": "e17c65467d0139337b4b6d2b62ab51cbac2f448026728308439026c1135b7950",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "89871c0feeae225ce61c5a1946bc0ce82e2d97143cba9acea86d782188ae4fd6"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e17c65467d0139337b4b6d2b62ab51cbac2f448026728308439026c1135b7950"
+            }
+          ],
+          "impact_id": "impact-c8fef3e1492fb172",
+          "judgment": {
+            "supported": true,
+            "score": -2,
+            "confidence": 0.78,
+            "rationale": "Für die Nutzung digitaler Eingabesysteme erlaubt die Vorschrift die erforderliche Verarbeitung personenbezogener Daten und deren Zwischenspeicherung ohne Richtervorbehalt oder konkreten Anhaltspunkt. Die Speicherung ist auf diese Systeme begrenzt; die Daten sind spätestens 30 Tage nach der letzten Bearbeitung zu löschen.",
+            "law_passage_id": "bgbl-1-2025-349-p-e95d37dc255bca30",
+            "law_quote": "(3) Die Stelle, die digitale Eingabesysteme nach Absatz 1 bereitstellt, darf personenbezogene Daten nur\nverarbeiten, soweit dies für die Nutzung der digitalen Eingabesysteme nach § 1124 Absatz 1 und 2 erforderlich\nist. Die Daten dürfen in den digitalen Eingabesystemen zwischengespeichert werden, um dem Nutzer zu\nermöglichen, sie zu einem späteren Zeitpunkt zu vervollständigen, zu korrigieren oder zu löschen. Die zwischen­\ngespeicherten Daten sind spätestens 30 Tage nach der letzten Bearbeitung der digitalen Eingabesysteme\nautomatisch zu löschen.",
+            "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt\nvorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -46072,12 +46104,216 @@
         "ssw-2025-ac-eea09352e9a13a76"
       ],
       "omitted_count": 988,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0609372edec829d8",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zu steuerfreien Erträgen eines Altersvorsorgekontos oder zu Entnahmen vor Renteneintritt.",
+          "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zu steuerfreien Erträgen eines Altersvorsorgekontos oder zu Entnahmen vor Renteneintritt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist teilweise; einschlägige Vorschriften außerhalb der Ausschnitte sind nicht beurteilbar."
+            ],
+            "criterion_id": "ssw-2025-ac-0609372edec829d8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-11fecc735a981b77",
+          "disposition": "missing_context",
+          "rationale": "Die Ausschnitte enthalten keine Regelung zum Werbungskostenabzug für Heimarbeitsplätze.",
+          "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Ausschnitte enthalten keine Regelung zum Werbungskostenabzug für Heimarbeitsplätze.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist teilweise; einschlägige Vorschriften außerhalb der Ausschnitte sind nicht beurteilbar."
+            ],
+            "criterion_id": "ssw-2025-ac-11fecc735a981b77",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zu Eingriffen von Sicherheitsbehörden in Freiheits- oder Persönlichkeitsrechte.",
+          "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zu Eingriffen von Sicherheitsbehörden in Freiheits- oder Persönlichkeitsrechte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist teilweise; einschlägige Vorschriften außerhalb der Ausschnitte sind nicht beurteilbar."
+            ],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-17fb234dda93d79e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Ausschnitte regeln eine Mindestbesteuerung von Unternehmensgruppen, belegen aber nicht, dass internationale Konzerne ihre Steuern am Ort der erzielten Umsätze entrichten.",
+          "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8a2b5eeb6b3b2a4b509f46b58ca5de8bf67b26d836b466f736ce237fceac7cf3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Ausschnitte regeln eine Mindestbesteuerung von Unternehmensgruppen, belegen aber nicht, dass internationale Konzerne ihre Steuern am Ort der erzielten Umsätze entrichten.",
+            "law_passage_id": "bgbl-1-2025-353-p-2959918f4dd23cf8",
+            "law_quote": "den GloBE-Mustervorschriften gleichwertig ist, nach denen ein Steuerhoheitsgebiet seinen zuzurechnen­den Anteil an der Ergänzungssteuer einer Unternehmensgruppe, welcher nicht nach der Primär­ergänzungssteuerregelung erhoben wurde, für die niedrig besteuerten Geschäftseinheiten der Unter­nehmensgruppe erhebt,",
+            "criterion_quote": null,
+            "caveats": [
+              "Die Änderung der Mindeststeuerregelungen belegt keine Besteuerungszuordnung nach dem Umsatzort."
+            ],
+            "criterion_id": "ssw-2025-ac-17fb234dda93d79e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ebe2a3f6f4aad616",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen überwiegend steuerrechtliche Änderungen; ob nicht übermittelte Teile des teilweise vorliegenden Gesetzes gezielte Bundesinvestitionen oder Strukturhilfen bereitstellen, ist daraus nicht feststellbar.",
+          "input_sha256": "63d8d257820f41fbc190f37574957e9e921af48765d1ef93926116980de24337",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "63d8d257820f41fbc190f37574957e9e921af48765d1ef93926116980de24337"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen überwiegend steuerrechtliche Änderungen; ob nicht übermittelte Teile des teilweise vorliegenden Gesetzes gezielte Bundesinvestitionen oder Strukturhilfen bereitstellen, ist daraus nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„gezielt weitere Investitionen und Strukturhilfe aus eigenen Bundesmitteln zur Verfügung stellt“",
+            "caveats": [
+              "Der Gesetzestext liegt nur teilweise vor."
+            ],
+            "criterion_id": "ssw-2025-ac-ebe2a3f6f4aad616",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge belegen keine grenzüberschreitende Nutzung wirtschaftlicher Bundesförderprogramme; ob nicht übermittelte Teile des teilweise vorliegenden Gesetzes hierzu eine Regelung enthalten, bleibt offen.",
+          "input_sha256": "63d8d257820f41fbc190f37574957e9e921af48765d1ef93926116980de24337",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "63d8d257820f41fbc190f37574957e9e921af48765d1ef93926116980de24337"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge belegen keine grenzüberschreitende Nutzung wirtschaftlicher Bundesförderprogramme; ob nicht übermittelte Teile des teilweise vorliegenden Gesetzes hierzu eine Regelung enthalten, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„wirtschaftliche Bundesförderprogramme bis zu einem Umfang von 20 % auch grenzüberschreitend eingesetzt werden dürfen“",
+            "caveats": [
+              "Der Gesetzestext liegt nur teilweise vor."
+            ],
+            "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-eea09352e9a13a76",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zu einem regelmäßigen Küstenschutzbericht; ob nicht übermittelte Teile des teilweise vorliegenden Gesetzes einen solchen Bericht einführen, ist nicht feststellbar.",
+          "input_sha256": "63d8d257820f41fbc190f37574957e9e921af48765d1ef93926116980de24337",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "63d8d257820f41fbc190f37574957e9e921af48765d1ef93926116980de24337"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zu einem regelmäßigen Küstenschutzbericht; ob nicht übermittelte Teile des teilweise vorliegenden Gesetzes einen solchen Bericht einführen, ist nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„einen regelmäßigen Küstenschutzbericht des Bundes einführen“",
+            "caveats": [
+              "Der Gesetzestext liegt nur teilweise vor."
+            ],
+            "criterion_id": "ssw-2025-ac-eea09352e9a13a76",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-354",
       "analysis_sha256": "515bbbc935cc5ac5ee6f2776f6188d51db4439d0e5e6d7c82463de6769d6106a",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-15c98fa54f1ee2f0",
@@ -46096,7 +46332,386 @@
         "ssw-2025-ac-fa2fabbf307dca7e"
       ],
       "omitted_count": 997,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz passt nationale Statistikvorschriften an die NACE-Systematik an und räumt dem Europäischen Parlament kein Gesetzesinitiativrecht ein.",
+          "input_sha256": "31a88b37bd0e013a458d7058f4ee48e2a2d966a90f66e1072819a7402c5b6506",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "31a88b37bd0e013a458d7058f4ee48e2a2d966a90f66e1072819a7402c5b6506"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz passt nationale Statistikvorschriften an die NACE-Systematik an und räumt dem Europäischen Parlament kein Gesetzesinitiativrecht ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen statistische Klassifikationen, Erhebungen und Register; Einschränkungen von Freiheits- und Persönlichkeitsrechten regeln sie nicht.",
+          "input_sha256": "31a88b37bd0e013a458d7058f4ee48e2a2d966a90f66e1072819a7402c5b6506",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "31a88b37bd0e013a458d7058f4ee48e2a2d966a90f66e1072819a7402c5b6506"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen statistische Klassifikationen, Erhebungen und Register; Einschränkungen von Freiheits- und Persönlichkeitsrechten regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-399bee3f9ce21b5f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Festlegung zur Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "31a88b37bd0e013a458d7058f4ee48e2a2d966a90f66e1072819a7402c5b6506",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "31a88b37bd0e013a458d7058f4ee48e2a2d966a90f66e1072819a7402c5b6506"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Festlegung zur Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-399bee3f9ce21b5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz passt statistische Wirtschafts- und Unternehmensklassifikationen an; eine Privatisierung oder Nichtprivatisierung persönlicher Daten bei öffentlichen Aufgaben regelt es nicht.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz passt statistische Wirtschafts- und Unternehmensklassifikationen an; eine Privatisierung oder Nichtprivatisierung persönlicher Daten bei öffentlichen Aufgaben regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-458f4869b9cd0515",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen statistische Klassifikationen und Erhebungen, nicht einen gesetzlichen Rahmen für weltweit produzierende und den deutschen Markt beliefernde Unternehmen.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen statistische Klassifikationen und Erhebungen, nicht einen gesetzlichen Rahmen für weltweit produzierende und den deutschen Markt beliefernde Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-458f4869b9cd0515",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keinen verbindlichen Jugendcheck für Bundesvorhaben ein und regelt keine Folgenprüfung für Jugendliche.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keinen verbindlichen Jugendcheck für Bundesvorhaben ein und regelt keine Folgenprüfung für Jugendliche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-482ec9450ac1f826",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Wirtschaftsstatistiken; Lösungen zum Ausgleich von Lohnunterschieden im öffentlichen und privaten Bereich regelt das Gesetz nicht.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Wirtschaftsstatistiken; Lösungen zum Ausgleich von Lohnunterschieden im öffentlichen und privaten Bereich regelt das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-482ec9450ac1f826",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8fd1c2434d24bc76",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erhebt oder regelt keine Finanztransaktionssteuer auf Wertpapierumsätze.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erhebt oder regelt keine Finanztransaktionssteuer auf Wertpapierumsätze.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8fd1c2434d24bc76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-aa1e1a83ad8333ff",
+          "disposition": "no_supported_link",
+          "rationale": "Die Anpassungen betreffen Wirtschaftsstatistiken und enthalten keine Vorgaben zur wissenschaftlichen Festlegung von Fangquoten.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Anpassungen betreffen Wirtschaftsstatistiken und enthalten keine Vorgaben zur wissenschaftlichen Festlegung von Fangquoten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-aa1e1a83ad8333ff",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-c1f1c800295d6426",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Beitragspflichten oder Ausnahmen in den Sozialversicherungen.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Beitragspflichten oder Ausnahmen in den Sozialversicherungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-c1f1c800295d6426",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-cb281c552c4eac51",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln keine Finanzierung von Krankenhausinvestitionen und stellen dafür keine Bundesmittel bereit.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln keine Finanzierung von Krankenhausinvestitionen und stellen dafür keine Bundesmittel bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-cb281c552c4eac51",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-eadce8b32b658db2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Lizenzgebühren oder deren Staffelung nach Umsatz.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Lizenzgebühren oder deren Staffelung nach Umsatz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-eadce8b32b658db2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt kein Verbandsklagerecht für nationale Minderheiten oder Volksgruppen auf Bundesebene ein.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt kein Verbandsklagerecht für nationale Minderheiten oder Volksgruppen auf Bundesebene ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-fa2fabbf307dca7e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder die Finanzierungsgrundlage des Gesundheitssystems noch führt es eine steuerfinanzierte Grundversorgung ein.",
+          "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d3d143d5c127b95d257c341eb46b9fd8087180af9adec6f6da0dfa81bc00d46"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder die Finanzierungsgrundlage des Gesundheitssystems noch führt es eine steuerfinanzierte Grundversorgung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-fa2fabbf307dca7e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-355",
@@ -52144,45 +52759,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3549,
+    "calls": 3625,
     "cache_hits": 35,
-    "subdivision_cache_hits": 4,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 20.7067,
-    "reported_cost_calls": 3356,
+    "reported_cost_usd": 21.176389,
+    "reported_cost_calls": 3423,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.188837,
-    "unknown_cost_calls": 193,
+    "unknown_cost_reserved_usd": 1.240628,
+    "unknown_cost_calls": 202,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 21.895536,
-    "prompt_tokens": 35632964,
-    "completion_tokens": 5231868,
+    "budget_exposure_usd": 22.417018,
+    "prompt_tokens": 36536709,
+    "completion_tokens": 5379225,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 116,
-        "reported_cost_usd": 2.705365499999999,
-        "unknown_cost_reserved_usd": 4.996003610813204e-16,
-        "pending_reserved_usd": 3.0531133177191805e-16
+        "calls": 131,
+        "reported_cost_usd": 3.0309667499999993,
+        "unknown_cost_reserved_usd": 8.049116928532385e-16,
+        "pending_reserved_usd": 8.326672684688674e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 39,
-        "reported_cost_usd": 0.5183745,
+        "calls": 43,
+        "reported_cost_usd": 0.59554275,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 497,
-        "reported_cost_usd": 0.5984897250000003,
-        "unknown_cost_reserved_usd": 0.20436094999999999,
-        "pending_reserved_usd": 0
+        "calls": 554,
+        "reported_cost_usd": 0.6654099550000004,
+        "unknown_cost_reserved_usd": 0.25615245,
+        "pending_reserved_usd": 1.474514954580286e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
