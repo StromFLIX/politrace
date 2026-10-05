@@ -1,16 +1,16 @@
 # Politrace
 
-Source-cited German political promises and their proposed connections to published laws.
+Source-cited German political promises and automated assessments of their connections to published laws.
 
 - **Site:** <https://politrace.stromflix.com>
-- **Processing & gaps:** <https://politrace.stromflix.com/fortschritt/>
+- **Operations & progress:** [GitHub Actions](https://github.com/StromFLIX/politrace/actions/workflows/production.yml)
 - **Versioned API:** <https://politrace.stromflix.com/api/v1/live/index.json>
 
 ## Data, not a party ranking
 
 `data/live` contains publisher-attributed programmes, criteria with exact citations, official laws, proposed impacts, independently sourced voting records (where available), OCR reading editions and coverage reports. All six Bundestag programme extractions are published. That does **not** imply all law relationships, semantic extraction, deduplication or human review are complete.
 
-Generated assessments remain **proposed**. Impact, fulfilment and voting behavior are separate. No relationship is inferred from missing evidence. Citizen edits use ordinary Git pull requests; the pipeline does not overwrite existing criterion/impact records.
+**Sol-final assessments publish and count automatically**, without a human review gate. Luna drafts and rejected/missing-context decisions do not count. Impact, statutory implementation and voting behavior remain separate. Citizen corrections use ordinary Git PRs and explicit editorial overrides take precedence. See [methodology](docs/methodology.md).
 
 ## Local development and verification
 
@@ -37,11 +37,11 @@ Fictional regression fixtures live only under `tests/fixtures`. They are not pub
 2. Reconcile the official publication inventory. Where archive search is unavailable, use the disclosed dated inventory plus current RSS; do not pretend this proves new full historical coverage.
 3. Produce page-complete OCR reading editions with Mistral. Cache individual PDF-page subsets, preserve source hashes, retain headers/footers, flag suspicious transcription, and isolate document failures.
 4. Build shared law-passage indexes and retrieve candidates across every temporally applicable programme with independent programme quotas.
-5. Process six-candidate work units with bounded concurrency. Persist validated pairs immediately, report a heartbeat every 45 seconds and resume only pending work.
+5. Luna screens up to 16 candidates per batch. Sol Flex decides up to 12 links per law across parties and separately synthesizes overall criterion assessments. Persist validated results and report heartbeats; resume only pending work.
 6. Use bounded backoff for provider failures, isolate repeatedly invalid batches, and stop automatic spending on credit/budget failures. These are errors, not no-link decisions.
 7. Upload the full recoverable checkpoint even after failure. Validate and publish the safe partial snapshot to `main`, respecting concurrent changes and branch protection, then explicitly dispatch CI.
 
-Model, route, concurrency, slice duration and cumulative limit are in `.github/production.json`. The primary route is **GPT-6 Luna / OpenAI Flex** without automatic standard-price fallback. Proposed links receive a stronger-model challenge. The inherited cumulative cap includes previous calls, retries and conservative unresolved reservations; it is not reset per party or per slice.
+Model, route, concurrency, slice duration and cumulative limit are in `.github/production.json`. The routes are **GPT-6 Luna Flex** for screening and **GPT-6 Sol Flex** for final evaluation, both with no standard-price fallback. The inherited ledger includes earlier charges and uncertain reservations. A one-time, explicit $20 additional allocation funds the Sol migration; it is never added again on a retry. Legacy positive links are re-evaluated, not relabelled as approved. New costs are reported by model/stage.
 
 Required Actions secrets: `OPENROUTER_API_KEY`, `MISTRAL_API_KEY`. GitHub's workflow token needs `contents: write` and `actions: write`. Workflow publication does not rely on disabled automatic PR creation.
 

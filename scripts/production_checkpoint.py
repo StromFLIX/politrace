@@ -8,7 +8,8 @@ import subprocess
 import time
 from pathlib import Path
 
-from pipeline.store import ROOT, validate_store, write_json
+from pipeline.models import Impact
+from pipeline.store import ROOT, digest, json_text, validate_store, write_json
 
 
 def api(path):
@@ -47,9 +48,28 @@ def merge_live(incoming: Path, target: Path):
             else:
                 current['matching'] = proposed['matching']
             write_json(output, current)
+        elif collection == 'impacts' and proposed.get('evaluation'):
+            # A final decision can replace its EXACT machine-generated predecessor only.
+            # A citizen edit, including one without a review flag, changes this digest.
+            expected = proposed['evaluation'].get('previous_sha256')
+            if current['review']['status'] == 'proposed' and expected == digest(json_text(Impact.model_validate(current))):
+                write_json(output, proposed)
+        elif collection == 'criteria' and proposed.get('assessment', {}).get('method') == 'agent':
+            source_fields = ('program_id', 'party_id', 'leaf_id', 'title', 'description', 'test',
+                             'reference', 'deadline', 'review')
+            current_assessment = current.get('assessment', {})
+            if (all(current.get(f) == proposed.get(f) for f in source_fields)
+                    and current.get('review', {}).get('status') != 'rejected'
+                    and (current_assessment.get('method') == 'agent'
+                         or current_assessment.get('status') == 'unassessed')):
+                current['assessment'] = proposed['assessment']
+                write_json(output, current)
         elif collection in ('experiments', 'analyses'):
             if current['criteria_sha256'] != proposed['criteria_sha256']:
                 raise ValueError('Checkpoint analysis conflicts with the current criterion snapshot')
+            if proposed['version'] == 'all-party-sol-final-v2':
+                write_json(output, proposed)
+                continue
             # Published records win where both snapshots contain the same pair audit.
             audits = {a['law_id']: a for a in current['laws']}
             for audit in proposed['laws']:

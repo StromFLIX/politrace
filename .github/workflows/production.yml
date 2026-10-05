@@ -55,7 +55,7 @@ jobs:
         run: uv run python scripts/production.py
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_REVIEW_MODEL: anthropic/claude-sonnet-5.5
+          OPENROUTER_REVIEW_MODEL: openai/gpt-6-sol
       - name: Preserve source, completed pairs, progress and costs even after failure
         id: checkpoint
         if: always() && hashFiles('.cache/production/budget.json') != ''
@@ -84,7 +84,7 @@ jobs:
           npm run build
           npx playwright install --with-deps chromium
           npm run test:e2e
-      - name: Publish unreviewed data without overwriting concurrent edits
+      - name: Publish final agent assessments without overwriting concurrent edits
         if: steps.checkpoint.outcome == 'success'
         run: uv run python scripts/publish_data.py
         env:

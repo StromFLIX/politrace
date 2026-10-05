@@ -1,5 +1,61 @@
 {
   "$defs": {
+    "FinalEvaluation": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "accepted",
+            "rejected",
+            "missing_context"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "model": {
+          "const": "openai/gpt-6-sol",
+          "default": "openai/gpt-6-sol",
+          "title": "Model",
+          "type": "string"
+        },
+        "method": {
+          "const": "sol-final-v1",
+          "default": "sol-final-v1",
+          "title": "Method",
+          "type": "string"
+        },
+        "input_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Input Sha256",
+          "type": "string"
+        },
+        "decided_at": {
+          "format": "date",
+          "title": "Decided At",
+          "type": "string"
+        },
+        "previous_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Previous Sha256"
+        }
+      },
+      "required": [
+        "status",
+        "input_sha256",
+        "decided_at"
+      ],
+      "title": "FinalEvaluation",
+      "type": "object"
+    },
     "Generation": {
       "additionalProperties": false,
       "properties": {
@@ -155,6 +211,17 @@
       ],
       "title": "Verification",
       "type": "string"
+    },
+    "evaluation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/FinalEvaluation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     },
     "review": {
       "$ref": "#/$defs/Review"

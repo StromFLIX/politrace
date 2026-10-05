@@ -29,7 +29,6 @@ if (edition && [...sourceAnchors.keys()].some(number => !edition.pages.some(page
     <p>Lesbare Absätze, Überschriften und Tabellen. {edition.page_count} Originalseiten vollständig zugeordnet.</p></div>
     <a class="button" href={`/api/v1/live/readings/${documentId}/source.md`}>Lesefassung als Markdown ↓</a>
   </header>
-  <p class="document-note">Automatische OCR, noch nicht redaktionell geprüft. Seitenhinweise zeigen mögliche Übertragungsfehler; das Original-PDF ist maßgeblich. Bestehende Belegzitate bleiben unverändert bei den Kriterien, Verknüpfungen und in der API erhalten. Die Lesefassung ordnet sie der jeweiligen PDF-Seite zu, nicht wortgenau einer neuen Textstelle.</p>
   {isMirror && <p class="document-note">Die Herausgeber-Datei war zeitweise nicht erreichbar. <a href={pdfUrl}>Die verlinkte Archivkopie</a> stimmt per SHA-256 bytegenau mit dem Original überein. <a href={edition.source_url}>Ursprüngliche Herausgeber-Adresse ↗</a></p>}
   <div class="document-grid">
     <aside class="document-sidebar">
@@ -60,12 +59,12 @@ if (edition && [...sourceAnchors.keys()].some(number => !edition.pages.some(page
           {page.markdown ? <div class="document-prose" set:html={readingHtml(page.markdown)} /> : <p class="document-blank">Diese Seite enthält keinen erkannten Fließtext.</p>}
           {byPage.has(page.number) && <details class="document-criteria" data-reading-criteria>
             <summary>{byPage.get(page.number)!.length} {byPage.get(page.number)!.length === 1 ? 'Kriterium' : 'Kriterien'} auf dieser Seite</summary>
-            <div class="document-criteria-list"><p>Abgeleitete Tests, keine Erfüllungsbewertung. Das genaue Belegzitat und den Prüfstatus findest du beim Kriterium.</p>
+            <div class="document-criteria-list"><p>Die Zusagen dieser Seite, jeweils mit Test, Originalzitat und gesetzlichen Belegen.</p>
               {byPage.get(page.number)!.map(criterion => <a href={`/live/kriterien/${criterion.id}/`} data-reading-criterion data-criterion-id={criterion.id} data-criterion-test={criterion.test}>{criterion.title}<span aria-hidden="true"> →</span></a>)}
             </div>
           </details>}
           <footer class="document-source-links"><a href={`${pdfUrl}#page=${page.number}`}>{isMirror ? 'Archivkopie' : 'Original-PDF'} · Seite {page.number} ↗</a><a href={`#reading-page-${page.number}`}>Diese Seite verlinken</a></footer>
-          {page.corrections?.length ? <details class="document-furniture"><summary>Protokollierte Lesekorrektur · weiterhin ungeprüft</summary>{page.corrections.map(c => <p><del>{c.before}</del> → <ins>{c.after}</ins><br />{c.source_evidence}</p>)}</details> : null}
+          {page.corrections?.length ? <details class="document-furniture"><summary>Lesekorrektur & Originalstelle</summary>{page.corrections.map(c => <p><del>{c.before}</del> → <ins>{c.after}</ins><br />{c.source_evidence}</p>)}</details> : null}
           {(page.header || page.footer) && <details class="document-furniture"><summary>Kopf- und Fußzeile der Quelle</summary><pre>{[page.header, page.footer].filter(Boolean).join('\n\n')}</pre></details>}
         </div>
       </details>)}
@@ -73,8 +72,8 @@ if (edition && [...sourceAnchors.keys()].some(number => !edition.pages.some(page
   </div>
 </section> : <section class="document-reader document-unavailable" data-document-unavailable>
   {[...sourceAnchors].map(([page, ids]) => <><span class="document-source-anchor" id={`reading-page-${page}`} aria-hidden="true" />{ids.map(id => <span class="document-source-anchor" id={id} data-source-anchor aria-hidden="true" />)}</>)}
-  <h2>Lesefassung wird vorbereitet</h2><p>Für dieses Dokument ist noch keine vollständige OCR-Lesefassung verfügbar. Die Quelle und die bisherigen Belegzitate bleiben zugänglich; eine alte PDF-Textdarstellung wird hier nicht als Ersatz angezeigt.</p>
-  <div class="document-source-links"><a href={pdfUrl}>Originalquelle öffnen ↗</a><a href={`/api/v1/live/${collection}/${documentId}.json`}>Quellenbelege als JSON</a><a href="/fortschritt/">Bearbeitungsstand ansehen →</a></div>
+  <h2>Lesefassung wird vorbereitet</h2><p>Für dieses Dokument ist das Original-PDF bereits verfügbar. Die lesbare Textfassung folgt.</p>
+  <div class="document-source-links"><a href={pdfUrl}>Originalquelle öffnen ↗</a><a href={`/api/v1/live/${collection}/${documentId}.json`}>Quellenbelege als JSON</a></div>
 </section>}
 <style>
   .document-reader { margin: 36px 0; min-width: 0; }

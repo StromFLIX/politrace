@@ -1,4 +1,4 @@
-"""Publish validated proposals (not approvals); respect branch protection and concurrent PR edits."""
+"""Publish validated final agent assessments; respect branch protection and citizen edits."""
 import json
 import os
 import subprocess
@@ -22,7 +22,7 @@ def main():
     if not changed:
         print('No canonical change: no commit, deployment or empty PR')
         return
-    git('commit', '-m', 'data: checkpoint all-party analysis and source reading editions (unreviewed)')
+    git('commit', '-m', 'data: publish final agent assessments and source checkpoint')
     git('log', '-1', '--format=full')
     for attempt in range(3):
         git('fetch', 'origin', 'main')
@@ -37,7 +37,7 @@ def main():
             # The installed Coolify GitHub App receives the push; CI verifies its exact
             # public deployment as well as the build. No branch protection bypass.
             subprocess.run(['gh', 'workflow', 'run', 'ci.yml', '--ref', 'main'], check=True)
-            print('Published source/analysis proposals; CI explicitly dispatched')
+            print('Published final source/analysis snapshot; CI explicitly dispatched')
             return
         if attempt == 2:
             raise RuntimeError('Push rejected; checkpoint remains downloadable, never force-push')

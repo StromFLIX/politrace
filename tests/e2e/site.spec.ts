@@ -7,8 +7,8 @@ test('production home has no demo switch or POC branding', async ({ page, reques
   await page.goto('/');
   await expect(page.getByRole('heading', { name: /Vom Versprechen/ })).toBeVisible();
   await expect(page.locator('.brand').first()).not.toContainText('POC');
-  await expect(page.locator('.dataset-banner')).toContainText('QUELLENBASIERTE DATEN');
-  await expect(page.locator('.dataset-banner a')).toHaveAttribute('href', '/fortschritt/');
+  await expect(page.locator('.dataset-banner')).toHaveCount(0);
+  await expect(page.locator('a[href="/fortschritt/"]')).toHaveCount(0);
   expect((await request.get('/demo/parteien/')).status()).toBe(404);
   expect((await request.get('/api/v1/demo/index.json')).status()).toBe(404);
 });
@@ -95,8 +95,8 @@ test('source text and criteria keep their original exact evidence', async ({ pag
   await expect(page.locator(':target .document-prose')).toBeVisible();
 });
 
-test('impact proposals keep exact quotes and open the corresponding OCR law page', async ({ page, request }) => {
-  const { items: impacts } = await (await request.get('/api/v1/live/impacts.json')).json();
+test('final impacts keep exact quotes and open the corresponding OCR law page', async ({ page, request }) => {
+  const { items: impacts } = await (await request.get('/api/v1/live/accepted-impacts.json')).json();
   for (const impact of impacts.slice(0, 8)) {
     const law = await (await request.get(`/api/v1/live/laws/${impact.law_id}.json`)).json();
     const criterion = await (await request.get(`/api/v1/live/criteria/${impact.criterion_id}.json`)).json();
@@ -105,7 +105,8 @@ test('impact proposals keep exact quotes and open the corresponding OCR law page
     await page.goto(`/live/gesetze/${law.id}/#${impact.id}`);
     const card = page.locator(`[id="${impact.id}"]`);
     await expect(card).toBeVisible();
-    if (impact.review.status === 'proposed') await expect(card).toContainText('KI-Vorschlag, keine Erfüllungsbewertung.');
+    await expect(card.locator('[data-model-disagreement]')).toHaveCount(0);
+    await expect(card).not.toContainText('menschliche Prüfung');
     await card.locator('h3 a').click();
     await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
     expect(await page.locator(`[id="${impact.id}"] blockquote`).textContent()).toBe(impact.law_quote);
@@ -128,12 +129,15 @@ test('URL search values are never rendered as executable HTML', async ({ page })
   await expect(page.locator('.criterion-row:visible')).toHaveCount(200);
 });
 
-test('public processing page distinguishes OCR, selected pairs and unknowns', async ({ page, request }) => {
-  await page.goto('/fortschritt/');
-  await expect(page.getByRole('heading', { name: 'Keine unsichtbaren Lücken.' })).toBeVisible();
-  await expect(page.getByText(/Nicht ausgewählte Paare bleiben unbekannt/)).toBeVisible();
-  await expect(page.getByRole('link', { name: 'Alle Lesefassungen & Seitenhinweise →' })).toBeVisible();
-  const readings = await (await request.get('/api/v1/live/readings.json')).json();
-  expect(readings.total).toBeGreaterThan(0);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+test('citizen views do not contain operator progress or review gates', async ({ page, request }) => {
+  expect((await request.get('/fortschritt/')).status()).toBe(404);
+  expect((await request.get('/live/auswertung/gruene-2025/')).status()).toBe(404);
+  for (const route of ['/', '/live/parteien/gruene/', '/live/aktivitaet/', '/methodik/']) {
+    await page.goto(route);
+    await expect(page.locator('a[href="/fortschritt/"], [data-model-disagreement]')).toHaveCount(0);
+    await expect(page.locator('main')).not.toContainText('redaktionell geprüft');
+    await expect(page.locator('main')).not.toContainText('Modelle widersprechen sich');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
+  await expect(page.locator('main')).toContainText('Sol trifft die abschließende Entscheidung');
 });

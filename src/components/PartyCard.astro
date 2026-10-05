@@ -13,8 +13,8 @@ const stats = metrics(criteria, data.impacts, programs);
   <div class="party-card-top"><span class="party-logo">{party.short_name}</span><span class="program-year"><Icon name="file" size={12} /> {year}</span></div>
   <h3>Wahlversprechen im Check</h3>
   <div class="metric-line"><span class="metric-big">{stats.total ? String(stats.fulfilled).padStart(2, '0') : '—'}</span><span class="metric-denom">/ {stats.total || '—'}</span></div>
-  <div class="metric-caption">{stats.total ? 'Kriterien nachweislich erfüllt' : 'Noch kein Programm importiert'}</div>
+  <div class="metric-caption">{stats.total ? 'Kriterien gesetzlich umgesetzt' : 'Noch kein Programm importiert'}</div>
   <Meter stats={stats} />
-  <div class="card-coverage"><Icon name="shield" size={12} />{stats.covered} von {stats.total} mit geprüften Gesetzesbelegen</div>
+  <div class="card-coverage"><Icon name="shield" size={12} />{stats.covered} von {stats.total} mit Gesetzesbelegen</div>
   <div class="party-card-bottom"><span>Partei im Detail</span><Icon name="arrow" size={16} /></div>
 </a>

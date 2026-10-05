@@ -134,14 +134,27 @@ class Program(Record):
 
 
 class Assessment(Model):
-    status: Literal["unassessed", "partial", "fulfilled", "contradicted"] = "unassessed"
-    rationale: str = "Noch keine redaktionelle Bewertung."
+    status: Literal["unassessed", "partial", "fulfilled", "contradicted", "mixed"] = "unassessed"
+    rationale: str = "Noch keine gesetzliche Bewertung."
     reviewer: str | None = None
     assessed_at: date | None = None
     evidence_ids: list[Identifier] = Field(default_factory=list)
+    method: Literal['editorial', 'agent'] = 'editorial'
+    score: Literal[-2, -1, 0, 1, 2] | None = None
+    generation: Generation | None = None
+    input_sha256: str | None = None
 
     @model_validator(mode="after")
     def sourced_assessment(self):
+        if self.method == 'agent':
+            if (not self.generation or self.generation.model != 'openai/gpt-6-sol'
+                    or not self.assessed_at or not self.evidence_ids or not self.input_sha256 or self.reviewer):
+                raise ValueError('Automated assessments need final-model provenance, date and evidence')
+            allowed = {'fulfilled': {2}, 'partial': {1}, 'contradicted': {-2, -1},
+                       'mixed': {0}, 'unassessed': {None}}
+            if self.score not in allowed[self.status]:
+                raise ValueError('Assessment status and signed score must agree')
+            return self
         if self.status != "unassessed" and not (
             self.reviewer and self.assessed_at and self.evidence_ids and self.rationale
         ):
@@ -203,6 +216,15 @@ class Law(Record):
         return self
 
 
+class FinalEvaluation(Model):
+    status: Literal['accepted', 'rejected', 'missing_context']
+    model: Literal['openai/gpt-6-sol'] = 'openai/gpt-6-sol'
+    method: Literal['sol-final-v1'] = 'sol-final-v1'
+    input_sha256: Annotated[str, Field(pattern=r'^[a-f0-9]{64}$')]
+    decided_at: date
+    previous_sha256: Annotated[str, Field(pattern=r'^[a-f0-9]{64}$')] | None = None
+
+
 class Impact(Record):
     criterion_id: Identifier
     law_id: Identifier
@@ -215,6 +237,7 @@ class Impact(Record):
     criterion_quote: str = Field(min_length=10)
     caveats: list[str] = Field(default_factory=list)
     verification: Literal["passed", "needs_review"]
+    evaluation: FinalEvaluation | None = None
     review: Review = Field(default_factory=Review)
     generation: list[Generation] = Field(default_factory=list)
 

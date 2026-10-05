@@ -13,11 +13,12 @@ export type Program = Base & {
   pdf_url?: string | null; textless_pages?: number[]; transcription_note?: string;
   criteria_extraction?: { leaf_id: string; criterion_ids: string[]; abstention_reason: string | null }[];
 };
-export type AssessmentStatus = 'unassessed' | 'partial' | 'fulfilled' | 'contradicted';
+export type AssessmentStatus = 'unassessed' | 'partial' | 'fulfilled' | 'contradicted' | 'mixed';
 export type Criterion = Base & {
   program_id: string; party_id: string; leaf_id: string; title: string; description: string; test: string;
   tags: string[]; keywords: string[]; reference: Span; deadline: string | null;
-  assessment: { status: AssessmentStatus; rationale: string; reviewer: string | null; assessed_at: string | null; evidence_ids: string[] };
+  assessment: { status: AssessmentStatus; rationale: string; reviewer: string | null; assessed_at: string | null; evidence_ids: string[];
+    method?: 'editorial' | 'agent'; score?: -2 | -1 | 0 | 1 | 2 | null; generation?: { model: string; input_sha256: string; prompt_version: string } | null; input_sha256?: string | null };
 };
 export type Law = Base & {
   title: string; official_title: string; published_at: string; status: 'promulgated'; kind: string;
@@ -29,6 +30,7 @@ export type Impact = Base & {
   criterion_id: string; law_id: string; score: -2 | -1 | 0 | 1 | 2; confidence: number;
   rationale: string; law_passage_id: string; law_quote: string; criterion_quote: string;
   caveats: string[]; verification: 'passed' | 'needs_review';
+  evaluation?: { status: 'accepted' | 'rejected' | 'missing_context'; model: string; method: string; input_sha256: string; decided_at: string } | null;
 };
 export type GroupVote = { group: string; party_id: string | null; yes: number; no: number; abstain: number; absent: number };
 export type Vote = Base & { law_id: string; date: string; motion: string; type: string; source: Source; groups: GroupVote[] };

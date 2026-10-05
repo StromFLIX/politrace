@@ -38,7 +38,7 @@ export const topics: Record<string, string> = {
   gesundheit: 'Gesundheit', migration: 'Migration', digitales: 'Digitalisierung', demokratie: 'Demokratie',
   sicherheit: 'Sicherheit', europa: 'Europa',
 };
-export const statusLabels = { unassessed: 'Offen', fulfilled: 'Erfüllt', partial: 'Teilweise erfüllt', contradicted: 'Widersprochen' };
+export const statusLabels = { unassessed: 'Offen', fulfilled: 'Gesetzlich umgesetzt', partial: 'Teilweise umgesetzt', contradicted: 'Widersprochen', mixed: 'Gemischte Wirkung' };
 export const impactLabels: Record<number, string> = { '-2': 'Widerspricht direkt', '-1': 'Erschwert', 0: 'Gemischte Wirkung', 1: 'Unterstützt teilweise', 2: 'Setzt direkt um' };
 export const reviewLabels = { proposed: 'Prüfung offen', reviewed: 'Redaktionell geprüft', rejected: 'Verworfen' };
 export function formatDate(value: string) { return new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(value + 'T12:00:00Z')); }

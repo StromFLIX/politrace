@@ -5,8 +5,6 @@ import Stats from '../../../components/Stats.astro';
 import FilterBar from '../../../components/FilterBar.astro';
 import CriterionRow from '../../../components/CriterionRow.astro';
 import PeriodSwitch from '../../../components/PeriodSwitch.astro';
-import ExtractionStatus from '../../../components/ExtractionStatus.astro';
-import { experiments, experimentTotals } from '../../../lib/experiments';
 import { datasets, getData, metrics, formatDate, repoUrl } from '../../../lib/data';
 export function getStaticPaths() { return datasets.flatMap(dataset => { const data = getData(dataset); return data.parties.map(party => ({ params: { dataset, party: party.id }, props: { party, data } })); }); }
 const { party, data } = Astro.props;
@@ -22,25 +20,16 @@ const years = [...new Set(programs.map(p => p.election_year))];
     const criteria = data.criteria.filter(c => selected.some(p => p.id === c.program_id));
     const stats = metrics(criteria, data.impacts, selected);
     return <section data-period-panel={year} hidden={index !== 0}>
-      {selected.map(program => <ExtractionStatus program={program} criteria={criteria} />)}
-      {experiments(data.dataset).filter(report => selected.some(p => p.id === report.program_id)).map(report => {
-        const totals = experimentTotals(report);
-        return <div class="evidence-box"><h2>Programmweite Auswertung · ungeprüfte Vorschläge</h2>
-          <p>{report.processed_leaves}/{report.total_leaves} Absätze verarbeitet · {totals.grouped} vorgeschlagene Zusagengruppen aus {totals.criteria} Kriterien · {totals.lawsCompleted}/{report.law_ids.length} Gesetze durchsucht.</p>
-          <p>Gruppierung ist keine redaktionelle Freigabe. Nicht ausgewählte Gesetz/Kriterium-Paare bleiben unbekannt.</p>
-          <a class="button primary" href={`/${data.dataset}/auswertung/${report.program_id}/`}>Gruppierte Übersicht, Lücken & Kosten <Icon name="arrow" size={14} /></a>
-        </div>;
-      })}
       <Stats items={[
         { value: stats.total, label: 'Prüfbare Kriterien', detail: `Programmjahr ${year}`, icon: 'check' },
-        { value: stats.fulfilled, label: 'Nachweislich erfüllt', detail: `Von insgesamt ${stats.total} Kriterien`, icon: 'shield' },
-        { value: stats.partial, label: 'Teilweise erfüllt', detail: `${stats.contradicted} Kriterien widersprochen`, icon: 'activity' },
+        { value: stats.fulfilled, label: 'Gesetzlich umgesetzt', detail: `Von insgesamt ${stats.total} Kriterien`, icon: 'shield' },
+        { value: stats.partial, label: 'Teilweise umgesetzt', detail: `${stats.contradicted} Kriterien widersprochen`, icon: 'activity' },
         { value: stats.coverage === null ? '—' : `${stats.coverage}%`, label: 'Belegabdeckung', detail: `${stats.unknown} Kriterien noch offen`, icon: 'link' },
       ]} />
       <div class="two-column"><section data-filter-root id={index === 0 ? 'kriterien' : undefined}><div class="section-heading"><div><h2>Woran wir die Zusagen messen</h2><p>Konkrete Tests statt politischer Schlagworte.</p></div></div><FilterBar /><div class="result-count" aria-live="polite" data-result-count>{criteria.length} Einträge</div><div class="criterion-list">{criteria.map(c => <CriterionRow criterion={c} data={data} />)}</div><div class="empty-state" data-no-results hidden={criteria.length > 0}><Icon name="search" size={24} /><h2>Keine passenden Kriterien</h2><p>Ändere den Suchbegriff oder setze die Filter auf „Alle“.</p></div></section>
-      <aside><div class="side-card"><Icon name="file" size={22} /><h2 style="margin-top:12px">Das Programm als Datenprodukt</h2><p>Vom PDF zum vollständigen Textbaum. Jeder Absatz bleibt mit seiner Quelle verbunden.</p>{selected.map(program => <a class="text-link" href={`/${data.dataset}/programme/${program.id}/`}>Programm {year} lesen <Icon name="arrow" size={14} /></a>)}</div><div class="side-card"><h2>Was sagt diese Zahl?</h2><p>„Erfüllt“ bedeutet: Ein konkreter Test wurde redaktionell anhand verlinkter Gesetzesbelege bewertet. Positive KI-Verknüpfungen allein reichen dafür nicht.</p><a href="/methodik/" class="text-link">Methodik & Grenzen <Icon name="arrow" size={14} /></a></div></aside></div>
+      <aside><div class="side-card"><Icon name="file" size={22} /><h2 style="margin-top:12px">Das Programm als Datenprodukt</h2><p>Das vollständige Wahlprogramm in lesbarer Form, mit Originalseiten und den zugehörigen Kriterien.</p>{selected.map(program => <a class="text-link" href={`/${data.dataset}/programme/${program.id}/`}>Programm {year} lesen <Icon name="arrow" size={14} /></a>)}</div><div class="side-card"><h2>Was sagt diese Zahl?</h2><p>Die KI bewertet für jedes Kriterium die zugehörigen Gesetze. Die Kennzahlen fassen diese Bewertungen zusammen. Jede Verbindung führt zur Originalquelle und kann korrigiert werden.</p><a href="/methodik/" class="text-link">Wie die Bewertung entsteht <Icon name="arrow" size={14} /></a></div></aside></div>
     </section>;
   })}
   {programs.length > 0 && <><section class="section-block" id="programme"><div class="section-heading"><h2>Die Originalspur</h2><a href={`/api/v1/${data.dataset}/programs.json`} class="text-link">Programm-API <Icon name="code" size={15} /></a></div>{programs.map(p => <div class="evidence-box"><div class="impact-heading"><div><h3>{p.title}</h3><p>Veröffentlicht {formatDate(p.published_at)} · {p.leaves.length} Absätze · {p.source.publisher}</p></div><a class="button" href={`/${data.dataset}/programme/${p.id}/`}>Programm lesen <Icon name="branch" size={15} /></a></div></div>)}</section>
-  <section class="section-block" id="verlauf"><h2>Transparenz über die Zeit</h2><div class="table-scroll"><table class="data-table"><caption class="sr-only">Kennzahlen nach Wahlprogramm, nicht als Zeitreihe desselben Versprechens</caption><thead><tr><th>Programm</th><th>Kriterien</th><th>Erfüllt</th><th>Teilweise</th><th>Offen</th><th>Belegabdeckung</th></tr></thead><tbody>{programs.map(p => { const m = metrics(data.criteria.filter(c => c.program_id === p.id), data.impacts, [p]); return <tr><td><a href={`/${data.dataset}/programme/${p.id}/`}>Bundestagswahl {p.election_year}</a></td><td>{m.total}</td><td>{m.fulfilled}</td><td>{m.partial}</td><td>{m.unknown}</td><td>{m.coverage === null ? '—' : `${m.coverage}%`}</td></tr>; })}</tbody></table></div><p class="history-note">Unterschiedliche Programme enthalten unterschiedliche Kriterien. Diese Momentaufnahme ist keine vergleichbare Performance-Rangliste; frühere Bewertungsstände bleiben in der Git-Historie erhalten.</p></section></>}
+  <section class="section-block" id="verlauf"><h2>Transparenz über die Zeit</h2><div class="table-scroll"><table class="data-table"><caption class="sr-only">Kennzahlen nach Wahlprogramm, nicht als Zeitreihe desselben Versprechens</caption><thead><tr><th>Programm</th><th>Kriterien</th><th>Erfüllt</th><th>Teilweise</th><th>Offen</th><th>Belegabdeckung</th></tr></thead><tbody>{programs.map(p => { const m = metrics(data.criteria.filter(c => c.program_id === p.id), data.impacts, [p]); return <tr><td><a href={`/${data.dataset}/programme/${p.id}/`}>Bundestagswahl {p.election_year}</a></td><td>{m.total}</td><td>{m.fulfilled}</td><td>{m.partial}</td><td>{m.unknown}</td><td>{m.coverage === null ? '—' : `${m.coverage}%`}</td></tr>; })}</tbody></table></div><p class="history-note">Die Kennzahlen beziehen sich auf das jeweilige Wahlprogramm. Frühere Bewertungsstände sind in der Git-Historie dokumentiert.</p></section></>}
 </Layout>

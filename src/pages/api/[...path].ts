@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
-import { extractionCoverage } from '../../lib/metrics';
+import { extractionCoverage, publicImpact } from '../../lib/metrics';
 import { experiments } from '../../lib/experiments';
 import { jsonBody } from '../../lib/json-stream';
 import { readingIndex, productionProgress, readingProgress } from '../../lib/readings';
@@ -51,6 +51,8 @@ export const getStaticPaths: GetStaticPaths = () => {
       add(`${prefix}/readings/${reading.document_id}/source.md`, markdown(reading.markdown_path, dataset), 'text/markdown; charset=utf-8');
     }
     const dataDigest = createHash('sha256').update(JSON.stringify(reports.length ? { ...data, experiments: reports } : data)).digest('hex');
+    const acceptedImpacts = data.impacts.filter(publicImpact);
+    add(`${prefix}/accepted-impacts.json`, { schema_version: '1.0', dataset, total: acceptedImpacts.length, items: acceptedImpacts });
     const statistics = data.programs.map(p => ({
       program_id: p.id, party_id: p.party_id, election_year: p.election_year,
       period_start: p.period_start, period_end: p.period_end,
@@ -65,9 +67,10 @@ export const getStaticPaths: GetStaticPaths = () => {
     });
     add(`${prefix}/index.json`, {
       schema_version: '1.0', dataset, data_sha256: dataDigest,
-      disclaimer: 'AI links are proposals until explicitly reviewed. Missing evidence is unknown, not failure.',
+      methodology: 'Luna screens; Sol Flex makes final link and overall statutory assessments. Human corrections override generated results.',
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
-      counts: Object.fromEntries(collections.map(c => [c, data[c].length])),
+      counts: { ...Object.fromEntries(collections.map(c => [c, data[c].length])), accepted_impacts: acceptedImpacts.length },
+      accepted_impacts: `/api/${prefix}/accepted-impacts.json`,
       statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
       extraction: `/api/${prefix}/extraction.json`, analyses: `/api/${prefix}/analyses.json`,
       progress: `/api/${prefix}/analysis.json`, readings: `/api/${prefix}/readings.json`,
@@ -83,7 +86,7 @@ export const getStaticPaths: GetStaticPaths = () => {
     add(`${prefix}/stats.json`, {
       schema_version: '1.0', dataset, unit: 'criterion', method: '/methodik/',
       denominator: 'All non-rejected criteria in the programme, including unassessed ones. Null for zero denominator.',
-      note: 'Impact scores are ordinal and NOT summed. Only human-reviewed programme + criterion assessments count as fulfilment.',
+      note: 'Final Sol assessments count automatically; editorial corrections take precedence. Overall criterion scores are synthesized from accepted law effects, not sums. Unknown criteria remain in the denominator. Alignment is the mean signed score of assessed criteria only, not a percent fulfilled.',
       items: statistics,
     });
     add(`${prefix}/search.json`, { schema_version: '1.0', dataset, items: data.criteria.map(c => ({
@@ -118,7 +121,7 @@ export const getStaticPaths: GetStaticPaths = () => {
     '404': { description: 'No such dataset, collection or record' },
   });
   add('v1/openapi.json', {
-    openapi: '3.1.0', info: { title: 'Politrace snapshot API', version: '1.0.0', description: 'Read-only Git-backed snapshots of real sources and unreviewed analysis proposals. Queries are not interpreted by the server.' },
+    openapi: '3.1.0', info: { title: 'Politrace snapshot API', version: '1.0.0', description: 'Read-only Git-backed snapshots of sources and automated statutory assessments. Queries are not interpreted by the server.' },
     servers: [{ url: '/api' }], paths: {
       '/v1/{dataset}/index.json': { get: { operationId: 'datasetIndex', parameters: [datasetParameter], responses: response('Dataset digest and collection URLs') } },
       '/v1/{dataset}/{collection}.json': { get: { operationId: 'listRecords', parameters: [datasetParameter, collectionParameter], responses: response('{schema_version, dataset, total, items}') } },

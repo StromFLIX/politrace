@@ -45,7 +45,9 @@ def expected_snapshot(dist: Path) -> dict[str, bytes]:
         '/api/v1/live/readings.json': 'api/v1/live/readings.json',
         '/api/v1/live/reading-progress.json': 'api/v1/live/reading-progress.json',
         '/': 'index.html',
-        '/fortschritt/': 'fortschritt/index.html',
+        '/methodik/': 'methodik/index.html',
+        '/api/v1/live/accepted-impacts.json': 'api/v1/live/accepted-impacts.json',
+        '/api/v1/live/stats.json': 'api/v1/live/stats.json',
     }
     # Check every programme reader, not only an API count. Page HTML also fingerprints
     # the rendered layout/assets, so unchanged political data cannot mask old code.
@@ -72,7 +74,8 @@ def verify_once(base_url: str, expected: dict[str, bytes], *, request=fetch) -> 
             raise SnapshotMismatch(f'{path}: HTTP {status}, expected 200')
         if hashlib.sha256(actual).digest() != hashlib.sha256(wanted).digest():
             raise SnapshotMismatch(f'{path}: served content differs from the tested build')
-    for path in ('/api/v1/live/does-not-exist.json', '/demo/', '/api/v1/demo/index.json'):
+    for path in ('/api/v1/live/does-not-exist.json', '/demo/', '/api/v1/demo/index.json',
+                 '/fortschritt/', '/live/auswertung/gruene-2025/'):
         status, _ = request(base_url + path)
         if status != 404:
             raise SnapshotMismatch(f'{path}: HTTP {status}, expected a genuine 404')

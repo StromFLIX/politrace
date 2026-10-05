@@ -30,15 +30,9 @@ const root = `/${dataset}`;
         <div class="header-actions"><a href="/methodik/" class="quiet-link">So funktioniert’s</a><a href={repoUrl} class="icon-button" aria-label="Quellcode auf GitHub"><Icon name="github" /></a></div>
       </div>
     </header>
-    <div class:list={['dataset-banner', dataset]}>
-      <div class="container banner-inner">
-        <span><strong>QUELLENBASIERTE DATEN</strong>KI-Verknüpfungen bleiben Vorschläge, bis Menschen sie geprüft haben.</span>
-        <a href="/fortschritt/">Abdeckung & Fortschritt<Icon name="arrow" size={14} /></a>
-      </div>
-    </div>
     <main id="content" class="container"><slot /></main>
     <footer class="site-footer">
-      <div class="container footer-main"><div><a class="brand footer-brand" href="/">politrace<span class="blue-dot"></span></a><p>Politik hinterlässt Spuren.<br />Wir machen sie nachvollziehbar.</p></div><div class="footer-links"><a href="/methodik/">Methodik & Grenzen</a><a href="/daten/">Daten & API</a><a href="/quellen/">Quellen & Abdeckung</a><a href={`${repoUrl}/blob/main/CONTRIBUTING.md`}>Mitwirken</a><a href="/datenschutz/">Datenschutz</a></div></div>
+      <div class="container footer-main"><div><a class="brand footer-brand" href="/">politrace<span class="blue-dot"></span></a><p>Politik hinterlässt Spuren.<br />Wir machen sie nachvollziehbar.</p></div><div class="footer-links"><a href="/methodik/">Methodik</a><a href="/daten/">Daten & API</a><a href="/quellen/">Quellen</a><a href={`${repoUrl}/blob/main/CONTRIBUTING.md`}>Mitwirken</a><a href="/datenschutz/">Datenschutz</a></div></div>
       <div class="container footer-bottom"><span>Ein offenes Projekt. Kein Parteiranking.</span><span>Öffentlich · Quellenbasiert · Korrigierbar <Icon name="branch" size={14} /></span></div>
     </footer>
   </body>

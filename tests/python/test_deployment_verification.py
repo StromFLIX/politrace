@@ -12,7 +12,7 @@ from scripts.verify_deployment import (
 
 EXPECTED = {'/api/v1/live/index.json': b'{"data_sha256":"same-political-data"}',
             '/api/v1/live/readings.json': b'{"reading":"new-ocr"}',
-            '/fortschritt/': b'<html>new-progress-and-assets</html>'}
+            '/methodik/': b'<html>new-methodology-and-assets</html>'}
 BASE = 'https://politrace.example'
 
 
@@ -28,7 +28,7 @@ def test_exact_snapshot_and_retired_route_404s():
 
 
 def test_same_political_digest_does_not_mask_old_ocr_or_old_layout():
-    for path in ('/api/v1/live/readings.json', '/fortschritt/'):
+    for path in ('/api/v1/live/readings.json', '/methodik/'):
         with pytest.raises(SnapshotMismatch, match='differs'):
             verify_once(BASE, EXPECTED, request=serving({**EXPECTED, path: b'old-version'}))
 
@@ -46,7 +46,7 @@ def test_snapshot_change_mid_verification_is_not_a_success():
     def request(url):
         nonlocal calls
         calls += 1
-        if calls == len(EXPECTED) + 4:
+        if calls == len(EXPECTED) + 6:
             return 200, b'newer-snapshot'
         return serving()(url)
     with pytest.raises(SnapshotMismatch, match='changed during verification'):
@@ -88,7 +88,8 @@ def test_build_expectations_include_all_programmes_and_a_law(tmp_path):
              {'document_id': 'second-2025', 'collection': 'programs'},
              {'document_id': 'bgbl-1-2025-1', 'collection': 'laws'}]
     paths = ['api/v1/live/index.json', 'api/health.json', 'api/v1/live/analysis.json',
-             'api/v1/live/reading-progress.json', 'index.html', 'fortschritt/index.html',
+             'api/v1/live/reading-progress.json', 'index.html', 'methodik/index.html',
+             'api/v1/live/accepted-impacts.json', 'api/v1/live/stats.json',
              'live/programme/first-2025/index.html', 'live/programme/second-2025/index.html',
              'live/gesetze/bgbl-1-2025-1/index.html']
     for path in paths:

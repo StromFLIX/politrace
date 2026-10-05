@@ -1,14 +1,15 @@
 ---
 import { topics, statusLabels } from '../lib/data';
 import Icon from './Icon.astro';
+import { publicImpact } from '../lib/metrics';
 import type { Criterion, Data } from '../lib/types';
 interface Props { criterion: Criterion; data: Data }
 const { criterion: c, data } = Astro.props;
 const party = data.parties.find(p => p.id === c.party_id)!;
-const impacts = data.impacts.filter(i => i.criterion_id === c.id && i.review.status !== 'rejected');
+const impacts = data.impacts.filter(i => i.criterion_id === c.id && publicImpact(i));
 ---
 <a class="criterion-row" href={`/${data.dataset}/kriterien/${c.id}/`} data-filter-item data-search={`${c.id} ${c.title} ${c.description} ${c.test} ${c.keywords.join(' ')} ${c.tags.map(t => topics[t]).join(' ')} ${party.short_name}`} data-party={c.party_id} data-topic={c.tags.join(' ')} data-status={c.assessment.status}>
   <div class="criterion-row-top"><span class="record-id">{c.id.toUpperCase()}</span><span class:list={['status', c.assessment.status]}>{c.assessment.status === 'fulfilled' && <Icon name="check" size={11} />}{statusLabels[c.assessment.status]}</span></div>
   <h3>{c.title}</h3>
-  <div class="criterion-row-meta"><span style={`color:${party.color}`}>{party.short_name}</span>{c.tags.map(tag => <span class="tag">{topics[tag]}</span>)}<span><Icon name="link" size={12} /> {impacts.length} Gesetzesbeleg{impacts.length === 1 ? '' : 'e'}</span>{c.review.status !== 'reviewed' && <span class="status proposed">{c.review.status === 'rejected' ? 'Verworfen' : 'Kriterium ungeprüft'}</span>}</div>
+  <div class="criterion-row-meta"><span style={`color:${party.color}`}>{party.short_name}</span>{c.tags.map(tag => <span class="tag">{topics[tag]}</span>)}<span><Icon name="link" size={12} /> {impacts.length} Gesetzesbeleg{impacts.length === 1 ? '' : 'e'}</span></div>
 </a>

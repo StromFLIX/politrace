@@ -172,6 +172,9 @@ def exact_ids(results, ids, field):
 def split_ask(agent, items, query):
     """Retries share the experiment budget. Failed parents are cached as subdivision hints."""
     task, data, schema, options = query(items)
+    if len(json_text({'task': task, 'data': data}).encode()) > 100_000 and len(items) > 1:
+        middle = len(items) // 2
+        return split_ask(agent, items[:middle], query) + split_ask(agent, items[middle:], query)
     # Preserve an already validated fallback rather than pay for the invalid primary again.
     cached_review = (len(items) == 1 and hasattr(agent, 'has_cached')
                      and agent.has_cached(task, data, schema, review=True, **options))
@@ -231,7 +234,7 @@ def deduplicate(criteria, agent):
                 'equivalence. This proposes grouping, never human approval.',
                 {'pairs': [{'pair_id': i, 'left': compact(by_id[pairs[i][0]]),
                             'right': compact(by_id[pairs[i][1]])} for i in ids]}, Equivalences,
-                {'validator': check, 'max_output': 7000})
+                {'validator': check, 'max_output': 7000, 'stage': 'deduplication'})
     decisions = []
     for replies in ordered_map(lambda ids: split_ask(agent, ids, query), list(batches(list(pairs), 8)), workers=4):
         for response, generation in replies:

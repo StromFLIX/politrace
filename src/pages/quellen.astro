@@ -1,42 +1,23 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
 import Layout from '../layouts/Layout.astro';
-import { dataRoot, getData, formatDate, repoUrl } from '../lib/data';
+import { getData, formatDate } from '../lib/data';
 import catalog from '../../data/sources/bundestag-21.json';
 const live = getData('live');
-const coveragePath = path.join(dataRoot, 'live/coverage/laws-since-2025-03-25.json');
-const coverage = fs.existsSync(coveragePath) ? JSON.parse(fs.readFileSync(coveragePath, 'utf8')) : null;
-const withText = live.laws.filter(l => l.text_status === 'available').length;
 ---
-<Layout title="Quellen & Datenabdeckung" dataset="live">
+<Layout title="Quellen" dataset="live">
   <article class="prose">
-    <div class="eyebrow">21. Deutscher Bundestag · Datenstand dieses Deployments</div>
-    <h1>Quellen sichtbar machen.<br />Lücken nicht verstecken.</h1>
-    <p>Der Vergleichszeitraum beginnt mit der <a href={catalog.period_source}>konstituierenden Sitzung am 25. März 2025</a>. Erfasst werden die nationalen Wahlprogramme der <a href={catalog.representation_source}>sieben in den Bundestag gewählten Parteien</a>: CDU und CSU mit einem gemeinsamen Programm sowie SPD, Grüne, AfD, Die Linke und SSW. Kurzfassungen, Übersetzungen und Ergänzungen zählen nicht als weitere nationale Programme.</p>
-    <h2>Wahlprogramme</h2>
-    <p><strong>{live.programs.length} Programme und {live.criteria.length} Kriterien</strong> sind in diesem veröffentlichten Datenstand enthalten. Ein gefundenes Original-PDF ist noch kein importierter oder geprüfter Datensatz. Quelleninventar geprüft am {formatDate(catalog.checked_at)}.</p>
-    <div class="table-scroll"><table class="data-table">
-      <thead><tr><th>Partei</th><th>Originalquelle</th><th>Import</th><th>Volltextrechte</th></tr></thead>
-      <tbody>{catalog.programs.map(source => {
-        const imported = live.programs.find(p => p.id === source.id);
-        return <tr>
-          <td>{source.members.join(' / ')}</td>
-          <td><a href={source.pdf_url}>{source.title}</a><br /><small>{source.pages} PDF-Seiten</small></td>
-          <td>{imported ? <a href={`/live/programme/${source.id}/`}>Baum ansehen ({imported.review.status === 'reviewed' ? 'geprüft' : 'Vorschlag'})</a> : 'Noch nicht veröffentlicht'}</td>
-          <td><a href={source.rights.terms_url}>{source.rights.status === 'noncommercial-text-permitted' ? 'Text: CC BY-NC 3.0 DE' : 'Freigabe offen'}</a></td>
-        </tr>;
-      })}</tbody>
-    </table></div>
-    <p>Ein frei herunterladbares PDF erlaubt nicht automatisch die Veröffentlichung seiner vollständigen Transkription in einem öffentlichen Repository oder einer API. Für {catalog.programs.filter(p => p.rights.status === 'permission-required').length} Programme ist die nötige Freigabe noch nicht belegt. Das ist eine Quellen- und Rechtefrage, keine politische Auswahl. Angaben zu Lizenzen, PDF-Prüfsummen, textlosen Seiten und Extraktionsproblemen stehen im <a href="/api/v1/sources/bundestag-21.json">maschinenlesbaren Quelleninventar</a>.</p>
-    <p>Für den Text der Grünen gilt nach deren Impressum <a href="https://creativecommons.org/licenses/by-nc/3.0/de/">CC BY-NC 3.0 DE</a>: Urhebernennung und nichtkommerzielle Nutzung. Bilder, Grafiken und Schriftdateien sind ausgenommen. Eine automatische Transkription verändert Darstellung und Struktur; sie ist weder amtlich noch durch die Partei bestätigt. Diese Lizenz gilt nicht pauschal für das Projekt oder andere Parteien.</p>
-    <h2>Gesetze</h2>
-    <p><strong>{live.laws.length} amtliche Veröffentlichungen</strong> sind gespeichert; bei {withText} liegt extrahierter Text vor. Fehlender Text wird als OCR-Bedarf ausgewiesen und nicht als Beleg verwendet.</p>
-    {coverage ? <p>Das archivierte Suchinventar bis {formatDate(coverage.as_of)} enthält <strong>{coverage.official_count} Gesetze</strong>. Davon sind {coverage.imported_count} importiert; {coverage.pending_ids.length} stehen aus. {coverage.complete ? 'Das gespeicherte Inventar ist vollständig abgeglichen.' : 'Der historische Import ist noch unvollständig.'}</p> : <p>Ein vollständiger historischer Archivabgleich ist in diesem Deployment noch nicht veröffentlicht. Die sichtbaren Gesetze allein belegen keine vollständige Abdeckung.</p>}
-    <p>Die amtliche Archivsuche weist GitHub-Runner derzeit mit HTTP 403 ab; die RSS-Feeds und einzelnen Gesetzes-PDFs sind erreichbar. Dafür liegt ein <a href="/api/v1/sources/laws-bundestag-21.json">datiertes, auf Vollständigkeit abgeglichenes Suchinventar</a> mit Quellen-Prüfsummen im Repository. Bei diesem Fehler nutzt die Pipeline das gespeicherte Inventar und beide aktuellen RSS-Feeds. <strong>RSS-Neuzugänge verlängern nicht das Datum der nachgewiesenen vollständigen Archivabdeckung.</strong> Das Inventar muss aus einem erreichbaren Netz aktualisiert werden, um spätere Archivlücken sicher auszuschließen.</p>
-    <p>Der historische Import durchsucht die paginierten amtlichen Archive von <strong>Bundesgesetzblatt I und II</strong>, nicht nur das kurze RSS-Fenster. Die Abgrenzung erfolgt nach <strong>Veröffentlichungsdatum ab 25.03.2025</strong>. Das ist weder das parlamentarische Abstimmungsdatum noch das Inkrafttreten. Ein früher beschlossenes, später verkündetes Gesetz kann deshalb im Inventar liegen. Verordnungen und unveröffentlichte Entwürfe gehören nicht zu diesem Gesetzesinventar.</p>
-    <p><a href="/api/v1/live/coverage.json">Archivabdeckung als JSON</a> · <a href="/live/aktivitaet/">Gesetzesaktivität</a> · <a href={`${repoUrl}/pulls`}>Offene Daten-Reviews</a></p>
-    <h2>Was die Zahlen nicht aussagen</h2>
-    <p>Vollständig importierte Quellen sind keine vollständig geprüften Verknüpfungen. KI-Kriterien und Wirkungszuordnungen bleiben Vorschläge. Fehlende Belege sind unbekannt, kein Misserfolg. Es werden keine Stimmen aus der Regierungszugehörigkeit abgeleitet und keine KI-Vorschläge automatisch als erfüllte Wahlversprechen gezählt.</p>
+    <div class="eyebrow">21. Deutscher Bundestag</div>
+    <h1>Quellen sichtbar machen.</h1>
+    <p>Der Vergleichszeitraum beginnt mit der <a href={catalog.period_source}>konstituierenden Sitzung am 25. März 2025</a>. Erfasst sind die nationalen Wahlprogramme der <a href={catalog.representation_source}>sieben in den Bundestag gewählten Parteien</a>: CDU und CSU mit einem gemeinsamen Programm sowie SPD, Grüne, AfD, Die Linke und SSW.</p>
+    <h2>Die Wahlprogramme</h2>
+    <p>{live.programs.length} Programme · {live.criteria.length.toLocaleString('de-DE')} Kriterien · Quelleninventar vom {formatDate(catalog.checked_at)}</p>
+    <div class="table-scroll"><table class="data-table"><thead><tr><th>Partei</th><th>Originalquelle</th><th>Lesefassung</th></tr></thead><tbody>{catalog.programs.map(source => <tr><td>{source.members.join(' / ')}</td><td><a href={source.pdf_url}>{source.title}</a><br /><small>{source.pages} PDF-Seiten</small></td><td><a href={`/live/programme/${source.id}/`}>Programm lesen →</a></td></tr>)}</tbody></table></div>
+    <p>Die Rechte der Programmtexte liegen bei den jeweiligen Herausgebern. Für den Text der Grünen gilt <a href="https://creativecommons.org/licenses/by-nc/3.0/de/">CC BY-NC 3.0 DE</a>; Bilder und Grafiken sind ausgenommen. Herkunft, Prüfsummen und jeweilige Quellenbedingungen sind im <a href="/api/v1/sources/bundestag-21.json">Quelleninventar</a> dokumentiert.</p>
+    <h2>Die Gesetze</h2>
+    <p>{live.laws.length} amtliche Veröffentlichungen aus <a href="https://www.recht.bund.de/">Bundesgesetzblatt I und II</a>. Maßgeblich ist das Veröffentlichungsdatum ab 25. März 2025. Das Datum der Verkündung ist vom Inkrafttreten und der parlamentarischen Abstimmung zu unterscheiden.</p>
+    <p><a href="/live/aktivitaet/">Gesetze und ihre Verbindungen ansehen →</a></p>
+    <h2>Die Fundstellen</h2>
+    <p>Jedes Kriterium zeigt ein Originalzitat aus dem Wahlprogramm. Jede Verbindung zeigt die zugehörige Gesetzesstelle. Beide öffnen direkt die entsprechende PDF-Seite in der Lesefassung. Die Original-PDFs bleiben verlinkt; alle Änderungen sind über Git nachvollziehbar.</p>
+    <p><a href="/daten/">Daten herunterladen →</a> · <a href="/methodik/">Wie die Bewertung entsteht →</a></p>
   </article>
 </Layout>

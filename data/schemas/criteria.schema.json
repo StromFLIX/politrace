@@ -9,13 +9,14 @@
             "unassessed",
             "partial",
             "fulfilled",
-            "contradicted"
+            "contradicted",
+            "mixed"
           ],
           "title": "Status",
           "type": "string"
         },
         "rationale": {
-          "default": "Noch keine redaktionelle Bewertung.",
+          "default": "Noch keine gesetzliche Bewertung.",
           "title": "Rationale",
           "type": "string"
         },
@@ -51,6 +52,57 @@
           },
           "title": "Evidence Ids",
           "type": "array"
+        },
+        "method": {
+          "default": "editorial",
+          "enum": [
+            "editorial",
+            "agent"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "enum": [
+                -2,
+                -1,
+                0,
+                1,
+                2
+              ],
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Score"
+        },
+        "generation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Generation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "input_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Input Sha256"
         }
       },
       "title": "Assessment",

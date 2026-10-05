@@ -147,7 +147,18 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
                 leaf.reference.page, leaf.reference.line_start, leaf.reference.line_end
             ):
                 raise ValueError(f"Criterion citation must refer to its leaf range: {criterion.id}")
-            if criterion.assessment.status != "unassessed":
+            if criterion.assessment.method == 'agent':
+                from pipeline.adjudication import assessment_context, assessment_signature
+
+                context = assessment_context(criterion, data['impacts'].values(), data['laws'])
+                if criterion.assessment.input_sha256 != assessment_signature(context):
+                    raise ValueError(f'Automated assessment has stale source evidence: {criterion.id}')
+                for evidence_id in criterion.assessment.evidence_ids:
+                    impact = data['impacts'].get(evidence_id)
+                    if (not impact or impact.criterion_id != criterion.id or impact.review.status == 'rejected'
+                            or not impact.evaluation or impact.evaluation.status != 'accepted'):
+                        raise ValueError(f'Automated assessment needs accepted final evidence: {criterion.id}')
+            elif criterion.assessment.status != "unassessed":
                 if criterion.review.status != "reviewed" or program.review.status != "reviewed":
                     raise ValueError(f"Assessments need a reviewed criterion and program: {criterion.id}")
                 for evidence_id in criterion.assessment.evidence_ids:
@@ -163,6 +174,8 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
                     raise ValueError(f"Unknown retrieval candidate: {law.id}/{candidate}")
 
         for impact in data["impacts"].values():
+            if impact.evaluation and (not impact.generation or impact.generation[-1].model != impact.evaluation.model):
+                raise ValueError(f'Final impact needs matching evaluator provenance: {impact.id}')
             criterion = data["criteria"].get(impact.criterion_id)
             law = data["laws"].get(impact.law_id)
             if not criterion or not law:

@@ -4,8 +4,7 @@ import Icon from '../../../components/Icon.astro';
 import '../../../styles/program.css';
 import DocumentReader from '../../../components/DocumentReader.astro';
 import { readingEdition } from '../../../lib/readings';
-import ExtractionStatus from '../../../components/ExtractionStatus.astro';
-import { datasets, getData, formatDate, editUrl, mdUrl, reviewLabels } from '../../../lib/data';
+import { datasets, getData, formatDate, editUrl, mdUrl } from '../../../lib/data';
 import { extractionCoverage } from '../../../lib/metrics';
 export function getStaticPaths() {
   return datasets.flatMap(dataset => {
@@ -37,15 +36,11 @@ const reading = readingEdition(program.id);
     </div>
   </header>
   <details class="programme-provenance">
-    <summary><Icon name="info" size={17} /><span><strong>{reviewLabels[program.review.status]}.</strong> {data.dataset === 'live' && 'Automatisch übertragener Text; PDF-Layoutfehler sind möglich. '}Quelle, Daten & Bearbeitungsstand</span><Icon name="down" size={17} /></summary>
+    <summary><Icon name="info" size={17} /><span>Originalquelle & Daten herunterladen</span><Icon name="down" size={17} /></summary>
     <div class="programme-provenance-body">
-      <div><ExtractionStatus program={program} criteria={criteria} />
-        <p>Das Programm wird ausschließlich als seitengebundene OCR-Lesefassung angezeigt. Überschriften, Absätze und Tabellen folgen der PDF-Reihenfolge. Alte Absatz- und Kapitellinks öffnen die zugehörige Seite; eine wortgenaue Zuordnung zur neuen OCR wird nicht behauptet.</p>
-        <p>Die exakten Belegzitate, Absatz-IDs und Markdown-Zeilen bleiben unverändert bei den Kriterien und in der API erhalten. Eine bessere Lesefassung ist keine redaktionelle Prüfung der Quelle oder der Zusagen.</p>
-        {program.transcription_note && <p><strong>Hinweis zur bisherigen Belegextraktion:</strong> {program.transcription_note}</p>}
-      </div>
+      <div><p>Die Lesefassung folgt den Originalseiten des Wahlprogramms. Jede Seite verbindet Text, Original-PDF und die daraus abgeleiteten Kriterien.</p><p>Belegzitate und stabile Fundstellen sind über die API und GitHub abrufbar.</p></div>
       <div>
-        <dl><dt>Herausgeber</dt><dd>{program.source.publisher}</dd><dt>Programmdatum</dt><dd>{formatDate(program.published_at)}</dd><dt>Quellenprüfung</dt><dd>{reviewLabels[program.review.status]}</dd></dl>
+        <dl><dt>Herausgeber</dt><dd>{program.source.publisher}</dd><dt>Programmdatum</dt><dd>{formatDate(program.published_at)}</dd></dl>
         {data.dataset === 'live' && <p>{program.source.license_note}</p>}
         <div class="programme-source-actions">
           {data.dataset === 'live' && <a class="text-link" href={program.source.url}>Offizielle Quelle <Icon name="arrow" size={13} /></a>}
