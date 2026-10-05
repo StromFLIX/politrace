@@ -3,9 +3,11 @@ import Icon from './Icon.astro';
 import ImpactScale from './ImpactScale.astro';
 import { impactLabels, reviewLabels, editUrl, formatDate } from '../lib/data';
 import type { Impact, Data } from '../lib/types';
+import { readingPageHref } from '../lib/document-anchors';
 interface Props { impact: Impact; data: Data; direction?: 'law' | 'criterion' }
 const { impact: i, data, direction = 'law' } = Astro.props;
 const law = data.laws.find(l => l.id === i.law_id)!;
+const passage = law.passages.find(p => p.id === i.law_passage_id)!;
 const criterion = data.criteria.find(c => c.id === i.criterion_id)!;
 const party = data.parties.find(p => p.id === criterion.party_id)!;
 const href = direction === 'law' ? `/${data.dataset}/gesetze/${law.id}/` : `/${data.dataset}/kriterien/${criterion.id}/`;
@@ -18,7 +20,7 @@ const href = direction === 'law' ? `/${data.dataset}/gesetze/${law.id}/` : `/${d
   <p>{i.rationale}</p>
   {i.review.status === 'proposed' && <p class="method-note">KI-Vorschlag, keine Erfüllungsbewertung. Auch eine Zustimmung beider Modelle ersetzt keine menschliche Prüfung.</p>}
   <blockquote>{i.law_quote}</blockquote>
-  <div class="evidence-footer"><a class="text-link" href={`/${data.dataset}/gesetze/${law.id}/#${i.law_passage_id}`}><Icon name="file" size={12} /> Gesetzespassage ansehen</a><a class="text-link" href={editUrl(data.dataset, 'impacts', i.id)}>Verknüpfung korrigieren <Icon name="github" size={13} /></a></div>
+  <div class="evidence-footer"><a class="text-link" href={readingPageHref('laws', law.id, passage.reference.page)}><Icon name="file" size={12} /> Gesetzespassage ansehen</a><a class="text-link" href={editUrl(data.dataset, 'impacts', i.id)}>Verknüpfung korrigieren <Icon name="github" size={13} /></a></div>
   {i.caveats.length > 0 && <details style="margin-top:15px"><summary class="subtle-link" style="cursor:pointer">Einschränkungen & Modellprüfung</summary><ul style="padding-left:20px;color:var(--muted);font-size:11px">{i.caveats.map(caveat => <li>{caveat}</li>)}</ul><p style="font-size:10px">Zweiter Modellcheck: {i.verification === 'passed' ? 'bestätigt den Vorschlag' : 'weitere Prüfung nötig'}. Selbstberichtete Modellkonfidenz: {Math.round(i.confidence * 100)} % – keine kalibrierte Wahrscheinlichkeit.</p></details>}
 </article>
 <style>

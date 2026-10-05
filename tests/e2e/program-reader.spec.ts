@@ -1,135 +1,135 @@
 import { test, expect } from '@playwright/test';
 
 const programme = '/live/programme/gruene-2025/';
-
-async function readerSource(request: import('@playwright/test').APIRequestContext) {
-  return (await request.get('/api/v1/live/programs/gruene-2025/tree.json')).json();
-}
-
-async function openEvidence(page: import('@playwright/test').Page) {
-  const details = page.locator('[data-evidence-edition]');
-  if (await details.count() && !(await details.evaluate((node: HTMLDetailsElement) => node.open))) {
-    await details.locator(':scope > summary').click();
-  }
-}
+const retiredViews = '[data-program-reader], [data-evidence-edition], [data-exact-source], [data-law-text], .law-evidence';
 
 async function openNavigation(page: import('@playwright/test').Page) {
-  await openEvidence(page);
-  const nav = page.locator('[data-reader-navigation]');
+  const nav = page.locator('.document-navigation');
   if (!(await nav.evaluate((element: HTMLDetailsElement) => element.open))) await nav.locator(':scope > summary').click();
 }
 
-test('programme reader renders Markdown, retains source order and is usable on both screen sizes', async ({ page, request }, testInfo) => {
-  const source = await readerSource(request);
+test('programme has only the OCR reader, in PDF page order, on both screen sizes', async ({ page, request }, testInfo) => {
+  const edition = await (await request.get('/api/v1/live/readings/gruene-2025.json')).json();
   await page.goto(programme);
-  await openEvidence(page);
-  await expect(page.getByRole('heading', { name: source.tree.title, exact: true }).first()).toBeVisible();
-  await expect(page.locator('[data-reader-passage]')).toHaveCount(source.leaves.length);
-  expect(await page.locator('[data-reader-passage]').evaluateAll(nodes => nodes.map(n => n.id)))
-    .toEqual(source.leaves.map((leaf: { id: string }) => leaf.id));
-  expect(await page.locator('.reader-prose strong').count()).toBeGreaterThan(0);
-  expect(await page.locator('.reader-prose h1, .reader-prose h2, .reader-prose img, .reader-prose script').count()).toBe(0);
-  expect(await page.locator('.reader-prose').first().evaluate(node => getComputedStyle(node).fontSize)).toMatch(/1[7-8]px/);
+  await expect(page.locator('[data-document-reader]')).toHaveCount(1);
+  await expect(page.locator(retiredViews)).toHaveCount(0); // Removed, not merely hidden.
+  expect(await page.locator('[data-reading-page]').evaluateAll(nodes => nodes.map(n => n.id)))
+    .toEqual(edition.pages.map((p: { number: number }) => `reading-page-${p.number}`));
+  expect(await page.locator('.document-prose strong').count()).toBeGreaterThan(0);
+  expect(await page.locator('.document-prose h1, .document-prose h2, .document-prose img, .document-prose script').count()).toBe(0);
+  expect(await page.locator('.document-prose').first().evaluate(node => getComputedStyle(node).fontSize)).toMatch(/1[8-9]px/);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: `test-results/programme-reader-${testInfo.project.name}.png` });
   await openNavigation(page);
-  await page.getByRole('navigation', { name: 'Kapitel im Wahlprogramm' }).getByRole('link', { name: /Kapitel 2:/ }).click();
-  await expect(page.locator(':target > summary h2')).toContainText('Einfach dabei sein');
-  await expect(page.locator(':target .program-passage').first().locator('[data-reader-layout]')).not.toHaveAttribute('open');
+  const link = page.getByRole('navigation', { name: 'Inhalt der Lesefassung' }).locator('a').nth(5);
+  const href = await link.getAttribute('href');
+  await link.click();
+  await expect(page.locator(href!)).toHaveAttribute('open');
   await page.evaluate(() => document.fonts.ready);
   const headerHeight = (await page.locator('.site-header').boundingBox())!.height;
-  await expect.poll(async () => (await page.locator(':target > summary h2').boundingBox())?.y ?? -1).toBeGreaterThanOrEqual(headerHeight);
-  if (testInfo.project.name === 'mobile') await expect(page.locator('[data-reader-navigation]')).not.toHaveAttribute('open');
-  await page.screenshot({ path: `test-results/programme-chapter-${testInfo.project.name}.png` });
+  await expect.poll(async () => (await page.locator(`${href} > summary`).boundingBox())?.y ?? -1).toBeGreaterThanOrEqual(headerHeight);
+  if (testInfo.project.name === 'mobile') await expect(page.locator('.document-navigation')).not.toHaveAttribute('open');
+  await page.screenshot({ path: `test-results/programme-page-${testInfo.project.name}.png` });
 });
 
-test('programme search, criterion filter, URL restoration and no-result state work', async ({ page, request }) => {
+test('OCR search, criterion filter, URL restoration and no-result reset work', async ({ page, request }) => {
   const { items: criteria } = await (await request.get('/api/v1/live/criteria.json')).json();
-  const count = new Set(criteria.filter((c: { program_id: string }) => c.program_id === 'gruene-2025').map((c: { leaf_id: string }) => c.leaf_id)).size;
+  const count = new Set(criteria.filter((c: { program_id: string }) => c.program_id === 'gruene-2025').map((c: { reference: { page: number } }) => c.reference.page)).size;
   await page.goto(programme);
   await openNavigation(page);
-  await page.getByRole('checkbox', { name: 'Nur Absätze mit Kriterien' }).check();
-  await expect(page.locator('[data-reader-passage]:visible')).toHaveCount(count);
+  await page.getByRole('checkbox', { name: 'Nur Seiten mit Kriterien' }).check();
+  await expect(page.locator('[data-reading-page]:visible')).toHaveCount(count);
   expect(page.url()).toContain('criteria=1');
-  await page.getByRole('searchbox', { name: 'Im Programm suchen' }).fill('Glasfaser');
-  const matches = await page.locator('[data-reader-passage]:visible').count();
+  await page.getByRole('searchbox', { name: 'In der Lesefassung suchen' }).fill('Glasfaser');
+  const matches = await page.locator('[data-reading-page]:visible').count();
   expect(matches).toBeGreaterThan(0);
   expect(matches).toBeLessThanOrEqual(count);
   await page.reload();
   await openNavigation(page);
-  await expect(page.getByRole('searchbox', { name: 'Im Programm suchen' })).toHaveValue('Glasfaser');
-  await expect(page.locator('[data-reader-passage]:visible')).toHaveCount(matches);
-  await page.getByRole('searchbox', { name: 'Im Programm suchen' }).fill('<script>alert(1)</script>');
-  await expect(page.getByRole('heading', { name: 'Keine passenden Absätze' })).toBeVisible();
-  await expect(page.locator('[data-reader-count]')).toContainText('0 von');
-  await page.getByRole('button', { name: 'Alle Absätze anzeigen' }).click();
-  await expect(page.getByRole('searchbox', { name: 'Im Programm suchen' })).toHaveValue('');
+  await expect(page.getByRole('searchbox', { name: 'In der Lesefassung suchen' })).toHaveValue('Glasfaser');
+  await expect(page.locator('[data-reading-page]:visible')).toHaveCount(matches);
+  await page.getByRole('searchbox', { name: 'In der Lesefassung suchen' }).fill('<script>alert(1)</script>');
+  await expect(page.getByRole('heading', { name: 'Keine passende Textstelle gefunden.' })).toBeVisible();
+  await expect(page.locator('[data-reading-count]')).toContainText('0 von');
+  await page.getByRole('button', { name: 'Alle Seiten anzeigen' }).click();
+  await expect(page.getByRole('searchbox', { name: 'In der Lesefassung suchen' })).toHaveValue('');
   expect(new URL(page.url()).search).toBe('');
-  await expect(page.locator('[data-reader-passage][hidden]')).toHaveCount(0);
+  await expect(page.locator('[data-reading-page][hidden]')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
-test('source fragments override conflicting filters and preserve exact Markdown citations', async ({ page, request }) => {
-  const source = await readerSource(request);
-  const first = source.leaves[1]; // A closed front-matter chapter with Markdown headings.
-  await page.goto(`${programme}?q=unfindbarerbegriff#${first.id}`);
-  await expect(page.locator(':target')).toBeVisible();
-  expect(new URL(page.url()).search).toBe('');
-  await page.locator(':target > .passage-source > summary').click();
-  const raw = page.locator(':target [data-exact-source]');
-  await expect(raw).toBeVisible();
-  expect(await raw.textContent()).toBe(first.text);
-  const pdfLink = page.locator(':target .passage-source-links a').first();
-  await expect(pdfLink).toHaveAttribute('href', new RegExp(`#page=${first.reference.page}$`));
-  await expect(page.locator(':target .passage-source-links a').nth(1)).toHaveAttribute('href', new RegExp(`#L${first.reference.line_start}$`));
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+test('old paragraph and source-disclosure fragments reveal the OCR page without rewriting evidence', async ({ page, request }) => {
+  const source = await (await request.get('/api/v1/live/programs/gruene-2025/tree.json')).json();
+  const leaf = source.leaves[1];
+  const markdown = await (await request.get(source.markdown)).text();
+  expect(markdown).toContain(leaf.reference.quote);
+  for (const fragment of [leaf.id, `${leaf.id}-source`]) {
+    await page.goto(`${programme}?q=unfindbarerbegriff&criteria=1#${fragment}`);
+    const readingPage = page.locator(`#reading-page-${leaf.reference.page}`);
+    await expect(readingPage).toHaveAttribute('open');
+    await expect(readingPage.locator('[data-reading-citation]')).toBeVisible();
+    expect(new URL(page.url()).search).toBe('');
+    await expect(page.locator(retiredViews)).toHaveCount(0);
+    await expect(readingPage.locator('.document-source-links a').first()).toHaveAttribute('href', new RegExp(`#page=${leaf.reference.page}$`));
+    await page.evaluate(() => document.fonts.ready);
+    const headerHeight = (await page.locator('.site-header').boundingBox())!.height;
+    await expect.poll(async () => (await readingPage.locator(':scope > summary').boundingBox())?.y ?? -1).toBeGreaterThanOrEqual(headerHeight);
+  }
 });
 
-test('criterion disclosures link to the same source-backed criteria, not generated replacement IDs', async ({ page, request }) => {
+test('page criteria round-trip through unchanged exact quotes to the OCR reader', async ({ page, request }) => {
   const { items } = await (await request.get('/api/v1/live/criteria.json')).json();
   const criterion = items.find((c: { program_id: string }) => c.program_id === 'gruene-2025');
-  await page.goto(`${programme}#${criterion.leaf_id}`);
-  await page.locator(':target [data-reader-criteria] > summary').click();
-  const link = page.locator(':target .passage-criteria-list a').filter({ hasText: criterion.title });
+  const href = `${programme}#reading-page-${criterion.reference.page}`;
+  await page.goto(href);
+  await page.locator(':target [data-reading-criteria] > summary').click();
+  const link = page.locator(`:target [data-criterion-id="${criterion.id}"]`);
   await expect(link).toHaveAttribute('href', `/live/kriterien/${criterion.id}/`);
   await link.click();
   await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
-  await page.getByRole('link', { name: 'Absatz im Textbaum' }).click();
-  await expect(page.locator(':target')).toContainText(criterion.reference.quote);
+  expect(await page.locator('.evidence-box blockquote').first().textContent()).toBe(criterion.reference.quote);
+  await expect(page.getByRole('link', { name: 'Im Programm lesen' })).toHaveAttribute('href', href);
+  await page.getByRole('link', { name: 'Im Programm lesen' }).click();
+  await expect(page.locator(':target')).toHaveAttribute('data-reading-page');
+  await expect(page.locator(':target .document-prose')).toBeVisible();
 });
 
-test('printing includes filtered and collapsed passages, then restores the reader', async ({ page, request }) => {
-  const source = await readerSource(request);
+test('printing includes every OCR page once and restores filtered/collapsed states', async ({ page, request }) => {
+  const edition = await (await request.get('/api/v1/live/readings/gruene-2025.json')).json();
   await page.goto(`${programme}?q=Glasfaser&criteria=1`);
-  await openEvidence(page);
-  const displayedBefore = await page.locator('[data-reader-passage]:visible').count();
+  const displayedBefore = await page.locator('[data-reading-page]:visible').count();
   expect(displayedBefore).toBeGreaterThan(0);
-  expect(displayedBefore).toBeLessThan(source.leaves.length);
+  expect(displayedBefore).toBeLessThan(edition.page_count);
   const urlBefore = page.url();
-  const disclosureStates = () => page.locator('[data-reader-chapter], [data-reader-layout]')
+  const disclosureStates = () => page.locator('[data-reading-page]')
     .evaluateAll(nodes => nodes.map(n => (n as HTMLDetailsElement).open));
   const statesBefore = await disclosureStates();
   await page.evaluate(() => {
-    // Repeated beforeprint events must not overwrite the original state.
     window.dispatchEvent(new Event('beforeprint'));
     window.dispatchEvent(new Event('beforeprint'));
   });
-  await expect(page.locator('[data-reader-passage]:visible')).toHaveCount(source.leaves.length);
+  await expect(page.locator('[data-reading-page]:visible')).toHaveCount(edition.page_count);
   expect((await disclosureStates()).every(Boolean)).toBe(true);
-  await expect(page.locator('[data-reader-empty]')).toBeHidden();
+  await expect(page.locator('[data-reading-empty]')).toBeHidden();
+  await expect(page.locator(retiredViews)).toHaveCount(0);
   await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
-  await expect(page.locator('[data-reader-passage]:visible')).toHaveCount(displayedBefore);
+  await expect(page.locator('[data-reading-page]:visible')).toHaveCount(displayedBefore);
   expect(await disclosureStates()).toEqual(statesBefore);
   expect(page.url()).toBe(urlBefore);
 });
 
 test.describe('progressive enhancement', () => {
   test.use({ javaScriptEnabled: false });
-  test('programme and exact sources remain readable without JavaScript', async ({ page }) => {
-    await page.goto(programme);
-    await expect(page.locator('.document-page').first()).toBeVisible();
-    await expect(page.locator('.document-page .document-prose').first()).toBeVisible();
-    await expect(page.locator('[data-evidence-edition] > summary')).toBeVisible();
+  test('OCR pages, criteria and old bookmarks remain accessible without JavaScript', async ({ page, request }) => {
+    const program = await (await request.get('/api/v1/live/programs/gruene-2025.json')).json();
+    const leaf = program.leaves.at(-2);
+    await page.goto(`${programme}#${leaf.id}`);
+    const readingPage = page.locator(`#reading-page-${leaf.reference.page}`);
+    await expect(readingPage.locator(':scope > summary')).toBeVisible();
+    if (!(await readingPage.evaluate((p: HTMLDetailsElement) => p.open))) await readingPage.locator(':scope > summary').click();
+    await expect(readingPage.locator('.document-prose')).toBeVisible();
+    await expect(page.locator('[data-reading-controls]')).toBeHidden();
+    await expect(page.locator(retiredViews)).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 });

@@ -54,7 +54,9 @@ uv run python scripts/reading_editions.py --workers 4
 
 Output: `data/live/readings/{id}.json` and `.md`. Paid page results and the cumulative page ledger remain under ignored `.cache/ocr`. A process lock prevents two workers from racing that ledger; worker requests share a page-rate gate. Mistral reports **processed pages, not verified USD charges**. Interrupted requests retain an explicit unknown-charge page count.
 
-Existing evidence Markdown, citation IDs and criterion quotes remain untouched. Reading quality warnings are public; OCR is not marked human-reviewed. A publisher outage leaves its reading edition pending and the previous source text available.
+The OCR edition is the only full-document view for programmes and laws. Search, page navigation and page-level criterion links all use it. Existing paragraph/chapter bookmarks open the same PDF page in the reader; the old tree is no longer rendered. Missing editions show a pending notice and an original-source link rather than falling back to the old layout.
+
+Existing evidence Markdown, citation IDs and criterion/impact quotes remain untouched in their API records and detail pages. Page mapping does not claim word-level alignment between old extraction and new OCR. Reading quality warnings are public; OCR is not marked human-reviewed. A publisher outage leaves its reading edition pending and the evidence available through the API.
 
 ## Source and review policy
 

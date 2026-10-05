@@ -32,8 +32,9 @@ test('real party criteria have searchable evidence and Git correction links', as
   await section.locator('.criterion-row').first().click();
   await expect(page.getByText('Der Akzeptanztest', { exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: 'Kriterium auf GitHub bearbeiten' })).toHaveAttribute('href', /\/edit\/main\/data\/live\/criteria\//);
-  await page.getByRole('link', { name: 'Absatz im Textbaum' }).click();
-  await expect(page.locator(':target')).toBeVisible();
+  await page.getByRole('link', { name: 'Im Programm lesen' }).click();
+  await expect(page.locator(':target')).toHaveAttribute('data-reading-page');
+  await expect(page.locator(':target .document-prose')).toBeVisible();
 });
 
 test('live activity does not fabricate voting records', async ({ page }) => {
@@ -88,12 +89,13 @@ test('source text and criteria keep their original exact evidence', async ({ pag
   const criterion = await (await request.get(`/api/v1/live/criteria/${firstId}.json`)).json();
   await page.goto(`/live/kriterien/${criterion.id}/`);
   await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
-  await page.getByRole('link', { name: 'Absatz im Textbaum' }).click();
-  await expect(page.locator(':target')).toContainText(criterion.reference.quote);
-  await expect(page.locator(':target')).toBeVisible();
+  expect(await page.locator('.evidence-box blockquote').first().textContent()).toBe(criterion.reference.quote);
+  await page.getByRole('link', { name: 'Im Programm lesen' }).click();
+  await expect(page.locator(':target')).toHaveAttribute('id', `reading-page-${criterion.reference.page}`);
+  await expect(page.locator(':target .document-prose')).toBeVisible();
 });
 
-test('impact proposals round-trip to unchanged source anchors', async ({ page, request }) => {
+test('impact proposals keep exact quotes and open the corresponding OCR law page', async ({ page, request }) => {
   const { items: impacts } = await (await request.get('/api/v1/live/impacts.json')).json();
   for (const impact of impacts.slice(0, 8)) {
     const law = await (await request.get(`/api/v1/live/laws/${impact.law_id}.json`)).json();
@@ -106,9 +108,12 @@ test('impact proposals round-trip to unchanged source anchors', async ({ page, r
     if (impact.review.status === 'proposed') await expect(card).toContainText('KI-Vorschlag, keine Erfüllungsbewertung.');
     await card.locator('h3 a').click();
     await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
+    expect(await page.locator(`[id="${impact.id}"] blockquote`).textContent()).toBe(impact.law_quote);
     await page.locator(`[id="${impact.id}"]`).getByRole('link', { name: 'Gesetzespassage ansehen' }).click();
-    await expect(page.locator(':target')).toContainText(impact.law_quote);
-    await expect(page.locator(':target')).toBeVisible();
+    const passage = law.passages.find((p: { id: string }) => p.id === impact.law_passage_id);
+    await expect(page.locator(':target')).toHaveAttribute('id', `reading-page-${passage.reference.page}`);
+    await expect(page.locator(':target .document-prose')).toBeVisible();
+    await expect(page.locator('[data-law-text], .law-evidence')).toHaveCount(0);
   }
 });
 

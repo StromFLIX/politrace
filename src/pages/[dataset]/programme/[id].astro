@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Icon from '../../../components/Icon.astro';
-import ProgramTree from '../../../components/ProgramTree.astro';
+import '../../../styles/program.css';
 import DocumentReader from '../../../components/DocumentReader.astro';
 import { readingEdition } from '../../../lib/readings';
 import ExtractionStatus from '../../../components/ExtractionStatus.astro';
@@ -25,14 +25,14 @@ const reading = readingEdition(program.id);
     <div class="breadcrumbs"><a href={`/${data.dataset}/parteien/`}>Parteien</a><Icon name="chevron" size={12} /><a href={`/${data.dataset}/parteien/${party.id}/`}>{party.short_name}</a><Icon name="chevron" size={12} /><span>Wahlprogramm {program.election_year}</span></div>
     <div class="programme-kicker"><span class="party-logo" style={`--party:${party.color}`}>{party.short_name}</span><span>Bundestagswahl {program.election_year}</span><span>Programm & Quellen</span></div>
     <h1>{program.title}</h1>
-    <p class="programme-description">Das Programm lesen, die Zusagen nachvollziehen. Jeder Absatz führt zurück zur Quelle und zu den daraus abgeleiteten Kriterien.</p>
+    <p class="programme-description">Das Programm lesen, die Zusagen nachvollziehen. Die Lesefassung verbindet jede Originalseite mit den daraus abgeleiteten Kriterien.</p>
     <div class="programme-summary">
-      <div class="programme-numbers"><span><strong>{program.leaves.length}</strong>Absätze im Text</span><span><strong>{coverage.processed_leaves}</strong>für Kriterien ausgewertet</span><span><strong>{criteria.length}</strong>Kriterien abgeleitet</span></div>
+      <div class="programme-numbers"><span><strong>{program.leaves.length}</strong>Belegabsätze</span><span><strong>{coverage.processed_leaves}</strong>für Kriterien ausgewertet</span><span><strong>{criteria.length}</strong>Kriterien abgeleitet</span></div>
       <div class="page-actions">
         <a class="button primary" href={`/${data.dataset}/parteien/${party.id}/?jahr=${program.election_year}#kriterien`}>Kriterien ansehen <Icon name="arrow" size={14} /></a>
         {data.dataset === 'live' && program.pdf_url
           ? <a class="button" href={reading?.retrieved_from ?? program.pdf_url}><Icon name="file" size={15} /> {reading?.retrieved_from && reading.retrieved_from !== program.pdf_url ? 'PDF · geprüfte Archivkopie' : 'Original-PDF'}</a>
-          : <a class="button" href={`${api}/source.md`}><Icon name="download" size={15} /> Markdown</a>}
+          : <a class="button" href={program.source.url}><Icon name="file" size={15} /> Originalquelle</a>}
       </div>
     </div>
   </header>
@@ -40,28 +40,21 @@ const reading = readingEdition(program.id);
     <summary><Icon name="info" size={17} /><span><strong>{reviewLabels[program.review.status]}.</strong> {data.dataset === 'live' && 'Automatisch übertragener Text; PDF-Layoutfehler sind möglich. '}Quelle, Daten & Bearbeitungsstand</span><Icon name="down" size={17} /></summary>
     <div class="programme-provenance-body">
       <div><ExtractionStatus program={program} criteria={criteria} />
-        <p>Die Lesefassung formatiert Markdown und lässt Zeilen im Text fließen. Sie schreibt keine Zusagen um. Die unveränderte Textspur bleibt an jedem Absatz unter „Quelle & exaktes Zitat“ und als Markdown verfügbar.</p>
-        {program.transcription_note && <p>{program.transcription_note}</p>}
-        <p>Die Kapitel stammen aus dem automatisch erstellten Baum. Die Absätze bleiben in der Reihenfolge der Quelle; wiederkehrende Kapitel werden als Fortsetzung kenntlich gemacht.</p>
+        <p>Das Programm wird ausschließlich als seitengebundene OCR-Lesefassung angezeigt. Überschriften, Absätze und Tabellen folgen der PDF-Reihenfolge. Alte Absatz- und Kapitellinks öffnen die zugehörige Seite; eine wortgenaue Zuordnung zur neuen OCR wird nicht behauptet.</p>
+        <p>Die exakten Belegzitate, Absatz-IDs und Markdown-Zeilen bleiben unverändert bei den Kriterien und in der API erhalten. Eine bessere Lesefassung ist keine redaktionelle Prüfung der Quelle oder der Zusagen.</p>
+        {program.transcription_note && <p><strong>Hinweis zur bisherigen Belegextraktion:</strong> {program.transcription_note}</p>}
       </div>
       <div>
         <dl><dt>Herausgeber</dt><dd>{program.source.publisher}</dd><dt>Programmdatum</dt><dd>{formatDate(program.published_at)}</dd><dt>Quellenprüfung</dt><dd>{reviewLabels[program.review.status]}</dd></dl>
         {data.dataset === 'live' && <p>{program.source.license_note}</p>}
         <div class="programme-source-actions">
           {data.dataset === 'live' && <a class="text-link" href={program.source.url}>Offizielle Quelle <Icon name="arrow" size={13} /></a>}
-          <a class="text-link" href={`${api}/tree.json`}>Textbaum als JSON <Icon name="code" size={14} /></a>
-          <a class="text-link" href={`${api}/source.md`}>Extrahiertes Markdown <Icon name="download" size={14} /></a>
-          <a class="text-link" href={mdUrl(program.markdown_path)}>Markdown auf GitHub <Icon name="github" size={14} /></a>
-          <a class="text-link" href={editUrl(data.dataset, 'programs', program.id)}>Struktur korrigieren <Icon name="branch" size={14} /></a>
+          {reading && <><a class="text-link" href={`/api/v1/live/readings/${program.id}/source.md`}>Lesefassung als Markdown <Icon name="download" size={14} /></a><a class="text-link" href={mdUrl(reading.markdown_path)}>Lesefassung auf GitHub <Icon name="github" size={14} /></a><a class="text-link" href={editUrl(data.dataset, 'readings', program.id)}>Lesefassung korrigieren <Icon name="branch" size={14} /></a></>}
+          <a class="text-link" href={`${api}/tree.json`}>Belegstruktur als JSON <Icon name="code" size={14} /></a>
+          <a class="text-link" href={`${api}/source.md`}>Unveränderte Belegfassung · API <Icon name="code" size={14} /></a>
         </div>
       </div>
     </div>
   </details>
-  {reading && <DocumentReader edition={reading} evidence={program.leaves} />}
-  <details class="source-edition" data-evidence-edition open={!reading}>
-    <summary>Zitierte Textspur & Kriterien · ursprüngliche Extraktion</summary>
-    <p class="notice">Diese unveränderte Extraktion erhält die bestehenden Absatz-IDs und exakten Kriterienbelege. Die bereinigte Lesefassung ist separat versioniert.</p>
-    <ProgramTree program={program} criteria={criteria} />
-  </details>
-  <style>.source-edition { margin: 28px 0; min-width: 0; } .source-edition > summary { padding: 18px 0; border-top: 1px solid var(--border); font-size: 14px; font-weight: 600; cursor: pointer; }</style>
+  <DocumentReader documentId={program.id} collection="programs" sourceUrl={program.pdf_url ?? program.source.url} edition={reading} evidence={program.leaves} criteria={criteria} tree={program.tree} />
 </Layout>

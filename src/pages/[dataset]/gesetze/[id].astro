@@ -3,7 +3,6 @@ import Layout from '../../../layouts/Layout.astro';
 import Icon from '../../../components/Icon.astro';
 import ImpactCard from '../../../components/ImpactCard.astro';
 import Votes from '../../../components/Votes.astro';
-import LawText from '../../../components/LawText.astro';
 import DocumentReader from '../../../components/DocumentReader.astro';
 import { readingEdition } from '../../../lib/readings';
 import { datasets, getData, formatDate, editUrl } from '../../../lib/data';
@@ -18,7 +17,7 @@ const reading = readingEdition(law.id);
     <div class="breadcrumbs"><a href="/live/aktivitaet/">Aktivität</a><Icon name="chevron" size={12} /><span>Gesetz</span></div>
     <div class="eyebrow">Amtliche Verkündung · {formatDate(law.published_at)}</div>
     <h1>{law.title}</h1><p>{law.summary}</p>
-    <div class="page-actions" style="margin-top:20px"><a class="button" href={`/api/v1/live/laws/${law.id}.json`}><Icon name="code" size={15} /> Gesetz als JSON</a>{law.markdown_path && <a class="button" href={`/api/v1/live/laws/${law.id}/source.md`}><Icon name="download" size={15} /> Zitierte Textspur als Markdown</a>}{reading && <a class="button primary" href="#gesetz-lesen">Gesetz lesen ↓</a>}</div>
+    <div class="page-actions" style="margin-top:20px"><a class="button primary" href="#gesetz-lesen">{reading ? 'Gesetz lesen ↓' : 'Quellen & Lesestatus ↓'}</a>{reading && <a class="button" href={`/api/v1/live/readings/${law.id}/source.md`}><Icon name="download" size={15} /> Lesefassung als Markdown</a>}<a class="button" href={`/api/v1/live/laws/${law.id}.json`}><Icon name="code" size={15} /> Gesetz als JSON</a></div>
   </header>
   <div class="two-column">
     <div>
@@ -43,13 +42,11 @@ const reading = readingEdition(law.id);
   </div>
   <section id="gesetz-lesen" class="section-block">
     <p class="notice">Veröffentlichter Gesetzestext, kein konsolidierter Rechtsstand. Verweise auf andere Gesetze, Ausnahmen und konkrete Geltungsdaten müssen gesondert geprüft werden.</p>
-    {reading && <DocumentReader edition={reading} evidence={law.passages} />}
-    <details class="law-evidence" open={!reading}><summary>Die gesetzliche Textspur · bestehende Zitate</summary><LawText law={law} /></details>
-    {law.text_status === 'needs_ocr' && <p>Dieses PDF benötigt eine geprüfte OCR-Transkription. Es werden keine Auswirkungen aus seinem Titel abgeleitet.</p>}
+    <DocumentReader documentId={law.id} collection="laws" sourceUrl={law.pdf_url ?? law.source.url} edition={reading} evidence={law.passages} />
+    {law.text_status === 'needs_ocr' && <p>Die Belegextraktion ist noch unvollständig. Eine Lesefassung allein ersetzt keine geprüften Zitate; Auswirkungen werden nicht aus dem Titel abgeleitet.</p>}
   </section>
 </Layout>
 <style>
   .two-column > div, .two-column > aside { min-width: 0; }
   #gesetz-lesen { scroll-margin-top: 110px; }
-  .law-evidence > summary { padding: 20px 0; cursor: pointer; font-size: 14px; font-weight: 600; border-top: 1px solid var(--border); }
 </style>

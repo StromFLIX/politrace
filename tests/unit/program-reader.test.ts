@@ -1,9 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { getData } from '../../src/lib/data';
-import { isLayoutLeaf, readingChapters, readingHtml, searchText } from '../../src/lib/program-reader';
+import { readingHtml } from '../../src/lib/program-reader';
+import { searchText } from '../../src/lib/program-reader-search';
+import { readingPageHref, sourcePageAnchors } from '../../src/lib/document-anchors';
+import { readingEdition } from '../../src/lib/readings';
 import type { Program } from '../../src/lib/types';
 
-describe('untrusted programme Markdown', () => {
+describe('untrusted document Markdown', () => {
   it('renders emphasis, lists and soft line wraps without exposing Markdown syntax', () => {
     const html = readingHtml('**Konkrete Zusage**\n\nEin Satz\nauf zwei PDF-Zeilen.\n\n- Punkt eins\n- Punkt zwei');
     expect(html).toContain('<strong>Konkrete Zusage</strong>');
@@ -49,23 +52,7 @@ describe('untrusted programme Markdown', () => {
   });
 });
 
-describe('source-order programme reader', () => {
-  it('preserves all existing leaves and their order without changing canonical data', () => {
-    for (const dataset of ['demo', 'live'] as const) {
-      for (const program of getData(dataset).programs) {
-        const before = JSON.stringify(program);
-        const chapters = readingChapters(program);
-        const ids = chapters.flatMap(c => c.blocks.filter(b => b.kind === 'passage').map(b => b.leaf.id));
-        expect(ids).toEqual(program.leaves.map(l => l.id));
-        expect(new Set(ids).size).toBe(program.leaves.length);
-        expect(chapters.flatMap(c => c.leafIds)).toEqual(ids);
-        const anchors = chapters.flatMap(c => [c.id, ...c.blocks.filter(b => b.kind === 'heading').map(b => b.id)]);
-        expect(new Set(anchors).size).toBe(anchors.length);
-        expect(JSON.stringify(program)).toBe(before);
-      }
-    }
-  });
-
+describe('legacy citations in the single OCR reader', () => {
   function fixture(): Program {
     const program = structuredClone(getData('demo').programs[0]);
     program.leaves = [1, 2, 3, 4].map(n => ({ id: `demo-source-${n}`, text: `Absatz ${n}`,
@@ -79,46 +66,70 @@ describe('source-order programme reader', () => {
     return program;
   }
 
-  it('keeps a recurring thematic branch in source order with stable first anchors', () => {
-    const chapters = readingChapters(fixture());
-    expect(chapters.map(c => c.id)).toEqual(['demo-chapter-a', 'demo-chapter-b', 'demo-chapter-a-continuation-2']);
-    expect(chapters[2].continued).toBe(true);
-    expect(chapters[2].blocks[0]).toMatchObject({ id: 'demo-heading-a-continuation-2', continued: true, leafIds: ['demo-source-4'] });
-    expect(chapters[0].blocks[1]).toMatchObject({ id: 'demo-heading-a', leafIds: ['demo-source-2'] });
+  it('preserves every published paragraph and source-disclosure bookmark on its original PDF page', () => {
+    for (const program of getData('live').programs) {
+      const before = JSON.stringify(program);
+      const anchors = sourcePageAnchors(program.leaves, program.tree);
+      for (const leaf of program.leaves) {
+        expect(anchors.get(leaf.reference.page)).toContain(leaf.id);
+        expect(anchors.get(leaf.reference.page)).toContain(`${leaf.id}-source`);
+      }
+      const ids = [...anchors.values()].flat();
+      expect(new Set(ids).size).toBe(ids.length);
+      const edition = readingEdition(program.id)!;
+      expect([...anchors.keys()].every(number => edition.pages.some(p => p.number === number))).toBe(true);
+      expect(JSON.stringify(program)).toBe(before);
+    }
   });
 
-  it('never moves all parent paragraphs ahead of their interleaved subsections', () => {
+  it('preserves law passage fragments without copying source text into a new rendering', () => {
+    for (const law of getData('live').laws) {
+      const before = JSON.stringify(law);
+      const anchors = sourcePageAnchors(law.passages);
+      expect([...anchors.values()].flat()).toHaveLength(law.passages.length);
+      for (const passage of law.passages) expect(anchors.get(passage.reference.page)).toContain(passage.id);
+      const edition = readingEdition(law.id)!;
+      expect([...anchors.keys()].every(number => edition.pages.some(p => p.number === number))).toBe(true);
+      expect(JSON.stringify(law)).toBe(before);
+    }
+  });
+
+  it('preserves the old chapter, root and continuation fragment IDs', () => {
+    const program = fixture();
+    const anchors = sourcePageAnchors(program.leaves, program.tree);
+    expect(anchors.get(1)).toEqual(['demo-source-1', 'demo-source-1-source', 'demo-root', 'demo-chapter-a']);
+    expect(anchors.get(2)).toContain('demo-heading-a');
+    expect(anchors.get(3)).toContain('demo-chapter-b');
+    expect(anchors.get(4)).toContain('demo-chapter-a-continuation-2');
+    expect(anchors.get(4)).toContain('demo-heading-a-continuation-2');
+  });
+
+  it('handles subsections interleaved with parent paragraphs without moving their anchors', () => {
     const program = fixture();
     program.tree.children[0].leaf_ids.push('demo-source-3');
     program.tree.children.pop();
-    const chapters = readingChapters(program);
-    expect(chapters).toHaveLength(1);
-    expect(chapters[0].blocks.filter(b => b.kind === 'passage').map(b => b.number)).toEqual([1, 2, 3, 4]);
-    expect(chapters[0].blocks.filter(b => b.kind === 'heading').map(b => b.leafIds)).toEqual([['demo-source-2'], ['demo-source-4']]);
+    const anchors = sourcePageAnchors(program.leaves, program.tree);
+    expect(anchors.get(3)).toEqual(['demo-source-3', 'demo-source-3-source']);
+    expect(anchors.get(4)).toContain('demo-heading-a-continuation-2');
+    expect([...anchors.values()].flat()).not.toContain('demo-chapter-a-continuation-2');
   });
 
-  it('fails explicitly rather than dropping a leaf missing from the tree', () => {
+  it('fails explicitly for a leaf absent from the original tree', () => {
     const program = fixture();
     program.tree.children.pop();
-    expect(() => readingChapters(program)).toThrow('demo-source-3');
+    expect(() => sourcePageAnchors(program.leaves, program.tree)).toThrow('demo-source-3');
   });
 
-  it('compacts known heading furniture only, never text with additional policy words or amounts', () => {
-    const program = fixture();
-    const leaf = program.leaves[0];
-    const sections = ['Kapitel 1: Eine gute Zukunft'];
-    leaf.text = '1\nK A P I T E L\n# 1\n\nEINE GUTE ZUKUNFT';
-    expect(isLayoutLeaf(leaf, program, sections)).toBe(true);
-    leaf.text += '\n\n15 Euro Mindestlohn';
-    expect(isLayoutLeaf(leaf, program, sections)).toBe(false);
-    leaf.text = 'Eine gute Zukunft.';
-    expect(isLayoutLeaf(leaf, program, sections)).toBe(false);
-  });
-
-  it('keeps root-only programmes readable', () => {
+  it('handles root-only programmes and documents with no extracted evidence', () => {
     const program = fixture();
     program.tree.children = [];
     program.tree.leaf_ids = program.leaves.map(l => l.id);
-    expect(readingChapters(program)[0]).toMatchObject({ id: 'demo-root', leafIds: program.tree.leaf_ids });
+    expect(sourcePageAnchors(program.leaves, program.tree).get(1)).toContain('demo-root');
+    expect(sourcePageAnchors([]).size).toBe(0);
+  });
+
+  it('new criterion and impact links use OCR pages rather than the retired text tree', () => {
+    expect(readingPageHref('programs', 'gruene-2025', 12)).toBe('/live/programme/gruene-2025/#reading-page-12');
+    expect(readingPageHref('laws', 'bgbl-1-2025-173', 1)).toBe('/live/gesetze/bgbl-1-2025-173/#reading-page-1');
   });
 });

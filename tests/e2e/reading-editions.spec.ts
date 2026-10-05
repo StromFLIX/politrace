@@ -14,8 +14,9 @@ test('OCR reading pages retain pagination, correction logs and evidence links', 
   expect(await page.locator('.document-prose script, .document-prose img').count()).toBe(0);
   await page.screenshot({ path: `test-results/ocr-programme-${info.project.name}.png` });
   await page.locator('#reading-page-12 .document-source-links a').nth(1).click();
-  await expect(page.locator(':target')).toBeVisible();
-  await expect(page.locator('[data-evidence-edition]')).toHaveAttribute('open');
+  await expect(page.locator(':target')).toHaveAttribute('id', 'reading-page-12');
+  await expect(page.locator(':target .document-prose')).toBeVisible();
+  await expect(page.locator('[data-evidence-edition], [data-program-reader]')).toHaveCount(0);
 });
 
 test('OCR search and printing do not lose hidden pages', async ({ page }) => {
