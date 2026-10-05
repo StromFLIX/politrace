@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-117",
   "score": 1,
   "confidence": 0.78,
-  "rationale": "Die Vorschrift verlangt für Mitteilungen zur Entnahme maringenetischer Ressourcen Angaben zu den Zielen und Zwecken der Entnahme. Das schafft in diesem begrenzten Anwendungsbereich Transparenz über den Zweck; sie belegt jedoch nicht, dass der Zweck aller verwendeten Daten jederzeit nachvollziehbar ist.",
-  "law_passage_id": "bgbl-1-2026-117-p-1fda015e20e53456",
-  "law_quote": "1. die Art der Entnahme und die Ziele, denen die Entnahme dient, einschließlich der Benennung etwaiger nationaler\noder internationaler Forschungsprogramme, in deren Rahmen die Entnahme durchgeführt wird,",
+  "rationale": "Für Daten, die bei der Untersuchung genehmigter Tätigkeiten gewonnen und der Behörde übermittelt werden, nennt das Gesetz die Überwachung als Zweck. Damit ist die Verwendung dieser Daten teilweise zweckbezogen nachvollziehbar; eine jederzeitige Klarheit über jede weitere Datennutzung regelt die Vorschrift nicht.",
+  "law_passage_id": "bgbl-1-2026-117-p-7cd61af0520030ad",
+  "law_quote": "(3) Der für die Tätigkeit Verantwortliche untersucht für die Zwecke der Überwachung die Auswirkungen der\nTätigkeit nach Maßgabe von Absatz 2, dokumentiert diese nachvollziehbar und übermittelt die dabei gewonnenen\nDaten der zuständigen Behörde.",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Die Pflicht bezieht sich auf Angaben zur Entnahme maringenetischer Ressourcen, nicht nachweislich auf sämtliche spätere Datennutzungen.",
-    "Die Pflicht betrifft Entnahmemitteilungen zu maringenetischen Ressourcen, nicht allgemeine Datenverwendung.",
-    "Programmkontext des Zitats (welche Daten gemeint sind) ist nicht ersichtlich.",
-    "Das Gesetz liegt nur teilweise vor (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Programmkriterium verlangt, dass für die verwendeten Daten jederzeit nachvollziehbar ist, wozu sie genutzt werden; es zielt auf Datennutzung allgemein. Die Vorschrift (§ 5 Abs. 1 Nr. 1 HochseeSchG-Mitteilung) betrifft nur die Mitteilung zur Entnahme maringenetischer Ressourcen vor Beginn der Entnahme, also Ziele und Art der Entnahme. Das ist ein thematisch entfernter Teilbereich (Meeresforschung), kein Regelwerk zur Zweckklarheit der Datennutzung im Sinne des Kriteriums. Die Bewertung score 1 überschätzt die Reichweite. Die Pflicht belegt weder Nachvollziehbarkeit der Zwecke aller verwendeten Daten noch deren Fortdauer („jederzeit“). Der Datenbezug im Kriterium (vermutlich personenbezogene oder staatliche Daten) ist aus dem Zitat nicht ableitbar; die Verbindung beruht auf bloßer Wortähnlichkeit zu „Zweck/Ziele“. Ein Zusammenhang über den Datenverwaltungsplan oder die Mitteilungen zu digitalen Sequenzinformationen wäre denkbar, wird aber im vorgeschlagenen Zitat nicht belegt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "cc3fba4d0a514fe5242ddd146b63c67def7f123d2acc51dfb9aa938b85feec68",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "bb19590282f6eb33f97454749cd69058285c52061a464228d4e72292c90b920d"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "5803c3ba8dabea2cea487e5234611e7eef5b52ba13819a6919e731bd5dc33fcb"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "29eb571718dbebcc9948b03dcf96b6fd7fb73af3ba5356928fb43adaec41eb15"
+      "input_sha256": "cc3fba4d0a514fe5242ddd146b63c67def7f123d2acc51dfb9aa938b85feec68"
     }
   ]
 }

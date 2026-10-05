@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "id": "impact-374945f60779bb85",
+  "dataset": "live",
+  "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+  "law_id": "bgbl-1-2025-301",
+  "score": -2,
+  "confidence": 0.88,
+  "rationale": "Das Gesetz erlaubt die längere Speicherung von Protokolldaten bei tatsächlichen Anhaltspunkten für eine Gefahr, längstens für 18 Monate. Die Daten können einen wiederherstellbaren Personenbezug haben; ein Richtervorbehalt ist für diese Speicherung nicht vorgesehen.",
+  "law_passage_id": "bgbl-1-2025-301-p-33087159a141e984",
+  "law_quote": "Protokolldaten nach Absatz 1 Satz 1 Nummer 1 dürfen über den für die automatisierte Auswertung nach\nAbsatz 1 Satz 1 Nummer 1 erforderlichen Zeitraum hinaus, längstens jedoch für 18 Monate, gespeichert werden,\nsoweit tatsächliche Anhaltspunkte dafür bestehen, dass diese im Falle der Bestätigung eines Verdachts nach\nAbsatz 4 Satz 2 zur Abwehr von Gefahren, die von dem gefundenen Schadprogramm ausgehen, oder zur\nErkennung und Abwehr anderer Schadprogramme oder sonstiger erheblicher Gefahren für die Kommunikations­\ntechnik des Bundes erforderlich sein können.",
+  "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt\nvorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86",
+    "decided_at": "2026-10-05",
+    "previous_sha256": null
+  },
+  "review": {
+    "status": "proposed",
+    "reviewer": null,
+    "reviewed_at": null,
+    "note": ""
+  },
+  "generation": [
+    {
+      "model": "openai/gpt-6-luna",
+      "prompt_version": "politrace-evidence-v3",
+      "input_sha256": "d2aa7eb5e25973187d855e4ccacd4b26c4917541efc1cd9563ccb5f8c20bbbf5"
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "prompt_version": "politrace-evidence-v3",
+      "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86"
+    }
+  ]
+}

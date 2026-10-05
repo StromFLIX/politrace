@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2026-111",
   "score": 1,
   "confidence": 0.96,
-  "rationale": "Das Gesetz benennt das Deutsche Institut für Menschenrechte als unabhängigen Mechanismus zur Überwachung der Grundrechtseinhaltung. Eine Orientierung an den Leitlinien der EU-Agentur für Grundrechte ist im Ausschnitt nicht belegt; zudem ist die Überwachung der Vorschriften über Inhaftnahme und Unterbringung ausgenommen. Daher wird die enge Prüfung nur teilweise erfüllt.",
+  "rationale": "Das Gesetz weist dem Deutschen Institut für Menschenrechte eine unabhängige Grundrechtsüberwachung in bestimmten GEAS-Verfahren zu. Inhaftnahme und Unterbringung sind ausgenommen; eine Orientierung an Leitlinien der EU-Agentur für Grundrechte geht aus der Vorschrift nicht hervor.",
   "law_passage_id": "bgbl-1-2026-111-p-985f5ccaf711bbc5",
-  "law_quote": "Das Deutsche Institut für Menschenrechte e. V. hat zugleich die Funktionen eines unabhängigen",
-  "criterion_quote": "Wir wollen, dass die Überwachung der Einhaltung der Grundrechte",
-  "caveats": [
-    "Eine Orientierung an den Leitlinien der EU-Agentur für Grundrechte ist im zitierten Ausschnitt nicht belegt.",
-    "Die Überwachung der Vorschriften über Inhaftnahme und Unterbringung ist ausgenommen.",
-    "Der Anwendungsbereich ist auf die Asyl- und Überprüfungsverfahren der GEAS-Verordnungen beschränkt, nicht auf Grundrechte in Deutschland allgemein.",
-    "Ein Bezug zu den Leitlinien der EU-Agentur für Grundrechte ist im Gesetzestext nicht belegt.",
-    "Die Überwachung der Vorschriften über Inhaftnahme und Unterbringung ist ausdrücklich ausgenommen.",
-    "Das Gesetz liegt nur als Teilausschnitt vor (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Gesetz überträgt dem Deutschen Institut für Menschenrechte die Funktion eines unabhängigen Überwachungsmechanismus nach EU-Verordnungen (2024/1356, 2024/1348). Das ist eine gesetzliche Regelung zu einem Grundrechtsmonitoring, jedoch nur im Asyl- und Überprüfungskontext und nicht allgemein für die Einhaltung der Grundrechte in Deutschland. Eine Orientierung an den Leitlinien der EU-Agentur für Grundrechte (FRA) wird im Text nicht belegt; die Bezugsgrundlage sind andere EU-Verordnungen. Überwachung von Inhaftnahme und Unterbringung ist ausgenommen. Der Vorschlag ist daher nur ein Themenbezug mit erheblicher Reichweitenlücke; der Score 1 und die Konfidenz 0,96 sind nicht gedeckt."
-  ],
-  "verification": "needs_review",
+  "law_quote": "„(3) Das Deutsche Institut für Menschenrechte e. V. hat zugleich die Funktionen eines unabhängigen\nMechanismus zur Überwachung der Einhaltung der Grundrechte (unabhängiger Überwachungsmechanis­\nmus) gemäß Artikel 10 Absatz 2 der Verordnung (EU) 2024/1356 und Artikel 43 Absatz 4 der Verordnung\n(EU) 2024/1348, mit Ausnahme der Überwachung der Einhaltung der Vorschriften über die Inhaftnahme und\ndie Unterbringung.“",
+  "criterion_quote": "Wir wollen, dass die Überwachung der Einhaltung der Grundrechte\nin Deutschland gemäß den Leitlinien der\nEU-Agentur für Grundrechte gesetzlich geregelt wird",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "db7d3cf7a4232f7fc0df688e2a079f8c8407e491043b3065093ababf85c0978b",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "b4dfa47fe770c488fa6bd3d320047e280f78407cbb378919673e54380db136a8"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "e0400849f150959d4889114bf4518f94e201eeb188e31a4ecdaaa69d19a75380"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "846c1acce54d36a72a85e9d85a5153872e34e7b8229c9badd573a0670c39e4c1"
+      "input_sha256": "db7d3cf7a4232f7fc0df688e2a079f8c8407e491043b3065093ababf85c0978b"
     }
   ]
 }

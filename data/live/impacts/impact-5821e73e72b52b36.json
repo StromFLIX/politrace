@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-111",
   "score": 1,
   "confidence": 0.89,
-  "rationale": "Die Pflicht zur individuellen Prüfung und Entscheidung von Asylanträgen von Familienangehörigen unterstützt teilweise eine inhaltliche Prüfung. Die Regelung belegt jedoch nicht, dass dies für sämtliche Personen gilt, die in der EU ankommen oder bereits dort sind.",
+  "rationale": "Das Gesetz verlangt, Asylanträge der bezeichneten Familienangehörigen individuell zu prüfen und zu entscheiden. Das unterstützt die Prüfung für diese Personengruppe, begründet aber keine inhaltliche Prüfung sämtlicher Asylanträge von Menschen, die in der EU ankommen oder bereits dort sind.",
   "law_passage_id": "bgbl-1-2026-111-p-80a37fa93ae1c0ff",
   "law_quote": "Asylanträge von Familienangehörigen im Sinne des Artikels 3 Nummer 9 der Verordnung (EU) 2024/1347\nwerden individuell geprüft und entschieden.",
   "criterion_quote": "Der Asylantrag von Menschen, die in der\nEU ankommen oder bereits hier sind, muss\nin der EU inhaltlich geprüft werden.",
-  "caveats": [
-    "Die Regelung ist auf Asylanträge von Familienangehörigen im Sinne der genannten Verordnung begrenzt.",
-    "Der Text belegt nicht die inhaltliche Prüfung aller Asylanträge der im Kriterium beschriebenen Personen.",
-    "Die Regelung ist auf Familienangehörige im Sinne der Verordnung (EU) 2024/1347 begrenzt.",
-    "Zu Zulässigkeitsprüfungen, sicheren Drittstaaten oder Überstellungen sagt die Passage nichts; die inhaltliche Prüfung aller Anträge ist nicht belegt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass Asylanträge von Menschen, die in der EU ankommen oder bereits hier sind, inhaltlich in der EU geprüft werden. § 26 regelt nur die individuelle Prüfung und Entscheidung von Anträgen von Familienangehörigen. Das ist ein enger Teilaspekt und ein Themenbezug, kein Beleg für die verlangte inhaltliche Prüfung. Der Vorschlag mit Score 1 ist daher nicht ausreichend gestützt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "db7d3cf7a4232f7fc0df688e2a079f8c8407e491043b3065093ababf85c0978b",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "1e30b2aa376706c6635e32fcc09c9ede3c26f7d7a018de09dd02c1c86599a25d"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "4fe32fc0944966043b233395e48cc87f68db19ccaf42f4f225a602a4b7a8458d"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "8b69586d22a84f4084a23590c16240d62615e01327086fd1637a792eaf8478ab"
+      "input_sha256": "db7d3cf7a4232f7fc0df688e2a079f8c8407e491043b3065093ababf85c0978b"
     }
   ]
 }

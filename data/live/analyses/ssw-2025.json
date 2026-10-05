@@ -30735,7 +30735,7 @@
     {
       "law_id": "bgbl-1-2025-301",
       "analysis_sha256": "22889e67f3143a6e71c8e3b4021dbb4bd5f831eb168338d248aa4102e85ea794",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0ef3314a054f78f7",
@@ -31183,6 +31183,38 @@
           "verification": null
         },
         {
+          "criterion_id": "ssw-2025-ac-34f1a5f346146270",
+          "disposition": "proposed_link",
+          "rationale": "Bestimmte Betreiber und Anbieter öffentlicher Telekommunikation müssen ihre Sicherheitsmaßnahmen gefahrenübergreifend auf Netz- und Informationssysteme sowie deren physische Umgebung ausrichten. Das verbindet beide Schutzbereiche für diese Einrichtungen, regelt aber keine allgemeine Abstimmung der Maßnahmen für kritische Infrastruktur.",
+          "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "26eb572fc8b746f3bd67777f90c93d9809c29a50fd3750a3334f7ca6546a97b9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86"
+            }
+          ],
+          "impact_id": "impact-19824dd06a168459",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.81,
+            "rationale": "Bestimmte Betreiber und Anbieter öffentlicher Telekommunikation müssen ihre Sicherheitsmaßnahmen gefahrenübergreifend auf Netz- und Informationssysteme sowie deren physische Umgebung ausrichten. Das verbindet beide Schutzbereiche für diese Einrichtungen, regelt aber keine allgemeine Abstimmung der Maßnahmen für kritische Infrastruktur.",
+            "law_passage_id": "bgbl-1-2025-301-p-d45a620af2c6ff80",
+            "law_quote": "Maßnahmen nach Absatz 2 von Betreibern öffentlicher Telekommunikationsnetze und Anbietern\nöffentlich zugänglicher Telekommunikationsdienste, die besonders wichtige Einrichtungen im Sinne von\n§ 28 Absatz 1 Satz 1 Nummer 3 des BSI-Gesetzes oder wichtige Einrichtungen im Sinne von § 28\nAbsatz 2 Satz 1 Nummer 2 des BSI-Gesetzes sind, müssen auf einem gefahrenübergreifenden Ansatz\nberuhen, der darauf abzielt, die Netz- und Informationssysteme und die physische Umwelt dieser Systeme\nvor Sicherheitsvorfällen zu schützen",
+            "criterion_quote": "- Wir wollen den **Schutz kritischer Infrastruktur** nach dem All-Gefahren-Ansatz\nvorantreiben und vor dem Hintergrund der hybriden Gefahrenlage eine verbesserte\nAbstimmung von Maßnahmen zur Stärkung der physischen Sicherheit und\nCybersicherheit.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-34f1a5f346146270",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "ssw-2025-ac-381001b2b63abe6e",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften betreffen IT-Sicherheit, belegen aber weder eine Zunahme von IT-Expert:innen bei der Polizei noch eine entsprechende Personalmaßnahme.",
@@ -31233,6 +31265,38 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-3a6cb57edcebffb5",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3ba3c4056887dbbb",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz schränkt das grundrechtlich geschützte Fernmeldegeheimnis durch die ausdrücklich genannten IT-Sicherheitsvorschriften ein. Damit widerspricht es dem Kriterium für dieses Bürger:innenrecht unmittelbar.",
+          "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "26eb572fc8b746f3bd67777f90c93d9809c29a50fd3750a3334f7ca6546a97b9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86"
+            }
+          ],
+          "impact_id": "impact-2f37f0a67fe59f72",
+          "judgment": {
+            "supported": true,
+            "score": -2,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz schränkt das grundrechtlich geschützte Fernmeldegeheimnis durch die ausdrücklich genannten IT-Sicherheitsvorschriften ein. Damit widerspricht es dem Kriterium für dieses Bürger:innenrecht unmittelbar.",
+            "law_passage_id": "bgbl-1-2025-301-p-769819a422ae321f",
+            "law_quote": "Das Fernmeldegeheimnis (Artikel 10 des Grundgesetzes) wird durch die §§ 7, 8, 9, 11, 12, 15 und 16\neingeschränkt.",
+            "criterion_quote": "- Wir wollen sicherstellen, dass **Bürger:innenrechte nicht** zugunsten vermeintlich\nnotwendiger Sicherheitserfordernisse **eingeschränkt werden** .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3ba3c4056887dbbb",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -31862,6 +31926,38 @@
           "verification": null
         },
         {
+          "criterion_id": "ssw-2025-ac-835ba88e1b8fea63",
+          "disposition": "proposed_link",
+          "rationale": "Sicherheitsmaßnahmen bei Erwerb, Entwicklung und Wartung von Netz- und Informationssystemen einschließlich Schwachstellenmanagement können deren Anfälligkeit verringern. Das unterstützt das Ziel im geregelten Bereich.",
+          "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d2aa7eb5e25973187d855e4ccacd4b26c4917541efc1cd9563ccb5f8c20bbbf5"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86"
+            }
+          ],
+          "impact_id": "impact-1badb8afa9a6fa1e",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.93,
+            "rationale": "Sicherheitsmaßnahmen bei Erwerb, Entwicklung und Wartung von Netz- und Informationssystemen einschließlich Schwachstellenmanagement können deren Anfälligkeit verringern. Das unterstützt das Ziel im geregelten Bereich.",
+            "law_passage_id": "bgbl-1-2025-301-p-a074cdb1bdd52d2f",
+            "law_quote": "Sicherheitsmaßnahmen bei Erwerb, Entwicklung und Wartung von Netz- und Informationssystemen,\neinschließlich Management und Offenlegung von Schwachstellen,",
+            "criterion_quote": "IT-Systeme\nfördern, die weniger anfällig für Cyberattacken und Computerviren sind.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-835ba88e1b8fea63",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "ssw-2025-ac-8a355dfa142f3162",
           "disposition": "missing_context",
           "rationale": "Der Ausschnitt verweist auf eine Meldepflicht, lässt aber deren Inhalt und die konkrete Übermittlung von Betreibern an Behörden offen.",
@@ -31968,6 +32064,38 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-8f43d4b9186207ec",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz erlaubt die längere Speicherung von Protokolldaten bei tatsächlichen Anhaltspunkten für eine Gefahr, längstens für 18 Monate. Die Daten können einen wiederherstellbaren Personenbezug haben; ein Richtervorbehalt ist für diese Speicherung nicht vorgesehen.",
+          "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d2aa7eb5e25973187d855e4ccacd4b26c4917541efc1cd9563ccb5f8c20bbbf5"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56090a9528f8968e474e7034bc58974f7576ec31fe0166f7232d2a246b177e86"
+            }
+          ],
+          "impact_id": "impact-374945f60779bb85",
+          "judgment": {
+            "supported": true,
+            "score": -2,
+            "confidence": 0.88,
+            "rationale": "Das Gesetz erlaubt die längere Speicherung von Protokolldaten bei tatsächlichen Anhaltspunkten für eine Gefahr, längstens für 18 Monate. Die Daten können einen wiederherstellbaren Personenbezug haben; ein Richtervorbehalt ist für diese Speicherung nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2025-301-p-33087159a141e984",
+            "law_quote": "Protokolldaten nach Absatz 1 Satz 1 Nummer 1 dürfen über den für die automatisierte Auswertung nach\nAbsatz 1 Satz 1 Nummer 1 erforderlichen Zeitraum hinaus, längstens jedoch für 18 Monate, gespeichert werden,\nsoweit tatsächliche Anhaltspunkte dafür bestehen, dass diese im Falle der Bestätigung eines Verdachts nach\nAbsatz 4 Satz 2 zur Abwehr von Gefahren, die von dem gefundenen Schadprogramm ausgehen, oder zur\nErkennung und Abwehr anderer Schadprogramme oder sonstiger erheblicher Gefahren für die Kommunikations­\ntechnik des Bundes erforderlich sein können.",
+            "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt\nvorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -35185,7 +35313,7 @@
     {
       "law_id": "bgbl-1-2025-325",
       "analysis_sha256": "1c4235f3bdd1f6ba4b3c01f73c2f994b206da8e03b76c18976d736fd5ce9868b",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-12e9870ca132d544",
@@ -35212,6 +35340,442 @@
       ],
       "omitted_count": 990,
       "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-12e9870ca132d544",
+          "disposition": "no_supported_link",
+          "rationale": "Der Staatsvertrag errichtet ein gemeinsames System von Bund und Ländern für den nationalen und grenzüberschreitenden Datenaustausch; ein gemeinsames Digitalisierungsprojekt mit Dänemark oder die im Kriterium genannten Ziele sieht der Text nicht vor.",
+          "input_sha256": "709220e2d163482231bf7c532b1be09cecf07df48ad3cb31f62030ef6ebf1ad5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "709220e2d163482231bf7c532b1be09cecf07df48ad3cb31f62030ef6ebf1ad5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Staatsvertrag errichtet ein gemeinsames System von Bund und Ländern für den nationalen und grenzüberschreitenden Datenaustausch; ein gemeinsames Digitalisierungsprojekt mit Dänemark oder die im Kriterium genannten Ziele sieht der Text nicht vor.",
+            "law_passage_id": "bgbl-1-2025-325-p-e928539a95eda6f3",
+            "law_quote": "Die Vertragsparteien errichten und betreiben das NOOTS als gemeinsames informationstechnisches System und entwickeln es gemeinsam weiter. Dieses System dient dem nationalen und grenzüberschreitenden Abruf und der Übermittlung von Nachweisen und Daten durch öffentliche Stellen zur Erfüllung öffentlicher Aufgaben.",
+            "criterion_quote": "Wir wollen, dass der Bund ein gemeinsames Digitalisierungsprojekt mit Dänemark startet",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-12e9870ca132d544",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt das deutsche NOOTS und dessen Anschluss an das EU-OOTS, nicht ein Gesetzesinitiativrecht des Europäischen Parlaments.",
+          "input_sha256": "7f7108636a03e4b04752cd762dd561fe0c3021c74e458ecb878c09c1179da0cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f7108636a03e4b04752cd762dd561fe0c3021c74e458ecb878c09c1179da0cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt das deutsche NOOTS und dessen Anschluss an das EU-OOTS, nicht ein Gesetzesinitiativrecht des Europäischen Parlaments.",
+            "law_passage_id": "bgbl-1-2025-325-p-e5f4163d4af08cf6",
+            "law_quote": "Das NOOTS stellt einen Anschluss an das technische System nach Artikel 14 der Verordnung (EU) 2018/1724 des Europäischen Parlaments und des Rates vom 2. Oktober 2018 über die Einrichtung eines einheitlichen digitalen Zugangstors\nzu Informationen, Verfahren, Hilfs- und Problemlösungsdiensten und zur Änderung der Verordnung (EU) Nr. 1024/2012 (Single\nDigital Gateway-Verordnung) (ABl. L 295 vom 21.11.2018, S. 1) her. Die Verpflichtung zum Anschluss an dieses EU-OOTS ergibt\nsich aus der Verordnung (EU) 2018/1724.",
+            "criterion_quote": "- Wir wollen ein **direktes Gesetzesinitiativrecht für das** **Europäische Parlament** . Als\neinziges vom Europäischen Volk gewähltes EU-Organ vertritt es die Interessen der\neuropäischen Bürger:innen. Eine Ausweitung seiner Befugnisse stärkt die\ndemokratische Legitimität der EU.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Der Staatsvertrag regelt den automatisierten Abruf und die Übermittlung von Verwaltungsdaten sowie Datenschutzmaßnahmen; Einschränkungen zugunsten von Sicherheitsbehörden oder die geforderten strengen Voraussetzungen dazu regelt er nicht.",
+          "input_sha256": "0eb979b468a64ffa8ce9539f8263e0824270d87d1c03c3a8876c9998196b07ff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0eb979b468a64ffa8ce9539f8263e0824270d87d1c03c3a8876c9998196b07ff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Staatsvertrag regelt den automatisierten Abruf und die Übermittlung von Verwaltungsdaten sowie Datenschutzmaßnahmen; Einschränkungen zugunsten von Sicherheitsbehörden oder die geforderten strengen Voraussetzungen dazu regelt er nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+          "disposition": "no_supported_link",
+          "rationale": "Der Staatsvertrag regelt ein digitales System für den Austausch von Verwaltungsdaten, nicht das Wahlalter bei Bundestagswahlen.",
+          "input_sha256": "0eb979b468a64ffa8ce9539f8263e0824270d87d1c03c3a8876c9998196b07ff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0eb979b468a64ffa8ce9539f8263e0824270d87d1c03c3a8876c9998196b07ff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Staatsvertrag regelt ein digitales System für den Austausch von Verwaltungsdaten, nicht das Wahlalter bei Bundestagswahlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3d1a2e8f23b1f27e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet ein gemeinsames IT-System für den Abruf und die Übermittlung von Verwaltungsdaten ein; eine Strategie zur ökologischen Rettung der Flensburger Förde mit Dänemark regelt es nicht.",
+          "input_sha256": "2a3610fea937b38bf55e1295ff3eae716e49b7b2e84011304f0c902ac71ac96d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2a3610fea937b38bf55e1295ff3eae716e49b7b2e84011304f0c902ac71ac96d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet ein gemeinsames IT-System für den Abruf und die Übermittlung von Verwaltungsdaten ein; eine Strategie zur ökologischen Rettung der Flensburger Förde mit Dänemark regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-325-p-e928539a95eda6f3",
+            "law_quote": "Die Vertragsparteien errichten und betreiben das NOOTS als gemeinsames informationstechnisches System und entwickeln es gemeinsam weiter. Dieses System dient dem nationalen und grenzüberschreitenden Abruf und der Übermittlung von Nachweisen und Daten durch öffentliche Stellen zur Erfüllung öffentlicher Aufgaben.",
+            "criterion_quote": "Wir wollen eine gemeinsame Strategie von Bund, Land und Dänemark zur Rettung der Flensburger Förde.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3d1a2e8f23b1f27e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "missing_context",
+          "rationale": "Für das NOOTS ist das Bundesverwaltungsamt als Verantwortlicher benannt; ob bei der Verarbeitung im Rahmen öffentlicher Aufgaben auch private Stellen beteiligt sind, lässt sich aus den vorliegenden Regelungen nicht feststellen.",
+          "input_sha256": "d139e4ff620a7b51e9b424da4b903f40ea24487cca9b04ac106f266c077a8ef3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d139e4ff620a7b51e9b424da4b903f40ea24487cca9b04ac106f266c077a8ef3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Für das NOOTS ist das Bundesverwaltungsamt als Verantwortlicher benannt; ob bei der Verarbeitung im Rahmen öffentlicher Aufgaben auch private Stellen beteiligt sind, lässt sich aus den vorliegenden Regelungen nicht feststellen.",
+            "law_passage_id": "bgbl-1-2025-325-p-40c47f7cb2477c04",
+            "law_quote": "Das Bundesverwaltungsamt als die für den Betrieb und die Bereitstellung des NOOTS zuständige Stelle\n(betriebsverantwortliche Stelle) nach § 4 ist „Verantwortlicher“ im Sinne von Artikel 4 Nummer 7 der Verordnung (EU) 2016/679",
+            "criterion_quote": "- Wir wollen, dass die Erhebung, Verarbeitung und Nutzung **persönlicher Daten** im\nRahmen öffentlicher Aufgaben **nicht privatisiert** wird.",
+            "caveats": [
+              "Die Regelung zur Verantwortlichkeit belegt nicht, ob weitere Stellen, insbesondere private Stellen, an Verarbeitungsvorgängen beteiligt sind."
+            ],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft ein gemeinsames IT-System für den automatisierten Austausch von Verwaltungsnachweisen; es ergänzt Artikel 6 GG nicht um Kinderrechte.",
+          "input_sha256": "7a44a810cd18dbc14efe7107b0abfab1b06c3c711760902bb0c57e4c1ecf4b7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7a44a810cd18dbc14efe7107b0abfab1b06c3c711760902bb0c57e4c1ecf4b7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft ein gemeinsames IT-System für den automatisierten Austausch von Verwaltungsnachweisen; es ergänzt Artikel 6 GG nicht um Kinderrechte.",
+            "law_passage_id": "bgbl-1-2025-325-p-ed82dc18173c75c0",
+            "law_quote": "haben das Ziel, ein gemeinsames flächendeckendes informationstechnisches System zu etablieren, das perspektivisch den gesamten Datenaustausch zwischen allen öffentlichen Stellen automatisiert, reibungslos, schnell und damit auch kostengünstig und bürokratiearm ermöglicht.",
+            "criterion_quote": "Kinderrechte im Grundgesetz verankern und fordern eine eigenständige Formulierung unter Artikel 6 des Grundgesetzes",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-557a47a4458d23c5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt ein IT-System für den Austausch von Verwaltungsnachweisen; es setzt weder den Deutschlandtakt um noch behandelt es Bahnstrecken wie Hamburg–Hannover.",
+          "input_sha256": "7a44a810cd18dbc14efe7107b0abfab1b06c3c711760902bb0c57e4c1ecf4b7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7a44a810cd18dbc14efe7107b0abfab1b06c3c711760902bb0c57e4c1ecf4b7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt ein IT-System für den Austausch von Verwaltungsnachweisen; es setzt weder den Deutschlandtakt um noch behandelt es Bahnstrecken wie Hamburg–Hannover.",
+            "law_passage_id": "bgbl-1-2025-325-p-ed82dc18173c75c0",
+            "law_quote": "haben das Ziel, ein gemeinsames flächendeckendes informationstechnisches System zu etablieren, das perspektivisch den gesamten Datenaustausch zwischen allen öffentlichen Stellen automatisiert, reibungslos, schnell und damit auch kostengünstig und bürokratiearm ermöglicht.",
+            "criterion_quote": "den Deutschlandtakt konsequent umsetzen. Dazu zählen für uns auch Neubaustrecken wie zwischen Hamburg und Hannover.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-557a47a4458d23c5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-582c3093fe843afc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt dem NOOTS-Staatsvertrag zu; Regelungen zur Bundesförderung politischer Stiftungen nationaler Minderheiten enthält es nicht.",
+          "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stimmt dem NOOTS-Staatsvertrag zu; Regelungen zur Bundesförderung politischer Stiftungen nationaler Minderheiten enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-582c3093fe843afc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5b39dc5014cc43f9",
+          "disposition": "no_supported_link",
+          "rationale": "Der Staatsvertrag regelt ein System zum Abruf und zur Übermittlung von Verwaltungsdaten; eine Änderung des EU-Einstimmigkeitsprinzips ist nicht vorgesehen.",
+          "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Staatsvertrag regelt ein System zum Abruf und zur Übermittlung von Verwaltungsdaten; eine Änderung des EU-Einstimmigkeitsprinzips ist nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5b39dc5014cc43f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-788d76736ce02826",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft den Datenaustausch öffentlicher Stellen, nicht den Ausbau oder die Verfügbarkeit von Breitbandverbindungen in Schleswig-Holstein.",
+          "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft den Datenaustausch öffentlicher Stellen, nicht den Ausbau oder die Verfügbarkeit von Breitbandverbindungen in Schleswig-Holstein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-788d76736ce02826",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8f43d4b9186207ec",
+          "disposition": "no_supported_link",
+          "rationale": "Das NOOTS ermöglicht den Abruf und die Übermittlung von Daten für öffentliche Aufgaben, ist aber nicht als Lageerfassung für Katastrophen oder als Datenbasis für Einsatzkräfte geregelt.",
+          "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "90e035448ba063c493cb9ba5c548dbad6cda30f7097ba0192550bb8eaf9d3d3e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das NOOTS ermöglicht den Abruf und die Übermittlung von Daten für öffentliche Aufgaben, ist aber nicht als Lageerfassung für Katastrophen oder als Datenbasis für Einsatzkräfte geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8f43d4b9186207ec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-95c0e4fa94294681",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt ein gemeinsames IT-System für den Datenaustausch öffentlicher Stellen; eine verbindliche Planung des Marschbahnkorridors wird nicht geregelt.",
+          "input_sha256": "a666a69f45dc450d48446200accd5c9a2ea90ef1399d0b0a598f36eed88ea53a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a666a69f45dc450d48446200accd5c9a2ea90ef1399d0b0a598f36eed88ea53a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt ein gemeinsames IT-System für den Datenaustausch öffentlicher Stellen; eine verbindliche Planung des Marschbahnkorridors wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-325-p-e928539a95eda6f3",
+            "law_quote": "Die Vertragsparteien errichten und betreiben das NOOTS als gemeinsames informationstechnisches System und entwickeln es gemeinsam weiter. Dieses System dient dem nationalen und grenzüberschreitenden Abruf und der Übermittlung von Nachweisen und Daten durch öffentliche Stellen zur Erfüllung öffentlicher Aufgaben.",
+            "criterion_quote": "Die Bundesregierung, das Land SchleswigHolstein und Dänemark müssen hier gemeinsam und verbindlich planen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-95c0e4fa94294681",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-a8729ce551886042",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kostenregelung betrifft die Finanzierung des NOOTS, nicht eine Beteiligung Deutschlands und Schleswig-Holsteins an Steuereinnahmen.",
+          "input_sha256": "a666a69f45dc450d48446200accd5c9a2ea90ef1399d0b0a598f36eed88ea53a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a666a69f45dc450d48446200accd5c9a2ea90ef1399d0b0a598f36eed88ea53a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Kostenregelung betrifft die Finanzierung des NOOTS, nicht eine Beteiligung Deutschlands und Schleswig-Holsteins an Steuereinnahmen.",
+            "law_passage_id": "bgbl-1-2025-325-p-99c60c592d762afe",
+            "law_quote": "Die Vertragsparteien tragen die Kosten für die Errichtung, den Betrieb und die Weiterentwicklung des NOOTS gemeinsam. In den Jahren 2025 und 2026 erfolgt die Finanzierung über die im Wirtschaftsplan der FITKO veranschlagten Mittel gemäß den Regelungen des IT-Staatsvertrages. Die Finanzierung erfolgt ab dem Jahr 2027 in Höhe von 53,4 % der Gesamtkosten über die im Wirtschaftsplan der FITKO veranschlagten Mittel gemäß den Regelungen des IT-Staatsvertrages und in Höhe von 46,6 % der Gesamtkosten durch einen zusätzlichen festen Finanzierungsanteil des Bundes.",
+            "criterion_quote": "auch Deutschland und Schleswig-Holstein müssen aber an diesen Steuereinnahmen beteiligt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-a8729ce551886042",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-af31b06d80321489",
+          "disposition": "missing_context",
+          "rationale": "Ab 2027 werden 53,4 % der Gesamtkosten über FITKO-Mittel und 46,6 % durch einen festen Bundesanteil finanziert. Ohne die nicht mitgelieferten IT-Staatsvertragsregeln lässt sich nicht feststellen, ob die breitesten Schultern den größten Anteil tragen.",
+          "input_sha256": "17c4a2474ba26dc962d6194a754abdebafc703c6ab1dc1610b9d3e7f8f57fa75",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "17c4a2474ba26dc962d6194a754abdebafc703c6ab1dc1610b9d3e7f8f57fa75"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Ab 2027 werden 53,4 % der Gesamtkosten über FITKO-Mittel und 46,6 % durch einen festen Bundesanteil finanziert. Ohne die nicht mitgelieferten IT-Staatsvertragsregeln lässt sich nicht feststellen, ob die breitesten Schultern den größten Anteil tragen.",
+            "law_passage_id": "bgbl-1-2025-325-p-99c60c592d762afe",
+            "law_quote": "Die Finanzierung erfolgt ab dem Jahr 2027 in Höhe von 53,4 % der Gesamtkosten über die im Wirtschaftsplan der FITKO veranschlagten Mittel gemäß den Regelungen des IT-Staatsvertrages und in Höhe von 46,6 % der Gesamtkosten durch einen zusätzlichen festen Finanzierungsanteil des Bundes.",
+            "criterion_quote": "So werden nicht nur die\nLasten auf alle Schultern verteilt, sondern die breitesten Schultern tragen auch den\ngrößten Anteil.",
+            "caveats": [
+              "Die Verteilung der FITKO-Mittel nach dem IT-Staatsvertrag ist nicht mitgeliefert."
+            ],
+            "criterion_id": "ssw-2025-ac-af31b06d80321489",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-bdbf3c4ee56ab2ca",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt das digitale NOOTS-Verwaltungssystem; eine Berücksichtigung der Verkehrsprognose 2040 im Bundesverkehrswegeplan ist darin nicht vorgesehen.",
+          "input_sha256": "17c4a2474ba26dc962d6194a754abdebafc703c6ab1dc1610b9d3e7f8f57fa75",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "17c4a2474ba26dc962d6194a754abdebafc703c6ab1dc1610b9d3e7f8f57fa75"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt das digitale NOOTS-Verwaltungssystem; eine Berücksichtigung der Verkehrsprognose 2040 im Bundesverkehrswegeplan ist darin nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2025-325-p-ed82dc18173c75c0",
+            "law_quote": "haben das Ziel, ein gemeinsames flächendeckendes informationstechnisches System zu etablieren, das perspektivisch den gesamten Datenaustausch zwischen allen öffentlichen Stellen automatisiert, reibungslos, schnell und damit auch kostengünstig und bürokratiearm ermöglicht.",
+            "criterion_quote": "Wir fordern, dass die Ergebnisse der **Verkehrsprognose 2040** für Schleswig-Holstein\n**in** die Erstellung des kommenden **Bundesverkehrswegeplan** einfließen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-bdbf3c4ee56ab2ca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "ssw-2025-ac-c750630d296eac91",
           "disposition": "no_supported_link",
@@ -35402,12 +35966,1176 @@
         "ssw-2025-ac-ff015c83fe59acb4"
       ],
       "omitted_count": 966,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0609372edec829d8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Strom- und Energiesteuern, nicht die steuerfreie Behandlung von Erträgen in einem Altersvorsorgekonto.",
+          "input_sha256": "f3046c1c0d65853d4199d352753ef060c7742749b3752da38d41ee54567568f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f3046c1c0d65853d4199d352753ef060c7742749b3752da38d41ee54567568f5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Strom- und Energiesteuern, nicht die steuerfreie Behandlung von Erträgen in einem Altersvorsorgekonto.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kursgewinne,\nAusschüttungen und Zinserträge innerhalb dieses Kontos bleiben steuerfrei, solange\nsie nicht vor Renteneintritt entnommen werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-0609372edec829d8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-088f655873a84681",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Energiesteuern und Stromspeicher; Klimaschutz- oder Flächenprogramme für Niederungen und Moore sind nicht geregelt.",
+          "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften betreffen Energiesteuern und Stromspeicher; Klimaschutz- oder Flächenprogramme für Niederungen und Moore sind nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-088f655873a84681",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-08a770a757d07759",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Rückholung von Atommüll oder zu dessen langfristiger Rückholbarkeit.",
+          "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Rückholung von Atommüll oder zu dessen langfristiger Rückholbarkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-08a770a757d07759",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern Energiesteuer- und Stromsteuerrecht; ein Gesetzesinitiativrecht des Europäischen Parlaments ist nicht geregelt.",
+          "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern Energiesteuer- und Stromsteuerrecht; ein Gesetzesinitiativrecht des Europäischen Parlaments ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Voraussetzungen für Einschränkungen von Freiheits- oder Persönlichkeitsrechten durch Sicherheitsbehörden.",
+          "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7de981be77ddef3273a344552aaf15f8fa0be6db67a0c94d5fdb4a6169d1923c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Voraussetzungen für Einschränkungen von Freiheits- oder Persönlichkeitsrechten durch Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-17cbba8f9ca96cdb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Baumaßnahmen an Wärmenetzen.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt keine Baumaßnahmen an Wärmenetzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der Aufbau der dazu notwendigen\nStrukturen und erste Baumaßnahmen sollen in der kommenden Wahlperiode erfolgen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-17cbba8f9ca96cdb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1ba609dc6be21b68",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Elektrifizierung der Marschbahn.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Elektrifizierung der Marschbahn.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen eine schnellstmögliche Elektrifizierung der gesamten Marschbahn .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1ba609dc6be21b68",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-21f4c6215e3b573e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keinen Mehrwertsteuersatz für Babyprodukte.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keinen Mehrwertsteuersatz für Babyprodukte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen den Mehrwertsteuersatz für Babyprodukte auf 7 % senken, um Eltern\nund Familien zu entlasten.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-21f4c6215e3b573e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-289172b9e48412ee",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Nutzung oder Renaturierung von Niederungen und Moorflächen.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Nutzung oder Renaturierung von Niederungen und Moorflächen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen die Nutzung von Niederungen und Moorflächen anpassen und sie\nwieder in einen Zustand versetzen, in dem sie ihre Funktion als CO2-Speicher besser\nwahrnehmen können. Zum Erhalt dieser Flächen brauchen wir Klimaschutz- und\nFlächenprogramme.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-289172b9e48412ee",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2acb10fa6de99f7b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Energiesteuern, nicht die Prüfung eines Rentenmodells.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Energiesteuern, nicht die Prüfung eines Rentenmodells.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Darum\nwollen wir prüfen, ob das schwedische Rentenmodell mit seiner Kombination aus\nUmlagefinanzierung und Kapitaldeckung auch in Deutschland eingeführt werden\nkann.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2acb10fa6de99f7b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu einer Mindestmengenregelung für den im Kriterium gemeinten Zweck.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz enthält keine Regelung zu einer Mindestmengenregelung für den im Kriterium gemeinten Zweck.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "es\ndarf dafür keine Mindestmengenregelung geben.",
+            "caveats": [
+              "Der konkrete Zweck ist im vorgelegten Kriteriumszitat nicht benannt."
+            ],
+            "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu den Grenzen der Meinungs- oder Pressefreiheit.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu den Grenzen der Meinungs- oder Pressefreiheit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Recht auf freie\nMeinungsäußerung und die Pressefreiheit dürfen nur dort ihre Grenzen finden, wo\nandere Menschen dadurch in ihren Rechten beeinträchtigt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-33716d85c3d2fade",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder öffentliche Bodenpolitik noch Grundstücksmanagement oder Wohnraumentwicklung.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder öffentliche Bodenpolitik noch Grundstücksmanagement oder Wohnraumentwicklung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen eine aktive Bodenpolitik der öffentlichen Hand nach Wiener Vorbild .\nDie Stadt Wien betreibt seit rund 100 Jahren ein aktives Boden- und Grundstücksmanagement und verfügt dadurch über erhebliche bebaubare Flächen, auf denen\nWohnungsbauprogramme umgesetzt werden können. So kann die Entwicklung von\nWohnraum, ob in privater oder öffentlicher Regie, besser gesteuert werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-33716d85c3d2fade",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung dazu, ob die Verarbeitung persönlicher Daten bei öffentlichen Aufgaben privatisiert wird.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung dazu, ob die Verarbeitung persönlicher Daten bei öffentlichen Aufgaben privatisiert wird.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen, dass die Erhebung, Verarbeitung und Nutzung persönlicher Daten im\nRahmen öffentlicher Aufgaben nicht privatisiert wird.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-458f4869b9cd0515",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keinen Rahmen für weltweit produzierende und die deutschen Märkte beliefernde Unternehmen.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keinen Rahmen für weltweit produzierende und die deutschen Märkte beliefernde Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen einen gesetzlichen Rahmen für Unternehmen, die weltweit produzieren\nund unsere Märkte beliefern. Das derzeit geltende Lieferkettengesetz geht hier\nnicht weit genug .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-458f4869b9cd0515",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen ein.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen einen verbindlichen Jugendcheck des Bundes : In Zukunft soll eine\nexterne Stelle alle Gesetzesvorhaben und Verordnungen des Bundes auf ihre\nAuswirkungen auf Jugendliche überprüfen. Eine solche Gesetzesfolgenabschätzung\nkann zu mehr Jugendgerechtigkeit beitragen; sie ist wichtig, weil die Gruppe der\nMinderjährigen im politischen Raum unterrepräsentiert ist und keine direkten Einflussmöglichkeiten hat.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-47baa05c129fda83",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verknüpft Fördermaßnahmen nicht mit der Wärmenetzplanung.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verknüpft Fördermaßnahmen nicht mit der Wärmenetzplanung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen eine optimale Verzahnung von Fördermaßnahmen mit der\nentsprechenden Wärmenetzplanung .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-47baa05c129fda83",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5c4d273177e2abb6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert den Sparer-Pauschbetrag nicht.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert den Sparer-Pauschbetrag nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zweitens wollen wir den Sparer-Pauschbetrag deutlich\nerhöhen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5c4d273177e2abb6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6131edd61e344217",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Ausstattung von Behörden für die Terrorismusbekämpfung.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Ausstattung von Behörden für die Terrorismusbekämpfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen die Terrorismusbekämpfung verbessern, indem die zuständigen\nBehörden mit dem benötigten Personal und den erforderlichen technischen Geräten\nausgestattet werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6131edd61e344217",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-68f9ed6446c7a4f1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt keinen Mindestlohn fest und ändert ihn nicht.",
+          "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06c72e7d30c7889a74c522ab77cb112ec3a23385d39bedb6a903106e0097479f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt keinen Mindestlohn fest und ändert ihn nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen einen armutsfesten Mindestlohn in Höhe von mindestens 15 Euro pro\nStunde.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-68f9ed6446c7a4f1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6da690ed0826c521",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen zum Energie- und Stromsteuerrecht enthalten keine Regelung zum deutsch-dänischen Doppelbesteuerungsabkommen.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen zum Energie- und Stromsteuerrecht enthalten keine Regelung zum deutsch-dänischen Doppelbesteuerungsabkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6da690ed0826c521",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-721d98079d0fad64",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Vorgabe zur Ausstattung von Bundesneubauten mit Photovoltaikanlagen.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Vorgabe zur Ausstattung von Bundesneubauten mit Photovoltaikanlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-721d98079d0fad64",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-776e5e2cc7373fc4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln weder Ausbau noch Elektrifizierung der Strecke Neumünster–Bad Oldesloe.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen regeln weder Ausbau noch Elektrifizierung der Strecke Neumünster–Bad Oldesloe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-776e5e2cc7373fc4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-7808b2134730d15c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Energie- und Stromsteuer, enthalten aber keine Regelung zur Schließung steuerlicher Schlupflöcher oder zu Gewinnverschiebungen in Steueroasen.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Änderungen betreffen Energie- und Stromsteuer, enthalten aber keine Regelung zur Schließung steuerlicher Schlupflöcher oder zu Gewinnverschiebungen in Steueroasen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-7808b2134730d15c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-7d9c5a6a92abaf85",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine politischen Vereinbarungen zur Stärkung des Jütland-Korridors.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine politischen Vereinbarungen zur Stärkung des Jütland-Korridors.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-7d9c5a6a92abaf85",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-83922e99d4e5fd79",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Netzentgeltfreiheit von überschüssigem Abschaltstrom bis 2028.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Netzentgeltfreiheit von überschüssigem Abschaltstrom bis 2028.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-83922e99d4e5fd79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8cd42a507f8b921b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Äußerung oder Handlung der Bundesregierung zur EU-Grundrechtecharta.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Äußerung oder Handlung der Bundesregierung zur EU-Grundrechtecharta.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8cd42a507f8b921b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen erlauben bestimmte Datenübermittlungen für Steuerverfahren, regeln aber nicht, wann personenbezogene Daten gespeichert werden dürfen oder ob dafür Richtervorbehalt und konkreter Anhaltspunkt erforderlich sind.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Änderungen erlauben bestimmte Datenübermittlungen für Steuerverfahren, regeln aber nicht, wann personenbezogene Daten gespeichert werden dürfen oder ob dafür Richtervorbehalt und konkreter Anhaltspunkt erforderlich sind.",
+            "law_passage_id": "bgbl-1-2025-340-p-45fb71c3b1b89c88",
+            "law_quote": "Die Übertragungsnetzbetreiber, die Bundesnetzagentur, das Umweltbundesamt sowie das Bundesamt für Wirtschaft und Ausfuhrkontrolle dürfen Informationen, einschließlich personenbezogener Daten sowie Betriebs- und Geschäftsgeheimnisse, an die Generalzolldirektion und die Hauptzollämter übermitteln",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9a32a82153ce87df",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Rückführung der Energieversorgung in öffentliche Hände.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Rückführung der Energieversorgung in öffentliche Hände.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9a32a82153ce87df",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9bffc9243cee369b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Ausbau oder Ausschluss von LNG-Infrastruktur.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Ausbau oder Ausschluss von LNG-Infrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9bffc9243cee369b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9db0fd65e080f18a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Einspeisung von Windenergie in das Bahnstromnetz und belegen keine politische Unterstützung dafür.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Einspeisung von Windenergie in das Bahnstromnetz und belegen keine politische Unterstützung dafür.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9db0fd65e080f18a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen nicht die Regeln zur Europäischen Bürgerinitiative oder Pflichten der EU-Kommission.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen nicht die Regeln zur Europäischen Bürgerinitiative oder Pflichten der EU-Kommission.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ae69d74a39192ed2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Maßnahmen zur Umgestaltung von Häfen zu Energiehubs.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Maßnahmen zur Umgestaltung von Häfen zu Energiehubs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ae69d74a39192ed2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-aecc1a0f4789c2e7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen nicht das Markenrecht oder den Schutz gebräuchlicher Regional- und Minderheitensprachen-Begriffe.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen nicht das Markenrecht oder den Schutz gebräuchlicher Regional- und Minderheitensprachen-Begriffe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-aecc1a0f4789c2e7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b0c7bd20d490ed3e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Kriterien zur Standortsuche oder langfristigen Sicherheit eines Standorts.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Kriterien zur Standortsuche oder langfristigen Sicherheit eines Standorts.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-b0c7bd20d490ed3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-c2286d0679f58e26",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln keine transparente Darstellung staatlicher Beschaffungen, Subventionen oder Förderungen.",
+          "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fcce551f8dd366ee811b118165f94af3c0ad1babfa94282cb46d85144458d221"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen regeln keine transparente Darstellung staatlicher Beschaffungen, Subventionen oder Förderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-c2286d0679f58e26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d07dff38a2b54e53",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt hier Stromsteuer für bestimmte betriebliche Entnahmen, nicht den Verbleib der Grundversorgung in öffentlicher Hand.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz regelt hier Stromsteuer für bestimmte betriebliche Entnahmen, nicht den Verbleib der Grundversorgung in öffentlicher Hand.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d07dff38a2b54e53",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-daf621be637df34f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Erlaubnis betrifft Wind- oder Solarstrom, der am Erzeugungsort ohne öffentliches Netz zur Stromerzeugung entnommen wird; eine Erleichterung der direkten Windstromnutzung durch energieintensive Industrien ergibt sich daraus nicht.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.89,
+            "rationale": "Die Erlaubnis betrifft Wind- oder Solarstrom, der am Erzeugungsort ohne öffentliches Netz zur Stromerzeugung entnommen wird; eine Erleichterung der direkten Windstromnutzung durch energieintensive Industrien ergibt sich daraus nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-daf621be637df34f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e74cd12ecbe032c8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Energie- und Stromsteuer, nicht den steuerlichen Abzug von Gewerkschaftsbeiträgen.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen Energie- und Stromsteuer, nicht den steuerlichen Abzug von Gewerkschaftsbeiträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-e74cd12ecbe032c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e9817a7ab2be7c50",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ändern weder die Nutzung von Niederungen und Moorflächen noch deren Funktion als CO₂-Speicher.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen ändern weder die Nutzung von Niederungen und Moorflächen noch deren Funktion als CO₂-Speicher.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-e9817a7ab2be7c50",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Regelung zur grenzüberschreitenden Verwendung wirtschaftlicher Bundesförderprogramme.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen enthalten keine Regelung zur grenzüberschreitenden Verwendung wirtschaftlicher Bundesförderprogramme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f12ecaffbd3072cc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Fortführung grenzüberschreitender EU-Strukturhilfen nach 2027.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Fortführung grenzüberschreitender EU-Strukturhilfen nach 2027.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-f12ecaffbd3072cc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ff015c83fe59acb4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln keine Einrichtung oder Verhinderung von CO₂-Endlagern im Meer oder an Land.",
+          "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59251eae72bcf928fc3308719e2284e79cc16dd77538fb6ac97fbee2d28ffff8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen regeln keine Einrichtung oder Verhinderung von CO₂-Endlagern im Meer oder an Land.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ff015c83fe59acb4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-341",
       "analysis_sha256": "8cc0c0a672e8b85d2b42ee7a5d0df4a7793b5758842dc6e4d9074c556257e96d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0609372edec829d8",
@@ -35430,12 +37158,507 @@
         "ssw-2025-ac-e74cd12ecbe032c8"
       ],
       "omitted_count": 993,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0609372edec829d8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln keine steuerliche Behandlung von Erträgen in einem Altersvorsorgekonto.",
+          "input_sha256": "743012a76d7717fa0380a31e819aec6c93a4a88572e3f00a4fd310990a5ca5c1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "743012a76d7717fa0380a31e819aec6c93a4a88572e3f00a4fd310990a5ca5c1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Passagen regeln keine steuerliche Behandlung von Erträgen in einem Altersvorsorgekonto.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kursgewinne,\nAusschüttungen und Zinserträge innerhalb dieses Kontos bleiben steuerfrei, solange\nsie nicht vor Renteneintritt entnommen werden.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-0609372edec829d8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Maßstäbe für Einschränkungen bürgerlicher Freiheits- und Persönlichkeitsrechte durch Sicherheitsbehörden.",
+          "input_sha256": "743012a76d7717fa0380a31e819aec6c93a4a88572e3f00a4fd310990a5ca5c1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "743012a76d7717fa0380a31e819aec6c93a4a88572e3f00a4fd310990a5ca5c1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die vorgelegten Passagen enthalten keine Maßstäbe für Einschränkungen bürgerlicher Freiheits- und Persönlichkeitsrechte durch Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir stehen für eine Innen- und Rechtspolitik, die auf oberflächliche Symbolik und\nvermeintlich einfache Lösungen verzichtet. Bürgerliche Freiheits- und Persönlichkeitsrechte\ndürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden\neingeschränkt werden, wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes\ngeeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu\nerreichen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln keine Grenzen der Meinungs- oder Pressefreiheit.",
+          "input_sha256": "743012a76d7717fa0380a31e819aec6c93a4a88572e3f00a4fd310990a5ca5c1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "743012a76d7717fa0380a31e819aec6c93a4a88572e3f00a4fd310990a5ca5c1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Passagen regeln keine Grenzen der Meinungs- oder Pressefreiheit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Recht auf freie\nMeinungsäußerung und die Pressefreiheit dürfen nur dort ihre Grenzen finden, wo\nandere Menschen dadurch in ihren Rechten beeinträchtigt werden.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3baa0dfb6f357dd8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln unter anderem die Aufhebung der Freizone Cuxhaven und Zollvorschriften; Sanktionen der EU wegen Minderheitenrechtsverletzungen sind darin nicht belegt.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen regeln unter anderem die Aufhebung der Freizone Cuxhaven und Zollvorschriften; Sanktionen der EU wegen Minderheitenrechtsverletzungen sind darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3baa0dfb6f357dd8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3e2b5309e2a41993",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu Gebäude- oder Elementarschadenversicherungen.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu Gebäude- oder Elementarschadenversicherungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3e2b5309e2a41993",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-41e9cebdb9669e5f",
+          "disposition": "missing_context",
+          "rationale": "Artikel 2 ändert zwar die Abgabenordnung, aber der vorgelegte Gesetzeskontext ist unvollständig; ob § 52 Absatz 2 geändert wurde, lässt sich daher nicht feststellen.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.85,
+            "rationale": "Artikel 2 ändert zwar die Abgabenordnung, aber der vorgelegte Gesetzeskontext ist unvollständig; ob § 52 Absatz 2 geändert wurde, lässt sich daher nicht feststellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-41e9cebdb9669e5f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen führen keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen des Bundes ein.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen führen keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen des Bundes ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6131edd61e344217",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine Ausstattung zuständiger Behörden mit technischen Geräten zur Terrorismusbekämpfung.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine Ausstattung zuständiger Behörden mit technischen Geräten zur Terrorismusbekämpfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6131edd61e344217",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Regelung zu Sperrklauseln bei Europawahlen oder zu politischen Vertretungen nationaler Minderheiten ist in den vorgelegten Bestimmungen nicht enthalten.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Regelung zu Sperrklauseln bei Europawahlen oder zu politischen Vertretungen nationaler Minderheiten ist in den vorgelegten Bestimmungen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6addaf67b3526432",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen keinen Aus- oder Neubau von Wärmenetzen und begründen dafür keine Gewährleistung des Bundes.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen keinen Aus- oder Neubau von Wärmenetzen und begründen dafür keine Gewährleistung des Bundes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6addaf67b3526432",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6da690ed0826c521",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Regelung zum deutsch-dänischen Doppelbesteuerungsabkommen oder zu dessen Ersetzung ist in den vorgelegten Bestimmungen nicht enthalten.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Regelung zum deutsch-dänischen Doppelbesteuerungsabkommen oder zu dessen Ersetzung ist in den vorgelegten Bestimmungen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6da690ed0826c521",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6e01b76579133e9a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen keine humanitären oder völkerrechtlichen Verpflichtungen der EU.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen keine humanitären oder völkerrechtlichen Verpflichtungen der EU.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6e01b76579133e9a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-703873682ba080d7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln keine Ahndung von Verstößen der EU-Mitgliedstaaten gegen Grundwerte der Union.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen regeln keine Ahndung von Verstößen der EU-Mitgliedstaaten gegen Grundwerte der Union.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-703873682ba080d7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-71eacdd141a56df0",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Abstimmung von Warnmeldungen oder Warnplattformen des Deutschen Wetterdienstes und des Dänischen Meteorologischen Instituts ist in den vorgelegten Bestimmungen nicht geregelt.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Abstimmung von Warnmeldungen oder Warnplattformen des Deutschen Wetterdienstes und des Dänischen Meteorologischen Instituts ist in den vorgelegten Bestimmungen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-71eacdd141a56df0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-7a33562ce28a1fa7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen nicht die Bereitstellung leerstehender Bundesliegenschaften zur Aufnahme von Geflüchteten.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen nicht die Bereitstellung leerstehender Bundesliegenschaften zur Aufnahme von Geflüchteten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-7a33562ce28a1fa7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-861b8a60c3bbeaf9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen schaffen keine Mobilitätsangebote für Menschen in Dörfern ohne Bahnanschluss.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen schaffen keine Mobilitätsangebote für Menschen in Dörfern ohne Bahnanschluss.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-861b8a60c3bbeaf9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ändern nicht die Vorschriften zur Europäischen Bürgerinitiative und verpflichten die EU-Kommission nicht zur Vorlage eines Gesetzentwurfs.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen ändern nicht die Vorschriften zur Europäischen Bürgerinitiative und verpflichten die EU-Kommission nicht zur Vorlage eines Gesetzentwurfs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e74cd12ecbe032c8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen führen keine steuerliche Abzugsmöglichkeit für Gewerkschaftsbeiträge über den Arbeitnehmer-Pauschbetrag hinaus ein.",
+          "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2dd8f9d90f4f362615f20169bf430557fe1b9d1c25441ebff741bacc59050604"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen führen keine steuerliche Abzugsmöglichkeit für Gewerkschaftsbeiträge über den Arbeitnehmer-Pauschbetrag hinaus ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-e74cd12ecbe032c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-342",
       "analysis_sha256": "c5714794622e95be5074be907a46bd24c300861effcd87a9762bedd623536789",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-11bdc5d740d776d7",
@@ -35452,7 +37675,332 @@
         "ssw-2025-ac-e0be5f8791deb580"
       ],
       "omitted_count": 999,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-11bdc5d740d776d7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Gesetzesänderung betrifft die Kraftfahrzeugsteuer, nicht die Ausstattung einer Bahnstrecke mit ERTMS.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Gesetzesänderung betrifft die Kraftfahrzeugsteuer, nicht die Ausstattung einer Bahnstrecke mit ERTMS.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-11bdc5d740d776d7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2a0c4922c3aa14d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert die Kraftfahrzeugsteuer und regelt keine Beteiligung fraktionsloser Abgeordneter an Austauschen.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert die Kraftfahrzeugsteuer und regelt keine Beteiligung fraktionsloser Abgeordneter an Austauschen.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2a0c4922c3aa14d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Kraftfahrzeugsteuergesetzes ergänzt Artikel 6 des Grundgesetzes nicht um Kinderrechte.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Kraftfahrzeugsteuergesetzes ergänzt Artikel 6 des Grundgesetzes nicht um Kinderrechte.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5178bdfcb5f5cd39",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Kraftfahrzeugsteuergesetz, nicht § 13b BauGB oder Vorschriften zur Umweltprüfung.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Kraftfahrzeugsteuergesetz, nicht § 13b BauGB oder Vorschriften zur Umweltprüfung.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5178bdfcb5f5cd39",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-551ef2d29369a476",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung zur Kraftfahrzeugsteuer enthält keine Bestimmungen zum Kohleausstieg oder dessen sozialverträglicher Umsetzung.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelung zur Kraftfahrzeugsteuer enthält keine Bestimmungen zum Kohleausstieg oder dessen sozialverträglicher Umsetzung.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-551ef2d29369a476",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Kraftfahrzeugsteuer, nicht ein gesetzliches Recht auf schnelles Internet.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Kraftfahrzeugsteuer, nicht ein gesetzliches Recht auf schnelles Internet.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-80c7c920890f5d0a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Steuerbefreiung für Elektrofahrzeuge legt kein Ziel der Klimaneutralität Deutschlands bis 2035 fest.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Steuerbefreiung für Elektrofahrzeuge legt kein Ziel der Klimaneutralität Deutschlands bis 2035 fest.",
+            "law_passage_id": "bgbl-1-2025-342-p-fccb7c2d1cd862e0",
+            "law_quote": "Von der Steuer befreit ist das Halten von Elektrofahrzeugen im Sinne des § 9 Absatz 2.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-80c7c920890f5d0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-860df1cbb894e5ed",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Kraftfahrzeugsteuer; Regelungen zu Personal an Gerichten enthält das Gesetz nicht.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Kraftfahrzeugsteuer; Regelungen zu Personal an Gerichten enthält das Gesetz nicht.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-860df1cbb894e5ed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-a65a516c0cd393e9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert die Kraftfahrzeugsteuer und enthält keine Bestimmungen zu Bundesinvestitionen in die Justiz.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert die Kraftfahrzeugsteuer und enthält keine Bestimmungen zu Bundesinvestitionen in die Justiz.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-a65a516c0cd393e9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ac4499fd63342fbc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kraftfahrzeugsteueränderung enthält keine nationale Strategie zur Beendigung von Obdachlosigkeit.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Kraftfahrzeugsteueränderung enthält keine nationale Strategie zur Beendigung von Obdachlosigkeit.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ac4499fd63342fbc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d907f59d079be065",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Kraftfahrzeugsteuer und ändert nicht das gesetzliche Wahlalter.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Kraftfahrzeugsteuer und ändert nicht das gesetzliche Wahlalter.",
+            "law_passage_id": "bgbl-1-2025-342-p-fb72531842aea229",
+            "law_quote": "Das Kraftfahrzeugsteuergesetz 2002 ... wird wie folgt geändert:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d907f59d079be065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e0be5f8791deb580",
+          "disposition": "no_supported_link",
+          "rationale": "Die Steuerbefreiung für Elektrofahrzeuge verlängert kein Sonderförderprogramm für den Tourismus.",
+          "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301d744262f5e912c6f5cd6e40a0a887af7748db3205e3397c0793d4458d5dd0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Steuerbefreiung für Elektrofahrzeuge verlängert kein Sonderförderprogramm für den Tourismus.",
+            "law_passage_id": "bgbl-1-2025-342-p-fccb7c2d1cd862e0",
+            "law_quote": "Von der Steuer befreit ist das Halten von Elektrofahrzeugen im Sinne des § 9 Absatz 2.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-e0be5f8791deb580",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-343",
@@ -41933,45 +44481,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3190,
-    "cache_hits": 21,
-    "subdivision_cache_hits": 0,
+    "calls": 3276,
+    "cache_hits": 27,
+    "subdivision_cache_hits": 6,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 18.55824,
-    "reported_cost_calls": 3024,
+    "reported_cost_usd": 19.097086,
+    "reported_cost_calls": 3109,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.042091,
-    "unknown_cost_calls": 166,
+    "unknown_cost_reserved_usd": 1.047164,
+    "unknown_cost_calls": 167,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 19.600332,
-    "prompt_tokens": 31489498,
-    "completion_tokens": 4529514,
+    "budget_exposure_usd": 20.144251,
+    "prompt_tokens": 32430711,
+    "completion_tokens": 4705258,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 52,
-        "reported_cost_usd": 1.2022972499999995,
+        "calls": 68,
+        "reported_cost_usd": 1.5889015,
         "unknown_cost_reserved_usd": 2.636779683484747e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 20,
-        "reported_cost_usd": 0.22713750000000002,
-        "unknown_cost_reserved_usd": 2.7755575615628914e-17,
+        "calls": 26,
+        "reported_cost_usd": 0.30106925,
+        "unknown_cost_reserved_usd": 4.163336342344337e-17,
         "pending_reserved_usd": 1.3877787807814457e-17
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 223,
-        "reported_cost_usd": 0.270991585,
-        "unknown_cost_reserved_usd": 0.057615700000000006,
-        "pending_reserved_usd": 7.806255641895632e-18
+        "calls": 287,
+        "reported_cost_usd": 0.34930137750000007,
+        "unknown_cost_reserved_usd": 0.06268860000000001,
+        "pending_reserved_usd": 0
       }
     },
     "migrations": [

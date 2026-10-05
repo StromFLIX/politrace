@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2026-111",
   "score": -1,
   "confidence": 0.91,
-  "rationale": "Die Regelung erschwert für Personen, die der Aufnahmeeinrichtung unterliegen, eine Entlassung vor der Anhörung und wirkt damit einer freien Auszugsmöglichkeit teilweise entgegen. Sie enthält zugleich Ausnahmen; aus dem Ausschnitt folgt keine allgemeine Regel für alle Geflüchteten.",
+  "rationale": "Für Personen mit einer Verpflichtung zum Aufenthalt in der Aufnahmeeinrichtung erfolgt die Entlassung vor der Höchstfrist in der Regel erst nach der Anhörung. Das erschwert einen gewünschten früheren Auszug; die Vorschrift sieht Gründe für eine vorzeitige Beendigung der Verpflichtung vor.",
   "law_passage_id": "bgbl-1-2026-111-p-41c571fbc1835d15",
-  "law_quote": "Eine Entlassung aus der Aufnahmeeinrichtung vor Ablauf der in § 47 Absatz 1 festgelegten Höchstfrist\nerfolgt in der Regel nicht, bevor die Anhörung nach § 25 durchgeführt wurde. Die Verpflichtung kann aus\nGründen der öffentlichen Gesundheitsvorsorge sowie aus sonstigen Gründen der öffentlichen Sicherheit oder\nOrdnung, insbesondere zur Gewährleistung der Unterbringung und Verteilung, beendet werden; bei Vorliegen\nanderer zwingender Gründe ist sie unverzüglich zu beenden.",
+  "law_quote": "Eine Entlassung aus der Aufnahmeeinrichtung vor Ablauf der in § 47 Absatz 1 festgelegten Höchstfrist\nerfolgt in der Regel nicht, bevor die Anhörung nach § 25 durchgeführt wurde.",
   "criterion_quote": "Geflüchtete sollten Möglichkeiten nutzen dürfen,\naus einer Unterkunft auszuziehen.",
-  "caveats": [
-    "Die Regel gilt für Entlassungen aus der Aufnahmeeinrichtung und nennt Ausnahmen; der Ausschnitt belegt keine uneingeschränkte Auszugspflicht oder -möglichkeit für alle Geflüchteten.",
-    "Der Ausschnitt ist unvollständig; § 47 Absatz 1 (Höchstfrist) und § 25 sind nicht enthalten.",
-    "Es gibt Ausnahmen und Beendigungsgründe; dies spricht gegen eine pauschale negative Bewertung.",
-    "Die Norm betrifft nur Aufnahmeeinrichtungen, nicht Gemeinschaftsunterkünfte oder eine allgemeine Auszugsmöglichkeit.",
-    "Die Wirkungsrichtung und das Ausmaß sind aus dem Text nicht eindeutig ableitbar.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass Geflüchtete aus einer Unterkunft ausziehen können, wenn sie es wollen. Die zitierte Norm (§ 49 Absatz 2 AsylG neu) regelt nur die Entlassung aus der Aufnahmeeinrichtung vor Ablauf der Höchstfrist nach § 47 Absatz 1 und die Anhörung. Sie nennt Ausnahmen und Beendigungsgründe. Das ist ein Teilaspekt, der eher eine Frist- und Verfahrensfrage betrifft als einen allgemeinen Auszug nach eigenem Wunsch. Die Richtung -1 ist daher nicht klar belegt. Die Verbindung zum Programmsatz ist wegen der Themennähe plausibel, aber zu unscharf für eine belastbare Bewertung. Der Gesetzesausschnitt ist zudem unvollständig: § 47 mit der Höchstfrist, § 25 und die Folgeregelungen fehlen. Die Wohnpflicht und die Residenzpflicht sind nur teilweise sichtbar. Die Stärke der Wirkung lässt sich daher nicht beurteilen."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "db7d3cf7a4232f7fc0df688e2a079f8c8407e491043b3065093ababf85c0978b",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "667af0ee3ff2ac2720e7b1e8d364a573189837d6083bd2cd190cb6d4f0bd5dd3"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "aff5c2a0888d076c6b842b7051acff241d43877e030faa1872ecafca7a50f51d"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "f3f5bcb2a521c4de70cc3f60fdee9058e8c2bc64c6267cb956099f791a9b0649"
+      "input_sha256": "db7d3cf7a4232f7fc0df688e2a079f8c8407e491043b3065093ababf85c0978b"
     }
   ]
 }

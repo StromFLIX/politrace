@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2026-148",
   "score": 1,
   "confidence": 0.91,
-  "rationale": "Die Vorschrift unterstützt die Nachvollziehbarkeit des Nutzungszwecks teilweise: Dateninhaber können die Angabe eines Nutzungszwecks verlangen. Das ist jedoch optional und stellt nicht sicher, dass der Zweck jeder Datennutzung jederzeit klar ist.",
+  "rationale": "Für Daten über den Nationalen Zugangspunkt können Dateninhaber von Datennutzern die Angabe des Nutzungszwecks verlangen. Das unterstützt die Nachvollziehbarkeit teilweise; eine allgemeine Pflicht zur Zweckangabe bei jeder Nutzung besteht dadurch nicht.",
   "law_passage_id": "bgbl-1-2026-148-p-627dbc5c440cbf84",
-  "law_quote": "Ein Dateninhaber kann für von ihm bereitgestellte Daten eine Registrierung der Datennutzer sowie die\nAngabe des Nutzungszwecks verlangen.",
+  "law_quote": "(3) Ein Dateninhaber kann für von ihm bereitgestellte Daten eine Registrierung der Datennutzer sowie die\nAngabe des Nutzungszwecks verlangen.",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Die Angabe des Nutzungszwecks kann verlangt werden, muss aber nicht generell verlangt werden.",
-    "Die Vorschrift belegt keine jederzeitige Klarheit für jede Datennutzung.",
-    "Die Vorschrift gilt nur für Daten über den Nationalen Zugangspunkt für intelligente Verkehrssysteme, nicht für Datennutzung allgemein.",
-    "Die Angabe des Nutzungszwecks ist optional und liegt im Ermessen des Dateninhabers.",
-    "Es fehlt ein Mechanismus, der jederzeitige Nachvollziehbarkeit sicherstellt.",
-    "Der Gesetzestext liegt nur teilweise vor (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass jederzeit klar ist, wozu welche Daten verwendet werden. Die Vorschrift (§ 8 Abs. 3) räumt Dateninhabern nur eine Möglichkeit ein, Registrierung und Angabe des Nutzungszwecks zu verlangen. Es ist weder eine Pflicht noch eine allgemeine Transparenzregel. Nach § 8 Abs. 2 dürfen die Daten zudem für jeden kommerziellen oder nichtkommerziellen Zweck genutzt werden. Der Bezug ist zu schwach und betrifft nur Daten am Nationalen Zugangspunkt. Eine Einstufung als Teilunterstützung mit positiver Richtung ist nicht belegt; es bleibt ein reiner Themenbezug."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "1ba5f66b101e08523af20a8a980d7e2613f0f97c5fdf7c75ef96304e4d1ea943",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "83c9ee46fd6d677e6a564654334c2c8040bde122b074751d81a7653eebe88a3a"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "6e085042f3005dd456e1ff362443847bd83ca3e187d0c6aad561401445f0ea03"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "201c23bf47af77adb742f800d904bd8b2288cb9874debb5e9c42ce0df61c2762"
+      "input_sha256": "1ba5f66b101e08523af20a8a980d7e2613f0f97c5fdf7c75ef96304e4d1ea943"
     }
   ]
 }
