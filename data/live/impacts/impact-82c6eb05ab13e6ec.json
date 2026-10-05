@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-233",
   "score": -1,
   "confidence": 0.85,
-  "rationale": "Die Vorschrift ordnet für bestimmte, bei der Zollabfertigung erlangte Informationen einschließlich personenbezogener Daten eine Übermittlung an das BAFA auf dessen Ersuchen an; das Steuergeheimnis steht ihr ausdrücklich nicht entgegen. Das schränkt individuelle Kontrolle in diesem konkreten Anwendungsfall ein. Die Passage belegt jedoch keine allgemeine Regelung zur Erhebung und Nutzung sämtlicher personenbezogener Daten.",
+  "rationale": "Bei der Überlassung von Batterien zum zollrechtlich freien Verkehr erlangte personenbezogene Daten sind auf Ersuchen an das BAFA zu übermitteln, soweit sie für dessen Aufgaben nach Teil 5 erforderlich sind. Eine Entscheidung der betroffenen Person über diese Weitergabe sieht die Vorschrift nicht vor.",
   "law_passage_id": "bgbl-1-2025-233-p-3ac51891e2f226d7",
   "law_quote": "(1) Die Zollbehörden übermitteln dem Bundesamt für Wirtschaft und Ausfuhrkontrolle auf deren Ersuchen die für\ndie Erfüllung ihrer Aufgaben nach Teil 5 dieses Gesetzes erforderlichen Informationen einschließlich\npersonenbezogener Daten, die sie bei der Überlassung von Batterien zum zollrechtlich freien Verkehr erlangt\nhaben. Das Steuergeheimnis nach § 30 der Abgabenordnung steht einer Weitergabe der Daten nicht entgegen.",
   "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
-  "caveats": [
-    "Die belegte Übermittlung betrifft nur erforderliche Informationen aus der Zollabfertigung von Batterien und begründet keinen Nachweis über die allgemeine Datenkontrolle.",
-    "Nur thematische Überschneidung (personenbezogene Daten), keine inhaltliche Entsprechung zum Kriterium.",
-    "Der Gesetzeskontext ist unvollständig; Bedingungen und Datenschutzregeln der Basisgesetzgebung fehlen.",
-    "Eine Einschränkung allgemeiner Datensouveränität lässt sich aus der eng begrenzten Behördenübermittlung nicht ableiten.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt eine Regelung, die jeder Person die Entscheidung ermöglicht, wann, wo und wozu ihre Daten erhoben und genutzt werden (Datensouveränität). § 55 Abs. 1 Batt-EU-AnpG regelt dagegen nur die Übermittlung von Zollinformationen an das BAFA auf Ersuchen für Aufgaben nach Teil 5 (Sorgfaltspflichten bei Batterien). Das ist eine behördeninterne Datenweitergabe in einem eng begrenzten Sachbereich. Sie betrifft weder die Kontrolle individueller Personen über ihre Daten noch das Wahlprogrammziel der Datensouveränität anstelle von Datenminimierung. Die Richtung -1 wäre eine überzogene Verallgemeinerung; es besteht nur ein Themenbezug (personenbezogene Daten), keine belastbare Wirkung auf das Kriterium. Der Ausschluss des Steuergeheimnisses ändert daran nichts, da keine Aussage über Einwilligung, Zweckbindung oder Entscheidungsrechte getroffen wird. Auch fehlt die Basisgesetzgebung (Datenschutzrecht, Zollrecht), die die Wirkung bestimmen würde; der Gesetzestext liegt nur teilweise vor."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "e6432a42c679a13a4d67f8d3a92131b0462f59d5a018e08d20ba96da782a4523",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "188111ca0460bfe6cc934d2f76be2889808b63cce96bb0832501b0be26ee5208"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "256d80ac2dcc6c983a697000abb9cd87adda3c481456343bd6094b3abbd65ccd"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "f11db9ccd30d356e6fee74934d0a33b954d4f63bf7cf8c419aa10aa7264764e5"
+      "input_sha256": "e6432a42c679a13a4d67f8d3a92131b0462f59d5a018e08d20ba96da782a4523"
     }
   ]
 }

@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-233",
   "score": -1,
   "confidence": 0.98,
-  "rationale": "Für die Mitglieder des im Gesetz vorgesehenen Beirats schließt der Text Vergütung und Auslagenerstattung ausdrücklich aus. Das steht dem Entschädigungsziel für diese konkrete ehrenamtliche Tätigkeit entgegen; ein allgemeiner Effekt auf andere Ehrenämter oder eine Bewertung der gesamten Forderung folgt daraus nicht.",
+  "rationale": "Für die ehrenamtlichen Mitglieder des vorgesehenen Beirats schließt das Gesetz Vergütung und Auslagenerstattung aus. Das steht einer aufwandsbezogenen Entschädigung dieser Mitglieder entgegen; andere ehrenamtliche Tätigkeiten sind davon nicht erfasst.",
   "law_passage_id": "bgbl-1-2025-233-p-f3dfd8ee90cffdc4",
   "law_quote": "Die Tätigkeit der Mitglieder ist ehrenamtlich. Eine Vergütung oder Erstattung von Auslagen wird nicht gewährt.",
   "criterion_quote": "Es bedarf einer gerechten Entschädigung, die dem betriebenen\nAufwand entspricht und das Ehrenamt weiter stärkt.",
-  "caveats": [
-    "Der belegte Regelungseffekt betrifft nur die Mitglieder des im Gesetz vorgesehenen Beirats.",
-    "Der Regelungseffekt betrifft nur die Mitglieder des Beirats nach diesem Gesetz.",
-    "Kein belegter Bezug zu Ehrenämtern im Allgemeinen.",
-    "Das Gesetz liegt nur teilweise vor; der Zusammenhang der Beiratsvorschrift ist unvollständig.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Der Gesetzestext schließt für die Mitglieder des Beirats Vergütung und Auslagenerstattung aus. Das Wahlprogramm fordert aber eine gerechte, aufwandsgerechte Entschädigung des Ehrenamts allgemein. Der Beirat ist ein enger Sonderfall, der aus einem Batterierechts-Anpassungsgesetz stammt; er lässt keine tragfähige Aussage über die allgemeine Ehrenamtsentschädigung zu. Das ist eher ein thematischer Treffer als ein belegter Gegeneffekt. Auch der Wert -1 überzeugt nicht, da die Reichweite des Kriteriums nicht erreicht wird. Zudem liegt nur ein Teilausschnitt des Gesetzes vor (partial_law_context). Die Zuordnung zu diesem Kriterium wird daher abgelehnt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "e6432a42c679a13a4d67f8d3a92131b0462f59d5a018e08d20ba96da782a4523",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "67c093ee7e8008b10229471bdc420e8bc3d7114cbb3392499ecb8d93efa75a4e"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "78e6c3e242472548cd20ce347580e83c977cfe857384c6f8996c4854ef777a6d"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "6b000f7e502b518821dd302d0c07094d7ce4cd9be3af9f63123927941dc8215b"
+      "input_sha256": "e6432a42c679a13a4d67f8d3a92131b0462f59d5a018e08d20ba96da782a4523"
     }
   ]
 }

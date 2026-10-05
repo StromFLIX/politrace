@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2025-165",
   "score": 1,
   "confidence": 0.8,
-  "rationale": "Die Vorschrift schafft ein Verfahren zur Übermittlung erforderlicher Daten an die zuständige Überwachungsbehörde und stützt damit teilweise einen Informationsfluss zwischen Behörden. Die Übermittlung erfolgt jedoch „auf Ersuchen“; eine frühzeitige Übermittlung oder die tatsächliche Anwendung des Verfahrens ist nicht belegt. Das Kriterium wird daher nicht direkt umgesetzt.",
+  "rationale": "Für Tierschutz, Lebensmittel und Viehverkehrsdaten zuständige Behörden müssen der zuständigen Überwachungsbehörde erforderliche Daten auf Ersuchen übermitteln. Das schafft einen behördlichen Informationsweg, schreibt aber keine frühzeitige Übermittlung vor; seine tatsächliche Anwendung ist nicht belegt.",
   "law_passage_id": "bgbl-1-2025-165-p-047d7160e7d7bddd",
-  "law_quote": "(2) Die für die Überwachung des Tierschutzes, die Überwachung von Lebensmitteln und die für die Erhebung\nder Daten nach § 26 der Viehverkehrsverordnung zuständigen Behörden übermitteln auf Ersuchen der nach\n§ 33 Absatz 1 Satz 1 für die Überwachung jeweils zuständigen Behörde die zu deren Aufgabenerfüllung nach\ndiesem Gesetz erforderlichen Daten. Die Daten dürfen nur zu dem Zweck verwendet werden, zu dem sie\nübermittelt worden sind. Die Daten nach Satz 1 dürfen höchstens für die Dauer von drei Jahren aufbewahrt\nwerden. Die Frist beginnt mit Ablauf desjenigen Jahres, in dem die Daten übermittelt worden sind. Nach Ablauf\nder Aufbewahrungsfrist sind die Daten zu löschen. Sofern die Speicherung elektronisch erfolgt ist, hat die\nLöschung automatisiert zu erfolgen. Fristen zur Aufbewahrung, die sich aus anderen Rechtsvorschriften\nergeben, bleiben unberührt. § 34 Absatz 2 Satz 2 und 3 gilt entsprechend.“",
+  "law_quote": "(2) Die für die Überwachung des Tierschutzes, die Überwachung von Lebensmitteln und die für die Erhebung\nder Daten nach § 26 der Viehverkehrsverordnung zuständigen Behörden übermitteln auf Ersuchen der nach\n§ 33 Absatz 1 Satz 1 für die Überwachung jeweils zuständigen Behörde die zu deren Aufgabenerfüllung nach\ndiesem Gesetz erforderlichen Daten.",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Vorschrift nennt keine Frist oder sonstige zeitliche Vorgabe für eine frühzeitige Übermittlung.",
-    "Die tatsächliche Anwendung des Verfahrens ist nicht nachgewiesen.",
-    "Die Übermittlung erfolgt nur auf Ersuchen, nicht frühzeitig oder von Amts wegen.",
-    "Keine Frist oder zeitliche Vorgabe für die Weitergabe im Normtext.",
-    "Die tatsächliche Anwendung der Verfahren ist nicht belegt.",
-    "Nur Teilfassung des Gesetzes (Änderungsgesetz) vorliegend; Basisgesetz nicht berücksichtigt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Der Vorschlag wird abgelehnt. Das Kriterium verlangt, dass Verfahren bestehen und angewendet werden, durch die Informationen die zuständigen Behörden frühzeitig erreichen. § 37 Absatz 2 regelt jedoch nur eine Übermittlung „auf Ersuchen“ der Überwachungsbehörde, also eine anlassbezogene und reaktive Weitergabe. Eine Vorgabe zur Frühzeitigkeit, etwa eine Frist oder eine proaktive Meldepflicht, enthält die Vorschrift nicht. Die Zweckbindung, die dreijährige Aufbewahrungsfrist und die Löschpflicht betreffen den Datenschutz und nicht die Rechtzeitigkeit. Die Bewertung stützt sich nur auf diese Teilfassung des Gesetzes (partial_law_context) ohne das Grundgesetz. Der Treffer beruht daher im Wesentlichen auf der Themengleichheit (Informationsfluss zwischen Behörden). Die weiteren Änderungen im Text (§ 20 Absatz 1 zur Weitergabe von Informationen zwischen Lebensmittelunternehmern, § 37 Absatz 1 zur Mitteilung der zuständigen Stellen) betreffen entweder Unternehmen oder die Benennung von Stellen und stützen die Frühzeitigkeit gegenüber Behörden ebenfalls nicht. Ein Beleg für die tatsächliche Anwendung fehlt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "131006e4299818047444e9affdddf68ba20e0b349d87a179e60d72de7241721e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "24ad3766e1a43d0b213fd044fbc7d72acf939223a2f8cb8873fc4113ec9e2a75"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "bc224593bea35e11418585bc855c271121f877c847fdc7b17658d006572ffdc5"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "6acde2806a3287fedca7915a3f4515d34f3f61d5700cda20dadce5884c417dba"
+      "input_sha256": "131006e4299818047444e9affdddf68ba20e0b349d87a179e60d72de7241721e"
     }
   ]
 }

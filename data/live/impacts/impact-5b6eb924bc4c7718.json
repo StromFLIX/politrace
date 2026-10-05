@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-189",
   "score": -2,
   "confidence": 0.97,
-  "rationale": "Die Regelung zielt ausdrücklich darauf, den Ausbau der Windenergie an Land zu beschleunigen. Das steht dem im Kriterium geprüften Ausbaustopp direkt entgegen; daraus folgt keine Aussage über die vollständige Entwicklung des Windenergieausbaus.",
-  "law_passage_id": "bgbl-1-2025-189-p-cef49357ca9bd3bb",
-  "law_quote": "Ziel des Gesetzes ist es, die Zwecke und die Ziele von § 1 des Energiewirtschaftsgesetzes und § 1 des\nErneuerbare-Energien-Gesetzes durch den beschleunigten Ausbau der Windenergie an Land, auch in\nKombination mit Energiespeicheranlagen am selben Standort, zu fördern.",
+  "rationale": "Das Gesetz legt den beschleunigten Ausbau der Windenergie an Land als Ziel fest und gibt den Ländern dafür verbindliche Flächenziele vor. Das widerspricht einem Ausbaustopp unmittelbar.",
+  "law_passage_id": "bgbl-1-2025-189-p-c9dd8070b4dd90d8",
+  "law_quote": "Hierfür gibt dieses Gesetz den Ländern verbindliche Flächenziele (Flächenbeitragswerte) vor, die für den\nAusbau der Windenergie an Land benötigt werden",
   "criterion_quote": "Verhinderung immer höherer Netzentgelte durch Windenergie\nAusbaustopp",
-  "caveats": [
-    "Die Bewertung bezieht sich auf die im Gesetz festgelegte Zielrichtung, nicht auf einen Nachweis tatsächlicher späterer Ausbauzahlen.",
-    "Nur Zielrichtung und Verfahrensregeln belegt, keine tatsächlichen Ausbauzahlen.",
-    "Der Gesetzestext liegt nur teilweise vor (partial_law_context), Ausnahmen und Basisgesetze sind nicht vollständig geprüft.",
-    "Das Programmzitat verknüpft den Ausbaustopp mit Netzentgelten; geprüft wird nur der Ausbaustopp, nicht die Netzentgeltwirkung.",
-    "Bewertet wird nur die Rechtswirkung, nicht die Erfüllung des Programmversprechens insgesamt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "35c8e58ca891ce026357ba486f2f1ce2615f172381198aea6f20d7c9b495a9a3"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "0d7716a85c2716f4884a126f2c9b9d05ddd7d2095e70fbc4648606173d2239b6"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "a9cdd78e7bad4aca0b2629c8c2277e86903b9d6f23d150fe287253d95456036a"
+      "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760"
     }
   ]
 }

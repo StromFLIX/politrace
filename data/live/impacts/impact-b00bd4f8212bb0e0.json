@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-230",
   "score": 1,
   "confidence": 0.96,
-  "rationale": "Das Gesetz finanziert zusätzliche Infrastruktur- und Klimaneutralitätsinvestitionen aus einem Sondervermögen von bis zu 500 Milliarden Euro und trägt damit teilweise zu zusätzlichen Investitionen bei. Es belegt aber nicht die Bereitstellung von 600 Milliarden Euro innerhalb der im Kriterium genannten zehn Jahre.",
+  "rationale": "Das Sondervermögen finanziert zusätzliche Infrastruktur- und Klimaneutralitätsinvestitionen und unterstützt damit das Investitionsziel teilweise. Vorgesehen sind bis zu 500 Milliarden Euro, nicht 600 Milliarden Euro für die genannten zehn Jahre.",
   "law_passage_id": "bgbl-1-2025-230-p-a81bf7c19ef476dc",
   "law_quote": "Aus dem Sondervermögen werden zusätzliche Investitionen von bis zu 500 Milliarden Euro in die Infrastruktur\nund zur Erreichung der Klimaneutralität bis zum Jahr 2045 finanziert.",
   "criterion_quote": "Allein in den nächsten 10 Jahren muss\nder deutsche Staat nach Schätzungen 600 Milliarden Euro\nfür zusätzliche Investitionen bereitstellen, um Infrastruktur,\nWirtschaft und Gesellschaft zukunftsfähig zu machen.",
-  "caveats": [
-    "Das Gesetz nennt eine Obergrenze von 500 Milliarden Euro, nicht 600 Milliarden Euro.",
-    "Die zitierte Zweckbestimmung legt keinen Zeitraum von zehn Jahren fest.",
-    "Obergrenze von 500 statt 600 Milliarden Euro.",
-    "Kein ausdrücklicher Zehnjahreszeitraum; Bewilligung bis Ende 2036.",
-    "Es handelt sich um eine Obergrenze, nicht um eine Pflicht zur Bereitstellung.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "be6831b93ea9d36aec05e6370b6cc7ab07a5657d796d43577a4c66a869f5fd2d",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "c68770227baedb1d2a8f416968866ab404a71d804232c7b270e11753356082ba"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "fabece980adc5dccc03f6ee74e67e9f6f450cf115a8d0d463049d12f10510b47"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "f5768e5f88b9091ccc4fe99e726ae1db12430be173aa77564e81c98bd4d7a781"
+      "input_sha256": "be6831b93ea9d36aec05e6370b6cc7ab07a5657d796d43577a4c66a869f5fd2d"
     }
   ]
 }

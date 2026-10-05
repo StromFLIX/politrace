@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-161",
   "score": 1,
   "confidence": 0.91,
-  "rationale": "Das Gesetz senkt stufenweise den Einkommensteuersatz für bestimmte nicht entnommene Gewinne bis auf 25 Prozent und unterstützt damit das Kriterium teilweise. Es belegt jedoch nicht, dass die gesamte Unternehmenssteuerbelastung auf einbehaltene Gewinne höchstens 25 Prozent beträgt.",
+  "rationale": "Die Einkommensteuer auf bestimmte nicht entnommene Gewinne wird auf Antrag stufenweise auf einen Satz von 25 Prozent ab 2032 festgelegt; bestimmte Gewinne und Steuervergünstigungen sind ausgenommen. Eine Begrenzung der gesamten Unternehmenssteuerbelastung auf 25 Prozent ist damit nicht belegt.",
   "law_passage_id": "bgbl-1-2025-161-p-421194cf30611b53",
   "law_quote": "4. 25 Prozent für Veranlagungszeiträume ab 2032",
   "criterion_quote": "Unser Ziel ist eine attraktive Unternehmensbesteuerung von maximal 25 Prozent auf einbehaltene Gewinne, die wir schrittweise umsetzen wollen.",
-  "caveats": [
-    "Die Regelung betrifft die Einkommensteuer auf bestimmte nicht entnommene Gewinne und enthält Ausnahmen; sie belegt keine Begrenzung der gesamten Unternehmenssteuerbelastung auf höchstens 25 Prozent.",
-    "Der 25-Prozent-Satz gilt nur auf Antrag und nur für bestimmte nicht entnommene Gewinne von Personenunternehmen, mit Ausnahmen.",
-    "Gewerbesteuer, Solidaritätszuschlag und Nachversteuerung bei Entnahme sind im Textauszug nicht berücksichtigt; die Gesamtbelastung bleibt daher unbelegt.",
-    "Die Absenkung wird erst ab 2032 vollständig wirksam; der Gesetzesauszug ist nur Teilkontext.",
-    "Die Körperschaftsteuersenkung (Artikel 2) ist nicht Teil des zitierten Belegs und belegt keine Begrenzung der Gesamtbelastung.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "cea9eab390d61e0b048e530a16b3b66daac09b29f8fa312b541cea2a9d87cd5b",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "5388b520457b851c8a09cac8c67a8b9e28478873ef43bf5fef6552fbca08a321"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "a5f6601073da03179213e3774f1e13a6f294d10dc3cb92721d9ab00d87ee2025"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "c7d8ee004d630625c64e4f45f7acd85d255d29658fa0e4e7474cd2d0e098a4ac"
+      "input_sha256": "cea9eab390d61e0b048e530a16b3b66daac09b29f8fa312b541cea2a9d87cd5b"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "dataset": "live",
   "program_id": "afd-2025",
-  "version": "all-party-law-first-v1",
+  "version": "all-party-sol-final-v2",
   "criteria_sha256": "f395d441d85e9c6f7f553aac45f033198b79346fbff0fc52de2bb029443468d4",
   "law_ids": [
     "bgbl-1-2025-101",
@@ -5651,7 +5651,7 @@
   "laws": [
     {
       "law_id": "bgbl-1-2025-101",
-      "analysis_sha256": "a1bd4f7d2eb515be40e67e17707030bee6ac362d2d7acd0fd048493022b1b8e0",
+      "analysis_sha256": "6d119c8a568b58fe274ea59a3e6226f4ea73ac1875e7422e07c3f048c6df95ee",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -6026,7 +6026,7 @@
     },
     {
       "law_id": "bgbl-1-2025-106",
-      "analysis_sha256": "0429dc1792ce407df600c71bed218c77f3e925dcb4540948e5c21701051df884",
+      "analysis_sha256": "fc3ef57c4e1088e75e3622582d108d979352e8348a4364e328b97a5ef2d877e6",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -6385,9 +6385,9 @@
         },
         {
           "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
-          "disposition": "proposed_link",
-          "rationale": "Die Regelung verlangt für die Bestellung eines betriebsangehörigen Vertreters persönliche und fachliche Eignung. Das stützt die Verwendung fachlicher Kriterien bei dieser konkreten Bestellung teilweise, belegt aber nicht, dass öffentliche Ämter allgemein oder Beamten- und Richterstellen ausschließlich nach den genannten Kriterien vergeben werden.",
-          "input_sha256": "2d271cf26ed068be98b66a7c268ac4ac77c4e8b9d01339a54cd06c4640c6bf62",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift verlangt persönliche und fachliche Eignung für die Bestellung eines betriebsangehörigen Vertreters. Sie regelt aber nicht die Vergabe öffentlicher Ämter, Beamten- oder Richterstellen ausschließlich nach Eignung, Befähigung und fachlicher Leistung; bei mehreren Arbeitsverhältnissen ist zudem der zuerst gestellte Antrag maßgeblich.",
+          "input_sha256": "af20fdf164dc8c57a4897366d14faef6916d73bfd710187e8c93713cf6cb48ea",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -6395,38 +6395,25 @@
               "input_sha256": "2d271cf26ed068be98b66a7c268ac4ac77c4e8b9d01339a54cd06c4640c6bf62"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "b8830df6dbf9875079f41f89971a1dee820582216ffec4acc7dd9733cc67cb72"
+              "input_sha256": "af20fdf164dc8c57a4897366d14faef6916d73bfd710187e8c93713cf6cb48ea"
             }
           ],
           "impact_id": "impact-c24430fb6be1de67",
           "judgment": {
-            "supported": true,
-            "score": 1,
+            "supported": false,
+            "score": null,
             "confidence": 0.78,
-            "rationale": "Die Regelung verlangt für die Bestellung eines betriebsangehörigen Vertreters persönliche und fachliche Eignung. Das stützt die Verwendung fachlicher Kriterien bei dieser konkreten Bestellung teilweise, belegt aber nicht, dass öffentliche Ämter allgemein oder Beamten- und Richterstellen ausschließlich nach den genannten Kriterien vergeben werden.",
+            "rationale": "Die Vorschrift verlangt persönliche und fachliche Eignung für die Bestellung eines betriebsangehörigen Vertreters. Sie regelt aber nicht die Vergabe öffentlicher Ämter, Beamten- oder Richterstellen ausschließlich nach Eignung, Befähigung und fachlicher Leistung; bei mehreren Arbeitsverhältnissen ist zudem der zuerst gestellte Antrag maßgeblich.",
             "law_passage_id": "bgbl-1-2025-106-p-d59d59218579c9fa",
             "law_quote": "Der betriebsangehörige Vertreter ist zu bestellen, wenn dieser persönlich und fachlich geeignet ist.",
             "criterion_quote": "Öffentliche Ämter, Beamten- und Richterstellen sind\n\nausschließlich nach „Eignung, Befähigung und fachlicher Leistung”\n\nzu vergeben (Art. 33 Abs. 2 GG)",
-            "caveats": [
-              "Die Vorschrift betrifft nur die Bestellung eines betriebsangehörigen Vertreters für die Feuerstättenschau.",
-              "Der Text belegt keine allgemeine Regel für die Besetzung öffentlicher Ämter sowie von Beamten- und Richterstellen."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
-            "disposition": "proposed_link"
+            "disposition": "no_supported_link"
           },
-          "verification": {
-            "accepted": false,
-            "rationale": "Das Wahlprogramm fordert, öffentliche Ämter sowie Beamten- und Richterstellen ausschließlich nach Eignung, Befähigung und fachlicher Leistung zu vergeben. Die Vorschrift (§ 11b Abs. 3 SchfHwG) regelt nur die Bestellung eines betriebsangehörigen Vertreters für die Feuerstättenschau, der persönlich und fachlich geeignet sein muss. Das ist ein Randfall und kein Beleg für eine allgemeine Regel zur Ämtervergabe. Es gibt keinen Bezug zu Beamten- oder Richterstellen und keine Aussage zur Ausschließlichkeit der Kriterien. Der Vertreter wird zudem auf Antrag eines Bezirksschornsteinfegers aus dessen Betrieb bestellt, nicht in einem Auswahlverfahren um ein öffentliches Amt. Die Kriterien sind außerdem nicht deckungsgleich: Verlangt wird 'persönlich und fachlich geeignet', nicht Eignung, Befähigung und fachliche Leistung. Es handelt sich um eine reine Themenüberschneidung, die weder Richtung noch Umfang stützt.",
-            "caveats": [
-              "Die Vorschrift betrifft nur die Bestellung eines betriebsangehörigen Vertreters für die Feuerstättenschau.",
-              "Der Text belegt keine allgemeine Regel für die Besetzung öffentlicher Ämter sowie von Beamten- und Richterstellen.",
-              "Eine Ausschließlichkeit der Kriterien ist im Gesetzestext nicht erkennbar.",
-              "Der Gesetzestext liegt nur teilweise vor (partial_law_context)."
-            ],
-            "criterion_id": "afd-2025-ac-ba2f784bfaa78077"
-          }
+          "verification": null
         },
         {
           "criterion_id": "afd-2025-ac-c70d50045726aba6",
@@ -6461,7 +6448,7 @@
     },
     {
       "law_id": "bgbl-1-2025-107",
-      "analysis_sha256": "e41bb591dd8b87eac266479e37e5fecae7d411a4d8fbda687f4581adf6395312",
+      "analysis_sha256": "3111d93a8fbd4227908a8ee36f54542605ff68cc342b085af3c41f693a1a9443",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -6746,8 +6733,8 @@
         {
           "criterion_id": "afd-2025-ac-94dcaf10c59195af",
           "disposition": "proposed_link",
-          "rationale": "Für das einzelne Amt der oder des Unabhängigen Bundesbeauftragten schreibt das Gesetz eine fachliche Qualifikation vor. Das stützt das Kriterium teilweise; eine allgemeine Regel für das Spitzenpersonal des Staates folgt daraus nicht.",
-          "input_sha256": "e8bab1e31a26510e20c7b935bb09b6526a0c8ab3aace19c7be45e7ea1ad00466",
+          "rationale": "Für das Amt der oder des Unabhängigen Bundesbeauftragten sind fachliche Qualifikation und einschlägige Erfahrung vorgeschrieben. Die Regel gilt nur für dieses Amt; sie tritt am 1. Juli 2025 in Kraft.",
+          "input_sha256": "3bfd7cca25b5f048ee0777f4bb067c1a8f9ab2a9490d0ee6379aeec4fe29cef8",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -6755,9 +6742,9 @@
               "input_sha256": "e8bab1e31a26510e20c7b935bb09b6526a0c8ab3aace19c7be45e7ea1ad00466"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "98b6362054779af157276526e6e5e6ad67d79eb125b073fe2af63521f8b89874"
+              "input_sha256": "3bfd7cca25b5f048ee0777f4bb067c1a8f9ab2a9490d0ee6379aeec4fe29cef8"
             }
           ],
           "impact_id": "impact-415791baf955f214",
@@ -6765,26 +6752,15 @@
             "supported": true,
             "score": 1,
             "confidence": 0.88,
-            "rationale": "Für das einzelne Amt der oder des Unabhängigen Bundesbeauftragten schreibt das Gesetz eine fachliche Qualifikation vor. Das stützt das Kriterium teilweise; eine allgemeine Regel für das Spitzenpersonal des Staates folgt daraus nicht.",
+            "rationale": "Für das Amt der oder des Unabhängigen Bundesbeauftragten sind fachliche Qualifikation und einschlägige Erfahrung vorgeschrieben. Die Regel gilt nur für dieses Amt; sie tritt am 1. Juli 2025 in Kraft.",
             "law_passage_id": "bgbl-1-2025-107-p-6861f390d9fb7df9",
-            "law_quote": "Die oder der Unabhängige Bundesbeauftragte muss zur Erfüllung ihrer oder seiner Aufgaben über die\nerforderliche persönliche und fachliche Qualifikation verfügen.",
+            "law_quote": "Die oder der Unabhängige Bundesbeauftragte muss zur Erfüllung ihrer oder seiner Aufgaben über die\nerforderliche persönliche und fachliche Qualifikation verfügen. Insbesondere muss sie oder er beruflich oder\nehrenamtlich erworbene Erfahrung in dem Themenfeld Sexuelle Gewalt und Ausbeutung und Kenntnis über\npolitische Entscheidungsprozesse haben sowie die Bereitschaft zeigen, Betroffene aus unterschiedlichen\nTatkontexten aktiv in ihre oder seine Arbeit einzubeziehen und sich für ihre Bedürfnisse einzusetzen.",
             "criterion_quote": "Grundsätze der fachlichen Eignung und beruflichen Qualifikation\n\nhaben auch für das Spitzenpersonal des Staates zu gelten.",
-            "caveats": [
-              "Die Vorschrift gilt für das konkret geregelte Amt, nicht nachweislich für das gesamte Spitzenpersonal des Staates."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-94dcaf10c59195af",
             "disposition": "proposed_link"
           },
-          "verification": {
-            "accepted": false,
-            "rationale": "Das Kriterium verlangt, dass fachliche Eignung und berufliche Qualifikation als Grundsätze für das Spitzenpersonal des Staates allgemein gelten. § 8 des Gesetzes regelt nur Eignung und Befähigung für ein einzelnes, neu geschaffenes Amt, nämlich die Unabhängige Bundesbeauftragte oder den Unabhängigen Bundesbeauftragten gegen sexuellen Missbrauch. Eine allgemeine Regel für Auswahl und Besetzung des Spitzenpersonals ergibt sich daraus nicht. Es handelt sich um eine Einzelregelung mit nur thematischer Nähe. Das Gesetz ist zudem nur ein Teilausschnitt, und es fehlt jede Grundlage für eine Aussage über das gesamte Spitzenpersonal. Die Verknüpfung ist daher nicht hinreichend belegt.",
-            "caveats": [
-              "Die Vorschrift gilt nur für das konkret geregelte Amt, nicht nachweislich für das gesamte Spitzenpersonal des Staates.",
-              "Es liegt nur ein Teilausschnitt des Gesetzes vor.",
-              "Ob das Amt überhaupt zum Spitzenpersonal des Staates zählt, ist nicht belegt."
-            ],
-            "criterion_id": "afd-2025-ac-94dcaf10c59195af"
-          }
+          "verification": null
         },
         {
           "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
@@ -7072,7 +7048,7 @@
     },
     {
       "law_id": "bgbl-1-2025-109",
-      "analysis_sha256": "46f488ab397a77301f81f94bfcf7f88946bb973e6c782000099654703ca86e9d",
+      "analysis_sha256": "2ee34de8f9da466dec6446f694c5f63e84ff301d48e8b38cdcbe173cdb998b24",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -7851,7 +7827,7 @@
     },
     {
       "law_id": "bgbl-1-2025-161",
-      "analysis_sha256": "e01b91acf731acfe5c486c426a7eb670f9d3dd2789c91781782feee32bcdc4bc",
+      "analysis_sha256": "783de53c9606808b20ecc25d9a25bd8363e66bc940577ddb9667b0f757af6c13",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -8350,7 +8326,7 @@
     },
     {
       "law_id": "bgbl-1-2025-163",
-      "analysis_sha256": "9e546f4f5bd3a56304e32be6ecb2017816944876a0efee0c685e682ca885c178",
+      "analysis_sha256": "688fa6bf92a37d2f8d01a03d9a5d4a71a1d60e778f899527512ead1fee011b35",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -8701,7 +8677,7 @@
     },
     {
       "law_id": "bgbl-1-2025-164",
-      "analysis_sha256": "c04394cc0b0b41670ee3e43acdd44f1ac0335ea5f1a25397737c1f981fd0595d",
+      "analysis_sha256": "b330652bf916cbdfceb19ead00665e28de92d8f8f03ac47bb001541223637f2a",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -9060,7 +9036,7 @@
     },
     {
       "law_id": "bgbl-1-2025-165",
-      "analysis_sha256": "9d1c79c3430205e6905822eba524cfed805d0ae33533a4c21af0183abfc4074e",
+      "analysis_sha256": "87d7be625e4a8a3cff734abd0cc2831a0f750975cd4d30c7f5554a6bc341dc15",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -9435,7 +9411,7 @@
     },
     {
       "law_id": "bgbl-1-2025-166",
-      "analysis_sha256": "5a2a02cdcefe2661c8b4e4da475c1df2aab17c8fdd4f4e1357306818623af5da",
+      "analysis_sha256": "1f68f7db6e647106589d44a67f5b87b9a4bd8d8908d9c3fee26484612ff3c879",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -9782,7 +9758,7 @@
     },
     {
       "law_id": "bgbl-1-2025-167",
-      "analysis_sha256": "bc1ebf57d3f16eaec6cc87dea413c5052655fe90c2ac00465ccbcd3a3b500898",
+      "analysis_sha256": "4557d843d0ce46c90c3160a3152bb27c2fd9eccb5f49b0e9b7cad76db4ee8eb1",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -10141,7 +10117,7 @@
     },
     {
       "law_id": "bgbl-1-2025-171",
-      "analysis_sha256": "042530be8044b60a048ce51a8c503dc93154c8c3b66e635d052197f2a035fb50",
+      "analysis_sha256": "9756bfc40a310d0205fd28ecde715e2daf4f33fadccbc09fd7c993d1c5c4eb08",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -10488,7 +10464,7 @@
     },
     {
       "law_id": "bgbl-1-2025-172",
-      "analysis_sha256": "ff1f46be8f61386edbd1928728be5863197ed93087c6876abb40b8acf43948ac",
+      "analysis_sha256": "e5c0e6edccb35ed28883d30aa43134fd9679bf0a0c32c46f9110269ea6905faf",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -10847,7 +10823,7 @@
     },
     {
       "law_id": "bgbl-1-2025-173",
-      "analysis_sha256": "0dfb0839df2453217779924653a09f15eb0ed78bf67886ac514ec797546bcd3e",
+      "analysis_sha256": "ab8a9ff0b3d2cb398b23ea3ed5a3d420cf43ba9e85f8a7cd453ef793ce29b722",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -11085,8 +11061,8 @@
         {
           "criterion_id": "afd-2025-ac-a578cb4627d74a3d",
           "disposition": "proposed_link",
-          "rationale": "Das Gesetz setzt den Familiennachzug für die genannte Personengruppe befristet aus und unterstützt damit eine Einschränkung des Nachzugs. Einen dauerhaften Wegfall des grundsätzlichen Anspruchs belegt es nicht; zudem bleiben §§ 22 und 23 unberührt.",
-          "input_sha256": "e3776792e569646bafd7aecd83fc45c2394238a101eb67e59182f797629ba169",
+          "rationale": "Der Familiennachzug nach § 36a zu Personen mit dem genannten Aufenthaltstitel wird bis zum Ablauf des 23. Juli 2027 nicht gewährt. Das unterstützt eine Einschränkung des Nachzugs, schafft einen grundsätzlichen Anspruch aber nicht dauerhaft ab; §§ 22 und 23 bleiben unberührt.",
+          "input_sha256": "47a6b2a972c23e82fb612f4ac8a8ceae0287e945cdbd21c20b6a9783ad6473c4",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -11094,9 +11070,9 @@
               "input_sha256": "e3776792e569646bafd7aecd83fc45c2394238a101eb67e59182f797629ba169"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "b9fe84a383fcec4609d4907f52a54616386992b2ebd3146b33ce9b119b523cfe"
+              "input_sha256": "47a6b2a972c23e82fb612f4ac8a8ceae0287e945cdbd21c20b6a9783ad6473c4"
             }
           ],
           "impact_id": "impact-1e1b42fa9753e28e",
@@ -11104,28 +11080,15 @@
             "supported": true,
             "score": 1,
             "confidence": 0.97,
-            "rationale": "Das Gesetz setzt den Familiennachzug für die genannte Personengruppe befristet aus und unterstützt damit eine Einschränkung des Nachzugs. Einen dauerhaften Wegfall des grundsätzlichen Anspruchs belegt es nicht; zudem bleiben §§ 22 und 23 unberührt.",
+            "rationale": "Der Familiennachzug nach § 36a zu Personen mit dem genannten Aufenthaltstitel wird bis zum Ablauf des 23. Juli 2027 nicht gewährt. Das unterstützt eine Einschränkung des Nachzugs, schafft einen grundsätzlichen Anspruch aber nicht dauerhaft ab; §§ 22 und 23 bleiben unberührt.",
             "law_passage_id": "bgbl-1-2025-173-p-44d7e46c5e10cc71",
-            "law_quote": "Bis zum Ablauf des 23. Juli 2027 wird ein Familiennachzug nach § 36a zu einer Person, der eine\nAufenthaltserlaubnis nach § 25 Absatz 2 Satz 1 zweite Alternative erteilt worden ist, nicht gewährt. Die §§ 22\nund 23 bleiben unberührt.",
+            "law_quote": "„(14) Bis zum Ablauf des 23. Juli 2027 wird ein Familiennachzug nach § 36a zu einer Person, der eine\nAufenthaltserlaubnis nach § 25 Absatz 2 Satz 1 zweite Alternative erteilt worden ist, nicht gewährt. Die §§ 22\nund 23 bleiben unberührt.“",
             "criterion_quote": "- Wegfall des grundsätzlichen Nachzugsanspruches für Familien\nangehörige subsidiär Schutzberechtigter",
-            "caveats": [
-              "Die Aussetzung ist ausdrücklich bis zum Ablauf des 23. Juli 2027 befristet.",
-              "Die §§ 22 und 23 bleiben unberührt."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-a578cb4627d74a3d",
             "disposition": "proposed_link"
           },
-          "verification": {
-            "accepted": false,
-            "rationale": "Das Programm fordert den Wegfall des grundsätzlichen Nachzugsanspruchs für Angehörige subsidiär Schutzberechtigter, also eine dauerhafte Abschaffung. Das Gesetz setzt den Nachzug nach § 36a AufenthG nur bis zum 23. Juli 2027 aus und lässt die Grundnorm unverändert. Die Richtung (Einschränkung des Nachzugs) stimmt, aber Dauer und Reichweite weichen ab. Bei einer Aussetzung gilt der Anspruch danach fort. Die §§ 22 und 23 bleiben unberührt, sodass Aufnahmen aus humanitären Gründen weiter möglich sind. Der vorgeschlagene Wert 1 und die Konfidenz 0,97 sind für eine Abschaffung nicht belegt. Zudem liegt nur ein Teilauszug des Gesetzes vor (partial_law_context). Als Teilübereinstimmung bzw. befristete Annäherung wäre die Verknüpfung denkbar, nicht aber als Erfüllung des Kriteriums.",
-            "caveats": [
-              "Die Aussetzung ist bis zum 23. Juli 2027 befristet; eine Abschaffung des Anspruchs liegt nicht vor.",
-              "§ 36a AufenthG wird nicht aufgehoben oder geändert.",
-              "Die §§ 22 und 23 AufenthG bleiben unberührt.",
-              "Es liegt nur ein Teilauszug des Gesetzes vor, daher sind Ausnahmen und Basisnormen nicht vollständig prüfbar."
-            ],
-            "criterion_id": "afd-2025-ac-a578cb4627d74a3d"
-          }
+          "verification": null
         },
         {
           "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
@@ -11212,7 +11175,7 @@
     },
     {
       "law_id": "bgbl-1-2025-174",
-      "analysis_sha256": "0e186aac557a7ff48eb021f4e448650296a612a996e9af927644ba1653303d95",
+      "analysis_sha256": "b9ebfea8d1588d105d9abf03ad4b37d2f656a416687aa22415dd213da2c2ad7a",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -11559,7 +11522,7 @@
     },
     {
       "law_id": "bgbl-1-2025-181",
-      "analysis_sha256": "ac7791dcb07b9ad71895596770f7dae36eeee6a33c82b5b2bcc263fdf6fa3358",
+      "analysis_sha256": "2f38e1d441342df779848971fd948cc05ad22e8a9c594f8ecae794f6aab7201a",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -11908,7 +11871,7 @@
     },
     {
       "law_id": "bgbl-1-2025-189",
-      "analysis_sha256": "e10107cab7fdd1f0b9cd8a4406ba542271e452b040efab7dbaefeca34bbdeea5",
+      "analysis_sha256": "88df78e6d594bddf5cb50adf3c41af6c216a3435142d6216c9625877d234a831",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -12143,8 +12106,8 @@
         {
           "criterion_id": "afd-2025-ac-48ae9e4ead9bebe9",
           "disposition": "proposed_link",
-          "rationale": "Die Regelung zielt ausdrücklich darauf, den Ausbau der Windenergie an Land zu beschleunigen. Das steht dem im Kriterium geprüften Ausbaustopp direkt entgegen; daraus folgt keine Aussage über die vollständige Entwicklung des Windenergieausbaus.",
-          "input_sha256": "0d7716a85c2716f4884a126f2c9b9d05ddd7d2095e70fbc4648606173d2239b6",
+          "rationale": "Das Gesetz legt den beschleunigten Ausbau der Windenergie an Land als Ziel fest und gibt den Ländern dafür verbindliche Flächenziele vor. Das widerspricht einem Ausbaustopp unmittelbar.",
+          "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -12152,9 +12115,9 @@
               "input_sha256": "0d7716a85c2716f4884a126f2c9b9d05ddd7d2095e70fbc4648606173d2239b6"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "a9cdd78e7bad4aca0b2629c8c2277e86903b9d6f23d150fe287253d95456036a"
+              "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760"
             }
           ],
           "impact_id": "impact-5b6eb924bc4c7718",
@@ -12162,27 +12125,15 @@
             "supported": true,
             "score": -2,
             "confidence": 0.97,
-            "rationale": "Die Regelung zielt ausdrücklich darauf, den Ausbau der Windenergie an Land zu beschleunigen. Das steht dem im Kriterium geprüften Ausbaustopp direkt entgegen; daraus folgt keine Aussage über die vollständige Entwicklung des Windenergieausbaus.",
-            "law_passage_id": "bgbl-1-2025-189-p-cef49357ca9bd3bb",
-            "law_quote": "Ziel des Gesetzes ist es, die Zwecke und die Ziele von § 1 des Energiewirtschaftsgesetzes und § 1 des\nErneuerbare-Energien-Gesetzes durch den beschleunigten Ausbau der Windenergie an Land, auch in\nKombination mit Energiespeicheranlagen am selben Standort, zu fördern.",
+            "rationale": "Das Gesetz legt den beschleunigten Ausbau der Windenergie an Land als Ziel fest und gibt den Ländern dafür verbindliche Flächenziele vor. Das widerspricht einem Ausbaustopp unmittelbar.",
+            "law_passage_id": "bgbl-1-2025-189-p-c9dd8070b4dd90d8",
+            "law_quote": "Hierfür gibt dieses Gesetz den Ländern verbindliche Flächenziele (Flächenbeitragswerte) vor, die für den\nAusbau der Windenergie an Land benötigt werden",
             "criterion_quote": "Verhinderung immer höherer Netzentgelte durch Windenergie\nAusbaustopp",
-            "caveats": [
-              "Die Bewertung bezieht sich auf die im Gesetz festgelegte Zielrichtung, nicht auf einen Nachweis tatsächlicher späterer Ausbauzahlen."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-48ae9e4ead9bebe9",
             "disposition": "proposed_link"
           },
-          "verification": {
-            "accepted": true,
-            "rationale": "Das Programm fordert einen Ausbaustopp für Windenergie. § 1 des Windenergieflächenbedarfsgesetzes in der geänderten Fassung nennt ausdrücklich das Ziel, den Ausbau der Windenergie an Land zu beschleunigen. Zudem werden den Ländern verbindliche Flächenziele vorgegeben und Genehmigungsverfahren beschleunigt. Das ist das Gegenteil eines Ausbaustopps, die Richtung (negativ für die Forderung) ist daher belegt. Die Größenordnung -2 ist als klare Gegenläufigkeit vertretbar, da die Zielvorgabe zusammen mit den verbindlichen Flächenbeitragswerten und den Verfahrensbeschleunigungen im Gesetz deutlich ist.",
-            "caveats": [
-              "Nur Zielrichtung und Verfahrensregeln belegt, keine tatsächlichen Ausbauzahlen.",
-              "Der Gesetzestext liegt nur teilweise vor (partial_law_context), Ausnahmen und Basisgesetze sind nicht vollständig geprüft.",
-              "Das Programmzitat verknüpft den Ausbaustopp mit Netzentgelten; geprüft wird nur der Ausbaustopp, nicht die Netzentgeltwirkung.",
-              "Bewertet wird nur die Rechtswirkung, nicht die Erfüllung des Programmversprechens insgesamt."
-            ],
-            "criterion_id": "afd-2025-ac-48ae9e4ead9bebe9"
-          }
+          "verification": null
         },
         {
           "criterion_id": "afd-2025-ac-51ac7294612b508f",
@@ -12461,9 +12412,9 @@
         },
         {
           "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
-          "disposition": "proposed_link",
-          "rationale": "Teilweise Unterstützung allein beim Umweltaspekt: Das Gesetz verlangt im erfassten Verfahren eine Prüfung möglicher Umweltauswirkungen und Unterlagen zu Minderungsmaßnahmen. Es verlangt aber nicht den Nachweis uneingeschränkter Umweltverträglichkeit oder ökonomischen Nutzens und schließt weder Vorrangeinspeisung noch Subventionen aus.",
-          "input_sha256": "3471b72d8f4426943142e6ce323d2066f6ed878a0a183fe7aefaa0f694b16612",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgeschriebene Darlegung von Minderungsmaßnahmen betrifft mögliche Umweltauswirkungen bestimmter Vorhaben. Sie verlangt weder einen Nachweis uneingeschränkter Umweltverträglichkeit und ökonomischen Nutzens noch einen Verzicht auf Vorrangeinspeisung und Subventionen.",
+          "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -12471,37 +12422,25 @@
               "input_sha256": "3471b72d8f4426943142e6ce323d2066f6ed878a0a183fe7aefaa0f694b16612"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "45c65b3e7dc8fa738161094ba6c8f97d433c5d7b3feb75eb787907083117c2b7"
+              "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760"
             }
           ],
           "impact_id": "impact-a51e084d3cf060da",
           "judgment": {
-            "supported": true,
-            "score": 1,
+            "supported": false,
+            "score": null,
             "confidence": 0.84,
-            "rationale": "Teilweise Unterstützung allein beim Umweltaspekt: Das Gesetz verlangt im erfassten Verfahren eine Prüfung möglicher Umweltauswirkungen und Unterlagen zu Minderungsmaßnahmen. Es verlangt aber nicht den Nachweis uneingeschränkter Umweltverträglichkeit oder ökonomischen Nutzens und schließt weder Vorrangeinspeisung noch Subventionen aus.",
+            "rationale": "Die vorgeschriebene Darlegung von Minderungsmaßnahmen betrifft mögliche Umweltauswirkungen bestimmter Vorhaben. Sie verlangt weder einen Nachweis uneingeschränkter Umweltverträglichkeit und ökonomischen Nutzens noch einen Verzicht auf Vorrangeinspeisung und Subventionen.",
             "law_passage_id": "bgbl-1-2025-189-p-5877ce37f1a47990",
             "law_quote": "Der\nAntragsteller hat der Zulassungsbehörde aufgrund der im Plan bestimmten Regeln für Minderungsmaßnahmen\nund etwaiger weiterer eigener Vorschläge Maßnahmen vorzulegen und darzulegen, wie mit diesen Maßnahmen\nden Umweltauswirkungen begegnet werden soll.",
             "criterion_quote": "Zukünftig müssen Anlagen\n\nzur Erzeugung „Erneuerbarer Energien“ ihre uneingeschränkte\n\nUmweltverträglichkeit sowie ihren ökonomischen Nutzen durch den\n\nVerzicht auf Vorrangeinspeisung und Subvention nachweisen.",
-            "caveats": [
-              "Die Regelung betrifft die im Gesetz genannten Zulassungsverfahren und Vorhaben; sie ist kein allgemeiner Nachweisstandard für alle Anlagen erneuerbarer Energien.",
-              "Die Umweltprüfung und Minderungsmaßnahmen belegen keine uneingeschränkte Umweltverträglichkeit."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
-            "disposition": "proposed_link"
+            "disposition": "no_supported_link"
           },
-          "verification": {
-            "accepted": false,
-            "rationale": "Der Vorschlag wird abgelehnt. Das Kriterium der AfD verlangt von Anlagen zur Erzeugung erneuerbarer Energien den Nachweis uneingeschränkter Umweltverträglichkeit und ökonomischen Nutzens, und zwar durch den Verzicht auf Vorrangeinspeisung und Subvention. Die zitierte Passage (§ 6 WindBG, Überprüfung in Beschleunigungsgebieten) regelt etwas anderes: Sie erleichtert und beschleunigt Zulassungen. Der Antragsteller legt Minderungsmaßnahmen vor, und die Behörde prüft nur, ob eindeutige Nachweise für höchstwahrscheinlich erhebliche unvorhergesehene nachteilige Umweltauswirkungen vorliegen. Das ist keine Nachweispflicht für uneingeschränkte Umweltverträglichkeit, sondern eine eingeschränkte Überprüfung, die an die Stelle weitergehender Prüfungen tritt. Zum ökonomischen Nutzen, zum Verzicht auf Vorrangeinspeisung und zu Subventionen enthält das Gesetz in den vorgelegten Passagen nichts. Die Zielrichtung des Gesetzes ist der beschleunigte Ausbau. Es bleibt bei einer reinen Themenüberschneidung beim Stichwort Umweltauswirkungen. Eine Teilunterstützung im Sinne von Score 1 ist nicht belegt, die Richtung wird sogar eher gegenläufig gelesen.",
-            "caveats": [
-              "Die Passage gilt nur für Windenergieanlagen, Nebenanlagen und Speicher in Beschleunigungsgebieten, nicht allgemein für Anlagen erneuerbarer Energien.",
-              "Zu Vorrangeinspeisung und Subventionen enthält das vorgelegte Gesetzesmaterial keine Regelung; das Gesetz liegt nur teilweise vor.",
-              "Die Überprüfung ersetzt weitergehende Prüfungen und ist eine Erleichterung."
-            ],
-            "criterion_id": "afd-2025-ac-b3fe68e6744d44b8"
-          }
+          "verification": null
         },
         {
           "criterion_id": "afd-2025-ac-c1d6bb725cba74f8",
@@ -12616,8 +12555,8 @@
         {
           "criterion_id": "afd-2025-ac-fe7578e1a49082a4",
           "disposition": "proposed_link",
-          "rationale": "Das Gesetz bündelt für bestimmte, von der Richtlinie erfasste Anlagen die erforderlichen Zulassungsverfahren bei einer einheitlichen Stelle. Das stützt eine Vereinfachung von Genehmigungsverfahren, aber nur innerhalb dieses begrenzten Anwendungsbereichs und auf Antrag; eine allgemeine Vereinfachung für notwendige Neuinvestitionen oder eine tatsächlich eingetretene Beschleunigung ist damit nicht belegt.",
-          "input_sha256": "0c28f0f317e6e63139146320411ad01992b3f5018a12349fb4ccc8b1b9e22f3f",
+          "rationale": "Für Anlagen im erfassten Anwendungsbereich werden auf Antrag die erforderlichen Zulassungsverfahren über eine einheitliche Stelle abgewickelt. Das vereinfacht den Verfahrensweg für einen Teil möglicher Neuinvestitionen.",
+          "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -12625,9 +12564,9 @@
               "input_sha256": "0c28f0f317e6e63139146320411ad01992b3f5018a12349fb4ccc8b1b9e22f3f"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "00b1da15e353c973caced52fcf6bc730484cb473148d78c5cb7def1c6910605d"
+              "input_sha256": "e59fa75b3849b473f17c15010231d8cdeb95810ef26037d8423dde1e4d1f7760"
             }
           ],
           "impact_id": "impact-c54c928a3b7b2072",
@@ -12635,34 +12574,21 @@
             "supported": true,
             "score": 1,
             "confidence": 0.94,
-            "rationale": "Das Gesetz bündelt für bestimmte, von der Richtlinie erfasste Anlagen die erforderlichen Zulassungsverfahren bei einer einheitlichen Stelle. Das stützt eine Vereinfachung von Genehmigungsverfahren, aber nur innerhalb dieses begrenzten Anwendungsbereichs und auf Antrag; eine allgemeine Vereinfachung für notwendige Neuinvestitionen oder eine tatsächlich eingetretene Beschleunigung ist damit nicht belegt.",
+            "rationale": "Für Anlagen im erfassten Anwendungsbereich werden auf Antrag die erforderlichen Zulassungsverfahren über eine einheitliche Stelle abgewickelt. Das vereinfacht den Verfahrensweg für einen Teil möglicher Neuinvestitionen.",
             "law_passage_id": "bgbl-1-2025-189-p-1667a0e582f189f6",
-            "law_quote": "Auf Antrag des Trägers des Vorhabens werden das Genehmigungsverfahren sowie alle sonstigen\nZulassungsverfahren, die für die Durchführung des Vorhabens nach Bundes- oder Landesrecht erforderlich\nsind, über eine einheitliche Stelle abgewickelt.",
+            "law_quote": "(2) Auf Antrag des Trägers des Vorhabens werden das Genehmigungsverfahren sowie alle sonstigen\nZulassungsverfahren, die für die Durchführung des Vorhabens nach Bundes- oder Landesrecht erforderlich\nsind, über eine einheitliche Stelle abgewickelt.",
             "criterion_quote": "- Beschleunigung notwendiger Neuinvestitionen durch Vereinfa\nchung von Planungs- und Genehmigungsverfahren",
-            "caveats": [
-              "Die Regelung gilt nur für Vorhaben im Anwendungsbereich der Richtlinie und setzt einen Antrag voraus.",
-              "Der Gesetzestext belegt eine rechtliche Verfahrensbündelung, nicht deren tatsächliche Umsetzung oder eine tatsächlich eingetretene Beschleunigung."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-fe7578e1a49082a4",
             "disposition": "proposed_link"
           },
-          "verification": {
-            "accepted": true,
-            "rationale": "Der Gesetzestext (§ 10a Abs. 2 BImSchG) bündelt auf Antrag das Genehmigungsverfahren und alle sonstigen erforderlichen Zulassungsverfahren bei einer einheitlichen Stelle. Zusammen mit den weiteren Regelungen des Gesetzes (verkürzte Fristen für Vollständigkeitsbestätigung, kurze Entscheidungsfristen in Beschleunigungsgebieten, elektronische Verfahren) stützt das eine rechtliche Vereinfachung und Beschleunigung von Genehmigungsverfahren. Das Programmziel betrifft jedoch allgemein notwendige Neuinvestitionen und Planungsverfahren; das Gesetz deckt nur einen engen Teil davon ab, nämlich Anlagen zur Erzeugung erneuerbarer Energie im Anwendungsbereich der Richtlinie (EU) 2018/2001. Der Umfang der Entlastung ist daher begrenzt.",
-            "caveats": [
-              "Die Regelung gilt nur für Vorhaben im Anwendungsbereich der Richtlinie (EU) 2018/2001 und setzt für die einheitliche Stelle einen Antrag voraus.",
-              "Das Programm nennt allgemein notwendige Neuinvestitionen; das Gesetz erfasst vor allem Anlagen für erneuerbare Energien, nicht andere Investitionen.",
-              "Der Gesetzestext belegt eine rechtliche Verfahrensbündelung und Fristen, nicht die tatsächliche Umsetzung oder eine eingetretene Beschleunigung.",
-              "Das Gesetz ist nur teilweise im Kontext vorgelegt; Übergangsregelungen (z. B. § 108) lassen laufende Verfahren nach altem Recht fortlaufen."
-            ],
-            "criterion_id": "afd-2025-ac-fe7578e1a49082a4"
-          }
+          "verification": null
         }
       ]
     },
     {
       "law_id": "bgbl-1-2025-230",
-      "analysis_sha256": "34e58cf954118f4dbaf3fc35315d50350dbada79bd3faeb6229d5cdbf7574cc1",
+      "analysis_sha256": "0798f086cb1818703d4db1d9a32ce38112a754e26f91f718c4a5bd99e112b244",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -13039,7 +12965,7 @@
     },
     {
       "law_id": "bgbl-1-2025-231",
-      "analysis_sha256": "ddf0eedca703121eb0334912a96609fcbf1afe47e64b6f8e330d64fd1c5dcd07",
+      "analysis_sha256": "d53745c97e9fd322595e08de12a95019c1d126a0fde9d9aabe18afe2d3d0c201",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -13460,7 +13386,7 @@
     },
     {
       "law_id": "bgbl-1-2025-232",
-      "analysis_sha256": "8a872d264de25592c61d921d30c5630c55b3c00e2d769a4540eb94d99d2698c3",
+      "analysis_sha256": "82b2d4cdffe75c4773b690f59c210b41ee37b116fcdbb455c2a126e870390307",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -14275,7 +14201,7 @@
     },
     {
       "law_id": "bgbl-1-2025-233",
-      "analysis_sha256": "b61c79ba65f1d4cfbe13a945e32f0bc087244429a8e70026dce64c1c1e11ad00",
+      "analysis_sha256": "1a2ac1f1516c896788cb6efa750460d92e4cfff0705ef3b41a47c593b655b06d",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -14717,8 +14643,8 @@
         {
           "criterion_id": "afd-2025-ac-5c04828dfb3f4e19",
           "disposition": "proposed_link",
-          "rationale": "§ 42 sieht im Rahmen von Beschränkungsverfahren für Stoffe umwelt- und gesundheitsbezogene Risikobewertungen vor. Das stützt die Bewertung von Stoffrisiken teilweise; eine ausdrückliche Vorgabe, dass die Bewertung evidenzbasiert sein muss, enthält der zitierte Abschnitt nicht.",
-          "input_sha256": "553e3b3c70f0e87d56232884933199a0ba4512b9f9402f033ebe4bdccaf9ad6f",
+          "rationale": "§ 42 weist einer Bewertungsstelle im Rahmen von Stoffbeschränkungsverfahren die umweltbezogene Risikobewertung zu. Das unterstützt die Bewertung von Stoffrisiken; eine ausdrückliche Vorgabe zur Evidenzgrundlage enthält die Passage nicht.",
+          "input_sha256": "e6432a42c679a13a4d67f8d3a92131b0462f59d5a018e08d20ba96da782a4523",
           "generation": [
             {
               "model": "openai/gpt-6-luna",
@@ -14726,9 +14652,9 @@
               "input_sha256": "553e3b3c70f0e87d56232884933199a0ba4512b9f9402f033ebe4bdccaf9ad6f"
             },
             {
-              "model": "anthropic/claude-sonnet-5.5",
+              "model": "openai/gpt-6-sol",
               "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "60b1ca3f3834a86fe36ed34baabaad8a1b8fe2e85827437a19c3a3171445d004"
+              "input_sha256": "e6432a42c679a13a4d67f8d3a92131b0462f59d5a018e08d20ba96da782a4523"
             }
           ],
           "impact_id": "impact-d33356ce785934d5",
@@ -14736,27 +14662,15 @@
             "supported": true,
             "score": 1,
             "confidence": 0.91,
-            "rationale": "§ 42 sieht im Rahmen von Beschränkungsverfahren für Stoffe umwelt- und gesundheitsbezogene Risikobewertungen vor. Das stützt die Bewertung von Stoffrisiken teilweise; eine ausdrückliche Vorgabe, dass die Bewertung evidenzbasiert sein muss, enthält der zitierte Abschnitt nicht.",
-            "law_passage_id": "bgbl-1-2025-233-p-78f91e8aebcba1d0",
-            "law_quote": "Bei der Durchführung von Beschränkungsverfahren für Stoffe nach Artikel 86 der Verordnung (EU) 2023/1542\nwirken mit:",
+            "rationale": "§ 42 weist einer Bewertungsstelle im Rahmen von Stoffbeschränkungsverfahren die umweltbezogene Risikobewertung zu. Das unterstützt die Bewertung von Stoffrisiken; eine ausdrückliche Vorgabe zur Evidenzgrundlage enthält die Passage nicht.",
+            "law_passage_id": "bgbl-1-2025-233-p-f5810f658f3e06d3",
+            "law_quote": "(4) Fachlicher Zuständigkeitsbereich der Bewertungsstelle Umwelt ist die umweltbezogene Risikobewertung\neinschließlich der Bewertung von Risikominderungsmaßnahmen.",
             "criterion_quote": "Stattdessen fordern wir eine evidenzbasierte\n\nBewertung der Risiken einzelner Stoffe.",
-            "caveats": [
-              "Die zitierten Folgebestimmungen benennen Risikobewertungen, aber keine ausdrücklichen evidenzbasierten Anforderungen."
-            ],
+            "caveats": [],
             "criterion_id": "afd-2025-ac-5c04828dfb3f4e19",
             "disposition": "proposed_link"
           },
-          "verification": {
-            "accepted": false,
-            "rationale": "Der Vorschlag ist nicht ausreichend belegt. Das zitierte Gesetz regelt in § 42 nur die Beteiligung von Bundesbehörden an Beschränkungsverfahren für Stoffe nach der EU-Batterieverordnung. Der angeführte Absatz 1 benennt nur, wer mitwirkt. Die Absätze 4 und 5 weisen den Bewertungsstellen zwar umwelt- und gesundheitsbezogene Risikobewertungen zu, doch das ist nur eine Zuständigkeitsregelung. Eine Vorgabe, dass die Risiken einzelner Stoffe evidenzbasiert bewertet werden müssen, fehlt. Die Bewertungsstellen müssen auch nicht stoffbezogen arbeiten. Die Programmaussage fordert eine evidenzbasierte Bewertung statt einer pauschalen Regulierung, was sich auf eine allgemeinere Stoffpolitik bezieht. Der Gesetzestext liefert dazu weder eine Richtung noch eine Wirkung. Der Zusammenhang beschränkt sich auf das Thema Stoffrisikobewertung. Der Score von 1 und die Konfidenz von 0,91 sind deshalb zu hoch. Das Gesetz liegt zudem nur als Teilkontext vor.",
-            "caveats": [
-              "Es handelt sich um einen reinen Themenbezug zur Risikobewertung von Stoffen; das Wort „evidenzbasiert“ oder eine entsprechende Methodik steht nicht im Gesetzestext.",
-              "§ 42 regelt Zuständigkeiten und Verfahren zwischen Bundesbehörden; die Beschränkungsentscheidungen selbst folgen aus der EU-Verordnung 2023/1542, die hier nicht vorliegt.",
-              "Das zitierte Passage-Zitat (§ 42 Abs. 1) belegt die Aussage nicht; die Risikobewertung stammt aus den Absätzen 4 und 5.",
-              "Das Gesetz ist nur teilweise überliefert."
-            ],
-            "criterion_id": "afd-2025-ac-5c04828dfb3f4e19"
-          }
+          "verification": null
         },
         {
           "criterion_id": "afd-2025-ac-5ca60e874e887c14",
@@ -15517,7 +15431,7 @@
     },
     {
       "law_id": "bgbl-1-2025-246",
-      "analysis_sha256": "c55f820c20c44cb5c212779414d8cd72ea9e178165096145a873f8657e658d3f",
+      "analysis_sha256": "05d8ead5cb431c3ccadd05704581cdcbcc868e21de98a07fc3c2b1b5d1350db5",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -15880,7 +15794,7 @@
     },
     {
       "law_id": "bgbl-1-2025-247",
-      "analysis_sha256": "edde17a12ea0c51329678b154a1845d961fa045e609b42aabdcf26fa0a5cec02",
+      "analysis_sha256": "e9d6acf012c318042854e981e2486b6c859bb6af19d52ca3c7dc8e4a1c5e553e",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -16255,8 +16169,8 @@
     },
     {
       "law_id": "bgbl-1-2025-248",
-      "analysis_sha256": "ec427d3777ab3c26441022f09bec2abdb2c1f512f3f095248735f9d63543be0e",
-      "status": "completed",
+      "analysis_sha256": "a4151e220ac22390d59ee34ca187a6910af985ae5c5610725b91216aa7e18f3f",
+      "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-25e51b6a8ad7ee2a",
@@ -16530,51 +16444,6 @@
           "verification": null
         },
         {
-          "criterion_id": "afd-2025-ac-d2890aec598b757f",
-          "disposition": "proposed_link",
-          "rationale": "Das Gesetz führt für die erforderlichen Schuldenbegrenzungen eine regelmäßige Prüfung ein und sieht bei nicht festgestellter Einhaltung grundsätzlich das Einbehalten von Sanierungshilfen vor. Das unterstützt die Überprüfung der Schuldenbremse, belegt aber nicht, dass die Haushalte sie tatsächlich einhalten. Die Regelung betrifft hier die Sanierungshilfen für Bremen und das Saarland.",
-          "input_sha256": "21612b4b6918766b8e4a2655e6d17d538cc1c3c320241ef1b5409993f0cab976",
-          "generation": [
-            {
-              "model": "openai/gpt-6-luna",
-              "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "21612b4b6918766b8e4a2655e6d17d538cc1c3c320241ef1b5409993f0cab976"
-            },
-            {
-              "model": "anthropic/claude-sonnet-5.5",
-              "prompt_version": "politrace-evidence-v3",
-              "input_sha256": "cc62c973b345d6124590d8a7252aec3f0cdd5dcc90cbb684e0b0113b38e31c10"
-            }
-          ],
-          "impact_id": "impact-c15ed8f999233cc6",
-          "judgment": {
-            "supported": true,
-            "score": 1,
-            "confidence": 0.91,
-            "rationale": "Das Gesetz führt für die erforderlichen Schuldenbegrenzungen eine regelmäßige Prüfung ein und sieht bei nicht festgestellter Einhaltung grundsätzlich das Einbehalten von Sanierungshilfen vor. Das unterstützt die Überprüfung der Schuldenbremse, belegt aber nicht, dass die Haushalte sie tatsächlich einhalten. Die Regelung betrifft hier die Sanierungshilfen für Bremen und das Saarland.",
-            "law_passage_id": "bgbl-1-2025-248-p-de51c0e7d5e413f3",
-            "law_quote": "Nach Ablauf von jeweils zwei Kalenderjahren, erstmals im Jahr 2022, prüft das Bundesministerium der\nFinanzen, ob die nach Absatz 2 Satz 2 erforderlichen Schuldenbegrenzungen in den beiden Vorjahren insgesamt\neingehalten wurden.",
-            "criterion_quote": "Die im Grund\ngesetz festgeschriebene Schuldenbremse ist einzuhalten.",
-            "caveats": [
-              "Die Regelung betrifft die Schuldenbegrenzungen im Rahmen des Sanierungshilfengesetzes für Bremen und das Saarland, nicht nachweislich sämtliche Haushalte und deren Umsetzung.",
-              "Der Gesetzestext belegt eine Prüfung und Sanktionen bei festgestellter Nichteinhaltung, nicht das tatsächliche Ergebnis der Prüfungen."
-            ],
-            "criterion_id": "afd-2025-ac-d2890aec598b757f",
-            "disposition": "proposed_link"
-          },
-          "verification": {
-            "accepted": false,
-            "rationale": "Das Kriterium verlangt, dass die Haushalte und ihre Umsetzung die Schuldenbremse einhalten (AfD-Forderung allgemein). Das Gesetz ändert nur das Sanierungshilfengesetz für Bremen und das Saarland. Die Regelung betrifft Bedingungen für Sanierungshilfen und eine Prüfung durch das BMF, sie belegt weder, dass die Haushalte die Schuldenbremse einhalten, noch gilt sie für Bund oder andere Länder. Der Vorschlag mit Score 1 und Konfidenz 0,91 überschätzt die Wirkung. Es handelt sich eher um einen Themenbezug als um eine belastbare Umsetzung des Kriteriums. Zudem enthält die Norm Ausgleichsmöglichkeiten und Ausnahmefälle (Verfehlung kann im Folgejahr ausgeglichen werden, begründete Ausnahmen sind möglich), die die Einhaltung gerade nicht strikt sichern. Die Einbehaltung der Hilfen setzt zudem eine fehlende Feststellung ohne Ausnahmefall voraus. Die Richtung ist plausibel, die Größenordnung und der Geltungsbereich aber nicht ausreichend belegt. Der Gesetzestext ist außerdem nur ein Teilkontext.",
-            "caveats": [
-              "Geltungsbereich nur Bremen und Saarland, nicht alle Haushalte.",
-              "Ausgleich im Folgejahr und begründete Ausnahmefälle schwächen die strikte Einhaltung.",
-              "Gesetz belegt eine Prüfung, nicht deren Ergebnis oder die tatsächliche Einhaltung.",
-              "Kein Bezug zu Bundeshaushalt oder anderen Ländern; partieller Gesetzeskontext."
-            ],
-            "criterion_id": "afd-2025-ac-d2890aec598b757f"
-          }
-        },
-        {
           "criterion_id": "afd-2025-ac-e8a13b358163c4d9",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz ändert die Sanierungshilfen und Verschuldungsvorgaben für Bremen und das Saarland. Es enthält keine Regelung zum Status oder zur Nutzung von Bargeld und belegt daher keinen Effekt auf dieses Kriterium.",
@@ -16632,7 +16501,7 @@
     },
     {
       "law_id": "bgbl-1-2025-255",
-      "analysis_sha256": "e96e27d016d8d8d2740a6257a5060e49552dbe55cbe005eaf8a8057aa8e6aee7",
+      "analysis_sha256": "fb877b4b90d98f8422ed6100f14b459d384edf0c346cef955c1cad28c37ff3ce",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -16979,7 +16848,7 @@
     },
     {
       "law_id": "bgbl-1-2025-256",
-      "analysis_sha256": "935d89959a0e0f4afb4cf4cb74bfdd2452528146a02a8ddfdffa9bfc54ed1a9d",
+      "analysis_sha256": "b106b905cf6696bb16cc67bf7e4112b75168a302124877ac53d3610de48ecfe5",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -17338,7 +17207,7 @@
     },
     {
       "law_id": "bgbl-1-2025-257",
-      "analysis_sha256": "d345f491085d6f1d965e63897d07a3ab11a384f074bce26ad1e71eb5387c729d",
+      "analysis_sha256": "c853612c0e2a8d33a07083781b3195452b33061e8e1e58fe8c738715b0d2e90b",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -17945,7 +17814,7 @@
     },
     {
       "law_id": "bgbl-1-2025-258",
-      "analysis_sha256": "2fdcf270fe043440d6df9d9bb51f7a5ea8fde3a8da1da2b678508e6b4172787d",
+      "analysis_sha256": "5448a2141ef0269b055dd7fb53dfdd42ffb7973126f82891c103979b341138ba",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -18304,7 +18173,7 @@
     },
     {
       "law_id": "bgbl-1-2025-259",
-      "analysis_sha256": "a3cc5fa01693f59a190e424cc5ab98f49ac6fc45ca366c434a1ef7c96552cbf2",
+      "analysis_sha256": "ba928de0605eb2541df6328a6773de4e525662de0c072ec6920b18140652da76",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -20789,7 +20658,7 @@
     },
     {
       "law_id": "bgbl-1-2025-281",
-      "analysis_sha256": "da11d493fa834a2a6654fdcd7346d9e13f3ecb351b483175607ea7ad97e8c10d",
+      "analysis_sha256": "49949d68ad83797c9b51085def08cf95469854e97c984835fceca8a9bddf2871",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -21148,7 +21017,7 @@
     },
     {
       "law_id": "bgbl-1-2025-282",
-      "analysis_sha256": "8532d56aff03559e45538ea6fa1b52f33de906f8fa7858eb1774645cec271547",
+      "analysis_sha256": "3ac43017b7f492c28282c9f81a3ba05563b0c942e47d818a79ddcc02a0607bb4",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22040,7 +21909,7 @@
     },
     {
       "law_id": "bgbl-1-2025-283",
-      "analysis_sha256": "de2fb2ce7683c2423f09f9d5282e022208dac5c34852505ebc696197bb07f0c6",
+      "analysis_sha256": "4960be7d3bbf84200424e9a94246fa3d1307509815e1642651ad00d238af3681",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22063,12 +21932,447 @@
         "afd-2025-ac-c3e7024a97dcaaa2"
       ],
       "omitted_count": 666,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Energie- und Kohleförderungsregelungen, enthält aber keine Regelung zur Bezugsdauer des Arbeitslosengeldes oder zu Beitragsjahren.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Energie- und Kohleförderungsregelungen, enthält aber keine Regelung zur Bezugsdauer des Arbeitslosengeldes oder zu Beitragsjahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Grundsätzlich soll der Anspruch auf Arbeitslosengeld für\n\nPersonen, die ab 2026 erstmalig eine sozialversicherungspflichtige\n\nBeschäftigung aufnehmen, erst nach drei vollen Beitragsjahren ein\ntreten und zunächst auf sechs Monate beschränkt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-1f9e6294a991ed05",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen unter anderem die Gasspeicherumlage, nicht die Abschaffung einer CO₂-Steuer.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen unter anderem die Gasspeicherumlage, nicht die Abschaffung einer CO₂-Steuer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kosten wie EEG-Umlage, CO₂-Steuer und das Gebäudeenergie\ngesetz (GEG) werden wir abschaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-1f9e6294a991ed05",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-24b4cf93b362b739",
+          "disposition": "missing_context",
+          "rationale": "Der Ausschnitt ändert Entschädigungsregeln für Stilllegungen, zeigt aber nicht den maßgeblichen Ausstiegsfahrplan oder ob dieser geändert beziehungsweise aufgehoben wird; dafür fehlt der Regelungskontext.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Der Ausschnitt ändert Entschädigungsregeln für Stilllegungen, zeigt aber nicht den maßgeblichen Ausstiegsfahrplan oder ob dieser geändert beziehungsweise aufgehoben wird; dafür fehlt der Regelungskontext.",
+            "law_passage_id": "bgbl-1-2025-283-p-c0493e2b19586227",
+            "law_quote": "„Die Regelungen zur Entschädigung für die Stilllegung von Braunkohleanlagen nach den §§ 44 und 45 des\nKohleverstromungsbeendigungsgesetzes vom 8. August 2020 (BGBl. I S. 1818), das zuletzt durch Artikel 2 des\nGesetzes vom 25. November 2025 (BGBl. 2025 I Nr. 283) geändert worden ist, sowie die Regelungen zur Vergütung\nder Zeitlich gestreckten Stilllegung nach § 50 Absatz 1 Satz 2 des Kohleverstromungsbeendigungsgesetzes dürfen\nerst angewendet werden, wenn und soweit eine beihilferechtliche Genehmigung durch die Europäische Kommission\nvorliegt oder wenn und soweit die Europäische Kommission mitgeteilt hat, dass die beihilferechtliche Prüfung auf\nandere Weise zum Abschluss gebracht werden kann.“",
+            "criterion_quote": "Den geplanten Ausstieg\n\naus der Braunkohleverstromung wird es mit der AfD nicht geben.",
+            "caveats": [
+              "Der Ausschnitt betrifft Entschädigungen und deren beihilferechtliche Anwendbarkeit, nicht ausdrücklich den Zeitplan des Ausstiegs."
+            ],
+            "criterion_id": "afd-2025-ac-24b4cf93b362b739",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25df7fc9eb41f759",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Dauer von Tiertransporten.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Dauer von Tiertransporten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Im Sinne des Tierwohls ist ein Transport von\n\nsechs Stunden nicht zu überschreiten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-25df7fc9eb41f759",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Regelung zur Höhe des deutschen Rentenniveaus oder zu einem Vergleich mit westeuropäischen Ländern.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Regelung zur Höhe des deutschen Rentenniveaus oder zu einem Vergleich mit westeuropäischen Ländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unser ferneres Ziel ist es, in mehreren Schritten das\n\ndurchschnittliche Rentenniveau der westeuropäischen Länder zu\n\nerreichen, das nach Rechnung der EU (Eurostat) derzeit bei gut 70\n\nProzent des letzten Nettoeinkommens und damit deutlich höher\n\nliegt als das deutsche.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Überprüfung oder Streichung von Gesetzen und Richtlinien, die im Zusammenhang mit der Corona-Krise geändert wurden.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Überprüfung oder Streichung von Gesetzen und Richtlinien, die im Zusammenhang mit der Corona-Krise geändert wurden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die im Zusammen\nhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind\n\nzu überprüfen und gegebenenfalls zu streichen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-516d60054b84e3b9",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen unter anderem die Gasspeicherumlage, nicht die Abschaffung der EEG-Umlage.",
+          "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d59b255d7bb245e1178377bc6ac121bbc882e06d5e250b4068b398b0a7d831cd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen unter anderem die Gasspeicherumlage, nicht die Abschaffung der EEG-Umlage.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kosten wie EEG-Umlage, CO₂-Steuer und das Gebäudeenergie\ngesetz (GEG) werden wir abschaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-516d60054b84e3b9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Energiewirtschafts- und das Kohleverstromungsbeendigungsgesetz; eine Zustimmung des Volkes zu Grundgesetzänderungen regelt es nicht.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Energiewirtschafts- und das Kohleverstromungsbeendigungsgesetz; eine Zustimmung des Volkes zu Grundgesetzänderungen regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "Ohne Zustimmung des Volkes darf das Grundgesetz nicht geändert",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung, die dem Volk ein Recht gibt, vom Parlament beschlossene Gesetze abzulehnen.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung, die dem Volk ein Recht gibt, vom Parlament beschlossene Gesetze abzulehnen.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "Wir wollen dem Volk das Recht geben, den Abgeordneten auf\n\ndie Finger zu schauen und vom Parlament beschlossene Gesetze zu\n\nändern oder abzulehnen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7260242b5392a478",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Energie- und Kohleverstromungsfragen, nicht die Aufgabe oder Finanzierung des öffentlich-rechtlichen Rundfunks.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Energie- und Kohleverstromungsfragen, nicht die Aufgabe oder Finanzierung des öffentlich-rechtlichen Rundfunks.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "dessen Aufgabe allein eine\n\ngebührenfreie Grundversorgung mit Informations-, Kultur- und\n\nRegionalprogrammen sein soll.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7260242b5392a478",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-89908da548c7c0a3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu einem Anspruch, der sich nach Beitragsjahren erhöht.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu einem Anspruch, der sich nach Beitragsjahren erhöht.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "Für je zwei weitere Beitragsjahre erhöht sich der Anspruch danach\n\num einen Monat.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-89908da548c7c0a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Asylverfahren oder zur Anwendung eines Verfahrens auf Herkunftsländer.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Asylverfahren oder zur Anwendung eines Verfahrens auf Herkunftsländer.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "Analog werden wir, wenn die Voraussetzungen vorliegen, dann auch\n\nbei Personen aus anderen Asyl-Herkunftsländern verfahren.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Internationalen Gesundheitsvorschriften und belegt weder deren Ablehnung noch deren Zeitpunkt.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Internationalen Gesundheitsvorschriften und belegt weder deren Ablehnung noch deren Zeitpunkt.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "fordern daher, dass Deutschland noch vor der Frist am 31. März\n\n2025 die Internationalen Gesundheitsvorschriften in ihrer jetzigen\n\nForm ablehnt.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Gasversorgung und Braunkohleentschädigung; Anforderungen an Anlagen erneuerbarer Energien oder deren Einspeisung und Förderung legt das Gesetz nicht fest.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Gasversorgung und Braunkohleentschädigung; Anforderungen an Anlagen erneuerbarer Energien oder deren Einspeisung und Förderung legt das Gesetz nicht fest.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "Zukünftig müssen Anlagen\n\nzur Erzeugung „Erneuerbarer Energien“ ihre uneingeschränkte\n\nUmweltverträglichkeit sowie ihren ökonomischen Nutzen durch den\n\nVerzicht auf Vorrangeinspeisung und Subvention nachweisen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung, die dem Volk ermöglicht, vom Parlament beschlossene Gesetze zu ändern.",
+          "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d5b391bdd4e7e466da3ea29b4772337d16285ef0146356db976b71eef3205b7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung, die dem Volk ermöglicht, vom Parlament beschlossene Gesetze zu ändern.",
+            "law_passage_id": "bgbl-1-2025-283-p-d1a6985fab4d7905",
+            "law_quote": "Gesetz zur Änderung des Energiewirtschaftsgesetzes sowie zur Änderung des Kohleverstromungsbeendigungsgesetzes",
+            "criterion_quote": "Wir wollen dem Volk das Recht geben, den Abgeordneten auf\n\ndie Finger zu schauen und vom Parlament beschlossene Gesetze zu\n\nändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c3e7024a97dcaaa2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zur Gasversorgung und zur Braunkohleentschädigung; es verpflichtet den Arzneimittelgroßhandel nicht zu Mindestbeständen.",
+          "input_sha256": "e2b11ef943c7edbe4bff999d5c1b82731cea57d34641238d6073911d15da394d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e2b11ef943c7edbe4bff999d5c1b82731cea57d34641238d6073911d15da394d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zur Gasversorgung und zur Braunkohleentschädigung; es verpflichtet den Arzneimittelgroßhandel nicht zu Mindestbeständen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mindestens die Menge der durchschnittlichen zwei Monatsbedarfe bei versorgungsrelevanten Arzneimitteln vorzuhalten",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c3e7024a97dcaaa2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-284",
-      "analysis_sha256": "e309a4938100d0f577e178bd8508c0ff4c4f15394efeda66592e90f6919e3811",
-      "status": "partial",
+      "analysis_sha256": "829e666f0b055b66cf1c2f14f2a1115f2f91df57f6bf2a732ddd2b72513e38b6",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-142d79111f3551ab",
@@ -22085,12 +22389,337 @@
         "afd-2025-ac-bae7e231ad8376d5"
       ],
       "omitted_count": 671,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert nur das Fernstraßen-Überleitungsgesetz und streicht dort bestimmte Verweise auf digitale Infrastruktur; eine Direktwahl des Bundespräsidenten regelt es nicht.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert nur das Fernstraßen-Überleitungsgesetz und streicht dort bestimmte Verweise auf digitale Infrastruktur; eine Direktwahl des Bundespräsidenten regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-284-p-1bc536469e5403ab",
+            "law_quote": "In § 1 Absatz 1 Satz 2, Absatz 3 Satz 1, Absatz 4 Satz 2 und Absatz 5 Satz 2 sowie § 2 wird jeweils die Angabe „und digitale Infrastruktur“ gestrichen.",
+            "criterion_quote": "Der Bundespräsident, als höchster Repräsentant des Staates, soll direkt vom Volk gewählt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-198a967ab2e77f26",
+          "disposition": "no_supported_link",
+          "rationale": "Die Streichung von Verweisen auf digitale Infrastruktur im Fernstraßen-Überleitungsgesetz regelt keine Beteiligung oder Kontrolle von Unternehmen beim Infrastrukturausbau.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Streichung von Verweisen auf digitale Infrastruktur im Fernstraßen-Überleitungsgesetz regelt keine Beteiligung oder Kontrolle von Unternehmen beim Infrastrukturausbau.",
+            "law_passage_id": "bgbl-1-2025-284-p-1bc536469e5403ab",
+            "law_quote": "In § 1 Absatz 1 Satz 2, Absatz 3 Satz 1, Absatz 4 Satz 2 und Absatz 5 Satz 2 sowie § 2 wird jeweils die Angabe „und digitale Infrastruktur“ gestrichen.",
+            "criterion_quote": "unter Kontrolle der Kommunistischen Partei Chinas stehen, am Ausbau der digitalen Infrastruktur in Deutschland ab.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-198a967ab2e77f26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-21dafe800345fdff",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft das Fernstraßen-Überleitungsgesetz; eine Selbstverwaltung der Justiz richtet sie nicht ein.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung betrifft das Fernstraßen-Überleitungsgesetz; eine Selbstverwaltung der Justiz richtet sie nicht ein.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "Die Unabhängigkeit der Justiz muss durch eine Selbstverwaltung wiederhergestellt werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-21dafe800345fdff",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Regelungen zum Fernstraßen-Überleitungsgesetz und schafft keine Verfahren für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Regelungen zum Fernstraßen-Überleitungsgesetz und schafft keine Verfahren für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "die rechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2 GG vorgesehenen Volksabstimmungen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Fernstraßen-Überleitungsgesetzes enthält keine Überprüfung oder Streichung von Corona-Gesetzen und -Richtlinien.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Fernstraßen-Überleitungsgesetzes enthält keine Überprüfung oder Streichung von Corona-Gesetzen und -Richtlinien.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "Die im Zusammenhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind zu überprüfen und gegebenenfalls zu streichen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet kein Verfahren ein, mit dem Stimmberechtigte Parlamentsgesetze durch Volksabstimmung ändern oder ablehnen können.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet kein Verfahren ein, mit dem Stimmberechtigte Parlamentsgesetze durch Volksabstimmung ändern oder ablehnen können.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern oder abzulehnen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Fernstraßen-Überleitungsgesetzes enthält keine Regelung zur Zustimmung des Volkes bei Grundgesetzänderungen.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Fernstraßen-Überleitungsgesetzes enthält keine Regelung zur Zustimmung des Volkes bei Grundgesetzänderungen.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "Ohne Zustimmung des Volkes darf das Grundgesetz nicht geändert",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze abzulehnen.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze abzulehnen.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern oder abzulehnen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Fernstraßen-Überleitungsgesetzes überprüft oder streicht keine im Zusammenhang mit der Corona-Krise geänderten Regelungen.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Fernstraßen-Überleitungsgesetzes überprüft oder streicht keine im Zusammenhang mit der Corona-Krise geänderten Regelungen.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "Die im Zusammenhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind zu überprüfen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b16ca80ec790c8de",
+          "disposition": "no_supported_link",
+          "rationale": "Die Streichung von Verweisen auf digitale Infrastruktur aus dem Fernstraßen-Überleitungsgesetz entwickelt keine bundeseigene Hard- oder Software für kritische Infrastruktur.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Streichung von Verweisen auf digitale Infrastruktur aus dem Fernstraßen-Überleitungsgesetz entwickelt keine bundeseigene Hard- oder Software für kritische Infrastruktur.",
+            "law_passage_id": "bgbl-1-2025-284-p-1bc536469e5403ab",
+            "law_quote": "In § 1 Absatz 1 Satz 2, Absatz 3 Satz 1, Absatz 4 Satz 2 und Absatz 5 Satz 2 sowie § 2 wird jeweils die Angabe „und digitale Infrastruktur“ gestrichen.",
+            "criterion_quote": "die Entwicklung bundeseigener Hard- und Software für Kritische Infrastruktur.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b16ca80ec790c8de",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft das Fernstraßen-Überleitungsgesetz und enthält keine Regelung zum Verbot der Al-Quds-Tage in Berlin.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft das Fernstraßen-Überleitungsgesetz und enthält keine Regelung zum Verbot der Al-Quds-Tage in Berlin.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "Die Al-Quds-Tage in Berlin, wo Demonstranten die Zerstörung Israels fordern, sind dauerhaft zu verbieten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Möglichkeit für das Volk, vom Parlament beschlossene Gesetze zu ändern.",
+          "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7f91f80bf4ba0856f588e1bddaffdef6bcd9dd301f41b6f6424986f40f04164"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Möglichkeit für das Volk, vom Parlament beschlossene Gesetze zu ändern.",
+            "law_passage_id": "bgbl-1-2025-284-p-303bf6bd6a54687f",
+            "law_quote": "Erstes Gesetz zur Änderung des Fernstraßen-Überleitungsgesetzes",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-285",
-      "analysis_sha256": "7a60df7eea31f30f6ad3978e7f3b259413dcd5eb5893965ceb02281706615171",
-      "status": "partial",
+      "analysis_sha256": "b86d0f0bc04c3a5fbba47c9110f96779c7f67f38300417da307e4f3795bca66e",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0b2adb1903f7c91f",
@@ -22110,12 +22739,418 @@
         "afd-2025-ac-fa57f56d16b8bec1"
       ],
       "omitted_count": 668,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0b2adb1903f7c91f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Trassenentgelte und Kostenobergrenzen, nicht die planvolle oder kontinuierliche Straßensanierung.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Trassenentgelte und Kostenobergrenzen, nicht die planvolle oder kontinuierliche Straßensanierung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0b2adb1903f7c91f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Wahl des Bundespräsidenten.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Wahl des Bundespräsidenten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Eisenbahnregulierung und enthält keine Überprüfung oder Streichung Corona-bezogener Regelungen.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Eisenbahnregulierung und enthält keine Überprüfung oder Streichung Corona-bezogener Regelungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5b826e6a3c46fe3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Staatsverwaltung oder zu politischen Beamten.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Staatsverwaltung oder zu politischen Beamten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5b826e6a3c46fe3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Vorschriften über Änderungen des Grundgesetzes oder eine Volkszustimmung dazu.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Vorschriften über Änderungen des Grundgesetzes oder eine Volkszustimmung dazu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Recht des Volkes, parlamentarisch beschlossene Gesetze abzulehnen.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Recht des Volkes, parlamentarisch beschlossene Gesetze abzulehnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9831c010e74eafd9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur jährlichen Prüfung von Asylgründen.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur jährlichen Prüfung von Asylgründen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9831c010e74eafd9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Trassenentgelte; eine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025 ist darin nicht geregelt.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Trassenentgelte; eine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025 ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Versammlungen oder einem Verbot der Al-Quds-Tage in Berlin.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Versammlungen oder einem Verbot der Al-Quds-Tage in Berlin.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ba131f8e41801ddf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder die Mehrwertsteuer noch die Besteuerung von Kinderbedarfsartikeln.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder die Mehrwertsteuer noch die Besteuerung von Kinderbedarfsartikeln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ba131f8e41801ddf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Recht des Volkes, parlamentarisch beschlossene Gesetze zu ändern.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Recht des Volkes, parlamentarisch beschlossene Gesetze zu ändern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine dokumentierte Initiative oder Stellungnahme zu Asylverfahren außerhalb Deutschlands.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine dokumentierte Initiative oder Stellungnahme zu Asylverfahren außerhalb Deutschlands.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f0313b9392200a5e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Kostenregeln der Eisenbahnregulierung, nicht die Konzernstruktur der Bahn oder die Steuerungsmöglichkeiten des Bundes.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Kostenregeln der Eisenbahnregulierung, nicht die Konzernstruktur der Bahn oder die Steuerungsmöglichkeiten des Bundes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f0313b9392200a5e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f52b1fcc193dd523",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz passt Kostenobergrenzen und die Eigenkapitalverzinsung an, begründet aber keine planvolle und kontinuierliche Sanierung von Schienenwegen.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz passt Kostenobergrenzen und die Eigenkapitalverzinsung an, begründet aber keine planvolle und kontinuierliche Sanierung von Schienenwegen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f52b1fcc193dd523",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-fa57f56d16b8bec1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Sanierung von Brücken.",
+          "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0437c02bbf2b5e3f7b38e8233f690b6222c235698ce7e81e2630ab5cd1b85205"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Sanierung von Brücken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-fa57f56d16b8bec1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-286",
-      "analysis_sha256": "d7eedea6a07acf23719f17526488dd697bdd6ace4cdbc954608b0c1eb8e55277",
-      "status": "partial",
+      "analysis_sha256": "e4c297fc6c3998687b219426354fea3848b2ef50f5174c46cb5a667ab60002cb",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -22132,11 +23167,336 @@
         "afd-2025-ac-bae7e231ad8376d5"
       ],
       "omitted_count": 671,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Elektro- und Elektronikgerätegesetz; eine Strafvorschrift zu öffentlichen Kalifatsforderungen enthält der vorgelegte Text nicht.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Elektro- und Elektronikgerätegesetz; eine Strafvorschrift zu öffentlichen Kalifatsforderungen enthält der vorgelegte Text nicht.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text regelt keine Asylverfahrensberatung oder deren rechtlichen Rahmen.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorgelegte Text regelt keine Asylverfahrensberatung oder deren rechtlichen Rahmen.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-04e5ce94708da8cd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Elektrogeräte- und Batterierecht; eine Rücknahme der CO₂-bezogenen Lkw-Mauterhöhung ist nicht geregelt.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Elektrogeräte- und Batterierecht; eine Rücknahme der CO₂-bezogenen Lkw-Mauterhöhung ist nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-04e5ce94708da8cd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-15cf4bf18e09941f",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Rücknahme oder Änderung des Selbstbestimmungsgesetzes ist im vorgelegten Gesetz nicht enthalten.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Rücknahme oder Änderung des Selbstbestimmungsgesetzes ist im vorgelegten Gesetz nicht enthalten.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-15cf4bf18e09941f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Elektrogeräte- und Batterierecht und enthält keine Überprüfung oder Streichung von Corona-bezogenen Gesetzen und Richtlinien.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Elektrogeräte- und Batterierecht und enthält keine Überprüfung oder Streichung von Corona-bezogenen Gesetzen und Richtlinien.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-336aafe829eb03dc",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Strafbarkeit der Verwendung von Symbolen oder Zeichen der genannten Organisationen.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Strafbarkeit der Verwendung von Symbolen oder Zeichen der genannten Organisationen.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-336aafe829eb03dc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze abzulehnen.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze abzulehnen.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8c34baf26577e822",
+          "disposition": "no_supported_link",
+          "rationale": "Regeln zur Bestellung von Parlamentspräsidien enthält die Änderung des Elektro- und Elektronikgerätegesetzes nicht.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Regeln zur Bestellung von Parlamentspräsidien enthält die Änderung des Elektro- und Elektronikgerätegesetzes nicht.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8c34baf26577e822",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine staatliche Förderung für die im Kriterium genannten Zwecke.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine staatliche Förderung für die im Kriterium genannten Zwecke.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Eine deutsche Ablehnung der Internationalen Gesundheitsvorschriften ist in diesem Gesetz nicht geregelt.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine deutsche Ablehnung der Internationalen Gesundheitsvorschriften ist in diesem Gesetz nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schreibt Kennzeichnungen von Sammel- und Rücknahmestellen vor; Inhalt, Gewicht und Verkaufspreis eines Produkts müssen danach nicht in Bezug gesetzt werden.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz schreibt Kennzeichnungen von Sammel- und Rücknahmestellen vor; Inhalt, Gewicht und Verkaufspreis eines Produkts müssen danach nicht in Bezug gesetzt werden.",
+            "law_passage_id": "bgbl-1-2025-286-p-8c5ae48156e3f689",
+            "law_quote": "Die nach § 12 Berechtigten haben dafür zu sorgen, dass von ihnen eingerichtete Sammel- und Rücknahmestellen gegenüber den Endnutzern durch das Symbol nach Anlage 3a kenntlich gemacht sind.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz eröffnet dem Volk keine Möglichkeit, vom Parlament beschlossene Gesetze zu ändern.",
+          "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8d706dfdf8290a7edb107fe93650fa3e6c2e65778d57ab52e65b30dd559cfd2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz eröffnet dem Volk keine Möglichkeit, vom Parlament beschlossene Gesetze zu ändern.",
+            "law_passage_id": "bgbl-1-2025-286-p-105849bef9736535",
+            "law_quote": "Zweites Gesetz zur Änderung des Elektro- und Elektronikgerätegesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-287",
-      "analysis_sha256": "f1d3ecd1a78b197baa83038aa8d0b35e14c332b3f2e15bdc3c3d7a5af2880863",
+      "analysis_sha256": "2acdae61182109aa24884c025ccf2e5d2edc4d8bdd22299eb24b40f25c8c92d3",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22158,7 +23518,7 @@
     },
     {
       "law_id": "bgbl-1-2025-295",
-      "analysis_sha256": "ae404bbc35181d407b26785cdd853b44b9cc7a11103184c0e0b640804334f0b8",
+      "analysis_sha256": "04bb6442ff15fc64e79cbaaaef0098a89427af0270627939fcd4fb7fa5d2bc26",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22180,7 +23540,7 @@
     },
     {
       "law_id": "bgbl-1-2025-301",
-      "analysis_sha256": "5fd998619c22fc62660d697adf7663b00eddb0efe6f188da47549ce9f1ce8637",
+      "analysis_sha256": "a82cf47e6a98f90906dc14927251be112cd766507b1966ba8e154bbd5ebc946b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22266,7 +23626,7 @@
     },
     {
       "law_id": "bgbl-1-2025-302",
-      "analysis_sha256": "9727421373cffed35e497d2ff51f5c05dce0ab0970134c2b14680b8704337db8",
+      "analysis_sha256": "8914aba688445d378a21d44f46b7fc64de7a48761575f679f629cc6ef45725af",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22289,7 +23649,7 @@
     },
     {
       "law_id": "bgbl-1-2025-317",
-      "analysis_sha256": "8a5e0ca1116af42d57513856163d9f4d15a71ff6e282c44128ed5ca5310db570",
+      "analysis_sha256": "644ca3694af9496f1676f20caa8c5dc7ae8d63520e5bb33b2ae723cb4e95f5ce",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22313,7 +23673,7 @@
     },
     {
       "law_id": "bgbl-1-2025-318",
-      "analysis_sha256": "24c9406787380b2426af10f134c45d3100e2d4b24b255b391ac0b9a4fccb0f3c",
+      "analysis_sha256": "d7f553d8288afda33112f54c6ab4c733968843ea262ef86e2a870bb87a3b6b02",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22337,7 +23697,7 @@
     },
     {
       "law_id": "bgbl-1-2025-319",
-      "analysis_sha256": "505f7304f892bdeaaa7e45c29f77364954f02d7ad6257b35c1c4b8b4382c0418",
+      "analysis_sha256": "4eb32b9e6e2161e5d5b557f9b7dd376c41034c945d32cbc63610670cef09a468",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22360,7 +23720,7 @@
     },
     {
       "law_id": "bgbl-1-2025-320",
-      "analysis_sha256": "313ade759e003b1b35be4ddecd01dc930d29b56bca87df6bdb2e94e70dd9b324",
+      "analysis_sha256": "aacaa5f8cfe91edc30718e8c75a7e9cab42bb8169fdf3d87fedc670d9eff9511",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22385,7 +23745,7 @@
     },
     {
       "law_id": "bgbl-1-2025-325",
-      "analysis_sha256": "2137c1b759d50a4896a476143e6ed371dcfbff76a56a96300a95b1abe15b0f74",
+      "analysis_sha256": "9d55c5fb3ccf90a152f9252f2ac3bdca4053c06cc207fcb4eb116f8bca82de6e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22411,7 +23771,7 @@
     },
     {
       "law_id": "bgbl-1-2025-340",
-      "analysis_sha256": "e5c9098d467fea25a274e4fbed24b680544c8f2c362c52b9b0ac0befd38788ce",
+      "analysis_sha256": "9c8bc5157cd3f15b6c0c11521b1616777d41f99676f277238ab27a5a44d9de4e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22474,7 +23834,7 @@
     },
     {
       "law_id": "bgbl-1-2025-341",
-      "analysis_sha256": "ff34082826428991cb898b721f77de5b3ab438d15e018240485b4d9b7196dadf",
+      "analysis_sha256": "22830a3636d12592febea977c337b9b43e32bd0494801386f51500d74e7ec188",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22502,7 +23862,7 @@
     },
     {
       "law_id": "bgbl-1-2025-342",
-      "analysis_sha256": "d4afc43d028fbf140371fe1f5f3b1a2391b6d658f1e589c3725cff0cdbd89b8d",
+      "analysis_sha256": "c5681356cb7e0f99db33441219967a1b6bed57d21e57575c8fc77f45d8324b3b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22524,7 +23884,7 @@
     },
     {
       "law_id": "bgbl-1-2025-343",
-      "analysis_sha256": "93d542d40373c76b2a831817ae9a44f720418d6b32bd59e95045904a62a07f4b",
+      "analysis_sha256": "122426a4f6e2a6b6443dd8bde1b417173254cc37d5045a9d548951898c1dd390",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22563,7 +23923,7 @@
     },
     {
       "law_id": "bgbl-1-2025-344",
-      "analysis_sha256": "bb27074071d8106dc5af503e039473bd9b220ed4711ad816491dd2427b46eee8",
+      "analysis_sha256": "b7c8c89987790df4d8fb6bfcea6cab3a449cb2dcc58b4b754ba7ebb848cc4c2b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22585,7 +23945,7 @@
     },
     {
       "law_id": "bgbl-1-2025-345",
-      "analysis_sha256": "fe8f0662c17bce5414940b07c6e271f4fbcc7ecbae9468160c96985b38100c45",
+      "analysis_sha256": "8d705e32ebaf1b8901349186037319a42ee08ea093e31cd4008f68abee2c5e01",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22613,7 +23973,7 @@
     },
     {
       "law_id": "bgbl-1-2025-346",
-      "analysis_sha256": "b376f94b11606b08c6036ab14169e17b863dc751b688572bc265e74a70d31b5d",
+      "analysis_sha256": "f6832314ad34f82aba8b026abe10470a7e5b5e6ae2a507a6f66bbf022033ef95",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22644,7 +24004,7 @@
     },
     {
       "law_id": "bgbl-1-2025-347",
-      "analysis_sha256": "7b202f83ad78e289a036118af140e7b18be13c3a507a78f37554c79a504a242e",
+      "analysis_sha256": "ed78f81d36b0bcbf7220bb1b2b9cfe43bd530356ec66e7e0b777aaba14622635",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22722,7 +24082,7 @@
     },
     {
       "law_id": "bgbl-1-2025-348",
-      "analysis_sha256": "adf853c6876289dfcd38b49ecdd972ac0cc84a5b3a9543987ae362b747926e38",
+      "analysis_sha256": "379837b4b6695eac45fc5e4d023f5d75384aec6ee62b426e579c39b2a0e8d906",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22750,7 +24110,7 @@
     },
     {
       "law_id": "bgbl-1-2025-349",
-      "analysis_sha256": "222f91796b3ca7e5d9ec4ba87349c38b4b8ec090c29bd74c0f82ef7f519cc0c3",
+      "analysis_sha256": "a1f167b84a792f0d10fb4662a2207d0c9cec4aa252dace70646ae01f029a12c5",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22774,7 +24134,7 @@
     },
     {
       "law_id": "bgbl-1-2025-350",
-      "analysis_sha256": "be6fe17e4d22c647d2a1a0a50b6ec15a30b80689161969e297e53e64d8742d0e",
+      "analysis_sha256": "2787d3c1f2c59b054d35c8e801e03d46038b32b59bae0cd7df8a3ce5c358d230",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22796,7 +24156,7 @@
     },
     {
       "law_id": "bgbl-1-2025-351",
-      "analysis_sha256": "bc689f53aa3c048d09c8b783f9e219f189d01b269a5ff6b7cf6731c1eb59e23a",
+      "analysis_sha256": "d0b2222e7659970398214554adf9411332bfd8b3c707631c9e49385cc3821206",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22828,7 +24188,7 @@
     },
     {
       "law_id": "bgbl-1-2025-352",
-      "analysis_sha256": "20c42545be9831bdd31585147208e6a90ecffaac2806d6d8f49ba25a365311a9",
+      "analysis_sha256": "9e64d7a7f17184af909d8b979a316d1d2016e60b280ce9463ce94baf715ee05c",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22878,7 +24238,7 @@
     },
     {
       "law_id": "bgbl-1-2025-353",
-      "analysis_sha256": "3c790a0171d9ff50f1a5d2c0650bc4510f2abd97fda61e65ff2961b2ecfdd386",
+      "analysis_sha256": "f268b3f3939a1796df4aed999f5a2cc87c3d649c14cc0c21a47ec4012a03baee",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22919,7 +24279,7 @@
     },
     {
       "law_id": "bgbl-1-2025-354",
-      "analysis_sha256": "a4c6ff979fdb01ec5772f8504935056d5c98e4f3d30f1b90a1f0d4d9b92285ea",
+      "analysis_sha256": "d56d17166fa6947270d0f1fbb7e162824c97bf0a41637d74d390d3c89394de54",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -22944,7 +24304,7 @@
     },
     {
       "law_id": "bgbl-1-2025-355",
-      "analysis_sha256": "b623a24ba681042699b9a36e199abf62dbfcbb940f21e694910c8999d83bc507",
+      "analysis_sha256": "93276a246f513829c0b0145dc608b8dbb02c339102e012d5e2db784c2fd629d7",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23058,7 +24418,7 @@
     },
     {
       "law_id": "bgbl-1-2025-356",
-      "analysis_sha256": "38394467a5433fbcbb4367fd5350974ede17a6a6cede7cabbaee3285cee7c0b1",
+      "analysis_sha256": "1edae381f0a37b0723413abda017274811618e4c42505e4e9029cfe469dd9fcb",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23085,7 +24445,7 @@
     },
     {
       "law_id": "bgbl-1-2025-361",
-      "analysis_sha256": "78fb8ed9b7f8fdf9c9927511457cc370e96e73e1979f8dd26b13815f8f803587",
+      "analysis_sha256": "4f9f311ee61b6845ba5c090f5bc4eb232b3eb9e230872f6df95f2e662579e2f2",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23108,7 +24468,7 @@
     },
     {
       "law_id": "bgbl-1-2025-362",
-      "analysis_sha256": "35d252af72a45857b9a6cf26436f03f2b991b2209a9a0dff860aea3415763d2f",
+      "analysis_sha256": "dc0fd337c9fdfc2b4a62be612f1ed7409bff3826534a02b778b67c487d0dd5ad",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23132,7 +24492,7 @@
     },
     {
       "law_id": "bgbl-1-2025-363",
-      "analysis_sha256": "29697f298c93433dcfb684ea469f8ee6144910ee71b552ac0ceb09e52a29e0e8",
+      "analysis_sha256": "b9af446c42ae432a135151b4c3698eeda15e61023120ff2ce249b0df5d09dcbf",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23165,7 +24525,7 @@
     },
     {
       "law_id": "bgbl-1-2025-364",
-      "analysis_sha256": "16ac6c5d30a659b4e9ea256c0a9b3caed106eaec55dbca03d7b157b12f7aa1d3",
+      "analysis_sha256": "352f75cf9dc53211d08795c6c963fcec0115ec3e0de57458c2ba02c04010010d",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23187,7 +24547,7 @@
     },
     {
       "law_id": "bgbl-1-2025-369",
-      "analysis_sha256": "2be256337ea98bbe389313683936f60ae093acda545dbf613a232e9190f5bbed",
+      "analysis_sha256": "e522b8f3285a9fffcb52c27d814f431c6e4ef745ff44e4609363d88a812c2c69",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23228,7 +24588,7 @@
     },
     {
       "law_id": "bgbl-1-2025-370",
-      "analysis_sha256": "4e97b3e540dc37506fd7d348fdcb77134c43a9079dca06e20f061942f4f3ac81",
+      "analysis_sha256": "107d4e17544dc72a85d5d458fa7c4cb7ac1373dcf2f62f5dae14cc8c23958003",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23271,7 +24631,7 @@
     },
     {
       "law_id": "bgbl-1-2025-371",
-      "analysis_sha256": "e4e9b2cc01184e5eed50b8dbabcc54f238f9a737da6eece4e526f3eea5d28815",
+      "analysis_sha256": "9f6e05aa1b30daefdcc2c805b91666f6ab7126936060a6361c229adcc40a6961",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23425,7 +24785,7 @@
     },
     {
       "law_id": "bgbl-1-2026-106",
-      "analysis_sha256": "b20832eb120bbe32906e0702e5ff055a1fcd9439107ed67abac23f5edeb1e9c8",
+      "analysis_sha256": "f2a982c0bdc76166acb4fcacb2205477a808f844468f86975339777d614332cc",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23447,7 +24807,7 @@
     },
     {
       "law_id": "bgbl-1-2026-107",
-      "analysis_sha256": "95a27e0075fce05640fa7029aab4fd2aeeb24b085c7e6a90f21456ee5636cd40",
+      "analysis_sha256": "4dbdecf6bce2cac3cca559d9f272d7e57b8632e92c5d5a69a0c728a097a123cb",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23558,7 +24918,7 @@
     },
     {
       "law_id": "bgbl-1-2026-111",
-      "analysis_sha256": "1f4a35a70d6cb45f70da744f60d2ae7e3e1d19bcad4ef627ecc146b9b4504717",
+      "analysis_sha256": "361ef415a28c42a2b358db36e878ff86146a105bea1af92e1ff947400e51f706",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23679,7 +25039,7 @@
     },
     {
       "law_id": "bgbl-1-2026-112",
-      "analysis_sha256": "7d5488e386ac079f7df6294c995d794e6a95173f559d253dcc662fad0aa7a34a",
+      "analysis_sha256": "818650040a269650cc15df2d86bbc6647f2f6226f5f4712e35cb8f6667522320",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23733,7 +25093,7 @@
     },
     {
       "law_id": "bgbl-1-2026-116",
-      "analysis_sha256": "52acf3d793fd42201b548716f4e62a75377c5441d7e3e7c174e867437146a7f1",
+      "analysis_sha256": "34963916b6bf64387afe6cf9bd187bdafca222b5a440daaa56870cc9dfd53b43",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23755,7 +25115,7 @@
     },
     {
       "law_id": "bgbl-1-2026-117",
-      "analysis_sha256": "234f5b11a61f4855c9eeaa0932e9f734e18e76561120a4cba00cd01d035dbcc3",
+      "analysis_sha256": "85bcf1932c0a1d80379d55479107f53c4b65a82c708acf8ef61d9162581a1d97",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23787,7 +25147,7 @@
     },
     {
       "law_id": "bgbl-1-2026-119",
-      "analysis_sha256": "0ed064fe5468991f422f23187114d3bb8d6eb4aab99b317af95593e305a4e115",
+      "analysis_sha256": "6cc788728b6831b4fb90acb6ae752e037458d86a12579e93cbfef9068ed8fec1",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23826,7 +25186,7 @@
     },
     {
       "law_id": "bgbl-1-2026-137",
-      "analysis_sha256": "755041d6eb296a21c104de3ca41c47ec57265a1bf9022ea4a54511a5e89cd362",
+      "analysis_sha256": "b3bbc2658bd97c6f08c386736afa5902fcfcc8df3ee18ae8796f0462c167bdae",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23877,7 +25237,7 @@
     },
     {
       "law_id": "bgbl-1-2026-138",
-      "analysis_sha256": "c6e043e256f7371a7829e5b70fc5788e24500dc1b1b367caf5cc0159d8b64c70",
+      "analysis_sha256": "be1f70e04173af939f2c766bdbeff4c884fc20f80925beea2fa514b581dbafcc",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23902,7 +25262,7 @@
     },
     {
       "law_id": "bgbl-1-2026-139",
-      "analysis_sha256": "109c12cb708cfd742ef4d4f84d608d53d2e890f33f38cbbadc7d36d6a1f5592e",
+      "analysis_sha256": "937ffe79c845a067a2230797dbd098bec44b9a6cab687dc2caea81a5219225df",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -23957,7 +25317,7 @@
     },
     {
       "law_id": "bgbl-1-2026-14",
-      "analysis_sha256": "c9ea1b175d9b79b32481c66d6fa1c265cc6e605c9f92a8e5e77c7a6ef1409a54",
+      "analysis_sha256": "a7c1c890ed8fbf22e21040f69614604e31ef859be5f410dead3d344f459397d8",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24002,7 +25362,7 @@
     },
     {
       "law_id": "bgbl-1-2026-140",
-      "analysis_sha256": "76d893d6096b6208f0784ff980d3403db3c85bb99f0480bfa7c4c0b52101e299",
+      "analysis_sha256": "bb7df3cf63253bdea62d3034762379b74e9f4be5b73e3f41e075fb89c5690f07",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24024,7 +25384,7 @@
     },
     {
       "law_id": "bgbl-1-2026-141",
-      "analysis_sha256": "1b29612a2fd9e617029c0fec7b317fca86eda6eb4537c6f2ed46cbb8ac0e98ef",
+      "analysis_sha256": "de7ce8ea31cfa30917cc49a705fbfec6d60cdbcb71ad23e4d6bf92e6618a4b8a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24047,7 +25407,7 @@
     },
     {
       "law_id": "bgbl-1-2026-142",
-      "analysis_sha256": "b3881c95516f116d2e6ba3a8a6063c8c8f7c91ae8dc4186337109d1b5059a766",
+      "analysis_sha256": "46f583498f0926d0b57233efeac7ca9d6b1cc51c4105439b8816b7ccd9d91846",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24078,7 +25438,7 @@
     },
     {
       "law_id": "bgbl-1-2026-143",
-      "analysis_sha256": "50e127884234afa1c47846e720f5ccb50293d81574973cfd172c6390c9f57b34",
+      "analysis_sha256": "0f73d2340b9e19962b7f18dd53dba8bee5c4c890a806d35064a54c42e43e9f1f",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24117,7 +25477,7 @@
     },
     {
       "law_id": "bgbl-1-2026-148",
-      "analysis_sha256": "4de67b0f26c044f0136623560a9be6f40df9d0c0a3b86cb9cff3a699ed122ef6",
+      "analysis_sha256": "0b9caf5499777211dd21f191669cbc951999a9e928a22af4791462d2d25b3cc7",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24144,7 +25504,7 @@
     },
     {
       "law_id": "bgbl-1-2026-152",
-      "analysis_sha256": "f2e26e5c539c0aabdd6a51b1834dd6e9846ce4de4bd9b0086bd5ee65ecbe1dd4",
+      "analysis_sha256": "9fafa84bfc306156ed12b6c9d347539d63a757b77a8a1160c82952e0df50b8a1",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24170,7 +25530,7 @@
     },
     {
       "law_id": "bgbl-1-2026-156",
-      "analysis_sha256": "4ef9d5f90b5ca6c65cdd8574f923afe96103b5cc6ba2352bef2b737bd61d827d",
+      "analysis_sha256": "09224f2cc3647fb7ede896155bdd12fa65ed81e35c20a391c27aebc29314545e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24206,7 +25566,7 @@
     },
     {
       "law_id": "bgbl-1-2026-157",
-      "analysis_sha256": "410b3c84b9cd20601c519a092796682592d10f2d2c9dbd309293162ddecc59b6",
+      "analysis_sha256": "3e891bee8b07aed181178711bf71c18df2a8c3ff993439dd5222ca2bc6776062",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24232,7 +25592,7 @@
     },
     {
       "law_id": "bgbl-1-2026-163",
-      "analysis_sha256": "7d9de4ef362588682ae2ceeb00abaf23a02860f47f4d8b0c680fa2afc69698bc",
+      "analysis_sha256": "ed44f3bd3eeed0f4697ef7f2755f4826a7298ee7c49edfc883f233e1fb8cc2b9",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24271,7 +25631,7 @@
     },
     {
       "law_id": "bgbl-1-2026-182",
-      "analysis_sha256": "5bef1c561e999b2d112f97ab30fc47ece109d12cab8d63667b3628ba94e75cc1",
+      "analysis_sha256": "e6a6cd6a268fcf234873d49624d08294275ced4246ee0c9ce4a693092681cb55",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24293,7 +25653,7 @@
     },
     {
       "law_id": "bgbl-1-2026-183",
-      "analysis_sha256": "ed9070bc1d7d17d89e077c6578f3b1383cb31e6135dd8a9f3444752991516e04",
+      "analysis_sha256": "42b2260cb9d71dc3c11e79b5990eb5e8e9c9438f2b93beb858cc1cf927ea4639",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24317,7 +25677,7 @@
     },
     {
       "law_id": "bgbl-1-2026-184",
-      "analysis_sha256": "edd72e2b540f4b88ba081cf0b9ea98e945ce54989e60af2e4aabda440fae0eca",
+      "analysis_sha256": "360672e852f8f8e1a034d50ea010bf8cc1fc136ba3d92627a116f4bbea3e13e4",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24348,7 +25708,7 @@
     },
     {
       "law_id": "bgbl-1-2026-191",
-      "analysis_sha256": "88e5bbcf00f8dbc1fce460e85a9aa64fba20e1c91b1afecec56eff78e25ec87c",
+      "analysis_sha256": "a587388179dcbec958f1906d6864a4a4bdf4d5642141a9609d65ec229bd53374",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24390,7 +25750,7 @@
     },
     {
       "law_id": "bgbl-1-2026-192",
-      "analysis_sha256": "5c99030f5dfe2a0d94f2c8ba3151996edf958bf2451bac692f850f35e6ccbb0a",
+      "analysis_sha256": "f44dda0712d256d44c57cf03aedb347e0950b12ecb784401256f38f9823c4c63",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24417,7 +25777,7 @@
     },
     {
       "law_id": "bgbl-1-2026-195",
-      "analysis_sha256": "a60fc71f4a82857dce199964c3b679037529b81c56a7b854b418ec4109bdad4d",
+      "analysis_sha256": "08c45f4442e7f82c64738d6ddee3613a513be288647120f1aeaaadd8c33dba7e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24462,7 +25822,7 @@
     },
     {
       "law_id": "bgbl-1-2026-197",
-      "analysis_sha256": "414dae7f851d9ed2eff5f9f4f1e55e493345e4b2124835926e28bf59ce031bd9",
+      "analysis_sha256": "2f1c8df4d00c266fef0111dd0faca495615808595eeb20b7e1e8f6891ae0c182",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24493,7 +25853,7 @@
     },
     {
       "law_id": "bgbl-1-2026-198",
-      "analysis_sha256": "742ee2b4baa0aa27f7ef21b120172b98c6f326bb20ad4b803258dc4f52aeed6c",
+      "analysis_sha256": "53a93ef9032872c8fd0ff81ba8c41262456568315cec252c946772439abf7a10",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24518,7 +25878,7 @@
     },
     {
       "law_id": "bgbl-1-2026-199",
-      "analysis_sha256": "48e64e2b9340b14b7ba1f8e036a2e1e71a7b539a99485edbf0815a071c5b2f51",
+      "analysis_sha256": "ce7f475be6dbe3a0a93f3135a84ec3fb72d54f097e973aaf291c49a5a90a13dc",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24549,7 +25909,7 @@
     },
     {
       "law_id": "bgbl-1-2026-2",
-      "analysis_sha256": "1da93adee8b4382ba79aa9f5477e29148bbaa28cb0848897a76e06ffe9c2ebb6",
+      "analysis_sha256": "a83ae15ae17734693ba90d2e460cd61a29972030ef7c3035ab5f452b59a67821",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24572,7 +25932,7 @@
     },
     {
       "law_id": "bgbl-1-2026-207",
-      "analysis_sha256": "3f1e8a09939221ba766df0b9caef3e887bccc66266313ad8a6c06bc1065cc289",
+      "analysis_sha256": "059bbbd2252130cd70f5aee29dd5dd5b1992777499fe91c4b36a0338884590ee",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24639,7 +25999,7 @@
     },
     {
       "law_id": "bgbl-1-2026-210a",
-      "analysis_sha256": "db3afdcbd0a3b3b8177c14a03f678a762e7b50d56348564fbf83f91742e5d84b",
+      "analysis_sha256": "4b0cbd4e3acac8327de2317b6689653aa9d585b7a4f212aafe42326adcc8d3a7",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24702,7 +26062,7 @@
     },
     {
       "law_id": "bgbl-1-2026-211",
-      "analysis_sha256": "045207338fa24cdb8ef583fed8b18992b1720d4f3143ae4309c95dbdf4521158",
+      "analysis_sha256": "34f5f9e978472dc3b73241a2ba87116ec195672998ed8c65429033fd2f11cc48",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24724,7 +26084,7 @@
     },
     {
       "law_id": "bgbl-1-2026-212",
-      "analysis_sha256": "1bce6ed6a5d71785094a75b6d9db1e258f9234f426eee600f0d22b041eae8ddb",
+      "analysis_sha256": "82d882c69fb528ae7d145e55a32bb57e8e61f8cc39e862e52c0903fa381a2ad8",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24748,7 +26108,7 @@
     },
     {
       "law_id": "bgbl-1-2026-213",
-      "analysis_sha256": "34a815c359e5969e6d29a7a1e01ef38b869047c9bdf591790ffe75da8e634ca7",
+      "analysis_sha256": "59f538973d63c4f2c7bae7e4186981ccc449227e02f13a14b24f7219764fe86b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24770,7 +26130,7 @@
     },
     {
       "law_id": "bgbl-1-2026-214",
-      "analysis_sha256": "3197c22b709c40ee87a04d5f0101e1ae36dd786dc1ea2aea049bad89c83620e3",
+      "analysis_sha256": "7df3b13322b4d35e235d599eb4f8780fc815aa70e14f742a307633daf052a055",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24792,7 +26152,7 @@
     },
     {
       "law_id": "bgbl-1-2026-215",
-      "analysis_sha256": "8dd996691975ff377f09121f7b0e6ec1e720c3889542e7244da9c4f1563dbce1",
+      "analysis_sha256": "dfe212241fd50ad448d892f698c17761554b5bcfdc26a0d0e5dd0b09cec5fd3f",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24816,7 +26176,7 @@
     },
     {
       "law_id": "bgbl-1-2026-221",
-      "analysis_sha256": "a268fd88c2f39b833bd1f0905c96b94857cbceaebe4c08448ee285cca44cac63",
+      "analysis_sha256": "bfe5af830db0330f1f8a43b23063018cbc86f58b2439e8ad3c0f3bde87a96c08",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24848,7 +26208,7 @@
     },
     {
       "law_id": "bgbl-1-2026-222",
-      "analysis_sha256": "433025ad9147191a334304c76fae2b8896bab5495b0d87aae9498678e764660a",
+      "analysis_sha256": "f71d445035817d02814b755f11a73e7b19c26b9670c21a09fe47feb0ed183ce1",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -24970,7 +26330,7 @@
     },
     {
       "law_id": "bgbl-1-2026-223",
-      "analysis_sha256": "26f6a17ce9c8a5a8938fd777818d40f5b47948c8360aefe2cabacc1d8fd8cb91",
+      "analysis_sha256": "e9450308a6c0e2663712a784cbdb6715839a895201c883900a9a5c6043118c2d",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25001,7 +26361,7 @@
     },
     {
       "law_id": "bgbl-1-2026-224",
-      "analysis_sha256": "d43c2db00b6a34a590dd05ca7cbae709c669197e02791f27528f491aca7965bb",
+      "analysis_sha256": "ef430f000b687adfdae617feca1806a19dcc5f17c08f25ed3de6884a146c6a07",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25065,7 +26425,7 @@
     },
     {
       "law_id": "bgbl-1-2026-225",
-      "analysis_sha256": "d050aaac2c1680df0b7c60a0523bc0b27133c831643d86a4e349b4a49ff57659",
+      "analysis_sha256": "5bf74c2b5cff945e219592b12c9532a1436dbe546d29497568ed27a79cdb820a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25098,7 +26458,7 @@
     },
     {
       "law_id": "bgbl-1-2026-226",
-      "analysis_sha256": "efa90034553a44daa0051471fc96de593b2948e6cf417589de9cc47907bb0d01",
+      "analysis_sha256": "7b5291f8341adeb3333719d3df3e9ffa962ea9e8c9bff9fbdeb1f1f64cc1f208",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25192,7 +26552,7 @@
     },
     {
       "law_id": "bgbl-1-2026-227",
-      "analysis_sha256": "0a0f7a10a9b521fd03ff4f4102c2b02551d54b97d328100ddb2af4d22bc1b438",
+      "analysis_sha256": "021bdc7e80ff7cc7d5f9e2b33eccff589f2df269afe88e1acde2e585f0fad5ca",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25214,7 +26574,7 @@
     },
     {
       "law_id": "bgbl-1-2026-228",
-      "analysis_sha256": "f70710c740de1e0bc33b35a2a8e7dd72e570ef5486ed6db64c3c43f5afc4700e",
+      "analysis_sha256": "d4f29bce4ba35837e9d3fe651e20d1816b67990f06b382bdcc7694e17733853b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25324,7 +26684,7 @@
     },
     {
       "law_id": "bgbl-1-2026-26",
-      "analysis_sha256": "ab15fe09a01e298fdc9ab8d8355a6a839da810c9f103dffd5c76d38b06ffbdd3",
+      "analysis_sha256": "791d297c505e52de358102d7b58b29dea1f3c8e53f54752448ee6008bc1674bf",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25347,7 +26707,7 @@
     },
     {
       "law_id": "bgbl-1-2026-27",
-      "analysis_sha256": "2a7432f2280a46fb2346df7bbb456f5018f1440d30be0a3c016cb6027b121004",
+      "analysis_sha256": "153ca65aaae8a39ba23e85fedef21573e023fa858fb21bce5cc389d741fd4126",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25380,7 +26740,7 @@
     },
     {
       "law_id": "bgbl-1-2026-275",
-      "analysis_sha256": "2c7cf29d4b7185bedb8aee13a74e5f561e4f1ede37ff1e794ee0bd0bc2db88c5",
+      "analysis_sha256": "af1d5d9163eaf424f0283cc689f033df37abaeef1fcdab728d73542f391bc709",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25488,7 +26848,7 @@
     },
     {
       "law_id": "bgbl-1-2026-276",
-      "analysis_sha256": "38fc9a5427aa6a09b659676f873879c9f62227cffe8bc6c2bcefa39956a76921",
+      "analysis_sha256": "49f67455269721d08a39119ff55e06a5b50c67dee08802670f2898f3856a3b82",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25510,7 +26870,7 @@
     },
     {
       "law_id": "bgbl-1-2026-28",
-      "analysis_sha256": "11b4850f4dbdf9fc6de3b395f8e192c84279b41f1cf631ff6686d927089520a8",
+      "analysis_sha256": "50ab80eb7e866c054cb39692547818bfb6bba88759ab96d57fca8209063efff5",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25541,7 +26901,7 @@
     },
     {
       "law_id": "bgbl-1-2026-285",
-      "analysis_sha256": "549ad586247251432b625a89c95d5766e6e918d64c614210890201c1bdb153e1",
+      "analysis_sha256": "31fb76a0ecbd64ca3a9bcad3efef10242c45043aa714970425315438fb2800d6",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25563,7 +26923,7 @@
     },
     {
       "law_id": "bgbl-1-2026-286",
-      "analysis_sha256": "726eef1002d48fb7e0203cc6f7770e11d5ec3d41de66e2079ed70c1888bf1a23",
+      "analysis_sha256": "7a47938d44f97d6ea5f8db575a786547252c4625e322012414f470a379778bfd",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25589,7 +26949,7 @@
     },
     {
       "law_id": "bgbl-1-2026-29",
-      "analysis_sha256": "67da680c98c82208722da23a6246799149a5b43a5822bfdb23ead5af45935e9a",
+      "analysis_sha256": "a875e05489bfe818d281c960fc48d4737d60ec6ae64076dada1fbc5782c30080",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25616,7 +26976,7 @@
     },
     {
       "law_id": "bgbl-1-2026-3",
-      "analysis_sha256": "ee0541c243175bb4acf4ba0fac6c5e59c6a756bdd140d00f520701f7800292cc",
+      "analysis_sha256": "57d6949e7c29152908fc309e0351a4317c2759b90c5406f364c7cd83e5f4314e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25638,7 +26998,7 @@
     },
     {
       "law_id": "bgbl-1-2026-30",
-      "analysis_sha256": "3399d2e6d63aa209e6beea1b662bc168eed59baf177cf299b09ddcf7fd709c14",
+      "analysis_sha256": "7a8fcab8442b1e5c3f037b829465e066031786d5c49242220606dff9c70ed4fe",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25660,7 +27020,7 @@
     },
     {
       "law_id": "bgbl-1-2026-33",
-      "analysis_sha256": "16a17c3ec42cfbe3851cc6a9fdba41563df01fe718937ee0e6d5aff63a17b1f9",
+      "analysis_sha256": "6dbfcc53beebbe1bf3e7e838091ebc25b62cefaa2262dc04185946bf475ec6aa",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25725,7 +27085,7 @@
     },
     {
       "law_id": "bgbl-1-2026-34",
-      "analysis_sha256": "15f59291c57ff2cf740fd2ecc2f791832503eaf75a4fa6c8d91a9be8f032a592",
+      "analysis_sha256": "772ff41db548e7b224a842771227393b7529d152db4a43e0d90b666f9ed5e7b2",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25747,7 +27107,7 @@
     },
     {
       "law_id": "bgbl-1-2026-39",
-      "analysis_sha256": "82d315f3c3fffb0190d9e460011ad3465547621ec70f0e8620a8c5be4479148e",
+      "analysis_sha256": "fafedebd6bbe972bae4b7f070fa03cf2b90e1344229df89f254fbf003e79ca20",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25781,7 +27141,7 @@
     },
     {
       "law_id": "bgbl-1-2026-4",
-      "analysis_sha256": "63edf4b802cf6ad3f7a1b0c23104f5988746127644fdc38ac02bfa2e7131b41b",
+      "analysis_sha256": "84e38fbd8b58ae651d547dd137c57fb8cd74610e57746d023a019728f224a10f",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25804,7 +27164,7 @@
     },
     {
       "law_id": "bgbl-1-2026-40",
-      "analysis_sha256": "b02d9014f8ce8de89f3a61797b744a0a2a6c95cadc4fb99d0b4ffe89f832bbfe",
+      "analysis_sha256": "4a5e29a82486b3ae31e770e1cecdc6dfaaf909c6f1ed2e89176f7dfcc04aaefd",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25857,7 +27217,7 @@
     },
     {
       "law_id": "bgbl-1-2026-43",
-      "analysis_sha256": "b983985ac3ad5f14c4786ad23efb76a5aeb7c97b7815001ad7964cccc4b58e3a",
+      "analysis_sha256": "6fc34d47a8cddf0533b4e31c2023fd790df0ed9b5ab597d0e678aaae517a821d",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25881,7 +27241,7 @@
     },
     {
       "law_id": "bgbl-1-2026-46",
-      "analysis_sha256": "479d4168d133bfdfa04fe51ba3edfabd42cf95de6a67ac07eae6e87f1ddd5f80",
+      "analysis_sha256": "ed1ba1016562e45137fdff269f845e9be5921b5eedef4b6cb2ac910b85f05ff7",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25903,7 +27263,7 @@
     },
     {
       "law_id": "bgbl-1-2026-47",
-      "analysis_sha256": "aa522be2445fafaabbf5004b5c4bb2c3b674d4b475930a19c1c14225bd598797",
+      "analysis_sha256": "4832cd5af188f408c958449e50d026bd7db9c3ba54fe8ea9be14af4ac7b454ce",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25949,7 +27309,7 @@
     },
     {
       "law_id": "bgbl-1-2026-6",
-      "analysis_sha256": "293ecd657830c5e233107cb29c535137c53976caf7450de1d8f98f265c62c1d5",
+      "analysis_sha256": "c3ee61e3620d5ea9219e6ee2fba61b0204e73b683c74476c579fb3ae859fbc5f",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -25981,7 +27341,7 @@
     },
     {
       "law_id": "bgbl-1-2026-60",
-      "analysis_sha256": "3c217293bf2868d1615687885d60090b417e4eb2790f0b3f511e9ff8b5ca293e",
+      "analysis_sha256": "da2d9d3bdae42286d9d121a7d8667e4ea7afb55b5487e333cc74085110e5d5a7",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26025,7 +27385,7 @@
     },
     {
       "law_id": "bgbl-1-2026-64",
-      "analysis_sha256": "a93d8dbf375f3c72e851d3fd2533cfac9a348da9c7f5dbc7f263708a0ceee12c",
+      "analysis_sha256": "8f262044f81253ab5b414623c6038a857737684519a7b2037f04f2522cb64cab",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26053,7 +27413,7 @@
     },
     {
       "law_id": "bgbl-1-2026-66",
-      "analysis_sha256": "07285b169cdeaa348f2b03b92685ff76d0df68cd97dbdaa03a735a0e8ec1bc1f",
+      "analysis_sha256": "c00eb0fe64cce5349841c5174db44599a7286655b71b8a3ca779703079d0232c",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26093,7 +27453,7 @@
     },
     {
       "law_id": "bgbl-1-2026-68",
-      "analysis_sha256": "927cf7c546ffa834d61b683bae7913af5d7f6738efde4dd41ebe9c7e5b908ccf",
+      "analysis_sha256": "37a51db17781abbd7529d708467ccfd2c3b1a77e327bcb03c99dfcc9a774b45a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26115,7 +27475,7 @@
     },
     {
       "law_id": "bgbl-1-2026-69",
-      "analysis_sha256": "df0a2f94fc6245b6e50b5697d5f21fcaa512ea8f5d8de45a1e29810d88a48bdf",
+      "analysis_sha256": "742b651ffd83cf0747ced2c3c576e32c23493747d0f7034d050ee749f53f9ba7",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26137,7 +27497,7 @@
     },
     {
       "law_id": "bgbl-1-2026-7",
-      "analysis_sha256": "9870f929ef418eabeb69cd0ece6974a86b0aa1cc38dc2ae75d5724d1a953c7bd",
+      "analysis_sha256": "a74910435422640840dbb2b65342c62b57e73ae314b9a41265c784346125a17a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26261,7 +27621,7 @@
     },
     {
       "law_id": "bgbl-1-2026-70",
-      "analysis_sha256": "89ae994e2c945038ebced705ce4b6950e7964cf5db25d7805d02adb70084547c",
+      "analysis_sha256": "a58843779d1be3bf32c9d44f213963797989defa647914f808721c34e00b7760",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26285,7 +27645,7 @@
     },
     {
       "law_id": "bgbl-1-2026-8",
-      "analysis_sha256": "e57c12577d8a9df6d39e07a787fff31c0acc5a351fcb175b12aa0b300827232b",
+      "analysis_sha256": "412f78c7229c56d9b25f5188fefa4450497beb45f26f93f821b5770fb74ae748",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26310,7 +27670,7 @@
     },
     {
       "law_id": "bgbl-1-2026-81",
-      "analysis_sha256": "b249d4dc0e43ab47908254dc48f4ad786fb0afa1006f5d63ea89e7c818a36948",
+      "analysis_sha256": "242574e04ca5056fb2298bf33c01cabfd14c732eabc866bdcb73f9f81be947a3",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26384,7 +27744,7 @@
     },
     {
       "law_id": "bgbl-1-2026-82",
-      "analysis_sha256": "05d7dcc36c75b15e02356bbabf1c04d4e7970496a6f53c8181edccc1e31d01ac",
+      "analysis_sha256": "8feb47b0d587195d11e6bf3052aeacc35c3236cc70a525ff08533c4af17db75a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26407,7 +27767,7 @@
     },
     {
       "law_id": "bgbl-1-2026-83",
-      "analysis_sha256": "cc3a3e3157f94daf3de1a4b71aaa3d8d3b043dd3b392d8b3856f2e376c3d9780",
+      "analysis_sha256": "ca481ef701b5f8e95b05b7668945b8fecb8065ca0d2095c2c4317bdc82e92fea",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26431,7 +27791,7 @@
     },
     {
       "law_id": "bgbl-1-2026-84",
-      "analysis_sha256": "0a3b70db19a25e05de6bf9356bbf4651e1ed2182daa473ac54b21784bdd1e90a",
+      "analysis_sha256": "88ae5c913b45eefdbe488b6a698c70249d7a71c40333eafecb5202bfb7dcce53",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26460,7 +27820,7 @@
     },
     {
       "law_id": "bgbl-1-2026-85",
-      "analysis_sha256": "6fda279722028cfe41babfb41bdc6987e9f8bfb9f29682c9931750c149e32fec",
+      "analysis_sha256": "80c37baf853f0fbcd6582896f359690932b4996720fa9a2752a9bf9eaf84c007",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26484,7 +27844,7 @@
     },
     {
       "law_id": "bgbl-1-2026-86",
-      "analysis_sha256": "dedce2a2b98fdc8e494b9e2e12a6e4865dad85b9f1d7bb71c8e68d9895ab5f06",
+      "analysis_sha256": "e76818825fe27f248967c7e59c165a1b9490c5f03ff719cc91e71b3e18d3ca3e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26508,7 +27868,7 @@
     },
     {
       "law_id": "bgbl-1-2026-87",
-      "analysis_sha256": "f8ae828f6b09abddc41b149245271a30d2aacda687abcc7c1f076c0eff2a71be",
+      "analysis_sha256": "404d8d29faa2ff082debc107b12670300a2f23dfa9a3d74d1b027e2c558435d9",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26531,7 +27891,7 @@
     },
     {
       "law_id": "bgbl-1-2026-9",
-      "analysis_sha256": "16dc74669cabc9eeef14e089d43580b57d96abff02ffa60f4ba3a34072a98383",
+      "analysis_sha256": "c1faa301b3ea619e00857c065071314143026d6340c68be9ba3b1c71ab79bddc",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26575,7 +27935,7 @@
     },
     {
       "law_id": "bgbl-1-2026-95",
-      "analysis_sha256": "a5055b7a9b00f9af16f102fbaac7163ba450e653bf6f9156ab18a09f419fec05",
+      "analysis_sha256": "dfa07121263ebb412679d0aa1d5c170d31e86c2320b96fa14c9c0783d77d8b8a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26604,7 +27964,7 @@
     },
     {
       "law_id": "bgbl-1-2026-97",
-      "analysis_sha256": "715fda9238b792e46f1b2810319e349cf4299ddc940f9bf7e321735e8c78aea4",
+      "analysis_sha256": "c214f5fae2fe88cca2166d7c6aaf91d26df65612a153b23c0317d7ab60af7cab",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26658,7 +28018,7 @@
     },
     {
       "law_id": "bgbl-1-2026-98",
-      "analysis_sha256": "5d9b630dad9c91d1fb0d46cd1ef4131baa206be051cfd13186934746d9d7b847",
+      "analysis_sha256": "5af3c5d3746af01fb0f88dbabd54fcb645acc8a3d1810d8d4178b41b9a425c35",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26729,7 +28089,7 @@
     },
     {
       "law_id": "bgbl-2-2025-142",
-      "analysis_sha256": "87964bdb0a1169d8382f11296a982035a85d3f5eddfcc46a0dd79bcc34f68ea7",
+      "analysis_sha256": "635650dd257e254c48c18f6c47a8723b8f02c5a949fefdcd28dc55b568d41baa",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26756,7 +28116,7 @@
     },
     {
       "law_id": "bgbl-2-2025-232",
-      "analysis_sha256": "eb6449b0c68ff00573d96d7d6bdea3d232d821327fd483a7db02cebc1003516b",
+      "analysis_sha256": "14ef56293f30579f68431ccafb9886c99248e597a38a2cf065e49bb714bdef3d",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26779,7 +28139,7 @@
     },
     {
       "law_id": "bgbl-2-2025-270",
-      "analysis_sha256": "400f7d06a7dc4f5494ec67f1fc194be3adfa1173fcf7e5856a1f467797e881a8",
+      "analysis_sha256": "05209ac8a54d66c9909dd8a020c8cc9ef7c482e067ca1fa9dc77c7a4b6b9f491",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26806,7 +28166,7 @@
     },
     {
       "law_id": "bgbl-2-2025-275",
-      "analysis_sha256": "00e54189f79c92888f8c7283ba273ab1eeb55be14af2ef2c554899973c306f4e",
+      "analysis_sha256": "cc1ac44ccc4eb60c9e7a0a57a0140b27ce1c23b16d0a24681f946793189e522b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26840,7 +28200,7 @@
     },
     {
       "law_id": "bgbl-2-2025-289",
-      "analysis_sha256": "3bf6b4cfd075cae3c8f46272db8361353816eeabce9a287a1a714c8d6e5ec0a3",
+      "analysis_sha256": "29110aff65062cc7d8ed710260917a5f50ad6d8fb770a604c3b31a2cdbb28548",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26906,7 +28266,7 @@
     },
     {
       "law_id": "bgbl-2-2025-292",
-      "analysis_sha256": "0b6f839c7874ae3318f4dba8b27525b5ea7c5ce23006c17258642e0e443b2478",
+      "analysis_sha256": "d9f5664f68e6d0a65374cb6533cf4ccbaddf18833b114c472e9a1a5a1b82000e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -26945,7 +28305,7 @@
     },
     {
       "law_id": "bgbl-2-2025-294",
-      "analysis_sha256": "37f77ab3252c403a3a5c461b7efb7bffeda720df213aa978480de0fc40c7f001",
+      "analysis_sha256": "49a683cbce78870761c91057f154b9af02fa1c03f912eb8973444d01810df767",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27016,7 +28376,7 @@
     },
     {
       "law_id": "bgbl-2-2025-295",
-      "analysis_sha256": "2b1276a424daa3df7e692ba37b625f0f91234c174554833a7ba5a4804dab25cf",
+      "analysis_sha256": "d688bf14792884bafadd179e483d1164d0e799449f75782f398acfc2112f172e",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27128,7 +28488,7 @@
     },
     {
       "law_id": "bgbl-2-2025-296",
-      "analysis_sha256": "da5f29d53785d888415e88d1cfc58da9328674321c2bd6c7a41ef73f5f88a651",
+      "analysis_sha256": "65659b5ceadbb38e80c255264aa32ae611b72538b898e5206077765a0ac9c695",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27212,7 +28572,7 @@
     },
     {
       "law_id": "bgbl-2-2025-297",
-      "analysis_sha256": "299532ec7fb903070dd4a9bc481358b82f54cadcd1f096fafe8b5aeaf5c90cff",
+      "analysis_sha256": "7adeecacace2e4483094ff32a7bf9b71a16f78ef08c384a17a37b6ad5d5ef65b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27342,7 +28702,7 @@
     },
     {
       "law_id": "bgbl-2-2026-10",
-      "analysis_sha256": "4f523ac5b11e5888dc6b9b354d097e3a76e676f8e595c4f87001ac6dfc95cedd",
+      "analysis_sha256": "63b73c0759ccc0c369d921914a994ce9f66fb925ccf2bb41c1519fbcab744f94",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27366,7 +28726,7 @@
     },
     {
       "law_id": "bgbl-2-2026-108",
-      "analysis_sha256": "f4532100686c01fe083ff9e63f8ed9b0e32c5e0c9990bb41199a378258d6609d",
+      "analysis_sha256": "d084ca4d807d6e2e7d6d6b5af71c2d78fba465300a19edb92262643f6fc51b00",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27393,7 +28753,7 @@
     },
     {
       "law_id": "bgbl-2-2026-140",
-      "analysis_sha256": "3f01ed9dfb3c978da541ff0734d8629ef49b0a7d2ba727120aa0b570dae33511",
+      "analysis_sha256": "80d7ca67e5ec7f4a8c23bd17928755eb9cc72f09e0d1dabf108e2d6348fe65b9",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27433,7 +28793,7 @@
     },
     {
       "law_id": "bgbl-2-2026-19",
-      "analysis_sha256": "1ea59f28b9b2c04515473b5a472d0bdc56733c3cea44cfa16f2435a39a01e105",
+      "analysis_sha256": "d23ec15be0e673b0339cbb0dbf3a4638bce4e834e3470904c1d5ec5d14eac144",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27493,7 +28853,7 @@
     },
     {
       "law_id": "bgbl-2-2026-220",
-      "analysis_sha256": "1f1a0f9a27459656e7974b5da942ddfa36e666a9d471229dc803642e27637193",
+      "analysis_sha256": "539c5f14dd3c8a947e7478454b66a5b7c41abf3a489e214aacfe4952359aa759",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27528,7 +28888,7 @@
     },
     {
       "law_id": "bgbl-2-2026-3",
-      "analysis_sha256": "2f885961a0a30bf57340a383b178712ae1ca21075a5c82cd42d6fc1f47a0ee99",
+      "analysis_sha256": "5fd81127aa0dfa0b9d60e24037a958fee99d8719cd9e32a00bb5e91958ad1b43",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27622,7 +28982,7 @@
     },
     {
       "law_id": "bgbl-2-2026-4",
-      "analysis_sha256": "df4b0937acc786037b0a7a834ac00dce07e7b66a7b26779f6c32d41121684cfd",
+      "analysis_sha256": "774b6c6b7ff1e0660bf1e4eee0a41140ea76b7b41aba04e8174392f5c3bd6b65",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27713,7 +29073,7 @@
     },
     {
       "law_id": "bgbl-2-2026-49",
-      "analysis_sha256": "7dc1cce056503cbb6cac01d1ec77f15109165ba46759a657a0e214128f3811e8",
+      "analysis_sha256": "993cd2629de455e246ec973a5a826ed9014d5fd408ea0441f93eefb239055e28",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27749,7 +29109,7 @@
     },
     {
       "law_id": "bgbl-2-2026-60",
-      "analysis_sha256": "1673a7d8423158afe112fd5df6db6572bc5ce37a52157a2c7fddb03da9ea48c0",
+      "analysis_sha256": "a9cb53a560a89373f211d49799349b4307f0c77596699d3b7b2dcf75d640657a",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27816,7 +29176,7 @@
     },
     {
       "law_id": "bgbl-2-2026-61",
-      "analysis_sha256": "05c93eed2bc4cf94fd277fcdf52aa857b2932f0100ce758c4638f314f797a7a6",
+      "analysis_sha256": "51ccce4e06b162eda4d35a67dee155d6e3d0aaecc73adb5caea138a3b8c12edc",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27840,7 +29200,7 @@
     },
     {
       "law_id": "bgbl-2-2026-62",
-      "analysis_sha256": "937d9522c4f11cfc4fbbc709db2b141ec173f574d8ba5de0cf563751632828c9",
+      "analysis_sha256": "491fc6e74cb7bab31b7e050cf30ac7e83d753b7bf9f17f04068259830ca3cb28",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -27914,7 +29274,7 @@
     },
     {
       "law_id": "bgbl-2-2026-8",
-      "analysis_sha256": "0599053df39b93aa97db31c5d4713ffb0b4122e8cc482d94f1ac39c7093a00de",
+      "analysis_sha256": "3b57d7eef3970b065d08ea9e711b5576fcc227405bde5a5aac94aeef096c2fa9",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -28226,7 +29586,7 @@
     },
     {
       "law_id": "bgbl-2-2026-9",
-      "analysis_sha256": "842a7c0299af5fd3bcd40ff095a2fadc5e518618ca8a2601594bb2c046686096",
+      "analysis_sha256": "e1e3be5b3b9257182109308149bd05ccfa85d37a096a1ec37376b64a2643d78b",
       "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
@@ -28269,22 +29629,59 @@
   ],
   "cost": {
     "model": "openai/gpt-6-luna",
-    "review_model": "anthropic/claude-sonnet-5.5",
-    "calls": 2895,
+    "review_model": "openai/gpt-6-sol",
+    "calls": 3003,
     "cache_hits": 21,
     "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 16.857814,
-    "reported_cost_calls": 2739,
+    "reported_cost_usd": 17.42225,
+    "reported_cost_calls": 2847,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 0.984476,
     "unknown_cost_calls": 156,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 17.84229,
-    "prompt_tokens": 28358668,
-    "completion_tokens": 3920291,
-    "max_usd": 25.0
+    "budget_exposure_usd": 18.406726,
+    "prompt_tokens": 29506388,
+    "completion_tokens": 4141652,
+    "max_usd": 37.84228986249995,
+    "breakdown": {
+      "openai/gpt-6-sol:final_links": {
+        "model": "openai/gpt-6-sol",
+        "stage": "final_links",
+        "calls": 18,
+        "reported_cost_usd": 0.38438775000000003,
+        "unknown_cost_reserved_usd": 0.0,
+        "pending_reserved_usd": 2.636779683484747e-16
+      },
+      "openai/gpt-6-sol:overall_assessments": {
+        "model": "openai/gpt-6-sol",
+        "stage": "overall_assessments",
+        "calls": 7,
+        "reported_cost_usd": 0.07777975,
+        "unknown_cost_reserved_usd": 0.0,
+        "pending_reserved_usd": 2.7755575615628914e-17
+      },
+      "openai/gpt-6-luna:screening": {
+        "model": "openai/gpt-6-luna",
+        "stage": "screening",
+        "calls": 83,
+        "reported_cost_usd": 0.10226821500000001,
+        "unknown_cost_reserved_usd": 0.0,
+        "pending_reserved_usd": 0
+      }
+    },
+    "migrations": [
+      {
+        "id": "all-party-sol-final-v2",
+        "from_model": "anthropic/claude-sonnet-5.5",
+        "to_model": "openai/gpt-6-sol",
+        "prior_reported_usd": 16.857814162499956,
+        "prior_exposure_usd": 17.842289862499957,
+        "additional_budget_usd": 20,
+        "cumulative_cap_usd": 37.84228986249995
+      }
+    ]
   },
-  "note": "Grouping pending: singleton groups are not a deduplicated denominator. All-party law-first screening. Unselected pairs are unknown; missing context is explicit. Cost is shared across programmes, never sum it once per programme."
+  "note": "Luna screening; batched Sol final evaluations. Cost shared across all programmes. Old proposed_link enum is retained for API compatibility; final provenance identifies decisions."
 }

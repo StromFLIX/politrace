@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2025-161",
   "score": 1,
   "confidence": 0.9,
-  "rationale": "Das Gesetz senkt den Körperschaftsteuersatz schrittweise und stützt damit teilweise eine Verringerung der Unternehmenssteuerbelastung. Der zitierte Satz belegt jedoch weder, dass die gesamte Unternehmenssteuerbelastung höchstens 25 Prozent beträgt, noch dass dieser Wert bereits erreicht ist.",
+  "rationale": "Der Körperschaftsteuersatz sinkt stufenweise von 15 Prozent für Veranlagungszeiträume bis 2027 auf 10 Prozent ab 2032. Das senkt einen Teil der Unternehmenssteuerbelastung; eine Gesamtbelastung von höchstens 25 Prozent ist damit nicht belegt.",
   "law_passage_id": "bgbl-1-2025-161-p-40bae47ee035efd4",
   "law_quote": "6. Veranlagungszeiträume ab 2032 10 Prozent",
   "criterion_quote": "- Wir senken die Unternehmenssteuerbelastung auf maximal 25 Prozent",
-  "caveats": [
-    "Die Regelung betrifft den Körperschaftsteuersatz; sie belegt nicht die Höhe der gesamten Unternehmenssteuerbelastung.",
-    "Der zitierte Satz gilt erst für Veranlagungszeiträume ab 2032.",
-    "Der Körperschaftsteuersatz allein ist nicht die gesamte Unternehmenssteuerbelastung; Solidaritätszuschlag und Gewerbesteuer fehlen im vorgelegten Text.",
-    "Die Absenkung erfolgt stufenweise, der zitierte Satz gilt erst ab dem Veranlagungszeitraum 2032.",
-    "Personenunternehmen sind nur durch den Thesaurierungssatz (§ 34a EStG) auf Antrag erfasst, nicht durch den Körperschaftsteuersatz.",
-    "Der Gesetzestext ist nur teilweise vorgelegt, die Gesamtbelastung lässt sich daraus nicht berechnen.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Programm verlangt, dass die Unternehmenssteuerbelastung insgesamt auf höchstens 25 Prozent sinkt. Der zitierte Satz setzt nur den Körperschaftsteuersatz ab 2032 auf 10 Prozent. Das Gesetz stützt damit allenfalls eine teilweise Entlastung. Es belegt weder die Gesamtbelastung (inklusive Solidaritätszuschlag, Gewerbesteuer, Personengesellschaften) noch das Erreichen von 25 Prozent. Die Richtung ist plausibel, die Größenordnung und der Maßstab (Gesamtbelastung) sind aber nicht gedeckt. Der Satz gilt zudem erst ab 2032 und ist nur ein Teil des Gesetzes."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "cea9eab390d61e0b048e530a16b3b66daac09b29f8fa312b541cea2a9d87cd5b",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "1428fd6823117d69b23a99d82c2e79acfe5ca75585234d6b9c31095d84809c06"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "358cf4531622327935a9c0141e8e9c2570e5d6f995a601664db775d59dee0ba5"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "72e784c2ed84df877d5f589f112a228ff37793f6b2017a878d8560bec420ba49"
+      "input_sha256": "cea9eab390d61e0b048e530a16b3b66daac09b29f8fa312b541cea2a9d87cd5b"
     }
   ]
 }
