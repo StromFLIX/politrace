@@ -96571,7 +96571,7 @@
     {
       "law_id": "bgbl-1-2025-355",
       "analysis_sha256": "227f0f7a546122d33d41c4b55f94dc1c6578e8a7e6598a8072dc09280d19ab77",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-0203fa88f6490ef5",
@@ -102470,6 +102470,38 @@
             "caveats": [],
             "criterion_id": "gruene-2025-ac-a33f50619df42306",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
+          "disposition": "missing_context",
+          "rationale": "Die Vorschrift verlangt automatisierte Mitteilungen über Änderungen bei Beschäftigungsbetriebsdaten. Ob diese Informationen die zuständigen Behörden frühzeitig erreichen, lässt sich ohne die verwiesenen Verfahrensregeln und Übermittlungsfristen nicht feststellen; bis Ende 2030 ist die Regelung zudem auf Pilotvorhaben begrenzt.",
+          "input_sha256": "d9d36720a2cd86a0e7fd18774c16588692be8464a6b24a40a1f6a585675b25a4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbaf9d3fcd86dfda9a53c88499d329d1a971c26c93371978b3f5cfb0e22450fa"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9d36720a2cd86a0e7fd18774c16588692be8464a6b24a40a1f6a585675b25a4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Die Vorschrift verlangt automatisierte Mitteilungen über Änderungen bei Beschäftigungsbetriebsdaten. Ob diese Informationen die zuständigen Behörden frühzeitig erreichen, lässt sich ohne die verwiesenen Verfahrensregeln und Übermittlungsfristen nicht feststellen; bis Ende 2030 ist die Regelung zudem auf Pilotvorhaben begrenzt.",
+            "law_passage_id": "bgbl-1-2025-355-p-089d0021ca014cb9",
+            "law_quote": "Die Bundesagentur für Arbeit übermittelt an die Deutsche Gesetzliche Unfallversicherung e. V. die Daten aus dem Dateisystem der Beschäftigungsbetriebe nach § 18i des Vierten Buches sowie die Zahl der Beschäftigten und teilt durch automatisierte Datenübermittlung nach § 18m Absatz 1 des Vierten Buches Änderungen mit.",
+            "criterion_quote": "Informationen die zuständigen Behörden frühzeitig erreichen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -233000,45 +233032,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3625,
+    "calls": 3714,
     "cache_hits": 35,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 2,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.176389,
-    "reported_cost_calls": 3423,
+    "reported_cost_usd": 21.352934,
+    "reported_cost_calls": 3497,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.240628,
-    "unknown_cost_calls": 202,
+    "unknown_cost_reserved_usd": 1.327248,
+    "unknown_cost_calls": 217,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 22.417018,
-    "prompt_tokens": 36536709,
-    "completion_tokens": 5379225,
+    "budget_exposure_usd": 22.680181,
+    "prompt_tokens": 37436697,
+    "completion_tokens": 5578346,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 131,
-        "reported_cost_usd": 3.0309667499999993,
-        "unknown_cost_reserved_usd": 8.049116928532385e-16,
-        "pending_reserved_usd": 8.326672684688674e-17
+        "calls": 133,
+        "reported_cost_usd": 3.079867749999999,
+        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 43,
-        "reported_cost_usd": 0.59554275,
+        "calls": 44,
+        "reported_cost_usd": 0.626052,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 554,
-        "reported_cost_usd": 0.6654099550000004,
-        "unknown_cost_reserved_usd": 0.25615245,
-        "pending_reserved_usd": 1.474514954580286e-17
+        "calls": 640,
+        "reported_cost_usd": 0.7625439375000012,
+        "unknown_cost_reserved_usd": 0.34277185,
+        "pending_reserved_usd": 5.204170427930421e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

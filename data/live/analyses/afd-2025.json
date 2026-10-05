@@ -39933,7 +39933,7 @@
     {
       "law_id": "bgbl-1-2025-355",
       "analysis_sha256": "93276a246f513829c0b0145dc608b8dbb02c339102e012d5e2db784c2fd629d7",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-018d175bab66ebe1",
@@ -41462,6 +41462,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-6d35e0eb59b7d78c",
+          "disposition": "proposed_link",
+          "rationale": "Die Rentenversicherung kann Versicherte mit gesundheitlichen Beeinträchtigungen und besonderem Unterstützungsbedarf beim beruflichen Wiedereinstieg durch Fallmanagement unterstützen. Das gilt nur bei erfüllten versicherungsrechtlichen Voraussetzungen und mit Einwilligung.",
+          "input_sha256": "d9d36720a2cd86a0e7fd18774c16588692be8464a6b24a40a1f6a585675b25a4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "89c2b923d1d7c9363bc5b02dfdf2e47427a048c868dc78566b99bfe632193a01"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9d36720a2cd86a0e7fd18774c16588692be8464a6b24a40a1f6a585675b25a4"
+            }
+          ],
+          "impact_id": "impact-860a98d4395ba009",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.98,
+            "rationale": "Die Rentenversicherung kann Versicherte mit gesundheitlichen Beeinträchtigungen und besonderem Unterstützungsbedarf beim beruflichen Wiedereinstieg durch Fallmanagement unterstützen. Das gilt nur bei erfüllten versicherungsrechtlichen Voraussetzungen und mit Einwilligung.",
+            "law_passage_id": "bgbl-1-2025-355-p-fbbba00d732725ba",
+            "law_quote": "Die Träger der Rentenversicherung können Versicherte mit gesundheitlichen Beeinträchtigungen und\nbesonderem Unterstützungsbedarf in Bezug auf die berufliche Teilhabe, die die versicherungsrechtlichen\nVoraussetzungen nach § 11 Absatz 1 oder 2 erfüllen, mit einem Fallmanagement aktivierend und koordinierend\nbei ihrer beruflichen Wiedereingliederung begleiten und unterstützen.",
+            "criterion_quote": "Hilfen\n\nbeim beruflichen Wiedereinstieg",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6d35e0eb59b7d78c",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-6e001d4f048c7b5b",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Regelungen zur Digitalisierung und Datenübermittlung sehen keine biometrische Identitätsfeststellung oder Maßnahme gegen Mehrfachbezug vor.",
@@ -42961,7 +42993,7 @@
     {
       "law_id": "bgbl-1-2025-356",
       "analysis_sha256": "1edae381f0a37b0723413abda017274811618e4c42505e4e9029cfe469dd9fcb",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -42983,7 +43015,467 @@
         "afd-2025-ac-cac984513f78438f"
       ],
       "omitted_count": 666,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu Tierarzneimitteln und Apotheken; eine Strafvorschrift zu öffentlichen Kalifatsforderungen enthält es nicht.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu Tierarzneimitteln und Apotheken; eine Strafvorschrift zu öffentlichen Kalifatsforderungen enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tierarzneimittel und Apotheken, nicht Anspruchsdauer oder Zugangsvoraussetzungen zum Arbeitslosengeld.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tierarzneimittel und Apotheken, nicht Anspruchsdauer oder Zugangsvoraussetzungen zum Arbeitslosengeld.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tierarzneimittel und Apotheken; Mittel für Maßnahmen in sogenannten No-go-Areas werden nicht geregelt.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Tierarzneimittel und Apotheken; Mittel für Maßnahmen in sogenannten No-go-Areas werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert tierarzneimittel- und apothekenrechtliche Vorschriften, überprüft oder streicht aber keine Corona-bezogenen Gesetze oder Richtlinien.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert tierarzneimittel- und apothekenrechtliche Vorschriften, überprüft oder streicht aber keine Corona-bezogenen Gesetze oder Richtlinien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tierarzneimittel und Apotheken; Vorgaben zur Fortgeltung früheren Baurechts für bestehende Bauwerke enthält es nicht.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tierarzneimittel und Apotheken; Vorgaben zur Fortgeltung früheren Baurechts für bestehende Bauwerke enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tierarzneimittel und Apotheken; eine Volkszustimmung zu Änderungen des Grundgesetzes wird nicht geregelt.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Tierarzneimittel und Apotheken; eine Volkszustimmung zu Änderungen des Grundgesetzes wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7686302968bb81ba",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tierarzneimittel und Apotheken, nicht psychologische Beratung vor Behandlungen hinsichtlich einer Geschlechtsumwandlung.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tierarzneimittel und Apotheken, nicht psychologische Beratung vor Behandlungen hinsichtlich einer Geschlechtsumwandlung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7686302968bb81ba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-95c9ec0447116186",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tierarzneimittel und Apotheken; eine Aufnahme von Migranten im Rahmen einer europäischen Lösung wird nicht geregelt.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tierarzneimittel und Apotheken; eine Aufnahme von Migranten im Rahmen einer europäischen Lösung wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-95c9ec0447116186",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tierarzneimittel und Apotheken; die Finanzierung staatlich veranlasster Ausgaben wird nicht geregelt.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Tierarzneimittel und Apotheken; die Finanzierung staatlich veranlasster Ausgaben wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Asylverfahren oder deren Anwendung auf Personen aus weiteren Herkunftsländern.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Asylverfahren oder deren Anwendung auf Personen aus weiteren Herkunftsländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tierarzneimittel und Apotheken und regelt keine Ablehnung der Internationalen Gesundheitsvorschriften; seine Verkündung am 23. Dezember 2025 lag zudem nach dem geforderten Termin 31. März 2025.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tierarzneimittel und Apotheken und regelt keine Ablehnung der Internationalen Gesundheitsvorschriften; seine Verkündung am 23. Dezember 2025 lag zudem nach dem geforderten Termin 31. März 2025.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a6d53362577018f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Tierarzneimittel und Apotheken, nicht die freie und selbstbestimmte Wahl einer medizinischen Behandlung durch Patienten.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Tierarzneimittel und Apotheken, nicht die freie und selbstbestimmte Wahl einer medizinischen Behandlung durch Patienten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a6d53362577018f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b386bf5ccc179a3d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tierarzneimittel und Apotheken, nicht Altersgrenzen für Behandlungen hinsichtlich einer Geschlechtsumwandlung.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tierarzneimittel und Apotheken, nicht Altersgrenzen für Behandlungen hinsichtlich einer Geschlechtsumwandlung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b386bf5ccc179a3d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert unter anderem tierarzneimittelrechtliche Kennzeichnungsregeln, aber keine Pflicht, Inhalt und Gewicht von Produkten zum Verkaufspreis in Bezug zu setzen.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert unter anderem tierarzneimittelrechtliche Kennzeichnungsregeln, aber keine Pflicht, Inhalt und Gewicht von Produkten zum Verkaufspreis in Bezug zu setzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu Tierarzneimitteln und Apotheken; ein Recht des Volkes, parlamentarisch beschlossene Gesetze zu ändern, wird nicht geschaffen.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu Tierarzneimitteln und Apotheken; ein Recht des Volkes, parlamentarisch beschlossene Gesetze zu ändern, wird nicht geschaffen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bcd807232c364182",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu Tierarzneimitteln und Apotheken; eine Aufnahme von Kinderrechten ins Grundgesetz behandelt es nicht.",
+          "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ed8da4a1d7b224fce43671295e5fb7119164933f6fb4ce1d7c9cf1aa6b8781de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu Tierarzneimitteln und Apotheken; eine Aufnahme von Kinderrechten ins Grundgesetz behandelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bcd807232c364182",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cac984513f78438f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tierarzneimittel und tierärztliche Hausapotheken, nicht die freie Wahl einer behandelnden Person in der menschlichen Versorgung.",
+          "input_sha256": "e9b8ad03ebf47e3b26ffa68921e8689d6b36a847dfc89204634209fc19a2445a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9b8ad03ebf47e3b26ffa68921e8689d6b36a847dfc89204634209fc19a2445a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Tierarzneimittel und tierärztliche Hausapotheken, nicht die freie Wahl einer behandelnden Person in der menschlichen Versorgung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cac984513f78438f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-361",
@@ -43006,7 +43498,334 @@
         "afd-2025-ac-e9259793c222efca"
       ],
       "omitted_count": 670,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0968da4fef943748",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt eine Steuerbefreiung für bestimmte Arbeitsentgelte nach Erreichen der Regelaltersgrenze ein; eine Indexierung von Freibeträgen regelt es nicht.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz führt eine Steuerbefreiung für bestimmte Arbeitsentgelte nach Erreichen der Regelaltersgrenze ein; eine Indexierung von Freibeträgen regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "Die Freibeträge sollen indexiert werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0968da4fef943748",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-263e5eae108f909e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert die steuerliche Behandlung bestimmter Arbeitsentgelte im Rentenalter, nicht die Anspruchsvoraussetzungen für Leistungen der Arbeitslosenversicherung.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert die steuerliche Behandlung bestimmter Arbeitsentgelte im Rentenalter, nicht die Anspruchsvoraussetzungen für Leistungen der Arbeitslosenversicherung.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "Einen Anspruch auf Leistungen aus der Arbeitslosenversicherung soll nur haben, wer die Arbeitslosigkeit nicht selbst herbeigeführt hat.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-263e5eae108f909e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung über Volksabstimmungen oder ein Verfahren zur Änderung oder Ablehnung parlamentarischer Gesetze.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung über Volksabstimmungen oder ein Verfahren zur Änderung oder Ablehnung parlamentarischer Gesetze.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern oder abzulehnen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5e74bfd4cb2eb4e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht eine Steuerbefreiung für bestimmte Arbeitsentgelte vor, aber keine Zuschläge auf Einkommen- oder Körperschaftsteuer zur Entschädigung von Kommunen.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht eine Steuerbefreiung für bestimmte Arbeitsentgelte vor, aber keine Zuschläge auf Einkommen- oder Körperschaftsteuer zur Entschädigung von Kommunen.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "Die Kommunen werden durch einen Zuschlag auf die Einkommensteuer und die Körperschaftsteuer vollumfänglich entschädigt.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5e74bfd4cb2eb4e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz gewährt keine Prämie oder Beitragsgutschrift bei Geburt eines Kindes; es betrifft bestimmte Arbeitsentgelte im Rentenalter.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz gewährt keine Prämie oder Beitragsgutschrift bei Geburt eines Kindes; es betrifft bestimmte Arbeitsentgelte im Rentenalter.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "eine Willkommensprämie von 20.000 € für neugeborene Babys",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Zustimmung des Volkes bei Änderungen des Grundgesetzes.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Zustimmung des Volkes bei Änderungen des Grundgesetzes.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "Ohne Zustimmung des Volkes darf das Grundgesetz nicht geändert",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-84332e4e1f61f7bd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keinen zusätzlichen allgemeinen Grundfreibetrag von 12.000 Euro für Rentner, sondern befreit unter bestimmten Voraussetzungen Arbeitsentgelt bis 24.000 Euro jährlich von der Steuer.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz schafft keinen zusätzlichen allgemeinen Grundfreibetrag von 12.000 Euro für Rentner, sondern befreit unter bestimmten Voraussetzungen Arbeitsentgelt bis 24.000 Euro jährlich von der Steuer.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "einen zusätzlichen Steuergrundfreibetrag in Höhe von 12.000 €",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-84332e4e1f61f7bd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-afc7f6a21b1b231c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder eine Rückzahlung von Rentenbeiträgen noch eine Freistellung künftiger Beiträge bei Geburt eines Kindes.",
+          "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1dee9a7e1ebcd29564a98f69effdf15b4f72dc86a90ab642676c16722cc13bb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder eine Rückzahlung von Rentenbeiträgen noch eine Freistellung künftiger Beiträge bei Geburt eines Kindes.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze",
+            "criterion_quote": "bei der Geburt jedes Kindes eine Rückzahlung von 20.000 € an Rentenbeiträgen oder eine entsprechende Freistellung von künftigen Zahlungen erfolgen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-afc7f6a21b1b231c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert steuerliche Vorschriften; ein Recht des Volkes, Parlamentsgesetze zu ändern, wird nicht eingeräumt.",
+          "input_sha256": "660b33979688b1c7a4571b2214836faa7a327ae7ec55efa4d0e52437b409d909",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "660b33979688b1c7a4571b2214836faa7a327ae7ec55efa4d0e52437b409d909"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert steuerliche Vorschriften; ein Recht des Volkes, Parlamentsgesetze zu ändern, wird nicht eingeräumt.",
+            "law_passage_id": "bgbl-1-2025-361-p-ce6b660a7675b40e",
+            "law_quote": "Der Bundestag hat mit Zustimmung des Bundesrates das folgende Gesetz beschlossen:",
+            "criterion_quote": "Wir wollen dem Volk das Recht geben, den Abgeordneten auf die Finger zu schauen und vom Parlament beschlossene Gesetze zu ändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cfc999c4ee32c427",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt ab 1. Januar 2026 eine Steuerbefreiung für bestimmte Arbeitslöhne nach Erreichen der Regelaltersgrenze, nicht einen Vermittlungsschein bei Arbeitgeberkündigung ab 50.",
+          "input_sha256": "660b33979688b1c7a4571b2214836faa7a327ae7ec55efa4d0e52437b409d909",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "660b33979688b1c7a4571b2214836faa7a327ae7ec55efa4d0e52437b409d909"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt ab 1. Januar 2026 eine Steuerbefreiung für bestimmte Arbeitslöhne nach Erreichen der Regelaltersgrenze, nicht einen Vermittlungsschein bei Arbeitgeberkündigung ab 50.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch erbrachte Leistungen zufließen",
+            "criterion_quote": "Arbeitnehmer über 50 Jahre bereits zum Zeitpunkt der Kündigung durch den Arbeitgeber Anspruch auf einen Berechtigungsschein für eine private Arbeitsvermittlung erhalten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cfc999c4ee32c427",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e1100ebeea8f4213",
+          "disposition": "missing_context",
+          "rationale": "Der als Teilkontext gekennzeichnete Auszug enthält keine Regelung zum Umsatzsteuersatz gastronomischer Leistungen; ob das Gesetz hierzu weitere Bestimmungen enthält, lässt sich aus den vorgelegten Texten nicht feststellen.",
+          "input_sha256": "4dc848110d38c3c24be7d08e577902de40f09d161bbf420e4c7fac215cb1dc94",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4dc848110d38c3c24be7d08e577902de40f09d161bbf420e4c7fac215cb1dc94"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der als Teilkontext gekennzeichnete Auszug enthält keine Regelung zum Umsatzsteuersatz gastronomischer Leistungen; ob das Gesetz hierzu weitere Bestimmungen enthält, lässt sich aus den vorgelegten Texten nicht feststellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wiedereinführung des ermäßigten Umsatzsteuersatzes in der Gastronomie",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-e1100ebeea8f4213",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e9259793c222efca",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift befreit unter Bedingungen Arbeitslohn nach Erreichen der Regelaltersgrenze von der Steuer; sie setzt den Grundfreibetrag nicht auf 15.000 Euro fest.",
+          "input_sha256": "12d60000865bb24198ed8e69ffe511907a3b0f0b97969e87b93a2a7a5830439e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "12d60000865bb24198ed8e69ffe511907a3b0f0b97969e87b93a2a7a5830439e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Vorschrift befreit unter Bedingungen Arbeitslohn nach Erreichen der Regelaltersgrenze von der Steuer; sie setzt den Grundfreibetrag nicht auf 15.000 Euro fest.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch erbrachte Leistungen zufließen",
+            "criterion_quote": "Der einkommensteuerliche Grundfreibetrag soll auf 15.000\n\nEuro erhöht werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e9259793c222efca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-362",
@@ -48172,45 +48991,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3625,
+    "calls": 3714,
     "cache_hits": 35,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 2,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.176389,
-    "reported_cost_calls": 3423,
+    "reported_cost_usd": 21.352934,
+    "reported_cost_calls": 3497,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.240628,
-    "unknown_cost_calls": 202,
+    "unknown_cost_reserved_usd": 1.327248,
+    "unknown_cost_calls": 217,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 22.417018,
-    "prompt_tokens": 36536709,
-    "completion_tokens": 5379225,
+    "budget_exposure_usd": 22.680181,
+    "prompt_tokens": 37436697,
+    "completion_tokens": 5578346,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 131,
-        "reported_cost_usd": 3.0309667499999993,
-        "unknown_cost_reserved_usd": 8.049116928532385e-16,
-        "pending_reserved_usd": 8.326672684688674e-17
+        "calls": 133,
+        "reported_cost_usd": 3.079867749999999,
+        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 43,
-        "reported_cost_usd": 0.59554275,
+        "calls": 44,
+        "reported_cost_usd": 0.626052,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 554,
-        "reported_cost_usd": 0.6654099550000004,
-        "unknown_cost_reserved_usd": 0.25615245,
-        "pending_reserved_usd": 1.474514954580286e-17
+        "calls": 640,
+        "reported_cost_usd": 0.7625439375000012,
+        "unknown_cost_reserved_usd": 0.34277185,
+        "pending_reserved_usd": 5.204170427930421e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
