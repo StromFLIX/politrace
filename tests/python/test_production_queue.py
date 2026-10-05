@@ -219,6 +219,17 @@ def test_incremental_law_batch_checkpoint_survives_later_failure(corpus, tmp_pat
     assert len(result.pairs) == 8 and agent.calls == 3
 
 
+def test_legacy_checkpoint_empty_git_markers_are_ignored(corpus, tmp_path):
+    root = corpus[0]
+    incoming = tmp_path / 'incoming'
+    (incoming / 'laws').mkdir(parents=True)
+    (incoming / 'laws/.gitkeep').write_text('')
+    merge_live(incoming, root / 'live')
+    (incoming / 'laws/.gitkeep').write_text('Unexpected data is not an empty marker')
+    with pytest.raises(ValueError, match='Unexpected file'):
+        merge_live(incoming, root / 'live')
+
+
 def test_merge_preserves_citizen_criterion_and_source_corrections(corpus, tmp_path):
     root, program, criterion, _ = corpus
     incoming = tmp_path / 'incoming'

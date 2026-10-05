@@ -22,6 +22,8 @@ def merge_live(incoming: Path, target: Path):
         if not source.is_file() or source.is_symlink():
             continue
         relative = source.relative_to(incoming)
+        if source.name == '.gitkeep' and source.stat().st_size == 0:
+            continue  # Old artifacts include harmless empty Git directory markers.
         if source.suffix not in ('.json', '.md') or '..' in relative.parts:
             raise ValueError('Unexpected file in generated data checkpoint')
         output = target / relative
