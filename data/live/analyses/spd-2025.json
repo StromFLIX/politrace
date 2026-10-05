@@ -16918,7 +16918,7 @@
     {
       "law_id": "bgbl-1-2025-247",
       "analysis_sha256": "0a95fe8a31cd93855843de10a2e0f447298fdde72f16529cd3122a85961aef8f",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-091488700f11bcf7",
@@ -16936,12 +16936,382 @@
         "spd-2025-ac-f2951160fee20b8b"
       ],
       "omitted_count": 774,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-091488700f11bcf7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erwähnt EU-Rechtsakte und die Überwachung eines Ausgabenpfades, belegt aber nicht, dass die Bundesregierung die EU-Kommission bei der Umsetzung der Letta- und Draghi-Berichte unterstützt.",
+          "input_sha256": "a883edc3d4fdd0688e9a9c163497558965c9af83cdfcbc3f793555e3192d114e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a883edc3d4fdd0688e9a9c163497558965c9af83cdfcbc3f793555e3192d114e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz erwähnt EU-Rechtsakte und die Überwachung eines Ausgabenpfades, belegt aber nicht, dass die Bundesregierung die EU-Kommission bei der Umsetzung der Letta- und Draghi-Berichte unterstützt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir begrüßen die Berichte von Enrico Letta und Mario Draghi zur Stärkung der europäischen\nWettbewerbsfähigkeit und unterstützen die EU-Kommission bei der Umsetzung.",
+            "caveats": [
+              "Die thematische Bezugnahme auf EU-Fiskalregeln belegt keine Unterstützung bei der Umsetzung dieser Berichte."
+            ],
+            "criterion_id": "spd-2025-ac-091488700f11bcf7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-094ef24a14e40808",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz eröffnet den Ländern ausdrücklich die Möglichkeit, die für sie ermittelte strukturelle Kreditaufnahme ab dem Haushaltsjahr 2025 in Anspruch zu nehmen. Damit ist der Teil des Kriteriums zu Kreditaufnahmemöglichkeiten belegt. Der angeführte Satz allein belegt jedoch nicht, dass diese Möglichkeiten vollständig im Einklang mit den europäischen Fiskalregeln stehen.",
+          "input_sha256": "a883edc3d4fdd0688e9a9c163497558965c9af83cdfcbc3f793555e3192d114e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a883edc3d4fdd0688e9a9c163497558965c9af83cdfcbc3f793555e3192d114e"
+            },
+            {
+              "model": "anthropic/claude-sonnet-5.5",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "18c1196fc426e869424c6f44c913405a3557afabea4563aa88eec8c658fa53c2"
+            }
+          ],
+          "impact_id": "impact-fbfe77674207e474",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz eröffnet den Ländern ausdrücklich die Möglichkeit, die für sie ermittelte strukturelle Kreditaufnahme ab dem Haushaltsjahr 2025 in Anspruch zu nehmen. Damit ist der Teil des Kriteriums zu Kreditaufnahmemöglichkeiten belegt. Der angeführte Satz allein belegt jedoch nicht, dass diese Möglichkeiten vollständig im Einklang mit den europäischen Fiskalregeln stehen.",
+            "law_passage_id": "bgbl-1-2025-247-p-b95928379b2acd86",
+            "law_quote": "Die gemäß § 2 für jedes Land ermittelte zulässige strukturelle Kreditaufnahme kann erstmals für das\nHaushaltsjahr 2025 in Anspruch genommen werden.",
+            "criterion_quote": "Die Länder sollen Möglichkeiten der Kreditaufnahme erhalten. Dies geschieht im Einklang mit den\neuropäischen Fiskalregeln.",
+            "caveats": [
+              "Belegt ist die Möglichkeit struktureller Kreditaufnahme, nicht abschließend deren Einklang mit sämtlichen europäischen Fiskalregeln."
+            ],
+            "criterion_id": "spd-2025-ac-094ef24a14e40808",
+            "disposition": "proposed_link"
+          },
+          "verification": {
+            "accepted": true,
+            "rationale": "Das Programmkriterium verlangt, dass die Länder Möglichkeiten zur Kreditaufnahme erhalten, und zwar im Einklang mit den europäischen Fiskalregeln. Das Gesetz (StruKomLäG) regelt in § 1 und § 2 die zulässige strukturelle Kreditaufnahme der Länder nach Art. 109 Abs. 3 Satz 6 und 7 GG und deren Verteilung auf die einzelnen Länder. § 3 stellt klar, dass die je Land ermittelte Kreditaufnahme erstmals für das Haushaltsjahr 2025 in Anspruch genommen werden kann. Damit ist der Teil, dass die Länder Kreditaufnahmemöglichkeiten erhalten, rechtlich belegt. Die Richtung stimmt, die Wirkung ist konkret und verbindlich. Die Änderungen des Stabilitätsratsgesetzes und des Sanktionszahlungs-Aufteilungsgesetzes verweisen zudem auf die Verordnung (EU) 2024/1263 und die Verordnung (EG) Nr. 1467/97. Das stützt einen Bezug zu den europäischen Fiskalregeln, belegt aber nicht ausdrücklich, dass die Länderkreditaufnahme selbst vollständig mit ihnen vereinbar ist.",
+            "caveats": [
+              "Der Einklang mit den europäischen Fiskalregeln ist nur indirekt über die Stabilitätsrat- und Sanktionsregelungen gestützt, nicht durch eine ausdrückliche Vereinbarkeitsregel für die Länderkreditaufnahme.",
+              "Die Höhe der Kreditaufnahme ergibt sich aus Art. 109 Abs. 3 GG, der hier nicht vorliegt. Die konkreten Beträge und Anteile sind nur teilweise im Text (Teilliste der Länderanteile für 2025).",
+              "Der Gesetzestext liegt als Teilkontext vor; Fiskalregelkonformität wird nicht abschließend bewertet."
+            ],
+            "criterion_id": "spd-2025-ac-094ef24a14e40808"
+          }
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die strukturelle Kreditaufnahme der Länder und die Überwachung eines Nettoausgabenpfades. Es enthält keine Regelung zum gesetzlichen Mindestlohn oder zu dessen Höhe.",
+          "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die strukturelle Kreditaufnahme der Länder und die Überwachung eines Nettoausgabenpfades. Es enthält keine Regelung zum gesetzlichen Mindestlohn oder zu dessen Höhe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-387d9bbf1fdcdcc0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert zwar bestehende Vorschriften und führt Überwachungsaufgaben ein, belegt aber keine schrittweise Überprüfung bestehender Gesetze anhand der im Kriterium genannten Aspekte.",
+          "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert zwar bestehende Vorschriften und führt Überwachungsaufgaben ein, belegt aber keine schrittweise Überprüfung bestehender Gesetze anhand der im Kriterium genannten Aspekte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-387d9bbf1fdcdcc0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3af9f89c3e347785",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet einen unabhängigen Beirat ein, dessen Aufgabe die Überwachung der Einhaltung eines Nettoausgabenpfades ist. Eine Überwachung des Einsatzes bestehender Instrumente im Sinne des Kriteriums ist daraus nicht belegt.",
+          "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz richtet einen unabhängigen Beirat ein, dessen Aufgabe die Überwachung der Einhaltung eines Nettoausgabenpfades ist. Eine Überwachung des Einsatzes bestehender Instrumente im Sinne des Kriteriums ist daraus nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3af9f89c3e347785",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4f5210a65f0e3f11",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen die Haushaltsüberwachung und die zulässige Kreditaufnahme. Ein Einsatz der Bundesregierung für eine gemeinsame europäische Rüstungsexportpolitik ist nicht belegt.",
+          "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen die Haushaltsüberwachung und die zulässige Kreditaufnahme. Ein Einsatz der Bundesregierung für eine gemeinsame europäische Rüstungsexportpolitik ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4f5210a65f0e3f11",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-881116ec00a0aa9d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine belegte Regelung zur Bot-Kennzeichnungspflicht oder zu ihrer Durchsetzung.",
+          "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine belegte Regelung zur Bot-Kennzeichnungspflicht oder zu ihrer Durchsetzung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-881116ec00a0aa9d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Bestimmung des Artikels 3 Absatz 3 GG und enthält keine Regelung zu sexueller Orientierung oder geschlechtlicher Identität als geschützten Merkmalen.",
+          "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ab1554fd371fa898ec2689c849b8aaa7437eb8efa79e01d387a7b736b687aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Bestimmung des Artikels 3 Absatz 3 GG und enthält keine Regelung zu sexueller Orientierung oder geschlechtlicher Identität als geschützten Merkmalen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die strukturelle Kreditaufnahme der Länder und die Überwachung haushaltspolitischer Vorgaben. Eine Durchsetzung der DMA, des DSA oder der KI-Verordnung ist nicht belegt.",
+          "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die strukturelle Kreditaufnahme der Länder und die Überwachung haushaltspolitischer Vorgaben. Eine Durchsetzung der DMA, des DSA oder der KI-Verordnung ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-adcd9e8a7962620e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bestimmungen zur Kreditaufnahme und Haushaltsüberwachung belegen keine Ermöglichung kommunaler Entwicklungsbeiräte oder gemeinsamer Empfehlungen für langfristige Entscheidungen.",
+          "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Bestimmungen zur Kreditaufnahme und Haushaltsüberwachung belegen keine Ermöglichung kommunaler Entwicklungsbeiräte oder gemeinsamer Empfehlungen für langfristige Entscheidungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-adcd9e8a7962620e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c016673669030481",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Bundesdisziplinarrecht oder zur Entfernung von Verfassungsfeinden aus dem Staatsdienst. Ein entsprechender Effekt ist daher nicht belegt.",
+          "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Bundesdisziplinarrecht oder zur Entfernung von Verfassungsfeinden aus dem Staatsdienst. Ein entsprechender Effekt ist daher nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c016673669030481",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c7d4a2d4e2110caa",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Kreditaufnahme und haushaltspolitische Überwachung; gemeinsame Standards für grünen Stahl oder eine Verringerung der Zahl unterschiedlicher Standards sind nicht belegt.",
+          "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Kreditaufnahme und haushaltspolitische Überwachung; gemeinsame Standards für grünen Stahl oder eine Verringerung der Zahl unterschiedlicher Standards sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c7d4a2d4e2110caa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f2951160fee20b8b",
+          "disposition": "no_supported_link",
+          "rationale": "Eine gesetzliche Grundlage für eine ressortübergreifende Gleichstellungsstrategie ist in den bereitgestellten Gesetzesbestimmungen nicht belegt.",
+          "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eb0a970d1dd87c34dfd85c34a35a634c6e9d826ede65c6af1de9d118ad0a80e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine gesetzliche Grundlage für eine ressortübergreifende Gleichstellungsstrategie ist in den bereitgestellten Gesetzesbestimmungen nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f2951160fee20b8b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-248",
       "analysis_sha256": "8302fd301affae5457376ccd235033188a73c22016c0ab4e59e3cf6a78c46c61",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0229ee4b51a1790b",
@@ -16958,12 +17328,337 @@
         "spd-2025-ac-f0dc96a6bfc3229e"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Sanierungshilfen für Bremen und das Saarland sowie den Abbau ihrer Verschuldung. Es enthält keine Verpflichtung privater Anbieter zum Abbau von Barrieren oder zu angemessenen Vorkehrungen.",
+          "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Sanierungshilfen für Bremen und das Saarland sowie den Abbau ihrer Verschuldung. Es enthält keine Verpflichtung privater Anbieter zum Abbau von Barrieren oder zu angemessenen Vorkehrungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden private Anbieter von Waren und Dienstleistungen verpflichten, Barrieren abzubauen oder – wo dies nicht möglich ist – angemessene Vorkehrungen zu ergreifen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1415bcf87f140179",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Sanierungshilfen und die Verschuldung der Länder Bremen und Saarland. Es enthält keine Regelung zur Lieferung von Taurus-Marschflugkörpern aus Bundeswehrbeständen.",
+          "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Sanierungshilfen und die Verschuldung der Länder Bremen und Saarland. Es enthält keine Regelung zur Lieferung von Taurus-Marschflugkörpern aus Bundeswehrbeständen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Darum stehen wir zur Entscheidung von Bundeskanzler Olaf Scholz, den Marschflugkörper Taurus aus den Beständen der Bundeswehr nicht zu liefern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1415bcf87f140179",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3db2b917a979fcf2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Sanierungshilfen und Schuldenbegrenzungen der Länder. Ein Effekt auf die Geschwindigkeit von Arztterminen für gesetzlich oder privat Versicherte ist nicht belegt.",
+          "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Sanierungshilfen und Schuldenbegrenzungen der Länder. Ein Effekt auf die Geschwindigkeit von Arztterminen für gesetzlich oder privat Versicherte ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Gesetzlich Versicherte sollen genauso schnell wie Privatversicherte einen Termin erhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3db2b917a979fcf2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Mietpreisbremse, WG-Zimmer oder Erstattungen an Studierende und Auszubildende. Ein Zusammenhang mit der im Kriterium beschriebenen Mietdifferenz-Erstattung ist nicht belegt.",
+          "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Mietpreisbremse, WG-Zimmer oder Erstattungen an Studierende und Auszubildende. Ein Zusammenhang mit der im Kriterium beschriebenen Mietdifferenz-Erstattung ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Über die gleiche Plattform werden wir Studierenden und Azubis, deren Mietverträge in den Anwendungsbereich der Mietpreisbremse fallen und von der Plattform überprüft und ggf. die Einhaltung der Mietpreisbremse eingeklagt wurde, die Differenz erstatten, wenn die Miete für ihr Zimmer oberhalb von 400 Euro liegt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz wurde mit Zustimmung des Bundesrates beschlossen und ändert das Sanierungshilfengesetz. Es belegt nicht, dass ein für das im Kriterium gemeinte System notwendiger Staatsvertrag zwischen Bund und Ländern abgeschlossen wurde.",
+          "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz wurde mit Zustimmung des Bundesrates beschlossen und ändert das Sanierungshilfengesetz. Es belegt nicht, dass ein für das im Kriterium gemeinte System notwendiger Staatsvertrag zwischen Bund und Ländern abgeschlossen wurde.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "den dafür notwendigen Staatsvertrag zwischen Bund und Ländern zügig abschließen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Kriterium betrifft laut Test die benötigte Höhe einer Förderung für einen Umstieg; das Gesetz regelt dagegen jährliche Sanierungshilfen für Bremen und Saarland zur Einhaltung der Schuldenregeln. Eine Wirkung auf die Förderung des im Kriterium gemeinten Umstiegs ist nicht belegt.",
+          "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2023523fc2bc9400e839d21d0dae79ae1d8bc4d96e4686ed2053e7cf3c409fa8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Kriterium betrifft laut Test die benötigte Höhe einer Förderung für einen Umstieg; das Gesetz regelt dagegen jährliche Sanierungshilfen für Bremen und Saarland zur Einhaltung der Schuldenregeln. Eine Wirkung auf die Förderung des im Kriterium gemeinten Umstiegs ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dann aber auch so viel, wie gebraucht wird.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-854625898bf2731d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung regelt Sanierungshilfen für Bremen und das Saarland sowie Prüfungen ihrer Verschuldung. Eine Folgenabschätzung sämtlicher Maßnahmen, Gesetze und des Bundeshaushalts ist im Gesetzestext nicht belegt; daraus folgt kein Nachweis fehlender Wirkung.",
+          "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung regelt Sanierungshilfen für Bremen und das Saarland sowie Prüfungen ihrer Verschuldung. Eine Folgenabschätzung sämtlicher Maßnahmen, Gesetze und des Bundeshaushalts ist im Gesetzestext nicht belegt; daraus folgt kein Nachweis fehlender Wirkung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-854625898bf2731d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Änderung des Artikels 3 Absatz 3 GG und nennt weder sexuelle Orientierung noch geschlechtliche Identität als geschützte Merkmale. Er betrifft Änderungen des Sanierungshilfengesetzes.",
+          "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Änderung des Artikels 3 Absatz 3 GG und nennt weder sexuelle Orientierung noch geschlechtliche Identität als geschützte Merkmale. Er betrifft Änderungen des Sanierungshilfengesetzes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cabc62e75ea294b2",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext ändert das Grundgesetz nicht und verankert Sport nicht als Staatsziel. Gegenstand ist die Regelung von Sanierungshilfen und Verschuldungsvorgaben.",
+          "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext ändert das Grundgesetz nicht und verankert Sport nicht als Staatsziel. Gegenstand ist die Regelung von Sanierungshilfen und Verschuldungsvorgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cabc62e75ea294b2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Regelung zur automatischen Gewährung von Kindergeld oder anderen Leistungen. Die darin vorgesehenen Prüfungen betreffen die Einhaltung von Verschuldungsvorgaben.",
+          "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Regelung zur automatischen Gewährung von Kindergeld oder anderen Leistungen. Die darin vorgesehenen Prüfungen betreffen die Einhaltung von Verschuldungsvorgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Änderung der steuerlichen Behandlung privater Immobilienverkäufe oder der zehnjährigen Spekulationsfrist. Er regelt Sanierungshilfen und Vorgaben zum Schuldenabbau.",
+          "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Änderung der steuerlichen Behandlung privater Immobilienverkäufe oder der zehnjährigen Spekulationsfrist. Er regelt Sanierungshilfen und Vorgaben zum Schuldenabbau.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f0dc96a6bfc3229e",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Maßnahme zum Entzug von Finanzen bei Islamisten. Die darin geregelten finanziellen Leistungen sind Sanierungshilfen an Bremen und das Saarland.",
+          "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1d2fe7f10b04863237210426624b5eb7ebf4b6a34a67954041d2481422b4e62"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Maßnahme zum Entzug von Finanzen bei Islamisten. Die darin geregelten finanziellen Leistungen sind Sanierungshilfen an Bremen und das Saarland.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f0dc96a6bfc3229e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-255",
       "analysis_sha256": "e3c5ff5179b2262e589353ecf4d579978136c16dcf315f5fbf05a3937a9b5780",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-257211065367d48e",
@@ -16980,12 +17675,349 @@
         "spd-2025-ac-f9f451d12e1009d2"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Gesetzestext ändert nicht die gesetzliche Mindestlohnhöhe und enthält keine entsprechende Festlegung für 2026.",
+          "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorgelegte Gesetzestext ändert nicht die gesetzliche Mindestlohnhöhe und enthält keine entsprechende Festlegung für 2026.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2eccca6d27196c03",
+          "disposition": "missing_context",
+          "rationale": "Der Text ändert zwar ein Gesetz zum Hilfesystem bei geschlechtsspezifischer und häuslicher Gewalt, aber der Inhalt der geänderten beziehungsweise gestrichenen Vorschriften ist nicht mitgeliefert. Daher lässt sich nicht beurteilen, ob diese Änderungen Hausarreste als Schutzmaßnahme ermöglichen.",
+          "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Text ändert zwar ein Gesetz zum Hilfesystem bei geschlechtsspezifischer und häuslicher Gewalt, aber der Inhalt der geänderten beziehungsweise gestrichenen Vorschriften ist nicht mitgeliefert. Daher lässt sich nicht beurteilen, ob diese Änderungen Hausarreste als Schutzmaßnahme ermöglichen.",
+            "law_passage_id": "bgbl-1-2025-255-p-ebf35c04fa8d80fb",
+            "law_quote": "Das Gesetz für ein verlässliches Hilfesystem bei geschlechtsspezifischer und häuslicher Gewalt vom 24. Februar 2025 (BGBl. 2025 I Nr. 57) wird wie folgt geändert:",
+            "criterion_quote": "Maßnahmen wie elektronische Fußfesseln, verpflichtende Anti-Gewalt-Trainings für Täter und Aufenthaltsverbote sowie Hausarreste bieten besseren Schutz vor Tätern und ermöglichen eine engmaschigere Überwachung in Gefahrensituationen.",
+            "caveats": [
+              "Der vorgelegte Auszug enthält nicht den Inhalt der geänderten Vorschriften des Hilfesystemgesetzes."
+            ],
+            "criterion_id": "spd-2025-ac-2eccca6d27196c03",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-31c091034aa7cfcd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen an Finanzausgleichsanteilen und Sonderbedarfs-Bundesergänzungszuweisungen weisen im vorgelegten Text keinen direkten Bezug zu gemeinsamen Investitionen in Kita-Qualität aus.",
+          "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen an Finanzausgleichsanteilen und Sonderbedarfs-Bundesergänzungszuweisungen weisen im vorgelegten Text keinen direkten Bezug zu gemeinsamen Investitionen in Kita-Qualität aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-31c091034aa7cfcd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-40938903ca075cba",
+          "disposition": "missing_context",
+          "rationale": "Der Text nennt eine Änderung des Hilfesystemgesetzes für geschlechtsspezifische und häusliche Gewalt, zeigt aber nicht den Inhalt der geänderten Vorschriften. Deshalb ist nicht feststellbar, ob die Änderungen die Wohnsitzauflage für Betroffene lockern.",
+          "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9f549a51184ca14fef4c2af52127b31a0813f869a8b8ac250ccf86b1b421ae5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der Text nennt eine Änderung des Hilfesystemgesetzes für geschlechtsspezifische und häusliche Gewalt, zeigt aber nicht den Inhalt der geänderten Vorschriften. Deshalb ist nicht feststellbar, ob die Änderungen die Wohnsitzauflage für Betroffene lockern.",
+            "law_passage_id": "bgbl-1-2025-255-p-ebf35c04fa8d80fb",
+            "law_quote": "Das Gesetz für ein verlässliches Hilfesystem bei geschlechtsspezifischer und häuslicher Gewalt vom 24. Februar 2025 (BGBl. 2025 I Nr. 57) wird wie folgt geändert:",
+            "criterion_quote": "Erleichterungen bei Residenzpflicht und Wohnsitzauflage schaffen",
+            "caveats": [
+              "Der vorgelegte Auszug enthält nicht den Inhalt der geänderten Vorschriften des Hilfesystemgesetzes."
+            ],
+            "criterion_id": "spd-2025-ac-40938903ca075cba",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4431b9ee5ecf62be",
+          "disposition": "no_supported_link",
+          "rationale": "Die genannten Änderungen betreffen das Finanzausgleichsgesetz und einzelne Vorschriften des Gewalthilfegesetzes. Eine Ermöglichung von Aufenthaltsverboten als Schutzmaßnahme ist in den vorgelegten Regelungen nicht belegt.",
+          "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die genannten Änderungen betreffen das Finanzausgleichsgesetz und einzelne Vorschriften des Gewalthilfegesetzes. Eine Ermöglichung von Aufenthaltsverboten als Schutzmaßnahme ist in den vorgelegten Regelungen nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Die Inhalte der gestrichenen Vorschriften des Gewalthilfegesetzes sind nicht mitgeliefert; ein Bezug zu Aufenthaltsverboten wird dadurch aber nicht belegt."
+            ],
+            "criterion_id": "spd-2025-ac-4431b9ee5ecf62be",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4b4cafce9684c587",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Einsatz elektronischer Fußfesseln. Die Änderung des Gewalthilfegesetzes belegt für sich genommen keine entsprechende Schutzbefugnis.",
+          "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Einsatz elektronischer Fußfesseln. Die Änderung des Gewalthilfegesetzes belegt für sich genommen keine entsprechende Schutzbefugnis.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Die Inhalte der gestrichenen Vorschriften des Gewalthilfegesetzes sind nicht mitgeliefert; ein Bezug zu elektronischen Fußfesseln wird dadurch aber nicht belegt."
+            ],
+            "criterion_id": "spd-2025-ac-4b4cafce9684c587",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7140c2a71436b0ca",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Anteile und Zuweisungen im Finanzausgleich. Eine stärkere Nutzung finanzieller Transaktionen zur Förderung öffentlicher oder privater Investitionen wird in den vorgelegten Regelungen nicht genannt.",
+          "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Anteile und Zuweisungen im Finanzausgleich. Eine stärkere Nutzung finanzieller Transaktionen zur Förderung öffentlicher oder privater Investitionen wird in den vorgelegten Regelungen nicht genannt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Aus Änderungen der Finanzverteilung folgt kein belegter Einsatz finanzieller Transaktionen zur Investitionsförderung."
+            ],
+            "criterion_id": "spd-2025-ac-7140c2a71436b0ca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-77cfca4c6126888f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Residenzpflicht für Opfer häuslicher Gewalt. Die Änderungen am Gewalthilfegesetz belegen keine Lockerung einer solchen Pflicht.",
+          "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Residenzpflicht für Opfer häuslicher Gewalt. Die Änderungen am Gewalthilfegesetz belegen keine Lockerung einer solchen Pflicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Die Inhalte der gestrichenen Vorschriften des Gewalthilfegesetzes sind nicht mitgeliefert; eine Änderung der Residenzpflicht ist nicht belegt."
+            ],
+            "criterion_id": "spd-2025-ac-77cfca4c6126888f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern Artikel 3 Absatz 3 GG nicht und nennen keine Erweiterung der dort ausdrücklich geschützten Merkmale.",
+          "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern Artikel 3 Absatz 3 GG nicht und nennen keine Erweiterung der dort ausdrücklich geschützten Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zu einem steuer- und abgabenfreien Führerscheinzuschuss für Auszubildende oder junge Beschäftigte.",
+          "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4728427ef48c347e2db77e252841f10152010385fd4ae97c6daa75cd3a8fe7aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zu einem steuer- und abgabenfreien Führerscheinzuschuss für Auszubildende oder junge Beschäftigte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e41a886def217974",
+          "disposition": "no_supported_link",
+          "rationale": "Der Text enthält keine EU-weite Strafregelung zu geschlechtsspezifischer Gewalt. Die Änderungen betreffen den Finanzausgleich sowie Änderungen an einem deutschen Hilfesystem; ein entsprechender Effekt ist nicht belegt.",
+          "input_sha256": "248da1792a661fbfcbb56f86ee5516ee944bc27f9d1aa635e864541151a492d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "248da1792a661fbfcbb56f86ee5516ee944bc27f9d1aa635e864541151a492d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Text enthält keine EU-weite Strafregelung zu geschlechtsspezifischer Gewalt. Die Änderungen betreffen den Finanzausgleich sowie Änderungen an einem deutschen Hilfesystem; ein entsprechender Effekt ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e41a886def217974",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f9f451d12e1009d2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln keine dezentrale Energieversorgung und kein Energy Sharing. Ein Effekt auf die Vereinfachung solcher Verfahren ist nicht belegt.",
+          "input_sha256": "248da1792a661fbfcbb56f86ee5516ee944bc27f9d1aa635e864541151a492d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "248da1792a661fbfcbb56f86ee5516ee944bc27f9d1aa635e864541151a492d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln keine dezentrale Energieversorgung und kein Energy Sharing. Ein Effekt auf die Vereinfachung solcher Verfahren ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f9f451d12e1009d2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-256",
       "analysis_sha256": "9d3b29d7a467c3aea07ebf7a66489743bb7a79b8f64982cdb43a469f3ebeee90",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-1941fa05a73460a7",
@@ -17002,7 +18034,332 @@
         "spd-2025-ac-d9afdfbcc75253e8"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Staatsangehörigkeits-, Aufenthalts-, Pass-, EES- und ETIAS-Vorschriften. Eine Änderung von Verfahren oder Regeln zur Anerkennung ausländischer Abschlüsse ist nicht belegt.",
+          "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen Staatsangehörigkeits-, Aufenthalts-, Pass-, EES- und ETIAS-Vorschriften. Eine Änderung von Verfahren oder Regeln zur Anerkennung ausländischer Abschlüsse ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesänderungen enthalten keine Regelung zur stationären Pflege oder zum Schutz bereits länger gepflegter Menschen. Ein Effekt auf deren Besitzstand ist nicht belegt.",
+          "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesänderungen enthalten keine Regelung zur stationären Pflege oder zum Schutz bereits länger gepflegter Menschen. Ein Effekt auf deren Besitzstand ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz belegt weder die Durchführung einer Konferenz mit Vertreterinnen und Vertretern von Wirtschaft und Verwaltung noch Maßnahmen zur Ermittlung weiterer Möglichkeiten des Bürokratieabbaus.",
+          "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz belegt weder die Durchführung einer Konferenz mit Vertreterinnen und Vertretern von Wirtschaft und Verwaltung noch Maßnahmen zur Ermittlung weiterer Möglichkeiten des Bürokratieabbaus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-58ea683bc8e758c8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen keinen Beitritt der EU zur Europäischen Menschenrechtskonvention und belegen hierzu weder Unterstützung noch Ablehnung.",
+          "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen keinen Beitritt der EU zur Europäischen Menschenrechtskonvention und belegen hierzu weder Unterstützung noch Ablehnung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-58ea683bc8e758c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-61377efe42c735ea",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen setzen keine Maßnahmen zur Europäischen Säule sozialer Rechte auf nationaler oder europäischer Ebene um. Ein entsprechender Effekt ist nicht belegt.",
+          "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen setzen keine Maßnahmen zur Europäischen Säule sozialer Rechte auf nationaler oder europäischer Ebene um. Ein entsprechender Effekt ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-61377efe42c735ea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderung der Entscheidungsverfahren im Europäischen Rat oder im Ministerrat. Ein Ersatz des Einstimmigkeitsprinzips durch Mehrheitsentscheidungen ist nicht belegt.",
+          "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8329e9061c7e44f2acc9d92bc7fcbaaa3a4b35fabe4db6264867261a483514b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderung der Entscheidungsverfahren im Europäischen Rat oder im Ministerrat. Ein Ersatz des Einstimmigkeitsprinzips durch Mehrheitsentscheidungen ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-843b0f0a2f28e442",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zum Staatsangehörigkeits-, Aufenthalts- und Passrecht sowie zur Durchführung von EES und ETIAS. Ein Bezug zu Kontrollrechten des Europäischen Parlaments gegenüber Frontex oder eine entsprechende Rechtsänderung ist in den vorgelegten Passagen nicht belegt.",
+          "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zum Staatsangehörigkeits-, Aufenthalts- und Passrecht sowie zur Durchführung von EES und ETIAS. Ein Bezug zu Kontrollrechten des Europäischen Parlaments gegenüber Frontex oder eine entsprechende Rechtsänderung ist in den vorgelegten Passagen nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und eine Stärkung der Kontrollrechte des Europäischen Parlaments",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-843b0f0a2f28e442",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesänderungen betreffen nicht Artikel 3 Absatz 3 GG und belegen keine ausdrückliche Aufnahme sexueller Orientierung oder geschlechtlicher Identität als geschützte Merkmale.",
+          "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesänderungen betreffen nicht Artikel 3 Absatz 3 GG und belegen keine ausdrückliche Aufnahme sexueller Orientierung oder geschlechtlicher Identität als geschützte Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen den **Schutz vor Diskriminierung im Grundgesetz (GG) explizit auf sexuelle Orientierung**\n**und geschlechtliche Identität erweitern** . Artikel 3 Abs. 3 GG werden wir daher entsprechend\nerweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Die Gesetzespassagen enthalten keine Regelung zu EU-Beitritten oder zur Anwendung der Kopenhagener Kriterien. Ein Effekt auf dieses Kriterium ist daher nicht belegt.",
+          "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Gesetzespassagen enthalten keine Regelung zu EU-Beitritten oder zur Anwendung der Kopenhagener Kriterien. Ein Effekt auf dieses Kriterium ist daher nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die\n**Kopenhagener Kriterien** müssen immer erfüllt sein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen räumen dem Europäischen Parlament kein Initiativrecht ein und betreffen dessen Gesetzgebungsbefugnisse nicht erkennbar.",
+          "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen räumen dem Europäischen Parlament kein Initiativrecht ein und betreffen dessen Gesetzgebungsbefugnisse nicht erkennbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Europäischen Parlaments, inklusive eines echten Initiativrechts.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c2d7198f2eddb7de",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Mitgliedschaft der Ukraine oder Moldaus in der EU oder zu deren Beitrittsverfahren. Ein Effekt auf die politische Unterstützung eines Beitritts ist nicht belegt.",
+          "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Mitgliedschaft der Ukraine oder Moldaus in der EU oder zu deren Beitrittsverfahren. Ein Effekt auf die politische Unterstützung eines Beitritts ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Auch die **Ukraine und Moldau** sollen ein Teil der EU werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c2d7198f2eddb7de",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern keine Verfahren oder Regeln zur Anerkennung ausländischer Abschlüsse und Qualifikationen. Eine Vereinfachung gegenüber der bisherigen Ausgestaltung ist damit nicht belegt.",
+          "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c56a90e6c16747e4bdc6e99cabb32d95df41ac1a73d33330afca7d38a6e6ec0c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen ändern keine Verfahren oder Regeln zur Anerkennung ausländischer Abschlüsse und Qualifikationen. Eine Vereinfachung gegenüber der bisherigen Ausgestaltung ist damit nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Deutschland profitiert seit Langem davon, dass wir ein Einwanderungsland sind. Wir treten Menschen\nmit Respekt gegenüber, völlig egal, wo sie ihre Wurzeln haben; mit klaren und nachvollziehbaren\nRegeln, weniger Bürokratie und einer deutlich transparenteren und vereinfachten **Anerkennung**\n**von im Ausland erworbenen Abschlüssen und Qualifikationen** .",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-257",
@@ -17046,12 +18403,905 @@
         "spd-2025-ac-fa85fa4cb1919222"
       ],
       "omitted_count": 753,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung betrifft nur die Zustimmung der Gemeinde zu bestimmten Vorhaben. Sie erklärt nicht den Bauantrag selbst für genehmigt, wenn die zuständige Behörde nicht fristgerecht entscheidet. Eine Wirkung auf die im Kriterium beschriebene Genehmigungsfiktion ist daher nicht belegt.",
+          "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.97,
+            "rationale": "Die Regelung betrifft nur die Zustimmung der Gemeinde zu bestimmten Vorhaben. Sie erklärt nicht den Bauantrag selbst für genehmigt, wenn die zuständige Behörde nicht fristgerecht entscheidet. Eine Wirkung auf die im Kriterium beschriebene Genehmigungsfiktion ist daher nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Die gesetzliche Fiktion einer kommunalen Zustimmung ist nicht gleichbedeutend mit der Genehmigung des Antrags."
+            ],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-03f8f7db88193cde",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz führt für die kommunale Zustimmung zu bestimmten Vorhaben eine Entscheidungsfrist mit Zustimmungsfiktion ein. Das ist eine konkrete verfahrensbezogene Maßnahme, die einen Teil von Planungs- und Genehmigungsabläufen beschleunigen kann; eine Beschleunigung aller Verfahren folgt daraus nicht.",
+          "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2"
+            },
+            {
+              "model": "anthropic/claude-sonnet-5.5",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ceacedd46318831d17cc13d762da0e8e3c939b786bdcf99e36d0eda0ae3da64c"
+            }
+          ],
+          "impact_id": "impact-87861d4d0152f2ff",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz führt für die kommunale Zustimmung zu bestimmten Vorhaben eine Entscheidungsfrist mit Zustimmungsfiktion ein. Das ist eine konkrete verfahrensbezogene Maßnahme, die einen Teil von Planungs- und Genehmigungsabläufen beschleunigen kann; eine Beschleunigung aller Verfahren folgt daraus nicht.",
+            "law_passage_id": "bgbl-1-2025-257-p-adf5a283e1ed569e",
+            "law_quote": "Die Zustimmung der Gemeinde gilt als erteilt, wenn sie nicht\nbinnen drei Monaten nach Eingang des Ersuchens der Genehmigungsbehörde verweigert wird",
+            "criterion_quote": "und Planungs- und Genehmigungsverfahren beschleunigen.",
+            "caveats": [
+              "Die Regel betrifft die Zustimmung der Gemeinde in den gesetzlich bezeichneten Fällen, nicht pauschal alle Planungs- und Genehmigungsverfahren."
+            ],
+            "criterion_id": "spd-2025-ac-03f8f7db88193cde",
+            "disposition": "proposed_link"
+          },
+          "verification": {
+            "accepted": true,
+            "rationale": "§ 36a Abs. 1 Satz 4 BauGB führt eine Zustimmungsfiktion nach drei Monaten ein. Das ist eine beschlossene verfahrensbeschleunigende Maßnahme, die zum Kriterium passt, dessen Test nur beschlossene Maßnahmen mit beschleunigender Zielrichtung verlangt. Der Umfang ist begrenzt: Die Regel gilt nur für Vorhaben nach § 31 Abs. 3 und § 34 Abs. 3b BauGB sowie entsprechend für § 246e. Sie beschleunigt nicht alle Planungs- und Genehmigungsverfahren.",
+            "caveats": [
+              "Die Fiktion gilt nur für die gemeindliche Zustimmung in den gesetzlich bezeichneten Fällen.",
+              "Die Frist verlängert sich bei einer Öffentlichkeitsbeteiligung nach Abs. 2 um bis zu einen Monat.",
+              "Das tatsächliche Ausmaß der Beschleunigung ist aus dem Text nicht ableitbar."
+            ],
+            "criterion_id": "spd-2025-ac-03f8f7db88193cde"
+          }
+        },
+        {
+          "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz ändert in § 250 BauGB die dortige Jahresangabe von 2025 auf 2030. Damit wird die im Kriterium bezeichnete zeitliche Geltung über 2025 hinaus verlängert; daraus folgt keine Aussage über die praktische Nutzung in einzelnen Ländern oder Fällen.",
+          "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2"
+            },
+            {
+              "model": "anthropic/claude-sonnet-5.5",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ceacedd46318831d17cc13d762da0e8e3c939b786bdcf99e36d0eda0ae3da64c"
+            }
+          ],
+          "impact_id": "impact-30e352b628ffe590",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.88,
+            "rationale": "Das Gesetz ändert in § 250 BauGB die dortige Jahresangabe von 2025 auf 2030. Damit wird die im Kriterium bezeichnete zeitliche Geltung über 2025 hinaus verlängert; daraus folgt keine Aussage über die praktische Nutzung in einzelnen Ländern oder Fällen.",
+            "law_passage_id": "bgbl-1-2025-257-p-d169e5d177a031ec",
+            "law_quote": "c) In Satz 3 wird die Angabe „2025“ durch die Angabe „2030“ ersetzt.",
+            "criterion_quote": "Die Möglichkeit zum Verbot der Umwandlung von\nMiet- in Eigentumswohnungen im BauGB wollen wir über 2025 hinaus verlängern.",
+            "caveats": [
+              "Der vorgelegte Gesetzestext enthält nicht den vollständigen Wortlaut des § 250 BauGB."
+            ],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+            "disposition": "proposed_link"
+          },
+          "verification": {
+            "accepted": true,
+            "rationale": "Das Gesetz ersetzt in § 250 Abs. 1 Satz 3 BauGB die Jahresangabe 2025 durch 2030. Der Kriteriumstest verlangt, dass die Möglichkeit zum Umwandlungsverbot über 2025 hinaus gilt. Die Textänderung verlängert den Zeitraum bis 2030, sofern sich Satz 3 auf die Geltungsdauer bezieht. Der Gesetzestext nennt § 250 BauGB im Auszug, daher ist die inhaltliche Zuordnung des Satzes 3 nicht vollständig belegt. Sie ist wegen der Überschneidung mit dem Thema Umwandlung von Miet- in Eigentumswohnungen dennoch plausibel.",
+            "caveats": [
+              "Der vorgelegte Gesetzestext enthält nicht den vollständigen Wortlaut des § 250 BauGB; dass Satz 3 die Geltungsdauer regelt, ist nicht direkt belegt.",
+              "Die gleichzeitige Änderung von Satz 2 schafft Ausnahmen vom Genehmigungserfordernis (z. B. Gebäude mit höchstens fünf Wohnungen), die den Anwendungsbereich einschränken.",
+              "Aus dem Text folgt nichts zur tatsächlichen Nutzung durch Länder."
+            ],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f"
+          }
+        },
+        {
+          "criterion_id": "spd-2025-ac-0c7eb51089ca1ef4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt zwar kulturelle Einrichtungen als mögliche, den Bedürfnissen der Bewohner dienende Anlagen im Zusammenhang mit zugelassenen Wohnbauvorhaben. Eine Regelung zu Kulturschutzgebieten oder zum Schutz von Clubs vor Verdrängung enthält der vorgelegte Text jedoch nicht.",
+          "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz nennt zwar kulturelle Einrichtungen als mögliche, den Bedürfnissen der Bewohner dienende Anlagen im Zusammenhang mit zugelassenen Wohnbauvorhaben. Eine Regelung zu Kulturschutzgebieten oder zum Schutz von Clubs vor Verdrängung enthält der vorgelegte Text jedoch nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Die Erwähnung kultureller Anlagen belegt für sich keinen Schutz bestehender Einrichtungen vor Verdrängung."
+            ],
+            "criterion_id": "spd-2025-ac-0c7eb51089ca1ef4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-10f94b9adc2fa398",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Gesetzestext enthält keine Maßnahme zur Unterbindung der Zweckentfremdung von Wohnraum durch Kurzzeitvermietung.",
+          "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.98,
+            "rationale": "Der vorgelegte Gesetzestext enthält keine Maßnahme zur Unterbindung der Zweckentfremdung von Wohnraum durch Kurzzeitvermietung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Das Fehlen einer solchen Regelung im vorgelegten Text beweist nicht, dass es außerhalb dieses Gesetzes keine Maßnahmen gibt."
+            ],
+            "criterion_id": "spd-2025-ac-10f94b9adc2fa398",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1206987bb2d18011",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Gesetzestext enthält keine Förderkriterien und keine Regelung, die Barrierefreiheit als Standard in der Fördersystematik verankert.",
+          "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "37cde00e65dcb760e5eb5dfe9ad962b266796b0620499985b50cfe8730d5e1a2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": 0,
+            "confidence": 0.98,
+            "rationale": "Der vorgelegte Gesetzestext enthält keine Förderkriterien und keine Regelung, die Barrierefreiheit als Standard in der Fördersystematik verankert.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Das Fehlen einer solchen Regelung in diesem Gesetz belegt nicht, ob Barrierefreiheit in anderen Förderregelungen berücksichtigt wird."
+            ],
+            "criterion_id": "spd-2025-ac-1206987bb2d18011",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1415bcf87f140179",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Änderungen des Bauplanungsrechts und Wohnungsbau. Es enthält keinen Beleg für eine Lieferung oder Nichtlieferung von Taurus-Marschflugkörpern aus Bundeswehrbeständen.",
+          "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Änderungen des Bauplanungsrechts und Wohnungsbau. Es enthält keinen Beleg für eine Lieferung oder Nichtlieferung von Taurus-Marschflugkörpern aus Bundeswehrbeständen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1415bcf87f140179",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften betreffen Wohnungsbau und Wohnraumsicherung, nicht Asylverfahren, Verwaltungskapazitäten des BAMF oder Verwaltungsgerichte. Ein Effekt auf die Sechsmonatsfrist ist nicht belegt.",
+          "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften betreffen Wohnungsbau und Wohnraumsicherung, nicht Asylverfahren, Verwaltungskapazitäten des BAMF oder Verwaltungsgerichte. Ein Effekt auf die Sechsmonatsfrist ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine erkennbaren Maßnahmen zum Schutz vor Abzocke oder Manipulation im digitalen Raum und keine entsprechende Regelung für Kinder und Jugendliche.",
+          "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine erkennbaren Maßnahmen zum Schutz vor Abzocke oder Manipulation im digitalen Raum und keine entsprechende Regelung für Kinder und Jugendliche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften regeln Wohnungsbau und Bauplanungsrecht. Eine Weiterentwicklung der KI-Strategie des Bundes oder ein Schwerpunkt auf systemischen Innovationen ist darin nicht belegt.",
+          "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften regeln Wohnungsbau und Bauplanungsrecht. Eine Weiterentwicklung der KI-Strategie des Bundes oder ein Schwerpunkt auf systemischen Innovationen ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3d47c08e9f8998e7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Erleichterungen für Wohnungsbauvorhaben, belegt aber weder die Schaffung einer bundeseigenen Wohnungsgesellschaft noch deren eigene Wohnraumförderung oder Wohnraum für Bundesbedienstete. Allgemeine Wohnungsbauerleichterungen belegen den engen Test nicht.",
+          "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält Erleichterungen für Wohnungsbauvorhaben, belegt aber weder die Schaffung einer bundeseigenen Wohnungsgesellschaft noch deren eigene Wohnraumförderung oder Wohnraum für Bundesbedienstete. Allgemeine Wohnungsbauerleichterungen belegen den engen Test nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3d47c08e9f8998e7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4017315b57ce2fd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Wohnungsbauvorschriften enthalten keinen Beleg dafür, dass ein Genossenschaftsprogramm fortgeführt oder gegenüber seinem bisherigen Umfang ausgebaut wird.",
+          "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3573f0c26e6405db0934db1b6c21b16b04defb3d0b28f06043c044032fde1d4c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Wohnungsbauvorschriften enthalten keinen Beleg dafür, dass ein Genossenschaftsprogramm fortgeführt oder gegenüber seinem bisherigen Umfang ausgebaut wird.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4017315b57ce2fd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-447098c9e411a1a7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Baugesetzbuch und enthält in den vorgelegten Passagen keine Regelung zu staatlich geförderten privaten Altersvorsorgeprodukten oder deren Kosten. Ein tatsächlicher Effekt auf das Kriterium ist nicht belegt.",
+          "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Baugesetzbuch und enthält in den vorgelegten Passagen keine Regelung zu staatlich geförderten privaten Altersvorsorgeprodukten oder deren Kosten. Ein tatsächlicher Effekt auf das Kriterium ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-447098c9e411a1a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-47f18907f8574b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen den Wohnungsbau und das Bauplanungsrecht. Eine Verschärfung des Wirtschaftsstrafrechts oder Vorschriften gegen Mietwucher ist darin nicht belegt.",
+          "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen den Wohnungsbau und das Bauplanungsrecht. Eine Verschärfung des Wirtschaftsstrafrechts oder Vorschriften gegen Mietwucher ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-47f18907f8574b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4f21c4769fe90501",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Konzeptvergaben und führt innovative Wohnformen in den vorgelegten Passagen nicht als besonders zu berücksichtigendes Kriterium auf. Ein entsprechender tatsächlicher Effekt ist nicht belegt.",
+          "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Konzeptvergaben und führt innovative Wohnformen in den vorgelegten Passagen nicht als besonders zu berücksichtigendes Kriterium auf. Ein entsprechender tatsächlicher Effekt ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4f21c4769fe90501",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5d19b2f5edc1965d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern baurechtliche Zulassungs- und Planungsregeln, belegen aber keine Bauprogramme mit festen, für die Legislaturperiode verlässlichen Förderkonditionen.",
+          "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen ändern baurechtliche Zulassungs- und Planungsregeln, belegen aber keine Bauprogramme mit festen, für die Legislaturperiode verlässlichen Förderkonditionen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5d19b2f5edc1965d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6437112bda053fc5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen erleichtern beziehungsweise ordnen bestimmte Wohnbauvorhaben, belegen aber nicht, dass Wohnungslosigkeit im Jahr 2030 überwunden ist oder durch dieses Gesetz tatsächlich überwunden wird.",
+          "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelungen erleichtern beziehungsweise ordnen bestimmte Wohnbauvorhaben, belegen aber nicht, dass Wohnungslosigkeit im Jahr 2030 überwunden ist oder durch dieses Gesetz tatsächlich überwunden wird.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6437112bda053fc5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Änderung des Artikels 3 Absatz 3 GG und nennen sexuelle Orientierung oder geschlechtliche Identität nicht als dort ausdrücklich geschützte Merkmale.",
+          "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fffa1c025ced643844d8a443112e0782af49177abd601e74cfd2bf2252249b2d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Änderung des Artikels 3 Absatz 3 GG und nennen sexuelle Orientierung oder geschlechtliche Identität nicht als dort ausdrücklich geschützte Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Änderungen des Baugesetzbuchs zum Wohnungsbau. Eine Erfassung von IP-Adressen oder Ermittlung von Stammdaten über Justiz-Schnittstellen ist in den vorgelegten Bestimmungen nicht belegt.",
+          "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Änderungen des Baugesetzbuchs zum Wohnungsbau. Eine Erfassung von IP-Adressen oder Ermittlung von Stammdaten über Justiz-Schnittstellen ist in den vorgelegten Bestimmungen nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ergänzend setzen wir dabei auf die **Log-in-**\n**Falle**, die bei der Anmeldung an einem verdächtigen Benutzerkonto die IP-Adresse erfasst, wodurch\nper Justiz-Schnittstellen Stammdaten ermittelt werden können – selbstverständlich unter strikter\nWahrung der Grundrechte und des Datenschutzes.",
+            "caveats": [
+              "Kein Beleg für die Wirkung ist kein Nachweis, dass keinerlei Auswirkungen bestehen."
+            ],
+            "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9e695e649b75bcaf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen betreffen Wohnungsbau und Änderungen des Baugesetzbuchs. Eine Beschränkung der Eigenbedarfskündigung auf die Wohnnutzung durch die Kernfamilie ist nicht belegt.",
+          "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Bestimmungen betreffen Wohnungsbau und Änderungen des Baugesetzbuchs. Eine Beschränkung der Eigenbedarfskündigung auf die Wohnnutzung durch die Kernfamilie ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zugleich wollen\nwir das Recht der Eigenbedarfskündigung reformieren und es auf die Wohnnutzung durch die\nKernfamilie beschränken.",
+            "caveats": [
+              "Kein Beleg für die Wirkung ist kein Nachweis, dass keinerlei Auswirkungen bestehen."
+            ],
+            "criterion_id": "spd-2025-ac-9e695e649b75bcaf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a8ba67d7e366b644",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht zwar Zustimmungen der Gemeinde zu bestimmten Bauvorhaben vor; das belegt aber keine Änderung oder Stärkung des kommunalen Vorkaufsrechts. Die beiden Rechtsinstrumente sind nicht gleichzusetzen.",
+          "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz sieht zwar Zustimmungen der Gemeinde zu bestimmten Bauvorhaben vor; das belegt aber keine Änderung oder Stärkung des kommunalen Vorkaufsrechts. Die beiden Rechtsinstrumente sind nicht gleichzusetzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das **Vorkaufsrecht für Kommunen** muss gestärkt werden.",
+            "caveats": [
+              "Die Regelungen zur gemeindlichen Zustimmung zu Bauvorhaben belegen für sich genommen keine Wirkung auf das kommunale Vorkaufsrecht."
+            ],
+            "criterion_id": "spd-2025-ac-a8ba67d7e366b644",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-acce0e3d18b849a8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zur Vergabe sozialen Wohnraums oder zur bevorzugten Berücksichtigung Pflegebedürftiger und pflegender Angehöriger.",
+          "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zur Vergabe sozialen Wohnraums oder zur bevorzugten Berücksichtigung Pflegebedürftiger und pflegender Angehöriger.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Pflegebedürftige und ihre pflegenden Angehörigen sollen\nzudem bei der **Vergabe von sozialem Wohnraum** aufgrund der besonderen Raumvoraussetzungen\nfür die Pflege bevorzugt werden.",
+            "caveats": [
+              "Kein Beleg für die Wirkung ist kein Nachweis, dass keinerlei Auswirkungen bestehen."
+            ],
+            "criterion_id": "spd-2025-ac-acce0e3d18b849a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-af4b41faf7c8c7c6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu Indexmietverträgen oder mietrechtlichen Kappungsgrenzen. Die Wohnungsbauvorschriften belegen daher keine Umsetzung dieses Tests.",
+          "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu Indexmietverträgen oder mietrechtlichen Kappungsgrenzen. Die Wohnungsbauvorschriften belegen daher keine Umsetzung dieses Tests.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Auch\n**Indexmietverträge** werden in Zukunft durch die Kappungsgrenzen normaler Mietverträge, wie\nder ortsüblichen Vergleichsmiete, gedeckelt.",
+            "caveats": [
+              "Kein Beleg für die Wirkung ist kein Nachweis, dass keinerlei Auswirkungen bestehen."
+            ],
+            "criterion_id": "spd-2025-ac-af4b41faf7c8c7c6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b290631ad160d141",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Bestimmungen zum Führungspositionen-Gesetz, zu Parität in Aufsichtsräten und Vorständen oder zu einem Gleichstellungsgesetz für die Privatwirtschaft. Zudem liegt das im Kriterium genannte Zieljahr 2030 in der Zukunft.",
+          "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "878ec84ade46d5d06dab36914f39ebc139a0fd63b1a4aae144f0623d2f2ee549"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Bestimmungen zum Führungspositionen-Gesetz, zu Parität in Aufsichtsräten und Vorständen oder zu einem Gleichstellungsgesetz für die Privatwirtschaft. Zudem liegt das im Kriterium genannte Zieljahr 2030 in der Zukunft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unser Ziel bleibt die gleichberechtigte Teilhabe von Frauen in Führungspositionen. Dazu werden wir\ndas **Führungspositionen-Gesetz weiterentwickeln** mit dem Ziel, bis 2030 Parität in Aufsichtsräten\nund Vorständen zu erreichen. Als nächsten Schritt streben wir ein **Gleichstellungsgesetz für die**\n**Privatwirtschaft** an.",
+            "caveats": [
+              "Aus dem Gesetzestext lässt sich keine Aussage über die Erreichung des Ziels bis 2030 ableiten."
+            ],
+            "criterion_id": "spd-2025-ac-b290631ad160d141",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c35d16575def2fde",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Gesetzesauszug enthält keine Regelung zur Ermittlung von Mietspiegeln oder zur Einbeziehung preisgebundenen Wohnraums. Ein entsprechender Effekt ist damit nicht belegt.",
+          "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Der vorgelegte Gesetzesauszug enthält keine Regelung zur Ermittlung von Mietspiegeln oder zur Einbeziehung preisgebundenen Wohnraums. Ein entsprechender Effekt ist damit nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und preisgebundenen Wohnraum in die\nBetrachtung einbeziehen.",
+            "caveats": [
+              "Der Gesetzesauszug ist als teilweise gekennzeichnet; weitere Regelungen sind damit nicht ausgeschlossen."
+            ],
+            "criterion_id": "spd-2025-ac-c35d16575def2fde",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cc8dacde6db37501",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Auszug belegt weder eine Änderung der Mietpreisbremse noch deren unbefristete Geltung. Ein solcher Effekt ist nicht nachweisbar.",
+          "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Der vorgelegte Auszug belegt weder eine Änderung der Mietpreisbremse noch deren unbefristete Geltung. Ein solcher Effekt ist nicht nachweisbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die **Mietpreisbremse** soll unbefristet",
+            "caveats": [
+              "Der Gesetzesauszug ist als teilweise gekennzeichnet; weitere Regelungen sind damit nicht ausgeschlossen."
+            ],
+            "criterion_id": "spd-2025-ac-cc8dacde6db37501",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d247a8924e54036e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften nennen soziale Durchmischung nicht als besonders zu berücksichtigendes Kriterium für Konzeptvergaben. Ein entsprechender Effekt ist nicht belegt.",
+          "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften nennen soziale Durchmischung nicht als besonders zu berücksichtigendes Kriterium für Konzeptvergaben. Ein entsprechender Effekt ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Soziale Durchmischung, nachhaltiges Bauen und innovative\nWohnformen sollen besonders berücksichtigt werden.",
+            "caveats": [
+              "Der Gesetzesauszug ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-d247a8924e54036e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d6015cd95da735bb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften nennen nachhaltiges Bauen nicht als besonders zu berücksichtigendes Kriterium für Konzeptvergaben. Ein entsprechender Effekt ist nicht belegt.",
+          "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften nennen nachhaltiges Bauen nicht als besonders zu berücksichtigendes Kriterium für Konzeptvergaben. Ein entsprechender Effekt ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Soziale Durchmischung, nachhaltiges Bauen und innovative\nWohnformen sollen besonders berücksichtigt werden.",
+            "caveats": [
+              "Der Gesetzesauszug ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-d6015cd95da735bb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d65a5e4a60056cb7",
+          "disposition": "proposed_link",
+          "rationale": "Die befristete Regelung eröffnet unter Bedingungen Abweichungen für die Umnutzung baulicher Anlagen zu Wohnzwecken und kann damit einen rechtlichen Anreiz für einen Teil des beschriebenen Ziels schaffen. Der Text beschränkt sich jedoch nicht auf leerstehende Immobilien und belegt weder finanzielle Anreize noch die Umwandlung zu Gewerberaum.",
+          "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db"
+            },
+            {
+              "model": "anthropic/claude-sonnet-5.5",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2fc27e1c7cfd382b0801247557cd3148d3982479b8bfe2e8b332fe65ba3a5fa6"
+            }
+          ],
+          "impact_id": "impact-91f04b3939780aab",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.79,
+            "rationale": "Die befristete Regelung eröffnet unter Bedingungen Abweichungen für die Umnutzung baulicher Anlagen zu Wohnzwecken und kann damit einen rechtlichen Anreiz für einen Teil des beschriebenen Ziels schaffen. Der Text beschränkt sich jedoch nicht auf leerstehende Immobilien und belegt weder finanzielle Anreize noch die Umwandlung zu Gewerberaum.",
+            "law_passage_id": "bgbl-1-2025-257-p-6a62a788407a220e",
+            "law_quote": "3. der Nutzungsänderung zulässigerweise errichteter baulicher Anlagen zu Wohnzwecken, einschließlich einer\nerforderlichen Änderung oder Erneuerung.",
+            "criterion_quote": "Durch gezielte Förderprogramme und Anreize sollen Kommunen und private\nEigentümer motiviert werden, leerstehende Immobilien in Wohn- oder Gewerberaum umzuwandeln.",
+            "caveats": [
+              "Die Möglichkeit gilt nach § 246e Absatz 1 nur mit Zustimmung der Gemeinde und unter den dort genannten Voraussetzungen.",
+              "Die zitierte Regelung betrifft Nutzungsänderungen zu Wohnzwecken, nicht ausdrücklich leerstehende Immobilien oder Gewerberaum.",
+              "Die Norm belegt keine gezielten Förderprogramme."
+            ],
+            "criterion_id": "spd-2025-ac-d65a5e4a60056cb7",
+            "disposition": "proposed_link"
+          },
+          "verification": {
+            "accepted": false,
+            "rationale": "Das Kriterium verlangt Anreize, die Kommunen und private Eigentümer zur Umwandlung leerstehender Immobilien in Wohn- oder Gewerberaum motivieren. § 246e Absatz 1 Nr. 3 BauGB ermöglicht mit Zustimmung der Gemeinde und bis zum 31. Dezember 2030 Abweichungen vom Baugesetzbuch bei der Nutzungsänderung bestehender baulicher Anlagen zu Wohnzwecken. Das ist eine bauplanungsrechtliche Erleichterung, kein Anreiz im Sinne von Förderprogrammen. Die Norm nennt Leerstand nicht und enthält weder Förderung noch finanzielle Anreize. Sie erfasst auch nicht die Umwandlung zu Gewerberaum. Der Text erfasst alle zulässigerweise errichteten baulichen Anlagen, unabhängig von einem Leerstand. Damit besteht nur eine Themenüberschneidung beim Umbau von Bestand zu Wohnraum. Die Richtung der Wirkung und deren Umfang sind nicht belegt, daher ist die Verknüpfung nicht tragfähig.",
+            "caveats": [
+              "Die Abweichung gilt nur mit Zustimmung der Gemeinde, nur bis Ende 2030 und nur, wenn sie mit den öffentlichen Belangen vereinbar ist.",
+              "Im Außenbereich und bei Bebauungsplänen können Umweltprüfungen nötig sein.",
+              "Die Norm enthält weder Förderprogramme noch finanzielle Anreize.",
+              "Die Norm bezieht sich nicht ausdrücklich auf leerstehende Immobilien oder auf Gewerberaum.",
+              "Es liegt nur ein Teilausschnitt des Gesetzes vor (partial_law_context)."
+            ],
+            "criterion_id": "spd-2025-ac-d65a5e4a60056cb7"
+          }
+        },
+        {
+          "criterion_id": "spd-2025-ac-dbc54d30f8a19780",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften richten kein gezieltes Förderprogramm für die Umwandlung leerstehender Immobilien ein. Die befristete Möglichkeit baurechtlicher Abweichungen belegt kein Förderprogramm dieser Art.",
+          "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "aa65ffbb212efbb97f3663fdb816f82a7f127146b5443e48b7948cfbd87381db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften richten kein gezieltes Förderprogramm für die Umwandlung leerstehender Immobilien ein. Die befristete Möglichkeit baurechtlicher Abweichungen belegt kein Förderprogramm dieser Art.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Durch gezielte Förderprogramme und Anreize sollen Kommunen und private\nEigentümer motiviert werden, leerstehende Immobilien in Wohn- oder Gewerberaum umzuwandeln.",
+            "caveats": [
+              "Der Gesetzesauszug ist als teilweise gekennzeichnet; weitere Regelungen sind damit nicht ausgeschlossen."
+            ],
+            "criterion_id": "spd-2025-ac-dbc54d30f8a19780",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-258",
       "analysis_sha256": "9a21985268c08faea2aa35f8a2252cf8306bc2da88a9f3910d8ead7ab79380f1",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -17068,7 +19318,344 @@
         "spd-2025-ac-c1734e184bf6d191"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Kein belegter Zusammenhang: Das Gesetz ändert nach dem zitierten Text das Abgeordnetengesetz und regelt hier die Kostenpauschale, nicht eine Genehmigungsfiktion für Anträge. Daraus folgt kein Nachweis einer Wirkung auf dieses Kriterium.",
+          "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Kein belegter Zusammenhang: Das Gesetz ändert nach dem zitierten Text das Abgeordnetengesetz und regelt hier die Kostenpauschale, nicht eine Genehmigungsfiktion für Anträge. Daraus folgt kein Nachweis einer Wirkung auf dieses Kriterium.",
+            "law_passage_id": "bgbl-1-2025-258-p-6261bc41dfce12f5",
+            "law_quote": "1. § 14 wird durch den folgenden § 14 ersetzt:",
+            "criterion_quote": "Wir führen eine **Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind**, wenn die\nBehörde nicht innerhalb einer gesetzten Frist reagiert.",
+            "caveats": [
+              "Die Bewertung betrifft nur die im bereitgestellten Gesetzestext belegte Wirkung; sie ist kein Beleg dafür, dass es andernorts keine solche Regelung gibt."
+            ],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+          "disposition": "no_supported_link",
+          "rationale": "Der bereitgestellte Gesetzestext dokumentiert Änderungen am Abgeordnetengesetz, aber keine Prüfung der Auswirkungen dieser Neuregelung oder weiterer Reformschritte. Eine solche Prüfung ist damit für dieses Kriterium nicht belegt.",
+          "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der bereitgestellte Gesetzestext dokumentiert Änderungen am Abgeordnetengesetz, aber keine Prüfung der Auswirkungen dieser Neuregelung oder weiterer Reformschritte. Eine solche Prüfung ist damit für dieses Kriterium nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-a019de4c9c158ad2",
+            "law_quote": "Das Abgeordnetengesetz in der Fassung der Bekanntmachung vom 21. Februar 1996 (BGBl. I S. 326), das\nzuletzt durch Artikel 1 des Gesetzes vom 23. Dezember 2024 (BGBl. 2024 I Nr. 450) geändert worden ist, wird\nwie folgt geändert:",
+            "criterion_quote": "Die Auswirkungen dieser Neuregelung und weitere Reformschritte werden wir zu\ngegebener Zeit prüfen.",
+            "caveats": [
+              "Der fehlende Prüfungsnachweis im bereitgestellten Gesetzestext ist kein Nachweis, dass keine Prüfung außerhalb dieses Textes stattgefunden hat."
+            ],
+            "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft laut den angeführten Vorschriften Änderungen am Abgeordnetengesetz, darunter Kostenpauschalen. Der Text enthält keinen direkten Beleg für Änderungen an Asylverfahren, BAMF- oder Verwaltungsgerichtskapazitäten oder Entscheidungszeiten.",
+          "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft laut den angeführten Vorschriften Änderungen am Abgeordnetengesetz, darunter Kostenpauschalen. Der Text enthält keinen direkten Beleg für Änderungen an Asylverfahren, BAMF- oder Verwaltungsgerichtskapazitäten oder Entscheidungszeiten.",
+            "law_passage_id": "bgbl-1-2025-258-p-39e7d03564419c75",
+            "law_quote": "Trägt sich ein Mitglied des Bundestages nicht in die Anwesenheitsliste ein, werden ihm 200 Euro von der\nKostenpauschale einbehalten.",
+            "criterion_quote": "Mit umfassender\nDigitalisierung und Verwaltungsmodernisierung wollen wir sicherstellen, dass Asylentscheidungen\ninnerhalb von sechs Monaten getroffen werden können.",
+            "caveats": [
+              "Aus dem fehlenden Beleg im bereitgestellten Gesetzestext folgt nicht, dass Asylverfahren durch andere Maßnahmen unbeeinflusst bleiben."
+            ],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Bestimmungen regeln Kürzungen der Kostenpauschale und Ordnungsgelder im Bundestag. Sie belegen keine Maßnahme zum Schutz vor Abzocke oder Manipulation im digitalen Raum und berücksichtigen dabei auch Kinder und Jugendliche nicht ausdrücklich.",
+          "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Bestimmungen regeln Kürzungen der Kostenpauschale und Ordnungsgelder im Bundestag. Sie belegen keine Maßnahme zum Schutz vor Abzocke oder Manipulation im digitalen Raum und berücksichtigen dabei auch Kinder und Jugendliche nicht ausdrücklich.",
+            "law_passage_id": "bgbl-1-2025-258-p-24344b28f6e06277",
+            "law_quote": "Ordnungsmaßnahmen wegen Verletzung der Ordnung oder der Würde des Bundestages",
+            "criterion_quote": "Hier bedarf es eines besonderen Schutzes gegen Abzocke\nund Manipulation, insbesondere für Kinder und Jugendliche.",
+            "caveats": [
+              "Die Bewertung bezieht sich auf das vorgelegte Gesetz und ist kein Nachweis, dass es keine anderen Schutzmaßnahmen gibt."
+            ],
+            "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "no_supported_link",
+          "rationale": "Die im Gesetz genannten Änderungen betreffen Vorschriften des Abgeordnetengesetzes zu Kostenpauschalen und Ordnungsmaßnahmen. Eine dokumentierte Untersuchung zur Bündelung von Aufgaben, Diensten oder Zuständigkeiten der Ministerien ist im bereitgestellten Text nicht belegt.",
+          "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die im Gesetz genannten Änderungen betreffen Vorschriften des Abgeordnetengesetzes zu Kostenpauschalen und Ordnungsmaßnahmen. Eine dokumentierte Untersuchung zur Bündelung von Aufgaben, Diensten oder Zuständigkeiten der Ministerien ist im bereitgestellten Text nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-a019de4c9c158ad2",
+            "law_quote": "Das Abgeordnetengesetz in der Fassung der Bekanntmachung vom 21. Februar 1996 (BGBl. I S. 326), das\nzuletzt durch Artikel 1 des Gesetzes vom 23. Dezember 2024 (BGBl. 2024 I Nr. 450) geändert worden ist, wird\nwie folgt geändert:",
+            "criterion_quote": "Zugleich werden wir prüfen, welche Aufgaben, Dienste und Zuständigkeiten der Ministerien\ngebündelt werden können, um so die Effizienz und Steuerungsfähigkeit der Bundesverwaltung zu\nerhöhen.",
+            "caveats": [
+              "Die fehlende Untersuchung im bereitgestellten Gesetzestext beweist nicht, dass eine solche Prüfung nicht anderweitig erfolgt ist."
+            ],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7cff436b88eb1d1f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt das Bundesverfassungsgericht als zuständiges Gericht für Streitigkeiten über bestimmte Ordnungsgeld- und Ordnungsmaßnahmen. Das belegt jedoch nicht den Abschluss eines erneuten Pakts für den Rechtsstaat durch die Bundesregierung gemeinsam mit den Ländern.",
+          "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "187389ccfaf93b1c07b130e92943fec5a899af2e9a8e78121b3fc1e85f03dbc8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz nennt das Bundesverfassungsgericht als zuständiges Gericht für Streitigkeiten über bestimmte Ordnungsgeld- und Ordnungsmaßnahmen. Das belegt jedoch nicht den Abschluss eines erneuten Pakts für den Rechtsstaat durch die Bundesregierung gemeinsam mit den Ländern.",
+            "law_passage_id": "bgbl-1-2025-258-p-03281d958301cea4",
+            "law_quote": "Zuständiges Gericht für Streitigkeiten über Maßnahmen und Entscheidungen nach den Absätzen 1 und 2\nist das Bundesverfassungsgericht.",
+            "criterion_quote": "Mit einem erneuten **Pakt für den Rechtsstaat** werden wir gemeinsam mit den Ländern",
+            "caveats": [
+              "Die Regelung zur gerichtlichen Zuständigkeit ist kein Beleg für einen Pakt zwischen Bundesregierung und Ländern."
+            ],
+            "criterion_id": "spd-2025-ac-7cff436b88eb1d1f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-847770ba14936ced",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext betrifft die Änderung des Abgeordnetengesetzes und enthält keine Regelung zu Eigenanteilen in der stationären Langzeitpflege. Ein Effekt auf den Pflegekosten-Deckel ist daher nicht belegt.",
+          "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext betrifft die Änderung des Abgeordnetengesetzes und enthält keine Regelung zu Eigenanteilen in der stationären Langzeitpflege. Ein Effekt auf den Pflegekosten-Deckel ist daher nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-d93da09e9a42ad99",
+            "law_quote": "Gesetz zur Änderung des Abgeordnetengesetzes – Kürzung der Kostenpauschale und Erhöhung der Ordnungsgelder",
+            "criterion_quote": "Die hohen **Eigenanteile bei den Pflegekosten** in der stationären Langzeitpflege wollen wir durch eine **Begrenzung auf 1.000 Euro pro Monat** (sogenannter **Pflegekosten-Deckel** ) maßgeblich reduzieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-847770ba14936ced",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Abgeordnetengesetzes enthält keine Änderung des Artikels 3 Absatz 3 GG und nennt sexuelle Orientierung oder geschlechtliche Identität nicht als geschützte Merkmale. Ein Effekt auf das Kriterium ist nicht belegt.",
+          "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Abgeordnetengesetzes enthält keine Änderung des Artikels 3 Absatz 3 GG und nennt sexuelle Orientierung oder geschlechtliche Identität nicht als geschützte Merkmale. Ein Effekt auf das Kriterium ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-d93da09e9a42ad99",
+            "law_quote": "Gesetz zur Änderung des Abgeordnetengesetzes – Kürzung der Kostenpauschale und Erhöhung der Ordnungsgelder",
+            "criterion_quote": "Wir wollen den **Schutz vor Diskriminierung im Grundgesetz (GG) explizit auf sexuelle Orientierung**\n**und geschlechtliche Identität erweitern** . Artikel 3 Abs. 3 GG werden wir daher entsprechend\nerweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Kostenpauschale und Ordnungsgelder für Bundestagsmitglieder. Eine steuer- und abgabenfreie Auszahlung eines Führerscheinzuschusses ist darin nicht geregelt; ein Effekt ist nicht belegt.",
+          "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Kostenpauschale und Ordnungsgelder für Bundestagsmitglieder. Eine steuer- und abgabenfreie Auszahlung eines Führerscheinzuschusses ist darin nicht geregelt; ein Effekt ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-d93da09e9a42ad99",
+            "law_quote": "Gesetz zur Änderung des Abgeordnetengesetzes – Kürzung der Kostenpauschale und Erhöhung der Ordnungsgelder",
+            "criterion_quote": "Zudem wollen wir\nArbeitgebern ermöglichen, einen Führerscheinzuschuss von bis zu 2.000 Euro steuer- und abgabenfrei\nan Auszubildende und junge Beschäftigte auszuzahlen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Regelung zum Elterngeld oder zu zusätzlichen, frei verteilbaren Elterngeldmonaten. Ein Effekt auf dieses Kriterium ist nicht belegt.",
+          "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Regelung zum Elterngeld oder zu zusätzlichen, frei verteilbaren Elterngeldmonaten. Ein Effekt auf dieses Kriterium ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-d93da09e9a42ad99",
+            "law_quote": "Gesetz zur Änderung des Abgeordnetengesetzes – Kürzung der Kostenpauschale und Erhöhung der Ordnungsgelder",
+            "criterion_quote": "Zusätzlich gibt es weitere sechs Monate, die frei auf beide Elternteile verteilt werden können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bee474ad7385688c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Elterngeldanspruch der Eltern. Ein Effekt auf einen Anspruch von sechs Monaten je Elternteil ist nicht belegt.",
+          "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Elterngeldanspruch der Eltern. Ein Effekt auf einen Anspruch von sechs Monaten je Elternteil ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-d93da09e9a42ad99",
+            "law_quote": "Gesetz zur Änderung des Abgeordnetengesetzes – Kürzung der Kostenpauschale und Erhöhung der Ordnungsgelder",
+            "criterion_quote": "Modell beim Elterngeld, nach dem jeder Elternteil Anspruch auf 6 Monate Elterngeld erhält",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bee474ad7385688c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c1734e184bf6d191",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Regelung zu Elterngeldmonaten je Elternteil oder zu deren Übertragbarkeit. Ein Effekt auf dieses Kriterium ist nicht belegt.",
+          "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afbf9c267f3879e5f9869e21e66202e208db378b3544fc3954360dcb3931956b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine Regelung zu Elterngeldmonaten je Elternteil oder zu deren Übertragbarkeit. Ein Effekt auf dieses Kriterium ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-258-p-d93da09e9a42ad99",
+            "law_quote": "Gesetz zur Änderung des Abgeordnetengesetzes – Kürzung der Kostenpauschale und Erhöhung der Ordnungsgelder",
+            "criterion_quote": "Jeder Elternteil soll Anspruch auf sechs nicht übertragbare Monate Elterngeld erhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c1734e184bf6d191",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-259",
@@ -23723,20 +26310,20 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "anthropic/claude-sonnet-5.5",
-    "calls": 2564,
+    "calls": 2714,
     "cache_hits": 21,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 1,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 15.173415,
-    "reported_cost_calls": 2460,
+    "reported_cost_usd": 15.505368,
+    "reported_cost_calls": 2562,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 0.414053,
-    "unknown_cost_calls": 104,
+    "unknown_cost_reserved_usd": 0.569441,
+    "unknown_cost_calls": 152,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 15.587468,
-    "prompt_tokens": 25452276,
-    "completion_tokens": 3526629,
+    "budget_exposure_usd": 16.074809,
+    "prompt_tokens": 26128568,
+    "completion_tokens": 3668037,
     "max_usd": 25.0
   },
   "note": "Grouping pending: singleton groups are not a deduplicated denominator. All-party law-first screening. Unselected pairs are unknown; missing context is explicit. Cost is shared across programmes, never sum it once per programme."
