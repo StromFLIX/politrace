@@ -1,0 +1,71 @@
+---
+import FilterBar from './FilterBar.astro';
+import CriterionRow from './CriterionRow.astro';
+import Pagination from './Pagination.astro';
+import Icon from './Icon.astro';
+import { topics, statusLabels } from '../lib/data';
+import { criterionOutcomes } from '../lib/metrics';
+import { defaultPageSize, pageSizes, progressLabel, progressStatuses, topicProgress } from '../lib/criteria-browser';
+import type { Criterion, Data, Party, Program } from '../lib/types';
+import '../styles/criteria.css';
+
+interface Props { id: string; criteria: Criterion[]; data: Data; programs?: Program[]; parties?: Party[] }
+const { id, criteria, data, programs = data.programs, parties = [] } = Astro.props;
+const outcomes = criterionOutcomes(criteria, data.impacts, programs);
+const summaries = topicProgress(outcomes.map(({ criterion, status, covered }) => ({ topics: criterion.tags, status, covered })));
+const orderedTopics = Object.entries(topics).filter(([topic]) => summaries.has(topic)).sort((a, b) => a[1].localeCompare(b[1], 'de'));
+const number = (value: number) => value.toLocaleString('de-DE');
+const listId = `${id}-liste`;
+const resultsId = `${id}-ergebnisse`;
+const overviewId = `${id}-themen`;
+---
+<div data-filter-root data-criteria-browser>
+  <!-- Avoid laying out thousands of rows before the browser controller loads. -->
+  <noscript><style is:inline>[data-criteria-browser] .criterion-row[hidden] { display: block !important; }</style></noscript>
+  <details class="topic-overview" id={overviewId} data-topic-overview open>
+    <summary><span>Fortschritt nach Themen</span><span class="topic-overview-count" data-topic-count>{orderedTopics.length} Themen</span><Icon name="chevron" size={16} /></summary>
+    <div class="topic-overview-content">
+      {parties.length > 0 && <p class="topic-scope" data-topic-scope>Alle Parteien</p>}
+      <p class="topic-explanation">Der gesetzliche Stand im ganzen Thema – unabhängig von Suche, Statusfilter und Seite. Kriterien können mehreren Themen angehören; die Themenzahlen sind deshalb nicht addierbar. „Offen“ bedeutet noch nicht abschließend bewertet.</p>
+      <a class="text-link topic-skip" href={`#${resultsId}`}>Direkt zur Kriterienliste <Icon name="arrow" size={13} /></a>
+      <div class="topic-grid">
+        {orderedTopics.map(([topic, label]) => {
+          const summary = summaries.get(topic)!;
+          const params = new URLSearchParams({ thema: topic });
+          if (programs.length && new Set(programs.map(p => p.election_year)).size === 1) params.set('jahr', String(programs[0].election_year));
+          return <a class="topic-card" href={`?${params}#${resultsId}`} data-topic-link={topic}>
+            <div class="topic-card-heading"><h3>{label}</h3><Icon name="arrow" size={15} /></div>
+            <p><strong data-topic-total>{number(summary.total)}</strong> Kriterien <span class="topic-card-action">ansehen</span></p>
+            <div class="meter topic-meter" data-topic-meter role="img" aria-label={progressLabel(summary)}>
+              {progressStatuses.map(status => <span class={status} data-topic-segment={status} style={`flex:${summary.counts[status]}`} />)}
+            </div>
+            <dl class="topic-counts">
+              {progressStatuses.map(status => <div><dt><i class={status} aria-hidden="true" />{statusLabels[status]}</dt><dd data-topic-status={status}>{number(summary.counts[status])}</dd></div>)}
+            </dl>
+            <p class="topic-coverage"><Icon name="link" size={12} /> <span data-topic-covered>{number(summary.covered)}</span> mit Gesetzesbelegen</p>
+          </a>;
+        })}
+      </div>
+      <p class="topic-empty" data-no-topics hidden={orderedTopics.length > 0}>Für diese Auswahl liegen noch keine Kriterien vor.</p>
+      <a class="text-link" href="/methodik/">Wie die Bewertung entsteht <Icon name="arrow" size={13} /></a>
+    </div>
+  </details>
+  <div class="criteria-heading">
+    <h3 id={resultsId} tabindex="-1" data-results-start data-results-heading>Alle Kriterien</h3>
+    <a class="text-link" href={`#${overviewId}`} data-show-topics>Themenübersicht <Icon name="branch" size={14} /></a>
+  </div>
+  <FilterBar parties={parties} />
+  <div class="criteria-toolbar">
+    <p class="result-count" aria-live="polite" aria-atomic="true" data-result-count>{number(outcomes.length)} Kriterien</p>
+    <label class="select-wrap" data-page-controls hidden>Pro Seite <select data-page-size-select aria-label="Kriterien pro Seite">{pageSizes.map(size => <option value={size} selected={size === defaultPageSize}>{size}</option>)}</select></label>
+  </div>
+  <Pagination position="oben" controls={listId} />
+  <div class="criterion-list" id={listId} data-filter-list hidden={outcomes.length === 0}>
+    {outcomes.map(({ criterion, status, covered }, index) => <CriterionRow criterion={criterion} data={data} status={status} covered={covered} hidden={index >= defaultPageSize} />)}
+  </div>
+  <div class="empty-state" data-no-results hidden={outcomes.length > 0}>
+    <Icon name="search" size={24} /><h2>Keine passenden Kriterien</h2>
+    <p>Ändere den Suchbegriff oder setze die Filter auf „Alle“. Noch nicht importierte Programme enthalten keine Kriterien.</p>
+  </div>
+  <Pagination position="unten" controls={listId} />
+</div>

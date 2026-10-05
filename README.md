@@ -29,6 +29,12 @@ npm run dev
 
 Fictional regression fixtures live only under `tests/fixtures`. They are not published as routes or API datasets. Production is a static Astro application served by Nginx in Docker Compose. No provider credential goes into frontend builds.
 
+## Browsing criteria by topic
+
+Party pages and `/live/kriterien/` include a clickable topic overview and numbered pagination (20 criteria per page, with 50/100 options). Search, topic, party, status, page (`seite`) and page size (`pro_seite`) are shareable URL state; browser Back/Forward restores them. Filter and programme-year changes reset the page. Without JavaScript, all eligible criteria remain readable.
+
+Topic progress uses the same accepted assessments and evidence rules as the party totals. It covers the whole selected programme/party, independently of search, status filters and the current page. A criterion with multiple tags appears in every applicable topic, so topic totals are **not additive**. Open criteria are not failed promises. This is a static, client-side browser, not a new paginated API; source records, IDs and citations are unchanged.
+
 ## Resumable production processing
 
 `.github/workflows/production.yml` is the single scheduled production entry point. It runs at **06:00 Europe/Berlin**, including DST, and automatically dispatches another bounded slice when work remains. CLI dispatch: `gh workflow run production.yml --ref main`. Do not rerun a paid job from an older snapshot.

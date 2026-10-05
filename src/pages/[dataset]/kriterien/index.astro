@@ -1,10 +1,11 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import FilterBar from '../../../components/FilterBar.astro';
-import CriterionRow from '../../../components/CriterionRow.astro';
-import Icon from '../../../components/Icon.astro';
+import CriteriaBrowser from '../../../components/CriteriaBrowser.astro';
 import { datasets, getData } from '../../../lib/data';
 export function getStaticPaths() { return datasets.map(dataset => ({ params: { dataset }, props: { data: getData(dataset) } })); }
 const { data } = Astro.props;
 ---
-<Layout title="Alle Kriterien" active="parties" dataset={data.dataset}><div class="page-heading"><div class="eyebrow">Die Zusagen, im Detail</div><h1>Was müsste sich ändern?</h1><p>Alle prüfbaren Kriterien, parteiübergreifend durchsuchbar. Jedes führt zurück zum Absatz im Wahlprogramm.</p></div><section data-filter-root style="margin-bottom:55px"><FilterBar parties={data.parties} /><div class="result-count" data-result-count aria-live="polite">{data.criteria.length} Einträge</div><div class="criterion-list">{data.criteria.map(c => <CriterionRow criterion={c} data={data} />)}</div><div class="empty-state" data-no-results hidden={data.criteria.length > 0}><Icon name="search" size={28} /><h2>Keine passenden Kriterien</h2><p>In diesem Datensatz fehlen noch Programme oder die Filter liefern keine Treffer.</p></div></section></Layout>
+<Layout title="Alle Kriterien" active="parties" dataset={data.dataset}>
+  <div class="page-heading"><div class="eyebrow">Die Zusagen, im Detail</div><h1>Was müsste sich ändern?</h1><p>Alle prüfbaren Kriterien, nach Themen geordnet und parteiübergreifend durchsuchbar. Jedes führt zurück zum Absatz im Wahlprogramm.</p></div>
+  <section style="margin-bottom:55px"><CriteriaBrowser id="alle-kriterien" criteria={data.criteria} data={data} parties={data.parties} /></section>
+</Layout>

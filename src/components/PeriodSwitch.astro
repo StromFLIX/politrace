@@ -6,16 +6,23 @@ const { years, selected } = Astro.props;
 <script>
   const switches = document.querySelectorAll<HTMLSelectElement>('[data-period-select]');
   const panels = document.querySelectorAll<HTMLElement>('[data-period-panel]');
+  const defaultYear = switches[0]?.value || '';
   function choose(year: string, updateUrl: boolean) {
     if (![...panels].some(p => p.dataset.periodPanel === year)) return;
     panels.forEach(panel => panel.hidden = panel.dataset.periodPanel !== year);
     switches.forEach(input => input.value = year);
     if (updateUrl) {
       const url = new URL(window.location.href); url.searchParams.set('jahr', year);
-      history.replaceState(null, '', url);
+      url.searchParams.delete('seite');
+      history.pushState(null, '', url);
     }
+    document.dispatchEvent(new Event('politrace:period-change'));
   }
   const initial = new URLSearchParams(location.search).get('jahr');
   if (initial) choose(initial, false);
   switches.forEach(input => input.addEventListener('change', () => choose(input.value, true)));
+  window.addEventListener('popstate', () => {
+    const year = new URLSearchParams(location.search).get('jahr');
+    choose([...panels].some(p => p.dataset.periodPanel === year) ? year! : defaultYear, false);
+  });
 </script>

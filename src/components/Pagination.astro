@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+interface Props { position: 'oben' | 'unten'; controls: string }
+const { position, controls } = Astro.props;
+---
+<nav class="pagination" data-pagination hidden aria-label={`Kriterienseiten ${position}`} aria-controls={controls}>
+  <button type="button" class="button pagination-previous" data-page-previous aria-label="Vorherige Seite"><Icon name="chevron" size={14} /> Zurück</button>
+  <div class="pagination-pages" data-page-numbers></div>
+  <button type="button" class="button pagination-next" data-page-next aria-label="Nächste Seite">Weiter <Icon name="chevron" size={14} /></button>
+  <span class="pagination-label" data-page-label></span>
+</nav>

@@ -133,9 +133,12 @@ test('URL search values are never rendered as executable HTML', async ({ page })
   await expect(page.getByRole('heading', { name: 'Keine passenden Kriterien' })).toBeVisible();
   await page.getByRole('searchbox').fill('');
   await page.getByRole('combobox', { name: 'Partei', exact: true }).selectOption('ssw');
-  await expect(page.locator('.criterion-row:visible')).toHaveCount(100);
-  await page.getByRole('button', { name: 'Weitere 100 anzeigen' }).click();
-  await expect(page.locator('.criterion-row:visible')).toHaveCount(200);
+  await expect(page.locator('.criterion-row:visible')).toHaveCount(20);
+  const first = await page.locator('.criterion-row:visible').first().getAttribute('href');
+  await page.getByRole('navigation', { name: 'Kriterienseiten oben' }).getByRole('button', { name: 'Nächste Seite' }).click();
+  await expect(page.locator('.criterion-row:visible')).toHaveCount(20);
+  expect(await page.locator('.criterion-row:visible').first().getAttribute('href')).not.toBe(first);
+  expect(new URL(page.url()).searchParams.get('seite')).toBe('2');
 });
 
 test('citizen views do not contain operator progress or review gates', async ({ page, request }) => {
