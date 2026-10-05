@@ -9,14 +9,20 @@ export default defineConfig({
   workers: 1,
   reporter: [['list']],
   // Full-programme DOM snapshots are large; capture diagnostics only on a failed retry.
-  use: { baseURL: deployedUrl || 'http://127.0.0.1:4321', trace: 'on-first-retry' },
+  use: {
+    baseURL: deployedUrl || 'http://127.0.0.1:4321', trace: 'on-first-retry',
+    // Citation round-trips visit dozens of large documents in a 1 GB container.
+    // Do not retain every old DOM in Chromium's back/forward cache during these checks.
+    launchOptions: { args: ['--disable-features=BackForwardCache'] },
+  },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 1080 } } },
     { name: 'mobile', use: { ...devices['iPhone 13'], defaultBrowserType: 'chromium' } },
   ],
   webServer: deployedUrl ? undefined : {
-    // Playwright owns this process; do not use Astro's background-server/lock lifecycle.
-    command: 'npm run preview -- --host 127.0.0.1 --port 4321 --ignore-lock',
+    // Test the already-built static output without retaining Astro/Vite's build graph in RAM.
+    // Docker CI separately checks the actual production nginx headers and health endpoint.
+    command: 'python -m http.server 4321 --bind 127.0.0.1 --directory dist',
     url: 'http://127.0.0.1:4321', reuseExistingServer: !process.env.CI,
     gracefulShutdown: { signal: 'SIGTERM', timeout: 5000 },
   },

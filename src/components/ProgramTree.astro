@@ -7,6 +7,9 @@ import '../styles/program.css';
 interface Props { program: Program; criteria: Criterion[] }
 const { program, criteria } = Astro.props;
 const chapters = readingChapters(program);
+// Rendering every chapter open can exhaust mobile compositors on 1,000+ leaf programmes.
+// All text stays in HTML; navigation, search and source fragments open the needed sections.
+const initialChapter = chapters.find(chapter => !chapter.ancillary) ?? chapters[0];
 const byLeaf = new Map<string, Criterion[]>();
 for (const criterion of criteria) byLeaf.set(criterion.leaf_id, [...(byLeaf.get(criterion.leaf_id) ?? []), criterion]);
 ---
@@ -36,7 +39,7 @@ for (const criterion of criteria) byLeaf.set(criterion.leaf_id, [...(byLeaf.get(
   <div class="program-reading-area">
     <div class="reader-introduction"><span class="eyebrow">Programmtext</span><p>In Reihenfolge der Quelle. Zitate und Kriterien direkt am Absatz.</p></div>
     <div class="reader-empty" data-reader-empty hidden><Icon name="search" size={23} /><h2>Keine passenden Absätze</h2><p>Versuche einen anderen Begriff oder zeige wieder das ganze Programm.</p><button type="button" class="button" data-reader-reset>Alle Absätze anzeigen</button></div>
-    {chapters.map(chapter => <details class:list={['program-chapter', { ancillary: chapter.ancillary }]} id={chapter.id} open={!chapter.ancillary} data-reader-chapter>
+    {chapters.map(chapter => <details class:list={['program-chapter', { ancillary: chapter.ancillary }]} id={chapter.id} open={chapter === initialChapter} data-reader-chapter>
       <summary>
         <div><h2>{chapter.title}{chapter.continued && <small> · Fortsetzung</small>}</h2><span class="chapter-meta">PDF-Seite {chapter.firstPage}{chapter.lastPage !== chapter.firstPage && `–${chapter.lastPage}`} · {chapter.leafIds.length} {chapter.leafIds.length === 1 ? 'Absatz' : 'Absätze'}</span></div>
         <Icon name="down" size={20} />

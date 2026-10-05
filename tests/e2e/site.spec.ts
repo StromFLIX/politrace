@@ -129,8 +129,9 @@ test('live programme criteria retain exact citations and do not imply reviewed f
   expect(coverage.processed_leaves + coverage.remaining_leaves).toBe(coverage.source_leaves);
   expect(tree.leaves.length).toBeGreaterThan(0);
   for (const leaf of tree.leaves) expect(markdown).toContain(leaf.reference.quote);
-  const criteria = await (await request.get('/api/v1/live/criteria.json')).json();
-  const first = criteria.items.find((c: { program_id: string }) => c.program_id === program.id);
+  // Fetch one citation, not the full multi-party corpus (tens of MB retained by APIRequestContext).
+  const firstId = program.criteria_extraction.find((leaf: { criterion_ids: string[] }) => leaf.criterion_ids.length)?.criterion_ids[0];
+  const first = firstId ? await (await request.get(`/api/v1/live/criteria/${firstId}.json`)).json() : null;
   await page.goto(`/live/programme/${program.id}/`);
   await expect(page.getByRole('heading', { name: program.title, exact: true }).first()).toBeVisible();
   await expect(page.locator('[data-extraction-status]')).toContainText(`${coverage.processed_leaves} von ${coverage.source_leaves}`);

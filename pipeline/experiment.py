@@ -19,7 +19,7 @@ import snowballstemmer
 from pydantic import Field
 
 from pipeline.citations import source_quote
-from pipeline.llm import Agent, InvalidModelResponse
+from pipeline.llm import Agent, InvalidModelResponse, ProviderError
 from pipeline.matching import STOP, Judgment, Verification, criterion_text, eligible_criteria
 from pipeline.models import Generation, Impact, MatchAudit, Model
 from pipeline.parallel import ordered_map
@@ -449,15 +449,41 @@ def analyse(*, root: Path, agent: Agent, program_id: str):
                 len(laws), len(criteria), sum(len(c) for c in candidates.values()))
     completed = {audit.law_id for audit in report.laws}
     def work(law):
-        return analyze_law(law, criteria, candidates[law.id], len(eligible[law.id]), agent,
-                           existing, root, corpus_hash)
+        try:
+            return law, analyze_law(law, criteria, candidates[law.id], len(eligible[law.id]), agent,
+                                   existing, root, corpus_hash)
+        except ProviderError as error:
+            if not error.retryable:
+                raise  # Credit/auth/configuration failures stop the bounded work queue.
+            return law, error
+
+    failures = {}
+    failure_path = agent.cache.parent / 'law-failures.json'
+    pending = [law for law in laws if law.id not in completed]
     try:
-        for audit in ordered_map(work, [law for law in laws if law.id not in completed], workers=4):
-            report.laws.append(audit)
-            report.cost = agent.summary()
-            write_json(path, report)
-            logger.info('Completed %s/%s laws; reported $%.4f, exposure $%.4f', len(report.laws),
-                        len(laws), agent.reported_cost_usd, agent.reported_cost_usd + agent.reserved_usd)
+        # Finish unaffected laws before one bounded retry pass. A persistent outage still
+        # fails the job, never becomes a no-link result or an endless paid retry loop.
+        for sweep in range(2):
+            deferred = []
+            for law, outcome in ordered_map(work, pending, workers=4):
+                if isinstance(outcome, ProviderError):
+                    deferred.append(law)
+                    failures[law.id] = {'attempt_pass': sweep + 1, **outcome.safe_details()}
+                    write_json(failure_path, failures)
+                    logger.warning('Deferred %s after bounded provider retries (pass %s/2)', law.id, sweep + 1)
+                    continue
+                failures.pop(law.id, None)
+                report.laws.append(outcome)
+                report.cost = agent.summary()
+                write_json(path, report)
+                write_json(failure_path, failures)
+                logger.info('Completed %s/%s laws; reported $%.4f, exposure $%.4f', len(report.laws),
+                            len(laws), agent.reported_cost_usd, agent.reported_cost_usd + agent.reserved_usd)
+            pending = deferred
+            if not pending:
+                break
+        if pending:
+            raise RuntimeError(f'{len(pending)} laws still have provider failures; resume retained checkpoints')
     finally:
         report.cost = agent.summary()
         write_json(path, report)

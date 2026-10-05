@@ -48,4 +48,6 @@ The operator validates and publishes proposals to main through normal Git as aut
 
 ## Costs and quality results
 
+The [2026-10-05 recovered checkpoint](pilots/2026-10-05-all-programmes-checkpoint.md) publishes all six programme extractions (6,470 criteria) and the retained Grünen analysis of 70/171 laws with 138 proposed connections. The next attempt resumes that exact ledger. Transient upstream errors defer a law to one bounded retry pass without blocking unaffected laws; unresolved errors still fail. The request-count ceiling is 10,000; the cumulative dollar cap remains $25, including unknown-charge exposure.
+
 The [first measured segment](pilots/2026-10-04-luna-flex.md) retained 233 new criteria for $0.042090 before a quotation-validation failure. This is partial extraction, not a completed all-law result. Actual results are populated by the run, not the planning estimates. The public report distinguishes `reported_cost_usd`, unknown/in-flight reservations, `budget_exposure_usd`, and `max_usd`. Previously completed work is reused; charges persist across resumes. Before scaling to other parties, inspect missed commitments, atomicity, false duplicate merges, unrelated/missing-context laws and signed-effect disagreements, and measure retrieval recall separately from link precision.

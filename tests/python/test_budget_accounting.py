@@ -75,7 +75,7 @@ def test_http_timeout_keeps_unknown_charge_reservations(tmp_path, monkeypatch):
     def timeout(request):
         raise httpx.ReadTimeout('request may have completed remotely', request=request)
     a = agent(tmp_path, monkeypatch, timeout)
-    with pytest.raises(RuntimeError, match='transport'):
+    with pytest.raises(ProviderError, match='504'):
         a.ask('test', {}, Reply, max_output=256)
     s = a.summary()
     assert s['unknown_cost_calls'] == 3 and s['unknown_cost_reserved_usd'] > 0

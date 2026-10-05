@@ -1,0 +1,55 @@
+---
+import type { Law } from '../lib/types';
+interface Props { law: Law }
+const { law } = Astro.props;
+const pages = new Map<number, Law['passages']>();
+for (const passage of law.passages) {
+  const group = pages.get(passage.reference.page) ?? [];
+  group.push(passage);
+  pages.set(passage.reference.page, group);
+}
+---
+<div data-law-text>
+  {[...pages].map(([page, passages], index) => <details class="law-page" open={index === 0}>
+    <summary>PDF-Seite {page} <span>{passages.length} Textabschnitte</span></summary>
+    {passages.map(p => <article class="tree-leaf" id={p.id}>
+      <div class="leaf-header"><span>Seite {p.reference.page}</span><span>Markdown L{p.reference.line_start}–L{p.reference.line_end}</span></div><p>{p.text}</p>
+    </article>)}
+  </details>)}
+</div>
+<style>
+  .law-page { border-bottom: 1px solid var(--border); min-width: 0; }
+  .law-page > summary { padding: 18px 0; cursor: pointer; font-size: 14px; }
+  .law-page > summary > span { margin-left: 12px; color: var(--muted); font-size: 11px; }
+  .tree-leaf { padding: 20px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 110px; }
+  .tree-leaf p { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+  .tree-leaf:target { background: #f3f7ff; outline: 2px solid #9fb9f4; }
+  .leaf-header { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 10px; margin-bottom: 10px; }
+</style>
+<script>
+  const text = document.querySelector('[data-law-text]');
+  if (text) {
+    function reveal() {
+      let id: string;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      const target = document.getElementById(id);
+      if (!target || !text!.contains(target)) return;
+      const page = target.closest('details');
+      if (page) page.open = true;
+      const hash = location.hash;
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+      void document.fonts.ready.then(() => { if (hash === location.hash) target.scrollIntoView({ block: 'start' }); });
+    }
+    reveal();
+    window.addEventListener('hashchange', reveal);
+    const printState = new Map<HTMLDetailsElement, boolean>();
+    window.addEventListener('beforeprint', () => {
+      if (printState.size) return;
+      for (const page of text.querySelectorAll('details')) { printState.set(page, page.open); page.open = true; }
+    });
+    window.addEventListener('afterprint', () => {
+      for (const [page, open] of printState) page.open = open;
+      printState.clear();
+    });
+  }
+</script>

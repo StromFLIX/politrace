@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
 import { extractionCoverage } from '../../lib/metrics';
 import { experiments } from '../../lib/experiments';
+import { jsonBody } from '../../lib/json-stream';
 
 export const prerender = true;
 
@@ -121,6 +122,6 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 export const GET: APIRoute = ({ props }) => new Response(
-  typeof props.value === 'string' ? props.value : JSON.stringify(props.value, null, 2) + '\n', {
+  typeof props.value === 'string' ? props.value : jsonBody(props.value), {
   headers: { 'Content-Type': props.contentType, 'Access-Control-Allow-Origin': '*', 'X-Content-Type-Options': 'nosniff' },
 });

@@ -20,7 +20,7 @@ def main():
         raise ValueError('Missing cumulative ledger: refuse paid work without the previous checkpoint')
     validate_store()
     agent = Agent(cache=ROOT / '.cache/e2e/llm', model='openai/gpt-6-luna',
-                  max_usd=25, max_calls=2000, flex=True, ledger=ledger)
+                  max_usd=25, max_calls=10000, flex=True, ledger=ledger)
     result = {'experiment': request['experiment'], 'phase': request['phase'],
               'status': 'running', 'provider': agent.key_status()}
     try:

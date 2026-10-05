@@ -114,8 +114,8 @@ class Agent:
         self.ledger = ledger
         self.max_usd = float(max_usd if max_usd is not None else os.environ.get("POLITRACE_MAX_USD", "5"))
         self.max_calls = int(max_calls if max_calls is not None else os.environ.get("POLITRACE_MAX_CALLS", "200"))
-        if not (0 < self.max_usd <= 100) or not (1 <= self.max_calls <= 2000):
-            raise ValueError("Budget must be > 0 and <= $100; calls between 1 and 2000")
+        if not (0 < self.max_usd <= 100) or not (1 <= self.max_calls <= 10000):
+            raise ValueError("Budget must be > 0 and <= $100; calls between 1 and 10000")
         self.pending_reserved_usd = 0.0
         self.unknown_cost_reserved_usd = 0.0
         self.reported_cost_usd = 0.0
@@ -336,7 +336,7 @@ class Agent:
             except httpx.TransportError:
                 self._settle(reserve)  # A timeout can still be charged; never release blindly.
                 if attempt == 2:
-                    raise RuntimeError("OpenRouter transport failed after bounded retries") from None
+                    raise ProviderError(504, {}) from None
                 time.sleep(2 ** attempt)
                 continue
             try:
@@ -344,11 +344,18 @@ class Agent:
             except ValueError:
                 body = None
             self._settle(reserve, body)
-            if response.status_code in (429, 502, 503, 504) and attempt < 2:
-                time.sleep(2 ** attempt)
-                continue
-            if response.is_error or (isinstance(body, dict) and body.get('error')):
-                error = ProviderError(response.status_code, body)
+            # Some providers fail after sending a choices envelope. This is NOT malformed
+            # model JSON: do not persist a subdivision hint or escalate to a costly model.
+            choices = body.get('choices') if isinstance(body, dict) else None
+            choice_error = (choices[0] if isinstance(choices, list) and choices
+                            and isinstance(choices[0], dict)
+                            and choices[0].get('finish_reason') == 'error' else None)
+            if response.is_error or (isinstance(body, dict) and body.get('error')) or choice_error:
+                details = body
+                if choice_error and not body.get('error'):
+                    nested = choice_error.get('error')
+                    details = {'error': nested if isinstance(nested, dict) else {'code': 502}}
+                error = ProviderError(response.status_code, details)
                 if error.retryable and attempt < 2:
                     logger.warning('Transient OpenRouter response (HTTP %s, code %s); bounded retry %s/2',
                                    error.status_code, error.error_code, attempt + 1)
