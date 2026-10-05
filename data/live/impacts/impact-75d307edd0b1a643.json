@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2025-371",
   "score": 1,
   "confidence": 0.88,
-  "rationale": "Die Regelung unterstützt teilweise die Nachvollziehbarkeit des Zwecks abgefragter Angaben: Sie sieht Erläuterungen dazu vor, wofür Angaben benötigt werden. Die Pflicht ist jedoch bedingt und bezieht sich auf Anträge bei Pflegekassen; sie belegt nicht, dass der Zweck jeder verwendeten Daten jederzeit nachvollziehbar ist.",
+  "rationale": "Bei Pflegeanträgen sollen dort, wo es sinnvoll erscheint, Erläuterungen bereitgestellt werden; sie können verständlich machen, wofür abgefragte Angaben benötigt werden. Das unterstützt die Zwecktransparenz für einen begrenzten Datenbereich, ohne sie jederzeit für alle verwendeten Daten sicherzustellen.",
   "law_passage_id": "bgbl-1-2025-371-p-e35f26be8f92a63a",
   "law_quote": "3. wo dies sinnvoll erscheint, für die Antragstellenden Erläuterungen zur Verfügung zu stellen, auch durch\nEinbindung von Erläuterungen in Online-Beantragungsmöglichkeiten; mit Erläuterungen kann auch\nnachvollziehbar gemacht werden, wofür die abgefragten Angaben benötigt werden oder welche Folgen es\nhat, wenn bestimmte Angaben nicht gemacht werden,",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Die Passage beschränkt Erläuterungen auf Fälle, in denen dies sinnvoll erscheint.",
-    "Die Regelung betrifft den Zweck abgefragter Angaben in Anträgen, nicht ausdrücklich sämtliche verwendeten Daten.",
-    "Erläuterungen nur, wo dies sinnvoll erscheint; keine Pflicht zur Zweckangabe.",
-    "Beschränkt auf Anträge bei Pflegekassen und abgefragte Angaben, nicht auf alle Datennutzungen.",
-    "Der Gesetzesausschnitt ist unvollständig (partial_law_context); die einleitende Norm und ihr Adressat sind nicht sichtbar.",
-    "Der Nachvollziehbarkeits-Satz ist als Möglichkeit formuliert (kann).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Programmkriterium verlangt, dass jederzeit klar ist, wozu welche Daten verwendet werden. Die Passage betrifft nur Erläuterungen in Anträgen bei Pflegekassen und ist eine Soll-Regelung (wo dies sinnvoll erscheint). Sie sagt nur, dass mit Erläuterungen nachvollziehbar gemacht werden kann, wofür abgefragte Angaben benötigt werden. Das ist eine Kann-Möglichkeit, keine Verpflichtung zur Zweckklarheit. Sie gilt auch nicht allgemein für verwendete Daten, sondern nur für Angaben im Antragsverfahren. Die Regelung verfehlt damit Reichweite und Verbindlichkeit des Kriteriums und ist nur ein thematischer Anknüpfungspunkt. Die Richtung ist ähnlich, aber die Stärke der Wirkung ist nicht belegt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "95e3a882a6faa896d2c075510feda2222256dd7119e60c2c3f7773aa96764a52",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "f3dd2fe72063b2479c5c7c5f7b15c7dda117a1eea82e2b886cba3b0838dccfa1"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "faa504debbb43ea661a7d08b45847e4f3fab68dca2409f0ebf8631a57fb974c1"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "6043a19dfa5aa074a90a0ad00ae0a84851f3dfb334a6f4b0fa50b275bfe8d84a"
+      "input_sha256": "95e3a882a6faa896d2c075510feda2222256dd7119e60c2c3f7773aa96764a52"
     }
   ]
 }

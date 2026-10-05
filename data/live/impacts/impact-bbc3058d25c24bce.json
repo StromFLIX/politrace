@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2025-355",
   "score": 1,
   "confidence": 0.79,
-  "rationale": "Die Regelung verbessert einen Teil des Schutzes von Saisonbeschäftigten: Wird eine Unterkunft gestellt, muss die Miete angemessen sein und darf nicht automatisch vom Lohn abgezogen werden. Das stützt den Schutz bei Saisonarbeit teilweise, belegt aber keine besonderen Regelungen für Landwirtschaft oder Fleischindustrie und erfasst nicht ausdrücklich Gesundheits- oder Sozialversicherungsschutz.",
+  "rationale": "Für vom Arbeitgeber gestellte Unterkünfte Saisonbeschäftigter schreibt die Regelung einen angemessenen Mietzins vor und untersagt dessen automatischen Einbehalt vom Lohn. Das schützt einen Teil ihrer Arbeitsbedingungen; Gesundheits- und Sozialversicherungsschutz regelt die zitierte Bestimmung nicht.",
   "law_passage_id": "bgbl-1-2025-355-p-c1a48441fc33d343",
   "law_quote": "Stellt der Arbeitgeber der oder dem Saisonbeschäftigten eine Unterkunft zur Verfügung, so muss der Mietzins\nangemessen sein und darf nicht automatisch vom Lohn einbehalten werden.",
   "criterion_quote": "In Landwirtschaft und Fleischindustrie –\ngerade in der Saisonarbeit – gibt es noch\nviele prekäre Beschäftigungsverhältnisse.\nHier gilt es, guten Arbeits-, Gesundheitsund Sozialversicherungsschutz sicherzustellen.",
-  "caveats": [
-    "Die Passage nennt Saisonbeschäftigte allgemein, nicht ausdrücklich Beschäftigte in Landwirtschaft oder Fleischindustrie.",
-    "Die zitierte Regel betrifft Unterkunft und Mietabzug; Gesundheits- und Sozialversicherungsschutz werden dadurch nicht belegt.",
-    "Es wird nur ein schmaler Teilaspekt (Unterkunftsmiete) berührt, kein Gesundheits- oder Sozialversicherungsschutz.",
-    "Branchenbezug (Landwirtschaft, Fleischindustrie) fehlt in der Passage.",
-    "Teilweise vorliegender Gesetzestext; Angemessenheit des Mietzinses ist nicht konkretisiert und die Wirkung lässt sich nicht beurteilen.",
-    "Die Regelung gehört zu einer Verordnungsänderung; Rechtsfolgen bei Verstößen sind nicht belegt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die zitierte Regelung betrifft nur die Unterkunft von Saisonbeschäftigten (angemessener Mietzins, kein automatischer Lohnabzug) und ist eine Änderung der Beschäftigungsverordnung. Das Programmkriterium verlangt dagegen Arbeits-, Gesundheits- und Sozialversicherungsschutz in Landwirtschaft und Fleischindustrie. Die Passage nennt weder Landwirtschaft noch Fleischindustrie, und Gesundheits- oder Sozialversicherungsschutz werden nicht geregelt. Die Verbindung beruht daher nur auf dem Thema Saisonarbeit. Der Vorschlag trägt als Beleg für eine Maßnahme zu dem Kriterium nicht ausreichend. Das Gesetz liegt zudem nur als Teilkontext vor, die Reichweite der Regelung (Geltungsbereich, Ausnahmen) ist nicht ersichtlich."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "32fd9564e05d65d90b59a4571c1d2553d3e8dde6e4539b655215380126d094a8",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "8cd5d36c19acc104ca26815459ab9b2505c0ddba41fa2a9b91174155dbdeb585"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "084fa433465656e7ad56d4e6b2533a02408024e4b0bc8bc2e6b54195de588f7b"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "d1e9967b689cb5174a113abc5665595364fe82075ba4d5e5d66397c6677d32da"
+      "input_sha256": "32fd9564e05d65d90b59a4571c1d2553d3e8dde6e4539b655215380126d094a8"
     }
   ]
 }

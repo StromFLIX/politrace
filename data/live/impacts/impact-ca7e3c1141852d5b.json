@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-347",
   "score": 1,
   "confidence": 0.96,
-  "rationale": "Für einen bestimmten Fall sieht die Vorschrift eine unverzügliche Kontaktaufnahme mit dem zuständigen Sozialhilfeträger und die Übermittlung von Informationen vor. Das belegt teilweise ein Verfahren, durch das Informationen frühzeitig eine zuständige Stelle erreichen; eine allgemeine Regelung für sämtliche zuständigen Behörden ist damit nicht belegt.",
+  "rationale": "Nach Eingang der unterschriebenen Einwilligung muss der Grundversorger den örtlich zuständigen Sozialhilfeträger unverzüglich kontaktieren und über die drohende Versorgungsunterbrechung informieren. Das schafft für diesen Fall einen Weg zur frühzeitigen Information der zuständigen Stelle.",
   "law_passage_id": "bgbl-1-2025-347-p-ef424dcb447a21ab",
-  "law_quote": "Übermittelt der Haushaltskunde die unterschriebene Einwilligungserklärung nach Absatz 3 an den\nGrundversorger, hat der Grundversorger unverzüglich Kontakt mit dem örtlich zuständigen Sozialhilfeträger\naufzunehmen. Dazu übermittelt der Grundversorger an den örtlich zuständigen Sozialhilfeträger die\nerforderlichen Daten des Haushaltskunden sowie Informationen zu der drohenden Versorgungsunterbrechung",
+  "law_quote": "(4) Übermittelt der Haushaltskunde die unterschriebene Einwilligungserklärung nach Absatz 3 an den\nGrundversorger, hat der Grundversorger unverzüglich Kontakt mit dem örtlich zuständigen Sozialhilfeträger\naufzunehmen. Dazu übermittelt der Grundversorger an den örtlich zuständigen Sozialhilfeträger die\nerforderlichen Daten des Haushaltskunden sowie Informationen zu der drohenden Versorgungsunterbrechung",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Pflicht greift in dem beschriebenen Fall nach Übermittlung der Einwilligungserklärung und bezieht sich auf den zuständigen Sozialhilfeträger.",
-    "Gilt nur für den Sozialhilfeträger bei drohender Versorgungsunterbrechung.",
-    "Die Pflicht entsteht erst nach Übermittlung der unterschriebenen Einwilligung.",
-    "Eine allgemeine Sicherstellung für alle zuständigen Behörden ist nicht belegt.",
-    "Nur ein Teilausschnitt des Gesetzes liegt vor.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "8f18612507641b4359d7d682414dca5bfaaca531fff725e8b292ed93e30c0967",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "ab1ced41bd5c81a9f260f493edca6a5226d7934922cd44037f603f4e1665e4e2"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "aec93ea3faa06b7c1fc32ab4fb5093d1a1a11b7c4b247592dfca32d10c4356a5"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "97b0cb4bffbc772186a50c88c36072dedc49565cca37977db8b9e5df00b4979d"
+      "input_sha256": "8f18612507641b4359d7d682414dca5bfaaca531fff725e8b292ed93e30c0967"
     }
   ]
 }

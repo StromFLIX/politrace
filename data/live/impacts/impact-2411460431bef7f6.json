@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2025-351",
   "score": 1,
   "confidence": 0.82,
-  "rationale": "Das Gesetz ordnet bei bestimmten erheblichen Umweltauswirkungen Ausgleichsmaßnahmen an, wenn Minderungsmaßnahmen nicht zur Verfügung stehen. Das stützt teilweise einen Ausgleich durch Maßnahmen statt einer unmittelbaren Geldzahlung. Die Vorschrift belegt aber nicht, dass es sich um konkrete Naturschutzprojekte in der Fläche handelt oder dass solche Projekte räumlich Vorrang haben.",
-  "law_passage_id": "bgbl-1-2025-351-p-6d298dad13e127f8",
-  "law_quote": "Sofern solche verhältnismäßigen Minderungsmaßnahmen nicht zur Verfügung\nstehen, ordnet das Bundesamt für Seeschifffahrt und Hydrographie im Benehmen mit dem Bundesamt für\nNaturschutz verhältnismäßige Ausgleichsmaßnahmen an.",
+  "rationale": "Bei festgestellten erheblichen unvorhergesehenen Umweltauswirkungen sind zunächst Minderungsmaßnahmen und, wenn diese nicht möglich sind, geeignete Ausgleichsmaßnahmen anzuordnen. Ein finanzieller Ausgleich folgt erst, wenn keine solchen Ausgleichsmaßnahmen verfügbar sind. Das gibt Maßnahmen teilweise Vorrang, legt aber keinen Vorrang konkreter Naturschutzprojekte in der Fläche fest.",
+  "law_passage_id": "bgbl-1-2025-351-p-55406067906a7ce5",
+  "law_quote": "Sofern solche Minderungsmaßnahmen\nnicht getroffen werden können, ordnet die zuständige Behörde an, dass der Betreiber geeignete und\nverhältnismäßige Ausgleichsmaßnahmen ergreift. Falls keine anderen geeigneten und verhältnismäßigen\nAusgleichsmaßnahmen verfügbar sind, hat der Betreiber einen finanziellen Ausgleich zu zahlen.",
   "criterion_quote": "Bei unvermeidbaren Eingriffen setzen wir dabei\nweiterhin auf den Vorrang des Ausgleichs\nin Form von konkreten Naturschutzprojekten in der Fläche.",
-  "caveats": [
-    "Die Regelung betrifft bestimmte Vorhaben der Windenergie auf See; sie legt keinen Vorrang konkreter Projekte in der Fläche fest.",
-    "Die Regelung gilt nur für bestimmte Offshore-Windvorhaben und ist ein Ausnahme-Überprüfungsverfahren, kein allgemeiner Eingriffsausgleich.",
-    "Ausgleichsmaßnahmen sind an eine BSH-Liste und eine Verzögerungsgrenze gebunden; ein Vorrang konkreter Flächenprojekte ist nicht geregelt.",
-    "Der Rechtstext liegt nur teilweise vor (partial_law_context); die Basisregelungen des Bundesnaturschutzgesetzes fehlen.",
-    "Spätere Absätze sehen finanziellen Ausgleich und den Ausschluss weitergehender Prüfung vor, was dem Kriterium eher entgegenlaufen kann.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Programmkriterium verlangt einen Vorrang des Ausgleichs durch konkrete Naturschutzprojekte in der Fläche bei unvermeidbaren Eingriffen. Die zitierte Vorschrift (§ 70a Abs. 4) regelt nur ein Überprüfungsverfahren für Windenergieanlagen auf See bei höchstwahrscheinlich erheblichen unvorhergesehenen Umweltauswirkungen. Dort stehen Minderungsmaßnahmen vor Ausgleichsmaßnahmen, und Ausgleichsmaßnahmen sind nur verhältnismäßig, wenn sie auf einer Liste des BSH stehen und die Zulassung nicht wesentlich verzögern. Von konkreten Naturschutzprojekten in der Fläche oder einem Vorrang des Ausgleichs ist nicht die Rede. Aus den Folgeabsätzen (finanzieller Ausgleich für Artenhilfsprogramme, Ausschluss weitergehender Eingriffsbewertung und Kartierung) ergibt sich eher eine Vereinfachung als eine Stärkung des Flächenausgleichs. Die Übereinstimmung ist nur thematisch, Richtung und Reichweite sind nicht belegt. Der Vorschlag mit Score 1 ist daher nicht gestützt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "b1c60c44de8e3af17799a27e1c190473514789f908057b684eefb042741f636d",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "74e09a7f5b09bdc1e18e8ad33a71735c5626c0e560b2dc6b0dc2bd3f93270eac"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "6c8511251aa4f4cda0869aec1f2c82a64cadccf54af43545246163de498d5230"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "c563acbcb4f1fe740b9c542f022fb7af83de170c8a141471521fd918c02b6a48"
+      "input_sha256": "b1c60c44de8e3af17799a27e1c190473514789f908057b684eefb042741f636d"
     }
   ]
 }

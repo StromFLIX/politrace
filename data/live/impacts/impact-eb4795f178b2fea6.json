@@ -19,6 +19,14 @@
     "Zweite Modellprüfung widerspricht: Der Programmsatz fordert, dass sich private Versicherungen an den „Transformationskosten“ beteiligen. Die Gesetzespassage verpflichtet die privaten Pflege-Pflichtversicherer zu 7 Prozent des Fördervolumens für regionale Modellvorhaben für Unterstützungsmaßnahmen. Das ist eine Kostenbeteiligung, aber nur an einem eng begrenzten Förderprogramm. Dass diese Modellvorhaben die im Programm gemeinten Transformationskosten sind, wird weder im Gesetz noch im Programmtext gestützt, das Programmzitat nennt keinen Gegenstand der Transformation. Es bleibt ein Themenbezug (Beteiligung privater Versicherer an Kosten), keine belegte inhaltliche Entsprechung. Die Bewertung mit Score 1 und Konfidenz 0,82 überschreitet den Beleg. Auch die Größenordnung der Wirkung ist offen: Der Beitrag von 7 Prozent von höchstens 30 Mio. Euro je Jahr ist gering. Der Gesetzeskontext ist zudem nur teilweise vorhanden (partial_law_context)."
   ],
   "verification": "needs_review",
+  "evaluation": {
+    "status": "missing_context",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "95e3a882a6faa896d2c075510feda2222256dd7119e60c2c3f7773aa96764a52",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "626cb41dd03d37d1a1b413f11ab28652f6c36a7e70724995053f458ccb70d96a"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +40,9 @@
       "input_sha256": "1d2f64ed8ced3b56ffc57d40ba68ebbb47d1536d31936ff8e486bd7308973681"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "5d4dc0ab4b914096d9acc55b216be5051bb200f9fbdac2ebab6efa8552757509"
+      "input_sha256": "95e3a882a6faa896d2c075510feda2222256dd7119e60c2c3f7773aa96764a52"
     }
   ]
 }

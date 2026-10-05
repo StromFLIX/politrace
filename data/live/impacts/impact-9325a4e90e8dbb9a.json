@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2025-353",
   "score": 1,
   "confidence": 0.84,
-  "rationale": "Das Gesetz schafft für Mindeststeuer-Berichte konkrete Informationswege zwischen zuständigen Behörden und verlangt bei bestimmten Vorgängen eine unverzügliche Unterrichtung. Das stützt den engen Test teilweise; die Passage belegt aber weder die tatsächliche Anwendung im Behördenalltag noch ein allgemeines Verfahren für sämtliche Informationen.",
+  "rationale": "Bei offensichtlich fehlerhaften, aus dem Ausland übermittelten Mindeststeuer-Berichten muss das Bundeszentralamt für Steuern die zuständige ausländische Behörde unverzüglich unterrichten. Das schafft für diesen begrenzten Bereich einen Weg zur frühzeitigen Information; eine tatsächliche Anwendung ist damit nicht belegt.",
   "law_passage_id": "bgbl-1-2025-353-p-e5992388d92b0151",
   "law_quote": "so unterrichtet es\nunverzüglich die zuständige Behörde des anderen Mitgliedstaats oder des Drittstaats.",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Regel betrifft Mindeststeuer-Berichte und bestimmte Fälle fehlerhafter Informationen.",
-    "Tatsächliche Anwendung ist anhand des Gesetzestextes nicht feststellbar.",
-    "Die Regel betrifft nur Mindeststeuer-Berichte und bestimmte Fälle fehlerhafter Informationen.",
-    "Tatsächliche Anwendung ist anhand des Gesetzestextes nicht feststellbar.",
-    "Der Programmkontext des Zitats ist unbekannt; ein Bezug zur Mindeststeuer ist nicht belegt.",
-    "Das Gesetz liegt nur teilweise vor.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium ist allgemein formuliert (Informationen sollen die zuständigen Behörden frühzeitig erreichen) und enthält ohne weiteren Kontext keine Einschränkung auf Mindeststeuer-Berichte. Die Passage (§ 75a MindStG) betrifft nur einen engen Sonderfall: Unterrichtung bei offensichtlich fehlerhaften Mindeststeuer-Berichten und Weiterleitung berichtigter Berichte. Der Zusammenhang ist daher überwiegend thematisch. Das Gesetz regelt zwar Fristen und unverzügliche Unterrichtung, belegt aber weder ein allgemeines Verfahren noch dessen Anwendung, die das Kriterium prüfen will. Der Gesetzgeber setzt damit EU-Vorgaben um, ohne dass ein Bezug zum Programmanliegen erkennbar ist. Ein Rechtswirkungsbezug zum Programmziel ist nicht hinreichend belegt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "90eef320071cc45382c2e4e416a05d271e6826c2136918cd849b51f0dffb6176",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "0e73b2a5f3349d56d52c7478eefef4429a68adcb909782441e2a281a2a006a3f"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "0ee7d9306aeb75306dcb2e449bad2e4cd5176a65ae94d43f5ce1bb25f217b148"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "2f287f210d99e677c0da1ebc17c5b4bc2a3f8b21cb1063504c513ba61c661097"
+      "input_sha256": "90eef320071cc45382c2e4e416a05d271e6826c2136918cd849b51f0dffb6176"
     }
   ]
 }
