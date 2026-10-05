@@ -2,17 +2,17 @@
 
 ## Architecture
 
-The entire runtime is one `web` service: an unprivileged Nginx image containing Astro's prebuilt HTML, JSON and Markdown. The Python/model pipeline runs in GitHub Actions, not on the web server. There is no database, writable data volume, migration or runtime secret.
+The runtime is one `web` service: unprivileged Nginx containing Astro's prebuilt HTML, JSON and Markdown. Python/OCR/model processing runs in GitHub Actions, not on the web server. There is no database, writable data volume, migration or runtime model secret.
 
-- Build: repository-root `Dockerfile` and `docker-compose.yml`.
-- Internal HTTP port: **8080**.
-- Health check: **`GET /api/health.json`** (200, JSON status `ok`).
-- Filesystem: read-only, with a temporary `/tmp`; all Linux capabilities dropped.
-- Host binding: **none in production**. The optional `docker-compose.local.yml` adds `127.0.0.1:${PORT:-8080}:8080` for local/CI smoke tests only. Publishing 8080 on the Coolify host conflicts with its existing services.
-- Proxy: Coolify connects to `web:8080` through its managed network and terminates TLS.
-- Assets: local fonts and scripts, no CDN, tracker or browser model calls. Security headers are in `deploy/nginx.conf`.
+- Build: root `Dockerfile` and `docker-compose.yml`.
+- Internal HTTP port: **8080**; health: **`GET /api/health.json`** (200, JSON status `ok`).
+- Read-only filesystem, temporary `/tmp`, all Linux capabilities dropped.
+- No production host-port binding. `docker-compose.local.yml` adds `127.0.0.1:${PORT:-8080}:8080` only for local/CI tests. Publishing host port 8080 conflicts with the existing proxy.
+- Coolify routes HTTPS to `web:8080` through its managed network.
+- Local fonts/scripts; no CDN, tracker or browser model calls. Security headers: `deploy/nginx.conf`.
+- Only real-source `/live/` data is built. Retired `/demo/` routes must return **404**; fictional test fixtures never enter the image.
 
-## Local production smoke test
+## Local production test
 
 ```sh
 export COMPOSE_FILE=docker-compose.yml:docker-compose.local.yml
@@ -20,96 +20,73 @@ docker compose config --quiet
 docker compose up --build -d --wait --wait-timeout 180
 curl --fail http://127.0.0.1:8080/api/health.json
 curl --fail http://127.0.0.1:8080/api/v1/live/laws.json
-curl --fail http://127.0.0.1:8080/api/v1/demo/programs/demo-spd-2025/source.md
-curl -I http://127.0.0.1:8080/api/v1/live/does-not-exist.json # must be 404
+curl --fail http://127.0.0.1:8080/api/v1/live/readings.json
+curl -I http://127.0.0.1:8080/api/v1/live/does-not-exist.json # 404
+curl -I http://127.0.0.1:8080/demo/ # 404
 
 docker compose logs --tail=100 web
 docker compose down
 ```
 
-If the host port is occupied, set `PORT` to an available port. This changes only the host mapping, not the container/proxy target. Public traffic should go through the HTTPS reverse proxy, not through a newly opened host firewall port.
+Set `PORT` to an available host port if necessary. This changes only the local mapping, not the container or proxy port. Public traffic uses the existing HTTPS reverse proxy, not a new firewall opening.
 
-## Reuse the existing Politrace domain
+## Production application
 
-The inspected legacy Coolify application is:
-
-- Application UUID: `vkgcs40gg0k884o8os4c0k8s`
-- Domain: `https://politrace.stromflix.com`
-- Old repository: **`StromFLIX/clear-politics`**, branch `main`
-- Old build: Nixpacks, base `/website`, exposed port `80`
-
-Those old settings will **not** build this new repository. Redeploying the old application without changing its source will only redeploy the deprecated site.
-
-A separate replacement application has been created using the official Coolify CLI (v1.8.0) and API:
-
-- Replacement UUID: `iwowpdg1qk96hugpif5eackd`
-- Repository: `StromFLIX/politrace`, branch `main`
-- Coolify instance: `https://coolify.admin.stromflix.com` (API base `/api/v1`, not the dashboard's `/security/api-tokens` page)
-
-Credentials are supplied only at invocation time, never committed or added to the web container. The CLI archive checksum was checked against the release's checksums. Keep the old application for rollback; only move the domain after the replacement is healthy.
-
-### Target configuration
-
-Prefer a separate replacement app so rollback remains easy. If changing the existing app instead, record its current settings first.
-
-| Setting | New value |
+| Setting | Value |
 | --- | --- |
-| Git repository | `StromFLIX/politrace` |
-| Branch | `main` |
-| Build pack | **Docker Compose** |
-| Base directory | `/` |
-| Compose file | `/docker-compose.yml` |
-| Web service | `web` |
-| Service domain / port | `https://politrace.stromflix.com:8080` in Coolify's service-domain input |
-| Optional build selection | `POLITRACE_DATASET=auto` (or explicit `demo` / `live`) |
-| Runtime model secret | **None** |
+| Coolify instance | `https://coolify.admin.stromflix.com` |
+| API base | `/api/v1` (not the dashboard's `/security/api-tokens`) |
+| Application | `politrace-production` · `bjmkjtfrbqjt41amhqksghti` |
+| Git source | Installed `github.repository` GitHub App · `a04040skcskc40ogw0004o80` |
+| Repository / branch | `StromFLIX/politrace` · `main` |
+| Repository ID | `1404125346` |
+| Build pack / directory | Docker Compose · `/` |
+| Compose file / service | `/docker-compose.yml` · `web` |
+| Public domain | `https://politrace.stromflix.com` |
+| Service-domain input | `https://politrace.stromflix.com:8080` |
+| Runtime secrets | **None** |
 
-In Coolify's domain syntax, `:8080` selects the backend container port; the public site should still be standard HTTPS without users adding a port to the address bar. If your Coolify version exposes a separate service-port field, set that to 8080 instead.
+In Coolify's service-domain syntax, `:8080` selects the backend port. Users still visit standard HTTPS without a port suffix.
 
-1. Ensure the Coolify GitHub App can read the new repo and that `main` has been pushed.
-2. Load/parse the root Compose file; remove inherited Nixpacks `/website` settings.
-3. Build the replacement without assigning the old domain yet, using an operator-chosen preview domain if available.
-4. Confirm the container is healthy and the API/site smoke checks pass.
-5. Remove the domain from the old resource, assign it to `web` on the replacement, and deploy/reload proxy routing. Avoid two resources claiming the domain simultaneously.
-6. Verify the public HTTPS URL, API content types, dataset labels, deep links and health response.
-7. Retain the old application for rollback until review is complete. Stop/delete it only once the cutover is verified and desired.
+The previous replacement (`iwowpdg1qk96hugpif5eackd`) used Coolify's public Git source (`source_id=0`, no repository ID). Its auto-deploy toggle was enabled, but it had no installed-App webhook association. Successful Actions pushes therefore did **not** deploy it. The new application uses the existing installed GitHub App and matching repository ID; authenticated push events now trigger builds. The old replacement is stopped and retained for rollback, along with the earlier deprecated `clear-politics` application (`vkgcs40gg0k884o8os4c0k8s`). Do not leave two running applications assigned to the production domain.
 
-A domain change/build is not successful merely because Coolify queued a deployment. Inspect its deployment result and verify the public response.
+Secrets are never committed, placed in build args, or copied into the web container. The existing GitHub App manages webhook authentication; the repository does not need a broad Coolify API token just to rebuild on a push.
 
-## Build memory
+## Automated publication and verification
 
-The web runtime is small, but building a full legal corpus is not. Prefer at least 2 GiB of build memory. In a 1 GiB development container, the 171-law corpus was verified with `NODE_OPTIONS=--max-old-space-size=320 npm run build` and a single Playwright worker. Do not run heavy PDF extraction and browser/build checks simultaneously in that container. The API serializes one route at a time rather than retaining every JSON export twice; the dataset index offers lightweight `counts` without downloading all law text. Larger corpora may need more memory. None of these build settings belongs in a runtime model-secret configuration.
+1. A production processing slice saves its data, caches and cumulative ledgers before publication.
+2. Source/schema/unit/build/browser checks run against the publishable snapshot, including valid partial results.
+3. The publisher fetches/rebases instead of force-pushing; conflicting citizen corrections stop publication.
+4. Coolify receives the installed GitHub App's push event for `main` and builds the Compose image.
+5. A `GITHUB_TOKEN` push suppresses GitHub push-workflow triggers, so the publisher explicitly dispatches `ci.yml`.
+6. CI runs the full suite and Compose smoke test, then `scripts/verify_deployment.py` waits up to ten minutes for the **exact built snapshot** over public HTTPS.
+7. CI runs the complete read-only desktop/mobile browser suite against production, including source links and OCR readers. A failed deployment/probe is a CI failure, not a green "queued" result.
 
-## Rebuild after data merges
+The HTTPS probe compares the political data index, reading-edition index, OCR progress, all-party progress, landing/progress HTML, every programme reader and a law reader. This deliberately checks more than `data_sha256`: that legacy digest alone does not cover OCR-only or presentation-only changes. It also requires genuine 404s for unknown API records and removed demo routes, and checks that the snapshot did not change during the probe. Provider error bodies are not logged.
 
-Enable Coolify's GitHub auto-deploy webhook for `main` if desired. Merged data requires a new image build; runtime containers do not read the Git checkout or poll GitHub. Protect `main` so source-backed data and reviews are validated before automatic deployment.
+Coolify starts building on a push; it does not wait for the newly dispatched CI job. The data publisher already validates its snapshot before pushing. Review and protect code changes to `main`; never describe this arrangement as a branch-protection or human-review substitute. CI never probes/deploys a pull request as production.
 
-`POLITRACE_DATASET` is a Compose **build argument**, not a runtime switch. Both `/demo/` and `/live/` remain built and accessible; it only selects the landing-page dataset. Do not place secrets in build arguments. The Docker build context excludes `.env`, caches, PDFs and development environments.
+## Manual HTTPS verification
 
-## Verify through HTTPS
-
-After deployment:
-
-```sh
-curl --fail https://politrace.stromflix.com/api/health.json
-curl --fail https://politrace.stromflix.com/api/v1/index.json
-curl --fail https://politrace.stromflix.com/api/v1/live/laws.json
-curl -I https://politrace.stromflix.com/api/v1/live/does-not-exist.json
-```
-
-In a browser, check the demo warning, live-source links, party period switch, criterion → programme anchor, activity filters, law source/vote states and mobile navigation. Nginx must return JSON/Markdown with correct content types, not a catch-all HTML index. The CSP allows only local scripts; the application does not need inline JavaScript exceptions.
-
-The same read-only desktop/mobile browser suite can verify the deployed snapshot without starting a local server:
+Build the exact intended checkout first, then:
 
 ```sh
+uv run python scripts/verify_deployment.py --timeout 600
 POLITRACE_TEST_BASE_URL=https://politrace.stromflix.com npm run test:e2e
 ```
 
-First compare the deployed `/api/v1/live/index.json` `data_sha256` and counts against your built snapshot; passing browser tests against an older image is not proof that the new data was deployed. Live proposal checks follow law → criterion → exact programme/law anchors and require model disagreements to be visible without expanding caveats.
+The probe verifies that the public response matches the local build, not merely that the server is healthy. `curl --fail https://politrace.stromflix.com/api/health.json` alone cannot detect a stale image.
+
+## Build memory
+
+Prefer at least 2 GiB of build memory. The six-programme/173-law corpus with all-party audits was verified in a 1 GiB development container using `ASTRO_TELEMETRY_DISABLED=1 NODE_OPTIONS=--max-old-space-size=448 npm run build` and the configured single Playwright worker. The earlier 320 MiB heap limit is no longer sufficient for type checking this checkout. Do not run heavy PDF processing and browser/build tests simultaneously. Static API serialization is streamed to avoid retaining duplicate exports. Larger corpora may require more memory.
+
+The Docker context excludes `.env`, caches, PDFs and development environments. Reading editions and source citations are Git-backed public data, not runtime files fetched from a provider.
 
 ## Rollback and operations
 
-- Deploy an earlier Git commit/image or restore the previous app's domain routing. Do not force-push or delete later data history to roll back a website.
-- The durable record is Git. Back up repository access/history and relevant deployment configuration; no application database backup is needed.
-- A healthy static container does not mean the law feed is fresh. Monitor GitHub workflow outcomes, open data PRs, date of the newest source and latest deployed commit separately.
-- Before public production operation, supply the operator's actual contact/Impressum and privacy/hosting retention details. Do not treat the placeholder pilot notice as complete legal compliance.
+- Redeploy an earlier tested Git commit/image, or move the domain back to the retained replacement after stopping the current app. Never force-push or erase later data history to roll back a website.
+- The durable record is Git plus retained paid-work checkpoints. Back up repository access and ledgers; there is no application database backup.
+- Monitor processing outcomes, the newest source date, per-programme coverage and the deployed snapshot separately. A healthy static container does not prove current or complete analysis.
+- The public progress page is `/fortschritt/`; operations details and continuation limits are in [production.md](production.md).
+- Actual operator/contact/Impressum and privacy/hosting-retention information still need to be supplied by the operator. Do not invent those details or describe the placeholder notice as complete legal compliance.

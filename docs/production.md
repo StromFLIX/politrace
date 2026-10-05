@@ -33,7 +33,7 @@ The local backfill now covers all six programmes and 171 laws. The table accepta
 
 ## Publication and source limits
 
-Safe partial records are validated, browser-tested and published to `main`. The publisher fetches/rebases rather than force-pushing; citizen corrections and reviewed objects are retained. A conflict or branch-protection rejection stops publication and retains the artifact. `GITHUB_TOKEN` pushes do not trigger push workflows, so CI is explicitly dispatched afterward.
+Safe partial records are validated, browser-tested and published to `main`. The publisher fetches/rebases rather than force-pushing; citizen corrections and reviewed objects are retained. A conflict or branch-protection rejection stops publication and retains the artifact. `GITHUB_TOKEN` pushes do not trigger push workflows, so CI is explicitly dispatched afterward. Coolify's installed GitHub App receives the push and rebuilds the production Compose application automatically. CI then waits for the exact public API/OCR/progress/reader snapshot and runs the browser suite against HTTPS. A green publisher alone is not proof of deployment; see [deployment.md](deployment.md).
 
 Historical coverage is still constrained by the disclosed dated official inventory when archive search is blocked. RSS does not establish a complete new historical end date. Full programme leaf processing does not establish semantic completeness. There is no invented voting-data backfill or automatic human approval.
 

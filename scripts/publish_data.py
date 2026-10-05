@@ -33,8 +33,9 @@ def main():
                                  'credential.helper=!gh auth git-credential',
                                  'push', 'origin', 'HEAD:refs/heads/main'], cwd=ROOT)
         if result.returncode == 0:
-            # GITHUB_TOKEN pushes suppress Actions push triggers. Dispatch CI explicitly;
-            # external deployment webhooks may still run. No branch protection bypass.
+            # GITHUB_TOKEN pushes suppress Actions push triggers. Dispatch CI explicitly.
+            # The installed Coolify GitHub App receives the push; CI verifies its exact
+            # public deployment as well as the build. No branch protection bypass.
             subprocess.run(['gh', 'workflow', 'run', 'ci.yml', '--ref', 'main'], check=True)
             print('Published source/analysis proposals; CI explicitly dispatched')
             return
