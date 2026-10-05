@@ -49683,7 +49683,7 @@
     {
       "law_id": "bgbl-1-2025-370",
       "analysis_sha256": "5f309b447ff6ade6b2df2b94dec73d6022978e0baec5177b12a5eb2c85478fa3",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0d8100b059fda09b",
@@ -49986,6 +49986,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-8ca88beae6faf85a",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz ermächtigt das Bundesamt für das Personalmanagement der Bundeswehr, Meldedaten Wehrpflichtiger zum Zweck der Wehrerfassung abzurufen und weiterzuverarbeiten. Damit schafft es eine rechtliche Grundlage für die Wehrerfassung.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-6b73d72da0f18971",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermächtigt das Bundesamt für das Personalmanagement der Bundeswehr, Meldedaten Wehrpflichtiger zum Zweck der Wehrerfassung abzurufen und weiterzuverarbeiten. Damit schafft es eine rechtliche Grundlage für die Wehrerfassung.",
+            "law_passage_id": "bgbl-1-2025-370-p-75331eb28f4122b6",
+            "law_quote": "(1) Das Bundesamt für das Personalmanagement der Bundeswehr darf zum Zweck der Wehrerfassung im\nautomatisierten Abrufverfahren nach den §§ 34a und 38 des Bundesmeldegesetzes die folgenden Daten\nWehrpflichtiger abrufen und weiterverarbeiten:",
+            "criterion_quote": "Es müssen zügig die Grundlagen für eine Wehrerfassung geschaffen\nwerden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8ca88beae6faf85a",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-95d3188e9179bea1",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten WDModG-Passagen ändern Artikel 3 Absatz 3 GG nicht und ergänzen keine Diskriminierungsmerkmale.",
@@ -50009,6 +50041,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-95d3188e9179bea1",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a364aab2aa0fad98",
+          "disposition": "proposed_link",
+          "rationale": "Die Neuregelung ermöglicht freiwilligen Wehrdienst mit einer Verpflichtungsdauer von sechs bis elf Monaten. Das belegt Freiwilligkeit und eine wählbare Dauer, aber keine Bedarfsorientierung dieses Dienstes.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-35353909b16fd9fd",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Die Neuregelung ermöglicht freiwilligen Wehrdienst mit einer Verpflichtungsdauer von sechs bis elf Monaten. Das belegt Freiwilligkeit und eine wählbare Dauer, aber keine Bedarfsorientierung dieses Dienstes.",
+            "law_passage_id": "bgbl-1-2025-370-p-7d6154454f012ef3",
+            "law_quote": "(1) Freiwilligen Wehrdienst als besonderes staatsbürgerliches Engagement kann leisten, wer sich\nverpflichtet, mindestens sechs und längstens elf Monate Wehrdienst zu leisten.",
+            "criterion_quote": "Der neue Wehrdienst soll auf Freiwilligkeit basieren und sich dabei am Bedarf\nder Bundeswehr orientieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a364aab2aa0fad98",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -55517,45 +55581,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3852,
+    "calls": 3944,
     "cache_hits": 39,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.692645,
-    "reported_cost_calls": 3635,
+    "reported_cost_usd": 21.851212,
+    "reported_cost_calls": 3680,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.327248,
-    "unknown_cost_calls": 217,
+    "unknown_cost_reserved_usd": 1.589592,
+    "unknown_cost_calls": 264,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 23.019892,
-    "prompt_tokens": 39045417,
-    "completion_tokens": 5905245,
+    "budget_exposure_usd": 23.440805,
+    "prompt_tokens": 39592367,
+    "completion_tokens": 6014040,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 139,
-        "reported_cost_usd": 3.2237294999999992,
-        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "calls": 142,
+        "reported_cost_usd": 3.312578499999999,
+        "unknown_cost_reserved_usd": 9.159339953157541e-16,
         "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 47,
-        "reported_cost_usd": 0.6539447500000001,
-        "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "calls": 49,
+        "reported_cost_usd": 0.6799620000000001,
+        "unknown_cost_reserved_usd": 6.245004513516506e-17,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 769,
-        "reported_cost_usd": 0.9305005175000004,
-        "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 7.806255641895632e-18
+        "calls": 856,
+        "reported_cost_usd": 0.9742018975000003,
+        "unknown_cost_reserved_usd": 0.6051166,
+        "pending_reserved_usd": 1.0408340855860843e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

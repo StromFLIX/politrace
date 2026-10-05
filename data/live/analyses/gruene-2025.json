@@ -108288,7 +108288,7 @@
     {
       "law_id": "bgbl-1-2025-369",
       "analysis_sha256": "0ba90af6477dc4e52f2de08a3537d8e2c2efd2b30c17d7fe5b5a4ab4faa4b84b",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-18410875c83cec8d",
@@ -109023,6 +109023,38 @@
             ],
             "criterion_id": "gruene-2025-ac-8aafd8dff73a9e9b",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-8f2f09fea6754e42",
+          "disposition": "proposed_link",
+          "rationale": "Für das zentrale Risikomanagement ist die Verarbeitung von Informationen einschließlich personenbezogener Daten daran gebunden, dass mit ihnen mögliche Risiken für Schwarzarbeit oder illegale Beschäftigung identifiziert werden können. Damit wird der Verwendungszweck für diesen Bereich konkretisiert, nicht für sämtliche Datennutzungen.",
+          "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c053aeaf47554269d17d7d09dae00ecb79e9e06d2b8a7b43a0bf338d4d22ea8e"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168"
+            }
+          ],
+          "impact_id": "impact-3460f80c0775c365",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.83,
+            "rationale": "Für das zentrale Risikomanagement ist die Verarbeitung von Informationen einschließlich personenbezogener Daten daran gebunden, dass mit ihnen mögliche Risiken für Schwarzarbeit oder illegale Beschäftigung identifiziert werden können. Damit wird der Verwendungszweck für diesen Bereich konkretisiert, nicht für sämtliche Datennutzungen.",
+            "law_passage_id": "bgbl-1-2025-369-p-c2d3c9510b2bcd89",
+            "law_quote": "Informationen, einschließlich personenbezogener Daten, dürfen nur dann für die Aufgaben des zentralen\nRisikomanagements verarbeitet werden, wenn damit mögliche Risiken für das Auftreten von Schwarzarbeit und\nillegaler Beschäftigung im Sinne des Absatzes 2 Satz 2 identifiziert werden können.",
+            "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-8f2f09fea6754e42",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -114106,6 +114138,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-3a00e0d2001d9597",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Pflege, nicht die Aufklärung über HIV oder sexuell übertragbare Krankheiten.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Pflege, nicht die Aufklärung über HIV oder sexuell übertragbare Krankheiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-3a00e0d2001d9597",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-3b55ab2744d7858e",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Gesetzespassagen enthalten keinen Nachweis, dass ein bundesweites Zukunftsinvestitionsprogramm Bildung gemeinsam mit Ländern und Kommunen aufgelegt wurde.",
@@ -114155,6 +114214,33 @@
             "criterion_quote": "Wir stehen hinter der Einführung einer\nWiderspruchsregelung",
             "caveats": [],
             "criterion_id": "gruene-2025-ac-3c5d1d5d07ae0fd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-3cd9ab6aaa82d377",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Sanktionen nach dem DSA für die Einfuhr illegaler Produkte.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Sanktionen nach dem DSA für die Einfuhr illegaler Produkte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-3cd9ab6aaa82d377",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -114694,6 +114780,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-48cc6c5035ee1d14",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Maßnahme zur Bildung für nachhaltige Entwicklung.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Maßnahme zur Bildung für nachhaltige Entwicklung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-48cc6c5035ee1d14",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-48cf475aa8ce6350",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz richtet zwar ein Gremium zur Reduktion und Vereinfachung von Formularen der Pflegeversicherung ein und lässt es die digitale Bearbeitung von Anträgen vorbereiten. Die Passage belegt aber nur eine Vorbereitung der Digitalisierbarkeit, nicht den Einsatz digitaler Lösungen zur Verringerung unnötiger Bürokratie. Der enge Test ist damit nicht nachgewiesen.",
@@ -114887,6 +115000,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-4bf5a56ffc45c97b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verankert kein Recht auf einen Freiwilligendienst und baut keine entsprechenden Plätze aus.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verankert kein Recht auf einen Freiwilligendienst und baut keine entsprechenden Plätze aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-4bf5a56ffc45c97b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-4d73d00dc14502a7",
           "disposition": "no_supported_link",
           "rationale": "Die angeführte Regelung betrifft die Digitalisierung der Pflegeangebote untereinander, weist dem Bund aber keine Verantwortung oder Kompetenzen für die Verwaltungsdigitalisierung zu. Ein entsprechender Effekt ist durch die vorliegenden Passagen nicht belegt.",
@@ -115028,6 +115168,33 @@
             "criterion_quote": "Wir fördern dabei die\nZusammenarbeit zwischen Schulen, Schulaufsicht, Schulträger und Jugendhilfe, zum\nBeispiel in regionalen Bildungsnetzwerken.",
             "caveats": [],
             "criterion_id": "gruene-2025-ac-4f8e347050db5e79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-50c61426513cbbde",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln nicht, ob Betriebsräte analog oder digital arbeiten können.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln nicht, ob Betriebsräte analog oder digital arbeiten können.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-50c61426513cbbde",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -115963,6 +116130,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-6658ef27f39d4bec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-66701eefd5d7572d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Berichte im Gesetz betreffen Pflegeversorgung, nicht jährliche Ermittlungserfolge des Bundesamts für die Bekämpfung der Finanzkriminalität.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Berichte im Gesetz betreffen Pflegeversorgung, nicht jährliche Ermittlungserfolge des Bundesamts für die Bekämpfung der Finanzkriminalität.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-66701eefd5d7572d",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -117700,6 +117894,35 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-92900d23dc28bbb0",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz nennt ein Kooperationsprojekt zu Erleichterungen bei Pflegeleistungsanträgen; der vorgelegte Ausschnitt zeigt aber nicht, ob Leistungen ohne Antrag direkt ausgezahlt werden.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.79,
+            "rationale": "Das Gesetz nennt ein Kooperationsprojekt zu Erleichterungen bei Pflegeleistungsanträgen; der vorgelegte Ausschnitt zeigt aber nicht, ob Leistungen ohne Antrag direkt ausgezahlt werden.",
+            "law_passage_id": "bgbl-1-2025-371-p-08f79275ba404913",
+            "law_quote": "§ 122 Kooperationsprojekt zu Erleichterungen in der Praxis bei der Beantragung von Leistungen der",
+            "criterion_quote": "Niemand muss kompliziert beantragen, was einfach und nach klaren Regeln und Kriterien direkt ausgezahlt werden kann.",
+            "caveats": [
+              "Der Inhalt des Kooperationsprojekts ist im Ausschnitt nicht enthalten."
+            ],
+            "criterion_id": "gruene-2025-ac-92900d23dc28bbb0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-941714a41ad39621",
           "disposition": "no_supported_link",
           "rationale": "Eine Förderung von Ausbildungsbegleitung für junge Menschen, die die Jugendhilfe verlassen, ist in den vorgelegten Passagen nicht belegt.",
@@ -118070,6 +118293,33 @@
             "caveats": [],
             "criterion_id": "gruene-2025-ac-99de8e0857e3bccf",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-9a13f38c70980451",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Zusammenarbeit von Bundes- und Landesbehörden in Gemeinsamen Zentren zur Terrorismusbekämpfung.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Zusammenarbeit von Bundes- und Landesbehörden in Gemeinsamen Zentren zur Terrorismusbekämpfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-9a13f38c70980451",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -118841,6 +119091,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
+          "disposition": "no_supported_link",
+          "rationale": "Die Datenweitergabe im Gesetz betrifft nicht personenbezogene Versorgungsdaten der Pflege, nicht frühzeitige Informationen an zuständige Sicherheitsbehörden.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Datenweitergabe im Gesetz betrifft nicht personenbezogene Versorgungsdaten der Pflege, nicht frühzeitige Informationen an zuständige Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-a4838ee900295cf5",
           "disposition": "no_supported_link",
           "rationale": "Die bereitgestellten Passagen verankern den Deutschen Qualifikationsrahmen nicht gesetzlich und belegen keinen entsprechenden Effekt des Pflegegesetzes.",
@@ -118865,6 +119142,33 @@
               "Kein Nachweis eines Effekts ist kein Beweis für Wirkungslosigkeit."
             ],
             "criterion_id": "gruene-2025-ac-a4838ee900295cf5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-a4f4539744a735b9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Innovationsinitiative zur Modernisierung von Hochschulgebäuden.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Innovationsinitiative zur Modernisierung von Hochschulgebäuden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a4f4539744a735b9",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -119305,6 +119609,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-afcb0525975a9880",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-afe78e5201d5a518",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Aktualisierung des Verkehrsrechts zur barrierefreien Mobilität.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Aktualisierung des Verkehrsrechts zur barrierefreien Mobilität.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-afe78e5201d5a518",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -121054,6 +121385,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-d4ce1bd5a77f039f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen kein Initiativrecht des Europäischen Parlaments.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen kein Initiativrecht des Europäischen Parlaments.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d4ce1bd5a77f039f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-d56a21265cda8cb7",
           "disposition": "no_supported_link",
           "rationale": "Die vorliegenden Passagen regeln keine staatliche Finanzierung von Beiträgen für Bürgergeldempfänger*innen. Ein entsprechender Effekt ist nicht belegt; daraus folgt kein Nachweis, dass es keinerlei Wirkung gibt.",
@@ -121871,6 +122229,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-e8303c9c389cbfc3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahme zur Schaffung oder Erweiterung städtischer Frischluftschneisen.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahme zur Schaffung oder Erweiterung städtischer Frischluftschneisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-e8303c9c389cbfc3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-e881cd7fded61345",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Gesetzespassagen betreffen Pflege und Pflegeversicherung; sie enthalten keine Festlegung eines Ultrafeinstaub-Grenzwerts. Ein tatsächlicher Effekt auf dieses Kriterium ist damit nicht belegt.",
@@ -121920,6 +122305,33 @@
             "criterion_quote": "Hierfür wollen wir die Mittel für die\nStädtebauförderung aufstocken",
             "caveats": [],
             "criterion_id": "gruene-2025-ac-e96222294eda59a1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-ea02c3e070a8c0dd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Investitionsprämie für Unternehmen ein.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine Investitionsprämie für Unternehmen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-ea02c3e070a8c0dd",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -122003,6 +122415,33 @@
             "criterion_quote": "die Förderung gleichwertiger\nFortbildungsabschlüsse",
             "caveats": [],
             "criterion_id": "gruene-2025-ac-edc95a1b94ba527e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-eee0c54eef304c9b",
+          "disposition": "no_supported_link",
+          "rationale": "Die digitale Vernetzung von Pflegeangeboten ist keine Regelung zur Verzahnung der Verwaltungsdomänen von Bund, Ländern und Kommunen.",
+          "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8aedd86946da5db603e38a8ee0655b68bb87239d6138bbb1e4335f71f53e723f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die digitale Vernetzung von Pflegeangeboten ist keine Regelung zur Verzahnung der Verwaltungsdomänen von Bund, Ländern und Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-eee0c54eef304c9b",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -233792,45 +234231,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3852,
+    "calls": 3944,
     "cache_hits": 39,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.692645,
-    "reported_cost_calls": 3635,
+    "reported_cost_usd": 21.851212,
+    "reported_cost_calls": 3680,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.327248,
-    "unknown_cost_calls": 217,
+    "unknown_cost_reserved_usd": 1.589592,
+    "unknown_cost_calls": 264,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 23.019892,
-    "prompt_tokens": 39045417,
-    "completion_tokens": 5905245,
+    "budget_exposure_usd": 23.440805,
+    "prompt_tokens": 39592367,
+    "completion_tokens": 6014040,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 139,
-        "reported_cost_usd": 3.2237294999999992,
-        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "calls": 142,
+        "reported_cost_usd": 3.312578499999999,
+        "unknown_cost_reserved_usd": 9.159339953157541e-16,
         "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 47,
-        "reported_cost_usd": 0.6539447500000001,
-        "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "calls": 49,
+        "reported_cost_usd": 0.6799620000000001,
+        "unknown_cost_reserved_usd": 6.245004513516506e-17,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 769,
-        "reported_cost_usd": 0.9305005175000004,
-        "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 7.806255641895632e-18
+        "calls": 856,
+        "reported_cost_usd": 0.9742018975000003,
+        "unknown_cost_reserved_usd": 0.6051166,
+        "pending_reserved_usd": 1.0408340855860843e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

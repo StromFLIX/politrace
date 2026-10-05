@@ -47143,7 +47143,7 @@
     {
       "law_id": "bgbl-1-2025-371",
       "analysis_sha256": "9f6e05aa1b30daefdcc2c805b91666f6ab7126936060a6361c229adcc40a6961",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-00e85309c1e9e0b6",
@@ -47343,6 +47343,38 @@
             "criterion_quote": "die Bewahrung unserer traditionellen Esskultur\n\nin öffentlichen Einrichtungen.",
             "caveats": [],
             "criterion_id": "afd-2025-ac-01b8d701cda307f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-020489028ee119dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung bezieht digitale Pflegeanwendungen zur Entlastung pflegender Angehöriger ein. Sie weitet keine ambulanten Vertretungsangebote bei Krankheit oder Urlaub der Pflegeperson aus.",
+          "input_sha256": "b084ea4da7a82e21e654916c1bba684d28ed9bea02de01e7d4c83a894eff0a51",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8629d6c91579f209f97073078fb07911ac40a98408af9ee8d6dd5a5a475c58d4"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b084ea4da7a82e21e654916c1bba684d28ed9bea02de01e7d4c83a894eff0a51"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.68,
+            "rationale": "Die Regelung bezieht digitale Pflegeanwendungen zur Entlastung pflegender Angehöriger ein. Sie weitet keine ambulanten Vertretungsangebote bei Krankheit oder Urlaub der Pflegeperson aus.",
+            "law_passage_id": "bgbl-1-2025-371-p-36f60f74473e0d2e",
+            "law_quote": "„Digitale Pflegeanwendungen im Sinne des Absatzes 1 sind auch solche Anwendungen, die pflegende\nAngehörige oder sonstige ehrenamtlich Pflegende unterstützen und entweder die häusliche\nVersorgungssituation des Pflegebedürftigen stabilisieren oder pflegende Angehörige oder sonstige\nehrenamtlich Pflegende entlasten.“",
+            "criterion_quote": "Die Unterstützung bei Krankheit oder Urlaubswunsch der\n\npflegenden Angehörigen durch verbesserte ambulante und befris\ntete stationäre Angebote ausgeweitet werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-020489028ee119dd",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -49761,6 +49793,38 @@
             ],
             "criterion_id": "afd-2025-ac-99dc828b669660f6",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9be3b6e49fd07a18",
+          "disposition": "proposed_link",
+          "rationale": "Für Pflegeeinrichtungen sind auch individuelle und gemeinschaftliche Betreuungsangebote förderfähig, die auf die Arbeitszeiten von Pflegekräften ausgerichtet sind. Das kann betriebliche Kinderbetreuung teilweise unterstützen; Betriebskindergärten werden nicht ausdrücklich genannt, eine stärkere Förderung gegenüber bisher ist nicht belegt.",
+          "input_sha256": "b084ea4da7a82e21e654916c1bba684d28ed9bea02de01e7d4c83a894eff0a51",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07629bbe60525eb402da30d88dbca63d7b1ed652ba1e44669a1910bbfe8187fc"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b084ea4da7a82e21e654916c1bba684d28ed9bea02de01e7d4c83a894eff0a51"
+            }
+          ],
+          "impact_id": "impact-e70fc7409c3c9fc2",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.88,
+            "rationale": "Für Pflegeeinrichtungen sind auch individuelle und gemeinschaftliche Betreuungsangebote förderfähig, die auf die Arbeitszeiten von Pflegekräften ausgerichtet sind. Das kann betriebliche Kinderbetreuung teilweise unterstützen; Betriebskindergärten werden nicht ausdrücklich genannt, eine stärkere Förderung gegenüber bisher ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-371-p-033e559c44a5b61c",
+            "law_quote": "1. individuelle und gemeinschaftliche Betreuungsangebote, die auf die besonderen Arbeitszeiten von\nPflegekräften ausgerichtet sind, sowie weitere Maßnahmen zur Entlastung insbesondere der in der\nPflege und Betreuung tätigen Mitarbeiterinnen und Mitarbeiter,",
+            "criterion_quote": "- Um die Vereinbarkeit von Familie und Beruf zu verbessern, sind\n\nBetriebskindergärten stärker als bisher zu fördern.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9be3b6e49fd07a18",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -56077,45 +56141,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3852,
+    "calls": 3944,
     "cache_hits": 39,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.692645,
-    "reported_cost_calls": 3635,
+    "reported_cost_usd": 21.851212,
+    "reported_cost_calls": 3680,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.327248,
-    "unknown_cost_calls": 217,
+    "unknown_cost_reserved_usd": 1.589592,
+    "unknown_cost_calls": 264,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 23.019892,
-    "prompt_tokens": 39045417,
-    "completion_tokens": 5905245,
+    "budget_exposure_usd": 23.440805,
+    "prompt_tokens": 39592367,
+    "completion_tokens": 6014040,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 139,
-        "reported_cost_usd": 3.2237294999999992,
-        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "calls": 142,
+        "reported_cost_usd": 3.312578499999999,
+        "unknown_cost_reserved_usd": 9.159339953157541e-16,
         "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 47,
-        "reported_cost_usd": 0.6539447500000001,
-        "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "calls": 49,
+        "reported_cost_usd": 0.6799620000000001,
+        "unknown_cost_reserved_usd": 6.245004513516506e-17,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 769,
-        "reported_cost_usd": 0.9305005175000004,
-        "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 7.806255641895632e-18
+        "calls": 856,
+        "reported_cost_usd": 0.9742018975000003,
+        "unknown_cost_reserved_usd": 0.6051166,
+        "pending_reserved_usd": 1.0408340855860843e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

@@ -52955,7 +52955,7 @@
     {
       "law_id": "bgbl-1-2025-369",
       "analysis_sha256": "d89986910a5892efbf440371efbd9b772ab90fecad349d968afe9349ef59700f",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-04af751d9a6c5e80",
@@ -53168,6 +53168,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-225200bd6798e2ea",
+          "disposition": "proposed_link",
+          "rationale": "Bei Prüfungen der Zollverwaltung müssen Prüfbeteiligte Unterlagen und Daten auf Verlangen elektronisch übermitteln, sofern ihnen dies technisch möglich ist. Das unterstützt digitalen Verwaltungsvollzug in einem begrenzten Bereich.",
+          "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e1137e30d9ebdd81c04a3ea9d5bcf2431978d249cf2877a8ac4ac0ace834e3b6"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168"
+            }
+          ],
+          "impact_id": "impact-2acaf8037fb515fc",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Bei Prüfungen der Zollverwaltung müssen Prüfbeteiligte Unterlagen und Daten auf Verlangen elektronisch übermitteln, sofern ihnen dies technisch möglich ist. Das unterstützt digitalen Verwaltungsvollzug in einem begrenzten Bereich.",
+            "law_passage_id": "bgbl-1-2025-369-p-ce361228b5014b45",
+            "law_quote": "Der Prüfbeteiligte hat den Behörden der Zollverwaltung auf Verlangen Unterlagen und Daten elektronisch\nzu übermitteln, sofern dies für den Prüfbeteiligten technisch möglich ist.",
+            "criterion_quote": "Wir machen den digitalen Vollzug\nzum Standard.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-225200bd6798e2ea",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-330ef64de47eade5",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften betreffen digitale Datenverarbeitung und Kontrollen gegen Schwarzarbeit, nicht digitale Zugangsrechte bei der betrieblichen Mitbestimmung.",
@@ -53218,6 +53250,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-40fec32dd80decda",
+          "disposition": "proposed_link",
+          "rationale": "Bei den geregelten automationsgestützten Systemen des Zollkriminalamts dürfen personenbezogene Daten aus sozialen Netzwerken nicht automatisiert einbezogen werden. Das beschränkt die angestrebte softwaregestützte Analyse in diesem Bereich, ohne sie Sicherheitsbehörden allgemein zu verbieten.",
+          "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e1137e30d9ebdd81c04a3ea9d5bcf2431978d249cf2877a8ac4ac0ace834e3b6"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168"
+            }
+          ],
+          "impact_id": "impact-f4ee9f1c70f16f44",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.91,
+            "rationale": "Bei den geregelten automationsgestützten Systemen des Zollkriminalamts dürfen personenbezogene Daten aus sozialen Netzwerken nicht automatisiert einbezogen werden. Das beschränkt die angestrebte softwaregestützte Analyse in diesem Bereich, ohne sie Sicherheitsbehörden allgemein zu verbieten.",
+            "law_passage_id": "bgbl-1-2025-369-p-959fdbb721513b83",
+            "law_quote": "Personenbezogene Daten aus allgemein zugänglichen Quellen und geschützten Bereichen sozialer Netzwerke\ndürfen nicht automatisiert in die Verarbeitung einbezogen werden.",
+            "criterion_quote": "erlauben ihnen\ndie Nutzung moderner Software zur Analyse von großen Datenmengen, polizeilichen Datenbanken und sozialen Netzwerken.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-40fec32dd80decda",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -53407,6 +53471,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-6eac5748f8c65086",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "proposed_link",
+          "rationale": "Der Zoll darf zur Identitätsfeststellung bei bestimmten Prüfungen auch ohne Entscheidung der betroffenen Person Lichtbilder und Fingerabdrücke erheben, wenn die Identität anders nicht oder nur unter erheblichen Schwierigkeiten feststellbar ist. Das schränkt die individuelle Kontrolle über diese Datenerhebung ein.",
+          "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1ff3914217675069aa305ac7a69ddaa5cdc4b6a88f34006c9e68769902af3d82"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79733813da5e31d891ec549436d2c7945336be15d6183639ed11ad52ebe3e168"
+            }
+          ],
+          "impact_id": "impact-c7398f45ba020a39",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.81,
+            "rationale": "Der Zoll darf zur Identitätsfeststellung bei bestimmten Prüfungen auch ohne Entscheidung der betroffenen Person Lichtbilder und Fingerabdrücke erheben, wenn die Identität anders nicht oder nur unter erheblichen Schwierigkeiten feststellbar ist. Das schränkt die individuelle Kontrolle über diese Datenerhebung ein.",
+            "law_passage_id": "bgbl-1-2025-369-p-ce47ba10aa26a772",
+            "law_quote": "Die Behörden der Zollverwaltung können zum Zweck der Feststellung der Identität einer Person\nnach Absatz 3 Satz 1 Lichtbilder und Fingerabdrücke dieser Person erheben, sofern die Kenntnis über die\nIdentität der Person zur Durchführung der Prüfungen nach § 2 Absatz 1 erforderlich ist und die Identität in\nanderer Weise nicht oder nicht rechtzeitig oder nur unter erheblichen Schwierigkeiten festgestellt werden\nkann.",
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -54038,7 +54134,7 @@
     {
       "law_id": "bgbl-1-2025-370",
       "analysis_sha256": "b1139b7b96e25b0b3e0627c98c3d1014ef73b7e8b554a769c323bbc3441f7dd4",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-096a662f16bec115",
@@ -54076,6 +54172,38 @@
       ],
       "omitted_count": 933,
       "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-096a662f16bec115",
+          "disposition": "proposed_link",
+          "rationale": "Bei einer erst durch weiteres Gesetz einzusetzenden Bedarfswehrpflicht soll sich die Einberufung am Bedarf der Streitkräfte orientieren. Eine zahlenmäßige Obergrenze nach der Streitkräfteplanung legt die Vorschrift nicht fest.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "04c9c7efde5f42a3c57ede5560a67a4111b36f91ebc3fa740475841012ba2b8d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-c9edf356c4412657",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Bei einer erst durch weiteres Gesetz einzusetzenden Bedarfswehrpflicht soll sich die Einberufung am Bedarf der Streitkräfte orientieren. Eine zahlenmäßige Obergrenze nach der Streitkräfteplanung legt die Vorschrift nicht fest.",
+            "law_passage_id": "bgbl-1-2025-370-p-8fa040f702b869ea",
+            "law_quote": "Der Bundestag entscheidet durch Gesetz über die Einsetzung einer Bedarfswehrpflicht, insbesondere, wenn\ndie verteidigungspolitische Lage oder die Personallage der Streitkräfte dies erforderlich macht. Dabei soll sich\ndie Einberufung unter Beachtung der wehrpflichtrechtlichen Voraussetzungen und dem Nichtvorliegen von\nWehrdienstausnahmen gemäß den §§ 9 bis 13b am Bedarf der Streitkräfte orientieren.",
+            "criterion_quote": "Die Bundeswehr soll nur so viele Einberufungen vornehmen, wie\nes die Streitkräfteplanung erfordert.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-096a662f16bec115",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "cdu-csu-2025-ac-0c7a8b538730130f",
           "disposition": "no_supported_link",
@@ -54156,6 +54284,38 @@
             ],
             "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1900ac05b8c1a76e",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz schafft eine Regelung für die bedarfsabhängige Einsetzung einer Wehrpflicht. Es setzt diese jedoch nicht selbst ein; darüber muss der Bundestag durch ein weiteres Gesetz entscheiden.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "04c9c7efde5f42a3c57ede5560a67a4111b36f91ebc3fa740475841012ba2b8d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-7212195c77fe094b",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.93,
+            "rationale": "Das Gesetz schafft eine Regelung für die bedarfsabhängige Einsetzung einer Wehrpflicht. Es setzt diese jedoch nicht selbst ein; darüber muss der Bundestag durch ein weiteres Gesetz entscheiden.",
+            "law_passage_id": "bgbl-1-2025-370-p-8fa040f702b869ea",
+            "law_quote": "Der Bundestag entscheidet durch Gesetz über die Einsetzung einer Bedarfswehrpflicht, insbesondere, wenn\ndie verteidigungspolitische Lage oder die Personallage der Streitkräfte dies erforderlich macht.",
+            "criterion_quote": "- Aufwachsende Wehrpflicht einführen .",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1900ac05b8c1a76e",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -54378,6 +54538,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-6221da0d2153a64c",
+          "disposition": "proposed_link",
+          "rationale": "Der vorgesehene Aufwuchspfad für aktive Soldatinnen und Soldaten reicht 2029 von 198.000 bis 205.000. Er unterstützt damit eine Erhöhung in die angestrebte Größenordnung, setzt aber weder 203.000 als genaue Stärke fest noch belegt er einen bereits erreichten Personalbestand.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "04c9c7efde5f42a3c57ede5560a67a4111b36f91ebc3fa740475841012ba2b8d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-2fb1fdfe046fb4b9",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Der vorgesehene Aufwuchspfad für aktive Soldatinnen und Soldaten reicht 2029 von 198.000 bis 205.000. Er unterstützt damit eine Erhöhung in die angestrebte Größenordnung, setzt aber weder 203.000 als genaue Stärke fest noch belegt er einen bereits erreichten Personalbestand.",
+            "law_passage_id": "bgbl-1-2025-370-p-ed412c9d470064be",
+            "law_quote": "|Jahr|Aktive Soldatinnen und Soldaten|Reservistinnen und Reservisten|\n|---|---|---|\n|2026|186 000 bis 190 000|70 000 bis 80 000|\n|2027|190 000 bis 193 000|80 000 bis 100 000|\n|2028|193 000 bis 198 000|100 000 bis 120 000|\n|2029|198 000 bis 205 000|120 000 bis 140 000|",
+            "criterion_quote": "Wir wollen sie von 180.000 auf 203.000 Soldatinnen und\nSoldaten erhöhen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6221da0d2153a64c",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften zur Wehrpflicht begründen keine allgemeine Pflicht zur Arbeitsaufnahme oder Arbeit für arbeitsfähige Personen in der Grundsicherung.",
@@ -54401,6 +54593,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "proposed_link",
+          "rationale": "Im Bereich der Wehrerfassung müssen erfasste Personen auf Aufforderung Angaben zur Wehrdienstbereitschaft machen. Über diese Datenerhebung können sie daher nicht selbst entscheiden; die Regelung betrifft nur diesen Bereich.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4e3b077107de8270143cb144a3b4f251bea12f99681db5e8eabd3038d5a04734"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-b182f4feb4b2db6a",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.86,
+            "rationale": "Im Bereich der Wehrerfassung müssen erfasste Personen auf Aufforderung Angaben zur Wehrdienstbereitschaft machen. Über diese Datenerhebung können sie daher nicht selbst entscheiden; die Regelung betrifft nur diesen Bereich.",
+            "law_passage_id": "bgbl-1-2025-370-p-a199aa3c6aa1e41a",
+            "law_quote": "(1) Jede nach § 15 erfasste Person hat auf Aufforderung durch das Bundesamt für das Personalmanage­\nment der Bundeswehr eine Erklärung zur Bereitschaft und Fähigkeit zu einer Wehrdienstleistung abzugeben,\ndie folgende Angaben umfasst:",
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -55041,7 +55265,2863 @@
         "cdu-csu-2025-ac-fd7f115ed3369cfb"
       ],
       "omitted_count": 774,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-1549a0bcf9ac884e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht ein Modellvorhaben zu Aufgaben von Pflegefachpersonen im Begutachtungsverfahren des Medizinischen Dienstes vor; eine Prüfung der Zusammenlegung mit der Heimaufsicht ist darin nicht belegt.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz sieht ein Modellvorhaben zu Aufgaben von Pflegefachpersonen im Begutachtungsverfahren des Medizinischen Dienstes vor; eine Prüfung der Zusammenlegung mit der Heimaufsicht ist darin nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-371-p-f1552753ff3d7e6d",
+            "law_quote": "In dem Modellvorhaben ist zu prüfen,",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1549a0bcf9ac884e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-15ce7620d12d3384",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Änderungstext belegt keine regelmäßige Überprüfung von Aus- und Fortbildungsordnungen.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der vorliegende Änderungstext belegt keine regelmäßige Überprüfung von Aus- und Fortbildungsordnungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-15ce7620d12d3384",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Pflegegesetzänderungen regeln keine Entlassung von Beamten oder Soldaten durch Verwaltungsakt.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Pflegegesetzänderungen regeln keine Entlassung von Beamten oder Soldaten durch Verwaltungsakt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1731f5b981d037e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu jährlichen Forschungs- und Entwicklungsausgaben oder einem BIP-Anteil.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu jährlichen Forschungs- und Entwicklungsausgaben oder einem BIP-Anteil.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1731f5b981d037e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1921595a747abea5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Änderungen führen keine verbindlichen Lernstandserhebungen ein.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Änderungen führen keine verbindlichen Lernstandserhebungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1921595a747abea5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19c0353a6e591da4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Regelungen zur Pflegeversorgung, belegt aber keine Verbesserung ambulanter und stationärer Angebote für psychische Erkrankungen oder eine besondere Berücksichtigung junger Menschen.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz ändert Regelungen zur Pflegeversorgung, belegt aber keine Verbesserung ambulanter und stationärer Angebote für psychische Erkrankungen oder eine besondere Berücksichtigung junger Menschen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19c0353a6e591da4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19e970f678148320",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Änderung des Einkommensteuertarifs zugunsten niedriger und mittlerer Einkommen ist nicht geregelt.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Änderung des Einkommensteuertarifs zugunsten niedriger und mittlerer Einkommen ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19e970f678148320",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine verbindliche Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine verbindliche Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1a012d378b8305ae",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Pflege- und Sozialversicherungsregelungen; eine Vereinfachung grenzüberschreitender Entsendungs-, Melde- oder A1-Verfahren ist nicht belegt.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Pflege- und Sozialversicherungsregelungen; eine Vereinfachung grenzüberschreitender Entsendungs-, Melde- oder A1-Verfahren ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1a012d378b8305ae",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1a4e626998b89723",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz hebt das Cannabis-Gesetz nicht auf und enthält dazu keine Änderung.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz hebt das Cannabis-Gesetz nicht auf und enthält dazu keine Änderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1a4e626998b89723",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1bbb10a4ed13709d",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Verringerung der Zahl staatlicher Beauftragter ist in den vorgelegten Regelungen nicht enthalten.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Verringerung der Zahl staatlicher Beauftragter ist in den vorgelegten Regelungen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1bbb10a4ed13709d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1c99f6258866cedf",
+          "disposition": "no_supported_link",
+          "rationale": "Die Förderung ehrenamtlicher Pflege-Netzwerke ist keine Ernennung eines Staatsministers für Sport und Ehrenamt.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Förderung ehrenamtlicher Pflege-Netzwerke ist keine Ernennung eines Staatsministers für Sport und Ehrenamt.",
+            "law_passage_id": "bgbl-1-2025-371-p-1960dd47eb5323b1",
+            "law_quote": "Die Förderung der strukturierten regionalen Zusammenarbeit erfolgt, indem sich die Pflegekassen einzeln oder gemeinsam im Wege einer Anteilsfinanzierung an den netzwerkbedingten Kosten beteiligen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1c99f6258866cedf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1d803b639f00a59f",
+          "disposition": "no_supported_link",
+          "rationale": "Maßnahmen zur Entwicklung von Reserveantibiotika sind in den vorgelegten Regelungen nicht enthalten.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Maßnahmen zur Entwicklung von Reserveantibiotika sind in den vorgelegten Regelungen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1d803b639f00a59f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1d9dfd40d3bf157d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahme, die Unternehmertum in der Begabtenförderung verankert.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Maßnahme, die Unternehmertum in der Begabtenförderung verankert.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1d9dfd40d3bf157d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1f845639ed2fca52",
+          "disposition": "no_supported_link",
+          "rationale": "Eine wissenschaftliche Bewertung früher Social-Media-Nutzung oder ein Maßnahmenpaket zum Jugendmedienschutz ist nicht geregelt.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine wissenschaftliche Bewertung früher Social-Media-Nutzung oder ein Maßnahmenpaket zum Jugendmedienschutz ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1f845639ed2fca52",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1fe1a58b5a2ca382",
+          "disposition": "no_supported_link",
+          "rationale": "Konkrete Schritte zum Aufbau des Deutsch-Israelischen Jugendwerks sind in den vorgelegten Pflegegesetzänderungen nicht enthalten.",
+          "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "137a9bbda74352d111ed755b6b11a322fb494fa506fd55ff70c8a42641e3656c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Konkrete Schritte zum Aufbau des Deutsch-Israelischen Jugendwerks sind in den vorgelegten Pflegegesetzänderungen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1fe1a58b5a2ca382",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-22dbeb06dd044604",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften betreffen Pflege und Pflegeversicherung; eine wiederholte Anpassung des Wohngelds ist darin nicht geregelt.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften betreffen Pflege und Pflegeversicherung; eine wiederholte Anpassung des Wohngelds ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-22dbeb06dd044604",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-22e41e7ebb6b317e",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zur BundID oder zu einer DeutschlandID.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zur BundID oder zu einer DeutschlandID.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-22e41e7ebb6b317e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-232873e0cd48e8e7",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Maßnahmen zur Forschung an Kinderarzneimitteln.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Maßnahmen zur Forschung an Kinderarzneimitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-232873e0cd48e8e7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Eine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke ist in den bereitgestellten Vorschriften nicht vorgesehen.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke ist in den bereitgestellten Vorschriften nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-284c358b25a7abbd",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften betreffen Pflegepersonal, enthalten aber keine Maßnahme zum Austausch internationaler Wissenschaftler.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die bereitgestellten Vorschriften betreffen Pflegepersonal, enthalten aber keine Maßnahme zum Austausch internationaler Wissenschaftler.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-284c358b25a7abbd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-28b96dbec7740415",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften regeln keine Sicherung von Lieferketten für die Grundversorgung.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die bereitgestellten Vorschriften regeln keine Sicherung von Lieferketten für die Grundversorgung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-28b96dbec7740415",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-297bbc414447b744",
+          "disposition": "no_supported_link",
+          "rationale": "Das Programm „Forschen an HAW“ wird in den bereitgestellten Vorschriften nicht geregelt.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Programm „Forschen an HAW“ wird in den bereitgestellten Vorschriften nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-297bbc414447b744",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2cdf39d16b67b9d0",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Vorgabe zu kultureller Bildung im Angebot von Kultureinrichtungen.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Vorgabe zu kultureller Bildung im Angebot von Kultureinrichtungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-2cdf39d16b67b9d0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e35cc36e905b94b",
+          "disposition": "no_supported_link",
+          "rationale": "Tariföffnungsklauseln werden in den bereitgestellten Vorschriften nicht geregelt.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Tariföffnungsklauseln werden in den bereitgestellten Vorschriften nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-2e35cc36e905b94b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e8ae6ce607c1d34",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften nehmen Gesundheitsberufe nicht ausdrücklich in einen strafrechtlichen Schutz vor Angriffen auf.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die bereitgestellten Vorschriften nehmen Gesundheitsberufe nicht ausdrücklich in einen strafrechtlichen Schutz vor Angriffen auf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-2e8ae6ce607c1d34",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-30bb63b17040f75a",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Online-Bündelung kommunal relevanter Bundesförderprogramme ist in den bereitgestellten Vorschriften nicht vorgesehen.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Online-Bündelung kommunal relevanter Bundesförderprogramme ist in den bereitgestellten Vorschriften nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-30bb63b17040f75a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-325f37810ee8325f",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Maßnahmen zur Profilbildung im Wissenschaftssystem.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Maßnahmen zur Profilbildung im Wissenschaftssystem.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-325f37810ee8325f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-330ef64de47eade5",
+          "disposition": "no_supported_link",
+          "rationale": "Digitale Zugangsrechte bei der betrieblichen Mitbestimmung werden in den bereitgestellten Vorschriften nicht geklärt.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Digitale Zugangsrechte bei der betrieblichen Mitbestimmung werden in den bereitgestellten Vorschriften nicht geklärt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-330ef64de47eade5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34ee457ccff3c9a2",
+          "disposition": "no_supported_link",
+          "rationale": "Wettbewerbsverfahren und deren Verwaltungsaufwand werden in den bereitgestellten Vorschriften nicht geregelt.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Wettbewerbsverfahren und deren Verwaltungsaufwand werden in den bereitgestellten Vorschriften nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-34ee457ccff3c9a2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-354864261d0e860e",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Abstimmung von Berufsorientierungsmaßnahmen ist in den bereitgestellten Vorschriften nicht vorgesehen.",
+          "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9abe9033f66018960371e8f21f43aee5a13d14d44a8077b56876a6d3c631287b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Abstimmung von Berufsorientierungsmaßnahmen ist in den bereitgestellten Vorschriften nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzesauszug ist unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-354864261d0e860e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-355a844f69469e3a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Regelung zur Vereinheitlichung von Reha-Anträgen.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Regelung zur Vereinheitlichung von Reha-Anträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir setzen uns für ein einheitliches Antragsverfahren ein.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-355a844f69469e3a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln einzelne Förderungen und Finanzierungsbedingungen, aber keine allgemeine Zuordnung durch Bundesmaßnahmen entstehender Mehrausgaben oder Mindereinnahmen an Länder und Kommunen.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die Auszüge regeln einzelne Förderungen und Finanzierungsbedingungen, aber keine allgemeine Zuordnung durch Bundesmaßnahmen entstehender Mehrausgaben oder Mindereinnahmen an Länder und Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wer eine Leistung veranlasst oder ausweitet, muss für ihre Finanzierung aufkommen.",
+            "caveats": [
+              "Die Regelung zu Modellvorhaben ist auf bestimmte Fördermaßnahmen begrenzt und belegt keine allgemeine Konnexitätsregel."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3755895e2197bbed",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Bereitstellung einer Sportmilliarde.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Bereitstellung einer Sportmilliarde.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Für die kommende Wahlperiode stellen wir sicher, dass die Sportmilliarde zur Verfügung steht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3755895e2197bbed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-38cf8a2e17567ec8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten kein Maßnahmenpaket zu Gesundheit und Jugendmedienschutz oder zur Social-Media-Nutzung.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge enthalten kein Maßnahmenpaket zu Gesundheit und Jugendmedienschutz oder zur Social-Media-Nutzung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Diese werden wir schnellstmöglich wissenschaftlich basiert bewerten und ein Maßnahmenpaket zur Stärkung von Gesundheit- und Jugendmedienschutz vorlegen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-38cf8a2e17567ec8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3a85020476e5ebb6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge regeln kein Investitionsprogramm für Betreuungsplätze von Kindern.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge regeln kein Investitionsprogramm für Betreuungsplätze von Kindern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir setzen auf Mindeststandards und unterstützen mit einem weiteren Investitionsprogramm Länder und Kommunen beim Ausbau der Betreuungsplätze.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3a85020476e5ebb6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3f147474cfd1553b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Digitalisierung von Planfeststellungsverfahren für Großinfrastrukturvorhaben.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Digitalisierung von Planfeststellungsverfahren für Großinfrastrukturvorhaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es muss aber durch einen verpflichtenden Verfahrensleitplan, eine Stichtagsregelung, eine Mitwirkungsverpflichtung und Digitalisierung effizienter werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3f147474cfd1553b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-41c2f069fdacf9e5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine gezielte Förderung strategischer Sicherheitsforschung.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine gezielte Förderung strategischer Sicherheitsforschung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bereits vorhandene Expertise wollen wir bündeln, Akteure miteinander vernetzen und gezielt fördern.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-41c2f069fdacf9e5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-426a6b582829a47f",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten weder Vergleichsdaten zu Wartezeiten noch einen Nachweis, dass diese gegenüber einem früheren Zeitraum gesunken sind.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Auszüge enthalten weder Vergleichsdaten zu Wartezeiten noch einen Nachweis, dass diese gegenüber einem früheren Zeitraum gesunken sind.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir sorgen dafür, dass die langen Wartezeiten auf einen Arzttermin sinken.",
+            "caveats": [
+              "Für die verlangte Veränderung fehlen Vergleichsdaten."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-426a6b582829a47f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-434af2852f7bb0f5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Maßnahme zur Erneuerung einer Forschungsflotte.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Maßnahme zur Erneuerung einer Forschungsflotte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und führen die Erneuerung der deutschen Forschungsflotte konsequent fort.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-434af2852f7bb0f5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-441e1edc5a44a78c",
+          "disposition": "missing_context",
+          "rationale": "Die Vorschrift sichert angemessene Pflegeberatung und ermöglicht gemeinsame Organisation sowie Finanzierung mit anderen Trägern; sie belegt aber nicht, dass zusätzliche oder erweiterte Familienberatungsangebote tatsächlich bereitgestellt werden.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.89,
+            "rationale": "Die Vorschrift sichert angemessene Pflegeberatung und ermöglicht gemeinsame Organisation sowie Finanzierung mit anderen Trägern; sie belegt aber nicht, dass zusätzliche oder erweiterte Familienberatungsangebote tatsächlich bereitgestellt werden.",
+            "law_passage_id": "bgbl-1-2025-371-p-a1868b98d68df973",
+            "law_quote": "Die Pflegekassen stellen eine angemessene Beratung ihrer Versicherten sicher. Die Pflegekassen im Land können hierfür einheitlich und gemeinsam Vereinbarungen zur kassenartenübergreifenden Organisation der Pflegeberatung im Land",
+            "criterion_quote": "Wir bauen Beratungsangebote und Frühe Hilfen für Familien aus.",
+            "caveats": [
+              "Für den verlangten Vorher-nachher-Vergleich und die tatsächliche Ausweitung fehlen Angaben."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-441e1edc5a44a78c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-465e146ead9597c3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Änderungen am Aufstiegs-BAföG oder eine Anpassung an den technologischen Wandel.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Änderungen am Aufstiegs-BAföG oder eine Anpassung an den technologischen Wandel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Aufstiegs-BAföG dem technologischen Wandel anpassen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-465e146ead9597c3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-467bc99dcd86dc23",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten Förderungen und Modellvorhaben in der Pflege, weisen aber keine Förderung von Springerpools zur Abfederung von Belastungsspitzen aus.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die Auszüge enthalten Förderungen und Modellvorhaben in der Pflege, weisen aber keine Förderung von Springerpools zur Abfederung von Belastungsspitzen aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Springerpools zum Abfedern von Belastungsspitzen",
+            "caveats": [
+              "Da der Gesetzeskontext nur teilweise vorliegt, lässt sich nicht ausschließen, dass eine einschlägige Regelung in einem nicht enthaltenen Abschnitt steht."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-467bc99dcd86dc23",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-472d3c47eee518a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Anhebung von Stipendiensätzen.",
+          "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fb2572b9bd175b02d519f48ba6264fcb85c53b30a398dcdbdf15520b0050f6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Anhebung von Stipendiensätzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Stipendiensätze anheben.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-472d3c47eee518a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Pflege enthalten keinen Nachweis, dass ein Dienst in einer Blaulichtorganisation abgeleistet werden kann.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelungen zur Pflege enthalten keinen Nachweis, dass ein Dienst in einer Blaulichtorganisation abgeleistet werden kann.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wie bereits vor Aussetzung der Wehrpflicht im Jahr\n2011 wird es wieder möglich sein, seinen Dienst beispielsweise in einer „Blaulichtorganisation“ abzuleisten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-496dc88e7befe9f8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen regionalen Netzwerke betreffen die Versorgung Pflegebedürftiger, nicht die Stärkung oder Vernetzung von Rettungsdiensten.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgesehenen regionalen Netzwerke betreffen die Versorgung Pflegebedürftiger, nicht die Stärkung oder Vernetzung von Rettungsdiensten.",
+            "law_passage_id": "bgbl-1-2025-371-p-1960dd47eb5323b1",
+            "law_quote": "Die in Absatz 1 genannten Mittel können für die finanzielle Beteiligung von Pflegekassen an regionalen Netzwerken verwendet werden, die der strukturierten Zusammenarbeit von Akteuren dienen, die an der Versorgung Pflegebedürftiger beteiligt sind",
+            "criterion_quote": "stärken die Arbeit der Rettungsdienste – eng verzahnt mit der medizinischen\nVersorgung und dem Katastrophenschutz unter Beteiligung der Kommunen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-496dc88e7befe9f8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-49bc84edde3e40eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Pflege-Regelungen ermöglichen den Erwerb bestimmter Kompetenzen, belegen aber keine Anpassung von Aus- und Fortbildungsordnungen an veränderte berufliche Fähigkeiten.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die Pflege-Regelungen ermöglichen den Erwerb bestimmter Kompetenzen, belegen aber keine Anpassung von Aus- und Fortbildungsordnungen an veränderte berufliche Fähigkeiten.",
+            "law_passage_id": "bgbl-1-2025-371-p-f83d6de7a38449da",
+            "law_quote": "Personen, die bereits über eine Erlaubnis zum Führen der Berufsbezeichnung nach § 1 Satz 2 verfügen,\nkönnen die Kompetenzen nach § 37 Absatz 2 Satz 2 ebenfalls erwerben.",
+            "criterion_quote": "Die erforderlichen Fähigkeiten in einem Beruf\nwandeln sich. Deshalb prüfen wir regelmäßig die Aus- und Fortbildungsordnungen und\npassen sie an.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-49bc84edde3e40eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4a2311decf1954f9",
+          "disposition": "no_supported_link",
+          "rationale": "Die Pflegevorschriften betreffen weder die Einrichtung einer Work-and-Stay-Agentur noch die genannten Leistungen für ausländische Fachkräfte aus einer Hand.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Pflegevorschriften betreffen weder die Einrichtung einer Work-and-Stay-Agentur noch die genannten Leistungen für ausländische Fachkräfte aus einer Hand.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Für ausländische Fachkräfte richten wir eine digitale „Work-and-Stay-Agentur“ ein. Sie\nbietet Service aus einer Hand: Anwerbung, Arbeitsplatzvermittlung, Prüfung der Einreisevoraussetzungen, Visavergabe, Aufenthaltstitel.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4a2311decf1954f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4b0c01826da2433d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Förderung familienfreundlicher Unternehmenskultur belegt keine Regelung oder Maßnahme für planbare Einsatzzeiten.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die Förderung familienfreundlicher Unternehmenskultur belegt keine Regelung oder Maßnahme für planbare Einsatzzeiten.",
+            "law_passage_id": "bgbl-1-2025-371-p-bcd9fee42ea17275",
+            "law_quote": "Maßnahmen zur Schaffung einer familienfreundlichen Unternehmenskultur sowie",
+            "criterion_quote": "auf attraktive Arbeitsbedingungen wie planbare Einsatzzeiten",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4b0c01826da2433d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4b485e206b057592",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen Vernetzungsstrukturen beziehen sich auf Akteure der Pflegeversorgung, nicht auf die strategische Sicherheitsforschung.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehenen Vernetzungsstrukturen beziehen sich auf Akteure der Pflegeversorgung, nicht auf die strategische Sicherheitsforschung.",
+            "law_passage_id": "bgbl-1-2025-371-p-1960dd47eb5323b1",
+            "law_quote": "Die in Absatz 1 genannten Mittel können für die finanzielle Beteiligung von Pflegekassen an regionalen Netzwerken verwendet werden, die der strukturierten Zusammenarbeit von Akteuren dienen, die an der Versorgung Pflegebedürftiger beteiligt sind",
+            "criterion_quote": "Bereits vorhandene Expertise wollen wir bündeln, Akteure miteinander vernetzen und gezielt fördern.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4b485e206b057592",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4fe20abd84958d99",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften regeln Pflegeversorgung und enthalten keine Regelung zur Planungshoheit der Länder für Krankenhäuser.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften regeln Pflegeversorgung und enthalten keine Regelung zur Planungshoheit der Länder für Krankenhäuser.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Planungshoheit der Länder für Krankenhäuser bleibt\ndabei unberührt.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4fe20abd84958d99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-548e1d9da3726285",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz nennt eine digitale Identität für den Datenzugriff, doch der Auszug belegt ihre eIDAS-Kompatibilität nicht; deren rechtliche Einordnung ist hier nicht enthalten.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Das Gesetz nennt eine digitale Identität für den Datenzugriff, doch der Auszug belegt ihre eIDAS-Kompatibilität nicht; deren rechtliche Einordnung ist hier nicht enthalten.",
+            "law_passage_id": "bgbl-1-2025-371-p-e6b05b03779bc479",
+            "law_quote": "2. einer digitalen Identität nach § 340 Absatz 7.",
+            "criterion_quote": "Zudem muss\ndie eIDAS-Kompatibilität sichergestellt sein.",
+            "caveats": [
+              "Die Regelung verweist für die digitale Identität auf § 340 Absatz 7, dessen Inhalt nicht mitgeliefert ist."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-548e1d9da3726285",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-55d63f2ac8f051be",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Pflegeanträge und Pflegekassen, nicht die Antragstellung oder Bearbeitung von BAföG-Anträgen.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Pflegeanträge und Pflegekassen, nicht die Antragstellung oder Bearbeitung von BAföG-Anträgen.",
+            "law_passage_id": "bgbl-1-2025-371-p-2dfac601edb63ba3",
+            "law_quote": "aus Sicht der Versicherten nachvollziehbare und verständliche Formulierungen zu verwenden",
+            "criterion_quote": "Zudem sorgen wir dafür, dass die Beantragung unbürokratischer und schneller wird.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-55d63f2ac8f051be",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Fördermitteln und kommunaler Beteiligung schreiben keine öffentliche Ausweisung begünstigter Kommunen und ihrer jeweiligen Vorteile oder Mittel vor.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelungen zu Fördermitteln und kommunaler Beteiligung schreiben keine öffentliche Ausweisung begünstigter Kommunen und ihrer jeweiligen Vorteile oder Mittel vor.",
+            "law_passage_id": "bgbl-1-2025-371-p-9750928b186348d1",
+            "law_quote": "Die Förderung nach den Sätzen 1 und 2 erfolgt, wenn die Modellvorhaben auf der Grundlage landes- oder\nkommunalrechtlicher Vorschriften auch durch das jeweilige Land oder die jeweilige kommunale\nGebietskörperschaft gefördert werden.",
+            "criterion_quote": "Die Länder sollen transparent machen, inwieweit sie Geld vom Bund\nzweckmäßig eingesetzt haben und welche Kommune in welcher Höhe profitiert.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c8833906aac8095",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen die Pflege und schaffen keine Zollpolizei mit erweiterten Kompetenzen.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen die Pflege und schaffen keine Zollpolizei mit erweiterten Kompetenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und statten sie mit umfassenden Kompetenzen aus.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c8833906aac8095",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5dbcd333914f354f",
+          "disposition": "missing_context",
+          "rationale": "Der Fragment-Auszug nennt berufsbegleitende Ausbildungen, zeigt aber nicht, ob daraus ein Förderangebot für Beschäftigte in Helfertätigkeiten auf dem Weg zum Berufsabschluss folgt.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.79,
+            "rationale": "Der Fragment-Auszug nennt berufsbegleitende Ausbildungen, zeigt aber nicht, ob daraus ein Förderangebot für Beschäftigte in Helfertätigkeiten auf dem Weg zum Berufsabschluss folgt.",
+            "law_passage_id": "bgbl-1-2025-371-p-214ce580b1c795d8",
+            "law_quote": "a) das eine der folgenden Ausbildungen berufsbegleitend durchläuft:",
+            "criterion_quote": "- Berufsabschluss nachholen. Menschen in Helfertätigkeiten fördern wir auf ihrem Weg zu\neiner qualifizierten Fachkraft",
+            "caveats": [
+              "Der umgebende Regelungstext zur Bedeutung und Anwendbarkeit der genannten Ausbildung fehlt."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-5dbcd333914f354f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5dbe6688befe3d43",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Pflegevorschriften belegen keine Öffnung des höheren Bundesdienstes für Bachelor-Absolventen mit Promotion oder Berufserfahrung.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Pflegevorschriften belegen keine Öffnung des höheren Bundesdienstes für Bachelor-Absolventen mit Promotion oder Berufserfahrung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir öffnen den Zugang zum höheren Dienst des Bundes auch für\nBachelor-Absolventen mit Promotion oder mehrjähriger beruflicher Erfahrung.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5dbe6688befe3d43",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+          "disposition": "no_supported_link",
+          "rationale": "Die Pflegevorschriften enthalten keine monatlichen Einzahlungen für Kinder in ein individuelles Altersvorsorgedepot.",
+          "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c94f22a557a2c3d8b940d30de0f51a5c6cefd6ab851546b27203281c23cfa5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Pflegevorschriften enthalten keine monatlichen Einzahlungen für Kinder in ein individuelles Altersvorsorgedepot.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Deshalb werden wir für jedes Kind vom 6. bis zum 18.\nLebensjahr pro Monat 10 Euro in ein individuelles, kapitalgedecktes und privatwirtschaftlich organisiertes Altersvorsorgedepot einzahlen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e3dfe6aa9fdbe1a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Pflegeleistungen und sehen keine Maßnahme zur Schwimmfähigkeit von Grundschulkindern vor.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Pflegeleistungen und sehen keine Maßnahme zur Schwimmfähigkeit von Grundschulkindern vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e3dfe6aa9fdbe1a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e5dbeb20a3d2afb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen über Pflegedaten schaffen kein Bildungsverlaufsregister und erfassen keine formalen Bildungsstufen.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen über Pflegedaten schaffen kein Bildungsverlaufsregister und erfassen keine formalen Bildungsstufen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e5dbeb20a3d2afb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6127c56f3f23d448",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Pflegevorschriften regeln keine Förderung von Studien- oder Forschungsaufenthalten.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Pflegevorschriften regeln keine Förderung von Studien- oder Forschungsaufenthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6127c56f3f23d448",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-621c11c8bfbbc60f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen pflegerische Versorgungsstrukturen, nicht den Ausbau der hier gemeinten Betreuungsinfrastruktur.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen pflegerische Versorgungsstrukturen, nicht den Ausbau der hier gemeinten Betreuungsinfrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-621c11c8bfbbc60f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6537f83053d9d719",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu gemeinsamen Cyberübungen von Bund, Ländern und Kommunen.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu gemeinsamen Cyberübungen von Bund, Ländern und Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6537f83053d9d719",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b349102781a352a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Förderregeln betreffen Selbsthilfe und regionale Pflegenetzwerke, nicht nachweislich die fortgesetzte Unterstützung der genannten Einsamkeitsnetzwerke.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Förderregeln betreffen Selbsthilfe und regionale Pflegenetzwerke, nicht nachweislich die fortgesetzte Unterstützung der genannten Einsamkeitsnetzwerke.",
+            "law_passage_id": "bgbl-1-2025-371-p-a601a2f735c219cd",
+            "law_quote": "Zum Auf- und Ausbau und zur Unterstützung von Selbsthilfegruppen, -organisationen und -kontaktstellen, die sich die Unterstützung von Pflegebedürftigen sowie von deren Angehörigen und",
+            "criterion_quote": "Wir unterstützen die gute Arbeit bestehender Netzwerke weiter: Nachbarschaftshilfen, ehrenamtliches Engagement, Beratungsstellen und Telefonseelsorge.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b349102781a352a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b743f84d3e25c4d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen erweitern den Wettbewerb „Jugend forscht“ nicht.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen erweitern den Wettbewerb „Jugend forscht“ nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b743f84d3e25c4d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b86fcbc67b8d9f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften schaffen kein Kompetenznetzwerk für jüdische Gegenwartsforschung.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften schaffen kein Kompetenznetzwerk für jüdische Gegenwartsforschung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b86fcbc67b8d9f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6c45ef528d75d127",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen fördern Unterstützungsangebote in der Pflege, belegen aber keinen Ausbau psychosozialer Angebote für junge Menschen.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Regelungen fördern Unterstützungsangebote in der Pflege, belegen aber keinen Ausbau psychosozialer Angebote für junge Menschen.",
+            "law_passage_id": "bgbl-1-2025-371-p-a601a2f735c219cd",
+            "law_quote": "Zum Auf- und Ausbau und zur Unterstützung von Selbsthilfegruppen, -organisationen und -kontaktstellen, die sich die Unterstützung von Pflegebedürftigen sowie von deren Angehörigen und",
+            "criterion_quote": "Wir bauen psychosoziale Unterstützungsangebote aus.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6c45ef528d75d127",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7021232fa00edc80",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zur Digitalisierung von Pflegekassenanträgen regeln keine digitale Bearbeitung von BAföG-Anträgen.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zur Digitalisierung von Pflegekassenanträgen regeln keine digitale Bearbeitung von BAföG-Anträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7021232fa00edc80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-73236d33f385b0dc",
+          "disposition": "missing_context",
+          "rationale": "Die Vorschrift bereitet die Digitalisierbarkeit von Anträgen bei Pflegekassen vor; ob sie Anträge auf Hilfsmittel, insbesondere für Kinder mit Behinderungen, umfasst, ist aus den vorgelegten Auszügen nicht ersichtlich.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.89,
+            "rationale": "Die Vorschrift bereitet die Digitalisierbarkeit von Anträgen bei Pflegekassen vor; ob sie Anträge auf Hilfsmittel, insbesondere für Kinder mit Behinderungen, umfasst, ist aus den vorgelegten Auszügen nicht ersichtlich.",
+            "law_passage_id": "bgbl-1-2025-371-p-e35f26be8f92a63a",
+            "law_quote": "eine gute Digitalisierbarkeit der Bearbeitung von Anträgen, die bei den Pflegekassen eingehen, vorzubereiten.",
+            "criterion_quote": "Aufwändige Antragsprozesse für Hilfsmittel, insbesondere für Kinder mit Behinderungen, werden wir vereinfachen.",
+            "caveats": [
+              "Die Anwendbarkeit auf Hilfsmittelanträge ist anhand der vorgelegten Auszüge nicht feststellbar."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-73236d33f385b0dc",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-762ad0b13735a0d4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Mindeststandards zur Schulreife.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Mindeststandards zur Schulreife.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-762ad0b13735a0d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-767bc2591d1eb3c1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften ändern einzelne Pflegeleistungen und regionale Planungs- und Förderverfahren, belegen aber nicht die Erarbeitung eines umfassenden Konzepts für eine stabile Versorgung in einer alternden Gesellschaft.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Vorschriften ändern einzelne Pflegeleistungen und regionale Planungs- und Förderverfahren, belegen aber nicht die Erarbeitung eines umfassenden Konzepts für eine stabile Versorgung in einer alternden Gesellschaft.",
+            "law_passage_id": "bgbl-1-2025-371-p-cbc7ca3686dd4cf0",
+            "law_quote": "Die Pflegekassen stellen ihnen zur Verfügung stehende nicht personenbezogene Versorgungsdaten regelmäßig den zuständigen Gebietskörperschaften zur Unterstützung bei ihren Aufgaben nach § 9 bereit.",
+            "criterion_quote": "erarbeiten wir ein umfassendes Konzept für eine stabile pflegerische Versorgung in einer alternden Gesellschaft und setzen es schnellstmöglich um.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-767bc2591d1eb3c1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-799077bb69d1dbe0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften legen keinen Finanzierungsmix aus Pflegeversicherung, betrieblicher Mitfinanzierung, Steuermitteln und eigenverantwortlicher Vorsorge fest.",
+          "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e32bd3615568a26b59d776f8e930ad4f89b8ddb94b8aee75985deb3365682019"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften legen keinen Finanzierungsmix aus Pflegeversicherung, betrieblicher Mitfinanzierung, Steuermitteln und eigenverantwortlicher Vorsorge fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-799077bb69d1dbe0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7bef6a90f5eed499",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen keine Familienhebammen oder ehrenamtlichen Familienpatenschaften und regeln keinen erleichterten Zugang zu ihnen.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften betreffen keine Familienhebammen oder ehrenamtlichen Familienpatenschaften und regeln keinen erleichterten Zugang zu ihnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7bef6a90f5eed499",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7cf2d703fd0b2208",
+          "disposition": "no_supported_link",
+          "rationale": "§ 45h sieht für Pflegebedürftige in bestimmten gemeinschaftlichen Wohnformen einen pauschalen Zuschuss von 450 Euro sowie Sachleistungen vor; eine flexibel für pflegerische Leistungen einsetzbare Budgetleistung ist damit nicht belegt.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "§ 45h sieht für Pflegebedürftige in bestimmten gemeinschaftlichen Wohnformen einen pauschalen Zuschuss von 450 Euro sowie Sachleistungen vor; eine flexibel für pflegerische Leistungen einsetzbare Budgetleistung ist damit nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-371-p-6959931d7bea7e1d",
+            "law_quote": "Pflegebedürftige in gemeinschaftlichen Wohnformen mit Verträgen zur pflegerischen Versorgung gemäß § 92c erhalten einen pauschalen Zuschuss in Höhe von 450 Euro je Kalendermonat zur Sicherstellung einer selbstbestimmten Pflege.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7cf2d703fd0b2208",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7d58af5506d9c096",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung oder Entscheidung zum Umgang mit PFAS oder zu einer risikobasierten Bewertung.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung oder Entscheidung zum Umgang mit PFAS oder zu einer risikobasierten Bewertung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7d58af5506d9c096",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8087961724c116b2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern weder die tägliche noch die wöchentliche Höchstarbeitszeit oder das Arbeitszeitgesetz.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern weder die tägliche noch die wöchentliche Höchstarbeitszeit oder das Arbeitszeitgesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8087961724c116b2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-819e1028aa5d411c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Modellvorhaben zu Begutachtungen prüft Aufgabenübernahmen durch Pflegefachpersonen; eine Verzahnung des Medizinischen Dienstes mit der Heimaufsicht oder der Abbau entsprechender Doppelstrukturen ist nicht geregelt.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Modellvorhaben zu Begutachtungen prüft Aufgabenübernahmen durch Pflegefachpersonen; eine Verzahnung des Medizinischen Dienstes mit der Heimaufsicht oder der Abbau entsprechender Doppelstrukturen ist nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-371-p-f1552753ff3d7e6d",
+            "law_quote": "Der Medizinische Dienst Bund beauftragt bis zum 30. Juni 2026 fachlich unabhängige wissenschaftliche Einrichtungen oder fachlich unabhängige Sachverständige mit der Durchführung eines Modellvorhabens",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-819e1028aa5d411c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-825c9deb71e8819f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine gemeinsame Planung stationärer Versorgung mit ambulanter haus- und fachärztlicher Versorgung oder anderen Gesundheitsberufen.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine gemeinsame Planung stationärer Versorgung mit ambulanter haus- und fachärztlicher Versorgung oder anderen Gesundheitsberufen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-825c9deb71e8819f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-861ecbb1f6aa7bb2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften beseitigen keine Hindernisse im Vereinsrecht.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften beseitigen keine Hindernisse im Vereinsrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-861ecbb1f6aa7bb2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-868c442a7f073baa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keinen Ausbau von Hospiz- oder Palliativangeboten.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften regeln keinen Ausbau von Hospiz- oder Palliativangeboten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-868c442a7f073baa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-86b88fbeaecb3b8f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften setzen kein Forschungsdatengesetz in Kraft und regeln keine entsprechende Nutzbarmachung von Forschungsdaten.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften setzen kein Forschungsdatengesetz in Kraft und regeln keine entsprechende Nutzbarmachung von Forschungsdaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-86b88fbeaecb3b8f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8729a87aa64ae1be",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine schulischen Vorgaben oder Bildungsangebote zu den genannten Kompetenzen.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine schulischen Vorgaben oder Bildungsangebote zu den genannten Kompetenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8729a87aa64ae1be",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-892d1f9e4b89e4b7",
+          "disposition": "no_supported_link",
+          "rationale": "§ 122 sieht erst ab 1. April 2026 ein Gremium zur Überprüfung und Vereinfachung von Antragsformularen für Leistungen der Pflegeversicherung vor; das ist keine bereits umgesetzte Entlastung aller Berufsgruppen im Gesundheitsbereich.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "§ 122 sieht erst ab 1. April 2026 ein Gremium zur Überprüfung und Vereinfachung von Antragsformularen für Leistungen der Pflegeversicherung vor; das ist keine bereits umgesetzte Entlastung aller Berufsgruppen im Gesundheitsbereich.",
+            "law_passage_id": "bgbl-1-2025-371-p-29164443adf2b36f",
+            "law_quote": "vom 1. April 2026 bis zum 31. Juli 2030 ein Gremium zur Kooperation hinsichtlich der Reduktion, Vereinfachung und Vereinheitlichung von Formularen oder anderen formalen Vorgaben, die von Pflegekassen im Rahmen der Beantragung von Leistungen der Pflegeversicherung eingesetzt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-892d1f9e4b89e4b7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b41383ff4da3c83",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine vergleichbaren Daten zur Zahl der Jugendlichen ohne Schule, Ausbildung oder Beschäftigung.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine vergleichbaren Daten zur Zahl der Jugendlichen ohne Schule, Ausbildung oder Beschäftigung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b41383ff4da3c83",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schließen Vereine oder Verbände nicht wegen ausländischer Geldgeber von staatlichen Mitteln aus.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schließen Vereine oder Verbände nicht wegen ausländischer Geldgeber von staatlichen Mitteln aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8c5a8c99daa1b2ff",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften verpflichten Kinder mit Förderbedarf nicht zur Teilnahme an einem vorschulischen Programm.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften verpflichten Kinder mit Förderbedarf nicht zur Teilnahme an einem vorschulischen Programm.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8c5a8c99daa1b2ff",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8ce02a5f3f0873f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schließen Vereine oder Verbände nicht wegen Beobachtung durch den Verfassungsschutz von staatlichen Geldern aus.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schließen Vereine oder Verbände nicht wegen Beobachtung durch den Verfassungsschutz von staatlichen Geldern aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8ce02a5f3f0873f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8d6c2a96e05278b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen keinen Ausbau von Mobilfunknetzen oder eine Ausweitung der Versorgung in ländliche Räume.",
+          "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "32d9696f3f196f5ff4f377f9cb69e43e84e34d687fd1e649d32a356018a63545"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen keinen Ausbau von Mobilfunknetzen oder eine Ausweitung der Versorgung in ländliche Räume.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8d6c2a96e05278b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e0f1cefc78183c0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Definition von Homeoffice oder mobilem Arbeiten.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Definition von Homeoffice oder mobilem Arbeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8e0f1cefc78183c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e6d4d6de39da77e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen nicht den Vollzug des Auslands-BAföG.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften betreffen nicht den Vollzug des Auslands-BAföG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8e6d4d6de39da77e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e6ff1d785b8175b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu staatlichen Kooperationen mit beobachteten Vereinen oder Verbänden.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu staatlichen Kooperationen mit beobachteten Vereinen oder Verbänden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8e6ff1d785b8175b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f20ad374abe2f64",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern die grundgesetzliche Schuldenbremse nicht.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften ändern die grundgesetzliche Schuldenbremse nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8f20ad374abe2f64",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f45cb64aecff56b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen keine Wissenschaftsplattform im Weimarer Dreieck.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften betreffen keine Wissenschaftsplattform im Weimarer Dreieck.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8f45cb64aecff56b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften führen keinen Aktionsplan für ein inklusives und barrierefreies Gesundheitswesen fort.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die vorgelegten Vorschriften führen keinen Aktionsplan für ein inklusives und barrierefreies Gesundheitswesen fort.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8fd1dd451585b6d1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Deutschen Allianz für Meeresforschung.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Deutschen Allianz für Meeresforschung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8fd1dd451585b6d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-90897897f5fdb789",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln weder ein grundsätzliches PFAS-Verbot noch dessen Ablehnung.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die vorgelegten Vorschriften regeln weder ein grundsätzliches PFAS-Verbot noch dessen Ablehnung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-90897897f5fdb789",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-924d6fd7a2c8203f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keinen Personalabbau in Ministerial- oder Bundestagsverwaltung.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften regeln keinen Personalabbau in Ministerial- oder Bundestagsverwaltung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-924d6fd7a2c8203f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-92578b1607345b1a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften nennen Personalqualifizierung, schaffen aber keine Anreize zum Erwerb beruflicher Qualifikationen.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die Vorschriften nennen Personalqualifizierung, schaffen aber keine Anreize zum Erwerb beruflicher Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-92578b1607345b1a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen keinen Kassensturz zu Beginn einer Wahlperiode vor.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften sehen keinen Kassensturz zu Beginn einer Wahlperiode vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Steuerfreiheit weiterarbeitender Rentnerinnen und Rentner.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Steuerfreiheit weiterarbeitender Rentnerinnen und Rentner.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-958a4b9b1592dfd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften fördern Prävention bei häuslicher Pflege, regeln aber keine Verbesserung von Therapien für seltene Erkrankungen.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die Vorschriften fördern Prävention bei häuslicher Pflege, regeln aber keine Verbesserung von Therapien für seltene Erkrankungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-958a4b9b1592dfd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-97384e78aae95d38",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine verbindlichen oder standardisierten Schutzkonzepte an Betreuungsorten für Kinder.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine verbindlichen oder standardisierten Schutzkonzepte an Betreuungsorten für Kinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-97384e78aae95d38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-998fbce2966bf774",
+          "disposition": "no_supported_link",
+          "rationale": "Die Pflicht, Anforderungen bei Verhandlungen auf effiziente Ausgestaltung zu prüfen, vereinfacht nicht nachweislich Dokumentationsprozesse.",
+          "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d042f188fce925d3ce9bcccf14031a119ef1851eaaa738c68ce2256d3dfdc34"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.89,
+            "rationale": "Die Pflicht, Anforderungen bei Verhandlungen auf effiziente Ausgestaltung zu prüfen, vereinfacht nicht nachweislich Dokumentationsprozesse.",
+            "law_passage_id": "bgbl-1-2025-371-p-5c1476c1faedd0c8",
+            "law_quote": "Bei Verhandlungen haben die Vereinbarungspartner des Absatzes 1 zu prüfen, inwieweit Anforderungen effizient ausgestaltet werden können.",
+            "criterion_quote": "und vereinfachen Dokumentationsprozesse, die viel Zeit in Anspruch nehmen.",
+            "caveats": [
+              "Die Regelung nennt weder Dokumentationsprozesse noch deren Änderung."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-998fbce2966bf774",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-106",
@@ -60393,45 +63473,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3852,
+    "calls": 3944,
     "cache_hits": 39,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.692645,
-    "reported_cost_calls": 3635,
+    "reported_cost_usd": 21.851212,
+    "reported_cost_calls": 3680,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.327248,
-    "unknown_cost_calls": 217,
+    "unknown_cost_reserved_usd": 1.589592,
+    "unknown_cost_calls": 264,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 23.019892,
-    "prompt_tokens": 39045417,
-    "completion_tokens": 5905245,
+    "budget_exposure_usd": 23.440805,
+    "prompt_tokens": 39592367,
+    "completion_tokens": 6014040,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 139,
-        "reported_cost_usd": 3.2237294999999992,
-        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "calls": 142,
+        "reported_cost_usd": 3.312578499999999,
+        "unknown_cost_reserved_usd": 9.159339953157541e-16,
         "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 47,
-        "reported_cost_usd": 0.6539447500000001,
-        "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "calls": 49,
+        "reported_cost_usd": 0.6799620000000001,
+        "unknown_cost_reserved_usd": 6.245004513516506e-17,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 769,
-        "reported_cost_usd": 0.9305005175000004,
-        "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 7.806255641895632e-18
+        "calls": 856,
+        "reported_cost_usd": 0.9742018975000003,
+        "unknown_cost_reserved_usd": 0.6051166,
+        "pending_reserved_usd": 1.0408340855860843e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

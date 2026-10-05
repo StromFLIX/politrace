@@ -55998,7 +55998,7 @@
     {
       "law_id": "bgbl-1-2025-370",
       "analysis_sha256": "2c6f7b1e7a977bf2a121bd98662613ea36bda8eaeb95baf520345ae7afa13234",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0f8a590364841d65",
@@ -56171,6 +56171,38 @@
             ],
             "criterion_id": "ssw-2025-ac-43f10fddc6f5bc3c",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "proposed_link",
+          "rationale": "Bei der Wehrerfassung ist das Bundesamt für das Personalmanagement der Bundeswehr zum Abruf und zur Weiterverarbeitung personenbezogener Daten ermächtigt. Das stützt die öffentliche Datenverarbeitung in diesem Bereich, trifft aber keine allgemeine Regelung gegen die Privatisierung persönlicher Daten bei öffentlichen Aufgaben.",
+          "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7eeea4687195206c9c13b3537eb60ab662e0191bc6a4f71de5782a34e484c3de"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3952e3dbd83ca8c101be702abc4cff8cf6450790bf99f9ef0409e3a0fd65cfe7"
+            }
+          ],
+          "impact_id": "impact-f7a1096740812020",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.92,
+            "rationale": "Bei der Wehrerfassung ist das Bundesamt für das Personalmanagement der Bundeswehr zum Abruf und zur Weiterverarbeitung personenbezogener Daten ermächtigt. Das stützt die öffentliche Datenverarbeitung in diesem Bereich, trifft aber keine allgemeine Regelung gegen die Privatisierung persönlicher Daten bei öffentlichen Aufgaben.",
+            "law_passage_id": "bgbl-1-2025-370-p-75331eb28f4122b6",
+            "law_quote": "(1) Das Bundesamt für das Personalmanagement der Bundeswehr darf zum Zweck der Wehrerfassung im\nautomatisierten Abrufverfahren nach den §§ 34a und 38 des Bundesmeldegesetzes die folgenden Daten\nWehrpflichtiger abrufen und weiterverarbeiten:",
+            "criterion_quote": "Wir wollen, dass die Erhebung, Verarbeitung und Nutzung **persönlicher Daten** im\nRahmen öffentlicher Aufgaben **nicht privatisiert** wird.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -62440,45 +62472,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3852,
+    "calls": 3944,
     "cache_hits": 39,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.692645,
-    "reported_cost_calls": 3635,
+    "reported_cost_usd": 21.851212,
+    "reported_cost_calls": 3680,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 1.327248,
-    "unknown_cost_calls": 217,
+    "unknown_cost_reserved_usd": 1.589592,
+    "unknown_cost_calls": 264,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 23.019892,
-    "prompt_tokens": 39045417,
-    "completion_tokens": 5905245,
+    "budget_exposure_usd": 23.440805,
+    "prompt_tokens": 39592367,
+    "completion_tokens": 6014040,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 139,
-        "reported_cost_usd": 3.2237294999999992,
-        "unknown_cost_reserved_usd": 8.881784197001252e-16,
+        "calls": 142,
+        "reported_cost_usd": 3.312578499999999,
+        "unknown_cost_reserved_usd": 9.159339953157541e-16,
         "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 47,
-        "reported_cost_usd": 0.6539447500000001,
-        "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "calls": 49,
+        "reported_cost_usd": 0.6799620000000001,
+        "unknown_cost_reserved_usd": 6.245004513516506e-17,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 769,
-        "reported_cost_usd": 0.9305005175000004,
-        "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 7.806255641895632e-18
+        "calls": 856,
+        "reported_cost_usd": 0.9742018975000003,
+        "unknown_cost_reserved_usd": 0.6051166,
+        "pending_reserved_usd": 1.0408340855860843e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
