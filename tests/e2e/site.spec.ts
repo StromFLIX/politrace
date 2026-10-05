@@ -13,13 +13,22 @@ test('production home has no demo switch or POC branding', async ({ page, reques
   expect((await request.get('/api/v1/demo/index.json')).status()).toBe(404);
 });
 
-test('party overview matches live inventory and fits the viewport', async ({ page }) => {
+test('2025 overviews show only Bundestag parties and fit the viewport', async ({ page, request }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto('/live/parteien/');
-  const parties = await (await page.request.get('/api/v1/live/parties.json')).json();
-  await expect(page.locator('[data-period-panel="2025"] .party-card')).toHaveCount(parties.total);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  const catalog = await (await request.get('/api/v1/sources/bundestag-21.json')).json();
+  for (const route of ['/', '/live/parteien/']) {
+    await page.goto(route);
+    const panel = page.locator('[data-period-panel="2025"]');
+    await expect(panel.locator('.party-card')).toHaveCount(catalog.programs.length);
+    for (const source of catalog.programs) {
+      await expect(panel.locator(`.party-card[href="/live/parteien/${source.party_id}/?jahr=2025"]`)).toBeVisible();
+    }
+    for (const party of ['fdp', 'bsw']) {
+      await expect(panel.locator(`.party-card[href="/live/parteien/${party}/?jahr=2025"]`)).toHaveCount(0);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
   expect(errors).toEqual([]);
 });
 

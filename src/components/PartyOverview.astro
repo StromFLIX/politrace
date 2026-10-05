@@ -3,7 +3,7 @@ import Icon from './Icon.astro';
 import Stats from './Stats.astro';
 import PartyCard from './PartyCard.astro';
 import PeriodSwitch from './PeriodSwitch.astro';
-import { metrics, formatDate, repoUrl } from '../lib/data';
+import { metrics, formatDate, overviewParties, repoUrl } from '../lib/data';
 import type { Data } from '../lib/types';
 interface Props { data: Data }
 const { data } = Astro.props;
@@ -15,7 +15,9 @@ if (!years.length) years.push(2025);
   <div class="hero-diagram" aria-label="Wahlprogramm wird in Kriterien aufgeteilt und mit Gesetzesbelegen verglichen"><div class="diagram-label"><span>Jedes Versprechen hat eine Spur</span><Icon name="branch" size={13} /></div><div class="diagram-node"><span class="node-icon"><Icon name="file" size={19} /></span><div><strong>Das Wahlprogramm</strong><small>Originalquelle, strukturiert & zitierbar</small></div><span class="node-number">01</span></div><div class="diagram-connector">IN PRÜFBARE ZUSAGEN ÜBERSETZT</div><div class="diagram-node"><span class="node-icon"><Icon name="check" size={20} /></span><div><strong>Das konkrete Kriterium</strong><small>Was müsste tatsächlich passieren?</small></div><span class="node-number">02</span></div><div class="diagram-connector">MIT BELEGEN ABGEGLICHEN</div><div class="diagram-node"><span class="node-icon"><Icon name="parties" size={19} /></span><div><strong>Die gesetzliche Wirkung</strong><small>Unterstützt, widerspricht – oder offen</small></div><span class="node-number">03</span></div></div>
 </section>
 {years.map((year, index) => {
-  const programs = data.programs.filter(p => p.election_year === year && p.review.status !== 'rejected');
+  const parties = overviewParties(data, year);
+  const partyIds = new Set(parties.map(party => party.id));
+  const programs = data.programs.filter(p => partyIds.has(p.party_id) && p.election_year === year && p.review.status !== 'rejected');
   const criteria = data.criteria.filter(c => programs.some(p => p.id === c.program_id));
   const stats = metrics(criteria, data.impacts, programs);
   return <section data-period-panel={year} hidden={index !== 0}>
@@ -26,7 +28,7 @@ if (!years.length) years.push(2025);
       { value: stats.coverage === null ? '—' : `${stats.coverage}%`, label: 'Belegabdeckung', detail: `${stats.covered} von ${stats.total} Kriterien mit Gesetzesbelegen`, icon: 'shield' },
     ]} />
     <div class="section-heading" id={index === 0 ? 'parteien' : undefined}><div><h2>Versprechen im Überblick</h2><p>Keine Rangliste. Ein offener Blick auf jede Partei.</p></div><div class="heading-side"><PeriodSwitch years={years} selected={year} /></div></div>
-    <div class="party-grid">{data.parties.map(party => <PartyCard party={party} year={year} data={data} />)}</div>
+    <div class="party-grid">{parties.map(party => <PartyCard party={party} year={year} data={data} />)}</div>
     <div class="legend"><span><i style="--dot:#389574" /> Gesetzlich umgesetzt</span><span><i style="--dot:#769be8" /> Teilweise umgesetzt</span><span><i style="--dot:#d99858" /> Widersprochen</span><span><i style="--dot:#e5e9ef" /> Offen / nicht bewertet</span></div>
   </section>;
 })}

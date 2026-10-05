@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import bundestag21 from '../../data/sources/bundestag-21.json';
 import type { Data, Dataset, Party, Program, Criterion, Law, Impact, Vote } from './types';
 export { metrics } from './metrics';
 
@@ -31,6 +32,13 @@ export function getData(dataset: Dataset): Data {
 }
 export function defaultDataset(): Dataset {
   return 'live';
+}
+export function overviewParties(data: Pick<Data, 'dataset' | 'parties'>, year: number): Party[] {
+  // Parliamentary representation, not coalition membership or import progress, defines the current scope.
+  // Keep the registry and other election years intact for historical records and API references.
+  if (data.dataset !== 'live' || year !== bundestag21.election_year) return data.parties;
+  const represented = new Set(bundestag21.programs.map(program => program.party_id));
+  return data.parties.filter(party => represented.has(party.id));
 }
 export const topics: Record<string, string> = {
   arbeit: 'Arbeit & Löhne', wirtschaft: 'Wirtschaft', steuern: 'Steuern', soziales: 'Soziales & Rente',
