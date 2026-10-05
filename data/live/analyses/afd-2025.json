@@ -54505,7 +54505,7 @@
     {
       "law_id": "bgbl-1-2026-111",
       "analysis_sha256": "361ef415a28c42a2b358db36e878ff86146a105bea1af92e1ff947400e51f706",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-01519c5095a967b6",
@@ -56640,6 +56640,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+          "disposition": "proposed_link",
+          "rationale": "Das Asylgesetz wird auf internationalen Schutz nach einer EU-Verordnung ausgerichtet und umfasst dabei auch subsidiären Schutz. Diese rechtliche Einbindung widerspricht einem Opt-out aus der gemeinsamen EU-Asylpolitik.",
+          "input_sha256": "80963cc5790885be9e23f89f6561783cc1549de1914a4eefaf35a8cb1a5f1821",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "25fda67eb30bcefb0dc1a0220615d780ae7faa105ac42690072910c9a7e256af"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "80963cc5790885be9e23f89f6561783cc1549de1914a4eefaf35a8cb1a5f1821"
+            }
+          ],
+          "impact_id": "impact-cb1d6e5da5f58715",
+          "judgment": {
+            "supported": true,
+            "score": -2,
+            "confidence": 0.91,
+            "rationale": "Das Asylgesetz wird auf internationalen Schutz nach einer EU-Verordnung ausgerichtet und umfasst dabei auch subsidiären Schutz. Diese rechtliche Einbindung widerspricht einem Opt-out aus der gemeinsamen EU-Asylpolitik.",
+            "law_passage_id": "bgbl-1-2026-111-p-81e68f5ac93f1bf7",
+            "law_quote": "internationalen Schutz nach der Verordnung (EU) 2024/1347, der den Schutz vor Verfolgung nach dem\nAbkommen vom 28. Juli 1951 über die Rechtsstellung der Flüchtlinge (BGBl. 1953 II S. 559) und den\nsubsidiären Schutz im Sinne der Verordnung (EU) 2024/1347 umfasst",
+            "criterion_quote": "im Rahmen\n\neines „Opt-Outs“ nicht länger an der gemeinsamen Politik der EU",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-9bfa08676a910982",
           "disposition": "missing_context",
           "rationale": "Die Auszüge regeln unter anderem Aufnahme und Zuständigkeiten nach Herkunftsland, lassen aber nicht erkennen, welches zuvor beschriebene Verfahren auf welche weiteren Herkunftsländer übertragen werden soll.",
@@ -57769,7 +57801,1193 @@
         "afd-2025-ac-ff1f4843ffbe3537"
       ],
       "omitted_count": 639,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-01519c5095a967b6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzespassagen betreffen die Anpassung des nationalen Rechts an das GEAS; eine Aufkündigung des UN-Flüchtlingspakts ist nicht belegt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die vorgelegten Gesetzespassagen betreffen die Anpassung des nationalen Rechts an das GEAS; eine Aufkündigung des UN-Flüchtlingspakts ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Aufkündigung von UN-Migrations- und UN-Flüchtlingspakt",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-01519c5095a967b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen enthalten keine Strafvorschrift zu öffentlichen Kalifatsforderungen.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Passagen enthalten keine Strafvorschrift zu öffentlichen Kalifatsforderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die von Teilen der in Deutschland lebenden Muslime auf Veranstaltungen und Demonstrationen erhobene öffentliche Forderung nach der Einrichtung eines Kalifats läuft der freiheitlich demokratischen Grundordnung diametral entgegen und ist verfassungsfeindlich; sie ist unter Strafe zu stellen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-03b429e6a2d7d922",
+          "disposition": "missing_context",
+          "rationale": "§ 71 Absatz 4a AufenthG wird lediglich als Bezugspunkt für Behördenzugriffe genannt; ob die Bestimmung eine allgemeine Grenzbehördenzuständigkeit außerhalb von Übergangsstellen schafft, lässt sich ohne ihren Wortlaut nicht beurteilen.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.76,
+            "rationale": "§ 71 Absatz 4a AufenthG wird lediglich als Bezugspunkt für Behördenzugriffe genannt; ob die Bestimmung eine allgemeine Grenzbehördenzuständigkeit außerhalb von Übergangsstellen schafft, lässt sich ohne ihren Wortlaut nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-112-p-713f25de2a5505e7",
+            "law_quote": "die Polizeivollzugsbehörden der Länder und die in § 71 Absatz 4a des Aufenthaltsgesetzes genannten Behörden",
+            "criterion_quote": "In rechtlicher Hinsicht fordern wir eine Erweiterung der Befugnisse der Bundespolizei, insbesondere auch in Form einer Erweiterung des § 71 des AufenthG um eine generelle Zuständigkeit der Bundespolizei als Grenzbehörde auch außerhalb von Grenzübergangsstellen.",
+            "caveats": [
+              "Der vollständige Wortlaut des § 71 AufenthG ist nicht vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-03b429e6a2d7d922",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-04b9b23f2146ae37",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen Datenübermittlungen und Behördenzugriffe, nicht die Durchführung deutscher Grenzkontrollen.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die angeführten Vorschriften betreffen Datenübermittlungen und Behördenzugriffe, nicht die Durchführung deutscher Grenzkontrollen.",
+            "law_passage_id": "bgbl-1-2026-112-p-71ed048b902f41d5",
+            "law_quote": "Bundespolizei und andere mit der polizeilichen Kontrolle des grenzüberschreitenden Verkehrs beauftragte Behörden",
+            "criterion_quote": "Wir werden stattdessen unsere Grenzen wieder selbst kontrollieren",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-04b9b23f2146ae37",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-09856fcb268e57fa",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln keine Bundesprogramme und belegen keine Ausweitung von Hilfen für freiwillige Rückkehr nach Syrien.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Passagen regeln keine Bundesprogramme und belegen keine Ausweitung von Hilfen für freiwillige Rückkehr nach Syrien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mit der Ausweitung von Bundesprogrammen zur Förderung der freiwilligen Rückkehr nach Syrien",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-09856fcb268e57fa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0b0ed0a28ea91323",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen AZR-Daten und deren Übermittlung; Änderungen zur Straffung von Asylverfahren vor Verwaltungsgerichten sind nicht belegt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die vorgelegten Regelungen betreffen AZR-Daten und deren Übermittlung; Änderungen zur Straffung von Asylverfahren vor Verwaltungsgerichten sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Asylverfahren vor den Verwaltungsgerichten werden wir im Rahmen rechtsstaatlicher Möglichkeiten straffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0b0ed0a28ea91323",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-148c4614d30b7320",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Aufkündigung des UN-Migrationspakts ist in den vorgelegten Gesetzespassagen nicht geregelt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Eine Aufkündigung des UN-Migrationspakts ist in den vorgelegten Gesetzespassagen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Aufkündigung von UN-Migrations- und UN-Flüchtlingspakt",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-148c4614d30b7320",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-14b10f17dc2e1e58",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen erweitern beziehungsweise ordnen Datenzugriffe von Behörden; eine Zurückweisung illegal einreisender Personen wird nicht geregelt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die Passagen erweitern beziehungsweise ordnen Datenzugriffe von Behörden; eine Zurückweisung illegal einreisender Personen wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-112-p-6f48af1b98c45488",
+            "law_quote": "Bundespolizei zu Spalte A Buchstabe a – andere mit der polizeilichen Kontrolle des grenzüberschreitenden Verkehrs beauftragte Behörden zu Spalte A Buchstabe a",
+            "criterion_quote": "illegal einreisende Personen konsequent an der Grenze zurückweisen zu können.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-14b10f17dc2e1e58",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-1e26a20436d18169",
+          "disposition": "no_supported_link",
+          "rationale": "Die genannten Änderungen betreffen Datenverarbeitung und Behördenzugriffe, nicht die Durchführung von Staatsgrenzkontrollen oder die EU-Freizügigkeit.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die genannten Änderungen betreffen Datenverarbeitung und Behördenzugriffe, nicht die Durchführung von Staatsgrenzkontrollen oder die EU-Freizügigkeit.",
+            "law_passage_id": "bgbl-1-2026-112-p-71ed048b902f41d5",
+            "law_quote": "Bundespolizei und andere mit der polizeilichen Kontrolle des grenzüberschreitenden Verkehrs beauftragte Behörden",
+            "criterion_quote": "Die AfD wird eine deutliche Kehrtwende in der bisherigen Migrationspolitik einleiten und die Staatsgrenzen wieder kontrollieren. Die Freizügigkeitsregelungen innerhalb der EU bleiben davon unberührt.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-1e26a20436d18169",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-20b617cbf434c875",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen sehen AZR-Angaben zur Prüfung oder Einleitung von Aberkennungsverfahren vor; sie ordnen keine Verfahren gegen bislang subsidiär geschützte Syrer an.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Änderungen sehen AZR-Angaben zur Prüfung oder Einleitung von Aberkennungsverfahren vor; sie ordnen keine Verfahren gegen bislang subsidiär geschützte Syrer an.",
+            "law_passage_id": "bgbl-1-2026-112-p-b5775b04f3694990",
+            "law_quote": "i) Prüfung Einleitung eines Aberkennungsverfahrens am",
+            "criterion_quote": "Einleitung von Widerrufsverfahren für bislang als subsidiär schutzberechtigt anerkannte Syrer",
+            "caveats": [
+              "Die zitierte Datenregelung belegt weder eine Einleitung von Verfahren noch eine Beschränkung auf Syrer."
+            ],
+            "criterion_id": "afd-2025-ac-20b617cbf434c875",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2c24f85c9c677a36",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Aufnahme von Tat und Folgen als Haftgründe ist in den vorgelegten Passagen nicht belegt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Eine Aufnahme von Tat und Folgen als Haftgründe ist in den vorgelegten Passagen nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Einstufung der Tat und deren Folgen als weitere Haftgründe",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2c24f85c9c677a36",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen enthalten keine Regelungen zur Durchführung von Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Passagen enthalten keine Regelungen zur Durchführung von Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "deutsche Volk für ebenso mündig wie das der Schweiz und anderer europäischer Staaten. Erfahrungsgemäß entscheiden Bürger in Schicksalsfragen der Nation weitsichtiger, friedfertiger und gemeinwohlorientierter als Berufspolitiker. Deshalb fordert die AfD, die rechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2 GG vorgesehenen Volksabstimmungen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-307db15a0f476d13",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Ersetzung der Duldung durch eine Bescheinigung über die Ausreisepflicht wird in den vorgelegten Passagen nicht geregelt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Eine Ersetzung der Duldung durch eine Bescheinigung über die Ausreisepflicht wird in den vorgelegten Passagen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ersatz der Duldung durch eine Bescheinigung über die Ausreisepflicht",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-307db15a0f476d13",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-358b26305aaff5f4",
+          "disposition": "no_supported_link",
+          "rationale": "Einheitliche Kriterien für Inobhutnahmen auf Bundes- und Länderebene sind in den Passagen nicht geregelt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Einheitliche Kriterien für Inobhutnahmen auf Bundes- und Länderebene sind in den Passagen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es müssen einheitliche Kriterien für Inobhutnahmen auf Bundes- und Länderebene definiert werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-358b26305aaff5f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3f065631054a4f67",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen weder Einbürgerungsvoraussetzungen noch deren Ausschluss für verurteilte Straftäter.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die vorgelegten Regelungen betreffen weder Einbürgerungsvoraussetzungen noch deren Ausschluss für verurteilte Straftäter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Unzulässigkeit der Einbürgerung verurteilter Straftäter",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3f065631054a4f67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6232965f4195fac4",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Ausschiffung am jeweils nächstgelegenen Seehafen ist in den vorgelegten Gesetzespassagen nicht geregelt.",
+          "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c6d678269255bab2551615f6787cc331779a476380e5abad0ef5986dcec70745"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Eine Ausschiffung am jeweils nächstgelegenen Seehafen ist in den vorgelegten Gesetzespassagen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Vielmehr muss gemäß dem internationalen Seerecht immer eine Ausschiffung der Betroffenen am nächstgelegenen Seehafen erfolgen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6232965f4195fac4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6c7c7181c07ebaac",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln keine Unterbringung für die gesamte Dauer des Asylverfahrens; Angaben zur Art und Dauer einer Unterbringung begründen eine solche Pflicht nicht.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die Auszüge regeln keine Unterbringung für die gesamte Dauer des Asylverfahrens; Angaben zur Art und Dauer einer Unterbringung begründen eine solche Pflicht nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6c7c7181c07ebaac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6c9ec69fbee4e6fd",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keine Regel, die den Aufenthaltsstatus wegen einer Reise ins Heimatland entzieht; die einschlägigen Entziehungsgründe sind im bereitgestellten Text nicht enthalten.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.87,
+            "rationale": "Die Auszüge enthalten keine Regel, die den Aufenthaltsstatus wegen einer Reise ins Heimatland entzieht; die einschlägigen Entziehungsgründe sind im bereitgestellten Text nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-6c9ec69fbee4e6fd",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6e7a0a6792f44c27",
+          "disposition": "missing_context",
+          "rationale": "Die AZR-Änderungen erfassen unter anderem Aberkennung und Erlöschen von Schutzstatus, legen aber nicht fest, dass humanitäre Aufenthaltstitel bei Wegfall des Fluchtgrunds enden.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.85,
+            "rationale": "Die AZR-Änderungen erfassen unter anderem Aberkennung und Erlöschen von Schutzstatus, legen aber nicht fest, dass humanitäre Aufenthaltstitel bei Wegfall des Fluchtgrunds enden.",
+            "law_passage_id": "bgbl-1-2026-112-p-e6a05fbf78b11ba6",
+            "law_quote": "Anerkennung aberkannt am; Anerkennung erloschen am; Flüchtlingseigenschaft aberkannt am; Flüchtlingseigenschaft erloschen am",
+            "criterion_quote": null,
+            "caveats": [
+              "Die Auszüge betreffen Datenerfassung; die materiellen Voraussetzungen der Beendigung sind nicht enthalten."
+            ],
+            "criterion_id": "afd-2025-ac-6e7a0a6792f44c27",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-701ab05ff5692329",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesauszüge belegen weder bilaterale noch EU-weite Verhandlungen über die Rückkehr syrischer Staatsangehöriger.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die vorgelegten Gesetzesauszüge belegen weder bilaterale noch EU-weite Verhandlungen über die Rückkehr syrischer Staatsangehöriger.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-701ab05ff5692329",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7ce458082370381b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesauszüge enthalten keine öffentliche Information oder Kampagne zur freiwilligen Rückkehr nach Syrien.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die vorgelegten Gesetzesauszüge enthalten keine öffentliche Information oder Kampagne zur freiwilligen Rückkehr nach Syrien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7ce458082370381b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7f45ede96ca1ff08",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz passt nationales Recht ausdrücklich an das GEAS an; daraus geht jedoch nicht hervor, ob die AfD das GEAS politisch weiterverfolgt oder wie sie dazu abgestimmt hat.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Das Gesetz passt nationales Recht ausdrücklich an das GEAS an; daraus geht jedoch nicht hervor, ob die AfD das GEAS politisch weiterverfolgt oder wie sie dazu abgestimmt hat.",
+            "law_passage_id": "bgbl-1-2026-112-p-980e01c09e66b18e",
+            "law_quote": "des nationalen Rechts an das Gemeinsame Europäische Asylsystem",
+            "criterion_quote": null,
+            "caveats": [
+              "Die Gesetzesauszüge belegen die gesetzliche Anpassung, nicht die politische Position oder das Abstimmungsverhalten der AfD."
+            ],
+            "criterion_id": "afd-2025-ac-7f45ede96ca1ff08",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-816f47a126e39b7d",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten kein Wiedereinreiseverbot nach einer Reise ins Herkunftsland; die dafür maßgebliche Regelung ist im unvollständigen Gesetzeskontext nicht ersichtlich.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Die Auszüge enthalten kein Wiedereinreiseverbot nach einer Reise ins Herkunftsland; die dafür maßgebliche Regelung ist im unvollständigen Gesetzeskontext nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-816f47a126e39b7d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-81de551179f8096e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesauszüge belegen weder eine Kündigung der Kirchenasylvereinbarung des BAMF noch eine Abschaffung des Kirchenasyls.",
+          "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b6c45b05ac0c3268c08d62ce6eb084d57c7ea0c4140bfa4689f4b5955cbd6cca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Gesetzesauszüge belegen weder eine Kündigung der Kirchenasylvereinbarung des BAMF noch eine Abschaffung des Kirchenasyls.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-81de551179f8096e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-844b9c07486e0115",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Ausländerzentralregister und weitere asylrechtliche Vorschriften; eine Straffreistellung von wegen Impfungen Genötigten ist darin nicht belegt.",
+          "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Ausländerzentralregister und weitere asylrechtliche Vorschriften; eine Straffreistellung von wegen Impfungen Genötigten ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Betroffenen müssen nun bestmöglich unterstützt und straffrei gestellt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-844b9c07486e0115",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-89e3bf01a553a252",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften erklären keine Verträge für abgelehnt oder gekündigt; sie betreffen die Anpassung des nationalen Rechts an das Gemeinsame Europäische Asylsystem.",
+          "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Vorschriften erklären keine Verträge für abgelehnt oder gekündigt; sie betreffen die Anpassung des nationalen Rechts an das Gemeinsame Europäische Asylsystem.",
+            "law_passage_id": "bgbl-1-2026-112-p-980e01c09e66b18e",
+            "law_quote": "des nationalen Rechts an das Gemeinsame Europäische Asylsystem",
+            "criterion_quote": "fordert eine Ablehnung bzw. Kündigung dieser Verträge.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-89e3bf01a553a252",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9831c010e74eafd9",
+          "disposition": "missing_context",
+          "rationale": "Die Tabelle erfasst das Datum der Prüfung, ob ein Aberkennungsverfahren eingeleitet wird, schreibt aber keine jährliche Prüfung des Fortbestands von Asylgründen vor; wegen des nur teilweise vorliegenden Gesetzeskontexts bleibt offen, ob an anderer Stelle eine solche Pflicht geregelt ist.",
+          "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die Tabelle erfasst das Datum der Prüfung, ob ein Aberkennungsverfahren eingeleitet wird, schreibt aber keine jährliche Prüfung des Fortbestands von Asylgründen vor; wegen des nur teilweise vorliegenden Gesetzeskontexts bleibt offen, ob an anderer Stelle eine solche Pflicht geregelt ist.",
+            "law_passage_id": "bgbl-1-2026-112-p-b5775b04f3694990",
+            "law_quote": "Prüfung Einleitung eines Aberkennungsverfahrens am",
+            "criterion_quote": "Jährliche Prüfung des Fortbestands von Asylgründen",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-9831c010e74eafd9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge ändern vor allem die AZR-Datenerfassung; eine Anwendung des gemeinten Verfahrens auf weitere Herkunftsländer ist nicht belegt. Da der Gesetzeskontext ausdrücklich teilweise ist, bleibt der übrige Regelungsinhalt offen.",
+          "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge ändern vor allem die AZR-Datenerfassung; eine Anwendung des gemeinten Verfahrens auf weitere Herkunftsländer ist nicht belegt. Da der Gesetzeskontext ausdrücklich teilweise ist, bleibt der übrige Regelungsinhalt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Analog werden wir, wenn die Voraussetzungen vorliegen, dann auch\n\nbei Personen aus anderen Asyl-Herkunftsländern verfahren.",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9ea0b4c57aa4d456",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zum Strafvollzug in Drittstaaten; wegen des ausdrücklich unvollständigen Gesetzeskontexts lässt sich der übrige Inhalt nicht beurteilen.",
+          "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zum Strafvollzug in Drittstaaten; wegen des ausdrücklich unvollständigen Gesetzeskontexts lässt sich der übrige Inhalt nicht beurteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Ermöglichung eines Strafvollzuges in Drittstaaten für Drittstaats\nangehörige nach dänischem Vorbild",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-9ea0b4c57aa4d456",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a578cb4627d74a3d",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge belegen weder eine Abschaffung noch eine Änderung des Familiennachzugsanspruchs subsidiär Schutzberechtigter; der übrige Gesetzesinhalt fehlt teilweise.",
+          "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge belegen weder eine Abschaffung noch eine Änderung des Familiennachzugsanspruchs subsidiär Schutzberechtigter; der übrige Gesetzesinhalt fehlt teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wegfall des grundsätzlichen Nachzugsanspruches für Familien\nangehörige subsidiär Schutzberechtigter",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-a578cb4627d74a3d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ab2113acc22e1c6c",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln keine Einstellung der freiwilligen Aufnahmeprogramme für Afghanistan; wegen des teilweise fehlenden Gesetzeskontexts bleibt offen, ob weitere Vorschriften dazu bestehen.",
+          "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c7abdfa12b60cbef50651d57fe4589c938a9e08b5e68496bbc94bc5482083d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge regeln keine Einstellung der freiwilligen Aufnahmeprogramme für Afghanistan; wegen des teilweise fehlenden Gesetzeskontexts bleibt offen, ob weitere Vorschriften dazu bestehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Einstellung der freiwilligen Aufnahmeprogramme für Afghanistan",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-ab2113acc22e1c6c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ac654637c5461651",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen unter anderem das Ausländerzentralregister; Sonderregelungen des Baurechts für Unterkünfte werden nicht behandelt.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen unter anderem das Ausländerzentralregister; Sonderregelungen des Baurechts für Unterkünfte werden nicht behandelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ac654637c5461651",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ac92d630361f0271",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Kirchenasyl oder zur Kirchenasylvereinbarung des BAMF.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Kirchenasyl oder zur Kirchenasylvereinbarung des BAMF.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ac92d630361f0271",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b208e55c5e4fb2b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln keine Förderung ziviler Seenotrettung und deren Einstellung.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln keine Förderung ziviler Seenotrettung und deren Einstellung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b208e55c5e4fb2b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder Regeln zur Volksgesetzgebung noch die Befugnis des Volkes, Parlamentsgesetze zu ändern.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder Regeln zur Volksgesetzgebung noch die Befugnis des Volkes, Parlamentsgesetze zu ändern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+          "disposition": "no_supported_link",
+          "rationale": "Die AZR-Änderungen regeln Datenverarbeitung im Asylbereich, belegen aber keine politische Initiative für außerhalb Deutschlands durchgeführte Asylverfahren.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die AZR-Änderungen regeln Datenverarbeitung im Asylbereich, belegen aber keine politische Initiative für außerhalb Deutschlands durchgeführte Asylverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bcd807232c364182",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nimmt keine Kinderrechte ins Grundgesetz auf und regelt diese Verfassungsfrage nicht.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz nimmt keine Kinderrechte ins Grundgesetz auf und regelt diese Verfassungsfrage nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bcd807232c364182",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c90b4cc122ce5d3c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Verbotsregelungen für islamistische Vereine oder Moscheegemeinden.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Verbotsregelungen für islamistische Vereine oder Moscheegemeinden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c90b4cc122ce5d3c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cd386f9480d1a2b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen bestimmen nicht, auf welche Personen ein Anspruch auf Aufnahme zum Asylverfahren beschränkt ist.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen bestimmen nicht, auf welche Personen ein Anspruch auf Aufnahme zum Asylverfahren beschränkt ist.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cd386f9480d1a2b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d53eb34172a39ad1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Folgen von Falschangaben zur Identität für das Asylrecht.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Folgen von Falschangaben zur Identität für das Asylrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d53eb34172a39ad1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f8bdcbf150fc4bfd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen sehen keinen zusätzlichen Personaleinsatz zum Abbau von Altfällen vor.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen sehen keinen zusätzlichen Personaleinsatz zum Abbau von Altfällen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f8bdcbf150fc4bfd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f8e04828d89af776",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt nicht den Verlust eines Schutzstatus wegen einer Reise ins Herkunftsland.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt nicht den Verlust eines Schutzstatus wegen einer Reise ins Herkunftsland.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f8e04828d89af776",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ff1f4843ffbe3537",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz sieht Registerdaten zu EU-Übernahme- und Umverteilungsverfahren vor, regelt aber nicht, ob die zugrunde liegenden Maßnahmen pauschale Quoten einführen oder anwenden; dafür fehlen die Regelungen zu diesen Maßnahmen.",
+          "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d7554a6cb3190d4223c021c22703ac4782d826bc715cc465fc729473589ce52"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz sieht Registerdaten zu EU-Übernahme- und Umverteilungsverfahren vor, regelt aber nicht, ob die zugrunde liegenden Maßnahmen pauschale Quoten einführen oder anwenden; dafür fehlen die Regelungen zu diesen Maßnahmen.",
+            "law_passage_id": "bgbl-1-2026-112-p-30f6f6a76d8af50a",
+            "law_quote": "die für ein Übernahmeverfahren nach Artikel 67 der Verordnung (EU) 2024/1351 oder ein Umverteilungsverfahren auf Grund von Maßnahmen nach Artikel 78 Absatz 3 des Vertrags über die Arbeitsweise der Europäischen Union vorgeschlagen",
+            "criterion_quote": "Keine pauschalen Zuwanderungskontingente und Umverteilungsquoten, egal ob im nationalstaatlichen, europäischen oder außereuropäischen Rahmen",
+            "caveats": [
+              "Die Passage betrifft die Erfassung von Verfahrensdaten; die zugrunde liegenden Maßnahmen sind nicht mitgeliefert."
+            ],
+            "criterion_id": "afd-2025-ac-ff1f4843ffbe3537",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-116",
@@ -57823,7 +59041,170 @@
         "afd-2025-ac-daaad3b8f19659fc"
       ],
       "omitted_count": 661,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Hochseeschutzgesetz regelt den Schutz der biologischen Vielfalt auf Hoher See; ein Recht des Volkes, Parlamentsgesetze zu ändern, ist darin nicht vorgesehen.",
+          "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Hochseeschutzgesetz regelt den Schutz der biologischen Vielfalt auf Hoher See; ein Recht des Volkes, Parlamentsgesetze zu ändern, ist darin nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen dem Volk das Recht geben, den Abgeordneten auf\ndie Finger zu schauen und vom Parlament beschlossene Gesetze zu\nändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bcd807232c364182",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Aufnahme von Kinderrechten in das Grundgesetz.",
+          "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Aufnahme von Kinderrechten in das Grundgesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Kinderrechte sollen nicht ins Grundgesetz aufgenommen wer\nden, da Kinder bereits Träger aller Grundrechte sind. Letztlich\n\nstellen „Kinderrechte“ auch Durchgriffsrechte des Staates gegen\n\ndie Erziehungsrechte der Eltern dar. Genau davor soll das Grund\ngesetz jedoch schützen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bcd807232c364182",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c1d6bb725cba74f8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Tätigkeiten in Gebieten außerhalb nationaler Hoheitsbefugnisse, nicht die Wirtschaftsweise landwirtschaftlicher Betriebe oder deren Fruchtfolge.",
+          "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen Tätigkeiten in Gebieten außerhalb nationaler Hoheitsbefugnisse, nicht die Wirtschaftsweise landwirtschaftlicher Betriebe oder deren Fruchtfolge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Weder deutsche noch EU-Behörden sollen sich\n\nin deren Wirtschaftsweise einmischen, wie etwa bei der Wahl der\n\nFruchtfolge.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c1d6bb725cba74f8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bußgeldvorschriften ahnden Verstöße gegen Mitteilungs- und Kennzeichnungspflichten zu maringenetischen Ressourcen; Friedensrichter werden nicht geregelt.",
+          "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Bußgeldvorschriften ahnden Verstöße gegen Mitteilungs- und Kennzeichnungspflichten zu maringenetischen Ressourcen; Friedensrichter werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Tätigkeit der sogenannten Friedensrichter entspricht einer\n\nSelbstjustiz und ist mit der Justizhoheit und dem Gewaltmonopol\ndes Staates nicht vereinbar; sie ist unter Strafe zu stellen. Der Frie\ndensrichter ist kein Organ der Rechtspflege. Seine Entscheidungen\ndürfen keine Rechtswirkung entfalten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d08175743fd130ca",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Einführung einer nationalen Währung oder zur Verwendung des Euro.",
+          "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Einführung einer nationalen Währung oder zur Verwendung des Euro.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Deshalb muss Deutschland diese „Transferunion“ aufkündigen und\n\nden Irrweg der Dauerrettung durch Wiedereinführung einer natio\nnalen Währung beenden, ggf. unter paralleler Beibehaltung des Euro\n\noder einer flexiblen ECU-ähnlichen Verrechnungseinheit.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d08175743fd130ca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-daaad3b8f19659fc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Umweltprüfungen und Überwachung genehmigter Tätigkeiten auf Hoher See vor, dokumentiert aber keine Erforschung von Bodenerosionen oder Windschleppen durch Windkraftanlagen.",
+          "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33d7fdf33bd77d4add86d7b503c65afc451b61a5152df332b0bc37896a424868"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz sieht Umweltprüfungen und Überwachung genehmigter Tätigkeiten auf Hoher See vor, dokumentiert aber keine Erforschung von Bodenerosionen oder Windschleppen durch Windkraftanlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die weiteren Auswirkungen der durch Windkraftanlagen verursach\nten Bodenerosionen und Windschleppen sind schnellstmöglich zu\n\nerforschen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-daaad3b8f19659fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-119",
@@ -62310,43 +63691,43 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4334,
-    "cache_hits": 63,
-    "subdivision_cache_hits": 11,
+    "calls": 4431,
+    "cache_hits": 67,
+    "subdivision_cache_hits": 7,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 22.704881,
-    "reported_cost_calls": 3975,
+    "reported_cost_usd": 22.911485,
+    "reported_cost_calls": 4072,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 2.147221,
     "unknown_cost_calls": 359,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 24.852102,
-    "prompt_tokens": 43332456,
-    "completion_tokens": 6731017,
+    "budget_exposure_usd": 25.058706,
+    "prompt_tokens": 44608837,
+    "completion_tokens": 6967776,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 155,
-        "reported_cost_usd": 3.720799999999999,
+        "calls": 157,
+        "reported_cost_usd": 3.7877597499999993,
         "unknown_cost_reserved_usd": 9.43689570931383e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 59,
-        "reported_cost_usd": 0.7722732500000001,
-        "unknown_cost_reserved_usd": 6.245004513516506e-17,
-        "pending_reserved_usd": 1.3877787807814457e-17
+        "calls": 61,
+        "reported_cost_usd": 0.7857392500000001,
+        "unknown_cost_reserved_usd": 7.632783294297951e-17,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1223,
-        "reported_cost_usd": 1.3273382250000003,
+        "calls": 1316,
+        "reported_cost_usd": 1.4535161050000007,
         "unknown_cost_reserved_usd": 1.1627453,
         "pending_reserved_usd": 0
       },
