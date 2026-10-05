@@ -57752,7 +57752,7 @@
     {
       "law_id": "bgbl-1-2026-112",
       "analysis_sha256": "818650040a269650cc15df2d86bbc6647f2f6226f5f4712e35cb8f6667522320",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-01519c5095a967b6",
@@ -58546,6 +58546,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz ersetzt im AZR-Gesetz einen Verweis auf nationale Schutzbegriffe durch einen Verweis auf eine EU-Verordnung zum internationalen Schutz. Diese Anpassung an die gemeinsame EU-Asylpolitik läuft dem angestrebten Opt-out entgegen, regelt aber keinen Verzicht auf ein Opt-out.",
+          "input_sha256": "db2da5b2a91c273e602b0db7170289d514158ccf4da953d5732cf7258807a76d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d370e7f0023635455b56d4bf11391d043f72d21ff0784c9c421d4527407f0bfd"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "db2da5b2a91c273e602b0db7170289d514158ccf4da953d5732cf7258807a76d"
+            }
+          ],
+          "impact_id": "impact-a95c82e75610caa7",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz ersetzt im AZR-Gesetz einen Verweis auf nationale Schutzbegriffe durch einen Verweis auf eine EU-Verordnung zum internationalen Schutz. Diese Anpassung an die gemeinsame EU-Asylpolitik läuft dem angestrebten Opt-out entgegen, regelt aber keinen Verzicht auf ein Opt-out.",
+            "law_passage_id": "bgbl-1-2026-112-p-a1eb525417b67ae5",
+            "law_quote": "eines ernsthaften Schadens im Sinne des § 4 Absatz 1 des Asylgesetzes“ durch die Angabe\n„internationalen Schutz im Sinne der Verordnung (EU) 2024/1347“ ersetzt.",
+            "criterion_quote": "im Rahmen\n\neines „Opt-Outs“ nicht länger an der gemeinsamen Politik der EU\n\nim Bereich Asyl, subsidiärer Schutz und vorübergehender Schutz\n\nbeteiligen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-9bfa08676a910982",
           "disposition": "missing_context",
           "rationale": "Die vorliegenden Auszüge ändern vor allem die AZR-Datenerfassung; eine Anwendung des gemeinten Verfahrens auf weitere Herkunftsländer ist nicht belegt. Da der Gesetzeskontext ausdrücklich teilweise ist, bleibt der übrige Regelungsinhalt offen.",
@@ -58992,7 +59024,7 @@
     {
       "law_id": "bgbl-1-2026-116",
       "analysis_sha256": "34963916b6bf64387afe6cf9bd187bdafca222b5a440daaa56870cc9dfd53b43",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-142d79111f3551ab",
@@ -59009,12 +59041,339 @@
         "afd-2025-ac-ee4543cdd02e8ceb"
       ],
       "omitted_count": 671,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz senkt zeitlich befristet die Energiesteuer für Kraftstoffe; eine Regelung zur Wahl des Bundespräsidenten enthält der vorgelegte Text nicht.",
+          "input_sha256": "ef6327d887340a2a16fff6940260ef4f2a355793e234b62c75d8976f313327c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef6327d887340a2a16fff6940260ef4f2a355793e234b62c75d8976f313327c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz senkt zeitlich befristet die Energiesteuer für Kraftstoffe; eine Regelung zur Wahl des Bundespräsidenten enthält der vorgelegte Text nicht.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": "Der Bundespräsident, als höchster Repräsentant des Staates, soll direkt vom Volk gewählt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-4ae67cdb85de59b0",
+          "disposition": "missing_context",
+          "rationale": "Für bestimmte Gasöle gilt vom 1. Mai bis 30. Juni 2026 ein Satz von 330 Euro je 1 000 Liter; ob dieser unter dem zuvor geltenden Satz liegt, ist anhand der vorliegenden Auszüge nicht feststellbar.",
+          "input_sha256": "1d154b2d76159866264ca0a8594da386eaf519e3881cb41f2cd8cfafdd29a3ee",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d154b2d76159866264ca0a8594da386eaf519e3881cb41f2cd8cfafdd29a3ee"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Für bestimmte Gasöle gilt vom 1. Mai bis 30. Juni 2026 ein Satz von 330 Euro je 1 000 Liter; ob dieser unter dem zuvor geltenden Satz liegt, ist anhand der vorliegenden Auszüge nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-116-p-07f5b9da3b0200c3",
+            "law_quote": "1 000 l Gasöle der Unterpositionen 2710 19 43 bis 2710 19 48 und der Unterpositionen 2710 20 11 bis 2710 20 19 der Kombinierten Nomenklatur mit einem Schwefelgehalt von höchstens 10 mg/kg nach § 2 Absatz 1 Nummer 4 Buchstabe b 330,00 Euro",
+            "criterion_quote": "Die Steuersätze werden wir senken",
+            "caveats": [
+              "Der zuvor geltende Steuersatz und damit der für den Vergleich erforderliche Rechtsstand fehlen."
+            ],
+            "criterion_id": "afd-2025-ac-4ae67cdb85de59b0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-565a338f19a7cfc8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz senkt befristet die Energiesteuer auf bestimmte Kraftstoffe, enthält aber keine Regelung zur steuerlichen Entlastung von Existenzgründern.",
+          "input_sha256": "afba045c40431bc5f0b151517d70f52455717b8e1153ff7cf0b30ef686444588",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afba045c40431bc5f0b151517d70f52455717b8e1153ff7cf0b30ef686444588"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz senkt befristet die Energiesteuer auf bestimmte Kraftstoffe, enthält aber keine Regelung zur steuerlichen Entlastung von Existenzgründern.",
+            "law_passage_id": "bgbl-1-2026-116-p-02c39eda588aed73",
+            "law_quote": "§ 2 Absatz 1 ist vom 1. Mai 2026 bis zum 30. Juni 2026 mit der Maßgabe anzuwenden, dass die Steuer für",
+            "criterion_quote": "Wir werden Existenzgründer steuerlich entlasten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-565a338f19a7cfc8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die befristete Senkung der Energiesteuer auf Kraftstoffe regelt weder eine Prämie für Neugeborene noch eine Gutschrift auf Rentenbeiträge.",
+          "input_sha256": "afba045c40431bc5f0b151517d70f52455717b8e1153ff7cf0b30ef686444588",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afba045c40431bc5f0b151517d70f52455717b8e1153ff7cf0b30ef686444588"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die befristete Senkung der Energiesteuer auf Kraftstoffe regelt weder eine Prämie für Neugeborene noch eine Gutschrift auf Rentenbeiträge.",
+            "law_passage_id": "bgbl-1-2026-116-p-02c39eda588aed73",
+            "law_quote": "§ 2 Absatz 1 ist vom 1. Mai 2026 bis zum 30. Juni 2026 mit der Maßgabe anzuwenden, dass die Steuer für",
+            "criterion_quote": "eine Willkommensprämie von 20.000 € für neugeborene Babys,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift senkt befristet Energiesteuern auf Kraftstoffe; eine Zustimmung des Volkes zu Grundgesetzänderungen regelt sie nicht.",
+          "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift senkt befristet Energiesteuern auf Kraftstoffe; eine Zustimmung des Volkes zu Grundgesetzänderungen regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2026-116-p-02c39eda588aed73",
+            "law_quote": "(1) § 2 Absatz 1 ist vom 1. Mai 2026 bis zum 30. Juni 2026 mit der Maßgabe anzuwenden, dass die Steuer für",
+            "criterion_quote": "Ohne Zustimmung des Volkes darf das Grundgesetz nicht geändert",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift betrifft befristete Energiesteuersätze für Kraftstoffe; ein Recht des Volkes, Parlamentsgesetze abzulehnen, schafft sie nicht.",
+          "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift betrifft befristete Energiesteuersätze für Kraftstoffe; ein Recht des Volkes, Parlamentsgesetze abzulehnen, schafft sie nicht.",
+            "law_passage_id": "bgbl-1-2026-116-p-02c39eda588aed73",
+            "law_quote": "(1) § 2 Absatz 1 ist vom 1. Mai 2026 bis zum 30. Juni 2026 mit der Maßgabe anzuwenden, dass die Steuer für",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern oder abzulehnen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-84332e4e1f61f7bd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung ändert befristet Energiesteuersätze für Kraftstoffe, schafft aber keinen zusätzlichen Einkommensteuer-Grundfreibetrag für Rentner.",
+          "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelung ändert befristet Energiesteuersätze für Kraftstoffe, schafft aber keinen zusätzlichen Einkommensteuer-Grundfreibetrag für Rentner.",
+            "law_passage_id": "bgbl-1-2026-116-p-02c39eda588aed73",
+            "law_quote": "(1) § 2 Absatz 1 ist vom 1. Mai 2026 bis zum 30. Juni 2026 mit der Maßgabe anzuwenden, dass die Steuer für",
+            "criterion_quote": "zusätzlichen Steuergrundfreibetrag in Höhe von 12.000 €",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-84332e4e1f61f7bd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift senkt befristet Energiesteuern auf Kraftstoffe; ein rechtliches Verfahren zur Änderung parlamentarischer Gesetze durch das Volk führt sie nicht ein.",
+          "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f8a676bcbdbafa73afc4e8eb52892b7822917c42d2fb6dc4df87c02f50e2a9ad"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift senkt befristet Energiesteuern auf Kraftstoffe; ein rechtliches Verfahren zur Änderung parlamentarischer Gesetze durch das Volk führt sie nicht ein.",
+            "law_passage_id": "bgbl-1-2026-116-p-02c39eda588aed73",
+            "law_quote": "(1) § 2 Absatz 1 ist vom 1. Mai 2026 bis zum 30. Juni 2026 mit der Maßgabe anzuwenden, dass die Steuer für",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c55d49c77e14725c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt nur eine befristete Senkung der Energiesteuer auf Kraftstoffe und enthält keine schulischen Befreiungsregeln.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt nur eine befristete Senkung der Energiesteuer auf Kraftstoffe und enthält keine schulischen Befreiungsregeln.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c55d49c77e14725c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e9259793c222efca",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Energiesteuerregelungen für Kraftstoffe, nicht den einkommensteuerlichen Grundfreibetrag.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Energiesteuerregelungen für Kraftstoffe, nicht den einkommensteuerlichen Grundfreibetrag.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e9259793c222efca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ec6e7b123a70eeef",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft befristete Energiesteuersätze und ändert das Hinweisgeberschutzgesetz nicht.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft befristete Energiesteuersätze und ändert das Hinweisgeberschutzgesetz nicht.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ec6e7b123a70eeef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ee4543cdd02e8ceb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Energiesteuern auf Kraftstoffe; eine Begrenzung der Amtszeit des Bundeskanzlers ist nicht enthalten.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Energiesteuern auf Kraftstoffe; eine Begrenzung der Amtszeit des Bundeskanzlers ist nicht enthalten.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ee4543cdd02e8ceb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-117",
       "analysis_sha256": "85bcf1932c0a1d80379d55479107f53c4b65a82c708acf8ef61d9162581a1d97",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -59042,6 +59401,440 @@
       ],
       "omitted_count": 661,
       "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tätigkeiten zum Schutz der biologischen Vielfalt auf Hoher See, nicht die Strafbarkeit öffentlicher Kalifatsforderungen.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tätigkeiten zum Schutz der biologischen Vielfalt auf Hoher See, nicht die Strafbarkeit öffentlicher Kalifatsforderungen.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-136010bc1fa4b050",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Gemeinsamen Außen- und Sicherheitspolitik oder zum Europäischen Auswärtigen Dienst.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Gemeinsamen Außen- und Sicherheitspolitik oder zum Europäischen Auswärtigen Dienst.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-136010bc1fa4b050",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft den Schutz der biologischen Vielfalt auf Hoher See und überprüft oder streicht keine Corona-bedingt geänderten Gesetze oder Richtlinien.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft den Schutz der biologischen Vielfalt auf Hoher See und überprüft oder streicht keine Corona-bedingt geänderten Gesetze oder Richtlinien.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Spracherwerb von Migranten; sein Anwendungsbereich sind bestimmte Tätigkeiten auf Hoher See.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen Spracherwerb von Migranten; sein Anwendungsbereich sind bestimmte Tätigkeiten auf Hoher See.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-41ae06ae27ccc7a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Überwachungsregeln des Gesetzes betreffen genehmigte Tätigkeiten und ihre Auswirkungen auf die Meeresumwelt, nicht den Einsatz von Gentechnik in der Landwirtschaft.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Überwachungsregeln des Gesetzes betreffen genehmigte Tätigkeiten und ihre Auswirkungen auf die Meeresumwelt, nicht den Einsatz von Gentechnik in der Landwirtschaft.",
+            "law_passage_id": "bgbl-1-2026-117-p-9ca3d0a34b4cc774",
+            "law_quote": "Die zuständige Behörde überwacht unter Verwendung der besten verfügbaren wissenschaftlichen Erkenntnisse und Informationen und, sofern verfügbar, des einschlägigen traditionellen Wissens indigener Völker und ortsansässiger Gemeinschaften die Auswirkungen aller Tätigkeiten in Gebieten außerhalb nationaler Hoheitsbefugnisse, die sie genehmigt, um festzustellen, ob diese Tätigkeiten die Meeresumwelt verschmutzen oder nachteilige Auswirkungen auf sie haben können.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-41ae06ae27ccc7a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-579b4d6cb89a06fb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ordnet keine Debatte über die Vorteile der Gentechnik an; es regelt den Schutz und die Nutzung biologischer Vielfalt auf Hoher See.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ordnet keine Debatte über die Vorteile der Gentechnik an; es regelt den Schutz und die Nutzung biologischer Vielfalt auf Hoher See.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-579b4d6cb89a06fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Zustimmung des Volkes bei Änderungen des Grundgesetzes.",
+          "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "754edafd6e5cef343a7bfb584c246b4a66029870a62fce8d0dbcef393fed4e90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Zustimmung des Volkes bei Änderungen des Grundgesetzes.",
+            "law_passage_id": "bgbl-1-2026-117-p-70704a0cca6f0162",
+            "law_quote": "Dieses Gesetz gilt für Tätigkeiten, die deutschen Hoheitsbefugnissen oder deutscher Kontrolle unterstehen und die in Gebieten außerhalb nationaler Hoheitsbefugnisse durchgeführt werden, soweit nicht etwas anderes bestimmt ist.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-727ade7d6a9ae858",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt das Meeresbiodiversitätsübereinkommen um; Normen zu Folgen der Eheannullierung enthält es nicht.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt das Meeresbiodiversitätsübereinkommen um; Normen zu Folgen der Eheannullierung enthält es nicht.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-727ade7d6a9ae858",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-89908da548c7c0a3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Meeresschutz und maringenetische Ressourcen, nicht Ansprüche nach Beitragsjahren.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Meeresschutz und maringenetische Ressourcen, nicht Ansprüche nach Beitragsjahren.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-89908da548c7c0a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Tätigkeiten und biologische Vielfalt auf Hoher See, nicht Altersfeststellungen im Jugendstrafrecht.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Tätigkeiten und biologische Vielfalt auf Hoher See, nicht Altersfeststellungen im Jugendstrafrecht.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regel zur Finanzierung veranlasster Ausgaben zwischen staatlichen Ebenen.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regel zur Finanzierung veranlasster Ausgaben zwischen staatlichen Ebenen.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz betrifft den Meeresschutz; ob Deutschland die Internationalen Gesundheitsvorschriften vor dem 31. März 2025 ablehnte, geht daraus nicht hervor.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft den Meeresschutz; ob Deutschland die Internationalen Gesundheitsvorschriften vor dem 31. März 2025 ablehnte, geht daraus nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [
+              "Für die Ablehnung vor dem Stichtag fehlen einschlägige Nachweise."
+            ],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a608e99f4053fe5e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Meeresschutz und schafft keine Vorgabe zur Annullierung der bezeichneten Ehen.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Meeresschutz und schafft keine Vorgabe zur Annullierung der bezeichneten Ehen.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a608e99f4053fe5e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-aaf5a5ff4bce0951",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt ein Meeresbiodiversitätsübereinkommen durch und erstellt keine Bundesstrategie für digitale Souveränität.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt ein Meeresbiodiversitätsübereinkommen durch und erstellt keine Bundesstrategie für digitale Souveränität.",
+            "law_passage_id": "bgbl-1-2026-117-p-68da962bb54fd869",
+            "law_quote": "Dieses Gesetz dient der Durchführung des Übereinkommens im Rahmen des Seerechtsübereinkommens der Vereinten Nationen über die Erhaltung und nachhaltige Nutzung der biologischen Vielfalt der Meere von Gebieten außerhalb nationaler Hoheitsbefugnisse.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-aaf5a5ff4bce0951",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+          "disposition": "no_supported_link",
+          "rationale": "§ 7 kennzeichnet Proben und Sequenzinformationen maringenetischer Ressourcen nach Herkunft; eine Kennzeichnung von Produktinhalt, Gewicht und Verkaufspreis schreibt er nicht vor.",
+          "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f656a1f56817ff589e6aab86ba9ea30352cbdcc7da5e19a0ee6bc123649815f1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "§ 7 kennzeichnet Proben und Sequenzinformationen maringenetischer Ressourcen nach Herkunft; eine Kennzeichnung von Produktinhalt, Gewicht und Verkaufspreis schreibt er nicht vor.",
+            "law_passage_id": "bgbl-1-2026-117-p-c28b5abde1cc8b0a",
+            "law_quote": "Betreiber von Sammlungen und Datenbanken haben sicherzustellen, dass Proben maringenetischer Ressourcen von Gebieten außerhalb nationaler Hoheitsbefugnisse und digitale Sequenzinformationen über diese maringenetischen Ressourcen mit der jeweiligen Chargennummer, sofern vorhanden, dauerhaft so gekennzeichnet werden, dass sie als von Gebieten außerhalb nationaler Hoheitsbefugnisse stammend erkennbar sind.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
           "disposition": "no_supported_link",
@@ -59209,7 +60002,7 @@
     {
       "law_id": "bgbl-1-2026-119",
       "analysis_sha256": "6cc788728b6831b4fb90acb6ae752e037458d86a12579e93cbfef9068ed8fec1",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0c023dbdda078d2f",
@@ -59243,12 +60036,798 @@
         "afd-2025-ac-e3be474151f884a7"
       ],
       "omitted_count": 654,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei bestimmten öffentlichen Aufträgen des Bundes; eine Begrenzung des Arbeitslosengeldes regelt es nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei bestimmten öffentlichen Aufträgen des Bundes; eine Begrenzung des Arbeitslosengeldes regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "zunächst auf sechs Monate beschränkt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-20d96403e1cafede",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht die Meinungsfreiheit auf sozialen Medien.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht die Meinungsfreiheit auf sozialen Medien.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "die großen Anbieter sozialer Medien verpflichtet werden, die Meinungsfreiheit ihrer Nutzer zu respektieren.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-20d96403e1cafede",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; Voraussetzungen für Volksabstimmungen schafft es nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; Voraussetzungen für Volksabstimmungen schafft es nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "die rechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2 GG vorgesehenen Volksabstimmungen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-476f104d724e9303",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Arbeitsbedingungen bei bestimmten öffentlichen Aufträgen fest; Matching-Verfahren für Arbeitssuchende führt es nicht ein.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt Arbeitsbedingungen bei bestimmten öffentlichen Aufträgen fest; Matching-Verfahren für Arbeitssuchende führt es nicht ein.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "stellenorientierte, passgenauere „Matching“-Verfahren für Arbeitssuchende einführen,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-476f104d724e9303",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; eine Prämie oder Rentenbeitragsgutschrift für Neugeborene sieht es nicht vor.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; eine Prämie oder Rentenbeitragsgutschrift für Neugeborene sieht es nicht vor.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "eine Willkommensprämie von 20.000 € für neugeborene Babys",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-66df624930e5d6ee",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht Rückgewinnungsprogramme für abgewanderte Leistungsträger.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht Rückgewinnungsprogramme für abgewanderte Leistungsträger.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "Rückgewinnungsprogramme für abgewanderte Leistungsträger.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-66df624930e5d6ee",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-745d0369f0a2d8c9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Arbeitsbedingungen bei öffentlichen Aufträgen; Zulagen für Überstunden von Polizei oder Rettungskräften regelt es nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Arbeitsbedingungen bei öffentlichen Aufträgen; Zulagen für Überstunden von Polizei oder Rettungskräften regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "sowie weitere Zulagen für Überstunden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-745d0369f0a2d8c9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-788e0409a117a456",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; eine dreijährige Beitragszeit für den Anspruch auf Arbeitslosengeld regelt es nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; eine dreijährige Beitragszeit für den Anspruch auf Arbeitslosengeld regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "erst nach drei vollen Beitragsjahren eintreten",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-788e0409a117a456",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7ae761817bfa1f80",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht die Einziehung kriminell erworbener Vermögen.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht die Einziehung kriminell erworbener Vermögen.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "Durch kriminelle Aktivitäten erworbene Vermögen müssen konsequent eingezogen werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7ae761817bfa1f80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-84332e4e1f61f7bd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; einen zusätzlichen Steuergrundfreibetrag für Rentner schafft es nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; einen zusätzlichen Steuergrundfreibetrag für Rentner schafft es nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "zusätzlichen Steuergrundfreibetrag in Höhe von 12.000 €",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-84332e4e1f61f7bd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-94dcaf10c59195af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht die fachliche Auswahl oder Besetzung des Spitzenpersonals des Staates.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht die fachliche Auswahl oder Besetzung des Spitzenpersonals des Staates.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "Grundsätze der fachlichen Eignung und beruflichen Qualifikation haben auch für das Spitzenpersonal des Staates zu gelten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-94dcaf10c59195af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; eine Finanzierungspflicht nach dem Konnexitätsprinzip enthält der angeführte Regelungsbereich nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; eine Finanzierungspflicht nach dem Konnexitätsprinzip enthält der angeführte Regelungsbereich nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "Wir fordern die strikte Einhaltung des verfassungsrechtlich geregelten Prinzips.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht ein Verfahren für Personen aus anderen Asyl-Herkunftsländern.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei öffentlichen Aufträgen, nicht ein Verfahren für Personen aus anderen Asyl-Herkunftsländern.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "bei Personen aus anderen Asyl-Herkunftsländern verfahren.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9dfe0b3a5f13a656",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; die Anwendung von Lkw-Überholverboten regelt es nicht.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; die Anwendung von Lkw-Überholverboten regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "konsequente Anwendung bestehender Lkw-Überholverbote",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9dfe0b3a5f13a656",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9e857b54417ad0fd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Arbeitsbedingungen bei öffentlichen Aufträgen, nicht Gefährdungszulagen für Polizei oder Rettungskräfte.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Arbeitsbedingungen bei öffentlichen Aufträgen, nicht Gefährdungszulagen für Polizei oder Rettungskräfte.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "mit Gefährdungszulagen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9e857b54417ad0fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9f166ee6262164e1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; organisierte Kontakte zwischen Arbeitsvermittlern und Arbeitgebern richtet es nicht ein.",
+          "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "870773df588683359e103a283f41aa10004604599330107151e1c95634091b1c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Tariftreue bei öffentlichen Aufträgen; organisierte Kontakte zwischen Arbeitsvermittlern und Arbeitgebern richtet es nicht ein.",
+            "law_passage_id": "bgbl-1-2026-119-p-db4647c50c19f065",
+            "law_quote": "Dieses Gesetz gilt mit Ausnahme des § 14 ab einem geschätzten Auftragswert oder Vertragswert von 50 000 Euro ohne Umsatzsteuer für die Vergabe und Ausführung öffentlicher Bau- und Dienstleistungsaufträge",
+            "criterion_quote": "die direkte Kontaktpflege zwischen Arbeitsvermittler und relevanten Arbeitgebern organisieren,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9f166ee6262164e1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a366ab595bdf624f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei bestimmten Bundesaufträgen, nicht die Finanzierung von Ladeinfrastruktur.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei bestimmten Bundesaufträgen, nicht die Finanzierung von Ladeinfrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ebenso die Finanzierung der Ladeinfrastruktur aus öffentlichen Mitteln.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a366ab595bdf624f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a81f4dcc266c340a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Besoldung von Polizei oder Rettungskräften.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Besoldung von Polizei oder Rettungskräften.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Bundeseinheitliche Besoldung",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a81f4dcc266c340a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-add19fe6acad6729",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kontrollen betreffen Tariftreue bei erfassten Bundesaufträgen; eine Überwachung von Kabotage- und Sozialvorschriften mittels Maut- und Fahrtenschreiberdaten ist nicht geregelt.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Kontrollen betreffen Tariftreue bei erfassten Bundesaufträgen; eine Überwachung von Kabotage- und Sozialvorschriften mittels Maut- und Fahrtenschreiberdaten ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Hierzu sollen sowohl die Mautdaten als auch die Daten aus dem intelligenten Fahrtenschreiber genutzt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-add19fe6acad6729",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Versammlungen oder einem Verbot der Al-Quds-Tage.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Versammlungen oder einem Verbot der Al-Quds-Tage.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Al-Quds-Tage in Berlin, wo Demonstranten die Zerstörung Israels fordern, sind dauerhaft zu verbieten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Arbeitsbedingungen bei bestimmten Bundesaufträgen, nicht die Besetzung öffentlicher Ämter oder Beamten- und Richterstellen.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Arbeitsbedingungen bei bestimmten Bundesaufträgen, nicht die Besetzung öffentlicher Ämter oder Beamten- und Richterstellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Öffentliche Ämter, Beamten- und Richterstellen sind ausschließlich nach „Eignung, Befähigung und fachlicher Leistung” zu vergeben (Art. 33 Abs. 2 GG)",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bb0388e490efdb58",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine Zulagen für Sondereinsätze von Polizei oder Rettungskräften vor.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine Zulagen für Sondereinsätze von Polizei oder Rettungskräften vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und Sondereinsätze für Polizei und Rettungskräfte.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bb0388e490efdb58",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Die Prüfstelle kontrolliert Tariftreue bei erfassten Bundesaufträgen, nicht die Finanzierung oder Projekte von NGOs.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Prüfstelle kontrolliert Tariftreue bei erfassten Bundesaufträgen, nicht die Finanzierung oder Projekte von NGOs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine detaillierte Prüfung dieser Organisationen und deren Projekte",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c70d50045726aba6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Auswahlgrundsätze noch Besetzungsverfahren für Geschäftsführungen öffentlicher Unternehmen.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Auswahlgrundsätze noch Besetzungsverfahren für Geschäftsführungen öffentlicher Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dies gilt auch für die Geschäftsführungen aller Unternehmen, die von der öffentlichen Hand beherrscht werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c70d50045726aba6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Strafvorschrift für sogenannte Friedensrichter oder eine Regelung zu deren Tätigkeit.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Strafvorschrift für sogenannte Friedensrichter oder eine Regelung zu deren Tätigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sie ist unter Strafe zu stellen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cecf89f33f18e929",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Motorradfahrverboten oder Kollektivmaßnahmen im Straßenverkehr.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Motorradfahrverboten oder Kollektivmaßnahmen im Straßenverkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die AfD lehnt zudem Kollektivmaßnahmen wie Fahrverbote für Motorräder aufgrund Fehlverhaltens Einzelner ab.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cecf89f33f18e929",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cfc999c4ee32c427",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Berechtigungsschein für private Arbeitsvermittlung und keine Ansprüche gekündigter Arbeitnehmer über 50.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen Berechtigungsschein für private Arbeitsvermittlung und keine Ansprüche gekündigter Arbeitnehmer über 50.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zudem sollen Arbeitnehmer über 50 Jahre bereits zum Zeitpunkt der Kündigung durch den Arbeitgeber Anspruch auf einen Berechtigungsschein für eine private Arbeitsvermittlung erhalten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cfc999c4ee32c427",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d71fe8429512e925",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Rechtswirkung von Entscheidungen sogenannter Friedensrichter.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Rechtswirkung von Entscheidungen sogenannter Friedensrichter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Seine Entscheidungen dürfen keine Rechtswirkung entfalten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d71fe8429512e925",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e3be474151f884a7",
+          "disposition": "missing_context",
+          "rationale": "Der Text nennt „Zivilrechtliche Sanktionen“ nur als Überschrift; ohne den Inhalt der Vorschrift lässt sich nicht beurteilen, ob Ansprüche gegen Verursacher erleichtert werden.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Der Text nennt „Zivilrechtliche Sanktionen“ nur als Überschrift; ohne den Inhalt der Vorschrift lässt sich nicht beurteilen, ob Ansprüche gegen Verursacher erleichtert werden.",
+            "law_passage_id": "bgbl-1-2026-119-p-8f0357e6f8f6b465",
+            "law_quote": "Zivilrechtliche Sanktionen",
+            "criterion_quote": "die Erleichterung der Geltendmachung und Durchsetzung zivilrechtlicher Ansprüche gegenüber den Verursachern.",
+            "caveats": [
+              "Der verfügbare Gesetzestext enthält zu § 11 nur die Überschrift."
+            ],
+            "criterion_id": "afd-2025-ac-e3be474151f884a7",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-137",
       "analysis_sha256": "b3bbc2658bd97c6f08c386736afa5902fcfcc8df3ee18ae8796f0462c167bdae",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-033f965cbbd058a3",
@@ -59294,7 +60873,1115 @@
         "afd-2025-ac-f0313b9392200a5e"
       ],
       "omitted_count": 642,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vergaberegeln für öffentliche Aufträge; zur Asylverfahrensberatung enthält es keine Regelung.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vergaberegeln für öffentliche Aufträge; zur Asylverfahrensberatung enthält es keine Regelung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c0ab585dbfd8f42",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur NATO-Osterweiterung oder zu deren Ablehnung.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur NATO-Osterweiterung oder zu deren Ablehnung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c0ab585dbfd8f42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-198a967ab2e77f26",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht einen Ausschluss bei nicht auszuschließenden Risiken für die nationale Sicherheit, verbietet aber nicht die Beteiligung chinesisch kontrollierter Unternehmen an digitaler Infrastruktur.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz ermöglicht einen Ausschluss bei nicht auszuschließenden Risiken für die nationale Sicherheit, verbietet aber nicht die Beteiligung chinesisch kontrollierter Unternehmen an digitaler Infrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-198a967ab2e77f26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-29aacc1a604eb0ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine Einziehung von Vermögen wegen der im Kriterium genannten Tätigkeit vor.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine Einziehung von Vermögen wegen der im Kriterium genannten Tätigkeit vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-29aacc1a604eb0ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2c1dd86bb9e1c7ed",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Vergabeverfahren und Vergabekammern, nicht eine Aufstockung des Justizpersonals.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Vergabeverfahren und Vergabekammern, nicht eine Aufstockung des Justizpersonals.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2c1dd86bb9e1c7ed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft öffentliche Auftragsvergabe; eine Überprüfung oder Streichung von Corona-Regelungen ist nicht vorgesehen.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft öffentliche Auftragsvergabe; eine Überprüfung oder Streichung von Corona-Regelungen ist nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3e9305425666b841",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Ermittlung von Saboteuren oder zu deren Schadenersatzpflicht.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Ermittlung von Saboteuren oder zu deren Schadenersatzpflicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3e9305425666b841",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-402a96d635c3e334",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen die Vergabe öffentlicher Aufträge, nicht den Erhalt innerstädtischer Parkplätze.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen die Vergabe öffentlicher Aufträge, nicht den Erhalt innerstädtischer Parkplätze.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-402a96d635c3e334",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-53cd9168e7833522",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz hebt keine Flottengrenzwerte auf und ändert keine entsprechenden Vorgaben.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz hebt keine Flottengrenzwerte auf und ändert keine entsprechenden Vorgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-53cd9168e7833522",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Willkommensprämie und regelt weder Rentenbeiträge noch deren Gutschrift für Neugeborene.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Willkommensprämie und regelt weder Rentenbeiträge noch deren Gutschrift für Neugeborene.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderungen zu Staatsangehörigkeit oder Mehrfachstaatsangehörigkeit.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderungen zu Staatsangehörigkeit oder Mehrfachstaatsangehörigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Vergaberecht; ein Recht des Volkes, Parlamentsgesetze abzulehnen, wird nicht geregelt.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Vergaberecht; ein Recht des Volkes, Parlamentsgesetze abzulehnen, wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-78bf46351f7b8c4b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Vergabe öffentlicher Aufträge, nicht die bevorzugte Vergabe öffentlicher Grundstücke an Wohnungsbaugenossenschaften.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Vergabe öffentlicher Aufträge, nicht die bevorzugte Vergabe öffentlicher Grundstücke an Wohnungsbaugenossenschaften.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-78bf46351f7b8c4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-831680498383c473",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine strafrechtliche Regelung, die Beauftragte als Anstifter wertet.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine strafrechtliche Regelung, die Beauftragte als Anstifter wertet.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-831680498383c473",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-89e3bf01a553a252",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz behandelt öffentliche Auftragsvergabe und enthält keine Ablehnung oder Kündigung der im Kriterium genannten Verträge.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz behandelt öffentliche Auftragsvergabe und enthält keine Ablehnung oder Kündigung der im Kriterium genannten Verträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-89e3bf01a553a252",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8a53c3e03c7f467d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Vorschriften zur Strafaussetzung oder zu Mindestverbüßungszeiten.",
+          "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "61975ce3e3d471b4938d18f7ca3d7c7a2b53e33a4fdfd84ce2cdd0ccdca35141"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Vorschriften zur Strafaussetzung oder zu Mindestverbüßungszeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8a53c3e03c7f467d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8c34baf26577e822",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Vergabe öffentlicher Aufträge; eine Bestellung parlamentarischer Präsidien durch Fraktionen ist in den vorgelegten Vorschriften nicht geregelt.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Vergabe öffentlicher Aufträge; eine Bestellung parlamentarischer Präsidien durch Fraktionen ist in den vorgelegten Vorschriften nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8c34baf26577e822",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen zum Vergaberecht sehen keine biologischen Altersfeststellungen in den genannten Fällen vor.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen zum Vergaberecht sehen keine biologischen Altersfeststellungen in den genannten Fällen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-91cd8b48253c77db",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur zeitnahen Inhaftierung von Mehrfach- oder Intensivtätern.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur zeitnahen Inhaftierung von Mehrfach- oder Intensivtätern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-91cd8b48253c77db",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-94dcaf10c59195af",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung zur Qualifikation von Personal betrifft Personal, das öffentliche Aufträge ausführt, nicht die Besetzung des staatlichen Spitzenpersonals.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelung zur Qualifikation von Personal betrifft Personal, das öffentliche Aufträge ausführt, nicht die Besetzung des staatlichen Spitzenpersonals.",
+            "law_passage_id": "bgbl-1-2026-137-p-3a32133e46c76448",
+            "law_quote": "die Organisation, Qualifikation und Erfahrung des mit der Ausführung des Auftrags betrauten Personals",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-94dcaf10c59195af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergaberegeln verteilen nicht die Finanzierung staatlich veranlasster Ausgaben zwischen den staatlichen Ebenen.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vergaberegeln verteilen nicht die Finanzierung staatlich veranlasster Ausgaben zwischen den staatlichen Ebenen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung über Asylverfahren oder deren Anwendung auf Personen aus weiteren Herkunftsländern.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung über Asylverfahren oder deren Anwendung auf Personen aus weiteren Herkunftsländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9dfe0b3a5f13a656",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen öffentliche Auftragsvergaben; Kontrollen oder Sanktionen zur Durchsetzung von Lkw-Überholverboten sind nicht geregelt.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen öffentliche Auftragsvergaben; Kontrollen oder Sanktionen zur Durchsetzung von Lkw-Überholverboten sind nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9dfe0b3a5f13a656",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Vergabegesetz enthält keine Ablehnung der Internationalen Gesundheitsvorschriften; es tritt zudem erst am 1. Juli 2026 in Kraft, nach dem im Kriterium genannten Termin.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Vergabegesetz enthält keine Ablehnung der Internationalen Gesundheitsvorschriften; es tritt zudem erst am 1. Juli 2026 in Kraft, nach dem im Kriterium genannten Termin.",
+            "law_passage_id": "bgbl-1-2026-137-p-26d2f8d65ac86f81",
+            "law_quote": "Dieses Gesetz tritt am 1. Juli 2026 in Kraft.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a229d9f1ad6b5904",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Ausschlussgründe bei Vergabeverfahren, nicht den Ausschluss extremistenunterstützender Vereine und Verbände von staatlichen Zuwendungen.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen Ausschlussgründe bei Vergabeverfahren, nicht den Ausschluss extremistenunterstützender Vereine und Verbände von staatlichen Zuwendungen.",
+            "law_passage_id": "bgbl-1-2026-137-p-4582c62b21034832",
+            "law_quote": "ein Unternehmen gemäß § 124 Absatz 1 auch dann von der Teilnahme an einem Vergabeverfahren ausgeschlossen werden kann, wenn das Unternehmen nicht die erforderliche Vertrauenswürdigkeit aufweist, um Risiken für die nationale Sicherheit auszuschließen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a229d9f1ad6b5904",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-af09277460f39a13",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Gebrauch gendergerechter Sprache in öffentlichen Einrichtungen oder staatlichen Stellen.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Gebrauch gendergerechter Sprache in öffentlichen Einrichtungen oder staatlichen Stellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-af09277460f39a13",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b29b1f260c3efbc3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schreiben keine Schaffung zusätzlicher Lkw-Parkplätze vor und belegen keine Zunahme ihres Bestands.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schreiben keine Schaffung zusätzlicher Lkw-Parkplätze vor und belegen keine Zunahme ihres Bestands.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b29b1f260c3efbc3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b2b3cb78a7a8600a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Ermittlung von Saboteuren.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Ermittlung von Saboteuren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b2b3cb78a7a8600a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b585a01cdd51f9b5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberegel zur Gleichbehandlung der Geschlechter bei Entgeltfragen belegt nicht, dass die AfD im Bundestag für die Aufhebung von Quoten- oder Ungleichbehandlungsgesetzen eintritt.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vergaberegel zur Gleichbehandlung der Geschlechter bei Entgeltfragen belegt nicht, dass die AfD im Bundestag für die Aufhebung von Quoten- oder Ungleichbehandlungsgesetzen eintritt.",
+            "law_passage_id": "bgbl-1-2026-137-p-ecc65a922cb761ab",
+            "law_quote": "die rechtlichen Vorgaben über die Gleichbehandlung der Geschlechter in Bezug auf die Entgeltgleichheit",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b585a01cdd51f9b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b8e8194ad7b3febc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Vergabegesetz enthält keine Regelung zum Bau von Minaretten.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Vergabegesetz enthält keine Regelung zum Bau von Minaretten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b8e8194ad7b3febc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
+          "disposition": "no_supported_link",
+          "rationale": "Die Eignungskriterien für Auftragnehmer betreffen Vergabeverfahren und legen nicht die Kriterien für die Besetzung öffentlicher Ämter sowie von Beamten- und Richterstellen fest.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Eignungskriterien für Auftragnehmer betreffen Vergabeverfahren und legen nicht die Kriterien für die Besetzung öffentlicher Ämter sowie von Beamten- und Richterstellen fest.",
+            "law_passage_id": "bgbl-1-2026-137-p-918c1a8967a72599",
+            "law_quote": "Eignungskriterien und geforderte Eignungsnachweise müssen mit dem Auftragsgegenstand in Verbindung und zu diesem sowie dem Auftragswert in einem angemessenen Verhältnis stehen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regel, nach der der Bundestag bestimmte Rechtsverordnungen ändern oder ablehnen kann, verleiht dem Volk kein Recht, vom Parlament beschlossene Gesetze zu ändern.",
+          "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd2b5d443483bd6ef0d8cc8239350caa07633125555a7e52c855b74d196a45c9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regel, nach der der Bundestag bestimmte Rechtsverordnungen ändern oder ablehnen kann, verleiht dem Volk kein Recht, vom Parlament beschlossene Gesetze zu ändern.",
+            "law_passage_id": "bgbl-1-2026-137-p-251c8c80db2b7ee9",
+            "law_quote": "Die Rechtsverordnungen können durch Beschluss des Bundestages geändert oder abgelehnt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zum Vergaberecht belegen keine Prüfung von NGOs oder deren Projekten.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen zum Vergaberecht belegen keine Prüfung von NGOs oder deren Projekten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„eine detaillierte Prüfung dieser Organisationen und deren Projekte“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c70d50045726aba6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regel zu Qualifikation betrifft Personal für die Auftragsausführung, nicht Besetzungsregeln für Geschäftsführungen öffentlicher Unternehmen.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regel zu Qualifikation betrifft Personal für die Auftragsausführung, nicht Besetzungsregeln für Geschäftsführungen öffentlicher Unternehmen.",
+            "law_passage_id": "bgbl-1-2026-137-p-3a32133e46c76448",
+            "law_quote": "„die Organisation, Qualifikation und Erfahrung des mit der Ausführung des Auftrags betrauten Personals“",
+            "criterion_quote": "„Geschäftsführungen aller Unternehmen, die von der öffentlichen Hand beherrscht werden“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c70d50045726aba6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c8b2bd4c9befbcbe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberechtsänderungen regeln keine Transparenz über Überwachungsmöglichkeiten gegenüber Anwendern.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vergaberechtsänderungen regeln keine Transparenz über Überwachungsmöglichkeiten gegenüber Anwendern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„vollständige Transparenz hinsichtlich der Überwachungsmöglichkeiten gegenüber dem Anwender“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c8b2bd4c9befbcbe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d4c6548188f504d9",
+          "disposition": "no_supported_link",
+          "rationale": "Ausnahmen für bestimmte sicherheitsbezogene Aufträge betreffen nicht den Schutz von Bereichen vor Übernahmen.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Ausnahmen für bestimmte sicherheitsbezogene Aufträge betreffen nicht den Schutz von Bereichen vor Übernahmen.",
+            "law_passage_id": "bgbl-1-2026-137-p-b213cccb58109639",
+            "law_quote": "„Leistungen betreffen, die […] für den Grenzschutz, die Bekämpfung des Terrorismus oder der organisierten Kriminalität […] bestimmt sind“",
+            "criterion_quote": "„Sicherheitsrelevante und grundversorgungsrelevante Bereiche müssen dabei vor Übernahmen geschützt werden.“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d4c6548188f504d9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d71fe8429512e925",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur öffentlichen Auftragsvergabe enthalten keine Bestimmung zur Rechtswirkung von Entscheidungen sogenannter Friedensrichter.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zur öffentlichen Auftragsvergabe enthalten keine Bestimmung zur Rechtswirkung von Entscheidungen sogenannter Friedensrichter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„Seine Entscheidungen dürfen keine Rechtswirkung entfalten.“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d71fe8429512e925",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e5a358546e6934a8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Vergabeverfahren, nicht regelmäßige Taktungen von Transitverbindungen oder die Rollende Landstraße.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Vergabeverfahren, nicht regelmäßige Taktungen von Transitverbindungen oder die Rollende Landstraße.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„Deutschland mit regelmäßigen Taktungen etabliert werden.“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e5a358546e6934a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberechtsänderungen regeln weder die Finanzierung von Zuwanderungskosten noch deren Zuordnung zu staatlichen Ebenen.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vergaberechtsänderungen regeln weder die Finanzierung von Zuwanderungskosten noch deren Zuordnung zu staatlichen Ebenen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„insbesondere auch hier das Konnexitätsprinzip eingehalten wird.“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ec384f1f6afc05fe",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vergabevorschriften und hebt weder ein Verbrennerverbot noch Flottengrenzwerte auf.",
+          "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbd4e62802aa1fb79d421ccd8fe668594ae9f36231f150450950e7f90cd0b693"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vergabevorschriften und hebt weder ein Verbrennerverbot noch Flottengrenzwerte auf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„Aufhebung des Verbrennerverbots und der unerreichbaren Flottengrenzwerte“",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ec384f1f6afc05fe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f0313b9392200a5e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen die Vergabe öffentlicher Aufträge; eine Umstrukturierung des Bahnkonzerns oder eine Steuerung der Infrastruktursparte regeln sie nicht.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen die Vergabe öffentlicher Aufträge; eine Umstrukturierung des Bahnkonzerns oder eine Steuerung der Infrastruktursparte regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f0313b9392200a5e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-138",
@@ -59374,7 +62061,413 @@
         "afd-2025-ac-fb42061116418c60"
       ],
       "omitted_count": 638,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln Verbraucherkredite und Mobilitätsförderung; eine Regel zur Asylverfahrensberatung ist darin nicht ersichtlich.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen regeln Verbraucherkredite und Mobilitätsförderung; eine Regel zur Asylverfahrensberatung ist darin nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen enthalten keine Regel zur Anspruchsdauer des Arbeitslosengeldes oder zu erstmals ab 2026 Beschäftigten.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Passagen enthalten keine Regel zur Anspruchsdauer des Arbeitslosengeldes oder zu erstmals ab 2026 Beschäftigten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0d23c2afee59291b",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgesehene Teilerlass betrifft Maßnahmen bei finanziellen Schwierigkeiten aus Verbraucherdarlehen; ein Erlass des Ehe-Start-Kredits je Kind ist nicht geregelt.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgesehene Teilerlass betrifft Maßnahmen bei finanziellen Schwierigkeiten aus Verbraucherdarlehen; ein Erlass des Ehe-Start-Kredits je Kind ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0d23c2afee59291b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen stellen keine Mittel für Maßnahmen zur Durchsetzung des Rechtsstaats in sogenannten No-go-Areas bereit.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen stellen keine Mittel für Maßnahmen zur Durchsetzung des Rechtsstaats in sogenannten No-go-Areas bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen ändern weder das Rentenniveau noch regeln sie dessen Annäherung an einen westeuropäischen Durchschnitt.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen ändern weder das Rentenniveau noch regeln sie dessen Annäherung an einen westeuropäischen Durchschnitt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-263e5eae108f909e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen enthalten keine Regel zu Anspruchsvoraussetzungen der Arbeitslosenversicherung.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen enthalten keine Regel zu Anspruchsvoraussetzungen der Arbeitslosenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-263e5eae108f909e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Eine rechtliche Grundlage für Volksabstimmungen nach Artikel 20 Absatz 2 GG wird in den Passagen nicht geschaffen.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine rechtliche Grundlage für Volksabstimmungen nach Artikel 20 Absatz 2 GG wird in den Passagen nicht geschaffen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen überprüfen oder streichen keine im Zusammenhang mit der Corona-Krise geänderten Gesetze oder Richtlinien.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen überprüfen oder streichen keine im Zusammenhang mit der Corona-Krise geänderten Gesetze oder Richtlinien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-4a2b8c60b688db80",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kreditregeln sehen keinen Erlass der BAföG-Rückzahlung wegen einer Geburt während der Ausbildung oder des Studiums vor.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Kreditregeln sehen keinen Erlass der BAföG-Rückzahlung wegen einer Geburt während der Ausbildung oder des Studiums vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-4a2b8c60b688db80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5417f14bfba619fb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln keine Verfassungsänderungen und sehen keine Volksabstimmung darüber vor.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln keine Verfassungsänderungen und sehen keine Volksabstimmung darüber vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5417f14bfba619fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen führen keine Willkommensprämie oder Gutschrift auf Rentenbeiträge für Neugeborene ein.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen führen keine Willkommensprämie oder Gutschrift auf Rentenbeiträge für Neugeborene ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen ändern keine baurechtlichen Anforderungen für bestehende Bauwerke.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen ändern keine baurechtlichen Anforderungen für bestehende Bauwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Zustimmung des Volkes als Voraussetzung für Änderungen des Grundgesetzes wird nicht geregelt.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Zustimmung des Volkes als Voraussetzung für Änderungen des Grundgesetzes wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen schaffen kein Recht des Volkes, vom Parlament beschlossene Gesetze zu ändern oder abzulehnen.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen schaffen kein Recht des Volkes, vom Parlament beschlossene Gesetze zu ändern oder abzulehnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-755932e3054f13dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen enthalten keine Regel zur aufenthaltsrechtlichen Wirkung einer Duldung.",
+          "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c5e2edb4cc69b02e68cda931031125292ef71a1e5691c2e51889fae31f7154e2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen enthalten keine Regel zur aufenthaltsrechtlichen Wirkung einer Duldung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-755932e3054f13dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-14",
@@ -63691,45 +66784,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4431,
+    "calls": 4529,
     "cache_hits": 67,
-    "subdivision_cache_hits": 7,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 22.911485,
-    "reported_cost_calls": 4072,
+    "reported_cost_usd": 23.353416,
+    "reported_cost_calls": 4170,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 2.147221,
     "unknown_cost_calls": 359,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 25.058706,
-    "prompt_tokens": 44608837,
-    "completion_tokens": 6967776,
+    "budget_exposure_usd": 25.500637,
+    "prompt_tokens": 45860450,
+    "completion_tokens": 7203214,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 157,
-        "reported_cost_usd": 3.7877597499999993,
+        "calls": 167,
+        "reported_cost_usd": 4.074859749999999,
         "unknown_cost_reserved_usd": 9.43689570931383e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 4.163336342344337e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 61,
-        "reported_cost_usd": 0.7857392500000001,
+        "calls": 64,
+        "reported_cost_usd": 0.8195332500000001,
         "unknown_cost_reserved_usd": 7.632783294297951e-17,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1316,
-        "reported_cost_usd": 1.4535161050000007,
+        "calls": 1401,
+        "reported_cost_usd": 1.5745530425000007,
         "unknown_cost_reserved_usd": 1.1627453,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 3.469446951953614e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

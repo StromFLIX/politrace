@@ -63114,7 +63114,7 @@
     {
       "law_id": "bgbl-1-2026-111",
       "analysis_sha256": "2e868d1ed3d498cd69bc0503cf92bac39b7d1edfc9be4d1f1878ecf9bea238f1",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-023e7cb42f262099",
@@ -65214,6 +65214,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-c7b5b150d56ad373",
+          "disposition": "missing_context",
+          "rationale": "Für Asylgrenzverfahren gilt eine Entscheidungsfrist von acht Wochen, unter Voraussetzungen verlängerbar auf zwölf Wochen. Ob diese Verfahren dadurch kürzer dauern als zuvor, lässt sich ohne Vergleichsgrundlage nicht feststellen.",
+          "input_sha256": "3802fa3c4e3baded72ce2f2e14b35c9ba1b13efd0f52e8e2f75755c1338167b0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59440a24711410436b66606da3d4a95d7e81f27ab17ce1bf0b04ef73eee799f1"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3802fa3c4e3baded72ce2f2e14b35c9ba1b13efd0f52e8e2f75755c1338167b0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Für Asylgrenzverfahren gilt eine Entscheidungsfrist von acht Wochen, unter Voraussetzungen verlängerbar auf zwölf Wochen. Ob diese Verfahren dadurch kürzer dauern als zuvor, lässt sich ohne Vergleichsgrundlage nicht feststellen.",
+            "law_passage_id": "bgbl-1-2026-111-p-680622f223038dd5",
+            "law_quote": "entscheidet das Bundesamt im Einklang mit\nArtikel 51 Absatz 2 Unterabsatz 2 der Verordnung (EU) 2024/1348 innerhalb von acht Wochen nach\nRegistrierung des Antrags. Das Bundesamt kann die Frist auf zwölf Wochen verlängern",
+            "criterion_quote": "Wir beschleunigen Asylverfahren und Rückführungen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-c7b5b150d56ad373",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-c8952bce9c54156b",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften regeln keine Kontrollquittungen bei Polizeikontrollen.",
@@ -65371,6 +65403,38 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-e7ddf13abaef3eb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e8961a74d5d948db",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift ermächtigt die Bundesregierung, sichere Drittstaaten zu bestimmen. Sie ordnet keine Überführung von Asylsuchenden an.",
+          "input_sha256": "3802fa3c4e3baded72ce2f2e14b35c9ba1b13efd0f52e8e2f75755c1338167b0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d451cea2f664c83a9b707764d8127dc4f7760d0f7f0454f54a85e57066ab7ba"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3802fa3c4e3baded72ce2f2e14b35c9ba1b13efd0f52e8e2f75755c1338167b0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Die Vorschrift ermächtigt die Bundesregierung, sichere Drittstaaten zu bestimmen. Sie ordnet keine Überführung von Asylsuchenden an.",
+            "law_passage_id": "bgbl-1-2026-111-p-ac6a153cd29ece99",
+            "law_quote": "Die Bundesregierung bestimmt durch Rechtsverordnung ohne Zustimmung des Bundesrates sichere\nDrittstaaten im Sinne des Artikels 64 der Verordnung (EU) 2024/1348.",
+            "criterion_quote": "Jeder, der in Europa Asyl beantragt, soll in einen sicheren Drittstaat überführt\nwerden,",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e8961a74d5d948db",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -66619,7 +66683,7 @@
     {
       "law_id": "bgbl-1-2026-116",
       "analysis_sha256": "ae2895a561cf4fbaa94e0777cc09eae9bddd37649977fafeb850146a54b0ad65",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -66637,6 +66701,114 @@
       ],
       "omitted_count": 953,
       "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz senkt befristet Energiesteuern auf Kraftstoffe und enthält keine Regelung zum Mercosur-Abkommen oder zu dessen Inkrafttreten.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz senkt befristet Energiesteuern auf Kraftstoffe und enthält keine Regelung zum Mercosur-Abkommen oder zu dessen Inkrafttreten.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Energiesteuern auf Kraftstoffe und regelt keine Entlassung von Beamten oder Soldaten.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Energiesteuern auf Kraftstoffe und regelt keine Entlassung von Beamten oder Soldaten.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert befristet Energiesteuersätze für Kraftstoffe und enthält keine Einzahlungen in Altersvorsorgedepots für Kinder.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert befristet Energiesteuersätze für Kraftstoffe und enthält keine Einzahlungen in Altersvorsorgedepots für Kinder.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7106ae7ae22d8bf9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Energiesteuerregelungen für Kraftstoffe, nicht die steuerliche Absetzbarkeit haushaltsnaher Dienstleistungen.",
+          "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7899a74be8ef1d7ae324e36c41bc5744cc3ce90c4456a3d1e4c31d3b3fc4130c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Energiesteuerregelungen für Kraftstoffe, nicht die steuerliche Absetzbarkeit haushaltsnaher Dienstleistungen.",
+            "law_passage_id": "bgbl-1-2026-116-p-53a94e78c91c6d76",
+            "law_quote": "Zweites Gesetz zur Änderung des Energiesteuergesetzes zur temporären Absenkung der Energiesteuer für Kraftstoffe",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7106ae7ae22d8bf9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
           "disposition": "no_supported_link",
@@ -66860,7 +67032,7 @@
     {
       "law_id": "bgbl-1-2026-117",
       "analysis_sha256": "d2ff5341df580ad36b74b1539af95736bf1687d854fbec572fa6ec52ef0d8ed4",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-1d1c165f7b88d9f9",
@@ -67156,6 +67328,249 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-acd6ee4e57933023",
+          "disposition": "no_supported_link",
+          "rationale": "Das Hochseeschutzgesetz regelt Tätigkeiten zum Schutz der biologischen Vielfalt außerhalb nationaler Hoheitsbefugnisse; eine wissenschaftliche Untersuchung zur Strafmündigkeitsgrenze ist nicht vorgesehen.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Hochseeschutzgesetz regelt Tätigkeiten zum Schutz der biologischen Vielfalt außerhalb nationaler Hoheitsbefugnisse; eine wissenschaftliche Untersuchung zur Strafmündigkeitsgrenze ist nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir lassen dies durch eine wissenschaftliche Untersuchung prüfen, um gegebenenfalls das Mindestalter für die Strafmündigkeit anzupassen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-acd6ee4e57933023",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b17ef0317bd967f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft den Schutz der Meeresbiodiversität auf hoher See, enthält aber keine Unterstützungsmaßnahmen für Land- und Forstwirte, Waldbesitzer oder Jäger; zudem nimmt es bestimmte Fischereitätigkeiten aus.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz betrifft den Schutz der Meeresbiodiversität auf hoher See, enthält aber keine Unterstützungsmaßnahmen für Land- und Forstwirte, Waldbesitzer oder Jäger; zudem nimmt es bestimmte Fischereitätigkeiten aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir unterstützen Land- und Forstwirte, Waldbesitzer,\nJäger und Fischer dabei, die Ökosysteme und ihre Leistungen zu erhalten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b17ef0317bd967f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b607d592ddfba694",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Berichts- und Mitteilungspflichten zu marinen Ressourcen und genehmigten Tätigkeiten vor, nicht aber eine öffentliche Ausweisung der zweckmäßigen Verwendung von Bundesmitteln durch die Länder.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht Berichts- und Mitteilungspflichten zu marinen Ressourcen und genehmigten Tätigkeiten vor, nicht aber eine öffentliche Ausweisung der zweckmäßigen Verwendung von Bundesmitteln durch die Länder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Länder sollen transparent machen, inwieweit sie Geld vom Bund\nzweckmäßig eingesetzt haben",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b607d592ddfba694",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Schutz der Hochseebiodiversität und dokumentiert keine Prüfung, ob die Umsetzung einer anderen Richtlinie über das notwendige EU-Regelungsmaß hinausgeht.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Schutz der Hochseebiodiversität und dokumentiert keine Prüfung, ob die Umsetzung einer anderen Richtlinie über das notwendige EU-Regelungsmaß hinausgeht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kurzfristig prüfen wir, wo die Umsetzung der entsprechenden\nRichtlinie entscheidend über das notwendige europäische Regelungsmaß hinausgeht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-cc3e2719ad29f120",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Zuständigkeit oder Prüftätigkeit des Nationalen Normenkontrollrats für untergesetzliche Vorschriften.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Zuständigkeit oder Prüftätigkeit des Nationalen Normenkontrollrats für untergesetzliche Vorschriften.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "auch damit der NKR verschärft untergesetzliche Vorschriften in den Blick\nnehmen kann.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-cc3e2719ad29f120",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d9576b626cb773e9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Hochseeschutz und enthält keine Regelungen zur digitalen Einreichung von BAföG-Anträgen.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Hochseeschutz und enthält keine Regelungen zur digitalen Einreichung von BAföG-Anträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir sorgen dafür, dass\nBAföG-Anträge künftig einfacher und vollständig digital gestellt, bearbeitet und damit\nschneller beschieden werden können.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d9576b626cb773e9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Banken oder zur Struktur des Bankensystems.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Banken oder zur Struktur des Bankensystems.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Vor allem müssen die Besonderheiten unseres bewährten Drei-Säulen-Systems aus Privatbanken, öffentlich-rechtlichen\nBanken und Genossenschaftsbanken erhalten bleiben.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Hochseetätigkeiten und deren Umweltfolgen, nicht die Verfolgung oder Ahndung der genannten Straftaten.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Hochseetätigkeiten und deren Umweltfolgen, nicht die Verfolgung oder Ahndung der genannten Straftaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Öffentlichen Raum nicht dem Hass preisgeben. Delikte wie das Zeigen verfassungsfeindlicher Symbole sowie verfassungsfeindliche und antisemitische Äußerungen müssen mit\nder ganzen Konsequenz des Rechtsstaates verfolgt und geahndet werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e6fd3dd3f7d6f0d1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Genehmigungs- und Umweltprüfungsverfahren für bestimmte Tätigkeiten auf hoher See vor, passt aber keine Zulassungsverfahren für innovative Produkte an.",
+          "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbde3178cc98faa1cc5d7f85ccea96683db2b759d22630c8f7bc603a9a5c90cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht Genehmigungs- und Umweltprüfungsverfahren für bestimmte Tätigkeiten auf hoher See vor, passt aber keine Zulassungsverfahren für innovative Produkte an.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Zulassungsverfahren passen wir an, damit innovative Produkte schneller verfügbar sind und die Nutzung und Förderung biologischer und risikoreduzierter Mittel\nvereinfacht wird.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e6fd3dd3f7d6f0d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
         }
       ]
     },
@@ -67189,7 +67604,575 @@
         "cdu-csu-2025-ac-f9680e1924a12725"
       ],
       "omitted_count": 943,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine allgemeine Regel, nach der Bürger und Unternehmen Daten nur einmal an die Verwaltung übermitteln müssen.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine allgemeine Regel, nach der Bürger und Unternehmen Daten nur einmal an die Verwaltung übermitteln müssen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bürger und Unternehmen ihre Daten nur ein einziges Mal an die Verwaltung übermitteln müssen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0763e0d09555860f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Pflicht für Kriminelle, die Herkunft ihres Vermögens nachzuweisen.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Pflicht für Kriminelle, die Herkunft ihres Vermögens nachzuweisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Künftig müssen Kriminelle nachweisen, woher ihr Vermögen kommt – von der Villa bis zur Yacht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0763e0d09555860f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0c91a0becfc15f52",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur steuerlichen Behandlung von Überstundenzuschlägen.",
+          "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94d4a1c82168fc36595cf93a4c6f867bfe6b530972e9430acd76d449ababb4bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur steuerlichen Behandlung von Überstundenzuschlägen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir stellen Überstundenzuschläge bei Vollzeitarbeit steuerfrei.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0c91a0becfc15f52",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei Bundesaufträgen; es enthält keine Regelung zum Mercosur-Abkommen oder dessen Inkrafttreten.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei Bundesaufträgen; es enthält keine Regelung zum Mercosur-Abkommen oder dessen Inkrafttreten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu ausländischen Geldgebern von Vereinen oder Verbänden und deren staatlichen Kooperationen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu ausländischen Geldgebern von Vereinen oder Verbänden und deren staatlichen Kooperationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen Verwaltungsakte betreffen Feststellungen von Tariftreueverstößen, nicht die Entlassung von Beamten oder Soldaten.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehenen Verwaltungsakte betreffen Feststellungen von Tariftreueverstößen, nicht die Entlassung von Beamten oder Soldaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung über Grenzkontrollen oder deren Verlängerung.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung über Grenzkontrollen oder deren Verlängerung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-42a05b361cfdd55d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Arbeitsbedingungen und Tariftreue bei Bundesaufträgen, nicht die Überlassung freier Personalkapazitäten zwischen kooperierenden Unternehmen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Arbeitsbedingungen und Tariftreue bei Bundesaufträgen, nicht die Überlassung freier Personalkapazitäten zwischen kooperierenden Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-42a05b361cfdd55d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-53b63b07e1ee2805",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Zuzug von Angehörigen oder zu einem Geburtsdatum als Voraussetzung.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Zuzug von Angehörigen oder zu einem Geburtsdatum als Voraussetzung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-53b63b07e1ee2805",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz begründet keine Pflicht der Länder, kommunale Empfänger oder die Höhe kommunaler Vorteile und Mittel öffentlich auszuweisen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz begründet keine Pflicht der Länder, kommunale Empfänger oder die Höhe kommunaler Vorteile und Mittel öffentlich auszuweisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
+          "disposition": "no_supported_link",
+          "rationale": "Die Pflichten des Gesetzes betreffen tarifliche Arbeitsbedingungen bei Bundesaufträgen, nicht eine Arbeitspflicht für Grundsicherungsberechtigte.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Pflichten des Gesetzes betreffen tarifliche Arbeitsbedingungen bei Bundesaufträgen, nicht eine Arbeitspflicht für Grundsicherungsberechtigte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt bestimmten Stellen die erforderliche Verarbeitung von Beschäftigtendaten zur Tariftreuekontrolle; es gibt Einzelnen keine Entscheidungsbefugnis über Erhebung und Nutzung ihrer Daten.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erlaubt bestimmten Stellen die erforderliche Verarbeitung von Beschäftigtendaten zur Tariftreuekontrolle; es gibt Einzelnen keine Entscheidungsbefugnis über Erhebung und Nutzung ihrer Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-70784ae75a8b4610",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Einhaltung von Zusagen aus dem Strukturstärkungsgesetz oder von Bund-Länder-Vereinbarungen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Einhaltung von Zusagen aus dem Strukturstärkungsgesetz oder von Bund-Länder-Vereinbarungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-70784ae75a8b4610",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7106ae7ae22d8bf9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine steuerliche Absetzbarkeit haushaltsnaher Dienstleistungen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine steuerliche Absetzbarkeit haushaltsnaher Dienstleistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7106ae7ae22d8bf9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-81f33fe3b890f239",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Tarifvertragsgesetzes regelt Datenabfragen für Tariftreuekontrollen; eine Stärkung der Bereitschaft, sich an Tarifverträge zu binden, ist darin nicht ausgewiesen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Änderung des Tarifvertragsgesetzes regelt Datenabfragen für Tariftreuekontrollen; eine Stärkung der Bereitschaft, sich an Tarifverträge zu binden, ist darin nicht ausgewiesen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-81f33fe3b890f239",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keinen Ausschluss von Vereinen oder Verbänden mit ausländischen Geldgebern von staatlichen Mitteln.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keinen Ausschluss von Vereinen oder Verbänden mit ausländischen Geldgebern von staatlichen Mitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a41df20adf9f161b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder die Entscheidungsfindung der Mindestlohnkommission noch eine Pflicht zu einvernehmlichen Beschlüssen.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder die Entscheidungsfindung der Mindestlohnkommission noch eine Pflicht zu einvernehmlichen Beschlüssen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a41df20adf9f161b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b8bc0fd1ae423109",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet Kontrollen und Verfahren zur Feststellung von Tariftreueverstößen ein; eine Verkürzung der Verfahrensdauer ist nicht belegt.",
+          "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a7ac64a7d318559cc579d8b4753aa10ef2a6ab1393c8a3036279b30c52f44e79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz richtet Kontrollen und Verfahren zur Feststellung von Tariftreueverstößen ein; eine Verkürzung der Verfahrensdauer ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b8bc0fd1ae423109",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tariftreue bei bestimmten Bundesvergaben, nicht die Verfolgung oder Ahndung verfassungsfeindlicher Symbole und Äußerungen.",
+          "input_sha256": "7a6451e8675c15c17b0027625a651b8f99d46d6ba499093bcf8dfcc03320112e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7a6451e8675c15c17b0027625a651b8f99d46d6ba499093bcf8dfcc03320112e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tariftreue bei bestimmten Bundesvergaben, nicht die Verfolgung oder Ahndung verfassungsfeindlicher Symbole und Äußerungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e2bb80055f1f6a4a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderungen zur Berufskraftfahrerqualifikation.",
+          "input_sha256": "7a6451e8675c15c17b0027625a651b8f99d46d6ba499093bcf8dfcc03320112e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7a6451e8675c15c17b0027625a651b8f99d46d6ba499093bcf8dfcc03320112e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderungen zur Berufskraftfahrerqualifikation.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e2bb80055f1f6a4a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu einem Freibetrag bei der Grunderwerbsteuer für den erstmaligen Eigenheimerwerb.",
+          "input_sha256": "7a6451e8675c15c17b0027625a651b8f99d46d6ba499093bcf8dfcc03320112e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7a6451e8675c15c17b0027625a651b8f99d46d6ba499093bcf8dfcc03320112e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu einem Freibetrag bei der Grunderwerbsteuer für den erstmaligen Eigenheimerwerb.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-137",
@@ -67248,7 +68231,1281 @@
         "cdu-csu-2025-ac-fea8b875f294a705"
       ],
       "omitted_count": 916,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-03a2028d0a51dc10",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergabeänderungen dokumentieren keine Überprüfung von Flottengrenzwerten.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vergabeänderungen dokumentieren keine Überprüfung von Flottengrenzwerten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-03a2028d0a51dc10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-03b90617b676fd3b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergaberegeln ordnen weder die Schließung von Moscheen noch Maßnahmen gegen dortige Hass- oder antisemitische Predigten an.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vergaberegeln ordnen weder die Schließung von Moscheen noch Maßnahmen gegen dortige Hass- oder antisemitische Predigten an.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-03b90617b676fd3b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-045dd1d40944f52b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen berücksichtigen kleine und mittlere Unternehmen bei Eignungskriterien und Nachweisen, passen aber nicht die europäische Definition dieser Unternehmen an.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen berücksichtigen kleine und mittlere Unternehmen bei Eignungskriterien und Nachweisen, passen aber nicht die europäische Definition dieser Unternehmen an.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-045dd1d40944f52b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0763e0d09555860f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergabevorschriften führen keine Pflicht für Kriminelle ein, die Herkunft ihres Vermögens nachzuweisen.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vergabevorschriften führen keine Pflicht für Kriminelle ein, die Herkunft ihres Vermögens nachzuweisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0763e0d09555860f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0c7a8b538730130f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten einzelne vergaberechtliche Regeln für Sicherheits- und Verteidigungsaufträge, bauen den Heimatschutz aber nicht aus.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Änderungen enthalten einzelne vergaberechtliche Regeln für Sicherheits- und Verteidigungsaufträge, bauen den Heimatschutz aber nicht aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0c7a8b538730130f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19bfeb14ca60eb16",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen beschleunigen Vergabeverfahren; ein Anzeigeverfahren zur Zulassung der genannten Infrastrukturvorhaben anstelle der Planfeststellung schaffen sie nicht.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen beschleunigen Vergabeverfahren; ein Anzeigeverfahren zur Zulassung der genannten Infrastrukturvorhaben anstelle der Planfeststellung schaffen sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19bfeb14ca60eb16",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19eee4456d84d8f8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergabeänderungen regeln keine militärische Unterstützung Israels.",
+          "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6699ac0eb15c3f615a0b08155211a77f97fffbce8de3410d967582afaca73c7a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vergabeänderungen regeln keine militärische Unterstützung Israels.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19eee4456d84d8f8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergabevorschriften enthalten keine Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vergabevorschriften enthalten keine Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1a3d0cd33a65e88f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen öffentliche Beschaffungsverfahren, nicht CO₂-Preis oder CO₂-Zuschlag im Transportgewerbe.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regelungen betreffen öffentliche Beschaffungsverfahren, nicht CO₂-Preis oder CO₂-Zuschlag im Transportgewerbe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1a3d0cd33a65e88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Bestandsaufnahme zur Wiederinbetriebnahme abgeschalteter Kernkraftwerke.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Bestandsaufnahme zur Wiederinbetriebnahme abgeschalteter Kernkraftwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-32f5717d925057b6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung zum Datenservice beim Beschaffungsamt richtet keine neue Agentur für Großprojekte ein.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regelung zum Datenservice beim Beschaffungsamt richtet keine neue Agentur für Großprojekte ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-32f5717d925057b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergabevorschriften regeln keine Verlängerung von Grenzkontrollen.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vergabevorschriften regeln keine Verlängerung von Grenzkontrollen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ordnen keine Finanzierung veranlasster Leistungen oder Ausgleiche für Länder und Kommunen zu.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Regelungen ordnen keine Finanzierung veranlasster Leistungen oder Ausgleiche für Länder und Kommunen zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3a461b0ab298e374",
+          "disposition": "no_supported_link",
+          "rationale": "Die Beschaffungsvorschriften richten keine als Zollpolizei ausgestaltete Einheit ein oder bauen eine solche aus.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Beschaffungsvorschriften richten keine als Zollpolizei ausgestaltete Einheit ein oder bauen eine solche aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3a461b0ab298e374",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4a35dfc11a114a4f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften ändern Vergabeverfahren; eine Verkürzung von Planungs- und Genehmigungsverfahren oder deren Dauer ist daraus nicht belegt.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Vorschriften ändern Vergabeverfahren; eine Verkürzung von Planungs- und Genehmigungsverfahren oder deren Dauer ist daraus nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4a35dfc11a114a4f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4be6d09bc19be661",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schreiben für Planfeststellungsverfahren keinen Verfahrensleitplan vor.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften schreiben für Planfeststellungsverfahren keinen Verfahrensleitplan vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4be6d09bc19be661",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4e6ba6c76183bf7e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberegelungen enthalten keine dokumentierten Maßnahmen zur Einbindung von Spontanhelfern.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vergaberegelungen enthalten keine dokumentierten Maßnahmen zur Einbindung von Spontanhelfern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4e6ba6c76183bf7e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-56d1a43252c596d4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften enthalten keine Maßnahmen zur Information oder Sensibilisierung des Mittelstands über Cyber-Gefahren.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschriften enthalten keine Maßnahmen zur Information oder Sensibilisierung des Mittelstands über Cyber-Gefahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-56d1a43252c596d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5963ad23f6040851",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen nicht die Abziehbarkeit energetischer Sanierungskosten von der Schenkungsteuer.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Regelungen betreffen nicht die Abziehbarkeit energetischer Sanierungskosten von der Schenkungsteuer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5963ad23f6040851",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5b1b9fda2e4a2523",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen nicht die Abziehbarkeit energetischer Sanierungskosten von der Erbschaftsteuer.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Regelungen betreffen nicht die Abziehbarkeit energetischer Sanierungskosten von der Erbschaftsteuer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5b1b9fda2e4a2523",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberegelungen verpflichten Länder nicht, kommunale Empfänger und die Höhe ihrer Vorteile oder Mittel auszuweisen.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vergaberegelungen verpflichten Länder nicht, kommunale Empfänger und die Höhe ihrer Vorteile oder Mittel auszuweisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-69a66ebb5b367028",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Änderung der Pendlerpauschale.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Änderung der Pendlerpauschale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-69a66ebb5b367028",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberegelungen schaffen kein Verfahren, mit dem Personen über Erhebung und Nutzung ihrer eigenen Daten entscheiden können.",
+          "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7f209bdb924e90b6fb7ecb1b4fde458fbc0a948f8a76982a17c0b99753075606"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vergaberegelungen schaffen kein Verfahren, mit dem Personen über Erhebung und Nutzung ihrer eigenen Daten entscheiden können.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-73dc6dae281284f7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Vergabe öffentlicher Aufträge; eine Vorgabe zur kundenorientierten und transparenten Gestaltung von Produktinformationsblättern ist in den Textauszügen nicht enthalten.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz regelt die Vergabe öffentlicher Aufträge; eine Vorgabe zur kundenorientierten und transparenten Gestaltung von Produktinformationsblättern ist in den Textauszügen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-73dc6dae281284f7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Vergabeverfahren und Auftragnehmer; eine Abhängigkeit des Marktzugangs von staatlicher Förderung wird nicht geregelt.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regelungen betreffen Vergabeverfahren und Auftragnehmer; eine Abhängigkeit des Marktzugangs von staatlicher Förderung wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-79edf26bd910140b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt bei besonderen Verteidigungs- und Sicherheitsinteressen, etwa einer Bündnisverpflichtung, ein Vergabeverfahren ohne gesicherte Finanzierung; es begründet keine dauerhafte Erfüllung von NATO-Finanzierungsverpflichtungen.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz erlaubt bei besonderen Verteidigungs- und Sicherheitsinteressen, etwa einer Bündnisverpflichtung, ein Vergabeverfahren ohne gesicherte Finanzierung; es begründet keine dauerhafte Erfüllung von NATO-Finanzierungsverpflichtungen.",
+            "law_passage_id": "bgbl-1-2026-137-p-3bad472a42c78c8f",
+            "law_quote": "Bei Vorliegen besonderer Verteidigungs- und Sicherheitsinteressen kann der Auftraggeber ein Vergabeverfahren einleiten, ohne dass dessen Finanzierung gesichert ist.",
+            "criterion_quote": "Wir halten die NATO-Verpflichtungen für die Finanzierung unserer Verteidigung verlässlich und dauerhaft ein.",
+            "caveats": [
+              "Die Vorschrift betrifft Vergabeverfahren, nicht die Höhe oder dauerhafte Erfüllung von NATO-Finanzierungsverpflichtungen."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-79edf26bd910140b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7a296785238ac936",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Vergaberegeln zu Cybersicherheit und berücksichtigt kleine und mittlere Unternehmen, schafft aber keine steuerlichen Anreize für deren Cybermaßnahmen.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz enthält Vergaberegeln zu Cybersicherheit und berücksichtigt kleine und mittlere Unternehmen, schafft aber keine steuerlichen Anreize für deren Cybermaßnahmen.",
+            "law_passage_id": "bgbl-1-2026-137-p-d5d089159f208db8",
+            "law_quote": "Aspekte der Cybersicherheit oder digitalen Souveränität betreffen",
+            "criterion_quote": "Für die Cybermaßnahmen kleiner und mittlerer Unternehmen schaffen wir steuerliche Anreize und günstige Finanzierungen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7a296785238ac936",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-83b8014045a5b4cc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberegelungen enthalten keine Vorgabe zur Schließung von Moscheen wegen Hass- oder Antisemitismuspredigten.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vergaberegelungen enthalten keine Vorgabe zur Schließung von Moscheen wegen Hass- oder Antisemitismuspredigten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-83b8014045a5b4cc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen elektronischen Abläufe betreffen Vergabeakten und Vergabeverfahren, nicht eine digitale Akte für Bürgerinnen und Bürger mit Behördenzugang.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgesehenen elektronischen Abläufe betreffen Vergabeakten und Vergabeverfahren, nicht eine digitale Akte für Bürgerinnen und Bürger mit Behördenzugang.",
+            "law_passage_id": "bgbl-1-2026-137-p-496c7bc1dbfda345",
+            "law_quote": "Die Vergabekammer soll die Akteneinsicht elektronisch durch Übermittlung oder zum Abruf auf einem sicheren Übermittlungsweg gewähren.",
+            "criterion_quote": "Bürgerinnen und Bürger eine digitale Akte erhalten, die alle relevanten Dokumente bündelt und ihnen einen maßgeschneiderten, digitalen Umgang mit den Behörden ermöglicht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-954d215f353ab371",
+          "disposition": "no_supported_link",
+          "rationale": "Die Textauszüge regeln öffentliche Aufträge und enthalten keine Maßnahmen zu Sanktionen gegenüber dem Iran.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Textauszüge regeln öffentliche Aufträge und enthalten keine Maßnahmen zu Sanktionen gegenüber dem Iran.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-954d215f353ab371",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9b258cc7fb5755fd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vergaberegelungen enthalten keine Ausweitung des Videoschutzes an öffentlichen Gefahrenorten.",
+          "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "818808561d65c23ede406fa7fa01a488531e548093f40c4df5e923b89b4f827c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vergaberegelungen enthalten keine Ausweitung des Videoschutzes an öffentlichen Gefahrenorten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9b258cc7fb5755fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Vergabeverfahren; eine Pflicht von Genehmigungsbehörden, eingereichte Unterlagen zügig zu prüfen, ist in den vorliegenden Passagen nicht geregelt.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschriften betreffen Vergabeverfahren; eine Pflicht von Genehmigungsbehörden, eingereichte Unterlagen zügig zu prüfen, ist in den vorliegenden Passagen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Genehmigungsbehörden müssen eine zügige Prüfung der eingereichten Unterlagen gewährleisten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a0d5e7ee724abb7b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt die Aufhebung eines Vergabeverfahrens, wenn es kein wirtschaftliches Ergebnis hatte; eine Einstellung von Ausgaben wegen verfehlter Ziele regelt es nicht.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz erlaubt die Aufhebung eines Vergabeverfahrens, wenn es kein wirtschaftliches Ergebnis hatte; eine Einstellung von Ausgaben wegen verfehlter Ziele regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ausgaben, die ihr Ziel verfehlen, müssen entfallen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a0d5e7ee724abb7b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a41498b55c2317d8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften zur öffentlichen Auftragsvergabe regeln keine Waffenlieferungen an die Ukraine.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Vorschriften zur öffentlichen Auftragsvergabe regeln keine Waffenlieferungen an die Ukraine.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sowie mit Waffenlieferungen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a41498b55c2317d8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a48ca0fc4f4a27d4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält in den vorliegenden Passagen keine Regelung zur Haftung Deutschlands für Schulden anderer Staaten.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält in den vorliegenden Passagen keine Regelung zur Haftung Deutschlands für Schulden anderer Staaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Allen Formen einer Haftung Deutschlands für Schulden anderer Staaten erteilen wir eine klare Absage.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a48ca0fc4f4a27d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a5fb2da58e72bf4f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vergaberegelungen betreffen weder die Einrichtung noch die Unterstützung von Mobilstationen.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Vergaberegelungen betreffen weder die Einrichtung noch die Unterstützung von Mobilstationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und Mobilstationen, vor allem an Verkehrsknotenpunkten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a5fb2da58e72bf4f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-aa2b596129b97c2d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Vergaberechts schafft keine Zollpolizei und regelt keine entsprechende Behörde.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Vergaberechts schafft keine Zollpolizei und regelt keine entsprechende Behörde.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Eine echte Zollpolizei schaffen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-aa2b596129b97c2d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bef290587acbd0a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Regelungen ändern Vergabeverfahren, belegen aber keine stärkere organisatorische Trennung von Bahn-Infrastruktur und Transport.",
+          "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f5a9a01fd43f67f54025d4b6bcf10be2f2c56d3a00a69d1354b9224ead53f1c5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Regelungen ändern Vergabeverfahren, belegen aber keine stärkere organisatorische Trennung von Bahn-Infrastruktur und Transport.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Infrastruktur- und Transportbereich stärker als bisher voneinander getrennt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bef290587acbd0a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt die Umsetzung von EU-Vergaberichtlinien, dokumentiert in den vorgelegten Passagen aber keine Prüfung einer Überschreitung des notwendigen EU-Regelungsmaßes.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz nennt die Umsetzung von EU-Vergaberichtlinien, dokumentiert in den vorgelegten Passagen aber keine Prüfung einer Überschreitung des notwendigen EU-Regelungsmaßes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d3347a770dcdcef2",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ändert nationale Vergabevorschriften; ohne den Bezug des „effektiven Einsatzes“ lässt sich nicht feststellen, ob dies den gemeinten Rechtsrahmen fortentwickelt.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.74,
+            "rationale": "Das Gesetz ändert nationale Vergabevorschriften; ohne den Bezug des „effektiven Einsatzes“ lässt sich nicht feststellen, ob dies den gemeinten Rechtsrahmen fortentwickelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gegenstand des im Kriterium genannten „effektiven Einsatzes“ fehlt."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-d3347a770dcdcef2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d746c6bbf41d3ef9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen die Vergabe öffentlicher Aufträge; Waffenlieferungen an die Ukraine regeln sie nicht.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen die Vergabe öffentlicher Aufträge; Waffenlieferungen an die Ukraine regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d746c6bbf41d3ef9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vergabevorschriften und enthält keine Regelung zum Erhalt der drei Säulen des Bankensystems.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vergabevorschriften und enthält keine Regelung zum Erhalt der drei Säulen des Bankensystems.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e5e1b781498d9500",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vergabe- und Ausschlussregeln, verschärft in den vorgelegten Passagen aber keine strafrechtlichen Tatbestände oder Strafen.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Vergabe- und Ausschlussregeln, verschärft in den vorgelegten Passagen aber keine strafrechtlichen Tatbestände oder Strafen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e5e1b781498d9500",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-efc12cff8cfec334",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergaberegelungen sehen keine staatliche Abschöpfung von Verbrechensgewinnen vor.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vergaberegelungen sehen keine staatliche Abschöpfung von Verbrechensgewinnen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-efc12cff8cfec334",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f1916f58bc5ca488",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Änderung des Volksverhetzungs-Paragrafen oder eine Strafbarkeit der Leugnung des Existenzrechts Israels.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Änderung des Volksverhetzungs-Paragrafen oder eine Strafbarkeit der Leugnung des Existenzrechts Israels.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f1916f58bc5ca488",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Grunderwerbsteuer oder zu einem Freibetrag für den erstmaligen Erwerb selbstgenutzten Wohneigentums.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Grunderwerbsteuer oder zu einem Freibetrag für den erstmaligen Erwerb selbstgenutzten Wohneigentums.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert einzelne Zuständigkeiten im Beschaffungsbereich, positioniert das BSI aber nicht als dritte Säule unter Führung des BMI.",
+          "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8e9a783a3b9782d0d6fa84ffe46a448fefaaeae0669287327f85b7aeea342c50"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert einzelne Zuständigkeiten im Beschaffungsbereich, positioniert das BSI aber nicht als dritte Säule unter Führung des BMI.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-138",
@@ -67273,7 +69530,392 @@
         "cdu-csu-2025-ac-ec18a035148b2d84"
       ],
       "omitted_count": 950,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-1b21764ddc14139f",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz regelt den Datenaustausch bei Kurzzeitvermietungen und Diskriminierungsverbote; ob es nationale Anforderungen über EU-Vorgaben hinaus einführt oder deren künftige Einführung verhindert, lässt sich ohne die maßgeblichen EU-Rechtsakte nicht beurteilen.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz regelt den Datenaustausch bei Kurzzeitvermietungen und Diskriminierungsverbote; ob es nationale Anforderungen über EU-Vorgaben hinaus einführt oder deren künftige Einführung verhindert, lässt sich ohne die maßgeblichen EU-Rechtsakte nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-138-p-7197f82195b7c712",
+            "law_quote": "Soweit in diesem Gesetz oder im Recht der Europäischen Union nichts anderes bestimmt ist, ergeben sich die folgenden Anforderungen aus Landesrecht:",
+            "criterion_quote": "Wir machen Schluss mit Draufsatteln: Dazu nehmen wir die deutsche Übererfüllung von europäischem Recht zurück und unterbinden sie künftig.",
+            "caveats": [
+              "Der Umfang der Anforderungen der EU-Verordnung (EU) 2024/1028 ist im bereitgestellten Text nicht enthalten."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-1b21764ddc14139f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung erlaubt die vorübergehende Verarbeitung bestimmter Kurzzeitvermietungsdaten für den Behördenzugang, schafft aber keine allgemeine individuelle Kontrolle darüber, wann und wozu eigene Daten erhoben und genutzt werden.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regelung erlaubt die vorübergehende Verarbeitung bestimmter Kurzzeitvermietungsdaten für den Behördenzugang, schafft aber keine allgemeine individuelle Kontrolle darüber, wann und wozu eigene Daten erhoben und genutzt werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-70784ae75a8b4610",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Bestimmungen zur Einhaltung von Zusagen aus dem Strukturstärkungsgesetz oder Bund-Länder-Vereinbarungen.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Bestimmungen zur Einhaltung von Zusagen aus dem Strukturstärkungsgesetz oder Bund-Länder-Vereinbarungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-70784ae75a8b4610",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder staatliche Förderung noch den Zugang zu neuen Märkten in Abhängigkeit von Fördermitteln.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder staatliche Förderung noch den Zugang zu neuen Märkten in Abhängigkeit von Fördermitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu EU-Beitrittskriterien oder zum Beitritt der Ukraine.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu EU-Beitrittskriterien oder zum Beitritt der Ukraine.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ba23855f843dee26",
+          "disposition": "no_supported_link",
+          "rationale": "Die gemeinsame digitale Zugangsstelle dient dem Datenaustausch bei Kurzzeitvermietungen; ein Daten- und Informationshaus für nationale Sicherheitsbehörden oder Europol wird nicht geregelt.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die gemeinsame digitale Zugangsstelle dient dem Datenaustausch bei Kurzzeitvermietungen; ein Daten- und Informationshaus für nationale Sicherheitsbehörden oder Europol wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ba23855f843dee26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ba5f2e3d4606ad1c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Vertragsfreiheit bei Daten.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Vertragsfreiheit bei Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ba5f2e3d4606ad1c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz setzt auch die Dienstleistungsrichtlinie um und ändert einschlägige Vorschriften; ob die Umsetzung über das notwendige EU-Regelungsmaß hinausgeht, ist ohne Richtlinientext und bisherige Regelungen nicht feststellbar.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz setzt auch die Dienstleistungsrichtlinie um und ändert einschlägige Vorschriften; ob die Umsetzung über das notwendige EU-Regelungsmaß hinausgeht, ist ohne Richtlinientext und bisherige Regelungen nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-138-p-b9755e4f5a3dc5d1",
+            "law_quote": "Dieses Gesetz dient auch der Umsetzung der Richtlinie 2006/123/EG des Europäischen Parlaments und des Rates vom 12. Dezember 2006 über Dienstleistungen im Binnenmarkt",
+            "criterion_quote": "Kurzfristig prüfen wir, wo die Umsetzung der entsprechenden Richtlinie entscheidend über das notwendige europäische Regelungsmaß hinausgeht.",
+            "caveats": [
+              "Der Text dokumentiert keine entsprechende Prüfung und enthält nicht den vollständigen Vergleichsmaßstab."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-c3852141e79ed3ac",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderungen zum Zugang zu öffentlicher Förderung.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderungen zum Zugang zu öffentlicher Förderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-c3852141e79ed3ac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d9a334fbf28381b5",
+          "disposition": "no_supported_link",
+          "rationale": "Die technische Schnittstelle dient dem Datenaustausch zur Kurzzeitvermietung; ein Bundesdigitalministerium oder die Verankerung einheitlicher Schnittstellen dort wird nicht geregelt.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die technische Schnittstelle dient dem Datenaustausch zur Kurzzeitvermietung; ein Bundesdigitalministerium oder die Verankerung einheitlicher Schnittstellen dort wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d9a334fbf28381b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Diskriminierungsverbote im Dienstleistungszugang, nicht die Verfolgung oder Ahndung verfassungsfeindlicher Symbole oder antisemitischer Äußerungen.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Diskriminierungsverbote im Dienstleistungszugang, nicht die Verfolgung oder Ahndung verfassungsfeindlicher Symbole oder antisemitischer Äußerungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ändert zwar Vorschriften zur Umsetzung europäischer Rechtsakte und streicht eine Verordnungsvorschrift; ob damit Regelungen über EU-Recht hinaus zurückgenommen werden, ist ohne den Vergleich mit den EU-Vorgaben und dem bisherigen Recht nicht feststellbar.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz ändert zwar Vorschriften zur Umsetzung europäischer Rechtsakte und streicht eine Verordnungsvorschrift; ob damit Regelungen über EU-Recht hinaus zurückgenommen werden, ist ohne den Vergleich mit den EU-Vorgaben und dem bisherigen Recht nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-138-p-b2f5b65b353ad039",
+            "law_quote": "§ 5 wird gestrichen.",
+            "criterion_quote": "Mit einem Gesetz gegen Draufsatteln – „Anti-Gold-PlatingGesetz“ – nehmen wir Regelungen zurück, die über europäisches Recht hinausgehen,",
+            "caveats": [
+              "Das Gesetz tritt am 1. Juli 2026 in Kraft."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ec18a035148b2d84",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt einzelne Ordnungswidrigkeiten im Bereich Geoblocking und Kurzzeitvermietung ein, nicht aber ein automatisiertes Defizitverfahren bei Verstößen gegen Maastricht-Kriterien.",
+          "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5458f56db1fe2714c9a7f9d2312aa5c3c062713b8d749a1c093dafbc8a7cc41d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt einzelne Ordnungswidrigkeiten im Bereich Geoblocking und Kurzzeitvermietung ein, nicht aber ein automatisiertes Defizitverfahren bei Verstößen gegen Maastricht-Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ec18a035148b2d84",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-139",
@@ -72162,45 +74804,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4431,
+    "calls": 4529,
     "cache_hits": 67,
-    "subdivision_cache_hits": 7,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 22.911485,
-    "reported_cost_calls": 4072,
+    "reported_cost_usd": 23.353416,
+    "reported_cost_calls": 4170,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 2.147221,
     "unknown_cost_calls": 359,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 25.058706,
-    "prompt_tokens": 44608837,
-    "completion_tokens": 6967776,
+    "budget_exposure_usd": 25.500637,
+    "prompt_tokens": 45860450,
+    "completion_tokens": 7203214,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 157,
-        "reported_cost_usd": 3.7877597499999993,
+        "calls": 167,
+        "reported_cost_usd": 4.074859749999999,
         "unknown_cost_reserved_usd": 9.43689570931383e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 4.163336342344337e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 61,
-        "reported_cost_usd": 0.7857392500000001,
+        "calls": 64,
+        "reported_cost_usd": 0.8195332500000001,
         "unknown_cost_reserved_usd": 7.632783294297951e-17,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1316,
-        "reported_cost_usd": 1.4535161050000007,
+        "calls": 1401,
+        "reported_cost_usd": 1.5745530425000007,
         "unknown_cost_reserved_usd": 1.1627453,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 3.469446951953614e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
