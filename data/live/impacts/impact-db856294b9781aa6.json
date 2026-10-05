@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-226",
   "score": 1,
   "confidence": 0.95,
-  "rationale": "Die Regelung untersagt bei neu zu errichtenden Gebäuden CO₂-Emissionen aus fossilen Brennstoffen am Standort. Das unterstützt den Ausstieg aus fossiler Verbrennung in diesem begrenzten Anwendungsbereich, belegt aber keinen umfassenden Ausstieg.",
+  "rationale": "Bei der Errichtung erfasster Gebäude dürfen am Standort keine CO₂-Emissionen aus fossilen Brennstoffen verursacht werden. Das begrenzt deren Verbrennung in diesem Bereich; die vorgelegten Vorschriften enthalten Ausnahmen, und ein allgemeiner Ausstieg ist damit nicht festgelegt.",
   "law_passage_id": "bgbl-1-2026-226-p-9fa1f01df52b76ce",
-  "law_quote": "an seinem Standort keine Kohlenstoffdioxidemissionen aus fossilen Brennstoffen verursacht werden.",
+  "law_quote": "3. an seinem Standort keine Kohlenstoffdioxidemissionen aus fossilen Brennstoffen verursacht werden.",
   "criterion_quote": "Der\nAusstieg aus der Verbrennung fossiler\nEnergierohstoffe, Rohstoffeffizienz, Suffizienzstrategien und – wo möglich – der\nErsatz von Rohstoffen sowie der gezielte\nEinsatz von Recyclingrohstoffen sind der\nSchlüssel dafür.",
-  "caveats": [
-    "Die zitierte gesetzliche Anforderung bezieht sich auf neu zu errichtende Gebäude; sie belegt keinen allgemeinen Ausstieg aus der Verbrennung fossiler Energierohstoffe.",
-    "Die Regelung gilt nur für Neubauten und hat Ausnahmen.",
-    "Die Heizungsoptionen im Bestand schließen Gas, Heizöl und Flüssiggas weiterhin ein.",
-    "Der vorgelegte Gesetzestext ist nur ein Teilauszug; Inkrafttreten und Gesamtwirkung sind nicht vollständig prüfbar.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt Maßnahmen zum Ausstieg aus der Verbrennung fossiler Energierohstoffe insgesamt. Die zitierte Vorschrift (neue Gebäude ohne CO₂-Emissionen aus fossilen Brennstoffen am Standort) betrifft nur einen engen Teilbereich. Das Gesetz erlaubt zudem weiterhin den Ersatz von Heizungen durch Gas-, Heiz- und Flüssiggasanlagen im Bestand. Die Vorschrift hat Ausnahmen, etwa für Gebäude der Landes- und Bündnisverteidigung sowie bei Konflikten mit Standsicherheit, Brandschutz und Gesundheitsschutz. Auch ist unklar, ob sie in Kraft getreten ist. Ein Ausstieg ist daher nicht belegt; der Treffer ist höchstens thematisch."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "ed3a6686d959b9a0ad9fcdadcc4650e0725175c7c8e23abb1939234fff3bd287"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "ec5dd7ae674de79d5dfe09142859e3df005217b2c0fd4a1921bd724ca5e2bfe7"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "b7eb12962a623ffca5e383ea2b511299aec8973af7b12a837a440260bc9a9046"
+      "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e"
     }
   ]
 }

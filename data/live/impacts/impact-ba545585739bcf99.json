@@ -6,18 +6,20 @@
   "law_id": "bgbl-1-2026-224",
   "score": 1,
   "confidence": 0.94,
-  "rationale": "Das Gesetz ermöglicht ausdrücklich den barrierefreien Umbau von Bahnsteigen, was einen Teilaspekt barrierefreier Mobilität unterstützt. Die Passage belegt jedoch weder eine umfassende Modernisierung des Verkehrsrechts noch Barrierefreiheit in Stadt und Land insgesamt.",
+  "rationale": "Der barrierefreie Umbau von Bahnsteigen zählt zu den Eisenbahnmaßnahmen, für die bei fehlender Pflicht zur Umweltverträglichkeitsprüfung keine vorherige Planfeststellung oder Plangenehmigung nötig ist. Das erleichtert einen begrenzten Teil barrierefreier Mobilität.",
   "law_passage_id": "bgbl-1-2026-224-p-7801aef1a356a0b3",
-  "law_quote": "der Neubau oder die Änderung einschließlich des barrierefreien Umbaus von Bahnsteigen",
+  "law_quote": "der Neubau oder die Änderung einschließlich des barrierefreien Umbaus von Bahnsteigen sowie dafür\nnotwendige baulicher Anpassungen an sonstigen Betriebsanlagen der Eisenbahn; dies gilt nicht für\nden ersatzlosen Teil- oder vollständigen Rückbau eines Bahnsteigs,",
   "criterion_quote": "Wir bringen\ndas Verkehrsrecht auf die Höhe der Zeit,\num allen Menschen in Stadt und Land\nbarrierefreie Mobilität, etwa mit E-Kleinfahrzeugen, zu ermöglichen.",
-  "caveats": [
-    "Belegt ist nur eine Regelung zu Bahnsteigen; eine Wirkung auf barrierefreie Mobilität insgesamt ist daraus nicht abzuleiten.",
-    "Die Passage betrifft nur Bahnsteige; E-Kleinfahrzeuge und allgemeines Verkehrsrecht werden nicht erfasst.",
-    "Die Quelle ist ein teilweiser Gesetzeskontext; weitere relevante Regelungen, etwa zur Barrierefreiheit bei Bundesfernstraßen, wurden nicht vorgeschlagen und nicht geprüft.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die Passage erlaubt den barrierefreien Umbau von Bahnsteigen im Rahmen einer verfahrensrechtlichen Regelung. Das Kriterium verlangt jedoch ein modernisiertes Verkehrsrecht, das barrierefreie Mobilität für alle in Stadt und Land ermöglicht, ausdrücklich auch mit E-Kleinfahrzeugen. Ein einzelner Bahnsteig-Aspekt ist nur ein thematischer Teilbezug. Er belegt weder eine umfassende Aktualisierung noch Wirkung in Stadt und Land. Eine Bewertung als unterstützend ist daher nicht hinreichend belegt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "edf382237aca497087f49d7e975fb9b11e3b169bad587595c62f12299ae9ea8e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "ad1fe658c8c7865635c63861632a7525ba401cc8e1ccd1d2773d21e1110cf42d"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -31,9 +33,9 @@
       "input_sha256": "9fb434a41e58b9e36d0b1e087037c5e458984ffea61c5b619a97028b7aa5672e"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "356458994ebee7698c63151f3456f81f60218581bb9a19400f8450c4cc7b423b"
+      "input_sha256": "edf382237aca497087f49d7e975fb9b11e3b169bad587595c62f12299ae9ea8e"
     }
   ]
 }

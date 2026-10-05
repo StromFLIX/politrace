@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2026-66",
   "score": 1,
   "confidence": 0.91,
-  "rationale": "Das Gesetz sieht behördliche Informationsübermittlung vor und verlangt, dass Sender und Empfänger Prozesse für die Weitergabe vereinbaren. Das unterstützt den Verfahrensaspekt teilweise. Die Passage legt jedoch nicht fest, dass Informationen frühzeitig weitergegeben werden, und belegt keine praktische Anwendung dieser Prozesse.",
-  "law_passage_id": "bgbl-1-2026-66-p-9a7c33f08ed1968c",
-  "law_quote": "Für die Übermittlung von Informationen nach Satz 1 vereinbaren Sender und Empfänger Prozesse zur Weitergabe\nund Wahrung der notwendigen Vertraulichkeit.",
+  "rationale": "Das BBK muss die zuständige Behörde unverzüglich über jede Registrierung einer kritischen Anlage informieren. Das unterstützt die frühzeitige Weitergabe für diesen Informationsbereich; eine praktische Anwendung ist damit nicht belegt.",
+  "law_passage_id": "bgbl-1-2026-66-p-4d98dfcaeef28674",
+  "law_quote": "Das Bundesamt für\nBevölkerungsschutz und Katastrophenhilfe informiert das Bundesamt für Sicherheit in der Informationstechnik\nsowie die jeweils zuständige Behörde unverzüglich über jede erfolgte Registrierung.",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Keine ausdrücklich festgelegte Frist oder sonstige Garantie für eine frühzeitige Weitergabe in der zitierten Passage.",
-    "Die gesetzliche Vorgabe zur Vereinbarung von Prozessen belegt nicht, dass diese bereits praktisch angewendet werden.",
-    "Die zitierte Passage regelt Vertraulichkeitsprozesse, keine Rechtzeitigkeit.",
-    "Keine Frist und kein Gebot der frühzeitigen Weitergabe im zitierten Satz.",
-    "Die Richtung des Rechtseffekts (Score 1) ist durch die Passage nicht gestützt.",
-    "Die Anwendung in der Praxis ist nicht belegt; der Gesetzeskontext ist nur teilweise vorhanden.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die zitierte Passage (§ 3 Abs. 7 Satz 3) verpflichtet Sender und Empfänger nur, Prozesse zur Weitergabe und Wahrung der Vertraulichkeit zu vereinbaren. Es geht um den Schutz der Vertraulichkeit, nicht um die Rechtzeitigkeit. Der Programmsatz verlangt aber, dass Informationen die zuständigen Behörden frühzeitig erreichen. Die Passage enthält keine Frist und keine Pflicht zur frühzeitigen Weitergabe. Die Nähe zum Kriterium beruht daher nur auf dem Thema Informationsübermittlung. Der Vorschlag mit Score 1 und Konfidenz 0,91 ist überzogen und wird abgelehnt. Eine Prüfung ergäbe vielleicht Hinweise in der gesamten Regelung von § 3 Abs. 7, in § 18 (Meldefrist 24 Stunden) und in § 8 Abs. 5 (unverzügliche Information). Diese Stellen wurden aber nicht als Beleg vorgeschlagen. Die Wirkung der Vorschrift in der Praxis ist zudem nicht belegt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "d9707ed1b5b89f70a4e8ff2bd533a98ab696f39748802b44d7b4dd3671e75989",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "70c37f70ff9c715456bc8e7484cafa37b4f236cd3e75ba0a41af49a5fe7798ba"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "d1144c0e4a99625fc28ca6138e0b27c92394f3b14a3d6305fdadab6aa50c2e6d"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "c42364eb0d2332264e525ff0d5544e5fa272862bbdfce6dfdb66d03bd7248baf"
+      "input_sha256": "d9707ed1b5b89f70a4e8ff2bd533a98ab696f39748802b44d7b4dd3671e75989"
     }
   ]
 }

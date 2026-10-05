@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-224",
   "score": 1,
   "confidence": 0.84,
-  "rationale": "Die Gesetzesänderung erklärt Ausbau und Neubau von Schienenwegen zu einem Vorhaben von überragendem öffentlichen Interesse und unterstützt damit den Ausbau rechtlich. Die Passage belegt jedoch weder, dass das Schienennetz tatsächlich erweitert wurde, noch eine stärkere Elektrifizierung; sie stützt das Kriterium daher nur teilweise.",
-  "law_passage_id": "bgbl-1-2026-224-p-93da3f49c2371576",
-  "law_quote": "„(3) Der Ausbau, Neubau und Ersatzneubau von Schienenwegen der Eisenbahnen des Bundes liegt im\nüberragenden öffentlichen Interesse und dient der öffentlichen Sicherheit.",
+  "rationale": "Für die Ausstattung bestehender Bahnstrecken mit Anlagen für elektrischen Zugbetrieb entfällt unter den genannten Voraussetzungen die vorherige Planfeststellung oder Plangenehmigung. Das erleichtert einen Teil der Elektrifizierung, belegt aber keinen tatsächlich erfolgten Netzausbau.",
+  "law_passage_id": "bgbl-1-2026-224-p-7bcfd3a7ed4faaa9",
+  "law_quote": "die Ausstattung einer bestehenden Bahnstrecke mit Anlagen für den elektrischen Zugbetrieb, aus­\ngenommen Bahnstromfernleitungen, einschließlich dafür notwendiger räumlich begrenzter baulicher\nAnpassungen, insbesondere von Tunneln mit geringer Länge oder von Kreuzungsbauwerken,",
   "criterion_quote": "das Schienennetz\nspürbar ausbauen und stärker elektrifizieren,",
-  "caveats": [
-    "Die Passage belegt eine rechtliche Priorisierung, nicht die tatsächliche Fertigstellung von Ausbau- oder Elektrifizierungsmaßnahmen.",
-    "Die Passage stammt aus einem partiell vorliegenden Gesetzestext; Finanzierung und Bedarfsplan sind nicht erkennbar.",
-    "Elektrifizierung wird in den vorgelegten Passagen nicht angesprochen.",
-    "Eine erleichterte Planung ist nicht gleichbedeutend mit tatsächlichem Ausbau.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt einen spürbaren Ausbau des Schienennetzes und eine stärkere Elektrifizierung. Die zitierte Passage (§ 1 Absatz 3 des Bundesschienenwegeausbaugesetzes) erklärt Ausbau, Neubau und Ersatzneubau von Schienenwegen zum überragenden öffentlichen Interesse. Das ist eine rechtliche Priorisierung für Abwägungs- und Genehmigungsentscheidungen. Sie bewirkt weder einen tatsächlichen Netzausbau noch Elektrifizierung, enthält keine Mittel, Ziele oder Fristen und erwähnt Elektrifizierung gar nicht. Richtung und Ausmaß der behaupteten Wirkung sind daher nicht belegt. Es handelt sich im Kern um einen Themenbezug, nicht um eine Umsetzung des Versprechens. Ein Teil-Link mit Score 1 ist nicht gedeckt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "edf382237aca497087f49d7e975fb9b11e3b169bad587595c62f12299ae9ea8e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "0d29fd5a07e34aef58b8953be76ca80e306f093e1a46a8971cc5ee748dc191bd"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "7c8133865846bdbd14ca2ac47aef683bbdf7c784b045ab3b08faa9dd1dd00a95"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "8d40cf5f0fe7892b8fa2e37f3da2fe54aa6d4119abaaed2ed1335162e9314de4"
+      "input_sha256": "edf382237aca497087f49d7e975fb9b11e3b169bad587595c62f12299ae9ea8e"
     }
   ]
 }

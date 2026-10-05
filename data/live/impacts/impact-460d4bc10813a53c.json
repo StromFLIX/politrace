@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-226",
   "score": 2,
   "confidence": 0.99,
-  "rationale": "Die Vorschrift ordnet ausdrücklich an, Vorkettenemissionen bei der Ermittlung bestimmter Emissionsfaktoren zu berücksichtigen. Damit wird der eng gefasste Test unmittelbar erfüllt; die Regelung betrifft dabei die genannten Berechnungen und belegt keine umfassendere Umsetzung des Versprechens.",
+  "rationale": "Bei der Ermittlung der betreffenden Emissionsfaktoren sind Vorkettenemissionen der Energieträger zu berücksichtigen. Damit wird das eng gefasste Kriterium für diese Berechnung unmittelbar umgesetzt.",
   "law_passage_id": "bgbl-1-2026-226-p-555171ba3bf99fbd",
   "law_quote": "Energieträger und die Netzverluste zu berücksichtigen. Zur Berücksichtigung der Vorkettenemissionen\nkann ein pauschaler Aufschlag von 20 Prozent, mindestens aber von 40 Gramm Kohlendioxid-Äquivalent\npro Kilowattstunde, auf den ohne Berücksichtigung der Vorkettenemissionen bestimmten Emissions­\nfaktor angewendet werden.",
   "criterion_quote": "Die Emissionen in der Vorkette\nwerden wir berücksichtigen.",
-  "caveats": [
-    "Die Passage bezieht sich auf die Ermittlung von Emissionsfaktoren; daraus folgt keine allgemeine Berücksichtigung sämtlicher Vorkettenemissionen in allen Regelungsbereichen.",
-    "Die Regelung betrifft nur die Ermittlung von Emissionsfaktoren im Gebäudeenergierecht, nicht sämtliche Politikbereiche.",
-    "Der pauschale Aufschlag von 20 Prozent bzw. mindestens 40 g CO2-Äquivalent/kWh ist nur eine Kann-Regelung.",
-    "Es handelt sich um ein Teilgesetz (partial_law_context); der Zusammenhang mit der Grundlagenvorschrift (Buchstabe c) ist im Ausschnitt nicht vollständig sichtbar.",
-    "Der Beleg sagt nichts über die tatsächliche Wirkung oder die Gesamterfüllung des Versprechens aus.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "73fd677619aa6d0e83debb51eaa81337c6ba3ddb60db78094950bcd6088b4ea8"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "5d3d78b8baf83997b8d409bb0e99e48ac51b8644c03f71623b56a6c243cda6d7"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "b851249ea14f82464c313ed7bf458de3b94ff86a5bd489d183ea4dae059920f3"
+      "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e"
     }
   ]
 }

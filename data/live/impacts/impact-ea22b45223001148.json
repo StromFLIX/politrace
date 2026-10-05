@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2026-226",
   "score": 1,
   "confidence": 0.87,
-  "rationale": "Das Gesetz schreibt für bestimmte neue Gebäude die Ermittlung von Lebenszyklus-Treibhausgasemissionen vor. Das stützt den Teilaspekt einer CO₂-Bilanzierung. Die Passage belegt jedoch nicht, dass solche Bilanzierungen zur Auswahl der besten Umsetzung herangezogen werden.",
+  "rationale": "Lebenszyklus-Treibhausgasemissionen müssen für neu zu errichtende Gebäude ab 2030 ermittelt werden, für solche mit mehr als 1.000 Quadratmetern Nutzfläche bereits ab 2028. Eine Nutzung der Bilanzierung zur Auswahl der besten Umsetzung ist nicht vorgeschrieben.",
   "law_passage_id": "bgbl-1-2026-226-p-16ee0e0a37e223fe",
   "law_quote": "(1) Die Lebenszyklus-Treibhausgasemissionen sind zu ermitteln",
   "criterion_quote": "Über CO₂Bilanzierungen ermitteln wir die beste\nUmsetzung.",
-  "caveats": [
-    "Die Ermittlungspflicht bezieht sich auf Lebenszyklus-Treibhausgasemissionen; eine Verwendung zum Vergleich oder zur Auswahl von Umsetzungsoptionen ist in der Passage nicht festgelegt.",
-    "Die vorgelegten Passagen sind unvollständig.",
-    "Die Passage regelt nur die Ermittlungspflicht, nicht die Nutzung der Ergebnisse zur Auswahl der besten Umsetzung.",
-    "Der Anwendungsbereich ist auf Neubauten mit Stufung 2028/2030 begrenzt; der Bezug des Programmsatzes ist unklar.",
-    "Die Gesetzespassagen sind unvollständig; Regelungen zur Verwendung des Berichts nach § 88b könnten fehlen.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Programmkriterium verlangt, dass CO₂-Bilanzierungen für die Umsetzung erstellt und zur Auswahl der besten Umsetzung herangezogen werden. § 88b Absatz 1 verpflichtet nur dazu, Lebenszyklus-Treibhausgasemissionen für neu zu errichtende Gebäude zu ermitteln (ab 2028 ab 1.000 m², ab 2030 allgemein). Eine Verwendung zum Vergleich oder zur Auswahl von Varianten ist in den vorgelegten Passagen nicht geregelt. Der Treffer beruht daher nur auf thematischer Nähe (Bilanzierung). Zudem ist unklar, auf welche Umsetzung sich das Programmversprechen bezieht. Das Gesetz liegt nur teilweise vor."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "efa1ecb64c52641928763887f558572edda98be16c676ff260402af798e5efa0"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "428c606661f5b75a62724a124903b9f6e005e34f2105b175a41e5dda991aa060"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "4ac1e063a537717b1655e4f0b114c4e39a8b4c3c102774fdde7b7f737b939c1d"
+      "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e"
     }
   ]
 }

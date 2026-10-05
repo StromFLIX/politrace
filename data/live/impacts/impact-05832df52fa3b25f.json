@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-226",
   "score": 1,
   "confidence": 0.94,
-  "rationale": "Die Vorschrift legt für die erfassten Anlagen konkrete Stichtage und steigende Mindestanteile alternativer Energieträger fest. Das stützt das Kriterium klarer Fristen teilweise; ob diese Fristen sachgerecht sind, lässt sich aus der Passage allein nicht beurteilen, und die Regelung gilt nur für den ausdrücklich erfassten Anwendungsbereich.",
+  "rationale": "Für die erfassten, nach dem 29. Juli 2026 neu eingebauten Heizungen setzt die Vorschrift klare Stichtage für steigende Wärmeanteile aus anderen Energieträgern. Ob die Fristen sachgerecht sind, geht daraus nicht hervor.",
   "law_passage_id": "bgbl-1-2026-226-p-3843b3a28137cc81",
   "law_quote": "(1) Wird eine Heizungsanlage, die mit Gas, Heizöl oder Flüssiggas beschickt wird, nach dem 29. Juli 2026\nin ein bestehendes Gebäude neu eingebaut, hat der Eigentümer des Gebäudes sicherzustellen, dass ab dem\n1. Januar 2029 mindestens 10 Prozent, ab dem 1. Januar 2030 mindestens 15 Prozent, ab dem 1. Januar\n2035 mindestens 30 Prozent und ab dem 1. Januar 2040 mindestens 60 Prozent der mit der Anlage\nbereitgestellten Wärme aus Biomethan, Bioöl, biogenem Flüssiggas, grünem, blauem, orangenem oder\ntürkisem Wasserstoff einschließlich daraus hergestellter Derivate erzeugt wird.",
   "criterion_quote": "Wir setzen uns für klare,\nsachgerechte Fristen für die Substitution\nein.",
-  "caveats": [
-    "Die Fristen betreffen nur die im Gesetzespassus genannten Heizungsanlagen und Wärmeanteile.",
-    "Die Passage ermöglicht keine Beurteilung, ob die Fristen sachgerecht sind.",
-    "Gilt nur für neu eingebaute Gas-, Heizöl- und Flüssiggasheizungen in Bestandsgebäuden nach dem 29. Juli 2026.",
-    "Die Sachgerechtigkeit der Fristen ist nicht beurteilbar.",
-    "Alternative Erfüllung (z. B. Solarthermie nach Absatz 3) und weitere Bedingungen sind nur teilweise im Kontext sichtbar.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "89ff28d2633049b55fa38199362f2ee6a5b2d58ce2318f00cfe44a8f463ab4b8"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "69b0d0f117ec262f62cd8535576618c60581b5b42649859c1f95ad52a18b0c9c"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "ecf01697e938d6db471804d72470103f2fc45a498f1b792ca31127842971e621"
+      "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e"
     }
   ]
 }

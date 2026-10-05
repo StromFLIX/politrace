@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-26",
   "score": 1,
   "confidence": 0.86,
-  "rationale": "Das Gesetz benennt Zwecke, für die bestimmte Daten an Europol übermittelt und verarbeitet werden dürfen. Das stützt die Zweckklarheit für diese geregelten Übermittlungen teilweise; eine jederzeitige Nachvollziehbarkeit für sämtliche verwendeten Daten belegt der Text nicht.",
+  "rationale": "Die Vorschrift ordnet Übermittlung und Zugriff auf Europol-Daten gesetzlich bezeichneten Verarbeitungszwecken zu. Das unterstützt Zweckklarheit für diese Daten teilweise, belegt aber keine jederzeitige Nachvollziehbarkeit ihrer konkreten Verwendung.",
   "law_passage_id": "bgbl-1-2026-26-p-1b3cc16972a3d7f2",
   "law_quote": "innerstaatlich befugt, über das Bundeskriminalamt Daten an Europol zum Zweck der Verarbeitung nach\nArtikel 18 Absatz 2 Buchstabe a bis c und f der Verordnung (EU) 2016/794 zu übermitteln",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Die Regelung betrifft bestimmte gesetzlich bezeichnete Datenübermittlungen und belegt keine allgemeine Zwecktransparenz für alle Datennutzungen.",
-    "Die Regelung betrifft nur bestimmte Datenübermittlungen an Europol und keine allgemeine Zwecktransparenz.",
-    "Die Zweckbindung ergibt sich überwiegend aus der in Bezug genommenen EU-Verordnung, deren Text nicht vorliegt.",
-    "Das Gesetz ist nur teilweise im Kontext vorhanden (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass für die verwendeten Daten jederzeit nachvollziehbar ist, wozu sie genutzt werden – ein allgemeiner Transparenzanspruch. Die Passage regelt nur, dass bestimmte Behörden über das BKA Daten an Europol übermitteln dürfen, und verweist dafür auf Verarbeitungszwecke der EU-Verordnung 2016/794. Das ist eine Befugnisnorm, keine Pflicht zur Klarstellung oder Nachvollziehbarkeit der Datennutzung. Die Richtung ist unklar: Die Norm erweitert eher die Übermittlungsmöglichkeiten und stärkt die Zweckklarheit nicht belegbar. Zudem fehlt der Bezug auf Basisregelungen wie die EU-Verordnung und das nationale Datenschutzrecht, sodass die Bewertung auf einem Themenbezug beruht. Der Score von 1 ist daher nicht hinreichend gestützt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "8f698af2bc6842d3d30a627d8e51621cf2742758ab2c22891b3b7b9ebc224fcc",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "60ff466b46154fc3b39c36a0d4205f1472bb873bc733ae5d10e22a3ede5f10a2"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "73af23a59face81587feafd9b922f66b54b7610f635b87a085bb2cd65de10505"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "00aa2547fb6a3780bd8c4b3d938a28aa0f7b2ee99e86647f67b3d18a46448f13"
+      "input_sha256": "8f698af2bc6842d3d30a627d8e51621cf2742758ab2c22891b3b7b9ebc224fcc"
     }
   ]
 }

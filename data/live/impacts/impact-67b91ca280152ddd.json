@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2026-226",
   "score": 1,
   "confidence": 0.87,
-  "rationale": "Das Gesetz nennt eine Heizungsanlage zur Nutzung von grünem Wasserstoff ausdrücklich als Option. Das unterstützt den Umstieg rechtlich teilweise, belegt aber weder eine tatsächliche Beschleunigung noch eine vollständige Umstellung; auch andere Wasserstoffarten und Biomasse sind als Optionen aufgeführt.",
-  "law_passage_id": "bgbl-1-2026-226-p-c236ca97651631b7",
-  "law_quote": "4. eine Heizungsanlage zur Nutzung von Biomasse oder grünem, blauem, orangenem oder türkisem\nWasserstoff einschließlich daraus hergestellter Derivate,",
+  "rationale": "Für bestimmte nach dem 29. Juli 2026 in bestehende Gebäude neu eingebaute Heizungen sind ab 2029 steigende Wärmeanteile unter anderem aus grünem Wasserstoff und biogenen Brennstoffen vorgeschrieben. Auch andere Wasserstoffarten können die Pflicht erfüllen; ein ausschließlicher Umstieg auf erneuerbare Quellen folgt daraus nicht.",
+  "law_passage_id": "bgbl-1-2026-226-p-3843b3a28137cc81",
+  "law_quote": "(1) Wird eine Heizungsanlage, die mit Gas, Heizöl oder Flüssiggas beschickt wird, nach dem 29. Juli 2026\nin ein bestehendes Gebäude neu eingebaut, hat der Eigentümer des Gebäudes sicherzustellen, dass ab dem\n1. Januar 2029 mindestens 10 Prozent, ab dem 1. Januar 2030 mindestens 15 Prozent, ab dem 1. Januar\n2035 mindestens 30 Prozent und ab dem 1. Januar 2040 mindestens 60 Prozent der mit der Anlage\nbereitgestellten Wärme aus Biomethan, Bioöl, biogenem Flüssiggas, grünem, blauem, orangenem oder\ntürkisem Wasserstoff einschließlich daraus hergestellter Derivate erzeugt wird.",
   "criterion_quote": "sowie den Umstieg auf grünen Wasserstoff\nund andere erneuerbare Energiequellen.",
-  "caveats": [
-    "Die Passage belegt eine gesetzliche Option, nicht deren tatsächliche Nutzung oder eine messbare Beschleunigung des Umstiegs.",
-    "Die Passage ist eine Optionsliste und keine Verpflichtung oder Förderung speziell für grünen Wasserstoff.",
-    "Die Gleichstellung mit blauem, orangenem und türkisem Wasserstoff spricht gegen eine gezielte Beschleunigung des Umstiegs auf grünen Wasserstoff.",
-    "Es ist ein Teilgesetzkontext; die Bedingungen der Gesamtvorschrift (Absatz 1, Fristen, Ausnahmen) sind in der Passage nicht enthalten.",
-    "Eine Beschleunigung gegenüber der bisherigen Rechtslage ist nicht belegt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die Passage nennt Heizungsanlagen mit Biomasse oder Wasserstoff (grün, blau, orange, türkis) lediglich als eine Erfüllungsoption unter mehreren. Das ist kein Beleg für eine Beschleunigung des Umstiegs auf grünen Wasserstoff oder andere erneuerbare Energiequellen. Die Richtung ist nicht gestützt: Neben grünem Wasserstoff werden auch blauer, orangener und türkiser Wasserstoff gleichgestellt, was grünen Wasserstoff eher nicht bevorzugt. Auch eine Wärmepumpen-Hybridheizung mit Gas- oder Heizölfeuerung gilt als Option. Der Vorschlag selbst räumt ein, dass weder eine tatsächliche Beschleunigung noch eine Wirkung belegt ist. Es handelt sich um einen bloßen Themenbezug, daher wird die Verknüpfung abgelehnt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "c48f14a5e3605c5831fe5e8358efed1739367d90607a50c2cc5fa21270193d41"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "6acf9e001770aceb2b86772de98c224809aaafc8a576cbea121c6860ac28d478"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "8c8d10bdff7cf46d7c56bbfb324abc4d198af84d3f09ae6c74fedf698d27fe8f"
+      "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e"
     }
   ]
 }

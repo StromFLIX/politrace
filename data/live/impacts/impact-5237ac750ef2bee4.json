@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-224",
   "score": 1,
   "confidence": 0.96,
-  "rationale": "Das Gesetz sieht für Planfeststellungsverfahren eine elektronische Einreichung und die Nutzung eines Verwaltungsportals für weitere Verfahrensschritte vor. Das digitalisiert Verfahren im Baubereich zumindest teilweise; die Passage belegt aber nicht die Digitalisierung sämtlicher solcher Verfahren.",
+  "rationale": "Pläne für Planfeststellungsverfahren müssen elektronisch eingereicht werden. Das digitalisiert einen Teil der Verfahren für Bauvorhaben.",
   "law_passage_id": "bgbl-1-2026-224-p-df9b365b3c2cd6cb",
   "law_quote": "Der Träger des Vorhabens hat den vollständigen Plan bei der Planfeststellungsbehörde elektronisch\neinzureichen.",
   "criterion_quote": "Verfahren digitalisieren",
-  "caveats": [
-    "Der Beleg betrifft Planfeststellungsverfahren und belegt keine Digitalisierung aller Verfahren im Baubereich.",
-    "Der Beleg betrifft nur Planfeststellungsverfahren und nicht alle Verfahren im Baubereich, etwa nicht das Bauordnungsrecht der Länder.",
-    "Absatz 2 ist nur eine Soll-Vorschrift, die Portalnutzung steht also unter dem Vorbehalt der Festlegung durch die Behörde.",
-    "Das Gesetz liegt nur als Teilkontext vor; der Wortlaut des Programmkriteriums ist sehr knapp und lässt Umfang und Reichweite offen.",
-    "Die tatsächliche Umsetzung, etwa die Verknüpfung der Portale bis Ende 2027, ist nicht belegt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "edf382237aca497087f49d7e975fb9b11e3b169bad587595c62f12299ae9ea8e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "6805754d4fbc3d38b96128e94b7a084739a6563805effa2bb0f68d9f38dff089"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "0acc434f5df212584da014cb9ab33d83f40b5fa6e8d6f835b301627a3ea1e8d3"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "36b2ebab7b73b5fc4427dd9a8e3170d3e57e6d899c2f52aadbf59382d402676a"
+      "input_sha256": "edf382237aca497087f49d7e975fb9b11e3b169bad587595c62f12299ae9ea8e"
     }
   ]
 }

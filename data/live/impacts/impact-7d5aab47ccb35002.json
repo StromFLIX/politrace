@@ -6,22 +6,20 @@
   "law_id": "bgbl-1-2026-2",
   "score": 1,
   "confidence": 0.91,
-  "rationale": "Die Ermächtigung zur Informationsübermittlung zwischen Zollkriminalamt und Bundeskriminalamt kann einen Teil des Tests unterstützen: Sie eröffnet einen gesetzlichen Weg, auf dem Informationen an eine andere Behörde gelangen können. Die Regelung sagt jedoch nicht, dass die Übermittlung frühzeitig erfolgt oder in der Praxis entsprechend angewendet wird; eine vollständige Umsetzung des Kriteriums ist daher nicht belegt.",
+  "rationale": "Ab dem 12. April 2026 darf das Zollkriminalamt Informationen zu Straftaten nach § 4 an das Bundeskriminalamt als Zentralstelle übermitteln, sofern Zwecke des Strafverfahrens nicht entgegenstehen. Das schafft einen begrenzten Übermittlungsweg; eine frühzeitige Übermittlung oder praktische Anwendung schreibt die Regelung nicht vor.",
   "law_passage_id": "bgbl-1-2026-2-p-c46a9dd841c7c7d0",
-  "law_quote": "Das Zollkriminalamt darf zu Straftaten nach § 4 Informationen, einschließlich personenbezogener Daten\nnach der aufgrund des § 20 Satz 1 des Bundeskriminalamtgesetzes erlassenen Rechtsverordnung, dem\nBundeskriminalamt zur Erfüllung von dessen Aufgaben als Zentralstelle übermitteln, soweit Zwecke des\nStrafverfahrens dem nicht entgegenstehen.",
+  "law_quote": "„Das Zollkriminalamt darf zu Straftaten nach § 4 Informationen, einschließlich personenbezogener Daten\nnach der aufgrund des § 20 Satz 1 des Bundeskriminalamtgesetzes erlassenen Rechtsverordnung, dem\nBundeskriminalamt zur Erfüllung von dessen Aufgaben als Zentralstelle übermitteln, soweit Zwecke des\nStrafverfahrens dem nicht entgegenstehen.“",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Übermittlung ist als Möglichkeit formuliert („darf“); eine tatsächliche oder frühzeitige Übermittlung wird nicht vorgeschrieben.",
-    "Die Passage belegt nicht, dass Informationen alle jeweils zuständigen Behörden erreichen.",
-    "Die Norm ist als Kann-Befugnis („darf“) formuliert und schreibt keine Übermittlung vor.",
-    "Frühzeitigkeit wird weder geregelt noch geprüft; es gibt keine Frist.",
-    "Die Anwendung in der Praxis ist aus dem Gesetzestext nicht ableitbar.",
-    "Der Anwendungsbereich ist auf Straftaten nach § 4 NpSG und die Beziehung ZKA–BKA beschränkt.",
-    "Es handelt sich um eine Teilgesetzgebung (partial_law_context); das Grundgesetz der Behördenzusammenarbeit wird nicht erfasst.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die Passage ist nur eine Befugnisnorm für die Übermittlung von Informationen vom Zollkriminalamt an das Bundeskriminalamt, begrenzt auf Straftaten nach § 4 NpSG und unter dem Vorbehalt entgegenstehender Strafverfahrenszwecke. Das Kriterium verlangt dagegen, dass Verfahren bestehen und angewendet werden, durch die Informationen frühzeitig an die jeweils zuständigen Behörden gelangen. Die Passage enthält weder eine Frist noch eine Pflicht noch ein Verfahren, das Frühzeitigkeit sicherstellt. Der Bezug zum Programmsatz (Informationen müssen Behörden frühzeitig erreichen) ist nur thematisch: Er betrifft einen engen Spezialbereich (neue psychoaktive Stoffe) und eine einzelne Behördenbeziehung. Die vorgeschlagene Wertung (supported, Score 1) ist daher nicht belegt, ein Rechtsfolge- oder Richtungsbezug zur Sicherstellung der Frühzeitigkeit fehlt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "8404fe1585a79961383f07a1c1e57230b8e96d67629a5c874b9167f05a618276",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "6ceb0d8af81e7a55691b1fe1d4c6624eec61a817e39e92a7c9993114cda31292"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -35,9 +33,9 @@
       "input_sha256": "d36119eb30be9ac9d0459a781e817e72ce6939ceb8014a622cac6377181bda8c"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "f6d8b4857fe7badfa990631be97b3bedac13cf6bc6d0d04099b04c1f03bad332"
+      "input_sha256": "8404fe1585a79961383f07a1c1e57230b8e96d67629a5c874b9167f05a618276"
     }
   ]
 }

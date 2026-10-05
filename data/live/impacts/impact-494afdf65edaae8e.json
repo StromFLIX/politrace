@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-226",
   "score": 1,
   "confidence": 0.84,
-  "rationale": "Die Änderung nennt als Fördergegenstand Maßnahmen zur Verbesserung der Energieeffizienz bei der Sanierung bestehender Gebäude. Das unterstützt energetische Sanierungen grundsätzlich, belegt aber nicht ausdrücklich, dass leer stehende Wohnungen erfasst sind.",
+  "rationale": "Die Änderung erfasst geförderte Energieeffizienzmaßnahmen bei der Sanierung bestehender Gebäude, sofern sie die genannten Anforderungen übererfüllen. Sie beschränkt die Förderung nicht ausdrücklich auf bewohnte Gebäude, sieht aber auch keine besondere Förderung leer stehender Wohnungen vor.",
   "law_passage_id": "bgbl-1-2026-226-p-e31ae2d3e12a6c62",
-  "law_quote": "Maßnahmen zur Verbesserung der Energieeffizienz bei der Sanierung bestehender Gebäude",
+  "law_quote": "„4. Maßnahmen zur Verbesserung der Energieeffizienz bei der Sanierung bestehender Gebäude, wenn",
   "criterion_quote": "die energetische Sanierung\nleer stehender Wohnungen",
-  "caveats": [
-    "Die Passage nennt weder leer stehende Wohnungen noch besondere Förderbedingungen für diese; die Unterstützung für diese konkrete Teilgruppe ist daher nur teilweise belegt.",
-    "Leer stehende Wohnungen werden im Gesetzestext nicht erwähnt.",
-    "Die Förderung gilt nur bei Übererfüllung bestimmter Anforderungen.",
-    "Es liegt nur ein Teilausschnitt des Gesetzes vor; die Förderbasis ist unbekannt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt die Förderung der energetischen Sanierung leer stehender Wohnungen. Die Passage (§ 89 Absatz 1 Satz 2 Nr. 4 neu) nennt allgemein Effizienzmaßnahmen bei der Sanierung bestehender Gebäude, aber weder leer stehende Wohnungen noch eine gezielte Förderung für diese. Zudem ist sie an eine Bedingung geknüpft: Gefördert wird nur, wenn die geförderte Maßnahme die Anforderungen der §§ 35, 36, 38, 56 und 61 bis 70 übererfüllt. Die Passage ist zudem nur ein Änderungsausschnitt, die Fördergrundlage und etwaige Förderprogramme sind nicht ersichtlich. Das ist ein reiner Themen-Treffer. Eine Unterstützung der konkreten Teilgruppe ist nicht belegt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "3f83f454d025924571e304c9ab39bca9a7a5d31e17962e52353a933987267e36"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "89bba60e57d2bb48b5af7ead6b0d251e4211ce6c4552b016bf206f32ece27c18"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "cbda348bc7292ce75e4c4bd417e65a90a5d6113e6953152f0f7464473c10638c"
+      "input_sha256": "837ca264e5195e24c0c8233dbeb0314930d94f3fcdc94d0dae129ac51898a43e"
     }
   ]
 }

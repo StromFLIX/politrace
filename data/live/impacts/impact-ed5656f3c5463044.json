@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2026-69",
   "score": 1,
   "confidence": 0.88,
-  "rationale": "Für die in § 8 geregelte Verarbeitung personenbezogener Daten und den dortigen Zugriff benennt das Gesetz zulässige Zwecke und eine Erforderlichkeitsschwelle. Das trägt teilweise dazu bei, den Zweck dieser konkreten Datenverwendung festzulegen. Eine jederzeitige Nachvollziehbarkeit des Zwecks für sämtliche verwendeten Daten belegt der Text nicht.",
+  "rationale": "Ab dem 1. April 2026 ist die Verarbeitung personenbezogener Daten durch das nationale Mitglied auf die erforderliche Aufgabenerfüllung von Eurojust oder Zwecke der Strafrechtspflege begrenzt. Das macht zulässige Nutzungszwecke in diesem Bereich teilweise klar, belegt aber nicht, dass der konkrete Zweck jeder Datenverwendung jederzeit nachvollziehbar ist.",
   "law_passage_id": "bgbl-1-2026-69-p-90aac225846159e1",
   "law_quote": "(1) Das nationale Mitglied verarbeitet personenbezogene Daten gemäß Artikel 23 Absatz 7 der EurojustVerordnung in der Fassung vom 4. Oktober 2023, soweit dies zur Aufgabenerfüllung von Eurojust oder für\nZwecke der Strafrechtspflege erforderlich ist.",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Die Regelung betrifft den spezifischen Bereich des Eurojust-Fallbearbeitungssystems und belegt keine allgemeine Klarheit über Zwecke sämtlicher Datenverwendungen.",
-    "Die Regelung betrifft nur das Eurojust-Fallbearbeitungssystem des nationalen Mitglieds, nicht die allgemeine Datennutzung.",
-    "Die Zweckangaben sind weit gefasst; eine Nachvollziehbarkeit „jederzeit“ und „welche Daten wozu“ ist nicht belegt.",
-    "Der Inhalt der in Bezug genommenen EU-Verordnung und von § 484 StPO liegt nicht vor.",
-    "Das Gesetz liegt nur als Teil des Rechtskontexts vor (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass jederzeit nachvollziehbar ist, wozu die verwendeten Daten genutzt werden. Die Passage in § 8 Absatz 1 nennt nur eine allgemeine Erforderlichkeitsschwelle („Aufgabenerfüllung von Eurojust oder Zwecke der Strafrechtspflege“) für die Verarbeitung durch das nationale Mitglied im Fallbearbeitungssystem. Das ist ein sehr weit gefasster Zweckrahmen und keine Festlegung, die für konkrete Daten jederzeit Klarheit über den Verwendungszweck schafft. Das Gesetz ändert im Kern Verweise auf die Fassung der Eurojust-Verordnung vom 4. Oktober 2023 und die Zugriffsregelungen. Eine Auswirkung auf die im Programm geforderte allgemeine Zweckklarheit ist nicht belegt. Die vorgeschlagene Richtung und Stärke (Score 1, Konfidenz 0,88) sind nicht hinreichend gestützt, und der Treffer beruht eher auf thematischer Nähe (Datenverarbeitung, Zweckbindung). Auch die Rechtsgrundlage ist nur teilweise bekannt: Artikel 23 Absatz 7 der Verordnung und § 484 StPO werden nur in Bezug genommen, der Inhalt liegt nicht vor."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "721efd26fb266dde7bccf54bf93d24fda44ff5773c57a9862920c6f3e2097d1c",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "50b949a9ed182dbbbd4cd344be2db5a70319044372cd51d5a90607930c261cbc"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "e028dc582324ac57c24269b7a1b0536b1529ea6f963872e8700b941af1be6973"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "27c406e2bfb5317b0c7446ea01fed2a26296d4a671d0d8e0f6eee2412c9307ab"
+      "input_sha256": "721efd26fb266dde7bccf54bf93d24fda44ff5773c57a9862920c6f3e2097d1c"
     }
   ]
 }
