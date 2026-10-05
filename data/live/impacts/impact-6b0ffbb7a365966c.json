@@ -4,21 +4,22 @@
   "dataset": "live",
   "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
   "law_id": "bgbl-1-2026-82",
-  "score": 2,
+  "score": 1,
   "confidence": 0.98,
-  "rationale": "Die Vorschrift verpflichtet die Markttransparenzstelle in den bezeichneten Fällen, die jeweils zuständige Behörde umgehend zu informieren und benötigte Informationen unverzüglich weiterzuleiten. Das setzt den engen Test der frühzeitigen Weitergabe unmittelbar um; die Pflicht gilt nur in den gesetzlich genannten Fällen.",
+  "rationale": "Bei Anhaltspunkten für die bezeichneten Verstöße muss die Markttransparenzstelle für Kraftstoffe die zuständige Behörde umgehend informieren und benötigte vorhandene Informationen unverzüglich weiterleiten. Das schafft ein Verfahren für frühzeitige Information in diesen Fällen; dessen tatsächliche Anwendung ist nicht belegt.",
   "law_passage_id": "bgbl-1-2026-82-p-10af18c047b8bb94",
-  "law_quote": "Bestehen Anhaltspunkte dafür, dass ein Unternehmen gegen die in Absatz 1 genannten gesetzlichen\nBestimmungen oder gegen § 2 Absatz 1 des Kraftstoffpreisanpassungsgesetzes verstößt, muss die Markt­\ntransparenzstelle für Kraftstoffe in den Fällen eines Verstoßes gegen die in Absatz 1 genannten Bestimmungen\numgehend die zuständige Kartellbehörde und in den Fällen eines Verstoßes gegen § 2 Absatz 1 des\nKraftstoffpreisanpassungsgesetzes umgehend die Landesbehörde, die für die Verfolgung und Ahndung einer\nOrdnungswidrigkeit nach § 3 Absatz 1 des Kraftstoffpreisanpassungsgesetzes zuständig ist, informieren und\nden Vorgang an sie abgeben. In den Fällen des Satzes 1 leitet die Markttransparenzstelle für Kraftstoffe alle\nbei ihr vorhandenen und von der jeweils zuständigen Behörde für deren Aufgaben nach diesem Gesetz oder\nnach dem Kraftstoffpreisanpassungsgesetz benötigten Informationen und Daten unverzüglich an diese weiter.",
+  "law_quote": "In den Fällen des Satzes 1 leitet die Markttransparenzstelle für Kraftstoffe alle\nbei ihr vorhandenen und von der jeweils zuständigen Behörde für deren Aufgaben nach diesem Gesetz oder\nnach dem Kraftstoffpreisanpassungsgesetz benötigten Informationen und Daten unverzüglich an diese weiter.",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Pflicht greift nur bei Anhaltspunkten für die im Gesetz bezeichneten Verstöße.",
-    "Die Pflicht gilt nur bei Anhaltspunkten für die im Gesetz genannten Verstöße.",
-    "Sie ist auf den Kraftstoffbereich beschränkt; eine allgemeine Informationsweitergabe an Behörden wird nicht geregelt.",
-    "Die tatsächliche Anwendung in der Praxis lässt sich aus dem Gesetzestext nicht ableiten.",
-    "Der Gesetzesauszug ist nur teilweise überliefert; Absatz 1 und die Basisnorm § 47k sind nicht vollständig im Text enthalten.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "9dd27ec86f8e89a885ed3b10c93e92c375958900988a7a8340150c2be6c2573b",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "d0e911fa4bd8c5a3afc749a42308ef2d1da7d64fb041290cba32e82098a85eb0"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "dedbfb5fdbec656a846eb4567da448bbcafdf79ea67090addca7b6de45ecf9d1"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "bbb5bcb4d40d0773751fabcd3417deb1bb58f3db76edd0a0450968bf9fe68140"
+      "input_sha256": "9dd27ec86f8e89a885ed3b10c93e92c375958900988a7a8340150c2be6c2573b"
     }
   ]
 }

@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-86",
   "score": 1,
   "confidence": 0.9,
-  "rationale": "Das Gesetz schreibt für einen eng umrissenen Fall eine Benachrichtigung der zuständigen Behörde vor und schafft damit teilweise ein Verfahren zur Informationsweitergabe. Eine frühzeitige Benachrichtigung wird nicht ausdrücklich vorgeschrieben; die Übereinstimmung mit dem Kriterium ist daher nur teilweise belegt.",
+  "rationale": "Bei der Bereitstellung oder Abgabe bestimmter Erzeugnisse und Einrichtungen aufgrund der Quotenausnahme ist die zuständige Behörde zu benachrichtigen. Das schafft für diesen Sonderfall eine Informationspflicht; ein Zeitpunkt für eine frühzeitige Benachrichtigung ist nicht vorgegeben.",
   "law_passage_id": "bgbl-1-2026-86-p-272b8c8049e16bc4",
   "law_quote": "Wer nach Satz 2 Erzeugnisse oder Einrichtungen bereitstellt\noder abgibt, hat die zuständige Behörde zu benachrichtigen",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Benachrichtigung betrifft nur den im Gesetz genannten Sonderfall; eine Frist oder ausdrückliche Vorgabe zur frühzeitigen Übermittlung steht in der Passage nicht.",
-    "Die Benachrichtigungspflicht gilt nur für vorbefüllte Erzeugnisse und Einrichtungen mit Quotengenehmigung nach der Verordnung (EU) 2024/573.",
-    "Es gibt keine Frist und keine Vorgabe zur Frühzeitigkeit.",
-    "Der politische Kontext der Programmforderung ist im Kriterium nicht auf F-Gase oder Chemikalienrecht eingegrenzt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium fordert allgemein Verfahren, damit Informationen frühzeitig die zuständigen Behörden erreichen (ohne Fachbereich). Die Passage (§ 12k ChemG) regelt nur einen engen Sonderfall im Quotensystem für fluorierte Treibhausgase: Wer vorbefüllte Erzeugnisse nach Quotengenehmigung abgibt, muss die Behörde benachrichtigen. Zeitpunkt oder Frühzeitigkeit der Information sind nicht geregelt. Es handelt sich um eine Themenübereinstimmung, die weder das allgemeine Kriterium noch die Richtung oder den Umfang trägt. Eine Bewertung mit Score 1 und Konfidenz 0,9 ist überzogen."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "dbf5acd15a8137a14eb5bcedc528d32fd328a6edc8f20e89ab1e3236ceecc815",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "6ae2ef3f556e0aaebf70ba200aaebca760a17d307ad74b03b5ca1674dec7fb32"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "f0ff8449973b173c152f255b8d2d2f59e4c229f700c45c0a77a077ac32e3615e"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "f0d1a44c4f8e246c50e3c2252bfd7b38cc74a6ffd4ebc7d73ea21a77bb8b6f71"
+      "input_sha256": "dbf5acd15a8137a14eb5bcedc528d32fd328a6edc8f20e89ab1e3236ceecc815"
     }
   ]
 }

@@ -6,16 +6,20 @@
   "law_id": "bgbl-1-2026-87",
   "score": -2,
   "confidence": 0.99,
-  "rationale": "Die Änderung fügt den Wolf ausdrücklich in die Aufzählung der dem Jagdrecht unterliegenden Tierarten ein. Das widerspricht unmittelbar dem Kriterium, den Wolf nicht dem Jagdrecht zuzuordnen.",
+  "rationale": "Das Gesetz fügt den Wolf ausdrücklich in § 2 Absatz 1 des Bundesjagdgesetzes ein. Damit wird er dem Jagdrecht zugeordnet, entgegen dem Kriterium.",
   "law_passage_id": "bgbl-1-2026-87-p-cde3bd6dc7316b55",
   "law_quote": "In § 2 Absatz 1 Nummer 1 wird nach der Angabe „Murmeltier (Marmota marmota L.),“ die Angabe „Wolf (Canis\nlupus L.),“ eingefügt.",
   "criterion_quote": "Geschützte Arten wie der Wolf\ngehören nicht ins Jagdrecht.",
-  "caveats": [
-    "Wolfshybriden unterliegen nach § 22f nur eingeschränkt dem Jagdrecht; das ändert nichts an der Aufnahme des Wolfs selbst.",
-    "Die Jagd ist teils an einen ungünstigen Erhaltungszustand, Genehmigungen oder Managementpläne geknüpft, die Zuordnung zum Jagdrecht bleibt dennoch bestehen.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "9cc5192b991e606d7a5e29338780dd6d0ab057a8561e1a6f507687977c259afd",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "e4d2422fb31a15a8dc4a28bf685f4c089a9508bcde7f97a6f4a9b0199d469c54"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -29,9 +33,9 @@
       "input_sha256": "8094e15a1496130176cffebe6a46c07f4471a238ec910a818a746d69d6669fa7"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "c5754065bea0272d0673fed898548e4a5b6171de2c93eed4b297270c40882d24"
+      "input_sha256": "9cc5192b991e606d7a5e29338780dd6d0ab057a8561e1a6f507687977c259afd"
     }
   ]
 }

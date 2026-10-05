@@ -6,20 +6,20 @@
   "law_id": "bgbl-2-2025-295",
   "score": 1,
   "confidence": 0.86,
-  "rationale": "Die Regelung untersagt Schiedsrichtern in Verfahren nach diesem Abkommen, Weisungen einer Organisation oder Regierung entgegenzunehmen, und verlangt ihre Unabhängigkeit. Das stützt das Kriterium teilweise für diesen begrenzten Personenkreis; eine allgemeine Regelung oder tatsächliche Praxis zu Weisungen außerhalb dieses Verfahrensbereichs ist damit nicht belegt.",
+  "rationale": "Schiedsrichter in Verfahren nach dem Abkommen dürfen keine Weisungen von Organisationen oder Regierungen entgegennehmen. Das begrenzt politische Einflussnahme auf diesen Personenkreis; eine allgemeine Weisungsregelung oder die tatsächliche Praxis wird nicht belegt.",
   "law_passage_id": "bgbl-2-2025-295-p-6c255eff073505e1",
-  "law_quote": "Die Schiedsrichter müssen über Fachwissen in abkommensrelevanten Fragen oder Erfahrung auf den Gebieten Recht und\ninternationaler Handel verfügen. Sie müssen unabhängig sein und in persönlicher Eigenschaft handeln und dürfen weder Weisungen\neiner Organisation oder Regierung entgegennehmen noch dürfen sie der Regierung einer Vertragspartei nahestehen; außerdem\nmüssen sie sich an den Verhaltenskodex im Anhang der Geschäftsordnung halten.",
+  "law_quote": "(2) Die Schiedsrichter müssen über Fachwissen in abkommensrelevanten Fragen oder Erfahrung auf den Gebieten Recht und\ninternationaler Handel verfügen. Sie müssen unabhängig sein und in persönlicher Eigenschaft handeln und dürfen weder Weisungen\neiner Organisation oder Regierung entgegennehmen noch dürfen sie der Regierung einer Vertragspartei nahestehen; außerdem\nmüssen sie sich an den Verhaltenskodex im Anhang der Geschäftsordnung halten.",
   "criterion_quote": "Weisungen müssen frei von\npolitischer Einflussnahme sein.",
-  "caveats": [
-    "Die Regelung betrifft Schiedsrichter nach diesem Abkommen, nicht nachweislich Weisungen allgemein.",
-    "Der Text belegt eine rechtliche Vorgabe, nicht deren tatsächliche Umsetzung oder Praxis.",
-    "Die Regelung betrifft nur Schiedsrichter nach dem Abkommen, nicht Weisungen allgemein.",
-    "Die tatsächliche Praxis ist durch den Text nicht belegt.",
-    "Der Gesetzesauszug ist nur ein Teil des Abkommens.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass Regelungen und Praxis zu Weisungen politische Einflussnahme ausschließen. Im Programmzitat geht es erkennbar um Weisungen im Verwaltungs- oder Justizkontext. Die Norm betrifft dagegen die Unabhängigkeit von Schiedsrichtern in Streitbeilegungsverfahren eines Handelsabkommens. Das ist nur ein Themenbezug über das Stichwort „Weisungen“. Die Norm betrifft weder Weisungsrechte der Regierung noch Staatsanwaltschaften noch eine andere Weisungsstruktur, die das Programm adressiert. Sie erfasst auch keine Praxis. Der Gesetzesauszug ist zudem nur ein Teil des Abkommens. Der Vorschlag überträgt das Kriterium also auf einen anderen Regelungsbereich und wird abgelehnt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "c2f1e6ddfde05a873d38618a061eea38dc41d75f5709766db8789edc76c810d3",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "e16179804c86856620f5844cf15d0f3055e7f79c1176512a4fade6ba84974361"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "5d77842e7f840f2b9ffbe6d8885555896f81e7b5710129c298f36530a751ba82"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "4dbb57a291b42cfa818afe5030e17c876eea83c0bdc432b6a4543f2c6305940f"
+      "input_sha256": "c2f1e6ddfde05a873d38618a061eea38dc41d75f5709766db8789edc76c810d3"
     }
   ]
 }

@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2026-7",
   "score": 1,
   "confidence": 0.86,
-  "rationale": "Das Gesetz nennt Personen, die schwerwiegend antisemitische Ziele verfolgen, ausdrücklich als mögliche Gegenstände nachrichtendienstlicher Aufklärung. Das stützt die Verfolgung solcher antisemitischen Bestrebungen teilweise, belegt aber nicht die Verfolgung antisemitischer Vorfälle allgemein oder eine strafrechtliche Verfolgung im Einzelfall.",
+  "rationale": "Personen, die mit ihrem Handeln schwerwiegend antisemitische Ziele verfolgen, können unter den gesetzlichen Voraussetzungen nachrichtendienstlich aufgeklärt werden. Das unterstützt die Verfolgung solcher Handlungen teilweise, regelt aber keine Verfolgung antisemitischer Vorfälle allgemein.",
   "law_passage_id": "bgbl-1-2026-7-p-25a90bbf0d9992d4",
-  "law_quote": "die mit ihrem Handeln in schwerwiegender Weise rassistische, volksverhetzende, antisemitische,\nmenschenfeindliche oder bestimmte Bevölkerungsgruppen diskriminierende Ziele verfolgen,",
+  "law_quote": "2. die mit ihrem Handeln in schwerwiegender Weise rassistische, volksverhetzende, antisemitische,\nmenschenfeindliche oder bestimmte Bevölkerungsgruppen diskriminierende Ziele verfolgen,",
   "criterion_quote": "Antisemitische Vorfälle müssen\nverfolgt",
-  "caveats": [
-    "Die Passage bezieht sich auf Personen mit schwerwiegenden antisemitischen Zielen, nicht ausdrücklich auf alle antisemitischen Vorfälle.",
-    "Die Passage belegt nachrichtendienstliche Aufklärung, nicht die Einleitung eines Strafverfahrens.",
-    "Die Passage betrifft nur die Aufklärung von Personen mit schwerwiegenden antisemitischen Zielen, nicht Vorfälle.",
-    "Sie beschränkt sich auf den Militärischen Abschirmdienst im Bundeswehrbereich, nicht auf allgemeine Strafverfolgung.",
-    "Sie ist eine Eingriffsschwelle für schwerwiegende Mittel, keine Pflicht zur Verfolgung.",
-    "Das Gesetz liegt nur teilweise vor (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Programmkriterium verlangt, dass antisemitische Vorfälle verfolgt werden, also eine allgemeine Verfolgung, vor allem im strafrechtlichen oder behördlichen Sinn. Die Gesetzespassage regelt dagegen nur die Voraussetzungen für den Einsatz nachrichtendienstlicher Mittel durch den Militärischen Abschirmdienst. Sie gilt nur für Personen mit schwerwiegenden antisemitischen Zielen und bezieht sich nur auf den Bundeswehrkontext. Das ist ein Themenbezug, kein belastbarer Beleg für eine Verfolgung antisemitischer Vorfälle. Eine Verschärfung oder Ausweitung der Verfolgung ist nicht erkennbar. Der Hinweis, die Passage sei eine Eingriffsschwelle, nicht eine Aufklärungspflicht, spricht ebenfalls gegen die Zuordnung. Die Punktzahl 1 ist daher nicht gedeckt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "34b16df725ef4b51a51129fa9e02426693138c468dcce22fb772d12ecd68b6e4",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "b03b0a37a8a8c89a4cc6f77b5b5e603b7d0fa14cc0ba1e47624f65c29aac00f2"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "1c19b563d74dc3266dc775c9a87b0d6373b57da59d655abbe6b207b57fe82150"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "dad26b647699fd491209f97ddb694d39d7260981e789221e15243f6c4f9877c5"
+      "input_sha256": "34b16df725ef4b51a51129fa9e02426693138c468dcce22fb772d12ecd68b6e4"
     }
   ]
 }

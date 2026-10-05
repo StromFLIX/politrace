@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2026-7",
   "score": 1,
   "confidence": 0.82,
-  "rationale": "Die Vorschrift sieht eine Vorprüfung tatsächlicher Anhaltspunkte auf einen Verdacht einer Bestrebung oder Tätigkeit vor. Das bietet dem Militärischen Abschirmdienst ein Verfahren zur frühzeitigen Prüfung möglicher Sicherheitsbedrohungen und stützt den Test teilweise. Der Ausschnitt nennt jedoch weder ausdrücklich extremistische Netzwerke noch belegt er, dass eine solche Erkennung tatsächlich stattgefunden hat.",
+  "rationale": "Der Militärische Abschirmdienst kann tatsächliche Anhaltspunkte vorprüfen, bevor der Verdacht einer Bestrebung oder Tätigkeit feststeht. Das schafft ein Verfahren zur frühen Prüfung möglicher Bedrohungen; extremistische Netzwerke und eine tatsächlich erfolgte Erkennung werden nicht ausdrücklich belegt.",
   "law_passage_id": "bgbl-1-2026-7-p-c1198c83eb41f234",
   "law_quote": "(1) Der Militärische Abschirmdienst kann tatsächliche Anhaltspunkte darauf prüfen, ob sie den Verdacht einer\nBestrebung oder einer Tätigkeit begründen (Vorprüfung).",
   "criterion_quote": "Extremistische Netzwerke müssen von den\nSicherheitsbehörden frühzeitig erkannt,",
-  "caveats": [
-    "Die Regelung betrifft ausdrücklich den Militärischen Abschirmdienst; eine Erkennung extremistischer Netzwerke wird nicht ausdrücklich genannt.",
-    "Die Vorschrift belegt ein vorgesehenes Verfahren, nicht dessen tatsächliche Anwendung.",
-    "Die Vorschrift nennt weder extremistische Netzwerke noch Extremismus ausdrücklich.",
-    "Sie betrifft nur den Militärischen Abschirmdienst, nicht Sicherheitsbehörden allgemein.",
-    "Sie begründet nur eine Befugnis („kann“); die tatsächliche Umsetzung ist nicht belegt.",
-    "Der Gesetzesausschnitt ist nur teilweise überliefert (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt Verfahren oder Maßnahmen, mit denen Sicherheitsbehörden extremistische Netzwerke frühzeitig erkennen, und deren Umsetzung. § 5 Abs. 1 erlaubt dem Militärischen Abschirmdienst eine Vorprüfung tatsächlicher Anhaltspunkte auf den Verdacht einer „Bestrebung oder Tätigkeit“. Das ist ein Verfahrensschritt im Vorfeld, aber ein bloßer Themenbezug. Der Text nennt weder Extremismus noch Netzwerke und sagt nichts über einen Netzwerkbezug. Die Beschränkung auf die Bundeswehr ist ebenfalls relevant: Das Kriterium spricht allgemein von Sicherheitsbehörden, die Norm betrifft nur den MAD. Der Ausschnitt zeigt außerdem nur eine Befugnis („kann“), keine Umsetzung. Zwar sind benachbarte Passagen vorhanden (§ 3 Zusammenarbeit mit Verfassungsschutzbehörden, Abschirmlage), doch sie wurden nicht als Beleg vorgeschlagen und nennen ebenfalls keine extremistischen Netzwerke. Der Score von 1 und die Konfidenz von 0,82 sind daher nicht gedeckt, und die Zuordnung ist zu unspezifisch."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "34b16df725ef4b51a51129fa9e02426693138c468dcce22fb772d12ecd68b6e4",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "ca7afe0b0187bf50a04208823b39ff7d7e32d4b85dcb8983ea76eebb164d962e"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "297d047423b3214553cb4a2be71d01aa8706bc7cc8311d153bbc413fe66e7ab9"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "d9c19d566710d93df7be4342e4e0f47358e3c6cd4bb60d29bc47c1cdaff5f4b8"
+      "input_sha256": "34b16df725ef4b51a51129fa9e02426693138c468dcce22fb772d12ecd68b6e4"
     }
   ]
 }

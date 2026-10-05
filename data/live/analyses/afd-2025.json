@@ -35538,7 +35538,7 @@
     {
       "law_id": "bgbl-1-2025-348",
       "analysis_sha256": "379837b4b6695eac45fc5e4d023f5d75384aec6ee62b426e579c39b2a0e8d906",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -35779,6 +35779,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-98ff78cdd8fcff9d",
+          "disposition": "proposed_link",
+          "rationale": "Für die Zulassung von Erdwärmevorhaben und unterirdischen Wärmespeichern gilt eine Entscheidungsfrist von einem Jahr. Das unterstützt Bewilligungen in diesem Teilbereich; bei außergewöhnlichen Umständen ist eine Fristverlängerung möglich.",
+          "input_sha256": "fc7dc25701e72e5201d060e8f59594b8307a78d3160c5dea24e0f810da1bccb1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "89a91195bb8ad9b9e74b0624f2fdfd48baa71a1b5516c033f76ad454f63128ef"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc7dc25701e72e5201d060e8f59594b8307a78d3160c5dea24e0f810da1bccb1"
+            }
+          ],
+          "impact_id": "impact-6d9f531c1b9307da",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Für die Zulassung von Erdwärmevorhaben und unterirdischen Wärmespeichern gilt eine Entscheidungsfrist von einem Jahr. Das unterstützt Bewilligungen in diesem Teilbereich; bei außergewöhnlichen Umständen ist eine Fristverlängerung möglich.",
+            "law_passage_id": "bgbl-1-2025-348-p-ab55c4f7009ea8b5",
+            "law_quote": "1. bei Vorhaben zur Gewinnung von Erdwärme sowie bei Vorhaben zur Errichtung und zum Betrieb eines\nUntergrundspeichers zur Speicherung von Wärme nach § 4 Absatz 9 Satz 2 innerhalb eines Jahres,",
+            "criterion_quote": "die Bewilligung von Neubauprojekten\n\nzu beschleunigen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-98ff78cdd8fcff9d",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
           "disposition": "no_supported_link",
           "rationale": "Die Vorschriften betreffen Zulassungsverfahren für Wärme- und Geothermievorhaben, nicht die Finanzierung staatlich veranlasster Ausgaben.",
@@ -35972,13 +36004,67 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Ausbau von Geothermie, Wärmepumpen und Wärmespeichern; eine detaillierte Prüfung von NGOs oder deren Projekten ist nicht Gegenstand der vorgelegten Vorschriften.",
+          "input_sha256": "46adc79f51b447ea686a66cd5334c938effc6f3f192414835ab92638354dcb71",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "46adc79f51b447ea686a66cd5334c938effc6f3f192414835ab92638354dcb71"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz regelt den Ausbau von Geothermie, Wärmepumpen und Wärmespeichern; eine detaillierte Prüfung von NGOs oder deren Projekten ist nicht Gegenstand der vorgelegten Vorschriften.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Im Rahmen der Haushaltskonsolidierung fordern wir eine detaillierte Prüfung dieser Organisationen und deren Projekte",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c55d49c77e14725c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Regelungen zum Ausbau der Wärmeversorgung, aber keine schulischen Befreiungsregeln für muslimische Schüler.",
+          "input_sha256": "46adc79f51b447ea686a66cd5334c938effc6f3f192414835ab92638354dcb71",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "46adc79f51b447ea686a66cd5334c938effc6f3f192414835ab92638354dcb71"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz enthält Regelungen zum Ausbau der Wärmeversorgung, aber keine schulischen Befreiungsregeln für muslimische Schüler.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Muslimischen Schülern dürfen keine Sonderrechte aufgrund ihres Glaubens wie z. B. die Befreiung vom Schwimm- und Sportunterricht gewährt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c55d49c77e14725c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
         }
       ]
     },
     {
       "law_id": "bgbl-1-2025-349",
       "analysis_sha256": "a1f167b84a792f0d10fb4662a2207d0c9cec4aa252dace70646ae01f029a12c5",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -35997,12 +36083,391 @@
         "afd-2025-ac-d868ab733901b902"
       ],
       "omitted_count": 669,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erprobt ein digitales Verfahren für bestimmte zivilrechtliche Zahlungsklagen; eine Strafbarkeit öffentlicher Kalifatsforderungen regelt es nicht.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erprobt ein digitales Verfahren für bestimmte zivilrechtliche Zahlungsklagen; eine Strafbarkeit öffentlicher Kalifatsforderungen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen digitale Zivilverfahren, nicht die Beratung in Asylverfahren oder deren rechtliche Grenzen.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen digitale Zivilverfahren, nicht die Beratung in Asylverfahren oder deren rechtliche Grenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt digitale Abläufe in bestimmten Zivilklagen; Mittel für Polizeimaßnahmen oder die Durchsetzung des Rechtsstaats stellt es nicht bereit.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt digitale Abläufe in bestimmten Zivilklagen; Mittel für Polizeimaßnahmen oder die Durchsetzung des Rechtsstaats stellt es nicht bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-198a967ab2e77f26",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht eine Kommunikationsplattform für bestimmte Zivilverfahren, enthält aber keine Vorgaben zur Beteiligung chinesisch kontrollierter Unternehmen am Ausbau digitaler Infrastruktur.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ermöglicht eine Kommunikationsplattform für bestimmte Zivilverfahren, enthält aber keine Vorgaben zur Beteiligung chinesisch kontrollierter Unternehmen am Ausbau digitaler Infrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-198a967ab2e77f26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen führen ein Erprobungsverfahren für digitale Zivilklagen ein; rechtliche Voraussetzungen für Volksabstimmungen schaffen sie nicht.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen führen ein Erprobungsverfahren für digitale Zivilklagen ein; rechtliche Voraussetzungen für Volksabstimmungen schaffen sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften für digitale Zivilverfahren und eröffnet dem Volk keine Möglichkeit, Parlamentsgesetze abzulehnen.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften für digitale Zivilverfahren und eröffnet dem Volk keine Möglichkeit, Parlamentsgesetze abzulehnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-727ade7d6a9ae858",
+          "disposition": "no_supported_link",
+          "rationale": "Das Online-Verfahren ist auf bestimmte Zivilklagen über Geldzahlungen begrenzt; Folgen der Annullierung von Ehen regelt das Gesetz nicht.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Online-Verfahren ist auf bestimmte Zivilklagen über Geldzahlungen begrenzt; Folgen der Annullierung von Ehen regelt das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-727ade7d6a9ae858",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-88652d0b5b8bab56",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft digitale Zivilverfahren und macht den Nachweis von Identität und Staatsangehörigkeit nicht zur Voraussetzung für Schutzanträge.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft digitale Zivilverfahren und macht den Nachweis von Identität und Staatsangehörigkeit nicht zur Voraussetzung für Schutzanträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-88652d0b5b8bab56",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Die Erprobung betrifft bestimmte Zivilklagen; Regelungen zur Anwendung eines Asylverfahrens auf Personen aus weiteren Herkunftsländern enthält das Gesetz nicht.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Erprobung betrifft bestimmte Zivilklagen; Regelungen zur Anwendung eines Asylverfahrens auf Personen aus weiteren Herkunftsländern enthält das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das am 22. Dezember 2025 verkündete Gesetz regelt digitale Zivilverfahren und enthält keine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das am 22. Dezember 2025 verkündete Gesetz regelt digitale Zivilverfahren und enthält keine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a608e99f4053fe5e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt ein Online-Verfahren für bestimmte Zivilklagen ein, ändert aber nicht die Voraussetzungen für die Annullierung von Ehen.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt ein Online-Verfahren für bestimmte Zivilklagen ein, ändert aber nicht die Voraussetzungen für die Annullierung von Ehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a608e99f4053fe5e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen digitale Abläufe in Zivilverfahren; ein Recht des Volkes, Parlamentsgesetze zu ändern, schaffen sie nicht.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen digitale Abläufe in Zivilverfahren; ein Recht des Volkes, Parlamentsgesetze zu ändern, schaffen sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d71fe8429512e925",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt staatliche digitale Zivilverfahren, enthält aber keine Bestimmung zur Rechtswirkung von Entscheidungen sogenannter Friedensrichter.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt staatliche digitale Zivilverfahren, enthält aber keine Bestimmung zur Rechtswirkung von Entscheidungen sogenannter Friedensrichter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d71fe8429512e925",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d868ab733901b902",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt digitale Zivilverfahren; eine bedarfsorientierte Vorschule oder deren Förderziele führt es nicht ein.",
+          "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca2f441059e641b22edc7e0a90f6d90c135ed62fbcac421e72655008f88c634d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt digitale Zivilverfahren; eine bedarfsorientierte Vorschule oder deren Förderziele führt es nicht ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d868ab733901b902",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-350",
       "analysis_sha256": "2787d3c1f2c59b054d35c8e801e03d46038b32b59bae0cd7df8a3ce5c358d230",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -36019,7 +36484,334 @@
         "afd-2025-ac-ee4543cdd02e8ceb"
       ],
       "omitted_count": 671,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht, nicht die Strafbarkeit öffentlicher Kalifatsforderungen.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht, nicht die Strafbarkeit öffentlicher Kalifatsforderungen.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Aufzeichnungspflichten im Pflanzenschutzrecht und ändert nicht die Wahl des Bundespräsidenten.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Aufzeichnungspflichten im Pflanzenschutzrecht und ändert nicht die Wahl des Bundespräsidenten.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Pflanzenschutz-Aufzeichnungen und schafft keine Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Pflanzenschutz-Aufzeichnungen und schafft keine Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht; eine Überprüfung oder Streichung Corona-bezogener Vorschriften regelt es nicht.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht; eine Überprüfung oder Streichung Corona-bezogener Vorschriften regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Aufzeichnungspflichten im Pflanzenschutzrecht und führt kein Verfahren für Volksabstimmungen über Parlamentsgesetze ein.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Aufzeichnungspflichten im Pflanzenschutzrecht und führt kein Verfahren für Volksabstimmungen über Parlamentsgesetze ein.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Aufzeichnungen zu Pflanzenschutzmitteln und gibt dem Volk kein Recht, Parlamentsgesetze abzulehnen.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Aufzeichnungen zu Pflanzenschutzmitteln und gibt dem Volk kein Recht, Parlamentsgesetze abzulehnen.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Aufzeichnungspflichten im Pflanzenschutzrecht; die Überprüfung Corona-bezogener Gesetze und Richtlinien ist nicht geregelt.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Aufzeichnungspflichten im Pflanzenschutzrecht; die Überprüfung Corona-bezogener Gesetze und Richtlinien ist nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8c34baf26577e822",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht und regelt nicht die Bestellung parlamentarischer Präsidien.",
+          "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6a298f07287f94ef1700da1676fbb3b514c293b894a190ecbecceaca4a216e81"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht und regelt nicht die Bestellung parlamentarischer Präsidien.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8c34baf26577e822",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz regelt keine Ablehnung der Internationalen Gesundheitsvorschriften; ob Deutschland dies vor dem 31. März 2025 getan hat, geht aus dem Gesetz nicht hervor.",
+          "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz regelt keine Ablehnung der Internationalen Gesundheitsvorschriften; ob Deutschland dies vor dem 31. März 2025 getan hat, geht aus dem Gesetz nicht hervor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Deutschland noch vor der Frist am 31. März 2025 die Internationalen Gesundheitsvorschriften in der jetzigen Form ablehnt.",
+            "caveats": [
+              "Für die historische Handlung und ihren Zeitpunkt sind weitere Quellen erforderlich."
+            ],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht; ein Verbot von Al-Quds-Tagen regelt es nicht.",
+          "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Aufzeichnungspflichten im Pflanzenschutzrecht; ein Verbot von Al-Quds-Tagen regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-350-p-15ade603d996dc35",
+            "law_quote": "Änderung des Pflanzenschutzgesetzes",
+            "criterion_quote": "Die Al-Quds-Tage in Berlin, wo Demonstranten die Zerstörung Israels fordern, sind dauerhaft zu verbieten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b6e320ee53f699f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Pflanzenschutzgesetz und räumt dem Volk kein Recht ein, parlamentarische Gesetze zu ändern.",
+          "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Pflanzenschutzgesetz und räumt dem Volk kein Recht ein, parlamentarische Gesetze zu ändern.",
+            "law_passage_id": "bgbl-1-2025-350-p-15ade603d996dc35",
+            "law_quote": "Änderung des Pflanzenschutzgesetzes",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ee4543cdd02e8ceb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Aufzeichnungen zu Pflanzenschutzmitteln, nicht die Amtszeit des Bundeskanzlers.",
+          "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5d7ec061ae595865d445140a80e613e22ba672d05d12719118233e30e4059c0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Aufzeichnungen zu Pflanzenschutzmitteln, nicht die Amtszeit des Bundeskanzlers.",
+            "law_passage_id": "bgbl-1-2025-350-p-6ddc21fdea8903b4",
+            "law_quote": "Die Aufzeichnungen nach Artikel 67 Absatz 1 Satz 1 der Verordnung (EG) Nr. 1107/2009 können elektronisch oder schriftlich geführt werden.",
+            "criterion_quote": "eine Begrenzung der Mandatszeit für Bundeskanzler auf drei",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ee4543cdd02e8ceb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-351",
@@ -36051,12 +36843,596 @@
         "afd-2025-ac-efab0adfaf4e0735"
       ],
       "omitted_count": 661,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Windenergie auf See und Stromnetze; eine Strafregelung für öffentliche Kalifatsforderungen ist darin nicht enthalten.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften betreffen Windenergie auf See und Stromnetze; eine Strafregelung für öffentliche Kalifatsforderungen ist darin nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zu Windenergie auf See und Stromnetzen regeln keine Asylverfahrensberatung.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften zu Windenergie auf See und Stromnetzen regeln keine Asylverfahrensberatung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern weder Anspruch noch Bezugsdauer des Arbeitslosengeldes.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften ändern weder Anspruch noch Bezugsdauer des Arbeitslosengeldes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Rentenniveau oder zur Rentenhöhe.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Rentenniveau oder zur Rentenhöhe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften behandeln keine im Zusammenhang mit der Corona-Krise geänderten Gesetze oder Richtlinien.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften behandeln keine im Zusammenhang mit der Corona-Krise geänderten Gesetze oder Richtlinien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-4a478d7c9a341e5a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Windenergie und Netze, nicht ein Verbot der Stellnetzfischerei in der Ostsee; ob ein solches Verbot anderweitig eingeführt wurde, lässt sich daraus nicht ableiten.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die vorgelegten Vorschriften betreffen Windenergie und Netze, nicht ein Verbot der Stellnetzfischerei in der Ostsee; ob ein solches Verbot anderweitig eingeführt wurde, lässt sich daraus nicht ableiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-4a478d7c9a341e5a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu einer Willkommensprämie oder Rentengutschrift für Neugeborene.",
+          "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79ef0ca026d77716e74fa33d526e2d77f67978a07c0c7753b8165d613c7ba387"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu einer Willkommensprämie oder Rentengutschrift für Neugeborene.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Windenergie auf See und Stromnetze; die vorgelegten Vorschriften betreffen keine Mehrfachstaatsangehörigkeit.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Windenergie auf See und Stromnetze; die vorgelegten Vorschriften betreffen keine Mehrfachstaatsangehörigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Zustimmung des Volkes bei Grundgesetzänderungen.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Zustimmung des Volkes bei Grundgesetzänderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-755932e3054f13dd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält in den vorgelegten Vorschriften keine Regelung zu Duldungen oder zum Aufenthaltsrecht.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält in den vorgelegten Vorschriften keine Regelung zu Duldungen oder zum Aufenthaltsrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-755932e3054f13dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Finanzierung staatlich veranlasster Ausgaben zwischen Bund, Ländern und Kommunen.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Finanzierung staatlich veranlasster Ausgaben zwischen Bund, Ländern und Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9d2efd93cfff917f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften behandeln weder Wasserprivatisierung noch Wasserwerke oder private Trinkwasserbrunnen.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften behandeln weder Wasserprivatisierung noch Wasserwerke oder private Trinkwasserbrunnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9d2efd93cfff917f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz belegt keine deutsche Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz belegt keine deutsche Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften sehen für Offshore-Windflächen Minderungsmaßnahmen vor, verlangen aber keinen Nachweis uneingeschränkter Umweltverträglichkeit und ökonomischen Nutzens oder den Verzicht auf Vorrangeinspeisung und Subventionen.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Vorschriften sehen für Offshore-Windflächen Minderungsmaßnahmen vor, verlangen aber keinen Nachweis uneingeschränkter Umweltverträglichkeit und ökonomischen Nutzens oder den Verzicht auf Vorrangeinspeisung und Subventionen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz dokumentiert keine politische Initiative für außerhalb Deutschlands durchgeführte Asylverfahren.",
+          "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1b53058b64c773661d2c248897ffcc74672e1a6dbbf81d3964f0d408b0ed181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz dokumentiert keine politische Initiative für außerhalb Deutschlands durchgeführte Asylverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bcd807232c364182",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Aufnahme von Kinderrechten in das Grundgesetz.",
+          "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Aufnahme von Kinderrechten in das Grundgesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bcd807232c364182",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bf0047596cf6c502",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Offshore-Windenergie und Stromnetze, nicht Vorgaben der staatlichen Filmförderung.",
+          "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Offshore-Windenergie und Stromnetze, nicht Vorgaben der staatlichen Filmförderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bf0047596cf6c502",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine dokumentierte Prüfung von Nichtregierungsorganisationen oder deren Projekten vor.",
+          "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine dokumentierte Prüfung von Nichtregierungsorganisationen oder deren Projekten vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e71e7ae531c6cbdd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zu Schutzgebieten und Minderungsmaßnahmen belegen weder eine Ausweitung noch den Verzicht auf eine Ausweitung von Naturschutz-Kernzonen.",
+          "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschriften zu Schutzgebieten und Minderungsmaßnahmen belegen weder eine Ausweitung noch den Verzicht auf eine Ausweitung von Naturschutz-Kernzonen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e71e7ae531c6cbdd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-efab0adfaf4e0735",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Bindung von Fangquoten an Kutter.",
+          "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "51417551528acff83cbfa72a6cd288c93b598b7f856aa6931c8cf126677d5e89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Bindung von Fangquoten an Kutter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-efab0adfaf4e0735",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-352",
       "analysis_sha256": "9e64d7a7f17184af909d8b979a316d1d2016e60b280ce9463ce94baf715ee05c",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-033f965cbbd058a3",
@@ -36101,12 +37477,1111 @@
         "afd-2025-ac-f0811c6caa9f8925"
       ],
       "omitted_count": 643,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift regelt die elektronische Übermittlung steuerlicher Meldungen an das Bundeszentralamt für Steuern; eine Begrenzung der Asylverfahrensberatung enthält sie nicht.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Vorschrift regelt die elektronische Übermittlung steuerlicher Meldungen an das Bundeszentralamt für Steuern; eine Begrenzung der Asylverfahrensberatung enthält sie nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Eine Verfahrensberatung darf nur nach gelten\ndem Recht erfolgen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die zitierte Vorschrift betrifft steuerliche Datenmeldungen; Mittel oder Maßnahmen zur Durchsetzung des Rechtsstaats in No-go-Areas regelt sie nicht.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die zitierte Vorschrift betrifft steuerliche Datenmeldungen; Mittel oder Maßnahmen zur Durchsetzung des Rechtsstaats in No-go-Areas regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Es sind weiter die erforderlichen Mittel bereitzustellen und Maßnah\nmen (wie z. B. Razzien und Kontrollstellen) durchzuführen, damit der\n\nRechtsstaat in den sogenannten No-go-Areas wieder durchgesetzt\n\nwerden kann.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt steuerliche Meldungen zu Kryptowerten und anderen Steuerdaten, nicht die Wahl des Bundespräsidenten.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt steuerliche Meldungen zu Kryptowerten und anderen Steuerdaten, nicht die Wahl des Bundespräsidenten.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Der Bundespräsident, als höchster Repräsentant des Staates, soll\n\ndirekt vom Volk gewählt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-1aeb577ce831c865",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung schreibt steuerliche Datenmeldungen vor, ändert aber nach dem vorgelegten Text keine Luftverkehr- oder Ticketsteuer.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Regelung schreibt steuerliche Datenmeldungen vor, ändert aber nach dem vorgelegten Text keine Luftverkehr- oder Ticketsteuer.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Die AfD befürwortet die Abschaffung der Luftverkehr- und Ticket\nsteuer",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-1aeb577ce831c865",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-20d96403e1cafede",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen steuerliche Meldepflichten von Anbietern; eine Verpflichtung großer sozialer Medien zur Achtung der Meinungsfreiheit ist nicht enthalten.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen steuerliche Meldepflichten von Anbietern; eine Verpflichtung großer sozialer Medien zur Achtung der Meinungsfreiheit ist nicht enthalten.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Als\n\nQuasi-Oligopole sollen die großen Anbieter sozialer Medien ver\npflichtet werden, die Meinungsfreiheit ihrer Nutzer zu respektieren.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-20d96403e1cafede",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2da85f9fd3285861",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Meldepflichten für Kryptowerte-Anbieter vor; die einjährige Frist zur Besteuerung von Wertzuwächsen wird im vorgelegten Text nicht geregelt.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Das Gesetz sieht Meldepflichten für Kryptowerte-Anbieter vor; die einjährige Frist zur Besteuerung von Wertzuwächsen wird im vorgelegten Text nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-352-p-c4d8f2b43ecfd8bc",
+            "law_quote": "Anbieter im Sinne dieses Gesetzes sind Kryptowerte-Dienstleister und Kryptowerte-Betreiber, die eine oder mehrere Kryptowerte-Dienstleistungen anbieten, die Tauschgeschäfte für oder im Namen eines zu meldenden Nutzers bewirken.",
+            "criterion_quote": "der einjährigen Frist zur Besteuerung von Wertzuwächsen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2da85f9fd3285861",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung betrifft elektronische Steuermeldungen; rechtliche Voraussetzungen für Volksabstimmungen schafft sie nicht.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelung betrifft elektronische Steuermeldungen; rechtliche Voraussetzungen für Volksabstimmungen schafft sie nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "die\n\nrechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2\n\nGG vorgesehenen Volksabstimmungen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt steuerliche Melde- und Sorgfaltspflichten; eine Überprüfung oder Streichung Corona-bedingt geänderter Gesetze und Richtlinien enthält der vorgelegte Text nicht.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt steuerliche Melde- und Sorgfaltspflichten; eine Überprüfung oder Streichung Corona-bedingt geänderter Gesetze und Richtlinien enthält der vorgelegte Text nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-c1c1381810dbc600",
+            "law_quote": "Der Anbieter hat die Maßnahmen nach den §§ 4 bis 6 vor der Durchführung von zu meldenden Transaktionen abzuschließen.",
+            "criterion_quote": "Die im Zusammen\nhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind\n\nzu überprüfen und gegebenenfalls zu streichen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen steuerliche Pflichten von Kryptowerte-Anbietern und enthalten keine allgemeine Sprachregelung für Migranten.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften betreffen steuerliche Pflichten von Kryptowerte-Anbietern und enthalten keine allgemeine Sprachregelung für Migranten.",
+            "law_passage_id": "bgbl-1-2025-352-p-c4d8f2b43ecfd8bc",
+            "law_quote": "Anbieter im Sinne dieses Gesetzes sind Kryptowerte-Dienstleister und Kryptowerte-Betreiber, die eine oder mehrere Kryptowerte-Dienstleistungen anbieten, die Tauschgeschäfte für oder im Namen eines zu meldenden Nutzers bewirken.",
+            "criterion_quote": "mindestens\n\nauf B2-Niveau, in angemessener Zeit, in der Regel innerhalb von\n\n2 Jahren, in Ausnahmefällen innerhalb von 5 Jahren",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-4ae67cdb85de59b0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Meldepflichten und Sorgfaltspflichten im Steuerbereich, aber keine im vorgelegten Text erkennbare Senkung von Steuersätzen.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz enthält Meldepflichten und Sorgfaltspflichten im Steuerbereich, aber keine im vorgelegten Text erkennbare Senkung von Steuersätzen.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Die Steuersätze wer\nden wir senken, im Gegenzug ebenso die Abschreibungsmöglich\nkeiten für „Steuersparmodelle”.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-4ae67cdb85de59b0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bestimmungen ordnen steuerliche Datenmeldungen zu Nutzern und Transaktionen an; eine Willkommensprämie oder Rentengutschrift regeln sie nicht.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Bestimmungen ordnen steuerliche Datenmeldungen zu Nutzern und Transaktionen an; eine Willkommensprämie oder Rentengutschrift regeln sie nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "eine Willkommensprämie von 20.000 € für neugeborene Babys,\n\nsofern bereits Rentenbeiträge in derselben Höhe eingezahlt\n\nworden sind, andernfalls eine Gutschrift auf zukünftige Ren\ntenbeiträge in dieser Höhe",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift betrifft steuerliche Sorgfaltspflichten vor meldepflichtigen Transaktionen; das für bestehende Bauwerke anwendbare Baurecht regelt sie nicht.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschrift betrifft steuerliche Sorgfaltspflichten vor meldepflichtigen Transaktionen; das für bestehende Bauwerke anwendbare Baurecht regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-c1c1381810dbc600",
+            "law_quote": "Der Anbieter hat die Maßnahmen nach den §§ 4 bis 6 vor der Durchführung von zu meldenden Transaktionen abzuschließen.",
+            "criterion_quote": "muss immer das Baurecht aus dem Erstellungszeitraum\n\nanwendbar bleiben.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6fa734dee9fad797",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen die steuerliche Identifizierung und Meldung von Kryptowerte-Nutzern, nicht die Verwendung von Kapital vor dem 65. Lebensjahr.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen die steuerliche Identifizierung und Meldung von Kryptowerte-Nutzern, nicht die Verwendung von Kapital vor dem 65. Lebensjahr.",
+            "law_passage_id": "bgbl-1-2025-352-p-c7e6c58b54b645d6",
+            "law_quote": "Der Anbieter muss unter Beachtung der Fristen nach § 7 von einem Kryptowerte-Nutzer, der eine natürliche Person ist, eine gültige Selbstauskunft beschaffen, die es dem Anbieter ermöglicht, die steuerlichen Ansässigkeiten des Kryptowerte-Nutzers zu bestimmen.",
+            "criterion_quote": "wobei bis dahin eine Verwendung des\n\nKapitals ausgeschlossen ist.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6fa734dee9fad797",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-79659b2b88dc0fb5",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften regeln steuerliche Meldungen und Sorgfaltspflichten, nicht die Höhe von Abschreibungsmöglichkeiten für Steuersparmodelle.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die angeführten Vorschriften regeln steuerliche Meldungen und Sorgfaltspflichten, nicht die Höhe von Abschreibungsmöglichkeiten für Steuersparmodelle.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Die Steuersätze wer\nden wir senken, im Gegenzug ebenso die Abschreibungsmöglich\nkeiten für „Steuersparmodelle”.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-79659b2b88dc0fb5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7f5d495bd9f059a3",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz definiert Kryptowerte und regelt steuerliche Meldungen; ob die Umsatzsteuerfreiheit von Bitcoin-Transaktionen nach dem übrigen geltenden Umsatzsteuerrecht fortbesteht, lässt sich aus den vorgelegten Auszügen nicht feststellen.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Das Gesetz definiert Kryptowerte und regelt steuerliche Meldungen; ob die Umsatzsteuerfreiheit von Bitcoin-Transaktionen nach dem übrigen geltenden Umsatzsteuerrecht fortbesteht, lässt sich aus den vorgelegten Auszügen nicht feststellen.",
+            "law_passage_id": "bgbl-1-2025-352-p-1d55616a6a740315",
+            "law_quote": "Zu meldender Kryptowert im Sinne dieses Gesetzes ist jeder Kryptowert, außer digitales Zentralbankgeld, E-Geld und solche Kryptowerte, die nicht für Zahlungs- oder Investitionszwecke verwendet werden können.",
+            "criterion_quote": "Beibehaltung der Umsatzsteuer-Freiheit von Bitcoin-Transaktionen,",
+            "caveats": [
+              "Das einschlägige Umsatzsteuerrecht ist in den vorgelegten Quellen nicht enthalten."
+            ],
+            "criterion_id": "afd-2025-ac-7f5d495bd9f059a3",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-820b94dca288161e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt steuerliche Meldepflichten, nicht die Verschiebung von Tarifeckwerten bis zum Spitzensteuersatz.",
+          "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc767a3a7ca893948194e3d0e9599bcf30e71d1b78176798d995647f36a2e5fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz regelt steuerliche Meldepflichten, nicht die Verschiebung von Tarifeckwerten bis zum Spitzensteuersatz.",
+            "law_passage_id": "bgbl-1-2025-352-p-d99e1fb72c08ded0",
+            "law_quote": "Die Meldung an das Bundeszentralamt für Steuern hat nach amtlich vorgeschriebenem Datensatz elektronisch im Wege der Datenfernübertragung über amtlich bestimmte Schnittstellen zu erfolgen.",
+            "criterion_quote": "Die korrespondierende Verschiebung von weiteren\n\nTarifeckwerten bis hin zum Spitzensteuersatz halten wir ebenfalls\n\nfür erforderlich.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-820b94dca288161e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-875b95ff90c6b694",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln vor allem steuerliche Melde- und Sorgfaltspflichten für Kryptowerte; eine Änderung der Anlehnung des Grundfreibetrags ist darin nicht belegt.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen regeln vor allem steuerliche Melde- und Sorgfaltspflichten für Kryptowerte; eine Änderung der Anlehnung des Grundfreibetrags ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-875b95ff90c6b694",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-88652d0b5b8bab56",
+          "disposition": "no_supported_link",
+          "rationale": "Die Identifizierungsregeln betreffen Kryptowerte-Nutzer und steuerliche Ansässigkeit, nicht Voraussetzungen für Asyl- oder Schutzanträge.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Identifizierungsregeln betreffen Kryptowerte-Nutzer und steuerliche Ansässigkeit, nicht Voraussetzungen für Asyl- oder Schutzanträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-88652d0b5b8bab56",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln Kryptowerte-Meldungen und steuerliche Pflichten; eine Einstellung staatlicher Förderung der genannten Zwecke ist daraus nicht ersichtlich.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln Kryptowerte-Meldungen und steuerliche Pflichten; eine Einstellung staatlicher Förderung der genannten Zwecke ist daraus nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-93f11653a53227d8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen steuerliche Meldungen zu Kryptowerten, nicht die Besteuerung von Familieneinkommen durch Familiensplitting.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen steuerliche Meldungen zu Kryptowerten, nicht die Besteuerung von Familieneinkommen durch Familiensplitting.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-93f11653a53227d8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-95c9ec0447116186",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln Steuertransparenz bei Kryptowerten und enthalten keine Bestimmung zur Aufnahme von Migranten nach Seenotrettung.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln Steuertransparenz bei Kryptowerten und enthalten keine Bestimmung zur Aufnahme von Migranten nach Seenotrettung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-95c9ec0447116186",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-96ff53011df7c6e5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht im Auszug steuerliche Meldepflichten vor; ob der EU ein eigenes Steuererhebungsrecht eingeräumt wurde, ist damit nicht geregelt oder belegt.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz sieht im Auszug steuerliche Meldepflichten vor; ob der EU ein eigenes Steuererhebungsrecht eingeräumt wurde, ist damit nicht geregelt oder belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-96ff53011df7c6e5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Meldepflichten für Kryptowerte-Anbieter, nicht die Verteilung der Finanzierung staatlich veranlasster Ausgaben.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Meldepflichten für Kryptowerte-Anbieter, nicht die Verteilung der Finanzierung staatlich veranlasster Ausgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln steuerliche Sorgfaltspflichten bei Kryptowerte-Transaktionen; ein Verfahren für Personen aus weiteren Asyl-Herkunftsländern ist nicht belegt.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln steuerliche Sorgfaltspflichten bei Kryptowerte-Transaktionen; ein Verfahren für Personen aus weiteren Asyl-Herkunftsländern ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz wurde laut Angabe am 23. Dezember 2025 veröffentlicht und betrifft Kryptowerte-Steuertransparenz; eine Ablehnung der Gesundheitsvorschriften vor dem 31. März 2025 belegt es nicht.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz wurde laut Angabe am 23. Dezember 2025 veröffentlicht und betrifft Kryptowerte-Steuertransparenz; eine Ablehnung der Gesundheitsvorschriften vor dem 31. März 2025 belegt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a06f21ddaf058d03",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln steuerliche Meldungen zu Kryptowerten und enthalten keine Aufhebung der Grundsteuer.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln steuerliche Meldungen zu Kryptowerten und enthalten keine Aufhebung der Grundsteuer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a06f21ddaf058d03",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-afc7f6a21b1b231c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Kryptowerte-Steuertransparenz; eine Rückzahlung oder Beitragsfreistellung von Rentenbeiträgen für Eltern ist nicht geregelt.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Kryptowerte-Steuertransparenz; eine Rückzahlung oder Beitragsfreistellung von Rentenbeiträgen für Eltern ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-afc7f6a21b1b231c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bcd807232c364182",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen enthalten keine Änderung des Grundgesetzes oder Regelung zur Aufnahme von Kinderrechten.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen enthalten keine Änderung des Grundgesetzes oder Regelung zur Aufnahme von Kinderrechten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bcd807232c364182",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bdd27875a558b08f",
+          "disposition": "no_supported_link",
+          "rationale": "Der Auszug erwähnt kulturelle und künstlerische Zwecke im Zusammenhang mit Rechtsträgern, regelt aber keine Umsatzsteuerbefreiung für entsprechende Tätigkeiten.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Auszug erwähnt kulturelle und künstlerische Zwecke im Zusammenhang mit Rechtsträgern, regelt aber keine Umsatzsteuerbefreiung für entsprechende Tätigkeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bdd27875a558b08f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bf0047596cf6c502",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen steuerliche Meldungen zu Kryptowerten; Vorgaben der staatlichen Filmförderung werden darin nicht geregelt.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen steuerliche Meldungen zu Kryptowerten; Vorgaben der staatlichen Filmförderung werden darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bf0047596cf6c502",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c19748d99553ea4f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln Kryptowerte-Steuertransparenz und enthalten keine Aufhebung des Rundfunkbeitrags.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln Kryptowerte-Steuertransparenz und enthalten keine Aufhebung des Rundfunkbeitrags.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c19748d99553ea4f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften enthalten Pflichten zur Identifizierung und Meldung von Kryptowerte-Nutzern; eine detaillierte Prüfung staatlich unterstützter NGOs oder ihrer Projekte ist nicht belegt.",
+          "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "617301d04f7cc1ef33b5e49a1ab6a3d85710cd012268acff2f943eaf761f3afe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften enthalten Pflichten zur Identifizierung und Meldung von Kryptowerte-Nutzern; eine detaillierte Prüfung staatlich unterstützter NGOs oder ihrer Projekte ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d08175743fd130ca",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften betreffen Kryptowerte-Steuertransparenz; eine Wiedereinführung einer nationalen Währung regeln sie nicht.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften betreffen Kryptowerte-Steuertransparenz; eine Wiedereinführung einer nationalen Währung regeln sie nicht.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "Wiedereinführung einer nationalen Währung",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-d08175743fd130ca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d18efe8174128107",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften zur Kryptowerte-Steuertransparenz enthalten keine Zustimmungspflicht des Volkes für völkerrechtliche Verträge.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften zur Kryptowerte-Steuertransparenz enthalten keine Zustimmungspflicht des Volkes für völkerrechtliche Verträge.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "kein bedeutsamer völkerrechtlicher Vertrag geschlossen werden",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-d18efe8174128107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d2c6f0b461246e0c",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften betreffen Steuerinformationen zu Kryptowerten und regeln nicht die Aufbewahrung deutschen Staatsgoldes.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften betreffen Steuerinformationen zu Kryptowerten und regeln nicht die Aufbewahrung deutschen Staatsgoldes.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "im eigenen Land aufbewahrt werden",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-d2c6f0b461246e0c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d71fe8429512e925",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften zur Kryptowerte-Steuertransparenz behandeln weder Friedensrichter noch die Rechtswirkung ihrer Entscheidungen.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften zur Kryptowerte-Steuertransparenz behandeln weder Friedensrichter noch die Rechtswirkung ihrer Entscheidungen.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "Ihre Entscheidungen dürfen keine Rechtswirkung entfalten.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-d71fe8429512e925",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e3be474151f884a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften betreffen Melde- und Informationsaustauschpflichten bei Kryptowerten; eine Erleichterung zivilrechtlicher Ansprüche gegen Verursacher ist nicht geregelt.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften betreffen Melde- und Informationsaustauschpflichten bei Kryptowerten; eine Erleichterung zivilrechtlicher Ansprüche gegen Verursacher ist nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "Erleichterung der Geltendmachung und Durchsetzung zivilrechtlicher Ansprüche",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-e3be474151f884a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e9259793c222efca",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften setzen den einkommensteuerlichen Grundfreibetrag nicht auf 15.000 Euro fest.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften setzen den einkommensteuerlichen Grundfreibetrag nicht auf 15.000 Euro fest.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "auf 15.000 Euro erhöht werden",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-e9259793c222efca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ed6f3a55f3d96a56",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften zur Kryptowerte-Steuertransparenz enthalten kein Verbot, Abgeordnetenmitgliedschaft und Regierungsamt zu verbinden.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften zur Kryptowerte-Steuertransparenz enthalten kein Verbot, Abgeordnetenmitgliedschaft und Regierungsamt zu verbinden.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "Abgeordnete nicht gleichzeitig Mitglied einer Regierung sein dürfen",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-ed6f3a55f3d96a56",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f0811c6caa9f8925",
+          "disposition": "no_supported_link",
+          "rationale": "Die wiedergegebenen Vorschriften verändern den Sparerpauschbetrag nicht und koppeln ihn nicht an die Geringfügigkeitsgrenze.",
+          "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b81615562776b54f933cb235c99e33d4e24ef884063c17217e0c0c869ac9849e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die wiedergegebenen Vorschriften verändern den Sparerpauschbetrag nicht und koppeln ihn nicht an die Geringfügigkeitsgrenze.",
+            "law_passage_id": "bgbl-1-2025-352-p-804a65a9c5333a75",
+            "law_quote": "Gesetz über die Meldepflicht von Anbietern und den automatischen Austausch von Informationen in Steuersachen bei Kryptowerte-Dienstleistungen (Kryptowerte-Steuertransparenz-Gesetz – KStTG)",
+            "criterion_quote": "an die Geringfügigkeitsgrenze koppeln",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "afd-2025-ac-f0811c6caa9f8925",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-353",
       "analysis_sha256": "f268b3f3939a1796df4aed999f5a2cc87c3d649c14cc0c21a47ec4012a03baee",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-033f965cbbd058a3",
@@ -36142,7 +38617,855 @@
         "afd-2025-ac-e6a7205977ccf50d"
       ],
       "omitted_count": 652,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern Steuerrecht; Regelungen zur Asylverfahrensberatung sind nicht belegt.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern Steuerrecht; Regelungen zur Asylverfahrensberatung sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Eine Verfahrensberatung darf nur nach gelten\ndem Recht erfolgen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-04e5ce94708da8cd",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Steuerrecht; eine Änderung oder Rücknahme der Lkw-Maut ist nicht belegt.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Steuerrecht; eine Änderung oder Rücknahme der Lkw-Maut ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die massive CO₂-bezogene Erhöhung der Lkw-Maut\n\nmuss zurückgenommen werden, da sie vor allem die Waren verteuert.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-04e5ce94708da8cd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0bae822d6a5efa21",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Steuerrechtsänderungen enthalten keine Regelung zur Abschiebung ausreisepflichtiger Personen.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Steuerrechtsänderungen enthalten keine Regelung zur Abschiebung ausreisepflichtiger Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- konsequente Abschiebung aller ausreisepflichtigen Personen im\n\nSinne einer strikten Anwendung geltenden Rechts",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0bae822d6a5efa21",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern keine Anspruchsdauer beim Arbeitslosengeld.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern keine Anspruchsdauer beim Arbeitslosengeld.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Grundsätzlich soll der Anspruch auf Arbeitslosengeld für\n\nPersonen, die ab 2026 erstmalig eine sozialversicherungspflichtige\n\nBeschäftigung aufnehmen, erst nach drei vollen Beitragsjahren ein\ntreten und zunächst auf sechs Monate beschränkt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-11e1b28d54f66e81",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Steuerrechtsänderungen regeln keine Zuweisungen von Asylbewerbern oder Asylberechtigten in Quartiere oder Großunterkünfte.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Steuerrechtsänderungen regeln keine Zuweisungen von Asylbewerbern oder Asylberechtigten in Quartiere oder Großunterkünfte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "lel- bzw. gar Gegengesellschaften von über 25 % Nicht-EU-Migran\nten verfügen oder unter einer erhöhten Kriminalität leiden, in denen\n\ndie Integration folglich bereits gescheitert ist, keine weitere Zuwei\nsung von Asylbewerbern oder Asylberechtigten erfolgen, insbeson\ndere nicht in Form von Großunterkünften.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-11e1b28d54f66e81",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-1272b9a9020e0a3a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Förder- oder Unterstützungsregel für Junglandwirte.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Förder- oder Unterstützungsregel für Junglandwirte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "werden wir Junglandwirte besserstellen, die ihre Agrarflächen selbst\n\nbewirtschaften.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-1272b9a9020e0a3a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2aad0fafe2103bac",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern keine Anspruchsvoraussetzungen oder Bezugsdauer des Bürgergelds.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern keine Anspruchsvoraussetzungen oder Bezugsdauer des Bürgergelds.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- eine sozialversicherungspflichtige Erwerbstätigkeit ohne\n\n„aufstockende“ Sozialleistungen von mindestens zehn Jahren\n\nin Deutschland zur Voraussetzung für den Bürgergeld-Bezug\n\nausländischer Staatsangehöriger machen und ihren Bürgergeld\nBezug auf ein Jahr begrenzen,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2aad0fafe2103bac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Steuerrechtsänderungen schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Steuerrechtsänderungen schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "deutsche Volk für ebenso mündig wie das der Schweiz und anderer\n\neuropäischer Staaten. Erfahrungsgemäß entscheiden Bürger in\n\nSchicksalsfragen der Nation weitsichtiger, friedfertiger und gemein\nwohlorientierter als Berufspolitiker. Deshalb fordert die AfD, die\n\nrechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2\n\nGG vorgesehenen Volksabstimmungen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Steuerrecht; eine Überprüfung oder Streichung Corona-bezogener Gesetze und Richtlinien ist nicht belegt.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen Steuerrecht; eine Überprüfung oder Streichung Corona-bezogener Gesetze und Richtlinien ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die im Zusammen\nhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind\n\nzu überprüfen und gegebenenfalls zu streichen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Sprach- oder Integrationsvorgabe für Migranten.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Sprach- oder Integrationsvorgabe für Migranten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Aktive Beteiligung aller Migranten an einer gelingenden Integra\ntion. Dazu gehört der angemessene Spracherwerb, mindestens\n\nauf B2-Niveau, in angemessener Zeit, in der Regel innerhalb von\n\n2 Jahren, in Ausnahmefällen innerhalb von 5 Jahren",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-45b65100330b68c5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Anteilserwerb an Hafenunternehmen.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Anteilserwerb an Hafenunternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir lehnen es jedoch ab, dass\n\nstaatliche oder staatsnahe Akteure aus dem Nicht-EU-Ausland an\n\nwichtigen Hafenunternehmen, insbesondere Hafenterminals und\n\nihren Muttergesellschaften, Anteile erwerben.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-45b65100330b68c5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-4c565faf7fe8bde0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Steuerrechtsänderungen führen keine Nachweispflicht zur Herkunft von Vermögenswerten ein.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Steuerrechtsänderungen führen keine Nachweispflicht zur Herkunft von Vermögenswerten ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Durch kriminelle Aktivitäten erworbene Vermögen müssen\n\nkonsequent eingezogen werden. Dazu fordern wir die Einführung\n\neiner gesetzlich normierten Nachweispflicht hinsichtlich der\n\nHerkunft von erheblichen und nicht nachvollziehbar erworbenen\n\nVermögenswerten bei Straftätern und deren Familienmitgliedern\n\nnach italienischem Vorbild",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-4c565faf7fe8bde0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu einer Willkommensprämie oder Rentengutschrift für Neugeborene.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu einer Willkommensprämie oder Rentengutschrift für Neugeborene.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- eine Willkommensprämie von 20.000 € für neugeborene Babys,\n\nsofern bereits Rentenbeiträge in derselben Höhe eingezahlt\n\nworden sind, andernfalls eine Gutschrift auf zukünftige Ren\ntenbeiträge in dieser Höhe (die Prämie wird aus Steuermitteln\n\nfinanziert und reduziert die Rente nicht),",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Fortgeltung des Baurechts für bestehende Bauwerke.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Fortgeltung des Baurechts für bestehende Bauwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zum Schutz von Eigentum und Bestand vor veränderten Bauvor\nschriften muss immer das Baurecht aus dem Erstellungszeitraum\n\nanwendbar bleiben.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-64d0aa6a1cf38121",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Steuerrecht; eine Überprüfung Corona-bezogener Gesetze und Richtlinien ist nicht belegt.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen Steuerrecht; eine Überprüfung Corona-bezogener Gesetze und Richtlinien ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die im Zusammen\nhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind\n\nzu überprüfen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7241b2ad96ab7b68",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Vorgaben zu Inobhutnahmen oder einer Schadensabwägung beim Verbleib in der Familie.",
+          "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "02ecf68722ed2c9224e1eb1cf0aad34f27c900273e23daa1b77c1fceb413d6f2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Vorgaben zu Inobhutnahmen oder einer Schadensabwägung beim Verbleib in der Familie.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Eine Inobhutnahme darf nur erfolgen, wenn der Schaden beim\n\nVerbleib in der Familie größer wäre.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7241b2ad96ab7b68",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-76209536ef189fe3",
+          "disposition": "missing_context",
+          "rationale": "Der vorgelegte Gesetzestext weist zwar Änderungen im Einkommensteuerrecht aus, enthält aber nicht die dafür maßgeblichen vollständigen Bestimmungen zum Sparer-Pauschbetrag.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Der vorgelegte Gesetzestext weist zwar Änderungen im Einkommensteuerrecht aus, enthält aber nicht die dafür maßgeblichen vollständigen Bestimmungen zum Sparer-Pauschbetrag.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die AfD will den Sparerpauschbetrag auf 6.672 Euro erhöhen",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-76209536ef189fe3",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-788e0409a117a456",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu Anspruchsvoraussetzungen für Arbeitslosengeld oder Beitragszeiten.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu Anspruchsvoraussetzungen für Arbeitslosengeld oder Beitragszeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "erst nach drei vollen Beitragsjahren eintreten",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-788e0409a117a456",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-79659b2b88dc0fb5",
+          "disposition": "missing_context",
+          "rationale": "Die Änderungen betreffen unter anderem das Außensteuerrecht; die für Abschreibungsmöglichkeiten bei Steuersparmodellen maßgeblichen Bestimmungen sind im unvollständigen Gesetzestext nicht enthalten.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.85,
+            "rationale": "Die Änderungen betreffen unter anderem das Außensteuerrecht; die für Abschreibungsmöglichkeiten bei Steuersparmodellen maßgeblichen Bestimmungen sind im unvollständigen Gesetzestext nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Abschreibungsmöglichkeiten für „Steuersparmodelle”",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-79659b2b88dc0fb5",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-820b94dca288161e",
+          "disposition": "missing_context",
+          "rationale": "Die Vorlage nennt Änderungen des Einkommensteuergesetzes, enthält aber nicht die vollständigen Regelungen zu Tarifeckwerten und Spitzensteuersatz.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die Vorlage nennt Änderungen des Einkommensteuergesetzes, enthält aber nicht die vollständigen Regelungen zu Tarifeckwerten und Spitzensteuersatz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Verschiebung von weiteren Tarifeckwerten bis hin zum Spitzensteuersatz",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-820b94dca288161e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu biologischen Altersfeststellungen im Jugendstrafrecht.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine Regelung zu biologischen Altersfeststellungen im Jugendstrafrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Regelmäßige Durchführung einer biologischen Altersfeststellung",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-92e942013534b28a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen ändern keine Regelung zur SED-Opferrente.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen ändern keine Regelung zur SED-Opferrente.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dass die SED-Opferrente deutlich erhöht wird",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-92e942013534b28a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-93f11653a53227d8",
+          "disposition": "missing_context",
+          "rationale": "Die Vorlage nennt Änderungen des Einkommensteuergesetzes, enthält aber nicht die vollständigen Bestimmungen zur Besteuerung von Familieneinkommen.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die Vorlage nennt Änderungen des Einkommensteuergesetzes, enthält aber nicht die vollständigen Bestimmungen zur Besteuerung von Familieneinkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine Ausweitung des Ehegattensplittings auf das Familiensplitting",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "afd-2025-ac-93f11653a53227d8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen ändern keine Regelung zur Aufgaben- und Finanzierungsverteilung zwischen staatlichen Ebenen.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen ändern keine Regelung zur Aufgaben- und Finanzierungsverteilung zwischen staatlichen Ebenen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir fordern die strikte Einhaltung des verfassungsrechtlich geregelten Prinzips.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln kein Asylverfahren und dessen Anwendung auf Personen aus unterschiedlichen Herkunftsländern.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen regeln kein Asylverfahren und dessen Anwendung auf Personen aus unterschiedlichen Herkunftsländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "bei Personen aus anderen Asyl-Herkunftsländern verfahren",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "missing_context",
+          "rationale": "Der Gesetzestext enthält keine Angabe dazu, ob Deutschland die Internationalen Gesundheitsvorschriften vor dem 31. März 2025 abgelehnt hat; das spätere Gesetzesdatum belegt weder Ablehnung noch Nichtablehnung.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Der Gesetzestext enthält keine Angabe dazu, ob Deutschland die Internationalen Gesundheitsvorschriften vor dem 31. März 2025 abgelehnt hat; das spätere Gesetzesdatum belegt weder Ablehnung noch Nichtablehnung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "noch vor der Frist am 31. März 2025 die Internationalen Gesundheitsvorschriften in der jetzigen Form ablehnt",
+            "caveats": [
+              "Die geforderte Handlung liegt zeitlich vor dem Gesetz und wird im Text nicht dokumentiert."
+            ],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen sehen keine monatlichen Einzahlungen aus Steuermitteln in einen Sparplan für Kinder vor.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen sehen keine monatlichen Einzahlungen aus Steuermitteln in einen Sparplan für Kinder vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "monatlich 100 Euro aus Steuermitteln in einen ETF-Sparplan oder Aktienfonds-Sparplan eingezahlt",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen schaffen kein Recht des Volkes, parlamentarisch beschlossene Gesetze zu ändern.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen schaffen kein Recht des Volkes, parlamentarisch beschlossene Gesetze zu ändern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c55d49c77e14725c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen enthalten keine schulrechtliche Regelung zu Befreiungen muslimischer Schüler vom Schwimm- oder Sportunterricht.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen enthalten keine schulrechtliche Regelung zu Befreiungen muslimischer Schüler vom Schwimm- oder Sportunterricht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Muslimischen Schülern dürfen keine Sonderrechte aufgrund ihres Glaubens wie z. B. die Befreiung vom Schwimm- und Sportunterricht gewährt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c55d49c77e14725c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e1100ebeea8f4213",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen führen keinen ermäßigten Umsatzsteuersatz für gastronomische Leistungen ein.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen führen keinen ermäßigten Umsatzsteuersatz für gastronomische Leistungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wiedereinführung des ermäßigten Umsatzsteuersatzes in der Gastronomie",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e1100ebeea8f4213",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln weder die Finanzierung zuwanderungsbezogener Ausgaben noch deren Zuordnung zu staatlichen Ebenen.",
+          "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8cd81c9a94fa45a43557fa16ea4c821ea4e1d1923c5039b7af2de64dea9683bf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Bestimmungen regeln weder die Finanzierung zuwanderungsbezogener Ausgaben noch deren Zuordnung zu staatlichen Ebenen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "insbesondere auch hier das Konnexitätsprinzip eingehalten wird",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-354",
@@ -41497,45 +44820,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3462,
-    "cache_hits": 34,
-    "subdivision_cache_hits": 6,
+    "calls": 3549,
+    "cache_hits": 35,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 20.160244,
-    "reported_cost_calls": 3269,
+    "reported_cost_usd": 20.7067,
+    "reported_cost_calls": 3356,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 1.188837,
     "unknown_cost_calls": 193,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 21.349081,
-    "prompt_tokens": 34536299,
-    "completion_tokens": 5039016,
+    "budget_exposure_usd": 21.895536,
+    "prompt_tokens": 35632964,
+    "completion_tokens": 5231868,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 100,
-        "reported_cost_usd": 2.336383749999999,
-        "unknown_cost_reserved_usd": 4.579669976578771e-16,
-        "pending_reserved_usd": 4.163336342344337e-17
+        "calls": 116,
+        "reported_cost_usd": 2.705365499999999,
+        "unknown_cost_reserved_usd": 4.996003610813204e-16,
+        "pending_reserved_usd": 3.0531133177191805e-16
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 35,
-        "reported_cost_usd": 0.43503624999999996,
+        "calls": 39,
+        "reported_cost_usd": 0.5183745,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 430,
-        "reported_cost_usd": 0.504354425,
+        "calls": 497,
+        "reported_cost_usd": 0.5984897250000003,
         "unknown_cost_reserved_usd": 0.20436094999999999,
-        "pending_reserved_usd": 1.0408340855860843e-17
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
