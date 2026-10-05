@@ -9,7 +9,14 @@ const { years, selected } = Astro.props;
   const defaultYear = switches[0]?.value || '';
   function choose(year: string, updateUrl: boolean) {
     if (![...panels].some(p => p.dataset.periodPanel === year)) return;
-    panels.forEach(panel => panel.hidden = panel.dataset.periodPanel !== year);
+    panels.forEach(panel => {
+      panel.hidden = panel.dataset.periodPanel !== year;
+      // Keep section links pointed at the visible programme, never at a hidden year.
+      panel.querySelectorAll<HTMLElement>('[data-period-anchor]').forEach(anchor => {
+        if (panel.hidden) anchor.removeAttribute('id');
+        else anchor.id = anchor.dataset.periodAnchor!;
+      });
+    });
     switches.forEach(input => input.value = year);
     if (updateUrl) {
       const url = new URL(window.location.href); url.searchParams.set('jahr', year);
@@ -19,7 +26,10 @@ const { years, selected } = Astro.props;
     document.dispatchEvent(new Event('politrace:period-change'));
   }
   const initial = new URLSearchParams(location.search).get('jahr');
-  if (initial) choose(initial, false);
+  if (initial) {
+    choose(initial, false);
+    if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+  }
   switches.forEach(input => input.addEventListener('change', () => choose(input.value, true)));
   window.addEventListener('popstate', () => {
     const year = new URLSearchParams(location.search).get('jahr');

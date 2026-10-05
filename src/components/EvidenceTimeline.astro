@@ -1,0 +1,52 @@
+---
+import { formatDate } from '../lib/data';
+import { formatPercentage, type PartyInsights } from '../lib/party-insights';
+import type { Dataset } from '../lib/types';
+interface Props { insights: PartyInsights; dataset: Dataset; year: number; active: boolean }
+const { insights, dataset, year, active } = Astro.props;
+const { timeline } = insights;
+const id = `evidence-timeline-${year}`;
+const month = (date: string) => new Intl.DateTimeFormat('de-DE', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`));
+const number = (value: number) => value.toLocaleString('de-DE');
+const ceiling = [1, 5, 10, 25, 50, 100].find(n => n >= (insights.coverage_percent ?? 0)) ?? 100;
+const first = timeline[0];
+const last = timeline.at(-1);
+const timestamp = (date: string) => new Date(`${date}T00:00:00Z`).getTime();
+const start = first ? timestamp(first.date) : 0;
+const duration = last ? timestamp(last.date) - start || 1 : 1;
+const x = (date: string) => 8 + (timestamp(date) - start) / duration * 584;
+const y = (value: number) => 194 - value / ceiling * 184;
+const step = (key: 'coverage_percent' | 'opposing_percent') => timeline.map((point, index) =>
+  `${index ? 'H' : 'M'}${x(point.date).toFixed(2)}${index ? 'V' : ' '}${y(point[key] ?? 0).toFixed(2)}`).join(' ');
+const line = step('coverage_percent');
+const dateLabels = [first, timeline[Math.floor((timeline.length - 1) / 2)], last].filter((p, index, list) => p && list.findIndex(other => other?.date === p.date) === index);
+---
+<section class="insight-card timeline-card" data-period-anchor="zeitverlauf" id={active ? 'zeitverlauf' : undefined} aria-labelledby={`${id}-heading`}>
+  <div class="insight-card-heading"><div><div class="eyebrow">Entwicklung</div><h2 id={`${id}-heading`}>Belege im Zeitverlauf</h2></div></div>
+  <p class="insight-description">Wie viele Kriterien durch veröffentlichte Gesetze belegt sind.</p>
+  {timeline.length > 0 ? <>
+    <div class="timeline-headline"><strong>{formatPercentage(insights.coverage_percent)}</strong><span>{number(insights.criteria.covered)} von {number(insights.criteria.total)} Kriterien mit Beleg</span></div>
+    <figure class="evidence-chart">
+      <div class="chart-unit">Anteil aller Kriterien · Skala 0–{formatPercentage(ceiling)}</div>
+      <div class="chart-layout">
+        <div class="chart-y-labels" aria-hidden="true">{[ceiling, ceiling / 2, 0].map(value => <span>{formatPercentage(value)}</span>)}</div>
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none" role="img" aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`}>
+          <title id={`${id}-title`}>Entwicklung der Belegabdeckung für Programm {year}</title>
+          <desc id={`${id}-description`}>Heutige akzeptierte Belege, kumuliert nach Veröffentlichungsmonat der Gesetze. Zuletzt {insights.criteria.covered} Kriterien belegt, davon {last?.opposing} mit mindestens einer Gegenwirkung. Keine historische Umsetzungsquote. Die einzelnen Werte stehen in der Tabelle unter dem Diagramm.</desc>
+          {[0, ceiling / 2, ceiling].map(value => <line x1="8" x2="592" y1={y(value)} y2={y(value)} class="chart-grid-line" vector-effect="non-scaling-stroke" />)}
+          <path d={`${line} L592 194 L8 194 Z`} class="chart-area" />
+          <path d={line} class="chart-coverage-line" vector-effect="non-scaling-stroke" />
+          <path d={step('opposing_percent')} class="chart-opposition-line" vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+      <div class="chart-date-labels" aria-hidden="true">{dateLabels.map(point => <span>{month(point!.date)}</span>)}</div>
+      <div class="chart-legend"><span><i class="coverage-key" /> Mit Gesetzesbeleg</span><span><i class="opposition-key" /> Davon mit Gegenwirkung (−1 / −2)</span></div>
+      <figcaption>Rekonstruktion aus den heute akzeptierten Belegen nach Gesetzesdatum, <strong>keine historische Umsetzungsquote</strong>. Eine Gegenwirkung bleibt hier als Beleg sichtbar, auch wenn spätere Gesetze sie ausgleichen.</figcaption>
+    </figure>
+    <details class="insight-details"><summary>Monatswerte und zugehörige Gesetze</summary><div class="table-scroll"><table class="data-table timeline-table">
+      <caption class="sr-only">Kumulierte Belegabdeckung; jedes Kriterium zählt einmal. Gegenwirkungen sind eine Teilmenge.</caption>
+      <thead><tr><th scope="col">Stand</th><th scope="col" class="num">Neu belegt</th><th scope="col" class="num">Belegt</th><th scope="col" class="num">Abdeckung</th><th scope="col" class="num">Mit Gegenwirkung</th><th scope="col">Gesetze mit Belegen</th></tr></thead>
+      <tbody>{timeline.map(point => <tr><th scope="row">{point.baseline ? 'Vor Vergleichsbeginn' : formatDate(point.date)}</th><td class="num">{number(point.newly_covered)}</td><td class="num">{number(point.covered)}</td><td class="num">{formatPercentage(point.coverage_percent)}</td><td class="num">{number(point.opposing)}</td><td>{point.law_ids.length ? point.law_ids.map(id => { const law = insights.law_effects.find(l => l.id === id)!; return <a href={`/${dataset}/gesetze/${id}/`} aria-label={law.title}>{law.citation || law.id}</a>; }) : '—'}</td></tr>)}</tbody>
+    </table></div></details>
+  </> : <div class="insight-empty"><p><strong>Noch kein belegbarer Verlauf</strong></p><p>Sobald akzeptierte Gesetzesbelege vorliegen, erscheint hier ihre zeitliche Entwicklung. Fehlende Belege bedeuten nicht, dass nichts umgesetzt wurde.</p></div>}
+</section>

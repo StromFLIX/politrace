@@ -1,0 +1,88 @@
+---
+import '../styles/party-insights.css';
+import Icon from './Icon.astro';
+import Meter from './Meter.astro';
+import EvidenceTimeline from './EvidenceTimeline.astro';
+import PartyLawHighlights from './PartyLawHighlights.astro';
+import { formatDate, topics } from '../lib/data';
+import { formatPercentage, percentage, type PartyInsights } from '../lib/party-insights';
+import type { Dataset } from '../lib/types';
+interface Props { insights: PartyInsights; dataset: Dataset; partyId: string; year: number; active: boolean }
+const { insights, dataset, partyId, year, active } = Astro.props;
+const stats = insights.criteria;
+const number = (value: number) => value.toLocaleString('de-DE');
+const criteriaUrl = (filters: Record<string, string> = {}) => `/${dataset}/parteien/${partyId}/?${new URLSearchParams({ jahr: String(year), ...filters })}#kriterien`;
+const statuses = [
+  { id: 'fulfilled', value: stats.fulfilled, label: 'Gesetzlich umgesetzt', detail: 'Das Kriterium ist gesetzlich erfüllt', icon: 'check' },
+  { id: 'partial', value: stats.partial, label: 'Teilweise umgesetzt', detail: 'Umsetzung mit offenen Teilen', icon: 'activity' },
+  { id: 'contradicted', value: stats.contradicted, label: 'Widersprochen', detail: 'Widersprochen oder erschwert', icon: 'opposition' },
+  { id: 'mixed', value: stats.mixed, label: 'Gemischte Wirkung', detail: 'Gegenläufige Wirkungen', icon: 'branch' },
+  { id: 'unassessed', value: stats.unknown, label: 'Offen / nicht bewertet', detail: 'Keine abschließende Einordnung', icon: 'clock' },
+];
+const lawCounts = [
+  { id: '', value: insights.laws.total, label: 'Gesetze mit Belegen', icon: 'file' },
+  { id: 'supporting', value: insights.laws.supporting, label: 'Mit Unterstützung', icon: 'check' },
+  { id: 'opposing', value: insights.laws.opposing, label: 'Mit Gegenwirkung', icon: 'opposition' },
+  { id: 'mixed', value: insights.laws.mixed, label: 'Mit gemischter Wirkung', icon: 'branch' },
+];
+---
+<section class="party-insights" data-party-insights data-period-anchor="bilanz" id={active ? 'bilanz' : undefined} aria-labelledby={`balance-heading-${year}`}>
+  <div class="insight-section-heading"><div><div class="eyebrow">Programm {year} · Die Bilanz</div><h2 id={`balance-heading-${year}`}>Was aus den Zusagen geworden ist</h2></div>{insights.last_assessed_at && <p class="insight-updated"><Icon name="clock" size={13} /> Letzte Bewertung: <time datetime={insights.last_assessed_at}>{formatDate(insights.last_assessed_at)}</time></p>}</div>
+  <div class="balance-card">
+    <div class="balance-overview">
+      <div class="fulfilment-headline"><span class="insight-caption">Gesetzlich umgesetzt</span><strong data-fulfilment>{formatPercentage(insights.fulfilment_percent)}</strong><span>{number(stats.fulfilled)} von <a href={criteriaUrl()} data-criteria-filter>{number(stats.total)} prüfbaren Kriterien</a></span></div>
+      <div class="balance-explanation"><h3>Umgesetzt, teilweise – oder gegenläufig?</h3><p>Jedes Kriterium zählt genau einmal. Die Gesamtbewertung berücksichtigt alle zugehörigen Gesetze, nicht nur einzelne positive Effekte.</p><a class="text-link" href="/methodik/#parteibilanz">So lesen sich die Zahlen <Icon name="arrow" size={13} /></a></div>
+      <div class="coverage-headline"><span class="insight-caption"><Icon name="link" size={14} /> Belegabdeckung</span><strong data-coverage>{formatPercentage(insights.coverage_percent)}</strong><span>{number(stats.covered)} Kriterien mit Gesetzesbelegen</span><small>{number(stats.total - stats.covered)} noch ohne Beleg</small></div>
+    </div>
+    <Meter stats={stats} />
+    <div class="criterion-status-grid">{statuses.map(status => <a class:list={['criterion-status-card', status.id]} href={criteriaUrl({ status: status.id })} data-criteria-filter data-insight-status={status.id}>
+      <div class="criterion-status-top"><Icon name={status.icon} size={17} /><span>{formatPercentage(percentage(status.value, stats.total))}</span></div>
+      <strong data-status-count>{number(status.value)}</strong><span class="criterion-status-label">{status.label}</span><small>{status.detail}</small><span class="status-drilldown">Kriterien ansehen <Icon name="chevron" size={11} /></span>
+    </a>)}</div>
+    <p class="balance-note">„Offen“ bedeutet nicht gescheitert. Belegabdeckung ist nicht Umsetzung; gesetzliche Umsetzung ist noch kein Nachweis der Wirkung im Alltag.</p>
+  </div>
+
+  <div class="law-summary" aria-label="Gesetzeswirkungen im ausgewählten Programm">
+    <div class="law-summary-grid">{lawCounts.map(item => <a href="#gesetzeswirkung" class:list={['law-kpi', item.id || 'all']} data-law-shortcut={item.id}>
+      <div><span class="law-kpi-icon"><Icon name={item.icon} size={18} /></span><strong data-law-total={item.id || 'all'}>{number(item.value)}</strong></div><span>{item.label}</span>
+    </a>)}</div>
+    <p>Gezählt werden unterschiedliche Gesetze mit akzeptierten Belegen. Ein Gesetz kann mehrere Kriterien unterstützen und anderen widersprechen; die Wirkungsgruppen überlappen. Daraus folgt keine Aussage über das Abstimmungsverhalten der Partei.</p>
+  </div>
+
+  <div class="insights-grid">
+    <EvidenceTimeline insights={insights} dataset={dataset} year={year} active={active} />
+    <section class="insight-card topic-breakdown" aria-labelledby={`topics-heading-${year}`}>
+      <div class="insight-card-heading"><div><div class="eyebrow">Nach Politikfeld</div><h2 id={`topics-heading-${year}`}>Wo steht welches Thema?</h2></div></div>
+      <p class="insight-description">Aktueller Umsetzungsstand. Themen mit den meisten belegten Kriterien zuerst.</p>
+      {insights.topics.length ? <>
+        <div class="topic-list" id={`topic-list-${year}`}>{insights.topics.map(topic => <a class="topic-insight" href={criteriaUrl({ thema: topic.topic })} data-criteria-filter data-topic-insight={topic.topic}>
+          <div class="topic-insight-name"><strong>{topics[topic.topic] ?? topic.topic}</strong><small>{number(topic.covered)} von {number(topic.total)} Kriterien mit Beleg</small></div>
+          <div class="topic-insight-percent"><strong>{formatPercentage(topic.fulfilment_percent)}</strong><small>umgesetzt</small></div>
+          <Meter stats={topic} />
+          <span class="topic-insight-counts">{number(topic.fulfilled)} umgesetzt · {number(topic.partial)} teilweise · {number(topic.contradicted)} widersprochen · {number(topic.mixed)} gemischt · {number(topic.unknown)} offen</span>
+        </a>)}</div>
+        {insights.topics.length > 5 && <button class="topic-more text-link" type="button" data-topic-more aria-expanded="false" aria-controls={`topic-list-${year}`} hidden>Alle {insights.topics.length} Themen anzeigen <Icon name="down" size={13} /></button>}
+        <p class="insight-footnote">Ein Kriterium kann mehreren Themen zugeordnet sein. Die Themenzahlen sind deshalb nicht addierbar. Ein Klick öffnet die zugehörigen Kriterien.</p>
+      </> : <div class="insight-empty"><p>Noch keine Kriterien für eine Themenbilanz vorhanden.</p></div>}
+    </section>
+  </div>
+
+  <PartyLawHighlights insights={insights} dataset={dataset} year={year} active={active} />
+  <div class="insights-source-note"><Icon name="info" size={16} /><p>{insights.period_start && <>Vergleich ab {formatDate(insights.period_start)}. </>}{insights.laws_through && <>Gesetzesdaten bis {formatDate(insights.laws_through)}. </>}Alle Kennzahlen beziehen sich auf die ausgewählten Wahlprogramme und die derzeit akzeptierten Belege. <a href="/methodik/#parteibilanz">Methodik & Zählweise</a></p></div>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-party-insights]').forEach(root => {
+    const topics = [...root.querySelectorAll<HTMLElement>('[data-topic-insight]')];
+    const button = root.querySelector<HTMLButtonElement>('[data-topic-more]');
+    if (!button) return;
+    let expanded = false;
+    function update() {
+      topics.forEach((topic, index) => topic.hidden = !expanded && index >= 5);
+      button!.setAttribute('aria-expanded', String(expanded));
+      button!.textContent = expanded ? 'Weniger Themen anzeigen' : `Alle ${topics.length} Themen anzeigen`;
+    }
+    button.hidden = false;
+    button.addEventListener('click', () => { expanded = !expanded; update(); });
+    update();
+  });
+</script>

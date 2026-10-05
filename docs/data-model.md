@@ -59,7 +59,7 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 | `/index.json` | Default dataset, dataset URLs and OpenAPI link |
 | `/{dataset}/index.json` | Dataset digest, lightweight collection `counts`, URLs and disclaimers |
 | `/{dataset}/{collection}.json` | `{schema_version, dataset, total, items}` |
-| `/{dataset}/{collection}/{id}.json` | One canonical record (party detail also includes programme IDs and statistics) |
+| `/{dataset}/{collection}/{id}.json` | One canonical record (party detail also includes programme IDs, statistics and programme-scoped dashboard insights) |
 | `/{dataset}/programs/{id}/tree.json` | Tree, leaves, source/review metadata and Markdown URL |
 | `/{dataset}/programs/{id}/source.md` | Extracted programme Markdown |
 | `/{dataset}/laws/{id}/source.md` | Law Markdown, only if text is available |
@@ -71,6 +71,8 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 | `/sources/laws-bundestag-21.json` | Checked, dated official archive inventory with source-page hashes |
 | `/schemas/{collection}.schema.json` | Canonical record contract |
 | `/openapi.json` | OpenAPI 3.1 path documentation |
+
+Party detail JSON adds `insights`: `method`, `timeline_basis`, `fulfilment_history_available`, `law_groups_overlap` and `periods` (one per election year). Each period contains criterion metrics, precise `fulfilment_percent` and `coverage_percent`, distinct-law direction counts, topic metrics, `law_effects` with criterion/impact references and exclusive/shared first-evidence counts, and monthly `timeline` points. The timeline describes current accepted evidence grouped by law publication date, **not historical fulfilment**. See [dashboard counting rules](methodology.md#party-dashboard-and-time-series). No source record schemas or existing statistics fields change.
 
 Collections: `parties`, `programs`, `criteria`, `laws`, `impacts`, `votes`. Dataset: `live` or `demo`. `/api/health.json` is the container readiness probe.
 

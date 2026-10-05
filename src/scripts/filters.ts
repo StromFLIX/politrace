@@ -201,6 +201,18 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]'))
     persist('pushState', resultsHeading?.id);
     showResults();
   });
+  // Dashboard links use the same controller as pagination and topic cards. Their
+  // shareable URLs clear unrelated filters; modified clicks remain ordinary links.
+  (root.closest('[data-period-panel]') ?? root).querySelectorAll<HTMLAnchorElement>('[data-criteria-filter]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      const url = new URL(link.href);
+      if (url.href !== location.href) history.pushState(null, '', url);
+      restore();
+      showResults();
+    });
+  });
   window.addEventListener('popstate', restore);
   document.addEventListener('politrace:period-change', restore);
   restore();

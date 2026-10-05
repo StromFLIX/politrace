@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
 import { extractionCoverage, publicImpact } from '../../lib/metrics';
+import { partyInsights } from '../../lib/party-insights';
 import { experiments } from '../../lib/experiments';
 import { jsonBody } from '../../lib/json-stream';
 import { readingIndex, productionProgress, readingProgress } from '../../lib/readings';
@@ -81,7 +82,18 @@ export const getStaticPaths: GetStaticPaths = () => {
       const items = data[collection];
       add(`${prefix}/${collection}.json`, { schema_version: '1.0', dataset, total: items.length, items });
       for (const item of items) add(`${prefix}/${collection}/${item.id}.json`,
-        collection === 'parties' ? { ...item, dataset, programs: data.programs.filter(p => p.party_id === item.id).map(p => p.id), statistics: statistics.filter(s => s.party_id === item.id) } : item);
+        collection === 'parties' ? {
+          ...item, dataset, programs: data.programs.filter(p => p.party_id === item.id).map(p => p.id),
+          statistics: statistics.filter(s => s.party_id === item.id),
+          insights: {
+            method: '/methodik/#parteibilanz', timeline_basis: 'current_accepted_evidence_by_law_publication_month',
+            fulfilment_history_available: false, law_groups_overlap: true,
+            periods: [...new Set(data.programs.filter(p => p.party_id === item.id && p.review.status !== 'rejected').map(p => p.election_year))]
+              .sort((a, b) => b - a).map(year => ({ election_year: year,
+                ...partyInsights(data, data.programs.filter(p => p.party_id === item.id && p.election_year === year)),
+              })),
+          },
+        } : item);
     }
     add(`${prefix}/stats.json`, {
       schema_version: '1.0', dataset, unit: 'criterion', method: '/methodik/',

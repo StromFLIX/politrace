@@ -1,10 +1,11 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Icon from '../../../components/Icon.astro';
-import Stats from '../../../components/Stats.astro';
+import PartyInsights from '../../../components/PartyInsights.astro';
 import CriteriaBrowser from '../../../components/CriteriaBrowser.astro';
 import PeriodSwitch from '../../../components/PeriodSwitch.astro';
 import { datasets, getData, metrics, formatDate, repoUrl } from '../../../lib/data';
+import { partyInsights, formatPercentage, percentage } from '../../../lib/party-insights';
 export function getStaticPaths() { return datasets.flatMap(dataset => { const data = getData(dataset); return data.parties.map(party => ({ params: { dataset, party: party.id }, props: { party, data } })); }); }
 const { party, data } = Astro.props;
 const programs = data.programs.filter(p => p.party_id === party.id && p.review.status !== 'rejected').sort((a, b) => b.election_year - a.election_year || b.published_at.localeCompare(a.published_at));
@@ -12,23 +13,18 @@ const years = [...new Set(programs.map(p => p.election_year))];
 ---
 <Layout title={party.short_name} active="parties" dataset={data.dataset}>
   <div class="page-heading"><div class="breadcrumbs"><a href={`/${data.dataset}/parteien/`}>Parteien</a><Icon name="chevron" size={12} /><span>{party.short_name}</span></div><div class="page-heading-row"><div class="party-title"><span class="party-logo large" style={`--party:${party.color}`}>{party.short_name}</span><div><div class="eyebrow">Die Partei im Blick</div><h1>{party.short_name}</h1><p class="party-subtitle">{party.name}</p></div></div><div class="page-actions"><a class="button" href={`/api/v1/${data.dataset}/parties/${party.id}.json`}><Icon name="code" size={15} /> Daten als JSON</a>{years.length > 0 && <PeriodSwitch years={years} selected={years[0]} />}</div></div></div>
-  <nav class="tabs" aria-label="Parteiabschnitte"><a href="#kriterien" class="selected">Kriterien & Belege</a><a href="#programme">Wahlprogramme</a><a href="#verlauf">Frühere Zeiträume</a></nav>
+  <nav class="tabs" aria-label="Parteiabschnitte"><a href="#bilanz" class="selected">Programm-Bilanz</a><a href="#zeitverlauf">Zeitverlauf</a><a href="#gesetzeswirkung">Wichtige Gesetze</a><a href="#kriterien">Kriterien & Belege</a><a href="#programme">Wahlprogramme</a><a href="#verlauf">Programmvergleich</a></nav>
   {!programs.length && <div class="empty-state"><Icon name="file" size={30} /><h2>Noch kein Wahlprogramm importiert</h2><p>Für {party.short_name} liegen in diesem Datensatz noch keine prüfbaren Kriterien vor. Das ist keine Aussage über die Partei. Ein Programm kann über die GitHub-Pipeline hinzugefügt werden.</p><a class="button primary" href={`${repoUrl}/blob/main/docs/pipelines.md`}>Programm hinzufügen <Icon name="arrow" size={14} /></a></div>}
-  <div id="kriterien">{years.map((year, index) => {
+  {years.map((year, index) => {
     const selected = programs.filter(p => p.election_year === year);
-    const criteria = data.criteria.filter(c => selected.some(p => p.id === c.program_id));
-    const stats = metrics(criteria, data.impacts, selected);
+    const criteria = data.criteria.filter(c => c.review.status !== 'rejected' && selected.some(p => p.id === c.program_id));
+    const insights = partyInsights(data, selected);
     return <section data-period-panel={year} hidden={index !== 0}>
-      <Stats items={[
-        { value: stats.total, label: 'Prüfbare Kriterien', detail: `Programmjahr ${year}`, icon: 'check' },
-        { value: stats.fulfilled, label: 'Gesetzlich umgesetzt', detail: `Von insgesamt ${stats.total} Kriterien`, icon: 'shield' },
-        { value: stats.partial, label: 'Teilweise umgesetzt', detail: `${stats.contradicted} Kriterien widersprochen`, icon: 'activity' },
-        { value: stats.coverage === null ? '—' : `${stats.coverage}%`, label: 'Belegabdeckung', detail: `${stats.unknown} Kriterien noch offen`, icon: 'link' },
-      ]} />
-      <div class="two-column"><section><div class="section-heading"><div><h2>Woran wir die Zusagen messen</h2><p>Konkrete Tests statt politischer Schlagworte. Nach Thema entdecken oder alle Kriterien durchsuchen.</p></div></div><CriteriaBrowser id={`kriterien-${year}`} criteria={criteria} data={data} programs={selected} /></section>
+      <PartyInsights insights={insights} dataset={data.dataset} partyId={party.id} year={year} active={index === 0} />
+      <div class="two-column"><section data-period-anchor="kriterien" id={index === 0 ? 'kriterien' : undefined}><div class="section-heading"><div><h2>Woran wir die Zusagen messen</h2><p>Konkrete Tests statt politischer Schlagworte. Nach Thema entdecken oder alle Kriterien durchsuchen.</p></div></div><CriteriaBrowser id={`kriterien-${year}`} criteria={criteria} data={data} programs={selected} /></section>
       <aside><div class="side-card"><Icon name="file" size={22} /><h2 style="margin-top:12px">Das Programm als Datenprodukt</h2><p>Das vollständige Wahlprogramm in lesbarer Form, mit Originalseiten und den zugehörigen Kriterien.</p>{selected.map(program => <a class="text-link" href={`/${data.dataset}/programme/${program.id}/`}>Programm {year} lesen <Icon name="arrow" size={14} /></a>)}</div><div class="side-card"><h2>Was sagt diese Zahl?</h2><p>Die KI bewertet für jedes Kriterium die zugehörigen Gesetze. Die Kennzahlen fassen diese Bewertungen zusammen. Jede Verbindung führt zur Originalquelle und kann korrigiert werden.</p><a href="/methodik/" class="text-link">Wie die Bewertung entsteht <Icon name="arrow" size={14} /></a></div></aside></div>
     </section>;
-  })}</div>
+  })}
   {programs.length > 0 && <><section class="section-block" id="programme"><div class="section-heading"><h2>Die Originalspur</h2><a href={`/api/v1/${data.dataset}/programs.json`} class="text-link">Programm-API <Icon name="code" size={15} /></a></div>{programs.map(p => <div class="evidence-box"><div class="impact-heading"><div><h3>{p.title}</h3><p>Veröffentlicht {formatDate(p.published_at)} · {p.leaves.length} Absätze · {p.source.publisher}</p></div><a class="button" href={`/${data.dataset}/programme/${p.id}/`}>Programm lesen <Icon name="branch" size={15} /></a></div></div>)}</section>
-  <section class="section-block" id="verlauf"><h2>Transparenz über die Zeit</h2><div class="table-scroll"><table class="data-table"><caption class="sr-only">Kennzahlen nach Wahlprogramm, nicht als Zeitreihe desselben Versprechens</caption><thead><tr><th>Programm</th><th>Kriterien</th><th>Erfüllt</th><th>Teilweise</th><th>Offen</th><th>Belegabdeckung</th></tr></thead><tbody>{programs.map(p => { const m = metrics(data.criteria.filter(c => c.program_id === p.id), data.impacts, [p]); return <tr><td><a href={`/${data.dataset}/programme/${p.id}/`}>Bundestagswahl {p.election_year}</a></td><td>{m.total}</td><td>{m.fulfilled}</td><td>{m.partial}</td><td>{m.unknown}</td><td>{m.coverage === null ? '—' : `${m.coverage}%`}</td></tr>; })}</tbody></table></div><p class="history-note">Die Kennzahlen beziehen sich auf das jeweilige Wahlprogramm. Frühere Bewertungsstände sind in der Git-Historie dokumentiert.</p></section></>}
+  <section class="section-block" id="verlauf"><h2>Wahlprogramme im Vergleich</h2><div class="table-scroll"><table class="data-table"><caption class="sr-only">Kennzahlen nach Wahlprogramm, nicht als Zeitreihe desselben Versprechens</caption><thead><tr><th>Programm</th><th>Kriterien</th><th>Umgesetzt</th><th>Teilweise</th><th>Widersprochen</th><th>Gemischt</th><th>Offen</th><th>Umsetzungsquote</th><th>Belegabdeckung</th></tr></thead><tbody>{programs.map(p => { const m = metrics(data.criteria.filter(c => c.program_id === p.id), data.impacts, [p]); return <tr><td><a href={`/${data.dataset}/programme/${p.id}/`}>Bundestagswahl {p.election_year}</a></td><td>{m.total}</td><td>{m.fulfilled}</td><td>{m.partial}</td><td>{m.contradicted}</td><td>{m.mixed}</td><td>{m.unknown}</td><td>{formatPercentage(percentage(m.fulfilled, m.total))}</td><td>{formatPercentage(percentage(m.covered, m.total))}</td></tr>; })}</tbody></table></div><p class="history-note">Die Kennzahlen beziehen sich auf unterschiedliche Wahlprogramme, nicht auf frühere Bewertungsstände desselben Programms. Frühere Bewertungen sind in der Git-Historie dokumentiert.</p></section></>}
 </Layout>

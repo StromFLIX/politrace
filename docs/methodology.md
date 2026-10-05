@@ -41,6 +41,18 @@ Partial support is **not** rejected merely because it does not fulfil a broad pr
 - `fulfilment` is the percentage of the denominator statutorily implemented. `alignment` is the mean signed **criterion** score among scored criteria, not a sum of impacts or a percent fulfilled. The `scored` denominator is explicit.
 - Empty denominators produce `null`, not fabricated percentages. Editorial assessments retain their signed review requirements and override generated changes.
 
+## Party dashboard and time series
+
+The programme-scoped party dashboard uses the same final criterion assessments as the public metrics. It separately displays fulfilled, partial, contradicted, mixed and open counts, with links into the criterion filters. Percentages use the complete selected-programme denominator; a positive share smaller than 0.1% is labelled `<0,1 %`, not rounded to zero.
+
+Law counts deduplicate law IDs, not impacts. Supporting and opposing groups mean at least one positive or negative accepted impact respectively. Mixed laws have a zero-score impact or both positive and negative impacts on different criteria. These groups intentionally overlap. Topic groups also overlap because a criterion may carry several tags. Neither law counts nor signed effects imply responsibility or votes.
+
+The timeline is **evidence coverage reconstructed from today's accepted evidence by law publication month**, not historical fulfilment or the date the model discovered a link. Each criterion enters the covered set once; the opposing set is the subset with at least one negative accepted impact up to that publication date, even if later legislation counteracts it. Months without new evidence retain the previous value. The chart ends at the latest non-rejected law in the selected comparison windows, not an invented current date. Empty evidence has an explicit empty state. No current criterion assessment is backdated to its first law, and no fulfilment time series is fabricated from the current snapshot.
+
+Law highlights default to reach (distinct affected criteria), not claimed political importance. Their coverage contribution is the number of criteria whose first accepted evidence is exclusively from that law, divided by all selected criteria, in percentage points. If two laws first support evidence for the same criterion on the same publication date, this is a **shared first-evidence** count for both, not exclusive credit to either. The timeline counts the union once. Signed law scores are never added into a progress percentage. Programme comparison rows compare different commitments, not past assessment snapshots.
+
+The party JSON export includes the same per-election-year dashboard aggregates, topic counts, law evidence references and monthly values, with an explicit `timeline_basis` and `fulfilment_history_available: false`. Existing rounded `statistics` fields remain compatible; precise dashboard percentages are separate fields. This is a build-time derivation only: no source records, evidence IDs, assessments, reviews or paid-model processing are changed.
+
 ## Migration and recovery
 
 `all-party-sol-final-v2` reuses 9,211 retained screening outcomes and the prior spending ledger. Previously proposed links, whether Sonnet agreed or disagreed, go back through Sol; they are **not bulk-approved**. Existing record IDs and correction links are retained. Rejected old impact records remain traceable in Git/API but are not shown as accepted connections.
