@@ -42668,7 +42668,7 @@
     {
       "law_id": "bgbl-1-2025-355",
       "analysis_sha256": "dc7f2715a1276a7e9ea131ff4d8cc8294cdf071e64ddad0a61e06bcd3a044a28",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-00fd956fd51d10ba",
@@ -42814,6 +42814,38 @@
       ],
       "omitted_count": 647,
       "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-00fd956fd51d10ba",
+          "disposition": "proposed_link",
+          "rationale": "Das Fallmanagement kann Versicherte bei der beruflichen Wiedereingliederung begleiten, damit Leistungen verschiedener Sozialleistungsträger zügig und aufeinander abgestimmt erbracht werden.",
+          "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7daeb8da097156bec5baa1638d1de2bcfae1d93f38231f4de0b19354c79200fd"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1"
+            }
+          ],
+          "impact_id": "impact-512664c11568418f",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.99,
+            "rationale": "Das Fallmanagement kann Versicherte bei der beruflichen Wiedereingliederung begleiten, damit Leistungen verschiedener Sozialleistungsträger zügig und aufeinander abgestimmt erbracht werden.",
+            "law_passage_id": "bgbl-1-2025-355-p-194c51b9f3253f1d",
+            "law_quote": "4. die Begleitung der Versicherten mit dem Ziel des Erhalts zügiger und aufeinander abgestimmter Leistungen,\nsoweit die Versicherten Ansprüche gegen Träger von Sozialleistungen haben oder haben könnten, die die\nberufliche Wiedereingliederung fördern und unterstützen können,",
+            "criterion_quote": "Indem wir **Antragsverfahren vereinfachen, Leistungen zusammenfassen**\n**und aufeinander abstimmen**, wollen wir verhindern, dass man von einer Stelle zur nächsten\nverwiesen wird.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-00fd956fd51d10ba",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "spd-2025-ac-02b640f6e482547f",
           "disposition": "no_supported_link",
@@ -43205,6 +43237,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-19fe71928c8dcc2e",
+          "disposition": "missing_context",
+          "rationale": "Das Fallmanagement ermöglicht Unterstützung bei Anträgen über Rechtskreise hinweg. Auf welche Leistungen sich die geforderte zentrale Ansprechstelle bezieht, geht aus dem Kriterienausschnitt nicht hervor; ihre Einrichtung für diese Leistungen lässt sich daher nicht beurteilen.",
+          "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "18e4f0b814b3cee58a407b5482807adfef09f35729177c8c7aee4f0fed5bc4b7"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Das Fallmanagement ermöglicht Unterstützung bei Anträgen über Rechtskreise hinweg. Auf welche Leistungen sich die geforderte zentrale Ansprechstelle bezieht, geht aus dem Kriterienausschnitt nicht hervor; ihre Einrichtung für diese Leistungen lässt sich daher nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2025-355-p-e3c2e06bcc4bc5eb",
+            "law_quote": "3. die rechtskreisübergreifende Unterstützung der Versicherten bei der Beantragung von in Betracht\nkommenden Sozialleistungen und bei der Inanspruchnahme weiterer unterstützender Angebote,",
+            "criterion_quote": "Mit einer zentralen Ansprechstelle soll\nzudem die Zugänglichkeit dieser Leistungen weiter verbessert und die (digitale) Beantragung weiter\nerleichtert werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-19fe71928c8dcc2e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-1cf22dd1304bfff1",
           "disposition": "no_supported_link",
           "rationale": "Die Änderung des Künstlersozialversicherungsgesetzes ersetzt in § 20 lediglich einen Verweis auf die maßgebliche Mitteilung; eine Anpassung der sozialen Absicherung an besondere Arbeits- und Lebensbedingungen ist daraus nicht ersichtlich.",
@@ -43313,6 +43377,38 @@
             ],
             "criterion_id": "spd-2025-ac-2116f5969929af45",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-215b38f5e33c8af6",
+          "disposition": "proposed_link",
+          "rationale": "Die Bundesagentur baut ab dem 1. Januar 2026 Fachwissen für die Anerkennungs- und Qualifizierungsberatung anerkennungssuchender Fachkräfte im Inland auf und kann in Absprache mit den Projektträgern selbst beraten. Das unterstützt einen Teil ihrer Integration.",
+          "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ded5b48cd9a21f0467e852c728053910a3719866f2f2afe353c9a29aec2ce843"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1"
+            }
+          ],
+          "impact_id": "impact-a01eb248a0812332",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.93,
+            "rationale": "Die Bundesagentur baut ab dem 1. Januar 2026 Fachwissen für die Anerkennungs- und Qualifizierungsberatung anerkennungssuchender Fachkräfte im Inland auf und kann in Absprache mit den Projektträgern selbst beraten. Das unterstützt einen Teil ihrer Integration.",
+            "law_passage_id": "bgbl-1-2025-355-p-6bba6e3dd51a01fe",
+            "law_quote": "Die Bundesagentur baut durch Zusammenwirken mit den Projektträgern des ESF Plus-Förderprogramms\n„IQ – Integration durch Qualifizierung“ ab dem 1. Januar 2026 das für die Übernahme notwendige Fach- und\nErfahrungswissen zur Anerkennungs- und Qualifizierungsberatung auf. Die Bundesagentur kann in diesem\nZusammenhang in Absprache mit den Projektträgern auch selbst beraten.",
+            "criterion_quote": "Um dem durch den demografischen Wandel bedingten Personalmangel entgegenzuwirken, werden\nwir die **weltweite Anwerbung und Integration von Fachkräften ausbauen** .",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-215b38f5e33c8af6",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -44207,6 +44303,440 @@
             "criterion_quote": "Deswegen setzen wir die Europäische Säule sozialer Rechte entschieden national wie europäisch um.",
             "caveats": [],
             "criterion_id": "spd-2025-ac-61377efe42c735ea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6137ae2a9d4fe5b9",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen regeln kein Deutschlandfonds und belegen weder eine Privatisierung noch deren Ausschluss.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die angeführten Änderungen regeln kein Deutschlandfonds und belegen weder eine Privatisierung noch deren Ausschluss.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir stellen sicher,\ndass es zu keiner Privatisierung staatlicher Aufgaben der Daseinsvorsorge kommt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6137ae2a9d4fe5b9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6437112bda053fc5",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen enthalten keine Maßnahme zur Überwindung von Wohnungslosigkeit.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen enthalten keine Maßnahme zur Überwindung von Wohnungslosigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wohnungslosigkeit wollen wir 2030\nüberwunden haben.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6437112bda053fc5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-65c4afd06b540a83",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge ändern zwar das SGB VI, enthalten aber keine Regel zur Regelaltersgrenze; ohne den vollständigen Änderungstext ist deren unveränderte Höhe nicht feststellbar.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.72,
+            "rationale": "Die Auszüge ändern zwar das SGB VI, enthalten aber keine Regel zur Regelaltersgrenze; ohne den vollständigen Änderungstext ist deren unveränderte Höhe nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "**Eine Anhebung der Regelaltersgrenze lehnen wir ab.**",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist ausdrücklich teilweise."
+            ],
+            "criterion_id": "spd-2025-ac-65c4afd06b540a83",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6726b6413256d80f",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen führen keine Begrenzung von Eigenanteilen in der Pflege ein.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die angeführten Änderungen führen keine Begrenzung von Eigenanteilen in der Pflege ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir verhindern finanzielle Überforderung, begrenzen hohe Eigenanteile,",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6726b6413256d80f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen stellen dem THW keine personellen Ressourcen bereit.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Änderungen stellen dem THW keine personellen Ressourcen bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das **Technische Hilfswerk (THW)** ist unerlässlich für Schutz und Hilfe im Fall der Fälle. Wir wollen es\nweiter mit den erforderlichen personellen und materiellen Ressourcen ausstatten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6e07fbd4e74e1604",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen richten kein jährliches Familienbudget für Alltagshelfer ein.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen richten kein jährliches Familienbudget für Alltagshelfer ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mit einem jährlichen Familienbudget für\nAlltagshelfer wollen wir sozialversicherungspflichtige haushaltsnahe Dienstleistungen direkt fördern\nund einfach digital zugänglich machen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6e07fbd4e74e1604",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6f592c8a8f084a24",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen entwickeln die elektronische Patientenakte nicht zu einem Gesundheitsberater weiter.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Änderungen entwickeln die elektronische Patientenakte nicht zu einem Gesundheitsberater weiter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen die Chancen der Digitalisierung auch im Bereich der Prävention nutzen und die\n**elektronische Patientenakte zu einem persönlichen Gesundheitsberater** für die Versicherten\n**weiterentwickeln.** Dieser soll die besten Wege für die Förderung der individuellen Gesundheit\naufzeichnen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6f592c8a8f084a24",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-720ae4f8e1b7f5f5",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen begrenzen nicht die Umlage von Investitionsaufwendungen auf Bewohner von Pflegeheimen.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen begrenzen nicht die Umlage von Investitionsaufwendungen auf Bewohner von Pflegeheimen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Außerdem sollen **die Investitionsaufwendungen der Heime** zukünftig **nicht mehr vollständig auf**\n**die Bewohner** **umgelegt** werden dürfen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-720ae4f8e1b7f5f5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-728ab5f0154c1296",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen ändern das Allgemeine Gleichbehandlungsgesetz nicht.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen ändern das Allgemeine Gleichbehandlungsgesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen das Allgemeine Gleichbehandlungsgesetz (AGG) modernisieren, um effektiveren Schutz\nvor Diskriminierung zu gewährleisten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-728ab5f0154c1296",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-729f272120a7a8d2",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen führen keinen gestaffelten Mutterschutz bei Fehlgeburten ein.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen führen keinen gestaffelten Mutterschutz bei Fehlgeburten ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen einen\n**gestaffelten** **Mutterschutz** bei Fehlgeburten einführen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-729f272120a7a8d2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-77ef57ed407c9062",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung im SGB IX betrifft die Zuständigkeit der Schwerbehindertenvertretung, nicht die Versorgung mit Hilfsmitteln.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Änderung im SGB IX betrifft die Zuständigkeit der Schwerbehindertenvertretung, nicht die Versorgung mit Hilfsmitteln.",
+            "law_passage_id": "bgbl-1-2025-355-p-f0e4b4919bf32e4e",
+            "law_quote": "„Die nach Satz 2 zuständige Schwerbehindertenvertretung ist auch in Angelegenheiten, die einen einzelnen oder\ndie schwerbehinderten Menschen als Gruppe berühren und über die eine übergeordnete Dienststelle entscheidet,\nzuständig; sie gibt der Schwerbehindertenvertretung der Dienststelle, die den schwerbehinderten Menschen\nbeschäftigt, Gelegenheit zur Äußerung.“",
+            "criterion_quote": "und eine Verbesserung bei der Hilfsmittelversorgung insbesondere\nfür Menschen mit Beeinträchtigung – vorbereitet. Diese möchten wir künftig ebenfalls umsetzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-77ef57ed407c9062",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-798d64d884f3bb35",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen räumen Kommunen keine zusätzlichen Entscheidungen über Ansiedlungsorte von Pflegeeinrichtungen oder -diensten ein.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Änderungen räumen Kommunen keine zusätzlichen Entscheidungen über Ansiedlungsorte von Pflegeeinrichtungen oder -diensten ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Uns ist dabei wichtig, dass die Kommunen mehr Möglichkeiten erhalten, darüber zu entscheiden,\nwo und in welcher Trägerschaft die Einrichtungen und Pflegedienste sich ansiedeln.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-798d64d884f3bb35",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7b16de8340108c68",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen richten kein Startchancenprogramm für Kitas ein.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen richten kein Startchancenprogramm für Kitas ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ein Startchancenprogramm für die Kitas in benachteiligten Lagen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7b16de8340108c68",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7ff8d776e5eb4d0e",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen verbreitern keine Angebote der betrieblichen Altersvorsorge ohne Beitragsgarantie.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die angeführten Änderungen verbreitern keine Angebote der betrieblichen Altersvorsorge ohne Beitragsgarantie.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Angebote ohne Beitragsgarantie, aber mit höherer\nRenditeerwartung wollen wir stärker verbreitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7ff8d776e5eb4d0e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-82bb66467daf21fc",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Gesetzesänderungen sehen keine sechs zusätzlichen, frei verteilbaren Elterngeldmonate vor.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Gesetzesänderungen sehen keine sechs zusätzlichen, frei verteilbaren Elterngeldmonate vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und\nweitere 6 Monate frei verteilt werden können",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-82bb66467daf21fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-847770ba14936ced",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen führen keine Obergrenze von 1.000 Euro monatlich für Eigenanteile in der stationären Langzeitpflege ein.",
+          "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2be86e72c6f75db51eacc45f34acf2671d9258522e2dcd62db57bbb78d4917b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die angeführten Änderungen führen keine Obergrenze von 1.000 Euro monatlich für Eigenanteile in der stationären Langzeitpflege ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die hohen **Eigenanteile bei den Pflegekosten** in der stationären\nLangzeitpflege wollen wir durch eine **Begrenzung auf 1.000 Euro pro Monat** (sogenannter\n**Pflegekosten-Deckel** ) maßgeblich reduzieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-847770ba14936ced",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -45724,6 +46254,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-e6cd125aee5ef4be",
+          "disposition": "proposed_link",
+          "rationale": "Für Versicherte mit gesundheitlichen Beeinträchtigungen und besonderem Unterstützungsbedarf kann das einwilligungsgebundene Fallmanagement die Beantragung von Sozialleistungen rechtskreisübergreifend unterstützen. Das erleichtert teilweise den Zugang im Rehabilitationsprozess, nicht allgemein zu Präventionsangeboten.",
+          "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c8c15c419b67185a8188e2fb7691cc702ef943f734ec17eb0c487d4a921d19d2"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1"
+            }
+          ],
+          "impact_id": "impact-86e36bd9efa3e055",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Für Versicherte mit gesundheitlichen Beeinträchtigungen und besonderem Unterstützungsbedarf kann das einwilligungsgebundene Fallmanagement die Beantragung von Sozialleistungen rechtskreisübergreifend unterstützen. Das erleichtert teilweise den Zugang im Rehabilitationsprozess, nicht allgemein zu Präventionsangeboten.",
+            "law_passage_id": "bgbl-1-2025-355-p-e3c2e06bcc4bc5eb",
+            "law_quote": "3. die rechtskreisübergreifende Unterstützung der Versicherten bei der Beantragung von in Betracht\nkommenden Sozialleistungen und bei der Inanspruchnahme weiterer unterstützender Angebote,",
+            "criterion_quote": "Zugänge\nvereinfachen und verbessern",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e6cd125aee5ef4be",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-eb1a7fb8927b8a93",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Passagen verankern die Stelle der Anti-Rassismus-Beauftragten nicht dauerhaft.",
@@ -45980,6 +46542,38 @@
               "Der Gesetzeskontext ist teilweise."
             ],
             "criterion_id": "spd-2025-ac-f38c97f743d8180e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6065a3c58367c99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Fallmanagement zielt auf aufeinander abgestimmte Leistungen bei der beruflichen Wiedereingliederung. Eine Zusammenfassung von Leistungen regelt die angeführte Bestimmung nicht.",
+          "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "447ead2565a4259161d31c5370d25cf86ec79e195e257e41ea6f5bdcff47e2a2"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Fallmanagement zielt auf aufeinander abgestimmte Leistungen bei der beruflichen Wiedereingliederung. Eine Zusammenfassung von Leistungen regelt die angeführte Bestimmung nicht.",
+            "law_passage_id": "bgbl-1-2025-355-p-194c51b9f3253f1d",
+            "law_quote": "die Begleitung der Versicherten mit dem Ziel des Erhalts zügiger und aufeinander abgestimmter Leistungen",
+            "criterion_quote": "Indem wir **Antragsverfahren vereinfachen, Leistungen zusammenfassen**\n**und aufeinander abstimmen**, wollen wir verhindern, dass man von einer Stelle zur nächsten\nverwiesen wird.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6065a3c58367c99",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -46527,7 +47121,7 @@
     {
       "law_id": "bgbl-1-2025-361",
       "analysis_sha256": "63497653054c35023e99571a5441778dc41f9d20ddfd854d7fc21e65bb5424a0",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-020564b181b1dd7c",
@@ -46544,7 +47138,334 @@
         "spd-2025-ac-dfbfb26ed84c7200"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Mindestlohnkommission oder zur Berücksichtigung europäischen Rechts bei deren Arbeit.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Mindestlohnkommission oder zur Berücksichtigung europäischen Rechts bei deren Arbeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schreibt keine Prüfung seiner Auswirkungen oder weiterer Reformschritte vor.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schreibt keine Prüfung seiner Auswirkungen oder weiterer Reformschritte vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1d6c4a5ba9c39fe4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Steuerbefreiung betrifft bestimmte Arbeitseinkünfte nach Erreichen der Regelaltersgrenze, nicht Zuschläge für Mehrarbeit oberhalb tariflicher Vollzeitarbeit.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Steuerbefreiung betrifft bestimmte Arbeitseinkünfte nach Erreichen der Regelaltersgrenze, nicht Zuschläge für Mehrarbeit oberhalb tariflicher Vollzeitarbeit.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze [...] erbrachte Leistungen zufließen",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1d6c4a5ba9c39fe4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1df7a1771d266651",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht keine Einmalzahlung anstelle monatlicher Rentenzuschläge; es regelt eine Steuerbefreiung für bestimmte Arbeitseinkünfte im Rentenalter.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermöglicht keine Einmalzahlung anstelle monatlicher Rentenzuschläge; es regelt eine Steuerbefreiung für bestimmte Arbeitseinkünfte im Rentenalter.",
+            "law_passage_id": "bgbl-1-2025-361-p-31e3d0d64ef704d5",
+            "law_quote": "Einnahmen aus nichtselbständiger Arbeit nach § 19 Absatz 1 Satz 1 Nummer 1",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1df7a1771d266651",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder die Höhe des gesetzlichen Mindestlohns noch legt es einen Wert für 2026 fest.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder die Höhe des gesetzlichen Mindestlohns noch legt es einen Wert für 2026 fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-30f25d7fb091746f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahme des Arbeitsschutzes zu psychischen Belastungen bei der Arbeit.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahme des Arbeitsschutzes zu psychischen Belastungen bei der Arbeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-30f25d7fb091746f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-902613404e1188ca",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder die Bezugsdauer des Arbeitslosengeldes noch die Anrechnung von Qualifizierungszeiten.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder die Bezugsdauer des Arbeitslosengeldes noch die Anrechnung von Qualifizierungszeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-902613404e1188ca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine geschützten Merkmale.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine geschützten Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Steuerbefreiung gilt für bestimmte Arbeitseinkünfte im Rentenalter; ein steuer- und abgabenfreier Führerscheinzuschuss wird nicht geregelt.",
+          "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea4b787ce61692d5be52a73e7e876561f283b9ce918957ad57e7b93b37893d7f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Steuerbefreiung gilt für bestimmte Arbeitseinkünfte im Rentenalter; ein steuer- und abgabenfreier Führerscheinzuschuss wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "Einnahmen aus nichtselbständiger Arbeit nach § 19 Absatz 1 Satz 1 Nummer 1 bis zu einer Höhe von insgesamt 24 000 Euro im Jahr",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bee474ad7385688c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt ab 1. Januar 2026 einen begrenzten Steuerfreibetrag für bestimmte Beschäftigungseinkünfte nach Erreichen der Regelaltersgrenze ein; Elterngeldansprüche regelt es nicht.",
+          "input_sha256": "9c8233144c9102f70aaf2d05092957cb76e3b3d3ee47ae5ee8a04f586c79cd89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c8233144c9102f70aaf2d05092957cb76e3b3d3ee47ae5ee8a04f586c79cd89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz führt ab 1. Januar 2026 einen begrenzten Steuerfreibetrag für bestimmte Beschäftigungseinkünfte nach Erreichen der Regelaltersgrenze ein; Elterngeldansprüche regelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch erbrachte Leistungen zufließen",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bee474ad7385688c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d8d1cf71cf2bf252",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz stellt bestimmte Beschäftigungseinkünfte nach Erreichen der Regelaltersgrenze steuerfrei, regelt den Solidaritätszuschlag aber nicht; mögliche Wechselwirkungen mit dessen Bemessung und Zahlungskreis sind anhand der fehlenden Soli-Grundlagen nicht feststellbar.",
+          "input_sha256": "9c8233144c9102f70aaf2d05092957cb76e3b3d3ee47ae5ee8a04f586c79cd89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c8233144c9102f70aaf2d05092957cb76e3b3d3ee47ae5ee8a04f586c79cd89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.83,
+            "rationale": "Das Gesetz stellt bestimmte Beschäftigungseinkünfte nach Erreichen der Regelaltersgrenze steuerfrei, regelt den Solidaritätszuschlag aber nicht; mögliche Wechselwirkungen mit dessen Bemessung und Zahlungskreis sind anhand der fehlenden Soli-Grundlagen nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch erbrachte Leistungen zufließen",
+            "criterion_quote": "Wir stellen sicher, dass der Kreis der betroffenen Steuerpflichtigen nicht größer wird und nicht mehr Bürgerinnen und Bürger als heute den Soli entrichten.",
+            "caveats": [
+              "Die einschlägigen Vorschriften zum Solidaritätszuschlag sind nicht mitgeliefert."
+            ],
+            "criterion_id": "spd-2025-ac-d8d1cf71cf2bf252",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert die Besteuerung bestimmter Beschäftigungseinkünfte im Rentenalter; die Besteuerung privater Immobilienverkäufe oder die Zehnjahresfrist behandelt es nicht.",
+          "input_sha256": "9c8233144c9102f70aaf2d05092957cb76e3b3d3ee47ae5ee8a04f586c79cd89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c8233144c9102f70aaf2d05092957cb76e3b3d3ee47ae5ee8a04f586c79cd89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz ändert die Besteuerung bestimmter Beschäftigungseinkünfte im Rentenalter; die Besteuerung privater Immobilienverkäufe oder die Zehnjahresfrist behandelt es nicht.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach Erreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch erbrachte Leistungen zufließen",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-362",
@@ -46570,7 +47491,334 @@
         "spd-2025-ac-ffb80d98570645ea"
       ],
       "omitted_count": 771,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Beschleunigung von Asylverfahren oder zur Entscheidungsfrist von sechs Monaten.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Beschleunigung von Asylverfahren oder zur Entscheidungsfrist von sechs Monaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-45a5fa2f9d0b6f30",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Wahlrecht von Bundesbeamtinnen und Bundesbeamten zur gesetzlichen Krankenversicherung und keine pauschale Beihilfe.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Wahlrecht von Bundesbeamtinnen und Bundesbeamten zur gesetzlichen Krankenversicherung und keine pauschale Beihilfe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-45a5fa2f9d0b6f30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7ff8d776e5eb4d0e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Angebote der betrieblichen Altersvorsorge oder deren Beitragsgarantien.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Angebote der betrieblichen Altersvorsorge oder deren Beitragsgarantien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7ff8d776e5eb4d0e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-874138018c9701a4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Förderregeln für private Altersvorsorge nach Einkommenshöhe.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Förderregeln für private Altersvorsorge nach Einkommenshöhe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-874138018c9701a4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-91699dc1fabd8b33",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erhöht keine persönlichen Freibeträge.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erhöht keine persönlichen Freibeträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-91699dc1fabd8b33",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9ce366d5602634d7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderung, die Antragsverfahren vereinfacht oder Leistungen zusammenfasst.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Änderung, die Antragsverfahren vereinfacht oder Leistungen zusammenfasst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9ce366d5602634d7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen steuer- und abgabenfreien Führerscheinzuschuss für Auszubildende oder junge Beschäftigte.",
+          "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen steuer- und abgabenfreien Führerscheinzuschuss für Auszubildende oder junge Beschäftigte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b2b026fd3e18b5e4",
+          "disposition": "missing_context",
+          "rationale": "Die Änderung verlängert zwar die Niveauschutzklausel bis 2031; die maßgebliche Regelung in § 255i, die das Sicherungsniveau konkret festlegt, ist im vorliegenden Gesetzesauszug nicht enthalten.",
+          "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die Änderung verlängert zwar die Niveauschutzklausel bis 2031; die maßgebliche Regelung in § 255i, die das Sicherungsniveau konkret festlegt, ist im vorliegenden Gesetzesauszug nicht enthalten.",
+            "law_passage_id": "bgbl-1-2025-362-p-ece2fb40270fb21f",
+            "law_quote": "Der Bund erstattet den Trägern der allgemeinen Rentenversicherung jährlich die Mehraufwendungen, die sich daraus ergeben, dass der aktuelle Rentenwert abweichend vom Verfahren nach § 68 ab dem Jahr 2026 bis einschließlich 2031 nach § 255i festzusetzen ist.",
+            "criterion_quote": "Das Sicherungsniveau der gesetzlichen\nRente muss deshalb stabilisiert werden.",
+            "caveats": [
+              "Der Gesetzesauszug enthält den Inhalt des in Bezug genommenen § 255i nicht."
+            ],
+            "criterion_id": "spd-2025-ac-b2b026fd3e18b5e4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bee474ad7385688c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen die Rentenversicherung und enthalten keine Bestimmung zu einem Elterngeldanspruch von sechs Monaten je Elternteil.",
+          "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Regelungen betreffen die Rentenversicherung und enthalten keine Bestimmung zu einem Elterngeldanspruch von sechs Monaten je Elternteil.",
+            "law_passage_id": "bgbl-1-2025-362-p-e871b29079faa7ff",
+            "law_quote": "Gesetz\nzur Stabilisierung des Rentenniveaus und zur vollständigen Gleichstellung",
+            "criterion_quote": "Modell beim Elterngeld, nach dem jeder Elternteil Anspruch auf 6 Monate Elterngeld erhält",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bee474ad7385688c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c1734e184bf6d191",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen die Rentenversicherung; ein Anspruch auf sechs nicht übertragbare Elterngeldmonate ist darin nicht geregelt.",
+          "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Regelungen betreffen die Rentenversicherung; ein Anspruch auf sechs nicht übertragbare Elterngeldmonate ist darin nicht geregelt.",
+            "law_passage_id": "bgbl-1-2025-362-p-e871b29079faa7ff",
+            "law_quote": "Gesetz\nzur Stabilisierung des Rentenniveaus und zur vollständigen Gleichstellung",
+            "criterion_quote": "Jeder Elternteil soll Anspruch auf sechs nicht übertragbare Monate Elterngeld erhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c1734e184bf6d191",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung erleichtert bestimmten Beschäftigten nach Erreichen der Regelaltersgrenze befristete Arbeitsverträge; eine Einbeziehung von Beschäftigungsverhältnissen in die soziale Sicherung regelt sie nicht.",
+          "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f13d1c71101818a4c3cdaf685b806b6f7df3e94f50153f3571c0259323cfa9aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Änderung erleichtert bestimmten Beschäftigten nach Erreichen der Regelaltersgrenze befristete Arbeitsverträge; eine Einbeziehung von Beschäftigungsverhältnissen in die soziale Sicherung regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2025-362-p-45fc882f0cb874d7",
+            "law_quote": "§ 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes gilt nicht für Arbeitnehmer, die die Regelaltersgrenze erreicht haben, wenn mit befristeten Arbeitsverhältnissen nach § 14 Absatz 2 Satz 1 des Teilzeit- und Befristungsgesetzes bei demselben Arbeitgeber",
+            "criterion_quote": "Unser Ziel ist, alle Beschäftigungsverhältnisse in die soziale Sicherung einzubeziehen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cb96f221d2adb38f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Rentenleistungen und Kindererziehungszeiten; eine Weiterentwicklung der ressortübergreifenden Gleichstellungsstrategie des Bundes ist darin nicht geregelt.",
+          "input_sha256": "5d2535ec3ba53cd5a3bae6e33fdb0ce07ac0d303cc32b00b53a17350c44bd98d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5d2535ec3ba53cd5a3bae6e33fdb0ce07ac0d303cc32b00b53a17350c44bd98d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften regeln Rentenleistungen und Kindererziehungszeiten; eine Weiterentwicklung der ressortübergreifenden Gleichstellungsstrategie des Bundes ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die ressortübergreifende **Gleichstellungsstrategie des Bundes** soll weiterentwickelt",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cb96f221d2adb38f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-363",
@@ -46598,12 +47846,486 @@
         "spd-2025-ac-e3dc89bfc4ce415c"
       ],
       "omitted_count": 769,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-227efae02aedbafb",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug zeigt zwar Änderungen am Umsatzsteuergesetz, enthält aber keine Regelung zu den Steuersätzen für Lebensmittel; wegen des ausdrücklich unvollständigen Gesetzeskontexts lässt sich das nicht abschließend beurteilen.",
+          "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der Auszug zeigt zwar Änderungen am Umsatzsteuergesetz, enthält aber keine Regelung zu den Steuersätzen für Lebensmittel; wegen des ausdrücklich unvollständigen Gesetzeskontexts lässt sich das nicht abschließend beurteilen.",
+            "law_passage_id": "bgbl-1-2025-363-p-1c85007fecfa9172",
+            "law_quote": "Änderung des Umsatzsteuergesetzes",
+            "criterion_quote": "weniger\nMehrwertsteuer auf Lebensmittel",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet; die einschlägige Regelung könnte im fehlenden Text stehen."
+            ],
+            "criterion_id": "spd-2025-ac-227efae02aedbafb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-447098c9e411a1a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Regelungen enthalten keine Beschränkung staatlicher Förderung privater Altersvorsorge auf transparente und kostenbegrenzte neue Produkte.",
+          "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die vorliegenden Regelungen enthalten keine Beschränkung staatlicher Förderung privater Altersvorsorge auf transparente und kostenbegrenzte neue Produkte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Staatliche Förderung für private Altersvorsorge wollen wir nur für solche neuen\nAltersvorsorgeprodukte zulassen, deren Kosten transparent und gedeckelt sind.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-447098c9e411a1a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-50b4076f237e9765",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stellt bestimmte Prämien für Platzierungen bei Olympischen oder Paralympischen Spielen steuerfrei; es belegt aber keine Unterstützung der DOSB-Bewerbung.",
+          "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz stellt bestimmte Prämien für Platzierungen bei Olympischen oder Paralympischen Spielen steuerfrei; es belegt aber keine Unterstützung der DOSB-Bewerbung.",
+            "law_passage_id": "bgbl-1-2025-363-p-c2cf75f72e66ac1d",
+            "law_quote": "Prämienzahlungen der Stiftung Deutsche Sporthilfe, die für Platzierungen bei Olympischen oder",
+            "criterion_quote": "Wir sagen **Ja zu Sportgroßveranstaltungen** in Deutschland und unterstützen den Deutschen\nOlympischen Sportbund bei der Bewerbung für **Olympische Spiele und Paralympics in Deutschland** .",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-50b4076f237e9765",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5b107ffdec98cbd8",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine dokumentierte Position oder Eingabe der Bundesregierung gegenüber der Europäischen Kommission zur Erweiterung der Strompreiskompensation.",
+          "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f0fc5372c6c3ef8a3b700156f3eaa25cec545fdeb4a3f49e210d81ebde8c5638"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Der Gesetzestext enthält keine dokumentierte Position oder Eingabe der Bundesregierung gegenüber der Europäischen Kommission zur Erweiterung der Strompreiskompensation.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Bundesregierung wird sich darüber hinaus gegenüber der Europäischen Kommission\ndafür einsetzen, dass mehr energieintensive Branchen von den Entlastungen der sogenannten\nStrompreiskompensation profitieren können, zum Beispiel die Glasverarbeitung, weite Teile der\nChemie und die Batteriezellenproduktion.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5b107ffdec98cbd8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "missing_context",
+          "rationale": "Der vorgelegte Gesetzestext enthält keine dokumentierte Untersuchung zur Bündelung von Aufgaben oder Zuständigkeiten; ob eine solche Prüfung anderweitig dokumentiert wurde, lässt sich daraus nicht entnehmen.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.75,
+            "rationale": "Der vorgelegte Gesetzestext enthält keine dokumentierte Untersuchung zur Bündelung von Aufgaben oder Zuständigkeiten; ob eine solche Prüfung anderweitig dokumentiert wurde, lässt sich daraus nicht entnehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Für die Prüfung sind gegebenenfalls außerhalb des Gesetzes liegende Dokumente erforderlich."
+            ],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-847770ba14936ced",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen begrenzen die monatlichen Eigenanteile in der stationären Langzeitpflege nicht auf 1.000 Euro.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Änderungen begrenzen die monatlichen Eigenanteile in der stationären Langzeitpflege nicht auf 1.000 Euro.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-847770ba14936ced",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-88dfe44d5cd94096",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zu elektronisch übermittelten Steuerdaten regeln nicht, dass Daten im vorgesehenen Verwaltungsaustausch nur einmal erfasst werden müssen.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Änderungen zu elektronisch übermittelten Steuerdaten regeln nicht, dass Daten im vorgesehenen Verwaltungsaustausch nur einmal erfasst werden müssen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-88dfe44d5cd94096",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext ermöglicht keine steuer- und abgabenfreie Auszahlung eines Führerscheinzuschusses an Auszubildende oder junge Beschäftigte.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Gesetzestext ermöglicht keine steuer- und abgabenfreie Auszahlung eines Führerscheinzuschusses an Auszubildende oder junge Beschäftigte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen weder öffentliche Investitionen noch Maßnahmen zum Abbau eines Investitionsstaus vor; tatsächliche Investitionstätigkeit ist daraus nicht ersichtlich.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die vorgelegten Vorschriften sehen weder öffentliche Investitionen noch Maßnahmen zum Abbau eines Investitionsstaus vor; tatsächliche Investitionstätigkeit ist daraus nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+          "disposition": "missing_context",
+          "rationale": "Der Gesetzestext dokumentiert keine Durchsetzungsmaßnahmen zu DMA, DSA oder KI-Verordnung; ob solche Maßnahmen außerhalb dieses Gesetzes ergriffen wurden, ist anhand der vorgelegten Quellen nicht feststellbar.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.65,
+            "rationale": "Der Gesetzestext dokumentiert keine Durchsetzungsmaßnahmen zu DMA, DSA oder KI-Verordnung; ob solche Maßnahmen außerhalb dieses Gesetzes ergriffen wurden, ist anhand der vorgelegten Quellen nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Für die Bewertung der tatsächlichen Durchsetzungsmaßnahmen sind gegebenenfalls weitere Quellen erforderlich."
+            ],
+            "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b707e02ff1cec1c3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen legen keinen zehnjährigen Betrachtungszeitraum für Mietspiegel fest.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Änderungen legen keinen zehnjährigen Betrachtungszeitraum für Mietspiegel fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b707e02ff1cec1c3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c2b5ddd07c2b326d",
+          "disposition": "missing_context",
+          "rationale": "Der Gesetzestext dokumentiert keine Verhandlungen mit der EU-Kommission über Flottengrenzwerte; ob solche Verhandlungen anderweitig dokumentiert sind, lässt sich aus den vorgelegten Quellen nicht entnehmen.",
+          "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9ecea892d4b6b6db944af2e5bb7ec226518aaf80bceed60165c265c422e2007"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.65,
+            "rationale": "Der Gesetzestext dokumentiert keine Verhandlungen mit der EU-Kommission über Flottengrenzwerte; ob solche Verhandlungen anderweitig dokumentiert sind, lässt sich aus den vorgelegten Quellen nicht entnehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Für die Bewertung sind gegebenenfalls Verhandlungsunterlagen oder andere externe Dokumente erforderlich."
+            ],
+            "criterion_id": "spd-2025-ac-c2b5ddd07c2b326d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cee55dce93acdaa1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln weder Mehreinnahmen aus Erbschaft- und Schenkungsteuer oder Vermögensteuer noch deren Verwendung für Bildung.",
+          "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften regeln weder Mehreinnahmen aus Erbschaft- und Schenkungsteuer oder Vermögensteuer noch deren Verwendung für Bildung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es ist daher unser Ziel, dass die Länder die aufgrund unserer Reformen\nerzielten Mehreinnahmen für die dringend erforderliche Stärkung und Modernisierung des\nBildungssystems aufwenden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cee55dce93acdaa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d7f9ea8f7a56ee3e",
+          "disposition": "missing_context",
+          "rationale": "Die einschlägige Behandlung des selbst genutzten Familienheims und ihr Rechtsstand sind im nur teilweise vorliegenden Gesetzeskontext nicht belegt.",
+          "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.85,
+            "rationale": "Die einschlägige Behandlung des selbst genutzten Familienheims und ihr Rechtsstand sind im nur teilweise vorliegenden Gesetzeskontext nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das\nselbst genutzte Familienheim bleibt auch in Zukunft unangetastet.",
+            "caveats": [
+              "Für die Aussage, dass die Regelung unverändert bleibt, fehlt der vollständige einschlägige Rechtskontext."
+            ],
+            "criterion_id": "spd-2025-ac-d7f9ea8f7a56ee3e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d8d1cf71cf2bf252",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge zeigen keine Änderung des Solidaritätszuschlags; ob der Kreis der Zahlenden gegenüber dem geltenden Rechtsstand unverändert bleibt, lässt sich aus dem Teilkontext nicht abschließend feststellen.",
+          "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.84,
+            "rationale": "Die Auszüge zeigen keine Änderung des Solidaritätszuschlags; ob der Kreis der Zahlenden gegenüber dem geltenden Rechtsstand unverändert bleibt, lässt sich aus dem Teilkontext nicht abschließend feststellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir stellen sicher, dass der Kreis der\nbetroffenen Steuerpflichtigen nicht größer wird und nicht mehr Bürgerinnen und Bürger als heute den\nSoli entrichten.",
+            "caveats": [
+              "Der einschlägige Rechtsstand zum Solidaritätszuschlag ist nicht mitgeliefert."
+            ],
+            "criterion_id": "spd-2025-ac-d8d1cf71cf2bf252",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge enthalten keine erkennbare Änderung der Besteuerung privater Immobilienverkäufe; der vollständige Regelungs- und Rechtsstand zu § 23 EStG fehlt für den Vergleich.",
+          "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.85,
+            "rationale": "Die vorgelegten Auszüge enthalten keine erkennbare Änderung der Besteuerung privater Immobilienverkäufe; der vollständige Regelungs- und Rechtsstand zu § 23 EStG fehlt für den Vergleich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wenn eine nicht selbst genutzte **Immobilie** privat verkauft wird, ist der Gewinn nach Ablauf\neiner **Spekulationsfrist** von zehn Jahren aktuell steuerfrei. Das wollen wir ändern und damit für\nmehr Steuergerechtigkeit sorgen.",
+            "caveats": [
+              "Der relevante Ausgangsrechtsstand und der vollständige Änderungskontext sind nicht enthalten."
+            ],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e3dc89bfc4ce415c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Preisen an öffentlichen Ladesäulen oder zu den Kosten des Tankens.",
+          "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "58f6910d50a951dd27c7541904ea2f34bbb83203bfaa165b970cfda81141dff3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz enthält keine Regelung zu Preisen an öffentlichen Ladesäulen oder zu den Kosten des Tankens.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Laden an **öffentlichen Ladesäulen** muss in Zukunft so einfach wie und auch günstiger werden als\ndas Tanken.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e3dc89bfc4ce415c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-364",
       "analysis_sha256": "5e2a37e718507a4bc877f07b36c677164289d9965c8472ac688d35c32f810d3c",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-00d2bbb8f9787d87",
@@ -46621,7 +48343,359 @@
         "spd-2025-ac-adcd9e8a7962620e"
       ],
       "omitted_count": 774,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-00d2bbb8f9787d87",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Stationierung deutscher Truppen in Litauen.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Stationierung deutscher Truppen in Litauen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-00d2bbb8f9787d87",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Arbeit der Mindestlohnkommission oder zur Berücksichtigung europäischen Rechts durch sie.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Arbeit der Mindestlohnkommission oder zur Berücksichtigung europäischen Rechts durch sie.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-091488700f11bcf7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz belegt keine Unterstützung der EU-Kommission bei der Umsetzung der Letta- und Draghi-Berichte.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz belegt keine Unterstützung der EU-Kommission bei der Umsetzung der Letta- und Draghi-Berichte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-091488700f11bcf7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4f5210a65f0e3f11",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung oder Maßnahme zur gemeinsamen europäischen Rüstungsexportpolitik.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung oder Maßnahme zur gemeinsamen europäischen Rüstungsexportpolitik.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4f5210a65f0e3f11",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu sicheren Herkunftsstaaten treffen keine festen Vereinbarungen über Rückführungen mit Herkunftsländern.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zu sicheren Herkunftsstaaten treffen keine festen Vereinbarungen über Rückführungen mit Herkunftsländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6a36c96076b7f4e9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Erklärung oder Maßnahme zu einem Waffenstillstand in Gaza.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Erklärung oder Maßnahme zu einem Waffenstillstand in Gaza.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6a36c96076b7f4e9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Entscheidungsverfahren des Europäischen Rates oder des Ministerrates.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Entscheidungsverfahren des Europäischen Rates oder des Ministerrates.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-71fff05e90c94761",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Position zur Aufnahme der westlichen Balkanstaaten in die EU.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Position zur Aufnahme der westlichen Balkanstaaten in die EU.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-71fff05e90c94761",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine geschützten Merkmale um sexuelle Orientierung oder geschlechtliche Identität.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine geschützten Merkmale um sexuelle Orientierung oder geschlechtliche Identität.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Ganztagsbetreuung von Grundschulkindern oder zur Einlösung des Rechtsanspruchs.",
+          "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0d1d2c61c69d39edcb9f191d318eb4a042201a372c2eb0194897653befe2c280"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Ganztagsbetreuung von Grundschulkindern oder zur Einlösung des Rechtsanspruchs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft eine Verordnungsermächtigung für sichere Herkunftsstaaten; Verhandlungen über ein deutsch-britisches Abkommen regelt es nicht.",
+          "input_sha256": "1b75fc591c947cc732f43a6fef8044f87fe6117ee1b9bb316f14322743e4ab1a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1b75fc591c947cc732f43a6fef8044f87fe6117ee1b9bb316f14322743e4ab1a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft eine Verordnungsermächtigung für sichere Herkunftsstaaten; Verhandlungen über ein deutsch-britisches Abkommen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung betrifft sichere Herkunftsstaaten im Asylrecht, nicht die Voraussetzungen für einen Beitritt zur EU oder die Kopenhagener Kriterien.",
+          "input_sha256": "1b75fc591c947cc732f43a6fef8044f87fe6117ee1b9bb316f14322743e4ab1a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1b75fc591c947cc732f43a6fef8044f87fe6117ee1b9bb316f14322743e4ab1a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelung betrifft sichere Herkunftsstaaten im Asylrecht, nicht die Voraussetzungen für einen Beitritt zur EU oder die Kopenhagener Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-adcd9e8a7962620e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Asyl-, Aufenthalts-, Staatsangehörigkeits-, Zivil- und Sozialrecht; kommunale Entwicklungsbeiräte regelt es nicht.",
+          "input_sha256": "1b75fc591c947cc732f43a6fef8044f87fe6117ee1b9bb316f14322743e4ab1a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1b75fc591c947cc732f43a6fef8044f87fe6117ee1b9bb316f14322743e4ab1a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Asyl-, Aufenthalts-, Staatsangehörigkeits-, Zivil- und Sozialrecht; kommunale Entwicklungsbeiräte regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-adcd9e8a7962620e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-369",
@@ -51900,45 +53974,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3714,
-    "cache_hits": 35,
-    "subdivision_cache_hits": 2,
+    "calls": 3789,
+    "cache_hits": 39,
+    "subdivision_cache_hits": 6,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.352934,
-    "reported_cost_calls": 3497,
+    "reported_cost_usd": 21.499096,
+    "reported_cost_calls": 3572,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 1.327248,
     "unknown_cost_calls": 217,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 22.680181,
-    "prompt_tokens": 37436697,
-    "completion_tokens": 5578346,
+    "budget_exposure_usd": 22.826344,
+    "prompt_tokens": 38214460,
+    "completion_tokens": 5755956,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 133,
-        "reported_cost_usd": 3.079867749999999,
+        "calls": 135,
+        "reported_cost_usd": 3.126806249999999,
         "unknown_cost_reserved_usd": 8.881784197001252e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 44,
-        "reported_cost_usd": 0.626052,
+        "calls": 45,
+        "reported_cost_usd": 0.6374437500000001,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 640,
-        "reported_cost_usd": 0.7625439375000012,
+        "calls": 712,
+        "reported_cost_usd": 0.8503760550000005,
         "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 5.204170427930421e-18
+        "pending_reserved_usd": 8.673617379884035e-19
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

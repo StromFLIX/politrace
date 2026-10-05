@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "id": "impact-93b928e7d06b8403",
+  "dataset": "live",
+  "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+  "law_id": "bgbl-1-2025-355",
+  "score": -2,
+  "confidence": 0.82,
+  "rationale": "Die neue Regelung erlaubt bestimmten Stellen, erforderliche Sozialdaten für die Entwicklung von KI-Systemen zu speichern, wenn die genannten Zweck- und Anonymisierungsvoraussetzungen vorliegen; sie verlangt dafür weder einen Richtervorbehalt noch einen konkreten Anhaltspunkt. Damit widerspricht diese Speicherung der geforderten ausnahmslosen Verknüpfung beider Voraussetzungen.",
+  "law_passage_id": "bgbl-1-2025-355-p-e3b64546870bc8d5",
+  "law_quote": "Die in § 35 des Ersten Buches genannten Stellen dürfen die von ihnen für einen anderen Zweck\nerhobenen Sozialdaten auch zum Entwickeln, insbesondere zum Trainieren, Validieren und Testen, von KIModellen und KI-Systemen speichern, verändern oder nutzen, soweit die Daten dafür erforderlich sind, die\nVerwendung von anonymisierten Daten zu einer Verfälschung der Verarbeitungsergebnisse führen würde und\ndie KI-Modelle und KI-Systeme der Erfüllung einer gesetzlichen Aufgabe nach diesem Gesetzbuch durch\ndieselbe Stelle dienen. Die Sozialdaten sind zu pseudonymisieren.",
+  "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt\nvorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1",
+    "decided_at": "2026-10-05",
+    "previous_sha256": null
+  },
+  "review": {
+    "status": "proposed",
+    "reviewer": null,
+    "reviewed_at": null,
+    "note": ""
+  },
+  "generation": [
+    {
+      "model": "openai/gpt-6-luna",
+      "prompt_version": "politrace-evidence-v3",
+      "input_sha256": "87d1b46ab3064d81b93acd558c762065dcbf36c662b0603c62384e8e947ae3cf"
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "prompt_version": "politrace-evidence-v3",
+      "input_sha256": "1cc0213dd7f5c2feb004068bab88c78cd57b902abe27847de6ec06aef54817d1"
+    }
+  ]
+}

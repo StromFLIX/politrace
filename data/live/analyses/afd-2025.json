@@ -43480,7 +43480,7 @@
     {
       "law_id": "bgbl-1-2025-361",
       "analysis_sha256": "4f9f311ee61b6845ba5c090f5bc4eb232b3eb9e230872f6df95f2e662579e2f2",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0968da4fef943748",
@@ -43770,6 +43770,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-dc9bda34402bc782",
+          "disposition": "proposed_link",
+          "rationale": "Ab dem 1. Januar 2026 gilt ein jährlicher Steuerfreibetrag von bis zu 24.000 Euro für bestimmte Einkünfte aus nichtselbständiger Arbeit nach Erreichen der Regelaltersgrenze. Das unterstützt einen Freibetrag für Erwerbstätige im Rentenalter teilweise; ein tatsächlicher Rentenbezug ist keine Voraussetzung.",
+          "input_sha256": "08f95356b6ed372d0a5f8202518590d198c8f4ebbc12bef0211afd66d1110f11",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4dc848110d38c3c24be7d08e577902de40f09d161bbf420e4c7fac215cb1dc94"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08f95356b6ed372d0a5f8202518590d198c8f4ebbc12bef0211afd66d1110f11"
+            }
+          ],
+          "impact_id": "impact-a419020898abb95d",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.97,
+            "rationale": "Ab dem 1. Januar 2026 gilt ein jährlicher Steuerfreibetrag von bis zu 24.000 Euro für bestimmte Einkünfte aus nichtselbständiger Arbeit nach Erreichen der Regelaltersgrenze. Das unterstützt einen Freibetrag für Erwerbstätige im Rentenalter teilweise; ein tatsächlicher Rentenbezug ist keine Voraussetzung.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach\nErreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch\nerbrachte Leistungen zufließen",
+            "criterion_quote": "die Bereitstellung eines zusätzlichen Steuerfreibetrags für\n\nRentner, um Senioren im Arbeitsmarkt zu halten",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-dc9bda34402bc782",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-e1100ebeea8f4213",
           "disposition": "missing_context",
           "rationale": "Der als Teilkontext gekennzeichnete Auszug enthält keine Regelung zum Umsatzsteuersatz gastronomischer Leistungen; ob das Gesetz hierzu weitere Bestimmungen enthält, lässt sich aus den vorgelegten Texten nicht feststellen.",
@@ -43849,12 +43881,310 @@
         "afd-2025-ac-f31cbd18e0557aed"
       ],
       "omitted_count": 669,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen die Rentenversicherung und begrenzen keinen anfänglichen Arbeitslosengeldanspruch.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen die Rentenversicherung und begrenzen keinen anfänglichen Arbeitslosengeldanspruch.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "zunächst auf sechs Monate beschränkt werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Wahl des Bundespräsidenten.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Wahl des Bundespräsidenten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "direkt vom Volk gewählt werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-263e5eae108f909e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln keine Anspruchsvoraussetzung für Leistungen der Arbeitslosenversicherung.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln keine Anspruchsvoraussetzung für Leistungen der Arbeitslosenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "wer die Arbeitslosigkeit nicht selbst herbeigeführt hat",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-263e5eae108f909e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Gesetzestext enthält keine Überprüfung oder Streichung Corona-bezogener Gesetze oder Richtlinien.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorgelegte Gesetzestext enthält keine Überprüfung oder Streichung Corona-bezogener Gesetze oder Richtlinien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "gegebenenfalls zu streichen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8e883ee638b5dc70",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen keine Anrechnung von Zuverdiensten auf Hinterbliebenenrenten.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen keine Anrechnung von Zuverdiensten auf Hinterbliebenenrenten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Zuverdienste von Witwen und Witwern nicht auf die Hinterbliebenenrente anrechnen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8e883ee638b5dc70",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9abec2d1faf6765a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Neuregelungen zu Kindererziehungszeiten schaffen kein Betreuungsgehalt für Eltern oder Großeltern.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Neuregelungen zu Kindererziehungszeiten schaffen kein Betreuungsgehalt für Eltern oder Großeltern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Betreuungsgehalt für Eltern bzw. Großeltern soll etwa dem durchschnittlichen Nettolohn vor Geburt des ersten Kindes entsprechen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9abec2d1faf6765a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Asylverfahren oder deren Anwendung auf Personen aus weiteren Herkunftsländern.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Asylverfahren oder deren Anwendung auf Personen aus weiteren Herkunftsländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "bei Personen aus anderen Asyl-Herkunftsländern verfahren",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zu Kindererziehungszeiten sehen keine monatlichen ETF- oder Aktienfondseinzahlungen aus Steuermitteln vor.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen zu Kindererziehungszeiten sehen keine monatlichen ETF- oder Aktienfondseinzahlungen aus Steuermitteln vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "monatlich 100 Euro aus Steuermitteln in einen ETF-Sparplan oder Aktienfonds-Sparplan eingezahlt",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-afc7f6a21b1b231c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erweitert Kindererziehungszeiten beziehungsweise Zuschläge, gewährt aber keine Rückzahlung oder Beitragsfreistellung von 20.000 Euro je Kind.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erweitert Kindererziehungszeiten beziehungsweise Zuschläge, gewährt aber keine Rückzahlung oder Beitragsfreistellung von 20.000 Euro je Kind.",
+            "law_passage_id": "bgbl-1-2025-362-p-28ea3bb74cd90158",
+            "law_quote": "ab dem Jahr 2028 geltenden zusätzlichen Kindererziehungszeiten von sechs Monaten",
+            "criterion_quote": "eine Rückzahlung von 20.000 € an Rentenbeiträgen oder eine entsprechende Freistellung von künftigen Zahlungen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-afc7f6a21b1b231c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cfc999c4ee32c427",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen führen keinen Berechtigungsschein für private Arbeitsvermittlung ein.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen führen keinen Berechtigungsschein für private Arbeitsvermittlung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Arbeitnehmer über 50 Jahre bereits zum Zeitpunkt der Kündigung durch den Arbeitgeber Anspruch auf einen Berechtigungsschein für eine private Arbeitsvermittlung erhalten",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cfc999c4ee32c427",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f31cbd18e0557aed",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Erwerb der deutschen Staatsangehörigkeit durch Geburt.",
+          "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "894462df1738e08765490ca34a24cc9daa2be27c274e245bb5f03ccdf9c9126a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Erwerb der deutschen Staatsangehörigkeit durch Geburt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Erwerb der deutschen Staatsangehörigkeit durch Geburt als Kind zumindest eines deutschen Elternteils",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f31cbd18e0557aed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-363",
       "analysis_sha256": "b9af446c42ae432a135151b4c3698eeda15e61023120ff2ce249b0df5d09dcbf",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0279b7be6c194326",
@@ -43882,7 +44212,633 @@
         "afd-2025-ac-f7faf70aeb9a467e"
       ],
       "omitted_count": 660,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Das Steueränderungsgesetz enthält keine Regelung, die öffentliche Forderungen nach einem Kalifat unter Strafe stellt.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Steueränderungsgesetz enthält keine Regelung, die öffentliche Forderungen nach einem Kalifat unter Strafe stellt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Artikel 8 ändert die Anrechnung steuerfreier nebenberuflicher Einnahmen beim Bürgergeld; eine Begrenzung des anfänglichen ALG-I-Anspruchs regelt er nicht.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Artikel 8 ändert die Anrechnung steuerfreier nebenberuflicher Einnahmen beim Bürgergeld; eine Begrenzung des anfänglichen ALG-I-Anspruchs regelt er nicht.",
+            "law_passage_id": "bgbl-1-2025-363-p-db5ac816461a7fba",
+            "law_quote": "Aufwandsentschädigungen oder Einnahmen aus nebenberuflichen Tätigkeiten, die nach § 3 Nummer 12, Nummer 26 oder Nummer 26a des Einkommensteuergesetzes steuerfrei sind, bis zur Höhe des in § 3 Nummer 26 des Einkommensteuergesetzes genannten Betrags",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c0aac35ef9dcd91",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen des Einkommensteuergesetzes erhöhen den Kinderfreibetrag nicht; eine entsprechende Änderung ist im Gesetz nicht enthalten.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen des Einkommensteuergesetzes erhöhen den Kinderfreibetrag nicht; eine entsprechende Änderung ist im Gesetz nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c0aac35ef9dcd91",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stellt keine Mittel für Maßnahmen zur Durchsetzung des Rechtsstaats in sogenannten No-go-Areas bereit.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stellt keine Mittel für Maßnahmen zur Durchsetzung des Rechtsstaats in sogenannten No-go-Areas bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-114f304f620431c4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert steuerliche Regelungen, ersetzt aber keine bisherigen Modelle der Vorsorgeförderung.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert steuerliche Regelungen, ersetzt aber keine bisherigen Modelle der Vorsorgeförderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-114f304f620431c4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-142d79111f3551ab",
+          "disposition": "no_supported_link",
+          "rationale": "Eine direkte Wahl des Bundespräsidenten wird durch das Gesetz nicht eingeführt.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine direkte Wahl des Bundespräsidenten wird durch das Gesetz nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-142d79111f3551ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-22d89bfc2e6b66a2",
+          "disposition": "no_supported_link",
+          "rationale": "Die steuerlichen Änderungen des Gesetzes erweitern nicht die Absetzbarkeit privater kapitalgedeckter Altersvorsorge.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die steuerlichen Änderungen des Gesetzes erweitern nicht die Absetzbarkeit privater kapitalgedeckter Altersvorsorge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-22d89bfc2e6b66a2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "020de61235b86df335edd363189b13a307024ce19472f167c063a0176b7b682d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5e74bfd4cb2eb4e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine Zuschläge auf Einkommen- oder Körperschaftsteuer und keine Entschädigung der Kommunen vor.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine Zuschläge auf Einkommen- oder Körperschaftsteuer und keine Entschädigung der Kommunen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5e74bfd4cb2eb4e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Willkommensprämie oder entsprechende Rentengutschrift für Neugeborene.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Willkommensprämie oder entsprechende Rentengutschrift für Neugeborene.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-612fd76acae4a6ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-788e0409a117a456",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Anspruchsvoraussetzungen für Arbeitslosengeld und führt keine dreijährige Beitragswartezeit ein.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Anspruchsvoraussetzungen für Arbeitslosengeld und führt keine dreijährige Beitragswartezeit ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-788e0409a117a456",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8bae8341e0d73696",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des SGB XII betrifft steuerfreie Einnahmen aus nebenberuflichen Tätigkeiten, nicht Schonvermögen oder Autobesitz in der Grundsicherung im Alter.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des SGB XII betrifft steuerfreie Einnahmen aus nebenberuflichen Tätigkeiten, nicht Schonvermögen oder Autobesitz in der Grundsicherung im Alter.",
+            "law_passage_id": "bgbl-1-2025-363-p-c4d55e3668e137d7",
+            "law_quote": "§ 82 Absatz 1 Satz 2 Nummer 8 wird durch die folgende Nummer 8 ersetzt:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8bae8341e0d73696",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8c55793f698458f9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt kein Verfahren für Volksabstimmungen über völkerrechtliche Verträge ein.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt kein Verfahren für Volksabstimmungen über völkerrechtliche Verträge ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8c55793f698458f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zu gemeinnützigen Körperschaften beenden keine Förderung für die genannten Zwecke; eine solche Förderentscheidung ist im Gesetz nicht geregelt.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Änderungen zu gemeinnützigen Körperschaften beenden keine Förderung für die genannten Zwecke; eine solche Förderentscheidung ist im Gesetz nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Asylbewerberleistungsgesetzes betrifft die Anrechnung bestimmter Einnahmen, nicht Verfahren für Personen aus weiteren Herkunftsländern.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Asylbewerberleistungsgesetzes betrifft die Anrechnung bestimmter Einnahmen, nicht Verfahren für Personen aus weiteren Herkunftsländern.",
+            "law_passage_id": "bgbl-1-2025-363-p-de0083878557f2ad",
+            "law_quote": "In § 7 Absatz 3 Satz 2 und 4 wird jeweils die Angabe „250 Euro“ durch die Angabe „einem Zwölftel des in § 3 Nummer 26 des Einkommensteuergesetzes genannten Betrags“ ersetzt.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-abe78d994b422ddf",
+          "disposition": "missing_context",
+          "rationale": "Die Steuerbefreiungsgrenze für nebenberufliche Pflege von Menschen mit Behinderungen steigt ab 2026 auf 3.300 Euro; sie gilt aber nur bei Tätigkeit im Dienst oder Auftrag bestimmter Einrichtungen. Ob häusliche Pflege durch Angehörige darunter fällt, geht aus dem vorliegenden Text nicht hervor.",
+          "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "772d7b33c78260862937ed836f483c37b7d5b848e0037d56dcd9a7765f031008"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Steuerbefreiungsgrenze für nebenberufliche Pflege von Menschen mit Behinderungen steigt ab 2026 auf 3.300 Euro; sie gilt aber nur bei Tätigkeit im Dienst oder Auftrag bestimmter Einrichtungen. Ob häusliche Pflege durch Angehörige darunter fällt, geht aus dem vorliegenden Text nicht hervor.",
+            "law_passage_id": "bgbl-1-2025-363-p-ab6cdb32ad622a6e",
+            "law_quote": "Einnahmen aus nebenberuflichen Tätigkeiten ... oder der nebenberuflichen Pflege alter, kranker Menschen oder von Menschen mit Behinderungen im Dienst oder Auftrag einer juristischen Person des öffentlichen Rechts ... oder einer unter § 5 Absatz 1 Nummer 9 des Körperschaftsteuergesetzes fallenden Einrichtung bis zur Höhe von insgesamt 3 300 Euro im Jahr.",
+            "criterion_quote": "Die häusliche Betreuung Behinderter durch Angehörige wollen wir besser honorieren",
+            "caveats": [
+              "Artikel 2 tritt am 1. Januar 2026 in Kraft."
+            ],
+            "criterion_id": "afd-2025-ac-abe78d994b422ddf",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ac654637c5461651",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen keine baurechtlichen Sonderregelungen für Unterkünfte oder § 246 BauGB.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen keine baurechtlichen Sonderregelungen für Unterkünfte oder § 246 BauGB.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Eine Aushebelung des Deutschen Baurechts durch Sonderregelungen wie z. B. im §246 BauGB für die Errichtung von Unterkünften für zuvor meist illegal eingereiste Migranten lehnen wir ab.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ac654637c5461651",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine monatlichen ETF- oder Aktienfondseinzahlungen für Kinder ein.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine monatlichen ETF- oder Aktienfondseinzahlungen für Kinder ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bis zum vollendeten 18. Lebensjahr sollen monatlich 100 Euro aus Steuermitteln in einen ETF-Sparplan oder Aktienfonds-Sparplan eingezahlt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ba131f8e41801ddf",
+          "disposition": "no_supported_link",
+          "rationale": "Die Umsatzsteueränderung betrifft Restaurant- und Verpflegungsdienstleistungen, nicht einen Steuersatz für Kinderbedarfsartikel.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Umsatzsteueränderung betrifft Restaurant- und Verpflegungsdienstleistungen, nicht einen Steuersatz für Kinderbedarfsartikel.",
+            "law_passage_id": "bgbl-1-2025-363-p-ad39c8acc3599018",
+            "law_quote": "„15. die Restaurant- und Verpflegungsdienstleistungen, mit Ausnahme der Abgabe von Getränken.“",
+            "criterion_quote": "Die Mehrwertsteuer für Artikel des Kinderbedarfs soll auf 7 % reduziert werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ba131f8e41801ddf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bdd27875a558b08f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen unter anderem steuerfreie nebenberufliche Einnahmen; eine Umsatzsteuerbefreiung künstlerischer und pädagogischer Tätigkeiten im Kunst- und Kulturbereich regeln sie nicht.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen unter anderem steuerfreie nebenberufliche Einnahmen; eine Umsatzsteuerbefreiung künstlerischer und pädagogischer Tätigkeiten im Kunst- und Kulturbereich regeln sie nicht.",
+            "law_passage_id": "bgbl-1-2025-363-p-35304a52067c8451",
+            "law_quote": "„Einnahmen aus nebenberuflichen Tätigkeiten […] aus nebenberuflichen künstlerischen Tätigkeiten […] bis zur Höhe von insgesamt 3 000 Euro im Jahr.“",
+            "criterion_quote": "Wir werden künstlerische und pädagogische Tätigkeiten im Kunst- und Kulturbereich bis zu einer sinnvollen Einkommensgrenze von der Umsatzsteuerpflicht befreien.",
+            "caveats": [
+              "Die zitierte Regelung betrifft Einkommensteuer, nicht Umsatzsteuer."
+            ],
+            "criterion_id": "afd-2025-ac-bdd27875a558b08f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cfe57e29e47afb94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz hebt die Grundsteuer nicht auf und enthält hierzu keine entsprechende Regelung.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz hebt die Grundsteuer nicht auf und enthält hierzu keine entsprechende Regelung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sind die Grunderwerbsteuer für Selbstnutzer, die Grundsteuer und der Rundfunkbeitrag (GEZ) aufzuheben",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cfe57e29e47afb94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e8626e84ee100ce3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz hebt die Grunderwerbsteuer für Selbstnutzer nicht auf und enthält hierzu keine entsprechende Regelung.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz hebt die Grunderwerbsteuer für Selbstnutzer nicht auf und enthält hierzu keine entsprechende Regelung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sind die Grunderwerbsteuer für Selbstnutzer, die Grundsteuer und der Rundfunkbeitrag (GEZ) aufzuheben",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e8626e84ee100ce3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f7faf70aeb9a467e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keinen Grunderwerbsteuersatz von 20 Prozent für ausländische Käufer ein.",
+          "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0b62787673a31599f0e0578c218b35b972f6c554e3c063bd20f68f075ced4963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keinen Grunderwerbsteuersatz von 20 Prozent für ausländische Käufer ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sowie die Grunderwerbsteuer für ausländische Käufer mit Hauptwohnsitz außerhalb der EU auf 20 % zu erhöhen, so wie in Österreich.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f7faf70aeb9a467e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-364",
@@ -43904,7 +44860,307 @@
         "afd-2025-ac-f03cad095e2d8bb1"
       ],
       "omitted_count": 671,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-2aad0fafe2103bac",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung, die den Bürgergeldbezug ausländischer Staatsangehöriger auf ein Jahr begrenzt.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung, die den Bürgergeldbezug ausländischer Staatsangehöriger auf ein Jahr begrenzt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ihren Bürgergeld Bezug auf ein Jahr begrenzen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2aad0fafe2103bac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die rechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2 GG vorgesehenen Volksabstimmungen zu schaffen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt kein Verfahren ein, mit dem Stimmberechtigte Parlamentsgesetze durch Volksabstimmung ändern oder ablehnen können.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt kein Verfahren ein, mit dem Stimmberechtigte Parlamentsgesetze durch Volksabstimmung ändern oder ablehnen können.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern oder abzulehnen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen im Staatsangehörigkeitsgesetz betreffen eine zehnjährige Einbürgerungssperre bei Rücknahme oder Täuschung, nicht den grundsätzlichen Ausschluss mehrfacher Staatsangehörigkeit.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen im Staatsangehörigkeitsgesetz betreffen eine zehnjährige Einbürgerungssperre bei Rücknahme oder Täuschung, nicht den grundsätzlichen Ausschluss mehrfacher Staatsangehörigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mehrfache Staatsangehörigkeiten ... sind daher zukünftig wieder auszuschließen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verlangt für Änderungen des Grundgesetzes keine Zustimmung des Volkes.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verlangt für Änderungen des Grundgesetzes keine Zustimmung des Volkes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ohne Zustimmung des Volkes darf das Grundgesetz nicht geändert",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze abzulehnen.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze abzulehnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu ändern oder abzulehnen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht die Bestimmung sicherer Herkunftsstaaten, regelt aber keinen deutschen Opt-out aus der gemeinsamen EU-Asylpolitik.",
+          "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79de3311bbee6d5ff91c78f1ffb95b09b0d8814d43394bbc8bb89b70b7799edc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermöglicht die Bestimmung sicherer Herkunftsstaaten, regelt aber keinen deutschen Opt-out aus der gemeinsamen EU-Asylpolitik.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "im Rahmen eines „Opt-Outs“ nicht länger an der gemeinsamen Politik der EU im Bereich Asyl, subsidiärer Schutz und vorübergehender Schutz beteiligen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "missing_context",
+          "rationale": "Der Gesetzestext vom Dezember 2025 regelt Asyl- und Aufenthaltsrecht, belegt aber keine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025; ob sie anderweitig erfolgte, ist hier nicht ersichtlich.",
+          "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext vom Dezember 2025 regelt Asyl- und Aufenthaltsrecht, belegt aber keine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025; ob sie anderweitig erfolgte, ist hier nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der vorgelegte Gesetzestext erlaubt keine Feststellung zu einer außerhalb des Gesetzes erfolgten Ablehnung."
+            ],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze zu ändern; es enthält hierzu keine Regelung.",
+          "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Recht des Volkes, vom Parlament beschlossene Gesetze zu ändern; es enthält hierzu keine Regelung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-dead6649ff047ab0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Streichung von § 62d Aufenthaltsgesetz betrifft den anwaltlichen Vertreter bei Abschiebehaft und Ausreisegewahrsam, nicht die Entlassung von Beamten aus politischen Gründen.",
+          "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Streichung von § 62d Aufenthaltsgesetz betrifft den anwaltlichen Vertreter bei Abschiebehaft und Ausreisegewahrsam, nicht die Entlassung von Beamten aus politischen Gründen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-dead6649ff047ab0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f03cad095e2d8bb1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz legt keine zehnjährige sozialversicherungspflichtige Erwerbstätigkeit als Voraussetzung für Bürgergeld fest; die Änderungen betreffen unter anderem sichere Herkunftsstaaten und einen Verweis im SGB III.",
+          "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c16e665bf523350c287330b5eb6527dfbcf82b9d1536019595d38666880362b2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz legt keine zehnjährige sozialversicherungspflichtige Erwerbstätigkeit als Voraussetzung für Bürgergeld fest; die Änderungen betreffen unter anderem sichere Herkunftsstaaten und einen Verweis im SGB III.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f03cad095e2d8bb1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-369",
@@ -43945,7 +45201,440 @@
         "afd-2025-ac-f678f86de1626e08"
       ],
       "omitted_count": 652,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen die Bekämpfung von Schwarzarbeit; eine Strafregelung für öffentliche Kalifatsforderungen ist darin nicht belegt.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen die Bekämpfung von Schwarzarbeit; eine Strafregelung für öffentliche Kalifatsforderungen ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften erweitern Befugnisse zur Prüfung von Schwarzarbeit; eine Mittelbereitstellung für Maßnahmen in sogenannten No-go-Areas ist nicht belegt.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften erweitern Befugnisse zur Prüfung von Schwarzarbeit; eine Mittelbereitstellung für Maßnahmen in sogenannten No-go-Areas ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-113d30270a04e7eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-1272b9a9020e0a3a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Förder- oder Unterstützungsregelung für Junglandwirte.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Förder- oder Unterstützungsregelung für Junglandwirte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-1272b9a9020e0a3a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-1aafd5141118a532",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern keine Voraussetzungen für Verbeamtungen oder die Einbeziehung von Staatsbediensteten in die Rentenversicherung.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern keine Voraussetzungen für Verbeamtungen oder die Einbeziehung von Staatsbediensteten in die Rentenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-1aafd5141118a532",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-21dafe800345fdff",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften richten keine Selbstverwaltung der Justiz ein und regeln deren Organisation nicht.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften richten keine Selbstverwaltung der Justiz ein und regeln deren Organisation nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-21dafe800345fdff",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-244051679d6e747a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln nicht die Stellung oder Verwendung der deutschen Sprache in EU-Institutionen.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln nicht die Stellung oder Verwendung der deutschen Sprache in EU-Institutionen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-244051679d6e747a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2aad0fafe2103bac",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften setzen keine Höchstdauer für den Bürgergeldbezug ausländischer Staatsangehöriger fest.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften setzen keine Höchstdauer für den Bürgergeldbezug ausländischer Staatsangehöriger fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2aad0fafe2103bac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen weder eine Überprüfung Corona-bedingter Änderungen noch deren Streichung vor.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften sehen weder eine Überprüfung Corona-bedingter Änderungen noch deren Streichung vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5ca60e874e887c14",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften erhöhen keinen Anteil am Steueraufkommen zugunsten von Staatsanwaltschaften oder Gerichten.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften erhöhen keinen Anteil am Steueraufkommen zugunsten von Staatsanwaltschaften oder Gerichten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5ca60e874e887c14",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-63323edaf005bbef",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln nicht die bisherige Ausgestaltung anderer Grundsicherungssysteme.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln nicht die bisherige Ausgestaltung anderer Grundsicherungssysteme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-63323edaf005bbef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6c7c7181c07ebaac",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Unterbringung von Personen während eines Asylverfahrens.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Unterbringung von Personen während eines Asylverfahrens.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6c7c7181c07ebaac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen keine Überprüfung Corona-bedingter Gesetzes- oder Richtlinienänderungen vor.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften sehen keine Überprüfung Corona-bedingter Gesetzes- oder Richtlinienänderungen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-79bd405c9b225ee8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Rückführung ausländischer Gefährder, Extremisten oder Schwerkrimineller.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Rückführung ausländischer Gefährder, Extremisten oder Schwerkrimineller.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-79bd405c9b225ee8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-80343ddd52f4d40f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern keine Zuwanderungsregeln für qualifizierte Arbeitskräfte.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern keine Zuwanderungsregeln für qualifizierte Arbeitskräfte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-80343ddd52f4d40f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern nicht die Zuordnung staatlicher Finanzierungslasten nach dem Konnexitätsprinzip.",
+          "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df006a9752c1a7ed2e0a7246423e4ad5c23cf23daffd86f67ec6c3723172c49b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern nicht die Zuordnung staatlicher Finanzierungslasten nach dem Konnexitätsprinzip.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-370",
@@ -48991,45 +50680,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3714,
-    "cache_hits": 35,
-    "subdivision_cache_hits": 2,
+    "calls": 3789,
+    "cache_hits": 39,
+    "subdivision_cache_hits": 6,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.352934,
-    "reported_cost_calls": 3497,
+    "reported_cost_usd": 21.499096,
+    "reported_cost_calls": 3572,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 1.327248,
     "unknown_cost_calls": 217,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 22.680181,
-    "prompt_tokens": 37436697,
-    "completion_tokens": 5578346,
+    "budget_exposure_usd": 22.826344,
+    "prompt_tokens": 38214460,
+    "completion_tokens": 5755956,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 133,
-        "reported_cost_usd": 3.079867749999999,
+        "calls": 135,
+        "reported_cost_usd": 3.126806249999999,
         "unknown_cost_reserved_usd": 8.881784197001252e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 44,
-        "reported_cost_usd": 0.626052,
+        "calls": 45,
+        "reported_cost_usd": 0.6374437500000001,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 640,
-        "reported_cost_usd": 0.7625439375000012,
+        "calls": 712,
+        "reported_cost_usd": 0.8503760550000005,
         "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 5.204170427930421e-18
+        "pending_reserved_usd": 8.673617379884035e-19
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
