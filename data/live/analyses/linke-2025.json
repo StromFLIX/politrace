@@ -64850,7 +64850,7 @@
     {
       "law_id": "bgbl-1-2025-361",
       "analysis_sha256": "0f6fecf66a6736ad82f66a062b3d9a688d0479c2aed70c4528feb9ee41c60109",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-053582a97ba978bd",
@@ -64950,6 +64950,70 @@
             ],
             "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-45e97276dfe4c2bf",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz befreit nur bestimmte Arbeitseinnahmen nach Erreichen der Regelaltersgrenze. Ob für alle zu versteuernden Jahreseinkommen unter 16.800 Euro keine Einkommensteuer anfällt, lässt sich ohne die einschlägigen Tarifvorschriften nicht feststellen.",
+          "input_sha256": "6bb3eea7adde09262b587cb6c9411849580ba3c4e30dcf99888bf5cf15481189",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f53e8635236b04cf77d2fd25c0a0f6fe1dddc5272c1489488ef7704e5bab80e3"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6bb3eea7adde09262b587cb6c9411849580ba3c4e30dcf99888bf5cf15481189"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Das Gesetz befreit nur bestimmte Arbeitseinnahmen nach Erreichen der Regelaltersgrenze. Ob für alle zu versteuernden Jahreseinkommen unter 16.800 Euro keine Einkommensteuer anfällt, lässt sich ohne die einschlägigen Tarifvorschriften nicht feststellen.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach\nErreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch\nerbrachte Leistungen zufließen",
+            "criterion_quote": "Alle zu versteuernden Einkommen unter 16.800 Euro im\n\nJahr bleiben steuerfrei – das entspricht der Höhe\nunseres Modells des Existenzminimums.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-45e97276dfe4c2bf",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-58d49582b59d7ec0",
+          "disposition": "missing_context",
+          "rationale": "Die Steuerbefreiung betrifft nur begünstigten Arbeitslohn nach Erreichen der Regelaltersgrenze. Ob Alleinstehende in Steuerklasse I mit weniger als 7.000 Euro Monatsbrutto gegenüber dem bisherigen Tarif weniger Steuern zahlen, lässt sich ohne die bisherigen und geltenden Tarifvorschriften nicht feststellen.",
+          "input_sha256": "6bb3eea7adde09262b587cb6c9411849580ba3c4e30dcf99888bf5cf15481189",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6904422e98537ca5d57cc68d015f92789105ee75e5dfd3a25b2e25f6e209d555"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6bb3eea7adde09262b587cb6c9411849580ba3c4e30dcf99888bf5cf15481189"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die Steuerbefreiung betrifft nur begünstigten Arbeitslohn nach Erreichen der Regelaltersgrenze. Ob Alleinstehende in Steuerklasse I mit weniger als 7.000 Euro Monatsbrutto gegenüber dem bisherigen Tarif weniger Steuern zahlen, lässt sich ohne die bisherigen und geltenden Tarifvorschriften nicht feststellen.",
+            "law_passage_id": "bgbl-1-2025-361-p-6f7bfb8cb69b7f6f",
+            "law_quote": "insgesamt 24 000 Euro im Jahr, soweit die Einnahmen für vom Steuerpflichtigen ab dem Folgemonat nach\nErreichen der Regelaltersgrenze gemäß § 35 Satz 2 oder § 235 des Sechsten Buches Sozialgesetzbuch\nerbrachte Leistungen zufließen",
+            "criterion_quote": "Wer (als Single, Steuer­\nklasse I) weniger als 7.000 Euro im Monat brutto verdient,\nzahlt mit unserem Tarif weniger Steuern.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-58d49582b59d7ec0",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -65147,7 +65211,7 @@
     {
       "law_id": "bgbl-1-2025-362",
       "analysis_sha256": "dcf280e2c7f99f5c0261a97ff6620a3ed3defaec04d3906c623fc58aaf52ceae",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-03531967ebf84577",
@@ -65174,6 +65238,38 @@
       ],
       "omitted_count": 1363,
       "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-03531967ebf84577",
+          "disposition": "proposed_link",
+          "rationale": "Der Bund erstattet der Rentenversicherung Mehraufwendungen für zusätzliche Kindererziehungszeiten ab 2028 und zusätzliche Kindererziehungszuschläge ab 2027. Das entlastet die Beitragsfinanzierung bei diesen Mehrkosten; die übrigen Kindererziehungszeiten und die Grundrente sind nicht erfasst.",
+          "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "651660ef2c20f6f632cef207f8edbae9f203cad4d7fe477b55ff80be8fdd15a3"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259"
+            }
+          ],
+          "impact_id": "impact-0dbfe7c177a70f83",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.97,
+            "rationale": "Der Bund erstattet der Rentenversicherung Mehraufwendungen für zusätzliche Kindererziehungszeiten ab 2028 und zusätzliche Kindererziehungszuschläge ab 2027. Das entlastet die Beitragsfinanzierung bei diesen Mehrkosten; die übrigen Kindererziehungszeiten und die Grundrente sind nicht erfasst.",
+            "law_passage_id": "bgbl-1-2025-362-p-28ea3bb74cd90158",
+            "law_quote": "Der Bund erstattet der allgemeinen Rentenversicherung jährlich die Mehraufwendungen, die sich aufgrund\nder ab dem Jahr 2028 geltenden zusätzlichen Kindererziehungszeiten von sechs Monaten und der ab dem Jahr\n2027 geltenden zusätzlichen Zuschläge an persönlichen Entgeltpunkten für Kindererziehung für ein vor dem\n1. Januar 1992 geborenes Kind ergeben.",
+            "criterion_quote": "Dass die\nBeitragszahler*innen versicherungsfremde Leistungen\nwie z. B. die Anerkennung von Kinder­erziehungszeiten\n(bekannt als „Mütterrente“) und die Grundrente finanzieren, muss beendet werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-03531967ebf84577",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "linke-2025-ac-156bb9bc2f91f3cb",
           "disposition": "no_supported_link",
@@ -65360,6 +65456,38 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-43428bb564eb0dcb",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+          "disposition": "missing_context",
+          "rationale": "Für Beschäftigte nach Erreichen der Regelaltersgrenze wird § 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes unter Bedingungen ausgenommen. Ohne den Wortlaut der dortigen Befristungsregeln lässt sich nicht sicher bestimmen, ob und wann dadurch ein dritter Vertrag beim selben Arbeitgeber befristet sein kann.",
+          "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3eb15ee85a4afa185597e617f2541f97629518bf0cd820c598a588fbcbdad645"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Für Beschäftigte nach Erreichen der Regelaltersgrenze wird § 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes unter Bedingungen ausgenommen. Ohne den Wortlaut der dortigen Befristungsregeln lässt sich nicht sicher bestimmen, ob und wann dadurch ein dritter Vertrag beim selben Arbeitgeber befristet sein kann.",
+            "law_passage_id": "bgbl-1-2025-362-p-45fc882f0cb874d7",
+            "law_quote": "§ 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes gilt nicht für Arbeitnehmer, die die Regel­\naltersgrenze erreicht haben, wenn mit befristeten Arbeitsverhältnissen nach § 14 Absatz 2 Satz 1 des\nTeilzeit- und Befristungsgesetzes bei demselben Arbeitgeber",
+            "criterion_quote": "spätestens der\ndritte Arbeitsvertrag beim selben Arbeitgeber muss\nunbefristet sein.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -65692,7 +65820,7 @@
     {
       "law_id": "bgbl-1-2025-363",
       "analysis_sha256": "760f1e85297260aaf6fe54f6de7225ec8178f0b2da004cc2b3e99b9c2d07df7d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-03633ea7bde2b4b1",
@@ -66374,6 +66502,38 @@
           "verification": null
         },
         {
+          "criterion_id": "linke-2025-ac-e29e566095d96dd7",
+          "disposition": "proposed_link",
+          "rationale": "Bei doppelter Haushaltsführung können tatsächliche Unterkunftsaufwendungen angesetzt werden, grundsätzlich bis zu 1 000 Euro monatlich im Inland und 2 000 Euro im Ausland. Das betrifft nur diesen steuerlichen Anwendungsfall.",
+          "input_sha256": "323bdf958e13ce06004339468b703e90ef0ed0a473f85645365d616f1cbf0065",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "26628e3ce85f44b074bfef4a67e1455dfa1472c752f9cc0b5dc2d1cd00cff2e6"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "323bdf958e13ce06004339468b703e90ef0ed0a473f85645365d616f1cbf0065"
+            }
+          ],
+          "impact_id": "impact-a2e7097c4fb0f9bf",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Bei doppelter Haushaltsführung können tatsächliche Unterkunftsaufwendungen angesetzt werden, grundsätzlich bis zu 1 000 Euro monatlich im Inland und 2 000 Euro im Ausland. Das betrifft nur diesen steuerlichen Anwendungsfall.",
+            "law_passage_id": "bgbl-1-2025-363-p-ae9506af65ea3c41",
+            "law_quote": "Als Unterkunftskosten für eine doppelte Haushaltsführung können die tatsächlichen Aufwendungen für\ndie Nutzung der Unterkunft angesetzt werden, höchstens 1 000 Euro im Monat bei einer Unterkunft im\nInland und höchstens 2 000 Euro im Monat bei einer Unterkunft im Ausland",
+            "criterion_quote": "3. Tatsächliche Unterkunftskosten (anteilig).",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e29e566095d96dd7",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "linke-2025-ac-e5d5ccc21ff39ea5",
           "disposition": "no_supported_link",
           "rationale": "Die Regelung erweitert eine Steuerbefreiung für bestimmte wirtschaftliche Geschäftsbetriebe; eine Umwandlung der Gewerbesteuer in eine Gemeindewirtschaftsteuer sieht sie nicht vor.",
@@ -66807,7 +66967,7 @@
     {
       "law_id": "bgbl-1-2025-369",
       "analysis_sha256": "248b38dbe5761afb7c934a4a01a34685fc5733f0c62a4655435b6449504d75c8",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-0009fef45ff3df79",
@@ -66862,12 +67022,1401 @@
         "linke-2025-ac-fd3a87142523899e"
       ],
       "omitted_count": 1334,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-0009fef45ff3df79",
+          "disposition": "no_supported_link",
+          "rationale": "Die Zollbehörden erhalten Prüfungsbefugnisse zu Arbeitsbedingungen, doch die vorliegenden Passagen führen keine Arbeitszeitregelung für ausländische Pflegearbeitskräfte ein.",
+          "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Zollbehörden erhalten Prüfungsbefugnisse zu Arbeitsbedingungen, doch die vorliegenden Passagen führen keine Arbeitszeitregelung für ausländische Pflegearbeitskräfte ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-0009fef45ff3df79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Änderungen betreffen Schwarzarbeitsbekämpfung und Zollbefugnisse; eine Wahl der EZB-Führung durch das Europäische Parlament ist nicht belegt.",
+          "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Änderungen betreffen Schwarzarbeitsbekämpfung und Zollbefugnisse; eine Wahl der EZB-Führung durch das Europäische Parlament ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-094ef7ce3580a53e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften ändern keine Regeln zur Unternehmensmitbestimmung oder zur Einbeziehung ausländischer beziehungsweise europäischer Rechtsformen.",
+          "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Vorschriften ändern keine Regeln zur Unternehmensmitbestimmung oder zur Einbeziehung ausländischer beziehungsweise europäischer Rechtsformen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-094ef7ce3580a53e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0da78bc5dfb5d694",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Änderungen enthalten keine Regelung zur Besteuerung von Co-Investments nach Beteiligungsquoten.",
+          "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f02614c04cd2c24ea555b165cfef99351d4ed1b268c794d2a78f2d1a7bfa87bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Änderungen enthalten keine Regelung zur Besteuerung von Co-Investments nach Beteiligungsquoten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0da78bc5dfb5d694",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0ec74b88427d8197",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zur Schwarzarbeitsbekämpfung betreffen keine Ruhezeiten zwischen Schichten oder Ausnahmen davon.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen zur Schwarzarbeitsbekämpfung betreffen keine Ruhezeiten zwischen Schichten oder Ausnahmen davon.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0ec74b88427d8197",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-11883d04cabc9df4",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz erlaubt automatisierte Risikoanalysen zur Auswahl von Prüfungen; ob dabei die genannten äußeren Merkmale als Risikoindikatoren ausgeschlossen sind, ist anhand der verfügbaren Angaben nicht feststellbar.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.79,
+            "rationale": "Das Gesetz erlaubt automatisierte Risikoanalysen zur Auswahl von Prüfungen; ob dabei die genannten äußeren Merkmale als Risikoindikatoren ausgeschlossen sind, ist anhand der verfügbaren Angaben nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2025-369-p-698c0888723107ff",
+            "law_quote": "Abhängig vom Maß der Über- und Unterschreitung eines oder mehrerer Risikoparameter wird jedem Risikofall ein Punktwert zugeordnet (Risikobewertung).",
+            "criterion_quote": "Wir lehnen es ab, dass äußere Merkmale wie Hautfarbe, vermutete oder tatsächliche Religionszugehörigkeit, Sprache oder Herkunft der betroffenen Menschen als verdächtig eingestuft und als Entscheidungsgrundlage für polizeiliche Maßnahmen wie Personenkontrollen, Ermittlungen und Überwachungen werden.",
+            "caveats": [
+              "Die Risikoindikatoren und Risikoparameter sind in den verfügbaren Auszügen nicht vollständig enthalten."
+            ],
+            "criterion_id": "linke-2025-ac-11883d04cabc9df4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-139e6d233293eb94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur US-Liste der Staaten, die den internationalen Terrorismus unterstützen.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur US-Liste der Staaten, die den internationalen Terrorismus unterstützen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-139e6d233293eb94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-13e69e57400d1ffe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen sehen keine Finanzierung mobiler Arbeitsrechtsberatung in Muttersprachen vor.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen sehen keine Finanzierung mobiler Arbeitsrechtsberatung in Muttersprachen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-13e69e57400d1ffe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-1a90eec7693fa131",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen nicht die Voraussetzungen oder Verfahren zur Allgemeinverbindlicherklärung von Tarifverträgen.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen nicht die Voraussetzungen oder Verfahren zur Allgemeinverbindlicherklärung von Tarifverträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-1a90eec7693fa131",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-225d46f136ebfd98",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Umsetzung internationaler Arten- oder Naturschutzabkommen.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Umsetzung internationaler Arten- oder Naturschutzabkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-225d46f136ebfd98",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-249392afa812086b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen untersagen Arbeitgeberverbänden keine tariflosen Mitgliedschaften.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen untersagen Arbeitgeberverbänden keine tariflosen Mitgliedschaften.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-249392afa812086b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-253bb96e702eb099",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen weder die Allgemeinverbindlicherklärung von Tarifverträgen noch die Zustimmung der Arbeitgeberseite dazu.",
+          "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "301f89ba86d115ad6fa49d54b8ca93bc6106ed7487b23f2ae815ba0c7a968419"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen weder die Allgemeinverbindlicherklärung von Tarifverträgen noch die Zustimmung der Arbeitgeberseite dazu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-253bb96e702eb099",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge betreffen vor allem Prüf- und Ermittlungsbefugnisse gegen Schwarzarbeit; ob weitere, hier nicht enthaltene Vorschriften den Mindestlohn ändern, ist nicht feststellbar.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Auszüge betreffen vor allem Prüf- und Ermittlungsbefugnisse gegen Schwarzarbeit; ob weitere, hier nicht enthaltene Vorschriften den Mindestlohn ändern, ist nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d687570baef98f2",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keine branchenweiten Mindesthonorare oder entsprechende Pflichten für Auftraggeber*innen; wegen des unvollständigen Gesetzestexts lässt sich eine solche Regelung nicht abschließend ausschließen.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Auszüge belegen keine branchenweiten Mindesthonorare oder entsprechende Pflichten für Auftraggeber*innen; wegen des unvollständigen Gesetzestexts lässt sich eine solche Regelung nicht abschließend ausschließen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-2d687570baef98f2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3d738e621a8e17bb",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Mitnahme von Kindern im Verkehr; ob eine einschlägige Tarif- oder Beförderungsregelung im fehlenden Gesetzesteil enthalten ist, bleibt offen.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Mitnahme von Kindern im Verkehr; ob eine einschlägige Tarif- oder Beförderungsregelung im fehlenden Gesetzesteil enthalten ist, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-3d738e621a8e17bb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3e2ea1efc19f9e06",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keine Regelung zum 8. Mai oder zu gesetzlichen Feiertagen; der unvollständige Gesetzestext erlaubt keine abschließende Prüfung.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten keine Regelung zum 8. Mai oder zu gesetzlichen Feiertagen; der unvollständige Gesetzestext erlaubt keine abschließende Prüfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-3e2ea1efc19f9e06",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3e46c77569a94448",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Änderungen zeigen keine Fortgeltung von Tarifverträgen bei Auslagerungen oder Betriebsaufspaltungen; hierzu fehlt der vollständige Gesetzestext.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Änderungen zeigen keine Fortgeltung von Tarifverträgen bei Auslagerungen oder Betriebsaufspaltungen; hierzu fehlt der vollständige Gesetzestext.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-3e46c77569a94448",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-428e2d2553555d91",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge regeln keine finanzielle Unterstützung von Ländern des Globalen Südens; eine entsprechende Vorschrift lässt sich im unvollständigen Text nicht abschließend ausschließen.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge regeln keine finanzielle Unterstützung von Ländern des Globalen Südens; eine entsprechende Vorschrift lässt sich im unvollständigen Text nicht abschließend ausschließen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-428e2d2553555d91",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-49089edbe418ebad",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge betreffen unter anderem die Kontrolle von Sozialversicherungspflicht, belegen aber keine Pflicht von Auftraggeber*innen, Beiträge für Soloselbstständige zu zahlen; der vollständige Regelungszusammenhang fehlt.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die Auszüge betreffen unter anderem die Kontrolle von Sozialversicherungspflicht, belegen aber keine Pflicht von Auftraggeber*innen, Beiträge für Soloselbstständige zu zahlen; der vollständige Regelungszusammenhang fehlt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-49089edbe418ebad",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+          "disposition": "missing_context",
+          "rationale": "Eine Begrenzung befristeter Arbeitsverträge auf höchstens zwei Verträge ist in den Auszügen nicht enthalten; der übrige Gesetzestext liegt nicht vollständig vor.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Eine Begrenzung befristeter Arbeitsverträge auf höchstens zwei Verträge ist in den Auszügen nicht enthalten; der übrige Gesetzestext liegt nicht vollständig vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-57b6f7bef71e7660",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keine Regelung zu Arbeitszeit, Urlaub oder Sozialversicherungsschutz ausländischer Pflegearbeitskräfte; der fehlende Gesetzestext verhindert eine abschließende Prüfung.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Auszüge enthalten keine Regelung zu Arbeitszeit, Urlaub oder Sozialversicherungsschutz ausländischer Pflegearbeitskräfte; der fehlende Gesetzestext verhindert eine abschließende Prüfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-57b6f7bef71e7660",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-626eca97144e6fe4",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Vorschriften regeln keinen steuerfinanzierten Inflationsausgleich; eine entsprechende Regelung ist anhand des unvollständigen Texts nicht abschließend auszuschließen.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften regeln keinen steuerfinanzierten Inflationsausgleich; eine entsprechende Regelung ist anhand des unvollständigen Texts nicht abschließend auszuschließen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-626eca97144e6fe4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-64233d2c78bee8b4",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge zeigen keine Tarifbindung als Voraussetzung öffentlicher Aufträge; der unvollständige Gesetzestext lässt keine abschließende Aussage zu möglichen weiteren Vergaberegeln zu.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Auszüge zeigen keine Tarifbindung als Voraussetzung öffentlicher Aufträge; der unvollständige Gesetzestext lässt keine abschließende Aussage zu möglichen weiteren Vergaberegeln zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-64233d2c78bee8b4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-6d8654827e4619d8",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keine Einstufung plattformorganisierter Arbeit als Beschäftigungsverhältnis; der fehlende Regelungstext lässt sich nicht auf eine solche Vermutungsregel prüfen.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Auszüge enthalten keine Einstufung plattformorganisierter Arbeit als Beschäftigungsverhältnis; der fehlende Regelungstext lässt sich nicht auf eine solche Vermutungsregel prüfen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-6d8654827e4619d8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-757d19913db7a3cb",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge betreffen Schwarzarbeitskontrollen und einzelne Änderungen zum Arbeitnehmerüberlassungsrecht, enthalten aber kein Verbot des Einsatzes von Leiharbeit bei Streiks; der vollständige Text fehlt.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge betreffen Schwarzarbeitskontrollen und einzelne Änderungen zum Arbeitnehmerüberlassungsrecht, enthalten aber kein Verbot des Einsatzes von Leiharbeit bei Streiks; der vollständige Text fehlt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-757d19913db7a3cb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-8114d8da47fba191",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keine Regelung zur Gemeindewirtschaftsteuer oder zur Einbeziehung Selbstständiger; der unvollständige Gesetzestext erlaubt keine abschließende Prüfung.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge enthalten keine Regelung zur Gemeindewirtschaftsteuer oder zur Einbeziehung Selbstständiger; der unvollständige Gesetzestext erlaubt keine abschließende Prüfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-8114d8da47fba191",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-848d3b68e9aec286",
+          "disposition": "missing_context",
+          "rationale": "Eine Regelung zur gleichen Bezahlung unabhängig von geschlechtlicher Identität ist in den Auszügen nicht enthalten; der übrige Gesetzestext ist nicht vorgelegt.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Regelung zur gleichen Bezahlung unabhängig von geschlechtlicher Identität ist in den Auszügen nicht enthalten; der übrige Gesetzestext ist nicht vorgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-848d3b68e9aec286",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-88339239fd873cdb",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge stärken Kontrollen und beziehen Verstöße gegen Beitragspflichten in Prüfungen ein, führen aber keine volle Sozialversicherung ab dem ersten Euro ein; die vollständigen Regelungen zu Ausnahmen und Beiträgen fehlen.",
+          "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5a92196fee894eeaa81c38c2b016086a44a2fdc8efe7f47c749c2b957119daa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die Auszüge stärken Kontrollen und beziehen Verstöße gegen Beitragspflichten in Prüfungen ein, führen aber keine volle Sozialversicherung ab dem ersten Euro ein; die vollständigen Regelungen zu Ausnahmen und Beiträgen fehlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist als teilweise vorgelegt gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-88339239fd873cdb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-885ae8709fa0f9c2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Bekämpfung von Schwarzarbeit; gezielte Sanktionen zur Unterstützung einer Verhandlungsoffensive sind nicht belegt.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Bekämpfung von Schwarzarbeit; gezielte Sanktionen zur Unterstützung einer Verhandlungsoffensive sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-885ae8709fa0f9c2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-94aba934d2564a95",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen Schwarzarbeitskontrollen und Datenverarbeitung, nicht Steuersätze für Kapital- oder Arbeitseinkommen.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften betreffen Schwarzarbeitskontrollen und Datenverarbeitung, nicht Steuersätze für Kapital- oder Arbeitseinkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-94aba934d2564a95",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-97a458c62ef1d302",
+          "disposition": "no_supported_link",
+          "rationale": "Kontrollen gegen illegale Beschäftigung sind keine staatlichen Beschäftigungsmaßnahmen zur Bekämpfung der Erwerbslosigkeit.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Kontrollen gegen illegale Beschäftigung sind keine staatlichen Beschäftigungsmaßnahmen zur Bekämpfung der Erwerbslosigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-97a458c62ef1d302",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9d62789a1416e753",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln keine Vertretung von Naturbelangen vor Gericht.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge regeln keine Vertretung von Naturbelangen vor Gericht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9d62789a1416e753",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a5c412f2393551e3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zu ausländischen Beschäftigten betreffen Kontrollen und Beschäftigungsbedingungen, nicht eine Unabhängigkeit des Aufenthaltsrechts vom Arbeitsvertrag.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften zu ausländischen Beschäftigten betreffen Kontrollen und Beschäftigungsbedingungen, nicht eine Unabhängigkeit des Aufenthaltsrechts vom Arbeitsvertrag.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a5c412f2393551e3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-abb8d6fac15d6f00",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge belegen keine Veröffentlichung von Verstößen an der Ladentür eines Betriebs.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge belegen keine Veröffentlichung von Verstößen an der Ladentür eines Betriebs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-abb8d6fac15d6f00",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b2fb4d9d1b2c8d36",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung, die bei Verdacht auf Verstöße gegen das Arbeitnehmerüberlassungsgesetz die Beweislast den Unternehmen zuweist.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung, die bei Verdacht auf Verstöße gegen das Arbeitnehmerüberlassungsgesetz die Beweislast den Unternehmen zuweist.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b2fb4d9d1b2c8d36",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b49a46ceb2d8aa35",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Änderungen führen keine Tariftreuebedingung für öffentliche Aufträge ein.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Änderungen führen keine Tariftreuebedingung für öffentliche Aufträge ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b49a46ceb2d8aa35",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-baf2fa9930ab65b4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge sehen keine Kredite für Beschäftigte zur Übernahme und genossenschaftlichen Weiterführung eines Betriebs vor.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge sehen keine Kredite für Beschäftigte zur Übernahme und genossenschaftlichen Weiterführung eines Betriebs vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-baf2fa9930ab65b4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c17385300421e974",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zu Schwarzarbeit und illegaler Beschäftigung enthalten keine Regelung des Sozialversicherungsschutzes für ausländische Pflegearbeitskräfte.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Vorschriften zu Schwarzarbeit und illegaler Beschäftigung enthalten keine Regelung des Sozialversicherungsschutzes für ausländische Pflegearbeitskräfte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-c17385300421e974",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c5946ae7ae138fa5",
+          "disposition": "no_supported_link",
+          "rationale": "Akademische Kooperationen oder zivile wissenschaftliche Zusammenarbeit sind in den Auszügen nicht geregelt.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Akademische Kooperationen oder zivile wissenschaftliche Zusammenarbeit sind in den Auszügen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-c5946ae7ae138fa5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c6726e137d669091",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge räumen Gewerkschaften keinen betrieblichen oder digitalen Zugang ein.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge räumen Gewerkschaften keinen betrieblichen oder digitalen Zugang ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-c6726e137d669091",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e2985753c5e1f6f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln keine Datenspeicherung bei Online-Ausweisvorgängen.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge regeln keine Datenspeicherung bei Online-Ausweisvorgängen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e2985753c5e1f6f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e362061c59585a04",
+          "disposition": "no_supported_link",
+          "rationale": "Das Risikomanagement zielt auf Schwarzarbeit und illegale Beschäftigung; mehr Prüfungen bei Superreichen sind nicht belegt.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Risikomanagement zielt auf Schwarzarbeit und illegale Beschäftigung; mehr Prüfungen bei Superreichen sind nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-369-p-e0f38aace01302c8",
+            "law_quote": "Ziel des zentralen Risikomanagements ist die systematische Ermittlung von Risiken für das Auftreten von Schwarzarbeit und illegaler Beschäftigung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e362061c59585a04",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e3f650ec741c0594",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge betreffen zwar Sanktionen im Bereich Schwarzarbeit, zeigen aber nicht, ob Strafen für Unternehmen gegenüber dem bisherigen Stand erhöht wurden.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die Auszüge betreffen zwar Sanktionen im Bereich Schwarzarbeit, zeigen aber nicht, ob Strafen für Unternehmen gegenüber dem bisherigen Stand erhöht wurden.",
+            "law_passage_id": "bgbl-1-2025-369-p-59b4a1287176513d",
+            "law_quote": "entgegen § 5b Absatz 1 Satz 1 ihre Arbeitskraft anbietet oder",
+            "criterion_quote": null,
+            "caveats": [
+              "Der bereitgestellte Gesetzestext ist als teilweise gekennzeichnet; die einschlägigen Straf- oder Bußgeldänderungen und der Vergleich zum bisherigen Recht fehlen."
+            ],
+            "criterion_id": "linke-2025-ac-e3f650ec741c0594",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ed068178ac9dc83d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zu beruflichen Auszeiten oder Sabbatjahren.",
+          "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "07b67381c9c34e6050e2ae6cac5e21e264c1a12e67911d2e758508c394a7c05e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung zu beruflichen Auszeiten oder Sabbatjahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ed068178ac9dc83d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f103b095073fddcf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz modernisiert die Schwarzarbeitsbekämpfung; rechtliche Voraussetzungen für Mietendeckel enthält der bereitgestellte Text nicht.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz modernisiert die Schwarzarbeitsbekämpfung; rechtliche Voraussetzungen für Mietendeckel enthält der bereitgestellte Text nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der Bund muss dafür sorgen, dass Länder und\nKommunen rechtssicher Mietendeckel für Klein­gewerbe,\nHandwerk, kulturelle Einrichtungen sowie für soziale und\ngemeinnützige Träger einführen können.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f103b095073fddcf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Prüfungen und Datenverarbeitung gegen Schwarzarbeit, nicht eine Karenzzeit für ehemalige Regierungsmitglieder.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Prüfungen und Datenverarbeitung gegen Schwarzarbeit, nicht eine Karenzzeit für ehemalige Regierungsmitglieder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Bundesminister*innen und parlamentarische Staats­\n\nsekretär*innen müssen nach ihrem Ausscheiden aus\ndem Amt mindestens drei Jahre bzw. für die Dauer des\nzeitlichen Anspruchs auf Übergangsgeld warten, bevor\nsie in Unternehmen wechseln, mit deren wirtschaftlichen Interessen sie zuvor politisch befasst waren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f6373bcb6d10ea8d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft in den vorgelegten Passagen keinen Mindestlohn oder eine Regulierung der Beschäftigung ausländischer Pflegekräfte.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz schafft in den vorgelegten Passagen keinen Mindestlohn oder eine Regulierung der Beschäftigung ausländischer Pflegekräfte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Keine Ausbeutung ausländischer Arbeitskräfte in der\n\nPflege! Die „24-Stunden-Betreuung“ ist eine Zumutung\nfür alle Beteiligten. Die prekäre Lage dieser Menschen in\nihren Herkunftsländern wird für eine Beschäftigung\nunter inakzeptablen Bedingungen ausgenutzt. Es\nbraucht endlich eine Regulierung dieser Beschäf­\ntigungs­verhältnisse mit Sozial­versicherungs­schutz,\ngesetzlicher Arbeitszeit, Urlaub und Mindestlohn.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f6373bcb6d10ea8d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f6670c1d8f735a5b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen Zollprüfungen und Datenübermittlungen regeln keine wöchentliche Beratungszeit für Beschäftigte.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehenen Zollprüfungen und Datenübermittlungen regeln keine wöchentliche Beratungszeit für Beschäftigte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Beschäftigte sollten\nwöchentliche Beratungszeit bekommen, um sich über\ndie Arbeitsbedingungen zu verständigen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f6670c1d8f735a5b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fab3012ed972e9dd",
+          "disposition": "no_supported_link",
+          "rationale": "Der bereitgestellte Gesetzestext betrifft Schwarzarbeitsbekämpfung und enthält keine Regelung zur Unterstützung des ICC.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der bereitgestellte Gesetzestext betrifft Schwarzarbeitsbekämpfung und enthält keine Regelung zur Unterstützung des ICC.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Strafgerichtshofs (ICC) zur juristischen Aufarbeitung\nund Verfolgung der Verbrechen im Kontext des Nahostkriegs seinen Verpflichtungen als Vertragspartner\ngemäß unterstützen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fab3012ed972e9dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fd3a87142523899e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten kein Rückkehrrecht nach einer Beschäftigtenauszeit.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten kein Rückkehrrecht nach einer Beschäftigtenauszeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "verbunden mit einem\nRückkehrrecht.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fd3a87142523899e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-370",
       "analysis_sha256": "670cae74e10f0aed30b670074f01c9e2eb25cdc1522274d2b1c1977e2a72ed89",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-053582a97ba978bd",
@@ -66903,7 +68452,847 @@
         "linke-2025-ac-ffe4482c70ff75ff"
       ],
       "omitted_count": 1353,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-053582a97ba978bd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Wehrdienst und Soldatenversorgung, nicht steuerfreie Begünstigungen für eine frei gewählte Person.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Wehrdienst und Soldatenversorgung, nicht steuerfreie Begünstigungen für eine frei gewählte Person.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-053582a97ba978bd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Besteuerung nach Staatsangehörigkeit, Wohnsitz oder Einkunftsquelle.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Besteuerung nach Staatsangehörigkeit, Wohnsitz oder Einkunftsquelle.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0f7c96bb556addeb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln keine Sprachrechte an Ämtern oder vor Gericht für Angehörige von Minderheiten.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln keine Sprachrechte an Ämtern oder vor Gericht für Angehörige von Minderheiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0f7c96bb556addeb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-1753f5e1b217fc3d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Hochschulen oder Zivilklauseln; seine militärischen Bestimmungen betreffen Wehrdienst und Personal.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Hochschulen oder Zivilklauseln; seine militärischen Bestimmungen betreffen Wehrdienst und Personal.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-1753f5e1b217fc3d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-197b1a28e1db4520",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder den öffentlich-rechtlichen Rundfunk noch dessen Angebot an gesellschaftspolitischen Informationen.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder den öffentlich-rechtlichen Rundfunk noch dessen Angebot an gesellschaftspolitischen Informationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-197b1a28e1db4520",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-20f743e14fcec743",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Wehrdiensterfassung, Dienstzeiten und Personalaufwuchs, nicht den Abzug aus Auslandseinsätzen.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Wehrdiensterfassung, Dienstzeiten und Personalaufwuchs, nicht den Abzug aus Auslandseinsätzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-20f743e14fcec743",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderung des gesetzlichen Mindestlohns oder dessen Höhe bis 2026.",
+          "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "abcd6821cd08d9e74556f9498883e46ee80167ca91a3834d5f17c9c417d38aa5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderung des gesetzlichen Mindestlohns oder dessen Höhe bis 2026.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2eff0bb6801ec7dc",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug erwähnt Wehrpflichtige und Bereitschaftserklärungen, zeigt aber nicht vollständig, welche Pflichten und Einberufungen das Gesetz vorsieht; daraus lässt sich eine Wiedereinführung der Wehrpflicht nicht sicher beurteilen.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Der Auszug erwähnt Wehrpflichtige und Bereitschaftserklärungen, zeigt aber nicht vollständig, welche Pflichten und Einberufungen das Gesetz vorsieht; daraus lässt sich eine Wiedereinführung der Wehrpflicht nicht sicher beurteilen.",
+            "law_passage_id": "bgbl-1-2025-370-p-03199313917a25f7",
+            "law_quote": "Kommt der Wehrpflichtige der Aufforderung zur Abgabe einer Bereitschaftserklärung nach Absatz 1 Satz 1 nicht innerhalb eines Monats nach, so erhält er eine erneute Aufforderung mit einer Fristsetzung, innerhalb derer die Bereitschaftserklärung abzugeben ist.",
+            "criterion_quote": "keine Wiedereinführung der Wehrpflicht,",
+            "caveats": [
+              "Der übermittelte Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "linke-2025-ac-2eff0bb6801ec7dc",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Wehrdienst, nicht die Befristung von Arbeitsverträgen.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln Wehrdienst, nicht die Befristung von Arbeitsverträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "spätestens der\ndritte Arbeitsvertrag beim selben Arbeitgeber muss\nunbefristet sein.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-58d49582b59d7ec0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält in den vorgelegten Auszügen keine Regelung zur Einkommensteuer oder zu Einkommenstarifen.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält in den vorgelegten Auszügen keine Regelung zur Einkommensteuer oder zu Einkommenstarifen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wer (als Single, Steuer­\nklasse I) weniger als 7.000 Euro im Monat brutto verdient,\nzahlt mit unserem Tarif weniger Steuern.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-58d49582b59d7ec0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-7083bd919ca96a0d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften führen kein Klimageld und keine entsprechende Direktzahlung ein.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften führen kein Klimageld und keine entsprechende Direktzahlung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "rückwirkend zum 1. Januar 2025\n\nein soziales Klimageld von 320 Euro jährlich pro Person\nals Direktzahlung einführen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-7083bd919ca96a0d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-71b32baad986b932",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern Artikel 3 des Grundgesetzes nicht.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern Artikel 3 des Grundgesetzes nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In Artikel 3 des\nGrundgesetzes soll eine Schutz- und Förderklausel für\nvon rassistischer Diskriminierung Betroffene eingefügt\nwerden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-71b32baad986b932",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-7e8e86de742a85b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keinen Kinderzuschlag.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keinen Kinderzuschlag.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kinderzuschlag für Kinder, die in Armut leben (alters­\ngestaffelt bis zu maximal 379 Euro monatlich).",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-7e8e86de742a85b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-92a316040b08506c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Abzug von US-Atomwaffen aus Deutschland.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Abzug von US-Atomwaffen aus Deutschland.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Alle US-Atomwaffen müssen aus Deutschland\nabgezogen werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-92a316040b08506c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9c6443c2dd74da10",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keine Steuergutschrift für berufstätige Alleinerziehende.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen keine Steuergutschrift für berufstätige Alleinerziehende.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Steuergutschrift, die mindestens der maximalen\nWirkung des heutigen Entlastungsbetrags von\n2.028 Euro im Jahr entspricht",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9c6443c2dd74da10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9f55cb386735c1b7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten kein Verbot von Qualzuchten.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten kein Verbot von Qualzuchten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Qualzuchten und medizinisch nicht notwendige Eingriffe\n\nin die körperliche Unversehrtheit wollen wir verbieten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9f55cb386735c1b7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a0c2ccd846b55a23",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln weder Pflegevollversicherung noch Heimplatzkosten.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln weder Pflegevollversicherung noch Heimplatzkosten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Menschen mit\nPflegebedarf und ihre Familien zahlen häufig mehr als\n3.000 Euro im Monat für einen Heimplatz – das würde\ndann entfallen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a0c2ccd846b55a23",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a5967f8c90a17cc8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten kein Verbot bestimmter Flüge.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten kein Verbot bestimmter Flüge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Flüge, die kürzer sind als 500 Kilometer oder fünf\n\nZugstunden, wollen wir verbieten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a5967f8c90a17cc8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-afcc9eef0ca588cf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern das Grundgesetz nicht zugunsten anerkannter Minderheiten.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern das Grundgesetz nicht zugunsten anerkannter Minderheiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir\nwollen ihre Rechte und Partizipationsmöglichkeiten stärken\nund im Grundgesetz verankern.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-afcc9eef0ca588cf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b8acb2974334b98a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keinen Urlaubsanspruch für Pflegebedürftige oder Angehörige.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen keinen Urlaubsanspruch für Pflegebedürftige oder Angehörige.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Auch Pflegebedürftige und ihre\nAngehörigen sollen einen Anspruch auf Urlaub haben.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b8acb2974334b98a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c2198057066b37ad",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln weder die Einstellung von Lehrkräften noch die berufliche Bildung in diesem Umfang.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln weder die Einstellung von Lehrkräften noch die berufliche Bildung in diesem Umfang.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bis 2030\nmüssen 160 000 zusätzliche Lehrkräfte in der beruflichen\nBildung eingestellt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-c2198057066b37ad",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d21d9383c71ffe5f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern den gesetzlichen Mindestlohn nicht.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern den gesetzlichen Mindestlohn nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der gesetzliche Mindestlohn muss hoch auf mindestens 15 Euro\n(spätestens 2026 auf 16 Euro)",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d21d9383c71ffe5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d9939678dac0c237",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen keine Wohngeldanträge oder deren Entscheidungsfristen.",
+          "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c7f10f984e2ab5ef818fd5db6beb13bbb7f646f6722db305be5b931afa4b68c3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen keine Wohngeldanträge oder deren Entscheidungsfristen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Anträge müssen spätestens drei\nMonate nach Antragstellung beschieden werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d9939678dac0c237",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-dd5806faaeccc758",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge regeln Wehrdienst und enthalten keine Bestimmung zu Besetzungen oder dauerhaftem Wohnrecht.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge regeln Wehrdienst und enthalten keine Bestimmung zu Besetzungen oder dauerhaftem Wohnrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Besetzung von Wohnraum, der seit mindestens einem Jahr leer steht, muss zu einem dauerhaften Wohnrecht führen",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-dd5806faaeccc758",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-de00f40814d2d302",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Strafvorschrift zu Heizkostenabrechnungen.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Strafvorschrift zu Heizkostenabrechnungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das wollen wir unter Strafe stellen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-de00f40814d2d302",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-de09fa359d584920",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge betreffen Wehrdienstregelungen; ein Ende der nuklearen Teilhabe oder ein Abzug von US-Atomwaffen ist nicht geregelt.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge betreffen Wehrdienstregelungen; ein Ende der nuklearen Teilhabe oder ein Abzug von US-Atomwaffen ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen die nukleare Teilhabe der Bundesrepublik beenden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-de09fa359d584920",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e2985753c5e1f6f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die genannten Datenverarbeitungsregeln betreffen Wehrdienst- und Dienstleistungsüberwachung, nicht Online-Ausweisvorgänge.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die genannten Datenverarbeitungsregeln betreffen Wehrdienst- und Dienstleistungsüberwachung, nicht Online-Ausweisvorgänge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bei Ausweisvorgängen im Internet dürfen keine Daten gespeichert werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e2985753c5e1f6f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ecf5f7e75e1b281a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Änderung des Wahlrechts für Menschen ohne deutsche Staatsangehörigkeit.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Änderung des Wahlrechts für Menschen ohne deutsche Staatsangehörigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Linke tritt für ein Wahlrecht auf allen Ebenen auch für Menschen ohne deutsche Staatsangehörigkeit ein",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ecf5f7e75e1b281a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ed068178ac9dc83d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge schaffen keine berufliche Auszeit oder ein Sabbatjahr für Beschäftigte.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge schaffen keine berufliche Auszeit oder ein Sabbatjahr für Beschäftigte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "zweimal in ihrem Berufsleben die Möglichkeit haben, für ein Jahr auszusteigen",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ed068178ac9dc83d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Karenzzeit für ehemalige Regierungsmitglieder.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Karenzzeit für ehemalige Regierungsmitglieder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mindestens drei Jahre bzw. für die Dauer des zeitlichen Anspruchs auf Übergangsgeld warten",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ffe4482c70ff75ff",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge ändern den Kündigungsschutz von Eltern nicht.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge ändern den Kündigungsschutz von Eltern nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "den Kündigungsschutz für Eltern bis zur Vollendung des sechsten Lebensjahres des Kindes ausweiten",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ffe4482c70ff75ff",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-371",
@@ -73578,45 +75967,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3789,
+    "calls": 3852,
     "cache_hits": 39,
-    "subdivision_cache_hits": 6,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.499096,
-    "reported_cost_calls": 3572,
+    "reported_cost_usd": 21.692645,
+    "reported_cost_calls": 3635,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 1.327248,
     "unknown_cost_calls": 217,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 22.826344,
-    "prompt_tokens": 38214460,
-    "completion_tokens": 5755956,
+    "budget_exposure_usd": 23.019892,
+    "prompt_tokens": 39045417,
+    "completion_tokens": 5905245,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 135,
-        "reported_cost_usd": 3.126806249999999,
+        "calls": 139,
+        "reported_cost_usd": 3.2237294999999992,
         "unknown_cost_reserved_usd": 8.881784197001252e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 45,
-        "reported_cost_usd": 0.6374437500000001,
+        "calls": 47,
+        "reported_cost_usd": 0.6539447500000001,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 6.938893903907228e-18
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 712,
-        "reported_cost_usd": 0.8503760550000005,
+        "calls": 769,
+        "reported_cost_usd": 0.9305005175000004,
         "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 8.673617379884035e-19
+        "pending_reserved_usd": 7.806255641895632e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

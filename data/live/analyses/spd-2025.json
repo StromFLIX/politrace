@@ -47470,7 +47470,7 @@
     {
       "law_id": "bgbl-1-2025-362",
       "analysis_sha256": "549a726f3ab253d436894e38edf5689ff4edc1326caa4a8d81760a90975597e0",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-1549de3fffc2b369",
@@ -47492,6 +47492,38 @@
       ],
       "omitted_count": 771,
       "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+          "disposition": "no_supported_link",
+          "rationale": "Für 2029 ist ein Bericht über Beitragssatz und Bundeszuschuss mit einer Prüfung des Mindestsicherungsniveaus und seiner Mehrausgaben vorgeschrieben. Eine dokumentierte Prüfung der Auswirkungen und weiterer Reformschritte liegt in den vorgelegten Texten nicht vor.",
+          "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9108d80141235a090892d61b2bec673a0474fc03b25157beda8ffbc29b1ac339"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Für 2029 ist ein Bericht über Beitragssatz und Bundeszuschuss mit einer Prüfung des Mindestsicherungsniveaus und seiner Mehrausgaben vorgeschrieben. Eine dokumentierte Prüfung der Auswirkungen und weiterer Reformschritte liegt in den vorgelegten Texten nicht vor.",
+            "law_passage_id": "bgbl-1-2025-362-p-ff00af94f04d309c",
+            "law_quote": "Die Bundesregierung hat den gesetzgebenden Körperschaften im Jahr 2029 einen Bericht\nüber die tatsächliche Entwicklung des Beitragssatzes und des Bundeszuschusses vorzulegen, um\ngegebenenfalls weitere Maßnahmen zu ergreifen. Ziel dieses Berichts ist es, das Mindestsicherungsniveau\nvon 48 Prozent sowie die daraus entstehenden Mehrausgaben zu prüfen.",
+            "criterion_quote": "Die Auswirkungen dieser Neuregelung und weitere Reformschritte werden wir zu\ngegebener Zeit prüfen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
           "disposition": "no_supported_link",
@@ -47817,13 +47849,109 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cbb15242b9838f60",
+          "disposition": "missing_context",
+          "rationale": "Ein bestimmter Kindererziehungszuschlag bleibt 2027 bei der Berechnung einer nach § 18b Absatz 4 anzurechnenden Rentenleistung außer Betracht. Ohne die verwiesene Regelung ist nicht hinreichend belegt, wie sich dies auf die Einkommensanrechnung bei Hinterbliebenenrenten auswirkt.",
+          "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5d2535ec3ba53cd5a3bae6e33fdb0ce07ac0d303cc32b00b53a17350c44bd98d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Ein bestimmter Kindererziehungszuschlag bleibt 2027 bei der Berechnung einer nach § 18b Absatz 4 anzurechnenden Rentenleistung außer Betracht. Ohne die verwiesene Regelung ist nicht hinreichend belegt, wie sich dies auf die Einkommensanrechnung bei Hinterbliebenenrenten auswirkt.",
+            "law_passage_id": "bgbl-1-2025-362-p-1bb468f3c730b9dd",
+            "law_quote": "Der für den Zeitraum vom 1. Januar 2027 bis zum 31. Dezember 2027 gewährte Zuschlag nach § 307d\nAbsatz 1 Satz 4, Absatz 1a Satz 3, Absatz 1b, 1c und 5 Satz 2 des Sechsten Buches ist bei der Bestimmung der\nHöhe der nach § 18b Absatz 4 anzurechnenden Rentenleistung bis zum 31. Dezember 2027 unberücksichtigt zu\nlassen.",
+            "criterion_quote": "Die Hinterbliebenenrenten wollen wir verbessern, indem wir die Anrechnung von Einkommen\nanpassen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cbb15242b9838f60",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "missing_context",
+          "rationale": "Für bestimmte Rentenansprüche wird ab 2027 ein Kindererziehungszuschlag berücksichtigt. Die Vorschrift belegt jedoch nicht, dass die Verwaltung den Anspruch eigenständig ermittelt und die Leistung ohne Antrag einleitet; für andere Zuschlagsfälle ist ausdrücklich ein Antrag vorgesehen.",
+          "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d5e7dfc82b4719a7c681467d2c3c5605e617c868cf5f00d02d8deb6392395d8e"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Für bestimmte Rentenansprüche wird ab 2027 ein Kindererziehungszuschlag berücksichtigt. Die Vorschrift belegt jedoch nicht, dass die Verwaltung den Anspruch eigenständig ermittelt und die Leistung ohne Antrag einleitet; für andere Zuschlagsfälle ist ausdrücklich ein Antrag vorgesehen.",
+            "law_passage_id": "bgbl-1-2025-362-p-09d8caeb862da313",
+            "law_quote": "Bestand am 30. Juni 2014 Anspruch auf eine Rente, wird ab dem 1. Januar 2027 ein Zuschlag von\n0,5 persönlichen Entgeltpunkten für ein vor dem 1. Januar 1992 geborenes Kind berücksichtigt, wenn",
+            "criterion_quote": "Die Verwaltung prüft\neigenständig, welche Ansprüche bestehen, und leitet diese ohne zusätzliche Anträge ein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ffb80d98570645ea",
+          "disposition": "missing_context",
+          "rationale": "Für Arbeitnehmer nach Erreichen der Regelaltersgrenze gilt § 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes unter weiteren Voraussetzungen nicht. Ohne den Wortlaut dieser Vorschrift und der weiterhin maßgeblichen Befristungsregeln lässt sich die Möglichkeit eines neuen befristeten Vertrags beim selben Arbeitgeber nicht sicher beurteilen.",
+          "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b2f0e2e306989e401148c148935aa6951c48fffac3c4e84cb7c12c92074483d8"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c36200a69c32d01966b0acb0424e65b44b68c157916becdbbfa6d56b7a4dc259"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Für Arbeitnehmer nach Erreichen der Regelaltersgrenze gilt § 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes unter weiteren Voraussetzungen nicht. Ohne den Wortlaut dieser Vorschrift und der weiterhin maßgeblichen Befristungsregeln lässt sich die Möglichkeit eines neuen befristeten Vertrags beim selben Arbeitgeber nicht sicher beurteilen.",
+            "law_passage_id": "bgbl-1-2025-362-p-45fc882f0cb874d7",
+            "law_quote": "§ 14 Absatz 2 Satz 2 des Teilzeit- und Befristungsgesetzes gilt nicht für Arbeitnehmer, die die Regel­\naltersgrenze erreicht haben, wenn mit befristeten Arbeitsverhältnissen nach § 14 Absatz 2 Satz 1 des\nTeilzeit- und Befristungsgesetzes bei demselben Arbeitgeber",
+            "criterion_quote": "Darum schaffen wir das Vorbeschäftigungsverbot ab, es kann also ein\nneuer befristeter Arbeitsvertrag mit demselben Arbeitgeber geschlossen werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ffb80d98570645ea",
+            "disposition": "missing_context"
+          },
+          "verification": null
         }
       ]
     },
     {
       "law_id": "bgbl-1-2025-363",
       "analysis_sha256": "ff27fef8701ef1f917271b71da2e82e31b36f9082f76337acbd5b648949cc10d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-220967d135c5c562",
@@ -47847,6 +47975,38 @@
       ],
       "omitted_count": 769,
       "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-220967d135c5c562",
+          "disposition": "proposed_link",
+          "rationale": "Gewerkschaftsbeiträge werden zusätzlich zum Werbungskosten-Pauschbetrag berücksichtigt. Das kann steuerpflichtige Gering- wie Normalverdienende mit solchen Beiträgen entlasten, ist aber auf diese Gruppe beschränkt.",
+          "input_sha256": "323bdf958e13ce06004339468b703e90ef0ed0a473f85645365d616f1cbf0065",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "26628e3ce85f44b074bfef4a67e1455dfa1472c752f9cc0b5dc2d1cd00cff2e6"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "323bdf958e13ce06004339468b703e90ef0ed0a473f85645365d616f1cbf0065"
+            }
+          ],
+          "impact_id": "impact-e2443368078e729a",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.82,
+            "rationale": "Gewerkschaftsbeiträge werden zusätzlich zum Werbungskosten-Pauschbetrag berücksichtigt. Das kann steuerpflichtige Gering- wie Normalverdienende mit solchen Beiträgen entlasten, ist aber auf diese Gruppe beschränkt.",
+            "law_passage_id": "bgbl-1-2025-363-p-952c62a7542125c0",
+            "law_quote": "Beitragszahlungen an Gewerkschaften als Werbungskosten im Sinne des § 9 Absatz 1 Satz 3 Nummer 3\nwerden neben den Pauschbeträgen im Sinne des Satzes 1 berücksichtigt.",
+            "criterion_quote": "Entlastungen für Gering- und Normalverdiener bei der Einkommensteuer,",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-220967d135c5c562",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "spd-2025-ac-227efae02aedbafb",
           "disposition": "missing_context",
@@ -48700,7 +48860,7 @@
     {
       "law_id": "bgbl-1-2025-369",
       "analysis_sha256": "bcd6b9f75165594a9b626f6ab414f988c71e9951f256068325db8de27d7790ef",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -48734,7 +48894,791 @@
         "spd-2025-ac-fc039e75480fcc10"
       ],
       "omitted_count": 758,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen elektronischen Prüfungen und Datenübermittlungen begründen keine Genehmigungsfiktion für Anträge.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehenen elektronischen Prüfungen und Datenübermittlungen begründen keine Genehmigungsfiktion für Anträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir führen eine **Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind**, wenn die\nBehörde nicht innerhalb einer gesetzten Frist reagiert. Das gibt Bau- und Investitionsprojekten mehr\nPlanungssicherheit.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Schwarzarbeitsprüfungen und deren Digitalisierung, nicht Verfahren oder Kapazitäten des BAMF und der Verwaltungsgerichte.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Schwarzarbeitsprüfungen und deren Digitalisierung, nicht Verfahren oder Kapazitäten des BAMF und der Verwaltungsgerichte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir setzen auf eine deutliche **Beschleunigung der Asylverfahren – sowohl beim Bundesamt für**\n**Migration und Flüchtlinge wie auch bei den verwaltungsgerichtlichen Verfahren** . Mit umfassender\nDigitalisierung und Verwaltungsmodernisierung wollen wir sicherstellen, dass Asylentscheidungen\ninnerhalb von sechs Monaten getroffen werden können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-34d089c17bce94c7",
+          "disposition": "no_supported_link",
+          "rationale": "Die im Gesetz vorgesehenen Prüf- und Sanktionsregeln betreffen Schwarzarbeit, nicht Angriffe auf die genannten Gruppen.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die im Gesetz vorgesehenen Prüf- und Sanktionsregeln betreffen Schwarzarbeit, nicht Angriffe auf die genannten Gruppen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "**Angriffe auf sie, genauso wie auf**\n**Rettungskräfte und Helferinnen und Helfer müssen konsequent geahndet und härter bestraft**\n**werden.**",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-34d089c17bce94c7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die automatisierte Risikoanalyse des Gesetzes dient der Erkennung von Schwarzarbeit und illegaler Beschäftigung; branchenspezifische KI-Ökosysteme werden nicht aufgebaut.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die automatisierte Risikoanalyse des Gesetzes dient der Erkennung von Schwarzarbeit und illegaler Beschäftigung; branchenspezifische KI-Ökosysteme werden nicht aufgebaut.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden.\nDenn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt\nund damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden\nin Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und\numgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der\nQuantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht\ndeshalb die **Weiterentwicklung der KI-Strategie** an erster Stelle. Der Fokus soll dabei insbesondere\nauf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau\nvon branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Automatisierung im Gesetz betrifft das Risikomanagement gegen Schwarzarbeit; eine Weiterentwicklung der KI-Strategie mit Schwerpunkt auf systemischen Innovationen ist nicht geregelt.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Automatisierung im Gesetz betrifft das Risikomanagement gegen Schwarzarbeit; eine Weiterentwicklung der KI-Strategie mit Schwerpunkt auf systemischen Innovationen ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden.\nDenn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt\nund damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden\nin Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und\numgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der\nQuantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht\ndeshalb die **Weiterentwicklung der KI-Strategie** an erster Stelle. Der Fokus soll dabei insbesondere\nauf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau\nvon branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4196c63cf8d9d19f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen die Schwarzarbeitsbekämpfung; verbindliche Plattformpflichten gegen illegale Inhalte sind nicht enthalten.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen die Schwarzarbeitsbekämpfung; verbindliche Plattformpflichten gegen illegale Inhalte sind nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Plattformen zu zwingen,\ngegen illegale Inhalte vorzugehen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4196c63cf8d9d19f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4333f80d179b9ac5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz weist der Generalzolldirektion eine Zentralstellenfunktion für Schwarzarbeitsbekämpfung zu, nicht dem BSI für Cyber- und Informationssicherheit.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz weist der Generalzolldirektion eine Zentralstellenfunktion für Schwarzarbeitsbekämpfung zu, nicht dem BSI für Cyber- und Informationssicherheit.",
+            "law_passage_id": "bgbl-1-2025-369-p-d72a7a78dd4920bc",
+            "law_quote": "Die Generalzolldirektion ist die Zentralstelle der Behörden der Zollverwaltung für die Bekämpfung der\nSchwarzarbeit und der illegalen Beschäftigung (Zentralstelle).",
+            "criterion_quote": "Wir machen das Bundesamt für Sicherheit in der Informationstechnik **(BSI) zu einer Zentralstelle in**\n**der Cyber- und Informationssicherheit** .",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4333f80d179b9ac5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4907340e3b847e0d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Schwarzarbeitskontrollen und steuerliche Folgeanpassungen, nicht die Förderung von Betriebsrenten für Geringverdienende.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Schwarzarbeitskontrollen und steuerliche Folgeanpassungen, nicht die Förderung von Betriebsrenten für Geringverdienende.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Hierzu werden wir insbesondere die steuerliche\nFörderung der Betriebsrente für Geringverdiener ausbauen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4907340e3b847e0d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-598598e63c2c2f3a",
+          "disposition": "no_supported_link",
+          "rationale": "Die automatisierte Analyse im Gesetz ermittelt Risiken von Schwarzarbeit und illegaler Beschäftigung; eine Prüfung auf diskriminierende oder manipulative Praktiken ist nicht vorgesehen.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die automatisierte Analyse im Gesetz ermittelt Risiken von Schwarzarbeit und illegaler Beschäftigung; eine Prüfung auf diskriminierende oder manipulative Praktiken ist nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2025-369-p-e0f38aace01302c8",
+            "law_quote": "Ziel des zentralen Risikomanagements ist die systematische Ermittlung von Risiken für das Auftreten von\nSchwarzarbeit und illegaler Beschäftigung und die Anwendung aller für die Risikobegrenzung erforderlichen\nMaßnahmen.",
+            "criterion_quote": "und auf diskriminierende oder manipulative Praktiken zu prüfen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-598598e63c2c2f3a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+          "disposition": "no_supported_link",
+          "rationale": "Die Datenregelungen des Gesetzes ermöglichen Zollbehörden elektronische Einsicht und Übermittlung für Prüfungen; sie legen keinen fairen und rechtssicheren Umgang mit betrieblichen Daten allgemein fest.",
+          "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "139c919c2f62d3f94236bc5fb7c1e8a90a56961bc5feae168cc839ddd9a68574"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Datenregelungen des Gesetzes ermöglichen Zollbehörden elektronische Einsicht und Übermittlung für Prüfungen; sie legen keinen fairen und rechtssicheren Umgang mit betrieblichen Daten allgemein fest.",
+            "law_passage_id": "bgbl-1-2025-369-p-ce361228b5014b45",
+            "law_quote": "Der Prüfbeteiligte hat den Behörden der Zollverwaltung auf Verlangen Unterlagen und Daten elektronisch\nzu übermitteln, sofern dies für den Prüfbeteiligten technisch möglich ist.",
+            "criterion_quote": "Dafür werden wir einen fairen und rechtssicheren Umgang mit Daten im Betrieb regeln",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Befugnisse der Zollverwaltung zur Bekämpfung von Schwarzarbeit; es ändert keine Abstimmungsverfahren in EU-Räten.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Befugnisse der Zollverwaltung zur Bekämpfung von Schwarzarbeit; es ändert keine Abstimmungsverfahren in EU-Räten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-728ab5f0154c1296",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Schwarzarbeitsbekämpfung und ändern das Allgemeine Gleichbehandlungsgesetz nicht.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Schwarzarbeitsbekämpfung und ändern das Allgemeine Gleichbehandlungsgesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-728ab5f0154c1296",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erweitert Zollprüfungen und Datenverarbeitung, stellt aber keine sexuellen Handlungen unter Strafe.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erweitert Zollprüfungen und Datenverarbeitung, stellt aber keine sexuellen Handlungen unter Strafe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-92c01d1eba4ff937",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Zollprüfungen gegen Schwarzarbeit; Mittel für Integrationskurse werden nicht festgelegt.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Zollprüfungen gegen Schwarzarbeit; Mittel für Integrationskurse werden nicht festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-92c01d1eba4ff937",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder Artikel 3 Absatz 3 GG noch die dort genannten Diskriminierungsmerkmale.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder Artikel 3 Absatz 3 GG noch die dort genannten Diskriminierungsmerkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+          "disposition": "no_supported_link",
+          "rationale": "Die Datenverarbeitung dient der Prüfung und Bekämpfung von Schwarzarbeit; ein Log-in-Verfahren zur Erfassung von IP-Adressen an verdächtigen Konten wird nicht geregelt.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Datenverarbeitung dient der Prüfung und Bekämpfung von Schwarzarbeit; ein Log-in-Verfahren zur Erfassung von IP-Adressen an verdächtigen Konten wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Ganztagsbetreuung oder deren Gewährleistung für Grundschulkinder.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Ganztagsbetreuung oder deren Gewährleistung für Grundschulkinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+          "disposition": "no_supported_link",
+          "rationale": "Das zentrale Risikomanagement nach § 25 betrifft Risiken von Schwarzarbeit und illegaler Beschäftigung, nicht die Prüfung wettbewerbsrechtlicher Verstöße durch zuständige Behörden.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das zentrale Risikomanagement nach § 25 betrifft Risiken von Schwarzarbeit und illegaler Beschäftigung, nicht die Prüfung wettbewerbsrechtlicher Verstöße durch zuständige Behörden.",
+            "law_passage_id": "bgbl-1-2025-369-p-d0189d46bf32c1fa",
+            "law_quote": "Zentrales Risikomanagement",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Schwarzarbeitsbekämpfung; Maßnahmen zur Durchsetzung von DMA, DSA oder KI-Verordnung sind nicht geregelt.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Schwarzarbeitsbekämpfung; Maßnahmen zur Durchsetzung von DMA, DSA oder KI-Verordnung sind nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-af56335db35e5ac6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Waffenbesitz oder zum Waffenzugriff psychisch vorbelasteter Personen.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Waffenbesitz oder zum Waffenzugriff psychisch vorbelasteter Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-af56335db35e5ac6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Strafvorschriften zu sexueller Belästigung oder Catcalling.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Strafvorschriften zu sexueller Belästigung oder Catcalling.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bdad475d17eed446",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Zollkontrollen und Datenverarbeitung, nicht die Organisation oder Vernetzung von Praxen und Krankenhäusern.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Zollkontrollen und Datenverarbeitung, nicht die Organisation oder Vernetzung von Praxen und Krankenhäusern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bdad475d17eed446",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c016673669030481",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Bundesdisziplinarrecht nicht und regelt keine Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Bundesdisziplinarrecht nicht und regelt keine Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c016673669030481",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erweitert Prüf- und Datenverarbeitungsbefugnisse gegen Schwarzarbeit, bezieht aber Beschäftigungsverhältnisse nicht neu in die soziale Sicherung ein.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz erweitert Prüf- und Datenverarbeitungsbefugnisse gegen Schwarzarbeit, bezieht aber Beschäftigungsverhältnisse nicht neu in die soziale Sicherung ein.",
+            "law_passage_id": "bgbl-1-2025-369-p-28b05f05a9ee0fca",
+            "law_quote": "Die Zentralstelle nimmt für die Hauptzollämter die Aufgaben des zentralen Risikomanagements für die Bekämpfung der Schwarzarbeit und illegalen Beschäftigung wahr.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine automatische Ermittlung oder Gewährung von Kindergeld oder anderen Leistungen vor.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine automatische Ermittlung oder Gewährung von Kindergeld oder anderen Leistungen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d5ba1591ee85e1aa",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Rechtsform für die treuhänderische Unternehmensnachfolge ein und regelt keine entsprechenden Steuerhinterziehungsmöglichkeiten.",
+          "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1c743258de7fa71309ba74443460bb9b7d6076bb72e32e123cf4643e0f246ca5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine Rechtsform für die treuhänderische Unternehmensnachfolge ein und regelt keine entsprechenden Steuerhinterziehungsmöglichkeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d5ba1591ee85e1aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen die Schwarzarbeitsbekämpfung; eine Änderung der Besteuerung privater Immobilienverkäufe ist nicht belegt.",
+          "input_sha256": "450eaf27924d1f2aefc51be3f6ee89a143599befcc5960b6c78c9bd33a6f5042",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "450eaf27924d1f2aefc51be3f6ee89a143599befcc5960b6c78c9bd33a6f5042"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen die Schwarzarbeitsbekämpfung; eine Änderung der Besteuerung privater Immobilienverkäufe ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f692d7e35cebe18f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Prüfungen und Daten der Zollverwaltung, nicht die Entfernung illegaler Inhalte durch Plattformen.",
+          "input_sha256": "450eaf27924d1f2aefc51be3f6ee89a143599befcc5960b6c78c9bd33a6f5042",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "450eaf27924d1f2aefc51be3f6ee89a143599befcc5960b6c78c9bd33a6f5042"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Prüfungen und Daten der Zollverwaltung, nicht die Entfernung illegaler Inhalte durch Plattformen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f692d7e35cebe18f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fc039e75480fcc10",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht elektronische Einsicht und Übermittlung von Prüfunterlagen an die Zollverwaltung vor, belegt aber kein System der einmaligen Datenübermittlung.",
+          "input_sha256": "450eaf27924d1f2aefc51be3f6ee89a143599befcc5960b6c78c9bd33a6f5042",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "450eaf27924d1f2aefc51be3f6ee89a143599befcc5960b6c78c9bd33a6f5042"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz sieht elektronische Einsicht und Übermittlung von Prüfunterlagen an die Zollverwaltung vor, belegt aber kein System der einmaligen Datenübermittlung.",
+            "law_passage_id": "bgbl-1-2025-369-p-ce361228b5014b45",
+            "law_quote": "„Der Prüfbeteiligte hat den Behörden der Zollverwaltung auf Verlangen Unterlagen und Daten elektronisch zu übermitteln“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fc039e75480fcc10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-370",
@@ -48768,7 +49712,606 @@
         "spd-2025-ac-e4ec5f3ec3ff822a"
       ],
       "omitted_count": 763,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0d8100b059fda09b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten Regeln zu Wehrdienst und Freiwilligendiensten, aber keine Neugestaltung des Taschengeldes mit dem genannten Ziel.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten Regeln zu Wehrdienst und Freiwilligendiensten, aber keine Neugestaltung des Taschengeldes mit dem genannten Ziel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das „Taschengeld“ wollen wir so ausgestalten, dass auch Jugendliche aus einkommensärmeren Haushalten sich für einen Freiwilligendienst entscheiden können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0d8100b059fda09b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge ändern weder Anerkennungsverfahren noch Regeln für ausländische Abschlüsse und Qualifikationen.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge ändern weder Anerkennungsverfahren noch Regeln für ausländische Abschlüsse und Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine deutlich transparenteren und vereinfachten Anerkennung von im Ausland erworbenen Abschlüssen und Qualifikationen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Beschleunigungsregel für Asylverfahren oder Verwaltungsgerichtsverfahren.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Beschleunigungsregel für Asylverfahren oder Verwaltungsgerichtsverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Asylentscheidungen innerhalb von sechs Monaten getroffen werden können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge legen keinen gesetzlichen Mindestlohn von 15 Euro fest.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge legen keinen gesetzlichen Mindestlohn von 15 Euro fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der Mindestlohn spätestens ab 2026 bei 15 Euro liegt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2c716ecbae9c3651",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug nennt eine Vorschrift zur Versorgung von Hinterbliebenen nach einem Einsatzunfall, enthält aber nicht deren Regelungstext; eine konkrete Verbesserung oder SPD-Initiative lässt sich daraus nicht beurteilen.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.72,
+            "rationale": "Der Auszug nennt eine Vorschrift zur Versorgung von Hinterbliebenen nach einem Einsatzunfall, enthält aber nicht deren Regelungstext; eine konkrete Verbesserung oder SPD-Initiative lässt sich daraus nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2025-370-p-8586dba37c57bb47",
+            "law_quote": "Versorgung der Hinterbliebenen nach einem Einsatzunfall von Soldatinnen auf Zeit, Soldaten auf Zeit und von Soldatinnen und Soldaten, die Wehrdienst nach dem Wehrpflichtgesetz oder nach dem Vierten Abschnitt des Soldatengesetzes leisten",
+            "criterion_quote": "die Verbesserung der Versorgung einsatzgeschädigter Soldatinnen und Soldaten sowie ihrer Familien",
+            "caveats": [
+              "Der vorgelegte Gesetzeskontext ist teilweise; der materielle Regelungsinhalt der genannten Vorschrift fehlt."
+            ],
+            "criterion_id": "spd-2025-ac-2c716ecbae9c3651",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2f6e6c1c09d582eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Anreize für Schutzkonzepte in Einrichtungen für Kinder und Jugendliche.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Anreize für Schutzkonzepte in Einrichtungen für Kinder und Jugendliche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Anreize für Schutzkonzepte in allen Einrichtungen schaffen, in denen sich Kinder und Jugendliche regelmäßig aufhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-2f6e6c1c09d582eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge bauen keine branchenspezifischen KI-Ökosysteme auf.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge bauen keine branchenspezifischen KI-Ökosysteme auf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Aufbau von branchenspezifischen KI-Ökosystemen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge entwickeln keine KI-Strategie weiter und enthalten keine Regelung zu systemischen Innovationen.",
+          "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "afadd3d465545f72288f6e14773a1f771a50de96016062cee985e4a25022e5ac"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge entwickeln keine KI-Strategie weiter und enthalten keine Regelung zu systemischen Innovationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Weiterentwicklung der KI-Strategie",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen regeln keine Erstattung von WG-Mieten oder Mietdifferenzen.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen regeln keine Erstattung von WG-Mieten oder Mietdifferenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-89135ae3019d87a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zu Übungen für den Katastrophenfall.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zu Übungen für den Katastrophenfall.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-89135ae3019d87a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen ändern Artikel 3 Absatz 3 GG nicht und ergänzen keine Diskriminierungsmerkmale.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen ändern Artikel 3 Absatz 3 GG nicht und ergänzen keine Diskriminierungsmerkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3a20cd7e3351087",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen regeln keine Anerkennungsverfahren für Qualifikationen oder Abschlüsse.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen regeln keine Anerkennungsverfahren für Qualifikationen oder Abschlüsse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a3a20cd7e3351087",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aa8860cfdaa9ef81",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen enthalten keine Regelung zur Feststellung des Entwicklungsstands von Kindern.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen enthalten keine Regelung zur Feststellung des Entwicklungsstands von Kindern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aa8860cfdaa9ef81",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-abc647ba725d8c1f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen enthalten keine Regelung zu Förderangeboten für Kinder mit festgestelltem Bedarf.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen enthalten keine Regelung zu Förderangeboten für Kinder mit festgestelltem Bedarf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-abc647ba725d8c1f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen erwähnen Freiwilligendienste, regeln aber keine Weiterentwicklung ihrer Finanzierung durch eine Bund-Länder-Vereinbarung.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen erwähnen Freiwilligendienste, regeln aber keine Weiterentwicklung ihrer Finanzierung durch eine Bund-Länder-Vereinbarung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bee474ad7385688c",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz sieht Änderungen am Elterngeld- und Elternzeitgesetz vor, aber die vorgelegten Passagen zeigen deren Inhalt nicht; ob sechs Monate je Elternteil festgelegt werden, bleibt offen.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Das Gesetz sieht Änderungen am Elterngeld- und Elternzeitgesetz vor, aber die vorgelegten Passagen zeigen deren Inhalt nicht; ob sechs Monate je Elternteil festgelegt werden, bleibt offen.",
+            "law_passage_id": "bgbl-1-2025-370-p-083841e83f2b3b8e",
+            "law_quote": "Das Bundeselterngeld- und Elternzeitgesetz in der Fassung der Bekanntmachung vom 27. Januar 2015 (BGBl. I S. 33), das zuletzt durch Artikel 18 des Gesetzes vom 22. Dezember 2025 (BGBl. 2025 I Nr. 355) geändert worden ist, wird wie folgt geändert:",
+            "criterion_quote": "nach dem jeder Elternteil Anspruch auf 6 Monate Elterngeld erhält",
+            "caveats": [
+              "Der Inhalt der angekündigten Änderung des Elterngeld- und Elternzeitgesetzes ist in den vorgelegten Passagen nicht enthalten."
+            ],
+            "criterion_id": "spd-2025-ac-bee474ad7385688c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen beziehen Beschäftigungsverhältnisse nicht allgemein in die soziale Sicherung ein.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten WDModG-Passagen beziehen Beschäftigungsverhältnisse nicht allgemein in die soziale Sicherung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen schaffen keine automatische Prüfung oder Gewährung von Kindergeldansprüchen.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen schaffen keine automatische Prüfung oder Gewährung von Kindergeldansprüchen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen sehen keine automatische Antragstellung oder Auszahlung der genannten Leistungen vor.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen sehen keine automatische Antragstellung oder Auszahlung der genannten Leistungen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d990a26f6aaaefa4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen eröffnen keinen Spurwechsel für Geflüchtete ohne Schutzstatus.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen eröffnen keinen Spurwechsel für Geflüchtete ohne Schutzstatus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d990a26f6aaaefa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen regeln keine Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen regeln keine Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e4ec5f3ec3ff822a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten WDModG-Passagen richten kein Familienpflegegeld ein.",
+          "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11551b119b44706729e25df224c0793112eecba1f2e9382fc9c49107d8a921c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten WDModG-Passagen richten kein Familienpflegegeld ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e4ec5f3ec3ff822a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2025-371",
@@ -53974,45 +55517,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 3789,
+    "calls": 3852,
     "cache_hits": 39,
-    "subdivision_cache_hits": 6,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 21.499096,
-    "reported_cost_calls": 3572,
+    "reported_cost_usd": 21.692645,
+    "reported_cost_calls": 3635,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 1.327248,
     "unknown_cost_calls": 217,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 22.826344,
-    "prompt_tokens": 38214460,
-    "completion_tokens": 5755956,
+    "budget_exposure_usd": 23.019892,
+    "prompt_tokens": 39045417,
+    "completion_tokens": 5905245,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 135,
-        "reported_cost_usd": 3.126806249999999,
+        "calls": 139,
+        "reported_cost_usd": 3.2237294999999992,
         "unknown_cost_reserved_usd": 8.881784197001252e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 45,
-        "reported_cost_usd": 0.6374437500000001,
+        "calls": 47,
+        "reported_cost_usd": 0.6539447500000001,
         "unknown_cost_reserved_usd": 5.551115123125783e-17,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 6.938893903907228e-18
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 712,
-        "reported_cost_usd": 0.8503760550000005,
+        "calls": 769,
+        "reported_cost_usd": 0.9305005175000004,
         "unknown_cost_reserved_usd": 0.34277185,
-        "pending_reserved_usd": 8.673617379884035e-19
+        "pending_reserved_usd": 7.806255641895632e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
