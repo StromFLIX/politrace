@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2025-282",
   "score": 1,
   "confidence": 0.87,
-  "rationale": "Die Gesetzesänderung unterstützt einen Teil des engen Tests, indem sie bei der Netzentwicklung ausdrücklich den Anschluss von Emittenten mit technisch schwer oder nicht vermeidbaren Prozessemissionen in den Blick nimmt. Das belegt jedoch nicht die Anwendung von CCU oder die Nutzung in geschlossenen Kohlenstoffkreisläufen; eine vollständige Entsprechung zu den genannten Anforderungen ist daher nicht nachgewiesen.",
+  "rationale": "Das Gesetz sieht eine Bewertung vor, ob CO₂-Leitungsnetze künftig Emittenten mit schwer oder nicht vermeidbaren Prozessemissionen an Speicher anbinden können. Das unterstützt CCS für diesen Bereich teilweise; CCU und die Nutzung in geschlossenen Kohlenstoffkreisläufen regelt diese Passage nicht.",
   "law_passage_id": "bgbl-1-2025-282-p-42df5b720a3554ab",
-  "law_quote": "die Entwicklung der Kohlendioxidleitungsnetze, insbesondere unter dem Gesichtspunkt, ob diese\nperspektivisch den Anschluss von Kohlendioxid-Emittenten vor allem im Bereich technisch schwer\noder nicht vermeidbarer Prozessemissionen ermöglichen, die Kohlendioxid abscheiden und an\nweiter entfernten Speicherstandorten speichern möchten",
+  "law_quote": "3b. die Entwicklung der Kohlendioxidleitungsnetze, insbesondere unter dem Gesichtspunkt, ob diese\nperspektivisch den Anschluss von Kohlendioxid-Emittenten vor allem im Bereich technisch schwer\noder nicht vermeidbarer Prozessemissionen ermöglichen, die Kohlendioxid abscheiden und an\nweiter entfernten Speicherstandorten speichern möchten",
   "criterion_quote": "Deshalb\nermöglichen wir für diesen Bereich die\nAnwendung dieser Technologien.",
-  "caveats": [
-    "Die Passage belegt einen Bezug zu CCS-Leitungs- und Speicherinfrastruktur, nicht ausdrücklich eine Erlaubnis zur Anwendung von CCS/CCU in der Industrie.",
-    "Die Nutzung im Rahmen geschlossener Kohlenstoffkreisläufe wird in der zitierten Passage nicht geregelt.",
-    "Die Passage regelt nur einen Evaluierungsgegenstand, keine Zulassung von CCS/CCU für die Industrie.",
-    "Die Anforderungen an sichere Speicherung oder geschlossene Kohlenstoffkreisläufe werden in der Passage nicht geregelt.",
-    "Der Gesetzeskontext ist teilweise (partial_law_context); andere Passagen könnten das Kriterium besser stützen, sind aber nicht Gegenstand dieses Vorschlags.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die zitierte Passage (§ 44 Abs. 2 Nr. 3b KSpG, Evaluierungsgegenstand) verlangt nur eine Bewertung der Netzentwicklung, insbesondere des möglichen Anschlusses von Emittenten mit schwer vermeidbaren Prozessemissionen. Sie ermöglicht die Anwendung von CCS/CCU in der Industrie nicht selbst und enthält keine Voraussetzung zur sicheren Speicherung oder zur Nutzung in geschlossenen Kohlenstoffkreisläufen. Das Programmkriterium verlangt aber genau eine Ermöglichung unter diesen Voraussetzungen. Der Bezug beschränkt sich auf das Thema CCS und Prozessemissionen. Ein belastbarer Rechtsumfang folgt daraus nicht. Andere Passagen des Gesetzes, etwa zu Speichergenehmigung, Transport und Langzeitsicherheit, könnten für eine Ermöglichung relevanter sein, wurden aber nicht vorgeschlagen. Die Bewertung der Passage als unterstützend mit Score 1 ist daher nicht haltbar."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "cc6dc0f6cea995f6e69a9935da3b22ed17b5e98b832feee2ed2e5712dafa5af6",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "93304ae46b1a8261a972e9b148c718b35e5861ab348caa88fa35e33ec47ff33d"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "726fbb625289efe2e102729dba94e952800727fef109199f1bf90649279237f4"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "84a0c58d3d7a6b6534d7a35e659162263b225d631027cabab51ac58a6c039f3f"
+      "input_sha256": "cc6dc0f6cea995f6e69a9935da3b22ed17b5e98b832feee2ed2e5712dafa5af6"
     }
   ]
 }

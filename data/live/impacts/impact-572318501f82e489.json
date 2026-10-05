@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-301",
   "score": 1,
   "confidence": 0.87,
-  "rationale": "Die Regelung sieht vor, dass Informationen über Tatsachen, die auf geheimdienstliche Tätigkeiten für eine fremde Macht hindeuten, an das BfV übermittelt werden. Das kann die Spionageabwehr teilweise unterstützen; die Passage belegt jedoch keine umfassenderen organisatorischen Maßnahmen oder eine vollständige Umsetzung des Versprechens.",
+  "rationale": "Das Gesetz ermöglicht die Übermittlung von Hinweisen auf geheimdienstliche Tätigkeiten für eine fremde Macht an das BfV. Dieser Informationsweg unterstützt dessen Spionageabwehr teilweise, belegt aber keine organisatorische Neuaufstellung.",
   "law_passage_id": "bgbl-1-2025-301-p-75b38180260eb0ee",
-  "law_quote": "2. an das Bundesamt für Verfassungsschutz zur Unterrichtung über Tatsachen, die sicherheitsgefährdende oder\ngeheimdienstliche Tätigkeiten für eine fremde Macht erkennen lassen,",
+  "law_quote": "2. an das Bundesamt für Verfassungsschutz zur Unterrichtung über Tatsachen, die sicherheitsgefährdende oder\ngeheimdienstliche Tätigkeiten für eine fremde Macht erkennen lassen, sowie an den Militärischen Abschirm­\ndienst, wenn sich diese Tätigkeiten gegen Personen, Dienststellen oder Einrichtungen im Geschäftsbereich\ndes Bundesministeriums der Verteidigung richten,",
   "criterion_quote": "Das Bundesamt für Verfassungsschutz (BfV) werden wir in der Spionageabwehr",
-  "caveats": [
-    "Die Passage belegt eine konkrete Informationsübermittlung, nicht die gesamte Aufstellung des BfV in der Spionageabwehr.",
-    "Es handelt sich um eine Kann-Befugnis des BSI zur Datenübermittlung, nicht um eine Maßnahme zur Stärkung des BfV.",
-    "Das Programm-Zitat ist unvollständig, die konkrete Zusage bleibt unklar.",
-    "Der Gesetzeskontext ist nur teilweise vorhanden (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die Passage ist eine Übermittlungsbefugnis des BSI: Es kann bestimmte Daten an das BfV weitergeben, wenn Tatsachen auf sicherheitsgefährdende oder geheimdienstliche Tätigkeiten für eine fremde Macht hindeuten. Das betrifft den Informationsfluss zwischen Behörden im Rahmen des IT-Sicherheitsrechts. Eine Aufstellung des BfV in der Spionageabwehr, etwa durch zusätzliche Befugnisse, Ressourcen oder Strukturen, wird nicht geregelt. Auch das Programm-Zitat ist abgebrochen und nennt keine konkrete Maßnahme. Die Zuordnung beruht daher vor allem auf der Themenähnlichkeit. Eine Wirkung auf das Versprechen lässt sich nicht belegen, die vorgeschlagene Bewertung (Score 1) ist nicht gedeckt. Die Befugnis erweitert zudem nicht die Spionageabwehr-Fähigkeiten des BfV, sondern gibt dem BSI eine Übermittlungsmöglichkeit."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "960bd1a1195196f906d0474ad32e7e531ef0a86c3474ab61af21cc1d0c2c0b1d"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "167a7e1e742df43f57da4ff385759db5edbbf60f069f1461761873e15554bc20"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "4dd796d7143b370b4f66aec2f6063389234edcbecd391d6d6b8daf4857de4381"
+      "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162"
     }
   ]
 }

@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-301",
   "score": 1,
   "confidence": 0.89,
-  "rationale": "Das Gesetz schreibt ein fortlaufend zu aktualisierendes Lagebild zur IT-Sicherheit vor und unterstützt damit einen Teil des Kriteriums. Ein ressortgemeinsames Lagezentrum oder die Behandlung aller genannten Bedrohungen, Risiken und Chancen wird in der Passage jedoch nicht belegt.",
+  "rationale": "Das Gesetz verlangt die kontinuierliche Aktualisierung eines Lagebilds zur IT-Sicherheit kritischer Anlagen und wichtiger Einrichtungen. Das unterstützt den Lagebild-Aspekt teilweise; ein ressortgemeinsames Lagezentrum wird damit nicht eingerichtet.",
   "law_passage_id": "bgbl-1-2025-301-p-2ee067c48638ab56",
-  "law_quote": "das Lagebild bezüglich der Sicherheit in der Informationstechnik von kritischen Anlagen, besonders wichtigen\nEinrichtungen und wichtigen Einrichtungen kontinuierlich zu aktualisieren",
+  "law_quote": "3. das Lagebild bezüglich der Sicherheit in der Informationstechnik von kritischen Anlagen, besonders wichtigen\nEinrichtungen und wichtigen Einrichtungen kontinuierlich zu aktualisieren und",
   "criterion_quote": "Grundlage\ndafür sind ein ressortgemeinsames Lagebild und Lagezentrum über die Bedrohungen, Risiken und Chancen für unsere\nSicherheit",
-  "caveats": [
-    "Die Passage belegt nur ein Lagebild zur IT-Sicherheit in den ausdrücklich genannten Einrichtungen; die Einrichtung eines ressortgemeinsamen Lagezentrums ist daraus nicht ersichtlich.",
-    "Die Passage betrifft nur das IT-Sicherheitslagebild des BSI, nicht ein ressortgemeinsames Lagebild.",
-    "Ein Lagezentrum wird im Gesetzestext der Passage nicht eingerichtet.",
-    "Der Rechtstext liegt nur teilweise vor (partial_law_context); Regelungen zu weiteren Lagezentren sind nicht auszuschließen, aber nicht belegt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt ein ressortgemeinsames Lagebild und Lagezentrum für Bedrohungen, Risiken und Chancen für die Sicherheit insgesamt. Die Passage verpflichtet das BSI lediglich, ein Lagebild zur IT-Sicherheit kritischer Anlagen und wichtiger Einrichtungen zu aktualisieren. Weder ein ressortgemeinsamer Ansatz noch ein Lagezentrum noch der breitere Sicherheitsbezug (Chancen, Risiken) wird belegt. Es handelt sich um eine thematische Überschneidung, nicht um einen tragfähigen Beleg für das Kriterium. Der Vorschlag mit Score 1 und Konfidenz 0,89 ist überzogen."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "19af388c86aefef4f6b2d42a94c04b990e36a32f6075063139ad756d2db6550f"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "c6ac7cc486b4d0c3e2f6efa6fca830d738fd2372438df0ea1bf1bedb517cde3a"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "b5d2d3e8c25ea9f573d6649fc177ac603e3b4349b4be9a2a4da6558f1e7ce436"
+      "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162"
     }
   ]
 }

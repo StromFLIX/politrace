@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2025-340",
   "score": 1,
   "confidence": 0.83,
-  "rationale": "Die Regelung erspart in bestimmten Fällen eine erneute Angabe von Daten zu Stromerzeugungseinheiten, wenn diese bereits zutreffend im Marktstammdatenregister stehen. Das belegt eine begrenzte Verringerung des Verwaltungsaufwands für Stromerzeuger, nicht aber einen umfassenden Bürokratieabbau oder Erleichterungen für Speicher und Elektrolyseure.",
+  "rationale": "Für Stromerzeugungseinheiten entfallen in der Betriebserklärung erneute Angaben, soweit diese bereits zutreffend im Marktstammdatenregister stehen. Das verringert eine bürokratische Anforderung für erfasste Erzeuger; eine entsprechende Entlastung für Speicher oder Elektrolyseure belegt die Passage nicht.",
   "law_passage_id": "bgbl-1-2025-340-p-5624e83a4c615eda",
   "law_quote": "soweit in der\nBetriebserklärung Daten zu Stromerzeugungseinheiten verlangt werden, die bereits zutreffend im\nMarktstammdatenregister enthalten sind, ist eine Angabe nicht erneut erforderlich;",
   "criterion_quote": "Dazu werden wir\nauch in Zukunft dezentrale Erzeuger von\nSolar- und Windenergie sowie Speicher\nund Elektrolyseure durch konsequenten\nBürokratieabbau",
-  "caveats": [
-    "Die Entlastung betrifft eine konkrete Angabe in der Betriebserklärung und nur Daten, die bereits zutreffend im Marktstammdatenregister enthalten sind.",
-    "Aus dem Auszug ergibt sich keine entsprechende Wirkung für Speicher oder Elektrolyseure.",
-    "Die Entlastung gilt nur für Daten, die bereits zutreffend im Marktstammdatenregister enthalten sind, und nur in der Betriebserklärung auf Verlangen des Hauptzollamts.",
-    "Der Auszug zeigt keine Wirkung für Speicher oder Elektrolyseure.",
-    "Die Passage nennt Stromerzeugungseinheiten allgemein, nicht ausdrücklich dezentrale Solar- und Windanlagen.",
-    "Der Umfang des Bürokratieabbaus ist gering und belegt keine konsequente oder umfassende Entlastung.",
-    "Es liegt nur ein Teil des Gesetzes vor.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "1fc9142f98d805f4e453235cf885d8cae3b188f956c351d5a452c62497f9d0d2",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "6e6ccc512f518e3aa20fa0f3df0eaf4b68078ea02fe2d4758d0f3f936dbc109d"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "82428b95fd5bccb1c33ee4c066d6291b65a116483b4fd51527d1e892dc46d98a"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "bb596e4a278b522e0e25a5150f99353ea1179ba2d1c2b07d58aeaf80c1ba656e"
+      "input_sha256": "1fc9142f98d805f4e453235cf885d8cae3b188f956c351d5a452c62497f9d0d2"
     }
   ]
 }

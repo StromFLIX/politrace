@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-301",
   "score": 1,
   "confidence": 0.83,
-  "rationale": "Das Gesetz sieht begrenzt Unterstützung der Polizei und Strafverfolgungsbehörden bei ihren gesetzlichen Aufgaben vor. Die Unterstützung ist jedoch auf die Verhinderung oder Erforschung IT-bezogener Tätigkeiten beschränkt; der Text belegt nicht ausdrücklich Strafverfolgung sowohl online als auch offline.",
+  "rationale": "Das Gesetz sieht Unterstützung der Polizeien und Strafverfolgungsbehörden bei ihren gesetzlichen Aufgaben vor, soweit sie zur Verhinderung oder Erforschung IT-bezogener Tätigkeiten erforderlich ist. Das unterstützt den Bereich der IT-bezogenen Strafverfolgung teilweise; Maßnahmen für die Strafverfolgung offline sind damit nicht belegt.",
   "law_passage_id": "bgbl-1-2025-301-p-e32dce686fd249e7",
   "law_quote": "a) der Polizeien und Strafverfolgungsbehörden des Bundes und der Länder bei der Wahrnehmung ihrer",
   "criterion_quote": "Strafverfolgung durch die Polizei\nim Netz und offline,",
-  "caveats": [
-    "Die zitierte Vorschrift ist ein Satzfragment; die im Gesetz enthaltene Begrenzung der Unterstützung ergibt sich aus einem weiteren bereitgestellten Passagefragment.",
-    "Das Rechtszitat ist ein Satzfragment; die Einschränkung ergibt sich erst aus einem weiteren Passagenfragment.",
-    "Das Programmzitat ist ein knapper Fragmentsatz ohne Kontext zu Richtung und Umfang.",
-    "Der Gesetzeskontext ist nur teilweise bereitgestellt (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt Maßnahmen zur polizeilichen Strafverfolgung im Netz und offline. Das NIS-2-Umsetzungsgesetz regelt aber nur, dass das BSI Polizeien und Strafverfolgungsbehörden bei ihren gesetzlichen Aufgaben unterstützen darf. Die Unterstützung ist auf die Verhinderung oder Erforschung von Tätigkeiten beschränkt, die gegen die IT-Sicherheit gerichtet sind oder unter Nutzung von IT erfolgen. Damit liegt keine Maßnahme zur polizeilichen Strafverfolgung selbst vor. Es werden keine Befugnisse, Ressourcen oder Verfahren für die Polizei geschaffen. Der Offline-Bezug fehlt, denn das Gesetz bezieht sich auf IT-Sicherheit. Das Programmzitat ist zudem ein Fragment ohne erkennbare Richtung oder Größenordnung. Es handelt sich um einen reinen Themenbezug und keine belastbare Entsprechung. Der vorgeschlagene Score 1 und die Konfidenz 0,83 sind nicht gedeckt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "56b4064eb9454e566a99757ac41e90511c4db5ac59b8af2cc83241be5e352393"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "7dff0a1786390314dc631ca0e4749ccfe9df52c7d25e5c99af4bb79caf62eb10"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "cb8851d0604d2790b6b030caaffc4c58f96bebb500e12f34d2cd15435b697083"
+      "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162"
     }
   ]
 }

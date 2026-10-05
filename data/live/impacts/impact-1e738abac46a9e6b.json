@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2025-301",
   "score": 1,
   "confidence": 0.97,
-  "rationale": "Das Gesetz sieht vor, Sicherheitsanforderungen für bestimmte Kommunikationsinfrastrukturen des Bundes festzulegen und ihre Einhaltung zu überprüfen. Das stützt die Etablierung verbindlicher Cybersicherheitsanforderungen, belegt aber nur einen begrenzten Anwendungsbereich und nicht umfassende Standards für alle Bereiche.",
+  "rationale": "Für ressortübergreifende Kommunikationsnetze und weitere staatliche Kommunikationsinfrastrukturen des Bundes sind Sicherheitsanforderungen festzulegen und zu überprüfen. Das unterstützt verbindliche Standards in diesem begrenzten Bereich.",
   "law_passage_id": "bgbl-1-2025-301-p-d6df2155c38078e8",
   "law_quote": "Sicherheitsanforderungen für die Kommunikationsinfrastruktur der ressortübergreifenden Kommunikationsnetze\nsowie weiterer staatlicher Kommunikationsinfrastrukturen des Bundes im Benehmen mit den jeweiligen\nBetreibern festlegen sowie die Einhaltung dieser Sicherheitsanforderungen überprüfen;",
   "criterion_quote": "die\nEtablierung robuster Cybersicherheitsstandards",
-  "caveats": [
-    "Die belegten Anforderungen betreffen Kommunikationsinfrastrukturen des Bundes; eine allgemeine Etablierung von Standards in sämtlichen Bereichen folgt daraus nicht.",
-    "Die Passage ist eine Aufgabenbeschreibung des BSI, keine unmittelbar verbindliche Pflicht für Normadressaten.",
-    "Der Anwendungsbereich beschränkt sich auf ressortübergreifende und staatliche Kommunikationsinfrastrukturen des Bundes.",
-    "Die konkreten Anforderungen und ihr Niveau (\"robust\") sind im zitierten Text nicht festgelegt.",
-    "Der Gesetzeskontext ist nur teilweise vorhanden (partial_law_context); Pflichten aus anderen Teilen des Gesetzes wurden nicht als Beleg zitiert.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Die zitierte Passage (§ 3 Abs. 1 Nr. 7 BSIG) weist dem BSI lediglich die Aufgabe zu, Sicherheitsanforderungen für Kommunikationsinfrastrukturen des Bundes festzulegen und deren Einhaltung zu prüfen. Das Wahlprogramm fordert dagegen die Etablierung robuster Cybersicherheitsstandards. Diese Passage enthält weder verbindliche Standards noch deren Robustheit; sie betrifft nur einen eng begrenzten Bereich der Bundesinfrastruktur. Aufgabenzuweisung und Befugnis zur Festlegung sind keine Einführung verbindlicher Standards, die Direktion und Stärke der Wirkung ist deshalb nicht belegt. Vorhandene, aber nicht zitierte Passagen (z. B. Risikomanagementpflichten, Stand der Technik) könnten die Verbindlichkeit stützen, wurden aber nicht als Beleg vorgelegt. Der Treffer ist daher eher themenbasiert und nicht ausreichend gestützt."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "e2c21c45fc568eb0df0c2da9483bba25b4747bb08aa09c11fac11b0cea599476"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "e41be8b0b2f077142e2c614eb657b5bfadfe2e668c29e1036d466cc293d66cf6"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "59e9410e036d071ee53585dbc1d9464933d00eb58bbf65fd3f68b26ef5ba6992"
+      "input_sha256": "7499627fae2cd2ae31443813706c0fc4376cb2ee7e3d0bc0ced38c77e0749162"
     }
   ]
 }

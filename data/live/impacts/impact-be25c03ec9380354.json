@@ -4,20 +4,22 @@
   "dataset": "live",
   "criterion_id": "cdu-csu-2025-ac-bc0f5d591439c162",
   "law_id": "bgbl-1-2025-259",
-  "score": 2,
+  "score": 1,
   "confidence": 0.88,
-  "rationale": "Das Gesetz normiert eine Pflegefachassistenzausbildung mit einem eigenen Kompetenzprofil. Das schafft unmittelbar einen geregelten beruflichen Ausbildungsweg in der Pflege und stützt damit den engen Test zu neuen Berufsbildern; eine weitergehende Erfüllung wird nicht bewertet.",
+  "rationale": "Die gesetzlich geregelte Pflegefachassistenzausbildung vermittelt ein eigenes Kompetenzprofil für selbständige Pflegemaßnahmen in nicht komplexen Situationen. Das fördert einen geregelten beruflichen Weg in der Pflege; die Passagen zeigen zugleich bereits bestehende landesrechtliche Assistenzausbildungen.",
   "law_passage_id": "bgbl-1-2025-259-p-83c74671d530882e",
   "law_quote": "Die Pflegefachassistenzausbildung vermittelt die unter Beachtung der Pflegeprozessverantwortung von\nPflegefachpersonen in akut und dauerhaft stationären sowie ambulanten Pflegesituationen erforderlichen\nKompetenzen zur selbständigen Durchführung von Pflegemaßnahmen in nicht komplexen Pflegesituationen sowie\nfür die Mitwirkung an Pflegemaßnahmen in komplexen Pflegesituationen für Menschen aller Altersstufen.",
   "criterion_quote": "neue Berufsbilder",
-  "caveats": [
-    "Das Programmzitat ist sehr kurz; der Pflegebezug ergibt sich vor allem aus dem Kriterientitel.",
-    "Bewertet wird nur die rechtliche Wirkung; die Erfüllung des Programmversprechens insgesamt wird nicht beurteilt.",
-    "Das Gesetz liegt nur als Teilkontext vor; Finanzierung und Umsetzung durch die Länder sind nicht abschließend geprüft.",
-    "Die Fachkommission-Rahmenpläne haben nur empfehlende Wirkung.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "18cdb551a2e7050399652b4ae0eb430fba96edbf4b8683626392a131c4ba53d3",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "2a1279d364e9aab94adddcb69b26db3eb0429a7305bf7ed9624c61608241d14c"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -31,9 +33,9 @@
       "input_sha256": "4f000e2cc13a183a1fba3c91d81da49cb893a9150df1f7aa12d49a394f2d6aed"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "ffacf951c2edc83e602b847e4cd197ec204d90544a66fddbd315d1b162854d74"
+      "input_sha256": "18cdb551a2e7050399652b4ae0eb430fba96edbf4b8683626392a131c4ba53d3"
     }
   ]
 }

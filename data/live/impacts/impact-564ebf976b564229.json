@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2025-257",
   "score": 1,
   "confidence": 0.94,
-  "rationale": "Die Neuregelung kann einen Teil der Genehmigungsabläufe beschleunigen: Für bestimmte Vorhaben gilt die Zustimmung der Gemeinde als erteilt, wenn sie nicht binnen drei Monaten verweigert wird. Das belegt eine begrenzte Verfahrensmaßnahme, nicht eine Beschleunigung sämtlicher Bauleit- und Baugenehmigungsverfahren.",
+  "rationale": "Bei den genannten Wohnbauvorhaben gilt die Zustimmung der Gemeinde nach drei Monaten ohne Verweigerung als erteilt. Das begrenzt diesen Schritt im Genehmigungsverfahren; eine Beschleunigung von Bauleitverfahren oder Digitalisierung ist damit nicht belegt.",
   "law_passage_id": "bgbl-1-2025-257-p-adf5a283e1ed569e",
   "law_quote": "Die Zustimmung der Gemeinde gilt als erteilt, wenn sie nicht\nbinnen drei Monaten nach Eingang des Ersuchens der Genehmigungsbehörde verweigert wird; § 36 Absatz 2\nSatz 2 zweiter Halbsatz gilt entsprechend.",
   "criterion_quote": "Planungs- und Nebenkosten senken wir durch\nDigitalisierung und Beschleunigung von Bauleit- und Baugenehmigungsverfahren.",
-  "caveats": [
-    "Die Regelung betrifft die Zustimmung der Gemeinde zu den dort genannten Vorhaben, nicht nachweislich alle Bauleit- und Baugenehmigungsverfahren.",
-    "Die Regelung gilt nur für Vorhaben nach § 31 Abs. 3 und § 34 Abs. 3b BauGB (und über § 246e für Abweichungen), nicht für alle Bauleit- und Baugenehmigungsverfahren.",
-    "Die Fiktion kann sich durch die Öffentlichkeitsbeteiligung nach § 36a Abs. 2 um bis zu einen Monat verlängern.",
-    "Die Digitalisierung und die Senkung von Planungs- und Nebenkosten sind im zitierten Text nicht belegt.",
-    "Der Gesetzesauszug ist nur teilweise überliefert.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "92e62dd80875f4631b32da931ce72795bf955ed55378f474fe4d943f8c82f541",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "898a1dfc07a4bdfcafe0e872de76f78cc9c15634627383798075bda4dd15041c"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "67c738c8934af7b517777f34ebc23f284e54d00f109f590dea352c0ddbc65732"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "75f12426247988acb67fa5013227f4fbe63e9ecadfb2b0cd866a8815faf82bc5"
+      "input_sha256": "92e62dd80875f4631b32da931ce72795bf955ed55378f474fe4d943f8c82f541"
     }
   ]
 }

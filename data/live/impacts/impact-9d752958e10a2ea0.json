@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2025-340",
   "score": 1,
   "confidence": 0.87,
-  "rationale": "Die Regelung gewährt eine Steuerentlastung für Strom aus ausschließlich erneuerbaren Quellen und unterstützt damit einen Teilaspekt klimaneutraler Stromerzeugung. Sie schreibt jedoch weder eine vollständige Klimaneutralität der Stromerzeugung noch deren Erreichen bis 2035 vor.",
+  "rationale": "Für nachweislich versteuerten Strom aus den genannten erneuerbaren Quellen wird auf Antrag eine Steuerentlastung gewährt, sofern er für die bezeichneten Zwecke entnommen wurde. Das unterstützt erneuerbaren Strom in begrenztem Umfang, schreibt aber keine vollständig klimaneutrale Stromerzeugung bis 2035 vor.",
   "law_passage_id": "bgbl-1-2025-340-p-542b8800776b49d1",
   "law_quote": "(1) Auf Antrag wird eine Steuerentlastung für nachweislich nach § 3 des Stromsteuergesetzes versteuerten\nStrom gewährt, der ausschließlich aus Windkraft, Sonnenenergie, Erdwärme oder Wasserkraft erzeugt und zu\nden in § 9 Absatz 1 Nummer 1 oder Nummer 3 Buchstabe a des Stromsteuergesetzes genannten Zwecken\nentnommen wurde.",
   "criterion_quote": "2035\nwird der Strom komplett klimaneutral\nhergestellt.",
-  "caveats": [
-    "Die Steuerentlastung ist auf Strom beschränkt, der ausschließlich aus den genannten Quellen erzeugt und für bestimmte Zwecke entnommen wurde.",
-    "Die Passage belegt keine vollständige Klimaneutralität des Stroms im Jahr 2035.",
-    "Die Steuerentlastung betrifft nur bestimmte Entnahmezwecke nach dem Stromsteuergesetz.",
-    "Es gibt keinen Bezug zum Jahr 2035 oder zu einem Pfad zur Klimaneutralität.",
-    "Der Gesetzeskontext ist nur teilweise verfügbar.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Der Programmsatz verlangt, dass der Strom 2035 komplett klimaneutral hergestellt wird. Die Passage regelt nur eine Steuerentlastung auf Antrag für nachweislich versteuerten Strom, der ausschließlich aus Wind, Sonne, Erdwärme oder Wasserkraft stammt. Sie enthält kein Ziel zur Klimaneutralität der Stromerzeugung und keine Frist oder Verpflichtung für 2035. Es handelt sich um eine reine Themenübereinstimmung. Die Richtung ist nicht belegt und der Umfang bleibt weit hinter dem Programmziel zurück. Das Gesetz ist zudem nur teilweise bekannt (partial_law_context)."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "1fc9142f98d805f4e453235cf885d8cae3b188f956c351d5a452c62497f9d0d2",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "e6d2bb414859df549de937acce887a5592df2d0bed7db45e69681069583bcf79"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "45cd0ff27ff8a533156305a1a0080fb59faac501d6dfa9086e1d83a17f2619f6"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "dc106517191a22609a47050ea95cfb0790a6af3dc5daec5816f5154b291de3b3"
+      "input_sha256": "1fc9142f98d805f4e453235cf885d8cae3b188f956c351d5a452c62497f9d0d2"
     }
   ]
 }
