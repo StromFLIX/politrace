@@ -106,7 +106,7 @@ class PairAudit(Model):
 class LawAudit(Model):
     law_id: str
     analysis_sha256: str
-    status: Literal['completed', 'needs_ocr']
+    status: Literal['completed', 'needs_ocr', 'partial']
     eligible_count: int = Field(ge=0)
     candidate_ids: list[str]
     omitted_count: int = Field(ge=0)
@@ -310,23 +310,30 @@ def legal_context(law, criteria, index, max_chars=24000):
     return passages, len(passages) < len(law.passages)
 
 
-def analyze_law(law, criteria, candidates, eligible_count, agent, existing, root, corpus_hash):
+def analyze_law(law, criteria, candidates, eligible_count, agent, existing, root, corpus_hash,
+                *, checkpoint_id=None, write_law=True, passage_index=None, progress=None):
     by_id = {c.id: c for c in criteria}
     signature = digest(json_text({'version': VERSION, 'law': law.model_dump(mode='json', exclude={'matching'}),
                                  'criteria': corpus_hash, 'candidates': candidates,
                                  'model': agent.model, 'review_model': agent.review_model}))
-    checkpoint = agent.cache.parent / 'laws' / f'{law.id}.json'
+    checkpoint = agent.cache.parent / 'laws' / f'{checkpoint_id or law.id}.json'
+    audit = None
     if checkpoint.exists():
-        audit = LawAudit.model_validate_json(checkpoint.read_text())
-        if audit.analysis_sha256 == signature:
-            return audit
-    audit = LawAudit(law_id=law.id, analysis_sha256=signature,
-                    status='completed' if law.text_status == 'available' else 'needs_ocr',
+        saved = LawAudit.model_validate_json(checkpoint.read_text())
+        if saved.analysis_sha256 == signature:
+            if saved.status != 'partial':
+                return saved
+            audit = saved
+    audit = audit or LawAudit(law_id=law.id, analysis_sha256=signature,
+                    status='partial' if law.text_status == 'available' else 'needs_ocr',
                     eligible_count=eligible_count, candidate_ids=candidates,
                     omitted_count=eligible_count - len(candidates), pairs=[])
-    index = Index({p.id: p.text for p in law.passages})
+    index = passage_index or Index({p.id: p.text for p in law.passages})
     pending = []
+    completed_pairs = {p.criterion_id for p in audit.pairs}
     for identifier in candidates:
+        if identifier in completed_pairs:
+            continue
         if (prior := existing.get((law.id, identifier))) is not None:
             audit.pairs.append(PairAudit(criterion_id=identifier, disposition='preserved_link',
                 rationale='Previously published record preserved, not re-approved by this experiment.',
@@ -407,7 +414,15 @@ def analyze_law(law, criteria, candidates, eligible_count, agent, existing, root
                 audit.pairs.append(PairAudit(criterion_id=pair.criterion_id, disposition=pair.disposition,
                     rationale=pair.rationale, input_sha256=generation.input_sha256,
                     generation=generations, impact_id=impact_id, judgment=pair, verification=verification))
+            # Publish the paid, validated batch to disk BEFORE asking for the next one.
+            # A later provider failure cannot discard unsupported/missing-context outcomes.
+            write_json(checkpoint, audit)
+            if progress:
+                progress(audit)
+    audit.status = 'completed' if law.text_status == 'available' else 'needs_ocr'
     write_json(checkpoint, audit)
+    if not write_law:
+        return audit
     law.matching = MatchAudit(status='needs_ocr' if law.text_status != 'available' else
         ('proposed' if any(p.impact_id for p in audit.pairs) else 'no_supported_links'),
         retrieval_version=VERSION, candidate_ids=candidates, eligible_count=eligible_count,
@@ -530,7 +545,8 @@ def validate_experiment(report, data):
         if law.law_id not in report.law_ids or not set(law.candidate_ids) <= criteria.keys():
             raise ValueError('Audit outside selected scope')
         found = [pair.criterion_id for pair in law.pairs]
-        if len(set(found)) != len(found) or set(found) != set(law.candidate_ids):
+        if (len(set(found)) != len(found) or not set(found) <= set(law.candidate_ids)
+                or (law.status != 'partial' and set(found) != set(law.candidate_ids))):
             raise ValueError('Completed law audit must cover every candidate exactly once')
         if law.omitted_count != law.eligible_count - len(law.candidate_ids):
             raise ValueError('Inconsistent retrieval coverage')

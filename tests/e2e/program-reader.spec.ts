@@ -6,7 +6,15 @@ async function readerSource(request: import('@playwright/test').APIRequestContex
   return (await request.get('/api/v1/live/programs/gruene-2025/tree.json')).json();
 }
 
+async function openEvidence(page: import('@playwright/test').Page) {
+  const details = page.locator('[data-evidence-edition]');
+  if (await details.count() && !(await details.evaluate((node: HTMLDetailsElement) => node.open))) {
+    await details.locator(':scope > summary').click();
+  }
+}
+
 async function openNavigation(page: import('@playwright/test').Page) {
+  await openEvidence(page);
   const nav = page.locator('[data-reader-navigation]');
   if (!(await nav.evaluate((element: HTMLDetailsElement) => element.open))) await nav.locator(':scope > summary').click();
 }
@@ -14,7 +22,8 @@ async function openNavigation(page: import('@playwright/test').Page) {
 test('programme reader renders Markdown, retains source order and is usable on both screen sizes', async ({ page, request }, testInfo) => {
   const source = await readerSource(request);
   await page.goto(programme);
-  await expect(page.getByRole('heading', { name: source.tree.title, exact: true })).toBeVisible();
+  await openEvidence(page);
+  await expect(page.getByRole('heading', { name: source.tree.title, exact: true }).first()).toBeVisible();
   await expect(page.locator('[data-reader-passage]')).toHaveCount(source.leaves.length);
   expect(await page.locator('[data-reader-passage]').evaluateAll(nodes => nodes.map(n => n.id)))
     .toEqual(source.leaves.map((leaf: { id: string }) => leaf.id));
@@ -92,6 +101,7 @@ test('criterion disclosures link to the same source-backed criteria, not generat
 test('printing includes filtered and collapsed passages, then restores the reader', async ({ page, request }) => {
   const source = await readerSource(request);
   await page.goto(`${programme}?q=Glasfaser&criteria=1`);
+  await openEvidence(page);
   const displayedBefore = await page.locator('[data-reader-passage]:visible').count();
   expect(displayedBefore).toBeGreaterThan(0);
   expect(displayedBefore).toBeLessThan(source.leaves.length);
@@ -116,13 +126,10 @@ test('printing includes filtered and collapsed passages, then restores the reade
 test.describe('progressive enhancement', () => {
   test.use({ javaScriptEnabled: false });
   test('programme and exact sources remain readable without JavaScript', async ({ page }) => {
-    await page.goto('/demo/programme/demo-spd-2025/');
-    await expect(page.getByRole('navigation', { name: 'Kapitel im Wahlprogramm' })).toBeVisible();
-    await expect(page.locator('[data-reader-controls]')).toBeHidden();
-    const first = page.locator('[data-reader-passage]').first();
-    await expect(first.locator('.reader-prose')).toBeVisible();
-    await first.locator('.passage-source > summary').click();
-    await expect(first.locator('[data-exact-source]')).toBeVisible();
+    await page.goto(programme);
+    await expect(page.locator('.document-page').first()).toBeVisible();
+    await expect(page.locator('.document-page .document-prose').first()).toBeVisible();
+    await expect(page.locator('[data-evidence-edition] > summary')).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   });
 });

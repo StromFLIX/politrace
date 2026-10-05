@@ -6,6 +6,7 @@ import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/
 import { extractionCoverage } from '../../lib/metrics';
 import { experiments } from '../../lib/experiments';
 import { jsonBody } from '../../lib/json-stream';
+import { readingIndex, productionProgress, readingProgress } from '../../lib/readings';
 
 export const prerender = true;
 
@@ -31,8 +32,24 @@ export const getStaticPaths: GetStaticPaths = () => {
     const coverage = fs.existsSync(coverageDir) ? fs.readdirSync(coverageDir).filter(f => f.endsWith('.json')).sort().map(f => JSON.parse(fs.readFileSync(path.join(coverageDir, f), 'utf8'))) : [];
     add(`${prefix}/coverage.json`, { schema_version: '1.0', dataset, total: coverage.length, items: coverage });
     const reports = experiments(dataset);
+    // Keep the old v1 aliases for existing consumers, not as a second data product.
     add(`${prefix}/experiments.json`, { schema_version: '1.0', dataset, total: reports.length, items: reports });
-    for (const report of reports) add(`${prefix}/experiments/${report.program_id}.json`, report);
+    add(`${prefix}/analyses.json`, { schema_version: '1.0', dataset, total: reports.length, items: reports });
+    add(`${prefix}/analysis.json`, productionProgress() ?? { schema_version: '1.0', status: 'not_started',
+      note: 'Production all-party queue has not published a checkpoint yet; existing programme audits remain available.',
+      programmes: reports.map(r => ({ program_id: r.program_id, laws_completed: r.laws.filter(l => l.status === 'completed').length, total_laws: r.law_ids.length })) });
+    for (const report of reports) {
+      add(`${prefix}/experiments/${report.program_id}.json`, report);
+      add(`${prefix}/analyses/${report.program_id}.json`, report);
+    }
+    const readings = readingIndex();
+    add(`${prefix}/reading-progress.json`, readingProgress() ?? { status: 'not_started' });
+    add(`${prefix}/readings.json`, { schema_version: '1.0', dataset, total: readings.length,
+      items: readings.map(({ pages, ...record }) => ({ ...record, warning_pages: pages.filter(p => p.warnings.length).map(p => p.number) })) });
+    for (const reading of readings) {
+      add(`${prefix}/readings/${reading.document_id}.json`, reading);
+      add(`${prefix}/readings/${reading.document_id}/source.md`, markdown(reading.markdown_path, dataset), 'text/markdown; charset=utf-8');
+    }
     const dataDigest = createHash('sha256').update(JSON.stringify(reports.length ? { ...data, experiments: reports } : data)).digest('hex');
     const statistics = data.programs.map(p => ({
       program_id: p.id, party_id: p.party_id, election_year: p.election_year,
@@ -48,11 +65,13 @@ export const getStaticPaths: GetStaticPaths = () => {
     });
     add(`${prefix}/index.json`, {
       schema_version: '1.0', dataset, data_sha256: dataDigest,
-      disclaimer: dataset === 'demo' ? 'FICTIONAL fixture data. Not actual party programmes, votes or law assessments.' : 'AI links are proposals until explicitly reviewed. Missing evidence is unknown, not failure.',
+      disclaimer: 'AI links are proposals until explicitly reviewed. Missing evidence is unknown, not failure.',
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
       counts: Object.fromEntries(collections.map(c => [c, data[c].length])),
       statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
-      extraction: `/api/${prefix}/extraction.json`, experiments: `/api/${prefix}/experiments.json`,
+      extraction: `/api/${prefix}/extraction.json`, analyses: `/api/${prefix}/analyses.json`,
+      progress: `/api/${prefix}/analysis.json`, readings: `/api/${prefix}/readings.json`,
+      experiments: `/api/${prefix}/experiments.json`,
       filters: 'Static snapshot API. No server-side query parameters. Filter items client-side or use the search index.',
     });
     for (const collection of collections) {
@@ -99,7 +118,7 @@ export const getStaticPaths: GetStaticPaths = () => {
     '404': { description: 'No such dataset, collection or record' },
   });
   add('v1/openapi.json', {
-    openapi: '3.1.0', info: { title: 'Politrace snapshot API', version: '1.0.0', description: 'Read-only Git-backed snapshots. Demo and live are isolated namespaces. Queries are not interpreted by the server.' },
+    openapi: '3.1.0', info: { title: 'Politrace snapshot API', version: '1.0.0', description: 'Read-only Git-backed snapshots of real sources and unreviewed analysis proposals. Queries are not interpreted by the server.' },
     servers: [{ url: '/api' }], paths: {
       '/v1/{dataset}/index.json': { get: { operationId: 'datasetIndex', parameters: [datasetParameter], responses: response('Dataset digest and collection URLs') } },
       '/v1/{dataset}/{collection}.json': { get: { operationId: 'listRecords', parameters: [datasetParameter, collectionParameter], responses: response('{schema_version, dataset, total, items}') } },
@@ -110,6 +129,10 @@ export const getStaticPaths: GetStaticPaths = () => {
       '/v1/{dataset}/search.json': { get: { operationId: 'getSearchIndex', parameters: [datasetParameter], responses: response('Searchable criteria index') } },
       '/v1/{dataset}/coverage.json': { get: { operationId: 'getCoverage', parameters: [datasetParameter], responses: response('Archive counts, source snapshots and explicit remaining law IDs') } },
       '/v1/{dataset}/extraction.json': { get: { operationId: 'getExtractionCoverage', parameters: [datasetParameter], responses: response('Processed and remaining source leaves, for imported programmes only; not human review') } },
+      '/v1/{dataset}/readings.json': { get: { operationId: 'getReadingEditions', parameters: [datasetParameter], responses: response('Versioned page-complete OCR reading editions; original evidence unchanged') } },
+      '/v1/{dataset}/readings/{id}.json': { get: { operationId: 'getReadingEdition', parameters: [datasetParameter, idParameter], responses: response('OCR page text, original page numbers, provenance and warnings') } },
+      '/v1/{dataset}/analysis.json': { get: { operationId: 'getProductionProgress', parameters: [datasetParameter], responses: response('All-party coverage, pending/errors, reported costs and current checkpoint state') } },
+      '/v1/{dataset}/analyses.json': { get: { operationId: 'getAnalyses', parameters: [datasetParameter], responses: response('Programme-scoped grouping and pair-level screening audits') } },
       '/v1/{dataset}/experiments.json': { get: { operationId: 'getExperiments', parameters: [datasetParameter], responses: response('Frozen grouping proposals, all-law coverage, pair dispositions and cumulative reported cost') } },
       '/v1/{dataset}/experiments/{id}.json': { get: { operationId: 'getExperiment', parameters: [datasetParameter, idParameter], responses: response('Programme-scoped experiment with all source criteria retained') } },
       '/v1/sources/bundestag-21.json': { get: { operationId: 'getSourceCatalog', responses: response('21st Bundestag scope, programme URLs, PDF hashes and inspection notes') } },

@@ -5,10 +5,13 @@ export { metrics } from './metrics';
 
 export const dataRoot = path.resolve('data');
 export const repoUrl = 'https://github.com/StromFLIX/politrace';
-export const datasets: Dataset[] = ['demo', 'live'];
+// Only real records are published. Fictional fixtures live under tests, not the site/API.
+export const datasets: Dataset[] = ['live'];
 
 function records<T>(dataset: Dataset, collection: string): T[] {
-  const dir = path.join(dataRoot, dataset, collection);
+  const root = dataset === 'demo' && process.env.NODE_ENV === 'test' ? path.resolve('tests/fixtures') : dataRoot;
+  const dir = path.join(root, dataset, collection);
+  if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort().map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
 }
 // Astro renders thousands of static record pages. Parse each immutable build snapshot once,
@@ -27,9 +30,7 @@ export function getData(dataset: Dataset): Data {
   return data;
 }
 export function defaultDataset(): Dataset {
-  const selection = process.env.POLITRACE_DATASET;
-  if (selection === 'demo' || selection === 'live') return selection;
-  return getData('live').programs.length ? 'live' : 'demo';
+  return 'live';
 }
 export const topics: Record<string, string> = {
   arbeit: 'Arbeit & Löhne', wirtschaft: 'Wirtschaft', steuern: 'Steuern', soziales: 'Soziales & Rente',

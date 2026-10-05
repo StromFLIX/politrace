@@ -6,7 +6,7 @@ interface Props { parties?: Party[]; mode?: 'criteria' | 'activity'; placeholder
 const { parties = [], mode = 'criteria', placeholder = 'Kriterien, Themen oder Schlagworte suchen …' } = Astro.props;
 const statuses = mode === 'criteria' ? statusLabels : { linked: 'Mit Verknüpfungen', pending: 'Noch ohne Verknüpfung' };
 ---
-<form class="filters" data-filters role="search">
+<form class="filters" data-filters data-page-size={mode === 'criteria' ? 100 : 0} role="search">
   <label class="search-field"><Icon name="search" size={18} /><span class="sr-only">Suche</span><input type="search" name="q" placeholder={placeholder} autocomplete="off" /></label>
   <select name="thema" aria-label="Thema"><option value="">Alle Themen</option>{Object.entries(topics).map(([id, label]) => <option value={id}>{label}</option>)}</select>
   {parties.length > 0 && <select name="partei" aria-label="Partei"><option value="">Alle Parteien</option>{parties.map(p => <option value={p.id}>{p.short_name}</option>)}</select>}
@@ -19,13 +19,20 @@ const statuses = mode === 'criteria' ? statusLabels : { linked: 'Mit Verknüpfun
     const form = root.querySelector<HTMLFormElement>('[data-filters]');
     if (!form) return;
     const items = root.querySelectorAll<HTMLElement>('[data-filter-item]');
+    const normalized = new Map([...items].map(item => [item, normalize(item.dataset.search || '')]));
+    const pageSize = Number(form.dataset.pageSize) || Infinity;
+    let shown = pageSize;
+    const more = document.createElement('button');
+    more.type = 'button'; more.className = 'button'; more.textContent = 'Weitere 100 anzeigen';
+    more.hidden = true; root.append(more);
     const controls = form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select');
     const params = new URLSearchParams(location.search);
     controls.forEach(control => {
       const value = params.get(control.name);
       if (value && (!(control instanceof HTMLSelectElement) || [...control.options].some(o => o.value === value))) control.value = value;
     });
-    function filter(update: boolean) {
+    function filter(update: boolean, reset = true) {
+      if (reset) shown = pageSize;
       const data = new FormData(form!);
       const words = normalize(String(data.get('q') || '')).split(/\s+/).filter(Boolean);
       const topic = String(data.get('thema') || '');
@@ -33,15 +40,16 @@ const statuses = mode === 'criteria' ? statusLabels : { linked: 'Mit Verknüpfun
       const status = String(data.get('status') || '');
       let visible = 0;
       items.forEach(item => {
-        const matches = words.every(word => normalize(item.dataset.search || '').includes(word)) &&
+        const matches = words.every(word => normalized.get(item)!.includes(word)) &&
           (!topic || (item.dataset.topic || '').split(' ').includes(topic)) &&
           (!party || (item.dataset.party || '').split(' ').includes(party)) &&
           (!status || item.dataset.status === status);
-        item.hidden = !matches;
         if (matches) visible++;
+        item.hidden = !matches || visible > shown;
       });
       const count = root.querySelector('[data-result-count]');
-      if (count) count.textContent = `${visible} von ${items.length} Einträgen`;
+      if (count) count.textContent = `${visible} von ${items.length} Einträgen${visible > shown ? ` · ${shown} angezeigt` : ''}`;
+      more.hidden = visible <= shown;
       const empty = root.querySelector<HTMLElement>('[data-no-results]');
       if (empty) empty.hidden = visible !== 0;
       if (update) {
@@ -50,6 +58,7 @@ const statuses = mode === 'criteria' ? statusLabels : { linked: 'Mit Verknüpfun
         history.replaceState(null, '', url);
       }
     }
+    more.addEventListener('click', () => { shown += pageSize; filter(false, false); });
     form.addEventListener('submit', event => { event.preventDefault(); filter(true); });
     form.addEventListener('input', () => filter(true));
     form.addEventListener('change', () => filter(true));

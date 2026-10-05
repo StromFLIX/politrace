@@ -15,7 +15,6 @@ const root = `/${dataset}`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#2458e5" />
-    {dataset === 'demo' && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} · Politrace</title>
   </head>
@@ -23,7 +22,7 @@ const root = `/${dataset}`;
     <a href="#content" class="skip-link">Zum Inhalt springen</a>
     <header class="site-header">
       <div class="header-inner container">
-        <a class="brand" href="/" aria-label="Politrace Startseite"><img src="/favicon.svg" alt="" width="34" height="34" /><span>poli<span class="brand-light">trace</span><span class="beta">POC</span></span></a>
+        <a class="brand" href="/" aria-label="Politrace Startseite"><img src="/favicon.svg" alt="" width="34" height="34" /><span>poli<span class="brand-light">trace</span></span></a>
         <nav class="main-nav" aria-label="Hauptnavigation">
           <a class:list={[{ active: active === 'parties' }]} href={`${root}/parteien/`} aria-current={active === 'parties' ? 'page' : undefined}><Icon name="parties" size={18} />Parteien</a>
           <a class:list={[{ active: active === 'activity' }]} href={`${root}/aktivitaet/`} aria-current={active === 'activity' ? 'page' : undefined}><Icon name="activity" size={18} />Aktivität</a>
@@ -33,8 +32,8 @@ const root = `/${dataset}`;
     </header>
     <div class:list={['dataset-banner', dataset]}>
       <div class="container banner-inner">
-        <span><strong>{dataset === 'demo' ? 'DEMO' : 'LIVE-DATEN'}</strong>{dataset === 'demo' ? 'Fiktive Programme, Gesetze und Bewertungen. Keine Aussagen über die tatsächliche Politik.' : 'Amtliche Quellen · KI-Verknüpfungen sind Vorschläge, bis Menschen sie geprüft haben.'}</span>
-        <a href={dataset === 'demo' ? '/live/aktivitaet/' : '/demo/parteien/'}>{dataset === 'demo' ? 'Echte Gesetzesdaten' : 'Zur Produktdemo'}<Icon name="arrow" size={14} /></a>
+        <span><strong>QUELLENBASIERTE DATEN</strong>KI-Verknüpfungen bleiben Vorschläge, bis Menschen sie geprüft haben.</span>
+        <a href="/fortschritt/">Abdeckung & Fortschritt<Icon name="arrow" size={14} /></a>
       </div>
     </div>
     <main id="content" class="container"><slot /></main>

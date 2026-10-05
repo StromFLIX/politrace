@@ -20,7 +20,7 @@ const money = (value?: number) => value == null ? 'unbekannt' : `$${value.toFixe
   <div class="page-heading"><div class="breadcrumbs"><a href={`/${data.dataset}/parteien/${program.party_id}/`}>Partei</a><span> / Auswertung</span></div>
     <div class="eyebrow">Automatisierte Vorschläge · nicht redaktionell bestätigt</div>
     <h1>Ein Programm. Alle ausgewählten Gesetze.</h1><p>{program.title}</p>
-    <a class="button" href={`/api/v1/${data.dataset}/experiments/${report.program_id}.json`}>Vollständiges Prüfprotokoll als JSON</a>
+    <a class="button" href={`/api/v1/${data.dataset}/analyses/${report.program_id}.json`}>Vollständiges Prüfprotokoll als JSON</a>
   </div>
   <Stats items={[
     { value: `${report.processed_leaves}/${report.total_leaves}`, label: 'Absätze verarbeitet', detail: 'Keine Garantie semantischer Vollständigkeit', icon: 'file' },
@@ -32,7 +32,7 @@ const money = (value?: number) => value == null ? 'unbekannt' : `$${value.toFixe
     <p>Gleichwertige Zusagen werden als <strong>ungeprüfte Gruppen</strong> zusammengefasst; alle ursprünglichen Kriterien und Fundstellen bleiben erreichbar. Beträge, Fristen, Zielgruppen oder Prüfaufträge dürfen nicht zu unterschiedlichen Umsetzungszusagen verschmolzen werden. Die bisherigen Erfüllungsstatistiken ändern sich dadurch nicht.</p>
     <p>Die Suche kombiniert das ganze Gesetz, überlappende Textabschnitte und eine Rückwärtssuche von jedem Kriterium. {totals.omitted.toLocaleString('de-DE')} nicht ausgewählte Paare bleiben <strong>unbekannt</strong>. Die Trefferquote der Suche ist noch nicht unabhängig gemessen; „alle Gesetze durchsucht“ bedeutet nicht „jede mögliche Verbindung erkannt“.</p>
     <p>{totals.links} bestehende oder vorgeschlagene Verbindungen · {totals.missingContext} Fälle mit fehlendem Rechtskontext · {totals.unsupported} ohne ausreichend belegte Verbindung. Keine automatische Erfüllung, keine erfundenen Abstimmungen.</p>
-    <p>Modell: {report.cost.model ?? 'siehe Protokoll'} · Gegenprüfung: {report.cost.review_model ?? 'siehe Protokoll'}. Kosten umfassen diesen fortgesetzten Lauf einschließlich Fehlversuchen, nicht frühere Pilotläufe. Gemeldete Kosten: {money(report.cost.reported_cost_usd)}; einschließlich offener Reservierungen: {money(report.cost.budget_exposure_usd)}. {report.cost.cost_accounting_complete ? 'Für alle abgeschlossenen Aufrufe liegt eine Kostenmeldung vor.' : 'Ein Teil der Kosten ist noch unbekannt und wird konservativ reserviert.'}</p>
+    <p>Modell: {report.cost.model ?? 'siehe Protokoll'} · Gegenprüfung: {report.cost.review_model ?? 'siehe Protokoll'}. Kosten umfassen den fortgesetzten Lauf einschließlich Fehlversuchen. Bei der All-Parteien-Pipeline ist dies ein gemeinsam genutzter Ledger; die Beträge der Programme dürfen nicht addiert werden. Gemeldete Kosten: {money(report.cost.reported_cost_usd)}; einschließlich offener Reservierungen: {money(report.cost.budget_exposure_usd)}. {report.cost.cost_accounting_complete ? 'Für alle abgeschlossenen Aufrufe liegt eine Kostenmeldung vor.' : 'Ein Teil der Kosten ist noch unbekannt und wird konservativ reserviert.'}</p>
     <p><a href={`/${data.dataset}/programme/${program.id}/`}>Programm und Transkriptionshinweise lesen</a> · <a href="/methodik/">Methodik und Prüfregeln</a></p>
   </section>
   <nav class="tabs" aria-label="Auswertungsabschnitte"><a href="#gruppen">Zusagengruppen</a><a href="#gesetze">Gesetze & Lücken</a></nav>

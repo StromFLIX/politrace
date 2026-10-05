@@ -1,0 +1,122 @@
+name: Production data · all programmes and laws
+on:
+  push:
+    branches: [main]
+    paths: ['.github/production.json']
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'
+      timezone: Europe/Berlin
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: politrace-production-data
+  cancel-in-progress: false
+jobs:
+  process:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      PYTHONUNBUFFERED: '1'
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e
+        with:
+          enable-cache: true
+          python-version: '3.13'
+      - run: uv sync --frozen
+      - name: Restore newest results and cumulative ledgers before any paid work
+        run: uv run python scripts/production_checkpoint.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Validate code, source contracts and recovery behavior
+        run: uv run pytest && uv run politrace validate && uv run ruff check .
+      - name: Reconcile official publication inventory
+        id: inventory
+        continue-on-error: true
+        run: uv run politrace archive --since 2025-03-25 --limit 2000 --snapshot-fallback
+      - name: Refresh page-complete reading editions
+        id: ocr
+        continue-on-error: true
+        run: uv run python scripts/reading_editions.py --workers 4
+        env:
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+      - name: Apply reversible source-checked reading corrections and quality flags
+        run: uv run python scripts/reading_quality.py
+      - name: Process a bounded all-party slice
+        id: slice
+        continue-on-error: true
+        run: uv run python scripts/production.py
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_REVIEW_MODEL: anthropic/claude-sonnet-5.5
+      - name: Preserve source, completed pairs, progress and costs even after failure
+        id: checkpoint
+        if: always() && hashFiles('.cache/production/budget.json') != ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: production-checkpoint
+          path: |
+            data/live/
+            .cache/production/
+            .cache/ocr/usage.json
+            .cache/ocr/progress.json
+            .cache/ocr/mistral-reading-v1/
+          include-hidden-files: true
+          retention-days: 90
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        if: steps.checkpoint.outcome == 'success'
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Validate the publishable partial snapshot, not just successful job status
+        if: steps.checkpoint.outcome == 'success'
+        run: |
+          uv run politrace validate
+          npm ci --no-audit --no-fund
+          npm test
+          npm run build
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+      - name: Publish unreviewed data without overwriting concurrent edits
+        if: steps.checkpoint.outcome == 'success'
+        run: uv run python scripts/publish_data.py
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Continue automatically from this retained checkpoint
+        if: steps.checkpoint.outcome == 'success' && steps.slice.outputs.continue == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          config = json.loads(Path('.github/production.json').read_text())
+          state = json.loads(Path('.cache/production/queue.json').read_text())
+          if state['slices'] >= config['max_slices']:
+              raise SystemExit('Automatic slice limit reached; retained state must be inspected')
+          subprocess.run(['gh', 'workflow', 'run', 'production.yml', '--ref', 'main'], check=True)
+          PY
+      - name: Report incomplete source or blocked analysis explicitly
+        if: always()
+        env:
+          INVENTORY: ${{ steps.inventory.outcome }}
+          OCR: ${{ steps.ocr.outcome }}
+          ANALYSIS: ${{ steps.slice.outcome }}
+        run: |
+          python - <<'PY'
+          import os
+          failed = [name for name in ('INVENTORY', 'OCR', 'ANALYSIS') if os.environ[name] == 'failure']
+          if failed:
+              raise SystemExit('Incomplete stages: ' + ', '.join(failed) + '. Completed records and costs are retained; errors are not no-link conclusions.')
+          PY

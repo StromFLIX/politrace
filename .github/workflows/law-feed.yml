@@ -14,9 +14,7 @@ on:
         description: OpenRouter USD limit (reported charges plus outstanding reservations)
         default: '5'
         type: string
-  schedule:
-    - cron: '0 6 * * *'
-      timezone: Europe/Berlin
+  # Recurrence moved to production.yml: one resumable queue for every programme.
 
 permissions:
   contents: write

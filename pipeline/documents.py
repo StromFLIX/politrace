@@ -4,6 +4,7 @@ import ipaddress
 import re
 import socket
 import tempfile
+import time
 from collections import Counter
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -37,7 +38,7 @@ def public_url(url: str, allowed_hosts: set[str] | None = None) -> None:
 def download(url: str, *, allowed_hosts: set[str] | None = None, limit=MAX_DOWNLOAD_BYTES) -> bytes:
     # Never attach the OpenRouter token to source requests or follow unchecked redirects.
     with httpx.Client(timeout=httpx.Timeout(60, connect=15), headers={"User-Agent": "Politrace/0.1"}) as client:
-        for _ in range(5):
+        for attempt in range(5):
             public_url(url, allowed_hosts)
             with client.stream("GET", url) as response:
                 if response.is_redirect:
@@ -47,6 +48,9 @@ def download(url: str, *, allowed_hosts: set[str] | None = None, limit=MAX_DOWNL
                     if urlparse(target).scheme == "http" and urlparse(target).netloc == urlparse(url).netloc:
                         target = "https:" + target[5:]
                     url = target
+                    continue
+                if response.status_code in (408, 429, 500, 502, 503, 504) and attempt < 4:
+                    time.sleep(min(60, 5 * 2 ** attempt))
                     continue
                 response.raise_for_status()
                 result = bytearray()

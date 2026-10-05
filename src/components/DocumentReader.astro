@@ -1,0 +1,141 @@
+---
+import { readingHtml } from '../lib/program-reader';
+import type { ReadingEdition } from '../lib/readings';
+import type { Leaf } from '../lib/types';
+interface Props { edition: ReadingEdition; evidence: Leaf[] }
+const { edition, evidence } = Astro.props;
+const pdfUrl = edition.retrieved_from ?? edition.source_url;
+const isMirror = pdfUrl !== edition.source_url;
+const outline = edition.pages.flatMap(page => {
+  const title = page.markdown.match(/^#{1,4}\s+(.+)$/m)?.[1]?.replace(/[*_]/g, '');
+  return title ? [{ number: page.number, title }] : [];
+});
+const byPage = new Map<number, Leaf[]>();
+for (const leaf of evidence) byPage.set(leaf.reference.page, [...(byPage.get(leaf.reference.page) ?? []), leaf]);
+---
+<section class="document-reader" data-document-reader>
+  <header class="document-intro">
+    <div><span class="eyebrow">Lesefassung</span><h2>Das Dokument. Nicht sein PDF-Layout.</h2>
+    <p>Lesbare Absätze, Überschriften und Tabellen. {edition.page_count} Originalseiten vollständig zugeordnet.</p></div>
+    <a class="button" href={`/api/v1/live/readings/${edition.document_id}/source.md`}>Lesefassung als Markdown ↓</a>
+  </header>
+  <p class="document-note">Automatische OCR, noch nicht redaktionell geprüft. Die bisher zitierte Textspur bleibt unverändert erhalten. Seitenhinweise zeigen mögliche Übertragungsfehler; das Original-PDF ist maßgeblich.</p>
+  {isMirror && <p class="document-note">Die Herausgeber-Datei war zeitweise nicht erreichbar. <a href={pdfUrl}>Die verlinkte Archivkopie</a> stimmt per SHA-256 bytegenau mit dem Original überein. <a href={edition.source_url}>Ursprüngliche Herausgeber-Adresse ↗</a></p>}
+  <div class="document-grid">
+    <aside class="document-sidebar">
+      <details open class="document-navigation">
+        <summary>Inhalt & Seiten</summary>
+        <div class="document-controls" data-reading-controls hidden>
+          <label for={`reading-search-${edition.document_id}`}>In der Lesefassung suchen</label>
+          <input id={`reading-search-${edition.document_id}`} type="search" data-reading-search placeholder="Begriff im Dokument …" />
+          <label for={`reading-page-${edition.document_id}`}>PDF-Seite</label>
+          <select id={`reading-page-${edition.document_id}`} data-reading-select>{edition.pages.map(page => <option value={page.number}>Seite {page.number}</option>)}</select>
+          <p data-reading-count role="status">{edition.page_count} Seiten</p>
+        </div>
+        <nav aria-label="Inhalt der Lesefassung"><ol>{outline.map(item => <li><a href={`#reading-page-${item.number}`}><span>{item.title}</span><small>{item.number}</small></a></li>)}</ol></nav>
+      </details>
+    </aside>
+    <div class="document-content">
+      <p data-reading-empty hidden>Keine passende Textstelle gefunden.</p>
+      {edition.pages.map((page, index) => <details class="document-page" id={`reading-page-${page.number}`} data-reading-page data-page={page.number} open={index === 0}>
+        <summary><span>Seite {page.number}</span><span class="document-page-topic">{page.markdown.match(/^#{1,4}\s+(.+)$/m)?.[1]?.replace(/[*_]/g, '') ?? 'Text fortsetzen'}</span><span aria-hidden="true">＋</span></summary>
+        <div class="document-page-body">
+          {page.warnings.length > 0 && <p class="document-warning" data-reading-warning>Übertragung prüfen: Auf dieser Seite wurden Unterschiede oder mögliche Layoutfehler erkannt. <a href={`${pdfUrl}#page=${page.number}`}>Mit dem PDF vergleichen ↗</a></p>}
+          {page.markdown ? <div class="document-prose" set:html={readingHtml(page.markdown)} /> : <p class="document-blank">Diese Seite enthält keinen erkannten Fließtext.</p>}
+          <footer class="document-source-links"><a href={`${pdfUrl}#page=${page.number}`}>{isMirror ? 'Archivkopie' : 'Original-PDF'} · Seite {page.number} ↗</a>
+            {byPage.get(page.number)?.[0] && <a href={`#${byPage.get(page.number)![0].id}`}>Zitierte Textspur dieser Seite →</a>}
+          </footer>
+          {page.corrections?.length ? <details class="document-furniture"><summary>Protokollierte Lesekorrektur · weiterhin ungeprüft</summary>{page.corrections.map(c => <p><del>{c.before}</del> → <ins>{c.after}</ins><br />{c.source_evidence}</p>)}</details> : null}
+          {(page.header || page.footer) && <details class="document-furniture"><summary>Kopf- und Fußzeile der Quelle</summary><pre>{[page.header, page.footer].filter(Boolean).join('\n\n')}</pre></details>}
+        </div>
+      </details>)}
+    </div>
+  </div>
+</section>
+<style>
+  .document-reader { margin: 36px 0; min-width: 0; }
+  .document-intro { display: flex; gap: 20px; justify-content: space-between; align-items: center; }
+  .document-intro h2 { font-size: clamp(22px, 3vw, 30px); margin: 8px 0; letter-spacing: -.6px; }
+  .document-intro p, .document-note { color: var(--muted); line-height: 1.7; }
+  .document-note { font-size: 12px; border-left: 3px solid #d0dff9; padding: 10px 14px; margin: 22px 0 30px; background: #f7f9fd; }
+  .document-grid { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 44px; }
+  .document-sidebar { min-width: 0; }
+  .document-navigation { position: sticky; top: 100px; max-height: calc(100vh - 130px); overflow-y: auto; scrollbar-width: thin; padding-right: 12px; }
+  .document-navigation > summary { cursor: pointer; font-size: 13px; font-weight: 700; padding: 8px 0; }
+  .document-controls { padding: 12px 0; }
+  .document-controls label { display: block; font-size: 11px; font-weight: 600; margin: 12px 0 6px; }
+  .document-controls input, .document-controls select { width: 100%; max-width: 100%; border: 1px solid var(--border); border-radius: 7px; padding: 10px; background: white; font: inherit; font-size: 13px; }
+  .document-controls p { font-size: 11px; margin-top: 10px; color: var(--muted); }
+  .document-navigation ol { list-style: none; padding: 0; margin: 12px 0; }
+  .document-navigation li a { display: flex; justify-content: space-between; gap: 14px; padding: 8px 0; font-size: 11px; color: var(--muted); text-decoration: none; line-height: 1.6; }
+  .document-navigation a:hover { color: var(--blue); }
+  .document-navigation small { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .document-content { min-width: 0; }
+  .document-page { border-top: 1px solid var(--border); scroll-margin-top: 115px; }
+  .document-page > summary { display: flex; gap: 16px; align-items: center; padding: 16px 0; cursor: pointer; font-size: 12px; color: var(--muted); list-style: none; }
+  .document-page > summary > span:first-child { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .document-page-topic { flex: 1; font-weight: 600; color: var(--ink); }
+  .document-page-body { max-width: 72ch; padding: 20px 0 36px; }
+  .document-prose { font-family: Georgia, 'Times New Roman', serif; font-size: 19px; line-height: 1.85; color: #263343; overflow-wrap: anywhere; }
+  .document-prose :global(p) { margin: 0 0 1.25em; white-space: normal; color: inherit; }
+  .document-prose :global(h6:first-child) { margin-top: 0; }
+  .document-prose :global(h6) { font-family: inherit; font-size: 1.18em; line-height: 1.4; margin: 1.7em 0 .8em; font-weight: 700; }
+  .document-prose :global(ul), .document-prose :global(ol) { padding-left: 1.5em; margin-bottom: 1.2em; }
+  .document-prose :global(li) { margin: .55em 0; }
+  .document-prose :global(table) { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-family: sans-serif; font-size: 13px; }
+  .document-prose :global(td), .document-prose :global(th) { border: 1px solid var(--border); padding: 9px; text-align: left; overflow-wrap: normal; word-break: normal; line-height: 1.6; }
+  .document-prose :global(blockquote) { border-left: 2px solid var(--border); padding-left: 18px; margin: 18px 0; }
+  .document-prose :global(pre) { white-space: pre-wrap; font-size: 13px; }
+  .document-source-links { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-top: 20px; font-size: 11px; }
+  .document-source-links a { color: var(--blue); }
+  .document-furniture { margin-top: 20px; color: var(--muted); font-size: 11px; }
+  .document-furniture summary { cursor: pointer; }
+  .document-furniture pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; padding: 12px; background: #f8fafc; }
+  .document-warning { font-size: 12px; padding: 12px 14px; background: #fff9ec; border-left: 3px solid #ccb26b; line-height: 1.6; margin-bottom: 20px; }
+  .document-blank { color: var(--muted); font-style: italic; }
+  @media (max-width: 900px) { .document-grid { grid-template-columns: 1fr; gap: 18px; } .document-navigation { position: static; max-height: 320px; padding-right: 0; } .document-intro { align-items: start; flex-direction: column; } .document-prose { font-size: 18px; line-height: 1.8; } .document-page-body { padding-top: 14px; } }
+  @media print { .document-sidebar, .document-note, .document-source-links, .document-furniture, .document-intro > a { display: none; } .document-grid { display: block; } .document-prose { font-size: 11pt; } .document-page { break-inside: auto; } }
+</style>
+<script>
+  import { searchText } from '../lib/program-reader-search';
+  for (const reader of document.querySelectorAll<HTMLElement>('[data-document-reader]')) {
+    const pages = [...reader.querySelectorAll<HTMLDetailsElement>('[data-reading-page]')];
+    const search = reader.querySelector<HTMLInputElement>('[data-reading-search]')!;
+    const select = reader.querySelector<HTMLSelectElement>('[data-reading-select]')!;
+    const count = reader.querySelector<HTMLElement>('[data-reading-count]')!;
+    const empty = reader.querySelector<HTMLElement>('[data-reading-empty]')!;
+    const texts = new Map(pages.map(p => [p, searchText(p.querySelector('.document-prose')?.textContent ?? '')]));
+    reader.querySelector<HTMLElement>('[data-reading-controls]')!.hidden = false;
+    const nav = reader.querySelector<HTMLDetailsElement>('.document-navigation')!;
+    if (matchMedia('(max-width: 900px)').matches) nav.open = false;
+    const states = new Map<HTMLDetailsElement, boolean>();
+    function filter() {
+      const terms = searchText(search.value).split(' ').filter(Boolean);
+      if (terms.length && !states.size) for (const page of pages) states.set(page, page.open);
+      let matches = 0;
+      for (const page of pages) {
+        page.hidden = !terms.every(term => texts.get(page)!.includes(term));
+        if (!page.hidden) { matches++; if (terms.length) page.open = true; }
+        if (!terms.length && states.has(page)) page.open = states.get(page)!;
+      }
+      if (!terms.length) states.clear();
+      count.textContent = `${matches} von ${pages.length} Seiten`;
+      empty.hidden = matches > 0;
+    }
+    function reveal() {
+      const target = document.getElementById(location.hash.slice(1));
+      if (!target || !reader.contains(target)) return;
+      search.value = ''; filter();
+      const page = target.closest<HTMLDetailsElement>('[data-reading-page]');
+      if (page) { page.open = true; select.value = page.dataset.page!; }
+      if (matchMedia('(max-width: 900px)').matches) nav.open = false;
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    }
+    select.addEventListener('change', () => { location.hash = `reading-page-${select.value}`; reveal(); });
+    search.addEventListener('input', filter);
+    window.addEventListener('hashchange', reveal); reveal();
+    const printState = new Map<HTMLDetailsElement, { open: boolean; hidden: boolean }>();
+    window.addEventListener('beforeprint', () => { if (printState.size) return; for (const p of pages) { printState.set(p, { open: p.open, hidden: p.hidden }); p.hidden = false; p.open = true; } });
+    window.addEventListener('afterprint', () => { for (const [p, state] of printState) { p.hidden = state.hidden; p.open = state.open; } printState.clear(); });
+  }
+</script>

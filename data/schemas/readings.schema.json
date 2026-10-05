@@ -1,0 +1,274 @@
+{
+  "$defs": {
+    "ReadingCorrection": {
+      "additionalProperties": false,
+      "properties": {
+        "before": {
+          "title": "Before",
+          "type": "string"
+        },
+        "after": {
+          "title": "After",
+          "type": "string"
+        },
+        "source_evidence": {
+          "title": "Source Evidence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "before",
+        "after",
+        "source_evidence"
+      ],
+      "title": "ReadingCorrection",
+      "type": "object"
+    },
+    "ReadingPage": {
+      "additionalProperties": false,
+      "properties": {
+        "number": {
+          "minimum": 1,
+          "title": "Number",
+          "type": "integer"
+        },
+        "markdown": {
+          "title": "Markdown",
+          "type": "string"
+        },
+        "header": {
+          "default": "",
+          "title": "Header",
+          "type": "string"
+        },
+        "footer": {
+          "default": "",
+          "title": "Footer",
+          "type": "string"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        },
+        "native_word_recall": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Native Word Recall"
+        },
+        "corrections": {
+          "items": {
+            "$ref": "#/$defs/ReadingCorrection"
+          },
+          "title": "Corrections",
+          "type": "array"
+        },
+        "ocr_markdown_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ocr Markdown Sha256"
+        },
+        "tables": {
+          "items": {
+            "$ref": "#/$defs/ReadingTable"
+          },
+          "title": "Tables",
+          "type": "array"
+        }
+      },
+      "required": [
+        "number",
+        "markdown"
+      ],
+      "title": "ReadingPage",
+      "type": "object"
+    },
+    "ReadingRevision": {
+      "additionalProperties": false,
+      "properties": {
+        "changed_at": {
+          "format": "date",
+          "title": "Changed At",
+          "type": "string"
+        },
+        "previous_markdown_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Previous Markdown Sha256",
+          "type": "string"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "changed_at",
+        "previous_markdown_sha256",
+        "reason"
+      ],
+      "title": "ReadingRevision",
+      "type": "object"
+    },
+    "ReadingTable": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^tbl-\\d+\\.md$",
+          "title": "Id",
+          "type": "string"
+        },
+        "content": {
+          "minLength": 1,
+          "title": "Content",
+          "type": "string"
+        },
+        "format": {
+          "const": "markdown",
+          "default": "markdown",
+          "title": "Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "content"
+      ],
+      "title": "ReadingTable",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "document_id": {
+      "title": "Document Id",
+      "type": "string"
+    },
+    "collection": {
+      "enum": [
+        "programs",
+        "laws"
+      ],
+      "title": "Collection",
+      "type": "string"
+    },
+    "source_pdf_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Source Pdf Sha256",
+      "type": "string"
+    },
+    "source_url": {
+      "title": "Source Url",
+      "type": "string"
+    },
+    "retrieved_from": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Retrieved From"
+    },
+    "processor": {
+      "default": "mistral-reading-v1",
+      "title": "Processor",
+      "type": "string"
+    },
+    "models": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Models",
+      "type": "array"
+    },
+    "page_count": {
+      "minimum": 1,
+      "title": "Page Count",
+      "type": "integer"
+    },
+    "pages": {
+      "items": {
+        "$ref": "#/$defs/ReadingPage"
+      },
+      "title": "Pages",
+      "type": "array"
+    },
+    "markdown_path": {
+      "title": "Markdown Path",
+      "type": "string"
+    },
+    "markdown_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "title": "Markdown Sha256",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date",
+      "title": "Created At",
+      "type": "string"
+    },
+    "review_status": {
+      "const": "proposed",
+      "default": "proposed",
+      "title": "Review Status",
+      "type": "string"
+    },
+    "revisions": {
+      "items": {
+        "$ref": "#/$defs/ReadingRevision"
+      },
+      "title": "Revisions",
+      "type": "array"
+    },
+    "evidence_unchanged": {
+      "const": true,
+      "default": true,
+      "title": "Evidence Unchanged",
+      "type": "boolean"
+    },
+    "note": {
+      "default": "Separate OCR reading edition; not a silently corrected evidence source. Existing criterion/law quotations refer to the preserved original extraction. Headers and footers remain available. No human OCR approval is implied.",
+      "title": "Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "document_id",
+    "collection",
+    "source_pdf_sha256",
+    "source_url",
+    "models",
+    "page_count",
+    "pages",
+    "markdown_path",
+    "markdown_sha256",
+    "created_at"
+  ],
+  "title": "ReadingEdition",
+  "type": "object"
+}

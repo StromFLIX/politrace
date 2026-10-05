@@ -187,13 +187,23 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
                 if not law or not coverage.period_start <= law.published_at <= coverage.as_of:
                     raise ValueError(f"Coverage claims an absent/out-of-window law: {identifier}")
 
-        for path in (root / dataset / 'experiments').glob('*.json'):
+        for path in [*(root / dataset / 'experiments').glob('*.json'),
+                     *(root / dataset / 'analyses').glob('*.json')]:
             from pipeline.experiment import Experiment, validate_experiment
 
             report = Experiment.model_validate_json(path.read_text())
             if dataset != 'live' or path.stem != report.program_id:
                 raise ValueError('Experiment dataset or filename mismatch')
             validate_experiment(report, data)
+
+        for path in (root / dataset / 'readings').glob('*.json'):
+            from pipeline.reading import ReadingEdition, validate_reading
+
+            reading = ReadingEdition.model_validate_json(path.read_text())
+            record = data[reading.collection].get(reading.document_id)
+            if not record or dataset != 'live' or path.stem != record.id:
+                raise ValueError('Reading edition references an absent/mismatched source')
+            validate_reading(reading, root, record)
 
         pairs = [(i.criterion_id, i.law_id) for i in data["impacts"].values()]
         if len(set(pairs)) != len(pairs):
@@ -210,8 +220,9 @@ def export_schemas(root: Path = ROOT / "data" / "schemas"):
     from pipeline.archive import ArchiveInventory
     from pipeline.catalog import SourceCatalog
     from pipeline.experiment import Experiment
+    from pipeline.reading import ReadingEdition
 
     for name, model in {**RECORD_TYPES, "parties": Party, "coverage": LawCoverage,
                         "source-catalog": SourceCatalog, 'archive-inventory': ArchiveInventory,
-                        'experiments': Experiment}.items():
+                        'experiments': Experiment, 'analyses': Experiment, 'readings': ReadingEdition}.items():
         write_json(root / f"{name}.schema.json", model.model_json_schema())

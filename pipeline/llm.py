@@ -37,6 +37,10 @@ class BudgetExceeded(RuntimeError):
     pass
 
 
+class SliceExpired(RuntimeError):
+    """Normal resumable time boundary, not a failed model response or exhausted funds."""
+
+
 class InvalidModelResponse(RuntimeError):
     """A bounded input batch can be subdivided; never used for HTTP/auth/budget failures."""
 
@@ -129,6 +133,7 @@ class Agent:
         self.subdivision_cache_hits = 0
         self.funded_credit_retries = 0
         self._budget_lock = Lock()
+        self.request_deadline: float | None = None
         self.client = client or httpx.Client(timeout=httpx.Timeout(900 if flex else 180, connect=15))
         if ledger:
             self._restore_ledger()
@@ -314,6 +319,10 @@ class Agent:
                          **self.routing(review)}, 
         }
         for attempt in range(3):
+            # Let the current paid call settle, but never begin a retry/fallback beyond
+            # a production slice's boundary. Cached valid results remain free to reuse.
+            if self.request_deadline is not None and time.monotonic() >= self.request_deadline:
+                raise SliceExpired('Slice ended before the next paid request; resume the retained queue')
             # UTF-8 bytes bound input tokens, including repair messages, schema and overhead.
             ceilings = payload['provider']['max_price']
             reserve = ((len(json_text(payload).encode()) + 2048) * ceilings['prompt']

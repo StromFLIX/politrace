@@ -34,8 +34,11 @@ for (const passage of law.passages) {
       try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
       const target = document.getElementById(id);
       if (!target || !text!.contains(target)) return;
-      const page = target.closest('details');
-      if (page) page.open = true;
+      let parent: HTMLElement | null = target;
+      while (parent) {
+        if (parent instanceof HTMLDetailsElement) parent.open = true;
+        parent = parent.parentElement;
+      }
       const hash = location.hash;
       requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
       void document.fonts.ready.then(() => { if (hash === location.hash) target.scrollIntoView({ block: 'start' }); });

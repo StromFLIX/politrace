@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getData, repoUrl } from '../lib/data';
+import { experiments, experimentTotals } from '../lib/experiments';
+import { readingIndex, productionProgress, readingProgress } from '../lib/readings';
+const data = getData('live');
+const reports = experiments('live');
+const readings = readingIndex();
+const progress = productionProgress();
+const ocr = readingProgress();
+const statusLabels: Record<string, string> = { running: 'In Verarbeitung', continuing: 'Nächster Abschnitt wird fortgesetzt', completed: 'Ausgewählte Aufgaben verarbeitet', blocked: 'Anbieter- oder Budgetgrenze erreicht', needs_attention: 'Einzelne Aufgaben benötigen Prüfung', not_started: 'Wird vorbereitet' };
+const states = progress?.programmes ?? [];
+const errors = Object.entries(progress?.errors ?? {});
+---
+<Layout title="Abdeckung & Verarbeitung">
+  <header class="page-heading"><div class="eyebrow">Öffentlicher Bearbeitungsstand</div><h1>Keine unsichtbaren Lücken.</h1><p>Was verarbeitet wurde, was noch aussteht und was nicht automatisch beurteilt werden kann. Dies ist der zuletzt veröffentlichte Datenstand, kein Versprechen vollständiger juristischer Prüfung.</p>
+    <div class="page-actions"><a class="button" href="/api/v1/live/analysis.json">Fortschritt als JSON</a><a class="button" href={`${repoUrl}/actions/workflows/production.yml`}>Aktueller Pipeline-Lauf ↗</a></div>
+  </header>
+  <section class="evidence-box"><h2>{statusLabels[progress?.status ?? 'not_started'] ?? 'Prüfung offen'}</h2>
+    <p>{progress?.updated_at ? `Checkpoint: ${progress.updated_at}` : 'Die bisherigen Ergebnisse bleiben verfügbar. Der neue All-Parteien-Abgleich veröffentlicht seinen nächsten Checkpoint hier.'}</p>
+    {progress && <p><strong>{progress.completed_pairs?.toLocaleString('de-DE')} / {progress.candidate_pairs?.toLocaleString('de-DE')}</strong> ausgewählte Gesetz–Kriterium-Paare geprüft · {progress.pending_pairs?.toLocaleString('de-DE')} ausstehend · {errors.length} protokollierte Fehler.</p>}
+    <p>„Verarbeitet“ zählt auch begründete Enthaltungen und fehlenden Rechtskontext. Nicht ausgewählte Paare bleiben unbekannt. Kein Modellaufruf bestätigt Erfüllung oder menschliche Prüfung.</p>
+  </section>
+  <section class="section-block"><h2>Programme, Textqualität und Gesetzesabgleich</h2>
+    <div class="table-scroll"><table class="data-table"><thead><tr><th>Programm</th><th>Absätze verarbeitet</th><th>Kriterien</th><th>Neue Lesefassung</th><th>Gesetze geprüft</th><th>Linkvorschläge</th></tr></thead><tbody>{data.programs.map(program => {
+      const reading = readings.find(r => r.document_id === program.id);
+      const report = reports.find(r => r.program_id === program.id);
+      const current = states.find((s: { program_id: string }) => s.program_id === program.id);
+      const criteria = data.criteria.filter(c => c.program_id === program.id);
+      const ids = new Set(criteria.map(c => c.id));
+      return <tr><td><a href={`/live/parteien/${program.party_id}/`}>{data.parties.find(p => p.id === program.party_id)?.short_name} {program.election_year}</a></td>
+        <td>{program.criteria_extraction?.length ?? 0} / {program.leaves.length}</td><td>{criteria.length}</td>
+        <td><a href={`/live/programme/${program.id}/`}>{reading ? `${reading.page_count} OCR-Seiten` : 'OCR ausstehend'}</a></td>
+        <td>{current?.laws_completed ?? (report ? experimentTotals(report).lawsCompleted : 0)} / {data.laws.length}{report && <a href={`/live/auswertung/${program.id}/`}> · Protokoll</a>}</td>
+        <td>{data.impacts.filter(i => ids.has(i.criterion_id)).length}</td></tr>;
+    })}</tbody></table></div>
+  </section>
+  <section class="section-block"><h2>Dokumente lesbar machen</h2><p><strong>{readings.length} / {data.programs.length + data.laws.length}</strong> Dokumente besitzen eine neue, seitengebundene OCR-Lesefassung. {readings.filter(r => r.collection === 'laws').length} davon sind Gesetze. Kopf- und Fußzeilen bleiben erhalten; Tabellen und Absätze werden lesbar dargestellt.</p>
+    <p>{readings.reduce((n, r) => n + r.pages.filter(p => p.warnings.length).length, 0)} Seiten haben automatische Qualitätshinweise. Ein Abgleich mit der bisherigen Textebene erkennt manche Abweichungen, beweist aber keine Fehlerfreiheit. Bestehende Beleg-IDs und ihre Originalzitate werden nicht überschrieben.</p><a href="/api/v1/live/readings.json">Alle Lesefassungen & Seitenhinweise →</a>
+    {ocr?.failed?.length > 0 && <p>Ausstehende Dokumente: {ocr?.failed.map((f: { document_id: string; http_status?: number; error_type: string }) => `${f.document_id}: ${f.http_status ? `HTTP ${f.http_status}` : f.error_type}`).join(' · ')}. Vorhandene Texte bleiben verfügbar; fehlgeschlagene Seiten werden nicht als vollständig veröffentlicht.</p>}
+    {ocr?.ocr_usage && <p>Mistral meldet {ocr.ocr_usage.reported_pages} verarbeitete Seiten; für {ocr.ocr_usage.unknown_charge_pages} weitere angefragte Seiten ist die Abrechnung unbestätigt. Das ist kein verifizierter Dollarbetrag.</p>}
+  </section>
+  {progress?.cost && <section class="section-block"><h2>Kosten und Wiederaufnahme</h2><p>Vom Anbieter gemeldet: <strong>${progress.cost.reported_cost_usd?.toFixed(4)}</strong> · einschließlich offener/unklarer Reservierungen: ${progress.cost.budget_exposure_usd?.toFixed(4)} · kumulativer Rahmen: ${progress.cost.max_usd}.</p><p>Dieser eine Ledger gilt für alle Programme zusammen, einschließlich Wiederholungen. OCR wird separat nach verarbeiteten Seiten erfasst; Mistrals OCR-Antwort enthält keinen verifizierbaren Dollarbetrag.</p></section>}
+  {errors.length > 0 && <section class="section-block"><h2>Offene Fehler — keine versteckten Nulltreffer</h2><div class="table-scroll"><table class="data-table"><thead><tr><th>Aufgabe</th><th>Art</th><th>Versuche</th></tr></thead><tbody>{errors.map(([id, value]) => { const e = value as { type: string; attempts?: number }; return <tr><td>{id}</td><td>{e.type}</td><td>{e.attempts ?? '—'}</td></tr>; })}</tbody></table></div></section>}
+</Layout>

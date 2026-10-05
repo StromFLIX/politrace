@@ -3,7 +3,7 @@ import json
 import httpx
 import pytest
 
-from pipeline.llm import Agent, BudgetExceeded
+from pipeline.llm import Agent, BudgetExceeded, SliceExpired
 from pipeline.models import Model
 
 
@@ -68,6 +68,17 @@ def test_same_ledger_cannot_be_used_by_two_agents(tmp_path, monkeypatch):
     with pytest.raises(BlockingIOError):
         make_agent(tmp_path, monkeypatch, reply)
     a._ledger_lock.close()
+
+
+def test_slice_deadline_allows_cached_results_but_never_new_paid_calls(tmp_path, monkeypatch):
+    a = make_agent(tmp_path, monkeypatch, reply)
+    a.ask('already done', {}, Reply)
+    a.request_deadline = 0
+    a.ask('already done', {}, Reply)
+    with pytest.raises(SliceExpired):
+        a.ask('new task', {}, Reply)
+    assert a.summary()['calls'] == 1 and a.summary()['in_flight_calls'] == 0
+    assert a.summary()['reported_cost_usd'] == 0.001
 
 
 def test_unsupported_model_cannot_claim_flex_prices(tmp_path):

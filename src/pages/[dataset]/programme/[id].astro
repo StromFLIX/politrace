@@ -2,6 +2,8 @@
 import Layout from '../../../layouts/Layout.astro';
 import Icon from '../../../components/Icon.astro';
 import ProgramTree from '../../../components/ProgramTree.astro';
+import DocumentReader from '../../../components/DocumentReader.astro';
+import { readingEdition } from '../../../lib/readings';
 import ExtractionStatus from '../../../components/ExtractionStatus.astro';
 import { datasets, getData, formatDate, editUrl, mdUrl, reviewLabels } from '../../../lib/data';
 import { extractionCoverage } from '../../../lib/metrics';
@@ -16,6 +18,7 @@ const party = data.parties.find(p => p.id === program.party_id)!;
 const criteria = data.criteria.filter(c => c.program_id === program.id);
 const coverage = extractionCoverage(program, criteria);
 const api = `/api/v1/${data.dataset}/programs/${program.id}`;
+const reading = readingEdition(program.id);
 ---
 <Layout title={`${party.short_name} · Wahlprogramm ${program.election_year}`} dataset={data.dataset} active="parties">
   <header class="programme-heading">
@@ -28,13 +31,13 @@ const api = `/api/v1/${data.dataset}/programs/${program.id}`;
       <div class="page-actions">
         <a class="button primary" href={`/${data.dataset}/parteien/${party.id}/?jahr=${program.election_year}#kriterien`}>Kriterien ansehen <Icon name="arrow" size={14} /></a>
         {data.dataset === 'live' && program.pdf_url
-          ? <a class="button" href={program.pdf_url}><Icon name="file" size={15} /> Original-PDF</a>
+          ? <a class="button" href={reading?.retrieved_from ?? program.pdf_url}><Icon name="file" size={15} /> {reading?.retrieved_from && reading.retrieved_from !== program.pdf_url ? 'PDF · geprüfte Archivkopie' : 'Original-PDF'}</a>
           : <a class="button" href={`${api}/source.md`}><Icon name="download" size={15} /> Markdown</a>}
       </div>
     </div>
   </header>
   <details class="programme-provenance">
-    <summary><Icon name="info" size={17} /><span><strong>{data.dataset === 'demo' ? 'Fiktiver Beispieltext.' : `${reviewLabels[program.review.status]}.`}</strong> {data.dataset === 'live' && 'Automatisch übertragener Text; PDF-Layoutfehler sind möglich. '}Quelle, Daten & Bearbeitungsstand</span><Icon name="down" size={17} /></summary>
+    <summary><Icon name="info" size={17} /><span><strong>{reviewLabels[program.review.status]}.</strong> {data.dataset === 'live' && 'Automatisch übertragener Text; PDF-Layoutfehler sind möglich. '}Quelle, Daten & Bearbeitungsstand</span><Icon name="down" size={17} /></summary>
     <div class="programme-provenance-body">
       <div><ExtractionStatus program={program} criteria={criteria} />
         <p>Die Lesefassung formatiert Markdown und lässt Zeilen im Text fließen. Sie schreibt keine Zusagen um. Die unveränderte Textspur bleibt an jedem Absatz unter „Quelle & exaktes Zitat“ und als Markdown verfügbar.</p>
@@ -54,5 +57,11 @@ const api = `/api/v1/${data.dataset}/programs/${program.id}`;
       </div>
     </div>
   </details>
-  <ProgramTree program={program} criteria={criteria} />
+  {reading && <DocumentReader edition={reading} evidence={program.leaves} />}
+  <details class="source-edition" data-evidence-edition open={!reading}>
+    <summary>Zitierte Textspur & Kriterien · ursprüngliche Extraktion</summary>
+    <p class="notice">Diese unveränderte Extraktion erhält die bestehenden Absatz-IDs und exakten Kriterienbelege. Die bereinigte Lesefassung ist separat versioniert.</p>
+    <ProgramTree program={program} criteria={criteria} />
+  </details>
+  <style>.source-edition { margin: 28px 0; min-width: 0; } .source-edition > summary { padding: 18px 0; border-top: 1px solid var(--border); font-size: 14px; font-weight: 600; cursor: pointer; }</style>
 </Layout>

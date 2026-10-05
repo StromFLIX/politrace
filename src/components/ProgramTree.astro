@@ -124,6 +124,10 @@ for (const criterion of criteria) byLeaf.set(criterion.leaf_id, [...(byLeaf.get(
     onlyCriteria.addEventListener('change', () => filter());
     for (const button of reader.querySelectorAll<HTMLButtonElement>('[data-reader-reset]')) button.addEventListener('click', clearFilters);
     restoreFilters();
+    if (input.value || onlyCriteria.checked) {
+      const evidence = reader.closest<HTMLDetailsElement>('[data-evidence-edition]');
+      if (evidence) evidence.open = true;
+    }
 
     // A source deep link always wins over a conflicting search filter. Open only
     // its ancestors, preserve the existing ID and keep it below the fixed header.
@@ -136,7 +140,7 @@ for (const criterion of criteria) byLeaf.set(criterion.leaf_id, [...(byLeaf.get(
       const layout = target.closest('[data-reader-passage]')?.querySelector<HTMLDetailsElement>('[data-reader-layout]');
       if (layout) layout.open = true;
       let element: HTMLElement | null = target;
-      while (element && element !== reader) {
+      while (element) {
         if (element instanceof HTMLDetailsElement) element.open = true;
         element = element.parentElement;
       }

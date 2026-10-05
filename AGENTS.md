@@ -1,7 +1,9 @@
 # Politrace
 
 - Astro static website + public versioned JSON/Markdown API. Python generates data, never the web runtime.
-- Canonical data lives in `data/{demo,live}`. Never mix these datasets. `demo` is explicitly fictional.
+- Canonical public data lives in `data/live`. Fictional fixtures are isolated under `tests/fixtures`; never publish them or generate demo routes.
+- Reading editions (`data/live/readings`) are versioned, page-complete OCR products. Never silently rewrite existing evidence IDs/quotations when improving OCR.
+- Production processing is a resumable all-party, law-first queue. Persist every paid batch and its cumulative ledger; unknown charges are not free. Expose incomplete/error states, not false no-link success.
 - Preserve IDs and reviewed records. Generators are additive and open PRs; never auto-merge political assessments.
 - Every criterion points to a programme leaf, exact quote, page and Markdown line range. Every impact points to an exact law-text quotation.
 - A positive impact is NOT fulfilment. Votes are NOT inferred from membership of a government or an impact score.

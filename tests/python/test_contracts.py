@@ -17,7 +17,7 @@ def example_impact(criterion, law):
 
 def test_repository_data_are_valid():
     result = validate_store(ROOT / "data")
-    assert result["demo/programs"] == 8
+    assert result["demo/programs"] == 0  # Fictional examples are test fixtures, never published data.
     assert result["live/laws"] >= 3
 
 

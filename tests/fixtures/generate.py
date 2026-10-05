@@ -17,7 +17,7 @@ from pipeline.models import (
 )
 from pipeline.store import ROOT, json_text, write_json
 
-DATA = ROOT / "data"
+DATA = ROOT / "tests" / "fixtures"
 REVIEW = Review(status="reviewed", reviewer="demo-redaktion (fiktiv)", reviewed_at=date(2025, 7, 1),
                 note="Nur eine Illustration des Review-Prozesses; keine Tatsachenbehauptung.")
 SOURCE = Source(url="https://example.org/politrace/fiktive-quelle", title="Fiktiver Beispieldatensatz",
