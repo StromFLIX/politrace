@@ -123456,7 +123456,7 @@
     {
       "law_id": "bgbl-1-2026-106",
       "analysis_sha256": "27f5d8f01792e5ace270bf9d3bf26a69a1a3ef7eac78f7e5b5d7580c1261b1d5",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-1e8e3c810fb734f7",
@@ -123672,6 +123672,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-9dc4485c2792fe70",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-da71209d8b0a0e57",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Erprobung statistischer Verfahren für Registerzensus, Arbeitsmarktbeteiligung und Bildungsstand; es enthält keine Regelung zur Unterstützung eines Transformationsprozesses in Syrien.",
+          "input_sha256": "d90c09e3f7dc8ad84fa0b10628c787ae7479ce3838d3132170cbca9e2f14087c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d90c09e3f7dc8ad84fa0b10628c787ae7479ce3838d3132170cbca9e2f14087c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Erprobung statistischer Verfahren für Registerzensus, Arbeitsmarktbeteiligung und Bildungsstand; es enthält keine Regelung zur Unterstützung eines Transformationsprozesses in Syrien.",
+            "law_passage_id": "bgbl-1-2026-106-p-e97473e2e7e64536",
+            "law_quote": "Erhebung von Daten zur Erprobung der Ermittlung der Arbeitsmarktbeteiligung der Bevölkerung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-da71209d8b0a0e57",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -234319,45 +234346,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4048,
-    "cache_hits": 42,
+    "calls": 4118,
+    "cache_hits": 47,
     "subdivision_cache_hits": 6,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 22.067511,
-    "reported_cost_calls": 3784,
+    "reported_cost_usd": 22.29843,
+    "reported_cost_calls": 3854,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 1.589592,
     "unknown_cost_calls": 264,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 23.657104,
-    "prompt_tokens": 40817784,
-    "completion_tokens": 6264184,
+    "budget_exposure_usd": 23.888022,
+    "prompt_tokens": 41673406,
+    "completion_tokens": 6427378,
     "max_usd": 37.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 144,
-        "reported_cost_usd": 3.383844499999999,
+        "calls": 147,
+        "reported_cost_usd": 3.4998022499999992,
         "unknown_cost_reserved_usd": 9.43689570931383e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 51,
-        "reported_cost_usd": 0.700513,
+        "calls": 54,
+        "reported_cost_usd": 0.7295707500000002,
         "unknown_cost_reserved_usd": 6.245004513516506e-17,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 956,
-        "reported_cost_usd": 1.0986838149999993,
+        "calls": 1020,
+        "reported_cost_usd": 1.1845867999999993,
         "unknown_cost_reserved_usd": 0.6051166,
-        "pending_reserved_usd": 4.336808689942018e-18
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
