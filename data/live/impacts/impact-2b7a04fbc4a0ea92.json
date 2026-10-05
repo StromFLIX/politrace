@@ -6,18 +6,20 @@
   "law_id": "bgbl-1-2026-195",
   "score": 1,
   "confidence": 0.96,
-  "rationale": "Das Gesetz räumt Versicherten einen Anspruch auf pharmazeutische Dienstleistungen ein und nennt ausdrücklich eine Kurzintervention zur Prävention tabakassoziierter Erkrankungen. Das unterstützt Prävention bei einem legalen Suchtmittel teilweise; ein Ausbau weiterer Angebote oder zu anderen legalen Suchtmitteln ist damit nicht belegt.",
+  "rationale": "Versicherte erhalten einen Anspruch auf eine pharmazeutische Kurzintervention zur Prävention tabakassoziierter Erkrankungen. Das erweitert das Präventionsangebot für Tabak, ohne Angebote für andere legale Suchtmittel zu belegen.",
   "law_passage_id": "bgbl-1-2026-195-p-39b6713f9992abde",
   "law_quote": "2. Beratung in Form einer Kurzintervention zur Prävention tabakassoziierter Erkrankungen,",
   "criterion_quote": "Gleichzeitig\nwollen wir die Angebote für Prävention,\nTherapie und den Gesundheitsschutz\nauch bei legalen Suchtmitteln ausbauen",
-  "caveats": [
-    "Der Beleg betrifft Tabakprävention und belegt keinen Ausbau von Therapie- oder sonstigen Gesundheitsschutzangeboten.",
-    "Der Beleg betrifft nur Tabakprävention; Therapie, Gesundheitsschutz und andere legale Suchtmittel wie Alkohol sind nicht belegt.",
-    "Der Umfang des Ausbaus ist nicht quantifiziert; ob es sich um eine neue oder erweiterte Leistung handelt, ergibt sich aus der Passage nur indirekt.",
-    "Der Gesetzeskontext ist nur teilweise vorhanden.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "320f32ef4f4a726b7f27b9fd4f66893211018984b8e2c0a7e6705274a45fc6b8",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "5d74b99ae455ea79755f030479bb79c0c05203225b26f9e5247d10ef6ac9e3ab"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -31,9 +33,9 @@
       "input_sha256": "45f9155b00d8908188b0fcbd4b65c8ecb3a0c4f1d2931a22ec6101ae987322ee"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "90f6ac797286e957d42d8194745dee4e481a50331baf877a8e35c6c2bf7ea400"
+      "input_sha256": "320f32ef4f4a726b7f27b9fd4f66893211018984b8e2c0a7e6705274a45fc6b8"
     }
   ]
 }

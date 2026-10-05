@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-222",
   "score": 1,
   "confidence": 0.88,
-  "rationale": "Die Norm schafft eine konkrete Pflicht zur zeitnahen Information der zuständigen Ausländerbehörde und stützt damit einen Teil des Kriteriums. Ob das Verfahren in der Praxis angewendet wird, belegt der Gesetzestext nicht.",
+  "rationale": "Die zuständigen Stellen müssen die Ausländerbehörde unverzüglich über die Einleitung eines Strafverfahrens und die Erledigung eines Straf- oder Bußgeldverfahrens unterrichten, sofern die Informationen nicht bereits an das Ausländerzentralregister zu übermitteln sind. Damit wird die frühzeitige Weitergabe für bestimmte Informationen geregelt; die tatsächliche Anwendung lässt sich aus dem Gesetzestext nicht feststellen.",
   "law_passage_id": "bgbl-1-2026-222-p-33d66e5c4eea958e",
-  "law_quote": "Die für die Einleitung und Durchführung eines Straf- oder eines Bußgeldverfahrens zuständigen Stellen\nhaben die zuständige Ausländerbehörde unverzüglich über die Einleitung des Strafverfahrens sowie die\nErledigung des Straf- oder Bußgeldverfahrens bei der Staatsanwaltschaft, bei Gericht oder bei der für die\nVerfolgung und Ahndung der Ordnungswidrigkeit zuständigen Verwaltungsbehörde unter Angabe der\ngesetzlichen Vorschriften zu unterrichten",
+  "law_quote": "Die für die Einleitung und Durchführung eines Straf- oder eines Bußgeldverfahrens zuständigen Stellen\nhaben die zuständige Ausländerbehörde unverzüglich über die Einleitung des Strafverfahrens sowie die\nErledigung des Straf- oder Bußgeldverfahrens bei der Staatsanwaltschaft, bei Gericht oder bei der für die\nVerfolgung und Ahndung der Ordnungswidrigkeit zuständigen Verwaltungsbehörde unter Angabe der\ngesetzlichen Vorschriften zu unterrichten, sofern diese Informationen nicht bereits gemäß § 6 Absatz 1\nNummer 5 in Verbindung mit Absatz 2 Satz 3 Nummer 5b des AZR-Gesetzes an das Ausländerzentral­\nregister zu übermitteln sind.",
   "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
-  "caveats": [
-    "Die Regelung betrifft bestimmte Informationen aus Straf- und Bußgeldverfahren; tatsächliche Anwendung wird durch den Normtext nicht nachgewiesen.",
-    "Die Pflicht gilt nur für Straf- und Bußgeldverfahren und nur gegenüber der Ausländerbehörde; das Programmkriterium ist deutlich allgemeiner.",
-    "Ausnahme: Die Mitteilung entfällt, wenn die Informationen bereits nach § 6 Absatz 1 Nummer 5 AZR-Gesetz an das Ausländerzentralregister zu übermitteln sind.",
-    "Ob das Verfahren tatsächlich angewendet wird, lässt sich dem Normtext nicht entnehmen; es handelt sich nur um einen Teilbeitrag, nicht um vollständige Erfüllung.",
-    "Der Rechtstext liegt nur als Teilkontext vor (Änderungsgesetz).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "ea3579c0e9076896c0c2ddd9b994304896aa7c12ab4e84cf2934f6e6de164829",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "671bd929577b0b200fa1dc304a8c30166cbde15f6279ba6895ed563cab552f10"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "9905f4c8aab676fb08ba677560f04af7d7036f9162a89ccfcb7eaceae98be5bb"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "4aa59cdb84b5bba4e581de017cd9a32907b9975702b35aa8cec4f052590da61c"
+      "input_sha256": "ea3579c0e9076896c0c2ddd9b994304896aa7c12ab4e84cf2934f6e6de164829"
     }
   ]
 }

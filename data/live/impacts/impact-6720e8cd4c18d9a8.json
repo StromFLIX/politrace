@@ -6,21 +6,20 @@
   "law_id": "bgbl-1-2026-210a",
   "score": 1,
   "confidence": 0.91,
-  "rationale": "Das Gesetz unterstützt einen Teil des Kriteriums, indem es für bestimmte langfristig verpflichtete Gaskraftwerke Wasserstoff-Betriebsfähigkeit und ein Umstellungskonzept verlangt. Es schreibt jedoch weder den tatsächlichen Betrieb mit Wasserstoff noch grünen Wasserstoff oder einen möglichst baldigen Umstellungszeitpunkt vor.",
-  "law_passage_id": "bgbl-1-2026-210a-p-3eafdd82ad57b0e5",
-  "law_quote": "Bei einem Gebot für einen Verpflichtungszeitraum von 15 Jahren, bei dem die gebotsgegenständliche Anlage\nein Kraftwerk ist, das Erdgas als Hauptenergieträger im Verpflichtungszeitraum zur Stromerzeugung einsetzt, muss\ndieses für den Betrieb mit Wasserstoff vorbereitet sein.",
+  "rationale": "Erdgasbetriebene Kraftwerke in Geboten für einen 15-jährigen Verpflichtungszeitraum müssen für Wasserstoffbetrieb vorbereitet sein; der Bieter muss ein Umstellungskonzept vorlegen. Das unterstützt einen späteren Wasserstoffbetrieb, schreibt aber weder tatsächlichen Betrieb mit grünem Wasserstoff noch einen baldigen Umstellungstermin vor.",
+  "law_passage_id": "bgbl-1-2026-210a-p-9f0ebce1ca11c665",
+  "law_quote": "(2) Ein Kraftwerk ist nach Absatz 1 für den Wasserstoffbetrieb vorbereitet, wenn es in einer Weise geplant und\ngebaut ist, dass die Fähigkeit zum Betrieb mit 100 Prozent Wasserstoff durch eine Änderung von Anlagen­\nkomponenten oder des Betriebs des Kraftwerks erreicht werden kann. Der Bieter hat im Rahmen seines Gebots\nein Konzept für die Umstellung des Kraftwerks auf den Wasserstoffbetrieb vorzulegen.",
   "criterion_quote": "und eine neue Generation von möglichst\nbald mit grünem Wasserstoff betriebenen\nKraftwerken",
-  "caveats": [
-    "§ 17 Absatz 2 konkretisiert die Vorbereitung als Fähigkeit, durch Änderung von Anlagenkomponenten oder des Betriebs 100 Prozent Wasserstoff zu nutzen; dies belegt keine tatsächliche Umstellung.",
-    "Das Gesetz nennt keine Anforderung an die Herkunft des Wasserstoffs und keine Frist für die Umstellung.",
-    "Es wird nur die Betriebsfähigkeit mit Wasserstoff vorgeschrieben, nicht der tatsächliche Betrieb.",
-    "Das Gesetz stellt keine Anforderung an grünen Wasserstoff.",
-    "Der Umstellungszeitpunkt ist offen; als einziger Zeitbezug gilt die Selbstverpflichtung zum klimaneutralen Betrieb ab 2045, nicht eine möglichst baldige Umstellung.",
-    "Die Regelung gilt nur für Gebote mit 15-jährigem Verpflichtungszeitraum bei Erdgaskraftwerken im Rahmen der Ausschreibungen.",
-    "Das Gesetz liegt nur als Auszug vor (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung."
-  ],
+  "caveats": [],
   "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "c2d67066a1dca5a1f3e88668864aaf7b186086a568205ad9b253bc588bb64055",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "700e430c6a08c0a2595a50d21b093f847c450c166acfd64891f1f96a916baa59"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -34,9 +33,9 @@
       "input_sha256": "44febe1da30286cec515d0f224771e189303a32e772087cfb3af9db4c0bbecc8"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "5fdae931c1551e75232fde911ac64e11d83b3a363451cd38c75a57e374b5ad6d"
+      "input_sha256": "c2d67066a1dca5a1f3e88668864aaf7b186086a568205ad9b253bc588bb64055"
     }
   ]
 }

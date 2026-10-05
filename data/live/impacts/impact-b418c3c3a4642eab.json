@@ -6,19 +6,20 @@
   "law_id": "bgbl-1-2026-213",
   "score": 1,
   "confidence": 0.86,
-  "rationale": "Die Vorschrift legt für bestimmte Daten konkrete Verwendungszwecke fest, etwa die Prüfung, ob Fluggast und Passinhaber identisch sind. Das unterstützt eine zweckbezogene Nachvollziehbarkeit teilweise; sie verlangt jedoch nicht ausdrücklich, dass bei sämtlichen verwendeten Daten der Zweck jederzeit nachvollziehbar klargestellt wird.",
-  "law_passage_id": "bgbl-1-2026-213-p-97d135431f8c6106",
-  "law_quote": "und mit dessen Einwilligung unmittelbar am Flugplatz erstellten Bildaufnahme zur Überprüfung, ob\nFluggast und Passinhaber identisch sind,",
+  "rationale": "Für die digitale Fluggastabfertigung ordnet die Vorschrift bestimmten Passdaten konkrete Verwendungszwecke zu, etwa den Identitätsabgleich und die Echtheitsprüfung. Das unterstützt die Klarheit über die Datennutzung in diesem Bereich, begründet aber keine allgemeine Pflicht, den Zweck jeder Datenverwendung jederzeit klarzustellen.",
+  "law_passage_id": "bgbl-1-2026-213-p-b940ce7c9ed99bee",
+  "law_quote": "(4) Zum Zweck der digitalen Fluggastabfertigung dürfen Luftfahrtunternehmen die folgenden Daten auslesen\nund verarbeiten:",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Die Regelung betrifft digitale Fluggastabfertigung und belegt keine allgemeine Klarstellungspflicht für alle Datenverwendungen.",
-    "Die Regelung betrifft nur die digitale Fluggastabfertigung, nicht Datenverwendungen allgemein.",
-    "Die Zweckangabe im Gesetz ist keine Informations- oder Transparenzpflicht gegenüber Betroffenen.",
-    "Das Gesetz liegt nur teilweise vor (partial_law_context); weitere Transparenzvorgaben, etwa aus der DSGVO, sind nicht belegt.",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt allgemein, dass jederzeit klar ist, wozu welche Daten verwendet werden. Die zitierte Passage (§ 19e Abs. 4 Nr. 1 Buchst. a LuftVG) legt nur für eine einzelne Datenart, das Lichtbild, den Zweck des Identitätsabgleichs fest. Sie verpflichtet nicht zu einer Klarstellung oder Transparenz gegenüber Betroffenen. Zweckbindung im Gesetzestext ist nicht dasselbe wie jederzeitige Nachvollziehbarkeit für alle verwendeten Daten. Der Bezug beschränkt sich auf das Thema Datenverwendung und trägt die vorgeschlagene Bewertung (Score 1) nicht. Die zitierte Stelle enthält auch keine Aussage dazu, wie oder wem gegenüber der Zweck klargestellt wird."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "549438dcac8c7c891abbd09e04cf92740ba0776ac053993bdc088cac9a52ece1",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "f825f17269f7f6bc504d9182899a1fdd0fd95711df9ffd2cee730d93b5de3a85"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -32,9 +33,9 @@
       "input_sha256": "fe66c78f78adc4de16a66e2a0dec71d83a54e99fe6a7373a93aaa88234f7fe2d"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "6c84669633fa0e266d15ded1c1c8b0e6cf109e637c66093461b63838f00dfb37"
+      "input_sha256": "549438dcac8c7c891abbd09e04cf92740ba0776ac053993bdc088cac9a52ece1"
     }
   ]
 }

@@ -6,20 +6,20 @@
   "law_id": "bgbl-1-2026-157",
   "score": 1,
   "confidence": 0.91,
-  "rationale": "Das Gesetz sanktioniert eine Verarbeitung, die den mit dem Nutzer vereinbarten Zwecken und Bedingungen nicht entspricht. Das stützt die Bindung der Datennutzung an vereinbarte Zwecke teilweise; der Auszug belegt aber nicht, dass bei allen verwendeten Daten jederzeit transparent nachvollziehbar ist, wozu sie genutzt werden.",
+  "rationale": "Das Gesetz macht die Verarbeitung von Daten entgegen den mit dem Nutzer vereinbarten Zwecken und Bedingungen zur Ordnungswidrigkeit. Das stützt im erfassten Anwendungsbereich die Bindung an bekannte Nutzungszwecke, verpflichtet aber nicht dazu, die tatsächliche Verwendung jedes Datums jederzeit nachvollziehbar zu machen.",
   "law_passage_id": "bgbl-1-2026-157-p-27c9f8cdec41fc57",
-  "law_quote": "Ordnungswidrig handelt, wer Daten nicht gemäß Artikel 6 Absatz 1 Satz 1 der Datenverordnung in der\nFassung vom 13. Dezember 2023 entsprechend der mit dem Nutzer vereinbarten Zwecke und Bedingungen\nverarbeitet.",
+  "law_quote": "(3) Ordnungswidrig handelt, wer Daten nicht gemäß Artikel 6 Absatz 1 Satz 1 der Datenverordnung in der\nFassung vom 13. Dezember 2023 entsprechend der mit dem Nutzer vereinbarten Zwecke und Bedingungen\nverarbeitet.",
   "criterion_quote": "Es muss jederzeit klar sein, wozu welche\nDaten verwendet werden.",
-  "caveats": [
-    "Der Auszug verweist auf Artikel 6 der Datenverordnung, gibt dessen vollständigen Regelungsinhalt aber nicht wieder. Er belegt daher nur die Sanktionierung einer zweckwidrigen Verarbeitung im genannten Anwendungsbereich.",
-    "Der Inhalt von Artikel 6 Absatz 1 der Datenverordnung ist im Auszug nicht enthalten.",
-    "Der Geltungsbereich ist auf die Datenverordnung begrenzt, während das Kriterium allgemein formuliert ist.",
-    "Die Bußgeldnorm sanktioniert Zweckverstöße, begründet aber keine Transparenz- oder Informationspflicht.",
-    "Der Gesetzesauszug ist nur ein Teilkontext (partial_law_context).",
-    "Automatischer Vorschlag; Auswahlkontext, keine vollständige Rechtsprüfung.",
-    "Zweite Modellprüfung widerspricht: Das Kriterium verlangt, dass jederzeit nachvollziehbar ist, wozu welche Daten verwendet werden, also Transparenz über den Nutzungszweck. § 15 Abs. 3 stellt dagegen nur die zweckwidrige Verarbeitung gegenüber dem Nutzer unter Bußgeld (bis 100.000 Euro). Das ist eine Sanktion für Verstöße gegen vereinbarte Zwecke und Bedingungen, keine Pflicht zur Transparenz oder Nachvollziehbarkeit. Die Zweckbindung verweist auf Artikel 6 Absatz 1 der Datenverordnung, dessen Inhalt nicht vorliegt. Zudem betrifft die Norm nur den Anwendungsbereich der Datenverordnung (vernetzte Produkte), nicht Daten allgemein. Die vorgeschlagene Bewertung ist daher ein überwiegend thematischer Treffer und die Stärke (Score 1, Konfidenz 0,91) ist nicht gedeckt. Die Passage belegt weder Klarheit noch Jederzeit-Nachvollziehbarkeit."
-  ],
-  "verification": "needs_review",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "61141eb0a3a23c98e61e867131f42206169deaf078083de0a97c67c1ca55c275",
+    "decided_at": "2026-10-05",
+    "previous_sha256": "4b8605d0047fec338e3de0e79a29a09b7dd67bd3dc16193a14a55c0fe2e4055f"
+  },
   "review": {
     "status": "proposed",
     "reviewer": null,
@@ -33,9 +33,9 @@
       "input_sha256": "a0488c62ffc9fa74cfbec6cf77e360646fb10e90e4e068579429fbe158ac8bc9"
     },
     {
-      "model": "anthropic/claude-sonnet-5.5",
+      "model": "openai/gpt-6-sol",
       "prompt_version": "politrace-evidence-v3",
-      "input_sha256": "8d5cd2f93afd1ff7f706d9d3dfed5363f75cb3e7d274f54b80bb585475f3fca6"
+      "input_sha256": "61141eb0a3a23c98e61e867131f42206169deaf078083de0a97c67c1ca55c275"
     }
   ]
 }
