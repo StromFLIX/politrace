@@ -1,7 +1,7 @@
 {
   "version": "all-party-sol-final-v2",
-  "status": "continuing",
-  "input_signature": "3399fa73d58960e16b08eee1881dff231bdd4c7b49db942e60055f918f210f13",
+  "status": "needs_attention",
+  "input_signature": "69805a7d4fa1b183ffe8cb796f5df488aebf19ca8e5195521e0f0ba33523e065",
   "total_laws": 173,
   "total_programmes": 6,
   "total_criteria": 6470,
@@ -9,24 +9,24 @@
   "final_model": "openai/gpt-6-sol",
   "retrieval": "Per-programme whole-law/provision/reverse BM25 union",
   "limitations": "Unselected pairs unknown; statistical recall not measured.",
-  "updated_at": "2026-10-06T21:21:59.978473+00:00",
+  "updated_at": "2026-10-06T21:33:42.647289+00:00",
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8109,
-    "cache_hits": 274,
-    "subdivision_cache_hits": 1,
+    "calls": 8171,
+    "cache_hits": 321,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.348798,
-    "reported_cost_calls": 7427,
+    "reported_cost_usd": 31.372376,
+    "reported_cost_calls": 7489,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.970558,
     "unknown_cost_calls": 682,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.319355,
-    "prompt_tokens": 81366443,
-    "completion_tokens": 14269872,
+    "budget_exposure_usd": 35.342934,
+    "prompt_tokens": 81513157,
+    "completion_tokens": 14327517,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
@@ -64,10 +64,10 @@
       "openai/gpt-6-luna:deduplication": {
         "model": "openai/gpt-6-luna",
         "stage": "deduplication",
-        "calls": 517,
-        "reported_cost_usd": 0.18163689249999995,
-        "unknown_cost_reserved_usd": 0.03131505000000002,
-        "pending_reserved_usd": 9.540979117872439e-18
+        "calls": 579,
+        "reported_cost_usd": 0.20521544249999993,
+        "unknown_cost_reserved_usd": 0.031315050000000025,
+        "pending_reserved_usd": 3.0357660829594124e-18
       }
     },
     "migrations": [
@@ -7448,9 +7448,9 @@
           "omitted": 981
         }
       ],
-      "grouping": "pending"
+      "grouping": "completed"
     }
   ],
-  "automatic_continue": true,
+  "automatic_continue": false,
   "pending_assessments": 0
 }
