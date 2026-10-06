@@ -115486,7 +115486,7 @@
     {
       "law_id": "bgbl-1-2026-7",
       "analysis_sha256": "40fb8e208d5a863d0d6d7caa63d3b571b3d1c5b1c5607be23b0f2eff0dd527cd",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-00d2bbb8f9787d87",
@@ -117134,6 +117134,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-664e9e586588c65f",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-68368210aff19a39",
+          "disposition": "missing_context",
+          "rationale": "Die Vorschrift betrifft die Identitätsfeststellung im nahen Umfeld militärischer Sicherheitsbereiche. Der Auszug endet jedoch mitten in einer weiteren Voraussetzung („und die Person“); zudem fehlt der für den Anwendungsbereich genannte § 2 Absatz 2. Ob und unter welchen Bedingungen die Befugnis gilt, lässt sich daher nicht hinreichend beurteilen.",
+          "input_sha256": "534a864d979507999662554d2f19c807a81879b133339c7e51690850e5b5eeb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e6e81695d76710da0c2a26494bd1cc4b88f019f888d09d3758effd76f300317b"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "534a864d979507999662554d2f19c807a81879b133339c7e51690850e5b5eeb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.82,
+            "rationale": "Die Vorschrift betrifft die Identitätsfeststellung im nahen Umfeld militärischer Sicherheitsbereiche. Der Auszug endet jedoch mitten in einer weiteren Voraussetzung („und die Person“); zudem fehlt der für den Anwendungsbereich genannte § 2 Absatz 2. Ob und unter welchen Bedingungen die Befugnis gilt, lässt sich daher nicht hinreichend beurteilen.",
+            "law_passage_id": "bgbl-1-2026-7-p-c6c470eab26e953f",
+            "law_quote": "(2) Die Feststellung der Identität einer Person im nahen Umfeld eines militärischen Sicherheitsbereiches nach\n§ 2 Absatz 2 kann erfolgen, wenn tatsächliche Anhaltspunkte dafür vorliegen, dass durch das Verhalten der\nPerson die Einsatzbereitschaft, Schlagkraft oder Sicherheit der Truppe gefährdet werden könnte und die Person",
+            "criterion_quote": "Bei der Identitätsklärung werden wir unter Beachtung des\nSicherheitsinteresses des Staates für klare Regelungen sorgen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-68368210aff19a39",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -119196,7 +119228,7 @@
     {
       "law_id": "bgbl-1-2026-70",
       "analysis_sha256": "7a5baed1341157217907177e15610dee8ed6e821904b5c86b956b224fdca42aa",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-01bc038c5dbc131f",
@@ -119214,12 +119246,364 @@
         "spd-2025-ac-cbfb7bce64a9c9f2"
       ],
       "omitted_count": 774,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-01bc038c5dbc131f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Regulierung von Tätigkeiten auf Hoher See; Mittel für Kinder mit bildungsbezogenen Nachteilen werden darin nicht geregelt.",
+          "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Regulierung von Tätigkeiten auf Hoher See; Mittel für Kinder mit bildungsbezogenen Nachteilen werden darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "unsere Mittel gezielt dort einsetzen, wo vorgefundene Nachteile bei den Bildungshintergründen von Elternhaus oder Nachbarschaft zu Nachteilen für die Bildungschancen von Kindern werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-01bc038c5dbc131f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum gesetzlichen Mindestlohn oder zu dessen Höhe ab 2026.",
+          "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum gesetzlichen Mindestlohn oder zu dessen Höhe ab 2026.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dementsprechend muss der Mindestlohn spätestens ab 2026 bei 15 Euro liegen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Hohe-See-Einbringungsrecht und ändern weder die Mietpreisbremse noch deren Anwendungsbereich auf Immobilien.",
+          "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das Hohe-See-Einbringungsrecht und ändern weder die Mietpreisbremse noch deren Anwendungsbereich auf Immobilien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "auch für Immobilien, die bis 2019 bezogen wurden, gelten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tätigkeiten und Stoffeinbringungen auf Hoher See; eine Umsetzung der EU-Entgelttransparenzrichtlinie enthält es nicht.",
+          "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "db239e9445ed081fd02963f91b1ee12596b562b5036f9b86018bf7eda889ef53"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tätigkeiten und Stoffeinbringungen auf Hoher See; eine Umsetzung der EU-Entgelttransparenzrichtlinie enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die EU-Entgelttransparenzrichtlinie bis 2026 in nationales Recht umsetzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung regelt das Einbringen von Stoffen in die Hohe See und marines Geo-Engineering; Rückführungsvereinbarungen behandelt sie nicht.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung regelt das Einbringen von Stoffen in die Hohe See und marines Geo-Engineering; Rückführungsvereinbarungen behandelt sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Änderungen zum Hohe-See-Einbringungsrecht, keine Untersuchung zur Bündelung von Ministeriumsaufgaben.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Änderungen zum Hohe-See-Einbringungsrecht, keine Untersuchung zur Bündelung von Ministeriumsaufgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-77ef57ed407c9062",
+          "disposition": "no_supported_link",
+          "rationale": "Die Gesetzesänderung betrifft Einbringungen in die Hohe See, nicht die Hilfsmittelversorgung von Menschen mit Beeinträchtigung.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Gesetzesänderung betrifft Einbringungen in die Hohe See, nicht die Hilfsmittelversorgung von Menschen mit Beeinträchtigung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-77ef57ed407c9062",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Hohe-See-Einbringungsgesetz; eine Änderung von Artikel 3 Absatz 3 GG ist nicht enthalten.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Hohe-See-Einbringungsgesetz; eine Änderung von Artikel 3 Absatz 3 GG ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9a4759ec3b0666a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Meeresumwelt und Geo-Engineering dokumentieren keine aktive deutsche Mitgestaltung der SDGs in UN-Prozessen.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zu Meeresumwelt und Geo-Engineering dokumentieren keine aktive deutsche Mitgestaltung der SDGs in UN-Prozessen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9a4759ec3b0666a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Meeresumweltschutz und CO₂-Einbringung; Verhandlungen über ein deutsch-britisches Abkommen behandelt es nicht.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Meeresumweltschutz und CO₂-Einbringung; Verhandlungen über ein deutsch-britisches Abkommen behandelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-af56335db35e5ac6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung enthält keine Regelung zum Waffenbesitz oder zum Ausschluss von Personen mit psychischen Vorbelastungen.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung enthält keine Regelung zum Waffenbesitz oder zum Ausschluss von Personen mit psychischen Vorbelastungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-af56335db35e5ac6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ordnet Aufgaben beim Einbringen von Stoffen in die Hohe See zu, stellt dem THW aber keine materiellen Ressourcen bereit.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ordnet Aufgaben beim Einbringen von Stoffen in die Hohe See zu, stellt dem THW aber keine materiellen Ressourcen bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cbfb7bce64a9c9f2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Hohe-See-Einbringungsrecht und nicht die solidarische Verteilung zwischen EU-Mitgliedstaaten.",
+          "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad4945228578c3183fe3721f4c8785eafdc0573481cab443f515253a8e97beba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das Hohe-See-Einbringungsrecht und nicht die solidarische Verteilung zwischen EU-Mitgliedstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cbfb7bce64a9c9f2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-8",
       "analysis_sha256": "568390fb72f56e1477c6b84463afa50363dbc5602db03a763e0d992f284d077b",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-257211065367d48e",
@@ -119236,7 +119620,332 @@
         "spd-2025-ac-bd67981b2fd165e8"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt keinen gesetzlichen Mindestlohn fest und enthält keine Regelung zu dessen Höhe oder Geltungsbeginn.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt keinen gesetzlichen Mindestlohn fest und enthält keine Regelung zu dessen Höhe oder Geltungsbeginn.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-31c091034aa7cfcd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Investitionen in Kindertagesstätten oder die Zusammenarbeit von Bund, Ländern und Gemeinden dafür.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Investitionen in Kindertagesstätten oder die Zusammenarbeit von Bund, Ländern und Gemeinden dafür.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-31c091034aa7cfcd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Aufbau branchenspezifischer KI-Ökosysteme.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Aufbau branchenspezifischer KI-Ökosysteme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine KI-Strategie und enthält keine Regelung zur Förderung systemischer Innovationen.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine KI-Strategie und enthält keine Regelung zur Förderung systemischer Innovationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt dem Statistischen Bundesamt die Nutzung von Betriebsregisterdaten für Preisstatistiken land- und forstwirtschaftlicher Güter; eine öffentliche Aufschlüsselung ausgewählter Lebensmittelpreise von der Produktion bis zum Verkauf regelt es nicht.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz erlaubt dem Statistischen Bundesamt die Nutzung von Betriebsregisterdaten für Preisstatistiken land- und forstwirtschaftlicher Güter; eine öffentliche Aufschlüsselung ausgewählter Lebensmittelpreise von der Produktion bis zum Verkauf regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schreibt keine Konferenz zum Bürokratieabbau und keine Ermittlung entsprechender Möglichkeiten durch einen Bundeskanzler vor.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schreibt keine Konferenz zum Bürokratieabbau und keine Ermittlung entsprechender Möglichkeiten durch einen Bundeskanzler vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5520d61e92229eef",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Einkäufen von Therapien durch Krankenkassen oder andere nationale und europäische Akteure.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Einkäufen von Therapien durch Krankenkassen oder andere nationale und europäische Akteure.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5520d61e92229eef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Umgang mit Daten in Betrieben.",
+          "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e90c887d43db328f8706900586cd441dd35e94f724c318b141177225b7f3fbeb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Umgang mit Daten in Betrieben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6f45fcdd8dbe7b83",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Agrarstatistiken und ändert eine Vorschrift des Agrarlieferkettenrechts; gezielte Förderung für einen Umstieg ist nicht Gegenstand der Änderungen.",
+          "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Agrarstatistiken und ändert eine Vorschrift des Agrarlieferkettenrechts; gezielte Förderung für einen Umstieg ist nicht Gegenstand der Änderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6f45fcdd8dbe7b83",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Agrarstatistik und Agrarlieferkettenrecht, nicht Artikel 3 Absatz 3 GG.",
+          "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die Änderungen betreffen Agrarstatistik und Agrarlieferkettenrecht, nicht Artikel 3 Absatz 3 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a6c1a49b948f8454",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Förderung der betrieblichen Altersvorsorge.",
+          "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Förderung der betrieblichen Altersvorsorge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a6c1a49b948f8454",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen führen keinen allgemeinen Test neuer Gesetze oder größerer Novellierungen ein.",
+          "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3d47c3d6cd0c4503ea9190b17e21dc0cca048fb893393eb29d52d7c25ef2c459"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die Änderungen führen keinen allgemeinen Test neuer Gesetze oder größerer Novellierungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-81",
@@ -119321,7 +120030,2016 @@
         "spd-2025-ac-fe2ee599dfc130dd"
       ],
       "omitted_count": 712,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zur Mindestlohnkommission oder zur Berücksichtigung europäischen Rechts bei ihrer Arbeit.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten keine Regelung zur Mindestlohnkommission oder zur Berücksichtigung europäischen Rechts bei ihrer Arbeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge betreffen Anforderungen an Kreditinstitute und regeln keine Barrierefreiheitspflichten privater Anbieter von Waren und Dienstleistungen.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge betreffen Anforderungen an Kreditinstitute und regeln keine Barrierefreiheitspflichten privater Anbieter von Waren und Dienstleistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Genehmigungsfiktion für Anträge bei Behörden.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Genehmigungsfiktion für Anträge bei Behörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-091488700f11bcf7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln Bankenaufsicht und belegen keine Unterstützung der EU-Kommission bei der Umsetzung der Berichte von Letta und Draghi.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge regeln Bankenaufsicht und belegen keine Unterstützung der EU-Kommission bei der Umsetzung der Berichte von Letta und Draghi.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-091488700f11bcf7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-094ef24a14e40808",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge betreffen Kreditinstitute, ändern aber weder Möglichkeiten der Länder zur Kreditaufnahme noch europäische Fiskalregeln.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge betreffen Kreditinstitute, ändern aber weder Möglichkeiten der Länder zur Kreditaufnahme noch europäische Fiskalregeln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-094ef24a14e40808",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Änderungen zu Verfahren oder Regeln für die Anerkennung ausländischer Abschlüsse und Qualifikationen.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Änderungen zu Verfahren oder Regeln für die Anerkennung ausländischer Abschlüsse und Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelungen zu Asylverfahren, Verwaltungskapazitäten des BAMF oder verwaltungsgerichtlichen Verfahren.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelungen zu Asylverfahren, Verwaltungskapazitäten des BAMF oder verwaltungsgerichtlichen Verfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-20838b6859a7d02b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Sanierungsmaßnahmen für das Autobahnnetz oder dessen Brücken.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Sanierungsmaßnahmen für das Autobahnnetz oder dessen Brücken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-20838b6859a7d02b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2415489370392b39",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge verpflichten Kreditinstitute zu ESG-Risikomanagement, knüpfen öffentliche Transformationsförderung aber nicht an die vier genannten Kriterien.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge verpflichten Kreditinstitute zu ESG-Risikomanagement, knüpfen öffentliche Transformationsförderung aber nicht an die vier genannten Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-2415489370392b39",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Festlegung des gesetzlichen Mindestlohns auf 15 Euro.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Festlegung des gesetzlichen Mindestlohns auf 15 Euro.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-26490701b2527526",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Bereitstellung ergänzender Feuerwehrausstattung oder Unterstützung des Bundes bei komplexen Gefahrenlagen.",
+          "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce2e0644b3e6f0a4f71d4f879d2301f7e2acd87c2f41a5d44c470f0d4eb3757"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Bereitstellung ergänzender Feuerwehrausstattung oder Unterstützung des Bundes bei komplexen Gefahrenlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-26490701b2527526",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2dcf867be5de2fd0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Aufsicht und Risikomanagement von Kreditinstituten, nicht die Ausstattung eines Deutschlandfonds.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Aufsicht und Risikomanagement von Kreditinstituten, nicht die Ausstattung eines Deutschlandfonds.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-2dcf867be5de2fd0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-315ee6e0dc03ca43",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Kreditinstitute und enthalten keine Leerstandsstrategie für den ländlichen Raum.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Kreditinstitute und enthalten keine Leerstandsstrategie für den ländlichen Raum.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-315ee6e0dc03ca43",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-347332d0cf8ce49a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vergütungsregeln für Ärztinnen und Ärzte im praktischen Jahr.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Vergütungsregeln für Ärztinnen und Ärzte im praktischen Jahr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-347332d0cf8ce49a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen ESG-Risiken von Kreditinstituten, nicht den Aufbau branchenspezifischer KI-Ökosysteme.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen ESG-Risiken von Kreditinstituten, nicht den Aufbau branchenspezifischer KI-Ökosysteme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-387d9bbf1fdcdcc0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Pflicht zur regelmäßigen Überprüfung von Institutsstrategien betrifft interne Bankprozesse, nicht die schrittweise Überprüfung bestehender Gesetze.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Pflicht zur regelmäßigen Überprüfung von Institutsstrategien betrifft interne Bankprozesse, nicht die schrittweise Überprüfung bestehender Gesetze.",
+            "law_passage_id": "bgbl-1-2026-81-p-d8f6f0558e3df045",
+            "law_quote": "wobei die Strategien und die hierfür eingerichteten Prozesse von kleinen und nicht komplexen Instituten ... alle zwei Jahre und von den übrigen Instituten ... regelmäßig, mindestens aber alle zwei Jahre zu überprüfen und soweit erforderlich anzupassen sind",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-387d9bbf1fdcdcc0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz entwickelt keine KI-Strategie des Bundes; seine ESG-Vorgaben betreffen die Risikosteuerung von Kreditinstituten.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz entwickelt keine KI-Strategie des Bundes; seine ESG-Vorgaben betreffen die Risikosteuerung von Kreditinstituten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3d47c08e9f8998e7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine bundeseigene Wohnungsgesellschaft und regelt keine Wohnraumförderung für Bundesbedienstete.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine bundeseigene Wohnungsgesellschaft und regelt keine Wohnraumförderung für Bundesbedienstete.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3d47c08e9f8998e7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e7a2e6fac02e24f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften enthalten keine Aussagen zu Entwicklungsleistungen oder zum Auftreten der Bundesregierung gegenüber Partnern.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften enthalten keine Aussagen zu Entwicklungsleistungen oder zum Auftreten der Bundesregierung gegenüber Partnern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e7a2e6fac02e24f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3eb39c1f346d1abe",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine EU-Eigenmittel und regelt keine Einnahmen der Europäischen Union.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine EU-Eigenmittel und regelt keine Einnahmen der Europäischen Union.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3eb39c1f346d1abe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die EU-Entgelttransparenzrichtlinie nicht um; es betrifft die Aufsicht über Kreditinstitute.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt die EU-Entgelttransparenzrichtlinie nicht um; es betrifft die Aufsicht über Kreditinstitute.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Konferenz mit Wirtschafts- und Verwaltungsvertretungen zum Bürokratieabbau durch.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine Konferenz mit Wirtschafts- und Verwaltungsvertretungen zum Bürokratieabbau durch.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5520d61e92229eef",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt Krankenkassen keine gemeinsamen längerfristigen Einkäufe von Therapien oder Arzneimitteln.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erlaubt Krankenkassen keine gemeinsamen längerfristigen Einkäufe von Therapien oder Arzneimitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5520d61e92229eef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5a00e520fd63ec47",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zu systemischen Risiken betreffen die Finanzaufsicht und verpflichten keine Plattformen zu Vorkehrungen gegen Desinformation.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zu systemischen Risiken betreffen die Finanzaufsicht und verpflichten keine Plattformen zu Vorkehrungen gegen Desinformation.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5a00e520fd63ec47",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Vereinbarungen zur Rückführung ausreisepflichtiger Staatsangehöriger.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Vereinbarungen zur Rückführung ausreisepflichtiger Staatsangehöriger.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-61377efe42c735ea",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zu ESG-Risiken in Kreditinstituten setzen keine Maßnahmen der Europäischen Säule sozialer Rechte um.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zu ESG-Risiken in Kreditinstituten setzen keine Maßnahmen der Europäischen Säule sozialer Rechte um.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-61377efe42c735ea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stellt dem Technischen Hilfswerk keine personellen Ressourcen bereit.",
+          "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a884435068356c7d0c5e20d8f92e2504d9c5aad9f9d77e9d4d07026eed80d86d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stellt dem Technischen Hilfswerk keine personellen Ressourcen bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Bankenaufsicht und ändern keine Entscheidungsverfahren des Europäischen Rates oder des Ministerrats.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen Bankenaufsicht und ändern keine Entscheidungsverfahren des Europäischen Rates oder des Ministerrats.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d6ac9901ee94fa9",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Bankenaufsicht; einen Ausbau vollzeitnaher Tätigkeit oder eine Fachkräfteoffensive enthalten sie nicht.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Bankenaufsicht; einen Ausbau vollzeitnaher Tätigkeit oder eine Fachkräfteoffensive enthalten sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d6ac9901ee94fa9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften gewähren keine Förderung für einen Umstieg und bestimmen keine Förderhöhe.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften gewähren keine Förderung für einen Umstieg und bestimmen keine Förderhöhe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Bankenaufsicht; eine Untersuchung zur Bündelung von Aufgaben oder Zuständigkeiten der Ministerien ist nicht enthalten.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Bankenaufsicht; eine Untersuchung zur Bündelung von Aufgaben oder Zuständigkeiten der Ministerien ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7a02b8a5530644f8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen enthalten keine Änderung der Besteuerung von Kapitaleinkommen.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen enthalten keine Änderung der Besteuerung von Kapitaleinkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7a02b8a5530644f8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-876a1fe244c52334",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln Bankenaufsicht und machen keine kulturellen Angebote zugänglich oder bezahlbar.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln Bankenaufsicht und machen keine kulturellen Angebote zugänglich oder bezahlbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-876a1fe244c52334",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-88720a5358b240d5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Bankenaufsicht; Modelle zur Beteiligung von Kommunen an Bodenwertsteigerungen regeln sie nicht.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen Bankenaufsicht; Modelle zur Beteiligung von Kommunen an Bodenwertsteigerungen regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-88720a5358b240d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-8f2892fabc3f74af",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften enthalten keine Position oder Initiative zu Strafzahlungen wegen CO₂-Flottengrenzwerten.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften enthalten keine Position oder Initiative zu Strafzahlungen wegen CO₂-Flottengrenzwerten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8f2892fabc3f74af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-8f920f352159a219",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln unter anderem Bankenaufsicht und Sachkunde zu ESG-Risiken, schließen aber keine Schlupflöcher bei der Mitbestimmung im Aufsichtsrat.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge regeln unter anderem Bankenaufsicht und Sachkunde zu ESG-Risiken, schließen aber keine Schlupflöcher bei der Mitbestimmung im Aufsichtsrat.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8f920f352159a219",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-91699dc1fabd8b33",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ändern keine persönlichen Freibeträge.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen ändern keine persönlichen Freibeträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-91699dc1fabd8b33",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-92c01d1eba4ff937",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Bankenaufsicht; Mittel für Integrationskurse oder deren Finanzierung regeln sie nicht.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Bankenaufsicht; Mittel für Integrationskurse oder deren Finanzierung regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-92c01d1eba4ff937",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-93c4c50ca00964db",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keinen gesetzlich festgelegten Mindestkatalog zustimmungsbedürftiger Aufsichtsratsgeschäfte; die genannten Aufsichtsratsregelungen betreffen andere Fragen.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten keinen gesetzlich festgelegten Mindestkatalog zustimmungsbedürftiger Aufsichtsratsgeschäfte; die genannten Aufsichtsratsregelungen betreffen andere Fragen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-93c4c50ca00964db",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ändern Artikel 3 Absatz 3 GG nicht und ergänzen keine geschützten Merkmale.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen ändern Artikel 3 Absatz 3 GG nicht und ergänzen keine geschützten Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften enthalten kein Verfahren zur Erfassung von IP-Adressen bei verdächtigen Benutzerkonten oder zur Ermittlung von Stammdaten.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften enthalten kein Verfahren zur Erfassung von IP-Adressen bei verdächtigen Benutzerkonten oder zur Ermittlung von Stammdaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Bankenaufsicht und gewährleisten keine Ganztagsbetreuung für Grundschulkinder.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Bankenaufsicht und gewährleisten keine Ganztagsbetreuung für Grundschulkinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Prüfaufträge der zuständigen Behörden zu wettbewerbsrechtlichen Verstößen.",
+          "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f759f64587355c1923a07cceb102b9659b4cfc9f3ec0cba6348ca79bd25cfcd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Prüfaufträge der zuständigen Behörden zu wettbewerbsrechtlichen Verstößen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen betreffen Bankenaufsicht und ESG-Risikomanagement; Verhandlungen über ein deutsch-britisches Abkommen regeln sie nicht.",
+          "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen betreffen Bankenaufsicht und ESG-Risikomanagement; Verhandlungen über ein deutsch-britisches Abkommen regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden die Verhandlungen zu einem umfassenden bilateralen Abkommen mit der britischen Regierung unterstützen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a4f1d212ff3d87df",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln Bankenaufsicht, nicht die Initiierung oder Unterstützung zusätzlicher Formate.",
+          "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen regeln Bankenaufsicht, nicht die Initiierung oder Unterstützung zusätzlicher Formate.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen weitere Formate initiieren und unterstützen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-a4f1d212ff3d87df",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln Anforderungen an Kreditinstitute; öffentliche Investitionen zum Abbau eines Investitionsstaus betreffen sie nicht.",
+          "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen regeln Anforderungen an Kreditinstitute; öffentliche Investitionen zum Abbau eines Investitionsstaus betreffen sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die erforderlichen öffentlichen Investitionen müssen rasch getätigt werden, damit der vorhandene Investitionsstau aufgelöst wird und um bessere Voraussetzungen für private Investitionen zu schaffen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen betreffen Bankenaufsicht; Voraussetzungen für EU-Beitritte oder die Kopenhagener Kriterien regeln sie nicht.",
+          "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0d9797fe9e4c58783381fd6a4d5272e890ecf84df804d7f923a6c472e4e0cb7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen betreffen Bankenaufsicht; Voraussetzungen für EU-Beitritte oder die Kopenhagener Kriterien regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Kopenhagener Kriterien müssen immer erfüllt sein.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Bankenaufsicht und enthalten keine Regelung zu zusätzlichen Elterngeldmonaten.",
+          "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Bankenaufsicht und enthalten keine Regelung zu zusätzlichen Elterngeldmonaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ada9e4dc7e77851c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Kreditinstitute, nicht die Agrarförderung oder die Vergütung landwirtschaftlicher und tierschutzbezogener Leistungen.",
+          "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Kreditinstitute, nicht die Agrarförderung oder die Vergütung landwirtschaftlicher und tierschutzbezogener Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ada9e4dc7e77851c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b07f74c8425b5ca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Aufsicht und Datenübermittlung bei Drittstaatengruppen; dokumentierte Integrationsschritte nationaler Einheiten sind nicht erkennbar.",
+          "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelungen betreffen Aufsicht und Datenübermittlung bei Drittstaatengruppen; dokumentierte Integrationsschritte nationaler Einheiten sind nicht erkennbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b07f74c8425b5ca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b290631ad160d141",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug enthält Erhebungsfelder zu Diversitätszielen bei Kreditinstituten, belegt aber ohne den Zusammenhang der Meldepflicht weder deren verbindliche Wirkung noch eine Weiterentwicklung des Führungspositionen-Gesetzes oder Parität.",
+          "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "64fb1a80df99df4c3ac567af60c2b168021691d15f25ccd8441543dc25da3fd8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.82,
+            "rationale": "Der Auszug enthält Erhebungsfelder zu Diversitätszielen bei Kreditinstituten, belegt aber ohne den Zusammenhang der Meldepflicht weder deren verbindliche Wirkung noch eine Weiterentwicklung des Führungspositionen-Gesetzes oder Parität.",
+            "law_passage_id": "bgbl-1-2026-81-p-fa8c230598018127",
+            "law_quote": "Prozentuales Ziel in der Diversitätsstrategie In der Diversitätsstrategie als Ziel festgelegte Mindestanzahl an Personen des jeweils weniger repräsentierten Geschlechts Einhaltung der internen Strategie: Wurde das Ziel zum Meldestichtag erreicht?",
+            "criterion_quote": "das Führungspositionen-Gesetz weiterentwickeln",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist unvollständig; die Anwendbarkeit und rechtliche Wirkung der Erhebungsfelder sind daraus nicht ersichtlich."
+            ],
+            "criterion_id": "spd-2025-ac-b290631ad160d141",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Bankenaufsicht; eine Entkriminalisierung oder strafrechtliche Regelung von Schwangerschaftsabbrüchen ist nicht belegt.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Bankenaufsicht; eine Entkriminalisierung oder strafrechtliche Regelung von Schwangerschaftsabbrüchen ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Schwangerschaftsabbrüche entkriminalisieren und außerhalb des Strafrechts regeln",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Bankenaufsicht und belegen keine Bereitstellung materieller Ressourcen für das THW.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln Bankenaufsicht und belegen keine Bereitstellung materieller Ressourcen für das THW.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Technische Hilfswerk (THW) ist unerlässlich für Schutz und Hilfe im Fall der Fälle.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+          "disposition": "no_supported_link",
+          "rationale": "Der Text enthält keine belegte Prüfung neuer Gesetze oder größerer Novellierungen auf Wirksamkeit, Bürgernähe, Praxistauglichkeit und Digitaltauglichkeit.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Text enthält keine belegte Prüfung neuer Gesetze oder größerer Novellierungen auf Wirksamkeit, Bürgernähe, Praxistauglichkeit und Digitaltauglichkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "alle neuen Gesetze und größeren Novellierungen vor Verabschiedung auf Wirksamkeit, Bürgernähe, Praxistauglichkeit und Digitaltauglichkeit testen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bee474ad7385688c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Banken; ein Elterngeldanspruch von sechs Monaten je Elternteil ist nicht belegt.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Banken; ein Elterngeldanspruch von sechs Monaten je Elternteil ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "jeder Elternteil Anspruch auf 6 Monate Elterngeld erhält",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bee474ad7385688c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c016673669030481",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zur Bankenaufsicht belegen keine Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zur Bankenaufsicht belegen keine Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Verfassungsfeinde nicht mehr im Staatsdienst verbleiben",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c016673669030481",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c242913d648b92fd",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Regelung zur Höhe des gesetzlichen Mindestlohns oder zur 60-Prozent-Orientierung ist nicht belegt.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Regelung zur Höhe des gesetzlichen Mindestlohns oder zur 60-Prozent-Orientierung ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mindestens 60 Prozent des mittleren Einkommens in Deutschland",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c242913d648b92fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c7d4a2d4e2110caa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Banken und enthalten keine belegten gemeinsamen Standards für grünen Stahl.",
+          "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1d2bb4f5aa4916a5e7cbf1b304262bbfb5666125a07bdae0f0e72b1bdf28a071"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Banken und enthalten keine belegten gemeinsamen Standards für grünen Stahl.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "gemeinsame Standards festlegen, damit es nicht mehr 28 verschiedene Standards für grünen Stahl gibt",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c7d4a2d4e2110caa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cbfb7bce64a9c9f2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Bankenaufsicht und Drittstaatenzweigstellen, nicht die solidarische Verteilung zwischen EU-Mitgliedstaaten.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Bankenaufsicht und Drittstaatenzweigstellen, nicht die solidarische Verteilung zwischen EU-Mitgliedstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cbfb7bce64a9c9f2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Kreditinstitute; eine automatische Prüfung oder Gewährung von Kindergeld wird nicht geregelt.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Kreditinstitute; eine automatische Prüfung oder Gewährung von Kindergeld wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d071781071d4f1d4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur finanziellen Ausstattung oder Beratung der Jobcenter.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur finanziellen Ausstattung oder Beratung der Jobcenter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d071781071d4f1d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Automatische Anträge oder Auszahlungen von Sozialleistungen sind nicht Gegenstand der Änderungen zur Bankenaufsicht.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Automatische Anträge oder Auszahlungen von Sozialleistungen sind nicht Gegenstand der Änderungen zur Bankenaufsicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d72f952f80945b24",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Banken und enthalten keine regional differenzierten staatlichen Bedarfsprognosen.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Banken und enthalten keine regional differenzierten staatlichen Bedarfsprognosen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d72f952f80945b24",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d8aab836b0f94e7a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Bankenaufsichtsregeln, stellt aber keine digitale Infrastruktur für grenzüberschreitende Dienstleistungen bereit.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz ändert Bankenaufsichtsregeln, stellt aber keine digitale Infrastruktur für grenzüberschreitende Dienstleistungen bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d8aab836b0f94e7a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+          "disposition": "no_supported_link",
+          "rationale": "Verfahren zur Anerkennung ausländischer Abschlüsse oder Qualifikationen werden nicht geändert.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Verfahren zur Anerkennung ausländischer Abschlüsse oder Qualifikationen werden nicht geändert.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderungen zur Besteuerung privater Immobilienverkäufe oder zur Spekulationsfrist.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderungen zur Besteuerung privater Immobilienverkäufe oder zur Spekulationsfrist.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e01b5a051537918d",
+          "disposition": "no_supported_link",
+          "rationale": "Regeln zu Vergütung digitaler Plattformen oder Künstlicher Intelligenz sind nicht enthalten.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Regeln zu Vergütung digitaler Plattformen oder Künstlicher Intelligenz sind nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e01b5a051537918d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e14524905423d582",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Regulierung von Kreditinstituten, nicht die steuerliche Behandlung reinvestierter Gewinne von Personenunternehmen.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Regulierung von Kreditinstituten, nicht die steuerliche Behandlung reinvestierter Gewinne von Personenunternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e14524905423d582",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e3a827027ac22786",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Bürgerversicherung oder ein gleicher Zugang zu Gesundheitsleistungen wird durch das Gesetz nicht eingeführt.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Bürgerversicherung oder ein gleicher Zugang zu Gesundheitsleistungen wird durch das Gesetz nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e3a827027ac22786",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f33f951a9cf2481e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine personelle Ausstattung der Jobcenter für Beratung vor.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine personelle Ausstattung der Jobcenter für Beratung vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f33f951a9cf2481e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6065a3c58367c99",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Zusammenfassung oder Abstimmung von Sozialleistungen wird in den vorgelegten Vorschriften nicht geregelt.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Zusammenfassung oder Abstimmung von Sozialleistungen wird in den vorgelegten Vorschriften nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6065a3c58367c99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+          "disposition": "no_supported_link",
+          "rationale": "Die ESG-Vorschriften betreffen Risiken und Aufsicht von Kreditinstituten, nicht die Ausrichtung der Außen- und Entwicklungspolitik.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die ESG-Vorschriften betreffen Risiken und Aufsicht von Kreditinstituten, nicht die Ausrichtung der Außen- und Entwicklungspolitik.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fac327f92a583a3c",
+          "disposition": "no_supported_link",
+          "rationale": "Gewaltschutzkonzepte in Einrichtungen oder Dienstleistungen der Behindertenhilfe werden nicht geregelt.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Gewaltschutzkonzepte in Einrichtungen oder Dienstleistungen der Behindertenhilfe werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fac327f92a583a3c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fe2ee599dfc130dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften ändern Aufsichts- und Eigenmittelanforderungen für Banken, erlauben institutionellen Anlegern aber nicht ausdrücklich Investitionen in die genannten Unternehmen oder Einrichtungen.",
+          "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd0e5cd1935948c2825b8ba3841b568162b2dbfc579c9dc0ea4d0f23640c98a3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Vorschriften ändern Aufsichts- und Eigenmittelanforderungen für Banken, erlauben institutionellen Anlegern aber nicht ausdrücklich Investitionen in die genannten Unternehmen oder Einrichtungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fe2ee599dfc130dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-82",
@@ -121301,45 +124019,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6097,
+    "calls": 6163,
     "cache_hits": 102,
-    "subdivision_cache_hits": 3,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 27.595865,
-    "reported_cost_calls": 5514,
+    "reported_cost_usd": 27.708457,
+    "reported_cost_calls": 5580,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.391395,
     "unknown_cost_calls": 583,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 30.98726,
-    "prompt_tokens": 63150261,
-    "completion_tokens": 10412081,
+    "budget_exposure_usd": 31.099853,
+    "prompt_tokens": 63910584,
+    "completion_tokens": 10579888,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 245,
-        "reported_cost_usd": 6.09676875,
-        "unknown_cost_reserved_usd": 1.1796119636642288e-15,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 246,
+        "reported_cost_usd": 6.118443,
+        "unknown_cost_reserved_usd": 1.2073675392798577e-15,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 103,
-        "reported_cost_usd": 1.3812965000000004,
+        "calls": 104,
+        "reported_cost_usd": 1.3844357500000004,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2852,
-        "reported_cost_usd": 3.2333293724999934,
+        "calls": 2916,
+        "reported_cost_usd": 3.3211087974999933,
         "unknown_cost_reserved_usd": 2.4069194000000014,
-        "pending_reserved_usd": 1.214306433183765e-17
+        "pending_reserved_usd": 8.673617379884035e-19
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
