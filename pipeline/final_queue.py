@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import json
 import logging
+import math
+import re
 import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -39,34 +41,74 @@ VERSION = 'all-party-sol-final-v2'
 LEGACY_VERSION = 'all-party-law-first-v1'
 
 
-def migrate_budget(path, additional_usd):
-    """One explicit, user-funded transition. Preserve EVERY prior charge/reservation."""
+def migrate_budget(path, additional_usd, *, topups=()):
+    """Apply explicit funding once per ID, never resetting charges or ordinary retry limits."""
     if not path.exists():
         raise ValueError('A retained ledger is required; never reset paid work')
-    data = json.loads(path.read_text())
+    original = path.read_text()
+    data = json.loads(original)
+    snapshot = None
     if data['model'] != 'openai/gpt-6-luna':
         raise ValueError('Unexpected primary model in retained ledger')
     if data['review_model'] == FINAL_MODEL:
         if not any(m.get('id') == VERSION for m in data.get('migrations', [])):
             raise ValueError('Missing documented ledger transition')
-        return data['max_usd']
-    if data['review_model'] != 'anthropic/claude-sonnet-5.5' or not 0 < additional_usd <= 20:
-        raise ValueError('Only the explicit Sonnet-to-Sol transition with up to $20 new budget is supported')
-    exposure = data['reported_cost_usd'] + data['unknown_cost_reserved_usd'] + data['pending_reserved_usd']
-    cap = exposure + additional_usd
-    if cap > 100:
-        raise ValueError('Cumulative cap exceeds the global safeguard')
-    snapshot = path.with_name('budget-before-sol.json')
-    if not snapshot.exists():
-        write_json(snapshot, data)
-    data['migrations'] = [*data.get('migrations', []), {'id': VERSION, 'from_model': data['review_model'],
-        'to_model': FINAL_MODEL, 'prior_reported_usd': data['reported_cost_usd'],
-        'prior_exposure_usd': exposure, 'additional_budget_usd': additional_usd, 'cumulative_cap_usd': cap}]
-    data['review_model'] = FINAL_MODEL
+    else:
+        if (data['review_model'] != 'anthropic/claude-sonnet-5.5'
+                or isinstance(additional_usd, bool) or not 0 < additional_usd <= 20):
+            raise ValueError('Only the explicit Sonnet-to-Sol transition with up to $20 new budget is supported')
+        exposure = data['reported_cost_usd'] + data['unknown_cost_reserved_usd'] + data['pending_reserved_usd']
+        cap = exposure + additional_usd
+        snapshot = path.with_name('budget-before-sol.json')
+        data['migrations'] = [*data.get('migrations', []), {'id': VERSION, 'from_model': data['review_model'],
+            'to_model': FINAL_MODEL, 'prior_reported_usd': data['reported_cost_usd'],
+            'prior_exposure_usd': exposure, 'additional_budget_usd': additional_usd, 'cumulative_cap_usd': cap}]
+        data['review_model'] = FINAL_MODEL
+        data['max_usd'] = cap
+        # Legacy totals cannot honestly be attributed to either old model after the fact.
+        data.setdefault('breakdown', {})
+    cap = data['max_usd']
+    if (not isinstance(cap, (int, float)) or isinstance(cap, bool)
+            or not math.isfinite(cap) or not 0 < cap <= 100):
+        raise ValueError('Invalid cumulative cap or global safeguard exceeded')
+    if not isinstance(topups, (list, tuple)):
+        raise ValueError('Budget top-ups must be an explicit list')
+    seen, added = set(), []
+    for topup in topups:
+        if not isinstance(topup, dict) or set(topup) != {'id', 'additional_budget_usd'}:
+            raise ValueError('A budget top-up requires an ID and additional_budget_usd')
+        identifier, amount = topup['id'], topup['additional_budget_usd']
+        if (not isinstance(identifier, str) or not re.fullmatch(r'budget-topup-[a-z0-9-]{1,64}', identifier)
+                or identifier in seen):
+            raise ValueError('Budget top-up IDs must be unique and use the budget-topup- prefix')
+        seen.add(identifier)
+        if (not isinstance(amount, (int, float)) or isinstance(amount, bool)
+                or not math.isfinite(amount) or not 0 < amount <= 100):
+            raise ValueError('Budget top-up amount must be finite and positive, at most $100')
+        applied = [m for m in data['migrations'] if m.get('id') == identifier]
+        if applied:
+            if (len(applied) != 1 or applied[0].get('kind') != 'budget_topup'
+                    or applied[0].get('additional_budget_usd') != amount):
+                raise ValueError('An applied budget top-up is immutable; use a new ID for new funding')
+            continue
+        previous_cap = cap
+        cap += amount
+        if cap > 100:
+            raise ValueError('Cumulative cap exceeds the global safeguard')
+        entry = {'id': identifier, 'kind': 'budget_topup', 'additional_budget_usd': amount,
+                 'previous_cap_usd': previous_cap, 'cumulative_cap_usd': cap}
+        data['migrations'].append(entry)
+        added.append(entry)
     data['max_usd'] = cap
-    # Legacy totals cannot honestly be attributed to either old model after the fact.
-    data.setdefault('breakdown', {})
-    write_json(path, data)
+    # Validate every allocation before any write. Repeating a funded continuation is a no-op;
+    # removing an allocation from config cannot remove its durable record or re-add it later.
+    if data != json.loads(original):
+        if snapshot is not None and not snapshot.exists():
+            write_json(snapshot, json.loads(original))
+        write_json(path, data)
+        for entry in added:
+            logger.info('Applied %s once: +$%.2f; cumulative cap $%.4f; prior charges/reservations retained',
+                        entry['id'], entry['additional_budget_usd'], entry['cumulative_cap_usd'])
     return cap
 
 
