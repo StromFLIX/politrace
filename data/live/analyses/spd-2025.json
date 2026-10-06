@@ -66623,7 +66623,7 @@
     {
       "law_id": "bgbl-1-2026-138",
       "analysis_sha256": "1803c786fdf4e8a4ef1cec86fdab77ef4170d8fac4ad9bae09cb40d721b0cfed",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0229ee4b51a1790b",
@@ -66915,6 +66915,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift bestimmt die zuständige Behörde für Pflichten aus der Kurzzeitvermietungsverordnung. Der Verweis auf den DSA dient dabei der Behördenzuordnung; eine Maßnahme zur Durchsetzung von DMA, DSA oder KI-Verordnung ergibt sich daraus nicht.",
+          "input_sha256": "3a1ee53fa06781a0e754f9861096d459b23712ebc10a0323383eb3ce737ccaa4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fd2c9fd84963b31c13b29fc6b2308dc6caa81942a8b1eb81106bbb0bd6ef41b9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ee53fa06781a0e754f9861096d459b23712ebc10a0323383eb3ce737ccaa4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Vorschrift bestimmt die zuständige Behörde für Pflichten aus der Kurzzeitvermietungsverordnung. Der Verweis auf den DSA dient dabei der Behördenzuordnung; eine Maßnahme zur Durchsetzung von DMA, DSA oder KI-Verordnung ergibt sich daraus nicht.",
+            "law_passage_id": "bgbl-1-2026-138-p-2dde6d699736389e",
+            "law_quote": "(2) Zuständige Behörde nach Artikel 15 Absatz 1 Satz 1 der Verordnung (EU) 2024/1028 in der Fassung vom\n11. April 2024 in Verbindung mit Artikel 49 Absatz 2 Satz 1 der Verordnung (EU) 2022/2065 in der Fassung vom\n19. Oktober 2022 ist die Koordinierungsstelle für digitale Dienste nach § 14 Absatz 1.",
+            "criterion_quote": "Es gilt die\neuropäischen Regelungen (DMA, DSA, KI-Verordnung) durchzusetzen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-aafb0797c80bd107",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz regelt Datenaustausch bei Kurzzeitvermietungen und die Durchsetzung von EU-Dienstleistungs- und Diskriminierungsregeln; EU-Beitritte oder Kopenhagener Kriterien behandelt es nicht.",
@@ -66992,6 +67024,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-c016673669030481",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f4c5c9cc3ff714e7",
+          "disposition": "proposed_link",
+          "rationale": "Die digitale Zugangsstelle stellt bestimmte Daten zu Kurzzeitvermietungen den Statistischen Ämtern der betroffenen Länder und des Bundes sowie Eurostat monatlich automatisiert über eine technische Schnittstelle bereit. Das unterstützt die digitale Bereitstellung an Behörden in diesem begrenzten Bereich; die Regelung tritt am 1. Juli 2026 in Kraft.",
+          "input_sha256": "3a1ee53fa06781a0e754f9861096d459b23712ebc10a0323383eb3ce737ccaa4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1df6c42d53685858e4b0700b1e4253ff011fdbb822a5eb5cedaec1576cf66f92"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ee53fa06781a0e754f9861096d459b23712ebc10a0323383eb3ce737ccaa4"
+            }
+          ],
+          "impact_id": "impact-22a8b1b9396d9dbc",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Die digitale Zugangsstelle stellt bestimmte Daten zu Kurzzeitvermietungen den Statistischen Ämtern der betroffenen Länder und des Bundes sowie Eurostat monatlich automatisiert über eine technische Schnittstelle bereit. Das unterstützt die digitale Bereitstellung an Behörden in diesem begrenzten Bereich; die Regelung tritt am 1. Juli 2026 in Kraft.",
+            "law_passage_id": "bgbl-1-2026-138-p-5f6e35b5c83c7a5b",
+            "law_quote": "(6) Die einheitliche digitale Zugangsstelle stellt den Statistischen Ämtern des Bundes und derjenigen Länder,\ndie Registrierungsverfahren nach Artikel 3 Nummer 8 der Verordnung (EU) 2024/1028 in der Fassung vom\n11. April 2024 eingeführt haben, sowie Eurostat monatlich die in Artikel 12 Absatz 4 der Verordnung (EU)\n2024/1028 in der Fassung vom 11. April 2024 genannten Daten automatisiert über eine technische\nSchnittstelle bereit.",
+            "criterion_quote": "allen relevanten Behörden digital bereitgestellt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f4c5c9cc3ff714e7",
+            "disposition": "proposed_link"
           },
           "verification": null
         }
@@ -68184,12 +68248,706 @@
         "spd-2025-ac-ffb80d98570645ea"
       ],
       "omitted_count": 745,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen verlängern keine Möglichkeit nach dem Baugesetzbuch, die Umwandlung von Miet- in Eigentumswohnungen zu verbieten.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen verlängern keine Möglichkeit nach dem Baugesetzbuch, die Umwandlung von Miet- in Eigentumswohnungen zu verbieten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Möglichkeit zum Verbot der Umwandlung von Miet- in Eigentumswohnungen im BauGB wollen wir über 2025 hinaus verlängern.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern keine Verfahren zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften ändern keine Verfahren zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Deutschland profitiert seit Langem davon, dass wir ein Einwanderungsland sind. Wir treten Menschen mit Respekt gegenüber, völlig egal, wo sie ihre Wurzeln haben; mit klaren und nachvollziehbaren Regeln, weniger Bürokratie und einer deutlich transparenteren und vereinfachten Anerkennung von im Ausland erworbenen Abschlüssen und Qualifikationen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1df7a1771d266651",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen sehen für Rentnerinnen und Rentner keine Einmalzahlung anstelle monatlicher Rentenzuschläge vor.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Änderungen sehen für Rentnerinnen und Rentner keine Einmalzahlung anstelle monatlicher Rentenzuschläge vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zudem sollen sie anstelle monatlicher Zuschläge auf die Rente auch eine Einmalzahlung in Anspruch nehmen können.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-1df7a1771d266651",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen weder die Verfahrensdauer beim BAMF noch die Kapazitäten der Verwaltungsgerichte; eine Sechsmonatsfrist oder deren Erreichbarkeit wird nicht belegt.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften betreffen weder die Verfahrensdauer beim BAMF noch die Kapazitäten der Verwaltungsgerichte; eine Sechsmonatsfrist oder deren Erreichbarkeit wird nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir setzen auf eine deutliche Beschleunigung der Asylverfahren – sowohl beim Bundesamt für Migration und Flüchtlinge wie auch bei den verwaltungsgerichtlichen Verfahren. Mit umfassender Digitalisierung und Verwaltungsmodernisierung wollen wir sicherstellen, dass Asylentscheidungen innerhalb von sechs Monaten getroffen werden können.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ea29f9d36cefcac",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen setzen keine ODA-Quote fest und enthalten keine Angaben zu Entwicklungsleistungen im Verhältnis zum BNE.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen setzen keine ODA-Quote fest und enthalten keine Angaben zu Entwicklungsleistungen im Verhältnis zum BNE.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen, dass mindestens 0,7 Prozent des Bruttonationaleinkommens (BNE) für öffentliche Entwicklungsleistungen (ODA-Quote) bereitgestellt werden.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-1ea29f9d36cefcac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-24a59f700fff778c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Beteiligung von Tarifvertragsparteien an Sozialpartnermodellen begründet kein Verbandsklagerecht für Gewerkschaften.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Beteiligung von Tarifvertragsparteien an Sozialpartnermodellen begründet kein Verbandsklagerecht für Gewerkschaften.",
+            "law_passage_id": "bgbl-1-2026-14-p-13a26b132d5c885f",
+            "law_quote": "Die Tarifvertragsparteien müssen sich an der Durchführung und Steuerung eines Sozialpartnermodells beteiligen.",
+            "criterion_quote": "und ein Verbandsklagerecht für Gewerkschaften einführen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-24a59f700fff778c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften legen den gesetzlichen Mindestlohn nicht auf 15 Euro fest.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften legen den gesetzlichen Mindestlohn nicht auf 15 Euro fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dementsprechend muss der Mindestlohn spätestens ab 2026 bei 15 Euro liegen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften entwickeln weder die KI-Strategie des Bundes weiter noch bauen sie branchenspezifische KI-Ökosysteme auf.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften entwickeln weder die KI-Strategie des Bundes weiter noch bauen sie branchenspezifische KI-Ökosysteme auf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden. Denn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt und damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden in Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und umgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der Quantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht deshalb die Weiterentwicklung der KI-Strategie an erster Stelle. Der Fokus soll dabei insbesondere auf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau von branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Weiterentwicklung der KI-Strategie und keine Schwerpunktsetzung auf systemische Innovationen.",
+          "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36bacf11151e7f6ccc1ab4edbc1fa476e5dc32ecc841995e647032d435e1b77c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Weiterentwicklung der KI-Strategie und keine Schwerpunktsetzung auf systemische Innovationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden. Denn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt und damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden in Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und umgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der Quantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht deshalb die Weiterentwicklung der KI-Strategie an erster Stelle. Der Fokus soll dabei insbesondere auf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau von branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3ba1be6a207cfa3a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Fortsetzung der Förderung von Weiterbildungsagenturen.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Fortsetzung der Förderung von Weiterbildungsagenturen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden die Förderung von **regionalen Verbünden, Weiterbildungsagenturen und**\n**Transformationsclustern** fortsetzen und intensivieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3ba1be6a207cfa3a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cfbd619b79f4474",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Fortsetzung der Förderung von Transformationsclustern.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Fortsetzung der Förderung von Transformationsclustern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden die Förderung von **regionalen Verbünden, Weiterbildungsagenturen und**\n**Transformationsclustern** fortsetzen und intensivieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cfbd619b79f4474",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3db2b917a979fcf2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Terminvergaben oder zu einem Vergleich gesetzlich und privat Versicherter.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Terminvergaben oder zu einem Vergleich gesetzlich und privat Versicherter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Gesetzlich Versicherte sollen genauso\nschnell wie Privatversicherte einen Termin erhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3db2b917a979fcf2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e7a2e6fac02e24f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu öffentlichen Entwicklungsleistungen oder zur Vertretung eines ODA-Anspruchs gegenüber Partnern.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu öffentlichen Entwicklungsleistungen oder zur Vertretung eines ODA-Anspruchs gegenüber Partnern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Diesen Anspruch haben wir nicht nur an uns, sondern auch an unsere Partner\ninsbesondere im G7-Kreis.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e7a2e6fac02e24f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die EU-Entgelttransparenzrichtlinie nicht um und enthält hierzu keine Regelung.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt die EU-Entgelttransparenzrichtlinie nicht um und enthält hierzu keine Regelung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "deswegen die EU-Entgelttransparenzrichtlinie bis 2026 in nationales Recht umsetzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-506a77d91f268ff5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt nicht, ob unbefristete Stellen im öffentlichen Dienst der Regelfall sind.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt nicht, ob unbefristete Stellen im öffentlichen Dienst der Regelfall sind.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unbefristete Stellen sollen die Regel sein, um\nSicherheit und Perspektiven für die Beschäftigten zu schaffen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-506a77d91f268ff5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5a6f18db6e933077",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Förderung regionaler Verbünde.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Förderung regionaler Verbünde.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden die Förderung von **regionalen Verbünden, Weiterbildungsagenturen und**\n**Transformationsclustern** fortsetzen und intensivieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5a6f18db6e933077",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+          "disposition": "no_supported_link",
+          "rationale": "Die Datenregelungen des Gesetzes betreffen Sozialversicherungs- und Betriebsrentenverfahren, nicht den fairen und rechtssicheren Umgang mit Daten im Betrieb.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Datenregelungen des Gesetzes betreffen Sozialversicherungs- und Betriebsrentenverfahren, nicht den fairen und rechtssicheren Umgang mit Daten im Betrieb.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dafür werden wir einen fairen und rechtssicheren Umgang mit Daten im Betrieb regeln",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-662cc3a444b85235",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Ausbildung von Erzieherinnen und Erziehern oder zu deren Entlohnung.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Ausbildung von Erzieherinnen und Erziehern oder zu deren Entlohnung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine entlohnte Ausbildung für Erzieherinnen und Erzieher",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-662cc3a444b85235",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d6ac9901ee94fa9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Ausbau vollzeitnaher Tätigkeit bei Beschäftigten.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Ausbau vollzeitnaher Tätigkeit bei Beschäftigten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "den Ausbau vollzeitnaher Tätigkeit bei den meist weiblichen Beschäftigten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d6ac9901ee94fa9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7c66f4dad87f9bbf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine mietrechtliche Regelung zu Mieterhöhungen in Gebieten mit angespanntem Wohnungsmarkt.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine mietrechtliche Regelung zu Mieterhöhungen in Gebieten mit angespanntem Wohnungsmarkt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dass in Gebieten mit angespanntem Wohnungsmarkt nur eine maximale Mietsteigerung von sechs\nProzent in drei Jahren bis zur ortsüblichen Vergleichsmiete gestattet ist.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7c66f4dad87f9bbf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-8160d7c99347a779",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Personalübernahme bei Betreiberwechseln im Nah- und Regionalverkehr.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Personalübernahme bei Betreiberwechseln im Nah- und Regionalverkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden die\nverpflichtende Personalübernahme für alle Beschäftigten beim Betreiberwechsel im Nah- und\nRegionalverkehr gesetzlich festschreiben.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8160d7c99347a779",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-89231cfc4976d7af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Einstufung der Behinderung demokratischer Mitbestimmung als Offizialdelikt.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Einstufung der Behinderung demokratischer Mitbestimmung als Offizialdelikt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Behinderung demokratischer Mitbestimmung stufen wir künftig als Offizialdelikt ein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-89231cfc4976d7af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9047948d47c764b9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine steuerliche Begünstigung von Arbeitgeberprämien für eine Ausweitung der Arbeitszeit Teilzeitbeschäftigter.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine steuerliche Begünstigung von Arbeitgeberprämien für eine Ausweitung der Arbeitszeit Teilzeitbeschäftigter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden einen neuen steuerlichen Anreiz zur Ausweitung der Arbeitszeit von\nTeilzeitbeschäftigten schaffen: Wenn Arbeitgeber eine Prämie für die Ausweitung der Arbeitszeit\nzahlen, werden wir diese Prämie steuerlich begünstigen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9047948d47c764b9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-92c01d1eba4ff937",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Finanzierung von Integrationskursen oder zu dafür vorgesehenen Haushaltsmitteln.",
+          "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "29eb3855b07cf790ae300e732e8c6af2901ad1ce5c0a294544683647b3d24348"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Finanzierung von Integrationskursen oder zu dafür vorgesehenen Haushaltsmitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und sicherstellen, dass sie mit angemessenen\nHaushaltsmitteln finanziert werden, damit sie ihre zentrale Rolle bei der Erstintegration weiterhin\nerfüllen können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-92c01d1eba4ff937",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ffb80d98570645ea",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern das Vorbeschäftigungsverbot nicht; sie betreffen betriebliche Altersversorgung und weitere Sachgebiete.",
+          "input_sha256": "171012258896160dde40a20089052f03841afc0b6c3ab97ef0eb6bb3820a8e16",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "171012258896160dde40a20089052f03841afc0b6c3ab97ef0eb6bb3820a8e16"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften ändern das Vorbeschäftigungsverbot nicht; sie betreffen betriebliche Altersversorgung und weitere Sachgebiete.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ffb80d98570645ea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-140",
       "analysis_sha256": "6db636f6163ffae3890aa594ac94423d0a652c518d111e2ce69f57ebe9c4f07a",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0b17bb0caeddd964",
@@ -68206,7 +68964,332 @@
         "spd-2025-ac-cd2511bef640a125"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0b17bb0caeddd964",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum EU-Erweiterungsprozess oder zum Zugang zum Binnenmarkt.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum EU-Erweiterungsprozess oder zum Zugang zum Binnenmarkt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0b17bb0caeddd964",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-30f25d7fb091746f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung zu Sicherheitsbeauftragten betrifft allgemeine Unfall- und Gesundheitsgefahren; psychische Belastungen bei der Arbeit werden nicht ausdrücklich geregelt.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Änderung zu Sicherheitsbeauftragten betrifft allgemeine Unfall- und Gesundheitsgefahren; psychische Belastungen bei der Arbeit werden nicht ausdrücklich geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-30f25d7fb091746f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4137648af47227cb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu gemeinsamen Manövern von EU-Mitgliedstaaten.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu gemeinsamen Manövern von EU-Mitgliedstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4137648af47227cb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-61377efe42c735ea",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des SGB VII regelt Sicherheitsbeauftragte, setzt aber keine Maßnahmen zur Umsetzung der Europäischen Säule sozialer Rechte um.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des SGB VII regelt Sicherheitsbeauftragte, setzt aber keine Maßnahmen zur Umsetzung der Europäischen Säule sozialer Rechte um.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-61377efe42c735ea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-864921bf72f1c855",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Wartezeiten oder Behandlungsmöglichkeiten gesetzlich und privat Versicherter.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Wartezeiten oder Behandlungsmöglichkeiten gesetzlich und privat Versicherter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-864921bf72f1c855",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine Diskriminierungsmerkmale.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine Diskriminierungsmerkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu EU-Beitritten oder den Kopenhagener Kriterien.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu EU-Beitritten oder den Kopenhagener Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Initiativrecht des Europäischen Parlaments.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Initiativrecht des Europäischen Parlaments.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8c3382cb2b8232d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Beschaffungsvorhaben oder Vereinbarungen zur gemeinsamen Beschaffung durch EU-Mitgliedstaaten.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Beschaffungsvorhaben oder Vereinbarungen zur gemeinsamen Beschaffung durch EU-Mitgliedstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8c3382cb2b8232d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+          "disposition": "no_supported_link",
+          "rationale": "Die SGB-VII-Änderung betrifft Sicherheitsbeauftragte, nicht die Einbeziehung von Beschäftigungsverhältnissen in die soziale Sicherung.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die SGB-VII-Änderung betrifft Sicherheitsbeauftragte, nicht die Einbeziehung von Beschäftigungsverhältnissen in die soziale Sicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cbfb7bce64a9c9f2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur solidarischen Verteilung unter EU-Mitgliedstaaten.",
+          "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0dec74c3b82c87d1ad1dbc753da8425b47fed2fef1d3b2c78419ca394fc095cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur solidarischen Verteilung unter EU-Mitgliedstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cbfb7bce64a9c9f2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cd2511bef640a125",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Notfallverfahren für Gasgeräte und persönliche Schutzausrüstung sowie Sicherheitsbeauftragte in Unternehmen; Behandlungsmöglichkeiten privat und gesetzlich Versicherter werden nicht geändert.",
+          "input_sha256": "bd58c51d665e84487c89b999db09ee98168d6b1ca618964b511e8b95a9c308c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bd58c51d665e84487c89b999db09ee98168d6b1ca618964b511e8b95a9c308c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Notfallverfahren für Gasgeräte und persönliche Schutzausrüstung sowie Sicherheitsbeauftragte in Unternehmen; Behandlungsmöglichkeiten privat und gesetzlich Versicherter werden nicht geändert.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cd2511bef640a125",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-141",
@@ -68232,7 +69315,62 @@
         "spd-2025-ac-fc039e75480fcc10"
       ],
       "omitted_count": 771,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Das DGG führt Daten-Governance-Recht durch und führt keine Genehmigungsfiktion für Bau- oder Investitionsanträge ein.",
+          "input_sha256": "216c3b64bf9fbbe43b86497137d1f5ee419a68b8959dfc1f86a08d48dbb5f5ed",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "216c3b64bf9fbbe43b86497137d1f5ee419a68b8959dfc1f86a08d48dbb5f5ed"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das DGG führt Daten-Governance-Recht durch und führt keine Genehmigungsfiktion für Bau- oder Investitionsanträge ein.",
+            "law_passage_id": "bgbl-1-2026-141-p-381aac9a4bccc676",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Vorschriften der Verordnung (EU) 2022/868 (Daten-GovernanceRechtsakt).",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das DGG regelt Daten-Governance, nicht die Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "216c3b64bf9fbbe43b86497137d1f5ee419a68b8959dfc1f86a08d48dbb5f5ed",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "216c3b64bf9fbbe43b86497137d1f5ee419a68b8959dfc1f86a08d48dbb5f5ed"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das DGG regelt Daten-Governance, nicht die Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": "bgbl-1-2026-141-p-381aac9a4bccc676",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Vorschriften der Verordnung (EU) 2022/868 (Daten-GovernanceRechtsakt).",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-142",
@@ -72612,44 +73750,44 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4584,
-    "cache_hits": 69,
-    "subdivision_cache_hits": 7,
+    "calls": 4637,
+    "cache_hits": 70,
+    "subdivision_cache_hits": 2,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 23.596736,
-    "reported_cost_calls": 4225,
+    "reported_cost_usd": 23.718971,
+    "reported_cost_calls": 4269,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.147221,
-    "unknown_cost_calls": 359,
+    "unknown_cost_reserved_usd": 2.199191,
+    "unknown_cost_calls": 368,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 25.743957,
-    "prompt_tokens": 46548728,
-    "completion_tokens": 7321733,
+    "budget_exposure_usd": 25.918163,
+    "prompt_tokens": 47085156,
+    "completion_tokens": 7413529,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 174,
-        "reported_cost_usd": 4.234033249999999,
+        "calls": 177,
+        "reported_cost_usd": 4.300323499999998,
         "unknown_cost_reserved_usd": 9.853229343548264e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 66,
-        "reported_cost_usd": 0.8406830000000001,
+        "calls": 67,
+        "reported_cost_usd": 0.8494447500000001,
         "unknown_cost_reserved_usd": 1.0408340855860843e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1447,
-        "reported_cost_usd": 1.6375501900000005,
-        "unknown_cost_reserved_usd": 1.1627453,
+        "calls": 1496,
+        "reported_cost_usd": 1.6847330025000002,
+        "unknown_cost_reserved_usd": 1.2147157500000003,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
