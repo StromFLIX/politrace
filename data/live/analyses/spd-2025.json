@@ -77692,7 +77692,7 @@
     {
       "law_id": "bgbl-1-2026-195",
       "analysis_sha256": "87a3118fda51fbe68fca572cfc2994d5338d9a34075b8f59cd098a99771ec008",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0229ee4b51a1790b",
@@ -77842,6 +77842,38 @@
             ],
             "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-27e2a074cd40a9fa",
+          "disposition": "proposed_link",
+          "rationale": "Wenn ein rabattiertes Arzneimittel bei Vorlage der Verordnung nicht verfügbar ist, darf die Apotheke unmittelbar ein lieferbares wirkstoffgleiches Arzneimittel abgeben; bis zum 1. Juli 2028 gilt zusätzlich eine Regel für vorrätige Mittel. Das erleichtert die Versorgung bei solchen Engpässen, weitet Liefersicherheitsregeln aber nicht auf alle Arzneimittel aus.",
+          "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e91bdb534a97857589cf488ecca589a83a5b41383e8ecfb3c6ba7e5066999bfd"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e"
+            }
+          ],
+          "impact_id": "impact-dc8241f694ff20a5",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Wenn ein rabattiertes Arzneimittel bei Vorlage der Verordnung nicht verfügbar ist, darf die Apotheke unmittelbar ein lieferbares wirkstoffgleiches Arzneimittel abgeben; bis zum 1. Juli 2028 gilt zusätzlich eine Regel für vorrätige Mittel. Das erleichtert die Versorgung bei solchen Engpässen, weitet Liefersicherheitsregeln aber nicht auf alle Arzneimittel aus.",
+            "law_passage_id": "bgbl-1-2026-195-p-ec35ee53397ec623",
+            "law_quote": "Sind rabattierte Arzneimittel bei Vorlage der ärztlichen\nVerordnung nicht verfügbar im Sinne des Absatzes 2a Satz 2 oder 3, ist die Apotheke unmittelbar zur\nAbgabe eines lieferbaren wirkstoffgleichen Arzneimittels nach Maßgabe des Absatzes 1 Satz 2 berechtigt.\nAbweichend von Satz 2 ist die Apotheke bis zum 1. Juli 2028 unmittelbar zur Abgabe eines vorrätigen\nwirkstoffgleichen Arzneimittels nach Maßgabe des Absatzes 1 Satz 2 berechtigt, sofern rabattierte\nArzneimittel bei Vorlage der ärztlichen Verordnung nicht verfügbar im Sinne des Absatzes 2a Satz 2\noder 3 sind.",
+            "criterion_quote": "Ferner wollen wir dafür sorgen, dass die Verbesserungen der letzten Jahre bei der **Liefersicherheit**\n**von Arzneimitteln** schnell für alle Arzneimittel greifen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-27e2a074cd40a9fa",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -78090,6 +78122,38 @@
             "criterion_quote": "Wir wollen es weiter mit den erforderlichen personellen und materiellen Ressourcen ausstatten.",
             "caveats": [],
             "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6f592c8a8f084a24",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift verlangt bei Vorliegen der technischen Voraussetzungen, Bezeichnung und Ergebnis einer pharmazeutischen Dienstleistung in der elektronischen Patientenakte zu speichern. Sie sieht keine Funktion vor, die Versicherten individuell geeignete Wege zur Gesundheitsförderung aufzeichnet.",
+          "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0aca572a8e6675f55cb08523a65332641596e01424ec29560c9027230b476480"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Vorschrift verlangt bei Vorliegen der technischen Voraussetzungen, Bezeichnung und Ergebnis einer pharmazeutischen Dienstleistung in der elektronischen Patientenakte zu speichern. Sie sieht keine Funktion vor, die Versicherten individuell geeignete Wege zur Gesundheitsförderung aufzeichnet.",
+            "law_passage_id": "bgbl-1-2026-195-p-380f9305aa6fb3f7",
+            "law_quote": "Sobald die\ntechnischen Voraussetzungen vorliegen, ist die Durchführung einer pharmazeutischen Dienstleistung mit\nihrer Bezeichnung und dem Ergebnis gemäß § 346 Absatz 2 in der elektronischen Patientenakte zu\nspeichern.",
+            "criterion_quote": "Dieser soll die besten Wege für die Förderung der individuellen Gesundheit\naufzeichnen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6f592c8a8f084a24",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -78755,12 +78819,283 @@
         "spd-2025-ac-f4c5c9cc3ff714e7"
       ],
       "omitted_count": 769,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen führen keine Genehmigungsfiktion für Anträge ein.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen führen keine Genehmigungsfiktion für Anträge ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen stellen Seenotrettung weder unter Strafe noch regeln sie deren Strafbarkeit.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen stellen Seenotrettung weder unter Strafe noch regeln sie deren Strafbarkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern keine Verfahren zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen ändern keine Verfahren zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelungen zu Asylverfahren, BAMF-Kapazitäten oder verwaltungsgerichtlichen Verfahrensfristen.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelungen zu Asylverfahren, BAMF-Kapazitäten oder verwaltungsgerichtlichen Verfahrensfristen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen bauen keine branchenspezifischen KI-Ökosysteme auf.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen bauen keine branchenspezifischen KI-Ökosysteme auf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen entwickeln keine KI-Strategie weiter und setzen keinen Schwerpunkt auf systemische Innovationen.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen entwickeln keine KI-Strategie weiter und setzen keinen Schwerpunkt auf systemische Innovationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-45a5fa2f9d0b6f30",
+          "disposition": "no_supported_link",
+          "rationale": "Die Beihilferegelung zur künstlichen Befruchtung schafft kein Wahlrecht von Bundesbeamtinnen und Bundesbeamten zur gesetzlichen Krankenversicherung.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Beihilferegelung zur künstlichen Befruchtung schafft kein Wahlrecht von Bundesbeamtinnen und Bundesbeamten zur gesetzlichen Krankenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-45a5fa2f9d0b6f30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen schließen keinen Staatsvertrag zwischen Bund und Ländern ab.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen schließen keinen Staatsvertrag zwischen Bund und Ländern ab.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern keine Entscheidungsverfahren im Europäischen Rat oder im Ministerrat.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen ändern keine Entscheidungsverfahren im Europäischen Rat oder im Ministerrat.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern Artikel 3 Absatz 3 GG nicht.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen ändern Artikel 3 Absatz 3 GG nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-2",
       "analysis_sha256": "bf83f5f31851d067abfbd23c8c2573c298d65b10fa1fb0b8f3002c33ead63019",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-07f8e6809ae6ce30",
@@ -78778,7 +79113,359 @@
         "spd-2025-ac-f6a98f03441c1607"
       ],
       "omitted_count": 774,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+          "disposition": "no_supported_link",
+          "rationale": "Die Strafvorschriften des Gesetzes betreffen den unerlaubten Umgang mit neuen psychoaktiven Stoffen, nicht Seenotrettung.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Strafvorschriften des Gesetzes betreffen den unerlaubten Umgang mit neuen psychoaktiven Stoffen, nicht Seenotrettung.",
+            "law_passage_id": "bgbl-1-2026-2-p-39c055f1b8acff11",
+            "law_quote": "Mit Freiheitsstrafe bis zu drei Jahren oder mit Geldstrafe wird bestraft, wer entgegen § 3 Absatz 1 Nummer 1 oder 2",
+            "criterion_quote": "Seenotrettung ist eine Verpflichtung aus dem internationalen Seerecht und darf nicht kriminalisiert werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Mietpreisbremse oder zum Bezugszeitpunkt von Immobilien.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Mietpreisbremse oder zum Bezugszeitpunkt von Immobilien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "auch für Immobilien, die bis 2019 bezogen wurden, gelten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-49934dbdfb46ebcf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu neuen psychoaktiven Stoffen und initiiert keinen Bundesmobilitätsplan.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu neuen psychoaktiven Stoffen und initiiert keinen Bundesmobilitätsplan.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir bringen einen neuen Bundesmobilitätsplan auf den Weg.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-49934dbdfb46ebcf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt keine Entgelttransparenzrichtlinie um, sondern ändert das Neue-psychoaktive-Stoffe-Gesetz.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt keine Entgelttransparenzrichtlinie um, sondern ändert das Neue-psychoaktive-Stoffe-Gesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "deswegen die EU-Entgelttransparenzrichtlinie bis 2026 in nationales Recht umsetzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Umgang mit neuen psychoaktiven Stoffen, nicht den Umgang mit Daten im Betrieb.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Umgang mit neuen psychoaktiven Stoffen, nicht den Umgang mit Daten im Betrieb.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dafür werden wir einen fairen und rechtssicheren Umgang mit Daten im Betrieb regeln",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5eb15f9587c897ba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Bereitstellung personeller Ressourcen für das THW.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Bereitstellung personeller Ressourcen für das THW.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Technische Hilfswerk (THW) ist unerlässlich für Schutz und Hilfe im Fall der Fälle. Wir wollen es weiter mit den erforderlichen personellen und materiellen Ressourcen ausstatten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7c66f4dad87f9bbf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Mieterhöhungen oder angespannten Wohnungsmärkten.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Mieterhöhungen oder angespannten Wohnungsmärkten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dass in Gebieten mit angespanntem Wohnungsmarkt nur eine maximale Mietsteigerung von sechs Prozent in drei Jahren bis zur ortsüblichen Vergleichsmiete gestattet ist.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7c66f4dad87f9bbf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Neue-psychoaktive-Stoffe-Gesetz; eine Änderung von Artikel 3 Absatz 3 GG ist nicht enthalten.",
+          "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Neue-psychoaktive-Stoffe-Gesetz; eine Änderung von Artikel 3 Absatz 3 GG ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Ganztagsbetreuung oder zum Rechtsanspruch für Grundschulkinder.",
+          "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Ganztagsbetreuung oder zum Rechtsanspruch für Grundschulkinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Ausstattung des THW mit personellen oder materiellen Ressourcen.",
+          "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Ausstattung des THW mit personellen oder materiellen Ressourcen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine Prüfung neuer Gesetze oder Novellierungen auf Wirksamkeit, Bürgernähe, Praxistauglichkeit und Digitaltauglichkeit vor.",
+          "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine Prüfung neuer Gesetze oder Novellierungen auf Wirksamkeit, Bürgernähe, Praxistauglichkeit und Digitaltauglichkeit vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cee55dce93acdaa1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Erbschaft-, Schenkung- oder Vermögensteuern noch die Verwendung von Steuereinnahmen für Bildung.",
+          "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Erbschaft-, Schenkung- oder Vermögensteuern noch die Verwendung von Steuereinnahmen für Bildung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cee55dce93acdaa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zum Umgang mit neuen psychoaktiven Stoffen und enthält keine Regelungen zur Außen- oder Entwicklungspolitik.",
+          "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36f7a592ecaa8cabc260039b30a3938b549071a286d1a706fc933b5cc786a08b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zum Umgang mit neuen psychoaktiven Stoffen und enthält keine Regelungen zur Außen- oder Entwicklungspolitik.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-207",
@@ -78842,7 +79529,224 @@
         "spd-2025-ac-fc039e75480fcc10"
       ],
       "omitted_count": 733,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Verpflichtung privater Anbieter zum Abbau von Barrieren oder zu angemessenen Vorkehrungen.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Verpflichtung privater Anbieter zum Abbau von Barrieren oder zu angemessenen Vorkehrungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Genehmigungsfiktion für Anträge bei ausbleibender Behördenentscheidung.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Genehmigungsfiktion für Anträge bei ausbleibender Behördenentscheidung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Prüfung kommunaler Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Prüfung kommunaler Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0ada3043d1e56162",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen kein Verfahren zur möglichst automatischen Auszahlung von Erstattungen.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen kein Verfahren zur möglichst automatischen Auszahlung von Erstattungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0ada3043d1e56162",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Verlängerung der Möglichkeit, die Umwandlung von Miet- in Eigentumswohnungen zu verbieten.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Verlängerung der Möglichkeit, die Umwandlung von Miet- in Eigentumswohnungen zu verbieten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0d8100b059fda09b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Neugestaltung des Taschengelds für Freiwilligendienste.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Neugestaltung des Taschengelds für Freiwilligendienste.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0d8100b059fda09b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-10357256c05003e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Sicherung des gesetzlichen Rentenniveaus bei mindestens 48 Prozent.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Sicherung des gesetzlichen Rentenniveaus bei mindestens 48 Prozent.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-10357256c05003e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ea29f9d36cefcac",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Bereitstellung öffentlicher Entwicklungsleistungen in Höhe von mindestens 0,7 Prozent des BNE.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Bereitstellung öffentlicher Entwicklungsleistungen in Höhe von mindestens 0,7 Prozent des BNE.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1ea29f9d36cefcac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-210a",
@@ -82624,45 +83528,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4865,
-    "cache_hits": 74,
-    "subdivision_cache_hits": 3,
+    "calls": 4959,
+    "cache_hits": 77,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.434295,
-    "reported_cost_calls": 4493,
+    "reported_cost_usd": 24.522328,
+    "reported_cost_calls": 4537,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.218879,
-    "unknown_cost_calls": 372,
+    "unknown_cost_reserved_usd": 2.496942,
+    "unknown_cost_calls": 422,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 26.653173,
-    "prompt_tokens": 50028952,
-    "completion_tokens": 7919983,
+    "budget_exposure_usd": 27.01927,
+    "prompt_tokens": 50569606,
+    "completion_tokens": 8022924,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 190,
-        "reported_cost_usd": 4.638897499999999,
+        "calls": 191,
+        "reported_cost_usd": 4.672009249999999,
         "unknown_cost_reserved_usd": 1.0130785099704553e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 73,
-        "reported_cost_usd": 0.9426190000000001,
-        "unknown_cost_reserved_usd": 1.0408340855860843e-16,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 74,
+        "reported_cost_usd": 0.9512682500000001,
+        "unknown_cost_reserved_usd": 1.3183898417423734e-16,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1705,
-        "reported_cost_usd": 1.9683081000000011,
-        "unknown_cost_reserved_usd": 1.2344030000000004,
-        "pending_reserved_usd": 1.6479873021779667e-17
+        "calls": 1797,
+        "reported_cost_usd": 2.014580520000001,
+        "unknown_cost_reserved_usd": 1.5124662000000004,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

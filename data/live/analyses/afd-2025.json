@@ -72646,7 +72646,7 @@
     {
       "law_id": "bgbl-1-2026-195",
       "analysis_sha256": "08c45f4442e7f82c64738d6ddee3613a513be288647120f1aeaaadd8c33dba7e",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-05da0d58c2b56f0a",
@@ -72848,6 +72848,38 @@
             "caveats": [],
             "criterion_id": "afd-2025-ac-3766ec82f04aefd7",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3a7f244d25c74298",
+          "disposition": "proposed_link",
+          "rationale": "Ab dem 1. Oktober 2026 ist Werbung für ärztliche Schwangerschaftsabbrüche von einer Beschränkung der Werbung außerhalb der Fachkreise ausgenommen. Das erschwert das geforderte Werbeverbot, hebt aber nicht nachweislich sämtliche Werbebeschränkungen auf.",
+          "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b340b2b8d9c0f2a252fabb66abf14a239836d1f5291a098d758d7fee8f0c3f60"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e"
+            }
+          ],
+          "impact_id": "impact-2f706de52cbc6966",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.9,
+            "rationale": "Ab dem 1. Oktober 2026 ist Werbung für ärztliche Schwangerschaftsabbrüche von einer Beschränkung der Werbung außerhalb der Fachkreise ausgenommen. Das erschwert das geforderte Werbeverbot, hebt aber nicht nachweislich sämtliche Werbebeschränkungen auf.",
+            "law_passage_id": "bgbl-1-2026-195-p-6dc1f0f1478daf9b",
+            "law_quote": "1. Verfahren oder Behandlungen zur Durchführung von Schwangerschaftsabbrüchen durch Ärztinnen und Ärzte,",
+            "criterion_quote": "- Es darf keine Werbung von Ärzten für Schwangerschaftsabbrü\nche geben.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3a7f244d25c74298",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -74316,7 +74348,440 @@
         "afd-2025-ac-da047321e330d6f0"
       ],
       "omitted_count": 662,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Verwaltungsverfahren und andere Behördenmaterien; eine Strafbarkeit öffentlicher Kalifatsforderungen ist daraus nicht ersichtlich.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen Verwaltungsverfahren und andere Behördenmaterien; eine Strafbarkeit öffentlicher Kalifatsforderungen ist daraus nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Regelung zu Anspruchsdauer oder Wartezeit beim Arbeitslosengeld; eine Begrenzung auf sechs Monate ist nicht belegt.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Regelung zu Anspruchsdauer oder Wartezeit beim Arbeitslosengeld; eine Begrenzung auf sechs Monate ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen schaffen keine Verfahren für Volksabstimmungen nach Artikel 20 Absatz 2 GG; sie betreffen andere Verwaltungs- und Wahlrechtsmaterien.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen schaffen keine Verfahren für Volksabstimmungen nach Artikel 20 Absatz 2 GG; sie betreffen andere Verwaltungs- und Wahlrechtsmaterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-30380065a9da79b0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Vertrauenswürdigkeitsprüfung betreffen Personen, die für das Bundeskriminalamt tätig werden sollen; Präventivhaft für ausländische Gefährder oder Terroristen wird nicht geregelt.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zur Vertrauenswürdigkeitsprüfung betreffen Personen, die für das Bundeskriminalamt tätig werden sollen; Präventivhaft für ausländische Gefährder oder Terroristen wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-199-p-4b08b112c5f87649",
+            "law_quote": "Für Personen, die für das Bundeskriminalamt tätig werden sollen (zu überprüfende Personen), ist zu überprüfen, ob Erkenntnisse vorliegen, die Zweifel an ihrer Vertrauenswürdigkeit […] begründen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-30380065a9da79b0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die aufgeführten Änderungen enthalten keine Überprüfung oder Streichung von Corona-bezogenen Gesetzen oder Richtlinien.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die aufgeführten Änderungen enthalten keine Überprüfung oder Streichung von Corona-bezogenen Gesetzen oder Richtlinien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Vorgaben zum Spracherwerb von Migranten oder zu B2-Fristen.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Vorgaben zum Spracherwerb von Migranten oder zu B2-Fristen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln keine Staatsangehörigkeit oder Mehrfachstaatsangehörigkeit.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen regeln keine Staatsangehörigkeit oder Mehrfachstaatsangehörigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-61751937fbd69e2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Zustimmung des Volkes als Voraussetzung für Grundgesetzänderungen wird in den vorgelegten Änderungen nicht festgelegt.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Zustimmung des Volkes als Voraussetzung für Grundgesetzänderungen wird in den vorgelegten Änderungen nicht festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6523689dd5aab6d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-712fd68e8dd35647",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen unter anderem Wahlunterlagen für Seeleute, schaffen aber kein Anreizangebot für Reeder zur Beschäftigung deutscher Seeleute.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen unter anderem Wahlunterlagen für Seeleute, schaffen aber kein Anreizangebot für Reeder zur Beschäftigung deutscher Seeleute.",
+            "law_passage_id": "bgbl-1-2026-199-p-2c3c1d6a31f885da",
+            "law_quote": "Von Seeleuten mit folgenden Angaben auszufüllen: Name des Schiffes, Name des Reeders, Sitz des Reeders (Ort und Staat).",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-712fd68e8dd35647",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7686302968bb81ba",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Vorschriften zu Behandlungen hinsichtlich einer Geschlechtsumwandlung oder zu vorheriger psychologischer Beratung.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Vorschriften zu Behandlungen hinsichtlich einer Geschlechtsumwandlung oder zu vorheriger psychologischer Beratung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7686302968bb81ba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-788e0409a117a456",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Regelung zum erstmaligen Arbeitslosengeldanspruch oder zu drei Beitragsjahren als Wartezeit.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Regelung zum erstmaligen Arbeitslosengeldanspruch oder zu drei Beitragsjahren als Wartezeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-788e0409a117a456",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7fdd24adcf2870d2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Vorgabe, eine Ausweisungspflicht bereits im Strafurteil festzustellen.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Vorgabe, eine Ausweisungspflicht bereits im Strafurteil festzustellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-7fdd24adcf2870d2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur BKA-Vertrauenswürdigkeitsprüfung betreffen den Zugang zu Tätigkeiten beim Bundeskriminalamt; eine Einstellung staatlicher Förderung für die genannten Zwecke ist nicht geregelt.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zur BKA-Vertrauenswürdigkeitsprüfung betreffen den Zugang zu Tätigkeiten beim Bundeskriminalamt; eine Einstellung staatlicher Förderung für die genannten Zwecke ist nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-199-p-4b08b112c5f87649",
+            "law_quote": "Für Personen, die für das Bundeskriminalamt tätig werden sollen (zu überprüfende Personen), ist zu überprüfen, ob Erkenntnisse vorliegen, die Zweifel an ihrer Vertrauenswürdigkeit […] begründen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Regelungen zu biologischen Altersfeststellungen im Jugendstrafrecht oder bei Mehrfachtätern.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Regelungen zu biologischen Altersfeststellungen im Jugendstrafrecht oder bei Mehrfachtätern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung zum Asylgesetz sieht einen zweijährlichen Bericht über die Voraussetzungen sicherer Herkunftsstaaten vor; eine Ausweitung eines Verfahrens auf Personen aus anderen Herkunftsländern regelt sie nicht.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Änderung zum Asylgesetz sieht einen zweijährlichen Bericht über die Voraussetzungen sicherer Herkunftsstaaten vor; eine Ausweitung eines Verfahrens auf Personen aus anderen Herkunftsländern regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2026-199-p-43726cb79e634324",
+            "law_quote": "Die Bundesregierung legt dem Deutschen Bundestag alle zwei Jahre, erstmals zum 12. Juni 2027, einen Bericht darüber vor, ob die Voraussetzungen für die Bestimmung weiterhin vorliegen […]",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz von 2026 enthält in den vorgelegten Änderungen keine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+          "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "199fc772ed4970ae214bb0993801e132bf3ab599da91d3faf78cbfefbaa0c6f0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz von 2026 enthält in den vorgelegten Änderungen keine Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-2",
@@ -74344,7 +74809,7 @@
     {
       "law_id": "bgbl-1-2026-207",
       "analysis_sha256": "059bbbd2252130cd70f5aee29dd5dd5b1992777499fe91c4b36a0338884590ee",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-033f965cbbd058a3",
@@ -74406,7 +74871,1583 @@
         "afd-2025-ac-f03cad095e2d8bb1"
       ],
       "omitted_count": 626,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Asylverfahrensberatung oder zu deren Bindung an geltendes Recht.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Asylverfahrensberatung oder zu deren Bindung an geltendes Recht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-033f965cbbd058a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-04e5ce94708da8cd",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Lkw-Maut oder zu CO₂-bezogenen Mautsätzen.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Lkw-Maut oder zu CO₂-bezogenen Mautsätzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-04e5ce94708da8cd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0bae822d6a5efa21",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen betreffen Verpackungsrecht und enthalten keine Regelung zu Abschiebungen oder ausreisepflichtigen Personen.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen betreffen Verpackungsrecht und enthalten keine Regelung zu Abschiebungen oder ausreisepflichtigen Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0bae822d6a5efa21",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln keine Ansprüche oder Bezugsdauer von Arbeitslosengeld.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen regeln keine Ansprüche oder Bezugsdauer von Arbeitslosengeld.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-15cf4bf18e09941f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Änderung oder Aufhebung des Selbstbestimmungsgesetzes.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Änderung oder Aufhebung des Selbstbestimmungsgesetzes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-15cf4bf18e09941f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25df7fc9eb41f759",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Vorgaben zur Dauer von Tiertransporten.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Vorgaben zur Dauer von Tiertransporten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-25df7fc9eb41f759",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Höhe des Rentenniveaus.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Höhe des Rentenniveaus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-263e5eae108f909e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Voraussetzungen für Leistungen aus der Arbeitslosenversicherung.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Voraussetzungen für Leistungen aus der Arbeitslosenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-263e5eae108f909e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen schaffen keine rechtlichen Voraussetzungen für Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen betreffen Verpackungsrecht; eine Überprüfung oder Streichung von Corona-bezogenen Gesetzen und Richtlinien ist nicht geregelt.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen betreffen Verpackungsrecht; eine Überprüfung oder Streichung von Corona-bezogenen Gesetzen und Richtlinien ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3c0418c58b6ccca4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Vorgaben zur Kennzeichnung von Insekten in Lebensmitteln.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Vorgaben zur Kennzeichnung von Insekten in Lebensmitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3c0418c58b6ccca4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Anforderungen an den Spracherwerb von Migranten oder Fristen dafür.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Anforderungen an den Spracherwerb von Migranten oder Fristen dafür.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-402546d67aa023e1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine außenhandelspolitischen Regelungen zur Freiheit der Handelswege.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine außenhandelspolitischen Regelungen zur Freiheit der Handelswege.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-402546d67aa023e1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-579b4d6cb89a06fb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Dokumentation oder Vorgabe zu einer Debatte über Gentechnik.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Dokumentation oder Vorgabe zu einer Debatte über Gentechnik.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-579b4d6cb89a06fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6232965f4195fac4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zu Ausschiffungsorten oder Seehäfen.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zu Ausschiffungsorten oder Seehäfen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6232965f4195fac4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-63323edaf005bbef",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern oder bestätigen keine Systeme der Grundsicherung.",
+          "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b85504be92a9c6e7d5b25dbf82d9fe7e44b910b64a7799a3c72a98c129466d0e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen ändern oder bestätigen keine Systeme der Grundsicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-63323edaf005bbef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6fb853cb02c63f0a",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungsregeln; wegen des nur teilweise vorliegenden Gesetzestexts lässt sich nicht feststellen, ob ausgelassene Vorschriften den Rohstoffzugang im Außenhandel regeln.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungsregeln; wegen des nur teilweise vorliegenden Gesetzestexts lässt sich nicht feststellen, ob ausgelassene Vorschriften den Rohstoffzugang im Außenhandel regeln.",
+            "law_passage_id": "bgbl-1-2026-207-p-a9dfb7bece5a5494",
+            "law_quote": "die Verwendung von Rezyklaten sowie von nachwachsenden Rohstoffen.",
+            "criterion_quote": "Das schließt den Zugang\n\nzu Rohstoffen und die Freiheit der Handelswege mit ein.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-6fb853cb02c63f0a",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln Verpackungen und deren Entsorgung; ob ausgelassene Vorschriften ein Ablehnungsrecht des Volkes einführen, ist mit dem Teiltext nicht feststellbar.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge regeln Verpackungen und deren Entsorgung; ob ausgelassene Vorschriften ein Ablehnungsrecht des Volkes einführen, ist mit dem Teiltext nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "vom Parlament beschlossene Gesetze zu\n\nändern oder abzulehnen.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-7065ceb798d896a6",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-70ced5b8b02f43d6",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht; ob ausgelassene Vorschriften den Digitalen Euro betreffen, lässt sich anhand des Teiltexts nicht beurteilen.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht; ob ausgelassene Vorschriften den Digitalen Euro betreffen, lässt sich anhand des Teiltexts nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "daher lehnen wir den „Digitalen Euro“ ab.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-70ced5b8b02f43d6",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten Verpackungsregelungen, aber keine erkennbare Überprüfung von Corona-Gesetzen; ob weitere, nicht vorgelegte Vorschriften dies regeln, bleibt offen.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge enthalten Verpackungsregelungen, aber keine erkennbare Überprüfung von Corona-Gesetzen; ob weitere, nicht vorgelegte Vorschriften dies regeln, bleibt offen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Die im Zusammen\nhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind\n\nzu überprüfen",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7241b2ad96ab7b68",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln Verpackungssammlung und -verwertung; ob ausgelassene Vorschriften Inobhutnahmen an eine Schadensabwägung knüpfen, ist nicht feststellbar.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge regeln Verpackungssammlung und -verwertung; ob ausgelassene Vorschriften Inobhutnahmen an eine Schadensabwägung knüpfen, ist nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Eine Inobhutnahme darf nur erfolgen, wenn der Schaden beim\n\nVerbleib in der Familie größer wäre.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-7241b2ad96ab7b68",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7260242b5392a478",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge behandeln Verpackungsrecht, nicht die Aufgaben des öffentlich-rechtlichen Rundfunks; zu ausgelassenen Gesetzesteilen fehlen Angaben.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge behandeln Verpackungsrecht, nicht die Aufgaben des öffentlich-rechtlichen Rundfunks; zu ausgelassenen Gesetzesteilen fehlen Angaben.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "dessen Aufgabe allein eine\n\ngebührenfreie Grundversorgung mit Informations-, Kultur- und\n\nRegionalprogrammen sein soll.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-7260242b5392a478",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-755932e3054f13dd",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht und enthalten keine Regelung zur Duldung; ob ausgelassene Vorschriften deren aufenthaltsrechtliche Wirkung festlegen, bleibt offen.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht und enthalten keine Regelung zur Duldung; ob ausgelassene Vorschriften deren aufenthaltsrechtliche Wirkung festlegen, bleibt offen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Keinesfalls aber sollte die\n\nErteilung eine Duldung einen dauerhaften Aufenthalt begründen.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-755932e3054f13dd",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-76f5bd96066ac3d6",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln Verpackungssammlung und -verwertung, nicht militärische Zentralisierungen; zu weiteren, nicht vorgelegten Vorschriften fehlen Angaben.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge regeln Verpackungssammlung und -verwertung, nicht militärische Zentralisierungen; zu weiteren, nicht vorgelegten Vorschriften fehlen Angaben.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Privatisierungen und Zentralisierungen dürfen nur noch dort\n\nAnwendung finden, wo sie nachweisbar notwendig sind, um die\n\nEinsatzfähigkeit der Truppe zu erhöhen.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-76f5bd96066ac3d6",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-79bd405c9b225ee8",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungen und enthalten keine Rückführungsregelung; ob ausgelassene Vorschriften ausländische Gefährder oder Straftäter betreffen, ist nicht feststellbar.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungen und enthalten keine Rückführungsregelung; ob ausgelassene Vorschriften ausländische Gefährder oder Straftäter betreffen, ist nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Unverzügliche Rückführung ausländischer Gefährder, Extremis\nten und Schwerkrimineller",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-79bd405c9b225ee8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-7b6d12fad7f2cd3e",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln Verpackungssammlung und -verwertung, nicht die Versorgung Impfgeschädigter; ob ausgelassene Vorschriften Berufsgenossenschaften betreffen, bleibt offen.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge regeln Verpackungssammlung und -verwertung, nicht die Versorgung Impfgeschädigter; ob ausgelassene Vorschriften Berufsgenossenschaften betreffen, bleibt offen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Die Verantwortung für eine angemessene Versorgung\n\nImpfgeschädigter soll zukünftig auf die Berufsgenossenschaften über\ngehen",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-7b6d12fad7f2cd3e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8bae8341e0d73696",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht, nicht die Grundsicherung im Alter; ob ausgelassene Vorschriften Schonvermögen oder Autobesitz ändern, ist nicht feststellbar.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht, nicht die Grundsicherung im Alter; ob ausgelassene Vorschriften Schonvermögen oder Autobesitz ändern, ist nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "in diesen Positionen gegenüber Bürgergeldempfängern schlechter\n\ngestellt, was wir ändern werden.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-8bae8341e0d73696",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln Verpackungen und Recycling, nicht die Förderung der genannten Zwecke; zu möglichen Vorschriften in den ausgelassenen Teilen fehlen Angaben.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge regeln Verpackungen und Recycling, nicht die Förderung der genannten Zwecke; zu möglichen Vorschriften in den ausgelassenen Teilen fehlen Angaben.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Jede\n\nstaatliche Förderung dafür muss eingestellt werden.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-8f4e1031c5981638",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten Verpackungsregelungen, aber keine Altersfeststellungen im Jugendstrafrecht; ob ausgelassene Vorschriften diese Fälle erfassen, bleibt offen.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge enthalten Verpackungsregelungen, aber keine Altersfeststellungen im Jugendstrafrecht; ob ausgelassene Vorschriften diese Fälle erfassen, bleibt offen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Regelmäßige Durchführung einer biologischen Altersfeststel\nlung",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9831c010e74eafd9",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungen; eine jährliche Überprüfung von Asylgründen ist darin nicht erkennbar, und zu ausgelassenen Vorschriften fehlen Angaben.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungen; eine jährliche Überprüfung von Asylgründen ist darin nicht erkennbar, und zu ausgelassenen Vorschriften fehlen Angaben.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Jährliche Prüfung des Fortbestands von Asylgründen",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-9831c010e74eafd9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln vor allem Verpackungen und Entsorgung, nicht die Finanzierung staatlich veranlasster Ausgaben; ob ausgelassene Vorschriften das Konnexitätsprinzip betreffen, bleibt offen.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge regeln vor allem Verpackungen und Entsorgung, nicht die Finanzierung staatlich veranlasster Ausgaben; ob ausgelassene Vorschriften das Konnexitätsprinzip betreffen, bleibt offen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Wir fordern die strikte Einhaltung des verfassungsrechtlich\n\ngeregelten Prinzips.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht, nicht die gemeinsame EU-Asylpolitik; ob ausgelassene Vorschriften die Beteiligung Deutschlands daran ändern, ist nicht feststellbar.",
+          "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a7152a5ef9493c6a44127ffd3eb203c2b6183e54c0648fb8972ea85390dcfb5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen Verpackungsrecht, nicht die gemeinsame EU-Asylpolitik; ob ausgelassene Vorschriften die Beteiligung Deutschlands daran ändern, ist nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "im Rahmen\neines „Opt-Outs“ nicht länger an der gemeinsamen Politik der EU\n\nim Bereich Asyl, subsidiärer Schutz und vorübergehender Schutz\n\nbeteiligen.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "afd-2025-ac-9ba7cb0cc6166fa4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz dient der Durchführung der EU-Verpackungsverordnung; die vorgelegten Vorschriften regeln kein Asylverfahren für Personen aus anderen Herkunftsländern.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz dient der Durchführung der EU-Verpackungsverordnung; die vorgelegten Vorschriften regeln kein Asylverfahren für Personen aus anderen Herkunftsländern.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Analog werden wir, wenn die Voraussetzungen vorliegen, dann auch bei Personen aus anderen Asyl-Herkunftsländern verfahren.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Verpackungsrecht-Durchführungsgesetz enthält keine dokumentierte Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Verpackungsrecht-Durchführungsgesetz enthält keine dokumentierte Ablehnung der Internationalen Gesundheitsvorschriften vor dem 31. März 2025.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "fordern daher, dass Deutschland noch vor der Frist am 31. März 2025 die Internationalen Gesundheitsvorschriften in der jetzigen Form ablehnt.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9fe9f0e84c42dcf0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a366ab595bdf624f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungen und Herstellerverantwortung, nicht die öffentliche Finanzierung von Ladeinfrastruktur.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungen und Herstellerverantwortung, nicht die öffentliche Finanzierung von Ladeinfrastruktur.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "ebenso die Finanzierung der Ladeinfrastruktur aus öffentlichen Mitteln.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a366ab595bdf624f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a5615669c16309b7",
+          "disposition": "missing_context",
+          "rationale": "Der Gesetzestitel und die vorgelegten Vorschriften betreffen eine Durchführung des EU-Verpackungsrechts; der vollständige Aufhebungs- und Übergangstext zum Verpackungsgesetz liegt hier nicht vor.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Gesetzestitel und die vorgelegten Vorschriften betreffen eine Durchführung des EU-Verpackungsrechts; der vollständige Aufhebungs- und Übergangstext zum Verpackungsgesetz liegt hier nicht vor.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "- Abschaffung des Verpackungsgesetzes",
+            "caveats": [
+              "Der bereitgestellte Gesetzestext ist ausdrücklich unvollständig; eine Aufhebung oder Fortgeltung lässt sich daraus nicht abschließend bestimmen."
+            ],
+            "criterion_id": "afd-2025-ac-a5615669c16309b7",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-aaae91e0e9b38940",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Verwendung vorhandener Mittel für das Schienennetz; sie regeln Verpackungsrecht.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Verwendung vorhandener Mittel für das Schienennetz; sie regeln Verpackungsrecht.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Das Deutschlandticket muss zu einem ehrlichen Preis angeboten werden; die vorhandenen Mittel sollen für die Verbesserung des Angebots und des Schienennetzes ausgegeben werden und nicht für Subventionen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-aaae91e0e9b38940",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-af09277460f39a13",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesstellen enthalten kein Verbot gendergerechter Sprache in öffentlichen Einrichtungen oder staatlichen Stellen.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesstellen enthalten kein Verbot gendergerechter Sprache in öffentlichen Einrichtungen oder staatlichen Stellen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Ideologische Verrenkungen wie die angeblich gendergerechte Sprache haben dagegen in Deutschland nichts verloren; ihr Gebrauch soll in öffentlichen Einrichtungen und staatlichen Stellen zur Wahrung einer ideologiefreien Verständigung untersagt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-af09277460f39a13",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b2e7f7af5bfe0173",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Veröffentlichungspflichten betreffen Verpackungsregister, Hersteller oder Verpackungssysteme; eine allgemeine Veröffentlichung von Entscheidungen in eigener Sache ist damit nicht belegt.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die angeführten Veröffentlichungspflichten betreffen Verpackungsregister, Hersteller oder Verpackungssysteme; eine allgemeine Veröffentlichung von Entscheidungen in eigener Sache ist damit nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-207-p-82df16b9a29ec666",
+            "law_quote": "Die Zentrale Stelle Verpackungsregister veröffentlicht die registrierten Hersteller mit den in Absatz 2 Satz 1 Nummer 1, 2 Buchstabe a, Nummer 5 und 6 sowie Satz 3 genannten Angaben sowie mit der Registrierungsnummer und dem Registrierungsdatum im Internet.",
+            "criterion_quote": "Öffentlichkeit ist herzustellen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b2e7f7af5bfe0173",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Besetzung öffentlicher Ämter, von Beamten- oder Richterstellen.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Besetzung öffentlicher Ämter, von Beamten- oder Richterstellen.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Öffentliche Ämter, Beamten- und Richterstellen sind ausschließlich nach „Eignung, Befähigung und fachlicher Leistung” zu vergeben (Art. 33 Abs. 2 GG)",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ba2f784bfaa78077",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz betrifft Verpackungen, doch die vorgelegten Auszüge zeigen keine Kennzeichnungspflicht, die Inhalt und Gewicht zum Verkaufspreis in Beziehung setzt; der vollständige einschlägige Text fehlt.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz betrifft Verpackungen, doch die vorgelegten Auszüge zeigen keine Kennzeichnungspflicht, die Inhalt und Gewicht zum Verkaufspreis in Beziehung setzt; der vollständige einschlägige Text fehlt.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Ferner werden wir die Kennzeichnung von Produkten mit einer klaren Deklaration über Inhalt und Gewicht mit Bezug zum Verkaufspreis umsetzen, um Verbrauchertäuschung zu verhindern.",
+            "caveats": [
+              "Der bereitgestellte Gesetzestext ist unvollständig; die einschlägigen Kennzeichnungsvorschriften sind in den vorgelegten Passagen nicht enthalten."
+            ],
+            "criterion_id": "afd-2025-ac-baa3907aa64b073d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesstellen schaffen kein Recht des Volkes, vom Parlament beschlossene Gesetze zu ändern.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesstellen schaffen kein Recht des Volkes, vom Parlament beschlossene Gesetze zu ändern.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Wir wollen dem Volk das Recht geben, den Abgeordneten auf die Finger zu schauen und vom Parlament beschlossene Gesetze zu ändern",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Verpackungsrecht; die vorgelegten Passagen dokumentieren keine politische Initiative für außerhalb Deutschlands durchgeführte Asylverfahren.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Verpackungsrecht; die vorgelegten Passagen dokumentieren keine politische Initiative für außerhalb Deutschlands durchgeführte Asylverfahren.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "- Wir werden uns dafür einsetzen, dass Asylverfahren und Anträge auf subsidiären Schutz zukünftig außerhalb Deutschlands gestellt und bearbeitet werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bc24ea5455613d21",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bf0047596cf6c502",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und enthalten keine Vorgaben zur thematischen Ausrichtung staatlich geförderter Filme.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und enthalten keine Vorgaben zur thematischen Ausrichtung staatlich geförderter Filme.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Deshalb muss in der Filmförderung die künstlerische Freiheit wieder der Maßstab sein. Vorgaben der staatlichen Filmförderung, die darauf abzielen, ideologische Themen wie „Gender“, „Klimaschutz“ oder die „Vielfalt“ thematisch in Filmen zu verankern, um sie gesellschaftspolitisch durchzusetzen, lehnen wir ab.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bf0047596cf6c502",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c316f26fcdddc5d0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften weisen keine Zuwanderungskosten als eigene Position im Bundeshaushalt aus; sie regeln Verpackungsrecht.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften weisen keine Zuwanderungskosten als eigene Position im Bundeshaushalt aus; sie regeln Verpackungsrecht.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Wir fordern eine differenzierte und transparente Aufstellung in der Weise, dass die Kosten der Zuwanderung im Bundeshaushalt als eigene Position ausgewiesen werden und insbesondere auch hier das Konnexitätsprinzip eingehalten wird.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c316f26fcdddc5d0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c3e7024a97dcaaa2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesstellen enthalten keine Mindestbestände für versorgungsrelevante Arzneimittel.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesstellen enthalten keine Mindestbestände für versorgungsrelevante Arzneimittel.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Der Arzneimittelgroßhandel in Deutschland wird verpflichtet werden, mindestens die Menge der durchschnittlichen zwei Monatsbedarfe bei versorgungsrelevanten Arzneimitteln vorzuhalten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c3e7024a97dcaaa2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Prüf- und Zulassungsregeln betreffen Verpackungssysteme und Herstellerverantwortung, nicht eine Prüfung von NGOs und ihren Projekten.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Prüf- und Zulassungsregeln betreffen Verpackungssysteme und Herstellerverantwortung, nicht eine Prüfung von NGOs und ihren Projekten.",
+            "law_passage_id": "bgbl-1-2026-207-p-829190c1bcce3772",
+            "law_quote": "Die Zentrale Stelle Verpackungsregister erteilt einer sonstigen Organisation für Herstellerverantwortung auf Antrag innerhalb einer Frist von drei Monaten ab Einreichung aller für die Bearbeitung erforderlichen Informationen und Unterlagen die Zulassung, wenn die sonstige Organisation für Herstellerverantwortung",
+            "criterion_quote": "Im Rahmen der Haushaltskonsolidierung fordern wir eine detaillierte Prüfung dieser Organisationen und deren Projekte, mit dem Ziel, unnötige und ideologiebasierte Ausgaben einzusparen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Verpackungsrecht und enthalten keine Strafbarkeit der Tätigkeit sogenannter Friedensrichter.",
+          "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0226f6d36d4657a7593014ad9362c29e095b4c96e3c662ff028f24f3f07f21e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln Verpackungsrecht und enthalten keine Strafbarkeit der Tätigkeit sogenannter Friedensrichter.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz\nzur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": "Die Tätigkeit der sogenannten Friedensrichter entspricht einer Selbstjustiz und ist mit der Justizhoheit und dem Gewaltmonopol des Staates nicht vereinbar; sie ist unter Strafe zu stellen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c8b2bd4c9befbcbe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Verpackungsdatenmeldungen und deren Prüfung; sie machen keine Überwachungsmöglichkeiten gegenüber Anwendern transparent.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Verpackungsdatenmeldungen und deren Prüfung; sie machen keine Überwachungsmöglichkeiten gegenüber Anwendern transparent.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Weiterhin fordern wir vollständige Transparenz hinsichtlich der Überwachungsmöglichkeiten gegenüber dem Anwender.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c8b2bd4c9befbcbe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-cac984513f78438f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Verpackungsrecht und enthält keine Regelung zur Wahl behandelnder Personen.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Verpackungsrecht und enthält keine Regelung zur Wahl behandelnder Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen, dass jeder Bürger selbst entscheiden kann, von wem er sich behandeln lässt,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-cac984513f78438f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d71fe8429512e925",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln Verpackungswirtschaft und enthalten keine Regelung zu Friedensrichtern oder deren Entscheidungen.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Bestimmungen regeln Verpackungswirtschaft und enthalten keine Regelung zu Friedensrichtern oder deren Entscheidungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Tätigkeit der sogenannten Friedensrichter entspricht einer Selbstjustiz und ist mit der Justizhoheit und dem Gewaltmonopol des Staates nicht vereinbar; sie ist unter Strafe zu stellen. Der Friedensrichter ist kein Organ der Rechtspflege. Seine Entscheidungen dürfen keine Rechtswirkung entfalten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d71fe8429512e925",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-dcc82d2869f74dab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Zuständigkeiten von Landesbehörden im Verpackungsrecht vor, richtet aber keine Fachaufsichten in den Ländern nach dem Kriterium ein.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht Zuständigkeiten von Landesbehörden im Verpackungsrecht vor, richtet aber keine Fachaufsichten in den Ländern nach dem Kriterium ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In den Ländern sind entsprechende Fachaufsichten einzurichten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-dcc82d2869f74dab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-df5ffaf63e53109a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Verpackungen, Rücknahme und Verwertung; Schlachtstandards für Importware werden nicht geregelt.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Verpackungen, Rücknahme und Verwertung; Schlachtstandards für Importware werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der deutsche Standard für Schlachtbetriebe muss auch bei Importware Anwendung finden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-df5ffaf63e53109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e07355b4b263edde",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Kosten und Finanzierung der Zentralen Stelle Verpackungsregister, nicht die Mittelverwendung für das Deutschlandticket oder Schienennetze.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Kosten und Finanzierung der Zentralen Stelle Verpackungsregister, nicht die Mittelverwendung für das Deutschlandticket oder Schienennetze.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Deutschlandticket muss zu einem ehrlichen Preis angeboten werden; die vorhandenen Mittel sollen für die Verbesserung des Angebots und des Schienennetzes ausgegeben werden und nicht für Subventionen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e07355b4b263edde",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Finanzierungsregeln betreffen Verpackungssysteme und das Verpackungsregister; eine Kostenzuordnung zwischen staatlichen Ebenen bei Zuwanderung erfolgt nicht.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Finanzierungsregeln betreffen Verpackungssysteme und das Verpackungsregister; eine Kostenzuordnung zwischen staatlichen Ebenen bei Zuwanderung erfolgt nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Kosten der Asylpolitik verteilen sich in schwer überschaubarer Weise auf zahlreiche Einzelpläne der Bundes-, Landes- und Kommunalebene. Nicht alle Kosten lassen sich dabei eindeutig beziffern, da Ausgaben im Haushalt in der Regel nicht einer Personengruppe zugeordnet werden. Wir fordern eine differenzierte und transparente Aufstellung in der Weise, dass die Kosten der Zuwanderung im Bundeshaushalt als eigene Position ausgewiesen werden und insbesondere auch hier das Konnexitätsprinzip eingehalten wird.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ec6e7b123a70eeef",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern Verpackungsrecht und enthalten keine Revision des Hinweisgeberschutzgesetzes oder eine Erweiterung des Schutzbereichs.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern Verpackungsrecht und enthalten keine Revision des Hinweisgeberschutzgesetzes oder eine Erweiterung des Schutzbereichs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir fordern eine Revision des Hinweisgeberschutzgesetzes vom 02. Juli 2023 mit dem Ziel, Fälle von Staatsversagen und regierungsamtlichem Unrecht einzubeziehen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ec6e7b123a70eeef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-f03cad095e2d8bb1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Anspruchsregeln zum Bürgergeld und setzt keine Erwerbstätigkeitsdauer für ausländische Staatsangehörige fest.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Anspruchsregeln zum Bürgergeld und setzt keine Erwerbstätigkeitsdauer für ausländische Staatsangehörige fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine sozialversicherungspflichtige Erwerbstätigkeit ohne „aufstockende“ Sozialleistungen von mindestens zehn Jahren in Deutschland zur Voraussetzung für den Bürgergeld-Bezug ausländischer Staatsangehöriger machen und ihren Bürgergeldbezug auf ein Jahr begrenzen,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-f03cad095e2d8bb1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-210a",
@@ -78041,45 +80082,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4865,
-    "cache_hits": 74,
-    "subdivision_cache_hits": 3,
+    "calls": 4959,
+    "cache_hits": 77,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.434295,
-    "reported_cost_calls": 4493,
+    "reported_cost_usd": 24.522328,
+    "reported_cost_calls": 4537,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.218879,
-    "unknown_cost_calls": 372,
+    "unknown_cost_reserved_usd": 2.496942,
+    "unknown_cost_calls": 422,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 26.653173,
-    "prompt_tokens": 50028952,
-    "completion_tokens": 7919983,
+    "budget_exposure_usd": 27.01927,
+    "prompt_tokens": 50569606,
+    "completion_tokens": 8022924,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 190,
-        "reported_cost_usd": 4.638897499999999,
+        "calls": 191,
+        "reported_cost_usd": 4.672009249999999,
         "unknown_cost_reserved_usd": 1.0130785099704553e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 73,
-        "reported_cost_usd": 0.9426190000000001,
-        "unknown_cost_reserved_usd": 1.0408340855860843e-16,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 74,
+        "reported_cost_usd": 0.9512682500000001,
+        "unknown_cost_reserved_usd": 1.3183898417423734e-16,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1705,
-        "reported_cost_usd": 1.9683081000000011,
-        "unknown_cost_reserved_usd": 1.2344030000000004,
-        "pending_reserved_usd": 1.6479873021779667e-17
+        "calls": 1797,
+        "reported_cost_usd": 2.014580520000001,
+        "unknown_cost_reserved_usd": 1.5124662000000004,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

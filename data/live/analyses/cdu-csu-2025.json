@@ -80855,7 +80855,7 @@
     {
       "law_id": "bgbl-1-2026-195",
       "analysis_sha256": "bf7372bffe6e05661e719eceffdeee1e0f7a5d49451863fd5d39480ef8cae3d2",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-023e7cb42f262099",
@@ -81429,6 +81429,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-958a4b9b1592dfd5",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-99b301d2acaed596",
+          "disposition": "proposed_link",
+          "rationale": "Apotheker dürfen unter den gesetzlichen Voraussetzungen bestimmte verschreibungspflichtige Arzneimittel bei akuten Erkrankungen ohne ärztliche Verschreibung abgeben. Das erweitert ihre Versorgungsverantwortung in einem begrenzten Bereich; die Abgabe richtet sich nach einer Rechtsverordnung.",
+          "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ead96ebc120fb385d94d9b1bfb59806dc192301d0760ee66a8121cd28e631093"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e"
+            }
+          ],
+          "impact_id": "impact-5af5050eaee6feb9",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.84,
+            "rationale": "Apotheker dürfen unter den gesetzlichen Voraussetzungen bestimmte verschreibungspflichtige Arzneimittel bei akuten Erkrankungen ohne ärztliche Verschreibung abgeben. Das erweitert ihre Versorgungsverantwortung in einem begrenzten Bereich; die Abgabe richtet sich nach einer Rechtsverordnung.",
+            "law_passage_id": "bgbl-1-2026-195-p-14b20bf480c576f8",
+            "law_quote": "(1) Abweichend von § 48 Absatz 1 Satz 1 dürfen die in § 48 Absatz 1 Satz 1 genannten Arzneimittel ohne\nVorliegen einer ärztlichen oder zahnärztlichen Verschreibung durch einen Apotheker für eine öffentliche\nApotheke, zu deren Personal er gehört, unter Beachtung des aktuellen Stands der medizinischen Wissenschaft\nan einen Verbraucher zur Behandlung einer akuten Erkrankung nach Maßgabe der Vorgaben der\nRechtsverordnung nach Absatz 2 abgegeben werden, sofern die Anwendung des Arzneimittels keinen\nAufschub erlaubt.",
+            "criterion_quote": "die mehr Verantwortung für die Versorgung übernehmen sollen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-99b301d2acaed596",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -82584,7 +82616,278 @@
         "cdu-csu-2025-ac-fea8b875f294a705"
       ],
       "omitted_count": 944,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-9f7d39aacef4c0e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorgaben oder Praxis zur strafrechtlichen Verfolgung der genannten Delikte.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Vorgaben oder Praxis zur strafrechtlichen Verfolgung der genannten Delikte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9f7d39aacef4c0e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur frühen Öffentlichkeitsbeteiligung setzen keine zügige Prüfung eingereichter Genehmigungsunterlagen fest.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Regelungen zur frühen Öffentlichkeitsbeteiligung setzen keine zügige Prüfung eingereichter Genehmigungsunterlagen fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a07b7d53468a9eec",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zu elektronischen Verwaltungsverfahren regeln keine Überprüfung arbeitsrechtlicher Schriftformerfordernisse.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Änderungen zu elektronischen Verwaltungsverfahren regeln keine Überprüfung arbeitsrechtlicher Schriftformerfordernisse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a07b7d53468a9eec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-aff91124d2aa42c9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz knüpft Bundesförderung nicht an Bekenntnisse gegen Antisemitismus oder an die beiden weiteren genannten Bekenntnisse.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz knüpft Bundesförderung nicht an Bekenntnisse gegen Antisemitismus oder an die beiden weiteren genannten Bekenntnisse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-aff91124d2aa42c9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen führen keine erweiterten Befugnisse zur Telekommunikationsüberwachung oder Funkzellenauswertung ein.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen führen keine erweiterten Befugnisse zur Telekommunikationsüberwachung oder Funkzellenauswertung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d68aec69ad1daadc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Saatkrähen, Kormoranen oder anderen Arten.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Saatkrähen, Kormoranen oder anderen Arten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d68aec69ad1daadc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-db0d4126451871d3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen keine Haftung Deutschlands für Schulden anderer EU-Staaten.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen keine Haftung Deutschlands für Schulden anderer EU-Staaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-db0d4126451871d3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ea95a288a3442f5f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Verlust der deutschen Staatsangehörigkeit bei Doppelstaatlern in den genannten Fällen.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen Verlust der deutschen Staatsangehörigkeit bei Doppelstaatlern in den genannten Fällen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ea95a288a3442f5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ebecc0a881abfb8d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen führen kein Verfahren oder Instrument namens „EU-Forechecking“ ein.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen führen kein Verfahren oder Instrument namens „EU-Forechecking“ ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ebecc0a881abfb8d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+          "disposition": "no_supported_link",
+          "rationale": "Die BKA-Regeln zur Vertrauenswürdigkeitsprüfung positionieren das BSI nicht als dritte Säule der Cybersicherheitsarchitektur unter BMI-Führung.",
+          "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b6832d912df4938ccfd6d1be004c5b84d94ed8c5536cbba87587642948043e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die BKA-Regeln zur Vertrauenswürdigkeitsprüfung positionieren das BSI nicht als dritte Säule der Cybersicherheitsarchitektur unter BMI-Führung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-2",
@@ -82607,12 +82910,283 @@
         "cdu-csu-2025-ac-fea8b875f294a705"
       ],
       "omitted_count": 952,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Verbote und Definitionen für neue psychoaktive Stoffe; es regelt keine monatlichen Einzahlungen in Altersvorsorgedepots.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Verbote und Definitionen für neue psychoaktive Stoffe; es regelt keine monatlichen Einzahlungen in Altersvorsorgedepots.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-615175215dc93a6a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen den Umgang mit neuen psychoaktiven Stoffen, nicht den Handel mit internationalen Umwelt- oder Klimazertifikaten.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen den Umgang mit neuen psychoaktiven Stoffen, nicht den Handel mit internationalen Umwelt- oder Klimazertifikaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-615175215dc93a6a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Neue-psychoaktive-Stoffe-Gesetz; eine Verlegung der Bundesanstalt nach Berlin ist nicht geregelt.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Neue-psychoaktive-Stoffe-Gesetz; eine Verlegung der Bundesanstalt nach Berlin ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen neue psychoaktive Stoffe und enthalten keine Regelung zu Asylverfahren oder Schutz in Drittstaaten.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen neue psychoaktive Stoffe und enthalten keine Regelung zu Asylverfahren oder Schutz in Drittstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Verbote und Strafbarkeit im Umgang mit neuen psychoaktiven Stoffen, nicht die Besteuerung von Erwerbseinkommen im Rentenalter.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Verbote und Strafbarkeit im Umgang mit neuen psychoaktiven Stoffen, nicht die Besteuerung von Erwerbseinkommen im Rentenalter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-c0793ad33d4e29e6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Sicherstellung und Strafbarkeit bei neuen psychoaktiven Stoffen; Ausreisearrest nach Haft wird nicht geregelt.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Sicherstellung und Strafbarkeit bei neuen psychoaktiven Stoffen; Ausreisearrest nach Haft wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-c0793ad33d4e29e6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e153d41d40d806d0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zum Umgang mit neuen psychoaktiven Stoffen; die Zahl staatlicher Beauftragter oder Verwaltungspersonal wird nicht geregelt.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zum Umgang mit neuen psychoaktiven Stoffen; die Zahl staatlicher Beauftragter oder Verwaltungspersonal wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e153d41d40d806d0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f60d50282edca842",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Neue-psychoaktive-Stoffe-Gesetz, nicht die Unterstützung eines WTO-Streitschlichtungsmechanismus.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das Neue-psychoaktive-Stoffe-Gesetz, nicht die Unterstützung eines WTO-Streitschlichtungsmechanismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f60d50282edca842",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erweitert und präzisiert Vorschriften zu neuen psychoaktiven Stoffen; einen Freibetrag bei der Grunderwerbsteuer führt es nicht ein.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erweitert und präzisiert Vorschriften zu neuen psychoaktiven Stoffen; einen Freibetrag bei der Grunderwerbsteuer führt es nicht ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu neuen psychoaktiven Stoffen; Stellung und Führung des BSI werden nicht geregelt.",
+          "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cefcfe79ea46b1bffad9325a10e75aa9485b7ff01a115166541df2ae13c538e9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu neuen psychoaktiven Stoffen; Stellung und Führung des BSI werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-207",
       "analysis_sha256": "e17f005f0947de0f08d7b5f87898e56990165d381ea3b189f6233a25218212d9",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-013093c71d20a747",
@@ -82673,7 +83247,1546 @@
         "cdu-csu-2025-ac-f9680e1924a12725"
       ],
       "omitted_count": 909,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-013093c71d20a747",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Verpackungsrecht; Maastricht-Kriterien, Schuldenstandsquote und Defizitgrenze werden darin nicht behandelt.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Verpackungsrecht; Maastricht-Kriterien, Schuldenstandsquote und Defizitgrenze werden darin nicht behandelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dabei müssen die Maastricht-Kriterien, insbesondere die Schuldenstandsquote von 60 Prozent und das jährliche Defizit-Kriterium von drei Prozent des Bruttoinlandsproduktes, weiterhin verbindlich bleiben.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-013093c71d20a747",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-01acc580d4430e0b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Informations- und Meldepflichten betreffen Verpackungen; eine verbindliche Information zu Tierwohl und Herkunft tierischer Produkte wird nicht eingeführt.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Informations- und Meldepflichten betreffen Verpackungen; eine verbindliche Information zu Tierwohl und Herkunft tierischer Produkte wird nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Verbraucher müssen klar und verbindlich über Tierwohl und Herkunft tierischer Produkte informiert sein.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-01acc580d4430e0b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und begründen keine Bekenntnispflicht zu den genannten demokratischen Werten oder zu Israel.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und begründen keine Bekenntnispflicht zu den genannten demokratischen Werten oder zu Israel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bekenntnis zu unseren Werten. Wer sich für unser Land entscheidet, entscheidet sich auch für seine Werte und unsere freiheitliche Demokratie. Wir verlangen ein klares Bekenntnis zu Freiheit, Gleichberechtigung, Demokratie und Rechtsstaat. Wir verlangen ein eindeutiges Bekenntnis zu Israel und seinem Existenzrecht. Dazu gehört auch die Ablehnung von Antisemitismus in jeder Form.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+          "disposition": "no_supported_link",
+          "rationale": "Die geregelten elektronischen Verpackungsmeldungen betreffen Hersteller und Systeme; eine einmalige Datenübermittlung von Bürgern und Unternehmen an die Verwaltung wird nicht festgelegt.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die geregelten elektronischen Verpackungsmeldungen betreffen Hersteller und Systeme; eine einmalige Datenübermittlung von Bürgern und Unternehmen an die Verwaltung wird nicht festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dafür setzen wir auch das „Once-Only“-Prinzip konsequent um, wonach Bürger und Unternehmen ihre Daten nur ein einziges Mal an die Verwaltung übermitteln müssen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0828022dc0120162",
+          "disposition": "no_supported_link",
+          "rationale": "Die Finanzierungsvorschriften betreffen Verpackungssysteme und das Verpackungsregister, nicht tierwohlgerechte Ställe.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Finanzierungsvorschriften betreffen Verpackungssysteme und das Verpackungsregister, nicht tierwohlgerechte Ställe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir sorgen für eine verlässliche Finanzierung tierwohlgerechter Ställe",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0828022dc0120162",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Verpackungsrecht und ändern weder Beamten- noch Soldatenrecht zu Entlassungen.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen Verpackungsrecht und ändern weder Beamten- noch Soldatenrecht zu Entlassungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir lehnen es jedoch ab, einen Beamten oder Zeit- und Berufssoldaten ohne richterlichen Beschluss durch einfachen Verwaltungsakt zu entlassen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1731f5b981d037e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Finanzierung von Forschung und Entwicklung oder zu jährlichen BIP-Ausgaben bis 2030.",
+          "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc8439ed3885ff7b782a3b03300434f8213e74d28405f6457ccffb3fd67c5d5f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Finanzierung von Forschung und Entwicklung oder zu jährlichen BIP-Ausgaben bis 2030.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Höhere Ausgaben sichern. Wir sorgen dafür, dass Wirtschaft und Staat bis 2030 jährlich 3,5 Prozent des Bruttoinlandsprodukts für Forschung und Entwicklung aufwenden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1731f5b981d037e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften regeln Verpackungen und Verpackungsabfälle; eine Deutschvorgabe für die Einschulung ist darin nicht enthalten.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften regeln Verpackungen und Verpackungsabfälle; eine Deutschvorgabe für die Einschulung ist darin nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jedes Kind, das eingeschult wird, muss Deutsch können.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-225d2c26396603ad",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge des Verpackungsrechts zeigen nicht, ob die Renteneintrittsregelung in anderen einschlägigen Vorschriften geändert wurde oder unverändert gilt.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Die vorliegenden Auszüge des Verpackungsrechts zeigen nicht, ob die Renteneintrittsregelung in anderen einschlägigen Vorschriften geändert wurde oder unverändert gilt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "An der bestehenden gesetzlichen Regelung zum Renteneintrittsalter halten wir fest.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-225d2c26396603ad",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2333fe25ccf969bc",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften enthalten keine vereinheitlichten Schwellenwerte für die Bestellung von Betriebsbeauftragten.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften enthalten keine vereinheitlichten Schwellenwerte für die Bestellung von Betriebsbeauftragten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Pflicht zur Bestellung von Betriebsbeauftragten – zum Beispiel für Abfall, Brandschutz oder Sicherheit – belastet kleine und mittlere Unternehmen sehr. Wir befreien sie davon und vereinheitlichen die Schwellenwerte, ab denen Beauftragte berufen werden müssen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2333fe25ccf969bc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen Verpackungsrecht; eine Kürzung des gerichtlichen Instanzenwegs ist darin nicht geregelt.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften betreffen Verpackungsrecht; eine Kürzung des gerichtlichen Instanzenwegs ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wo möglich und sinnvoll, sehen wir im Sinne schnellerer Rechtssicherheit eine Kürzung des Instanzenwegs auf zwei Instanzen vor.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2af76fee04423db0",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Verpackungsvorschriften enthalten keine Anforderungen an Sparsamkeit, Meinungsvielfalt oder Neutralität des öffentlich-rechtlichen Rundfunks.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Verpackungsvorschriften enthalten keine Anforderungen an Sparsamkeit, Meinungsvielfalt oder Neutralität des öffentlich-rechtlichen Rundfunks.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir verpflichten den ÖRR zu seinem Kernauftrag: Sparsamkeit, mehr Meinungsvielfalt und Neutralität.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2af76fee04423db0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2f30e3c1d53606a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften ändern die Organisation der Deutschen Bahn nicht; sie betreffen Verpackungen und deren Entsorgung.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften ändern die Organisation der Deutschen Bahn nicht; sie betreffen Verpackungen und deren Entsorgung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "stellen es neu auf.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2f30e3c1d53606a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften enthalten keine Regelung zur Dauer von Kontrollen an deutschen Grenzen.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften enthalten keine Regelung zur Dauer von Kontrollen an deutschen Grenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die erforderlichen Kontrollen an den deutschen Grenzen verlängern wir, solange es notwendig ist.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Verpackungsvorschriften regeln keine Zuordnung oder Erstattung von Mehrausgaben und Mindereinnahmen der Länder und Kommunen.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Verpackungsvorschriften regeln keine Zuordnung oder Erstattung von Mehrausgaben und Mindereinnahmen der Länder und Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wer eine Leistung veranlasst oder ausweitet, muss für ihre Finanzierung aufkommen. Besonders darauf zu achten ist, wenn Bundesgesetze oder andere Maßnahmen des Bundes bei den Ländern und Kommunen zu Mehrausgaben oder Mindereinnahmen führen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-39e90c5ac88b08be",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften verankern keine IT-Beschaffung des Bundes im Bundesdigitalministerium.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften verankern keine IT-Beschaffung des Bundes im Bundesdigitalministerium.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die gesamte Beschaffung von IT im Bund und die einheitlichen Schnittstellen für IT-Systeme im öffentlichen Bereich verankern wir hier.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-39e90c5ac88b08be",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-42f3cc12f3dcd588",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften enthalten keine Bereitstellung bundeseigener BImA-Grundstücke für den Wohnungsbau.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften enthalten keine Bereitstellung bundeseigener BImA-Grundstücke für den Wohnungsbau.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bundeseigene Grundstücke der Bundesanstalt für Immobilienaufgaben sollen für den Wohnungsbau genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-42f3cc12f3dcd588",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-55dbd8c875f3a245",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Verpackungsvorschriften regeln nicht die Anwendung von Jugend- oder allgemeinem Strafrecht auf Heranwachsende.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Verpackungsvorschriften regeln nicht die Anwendung von Jugend- oder allgemeinem Strafrecht auf Heranwachsende.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Für uns steht fest: Künftig soll auf alle Heranwachsende (18 bis 21 Jahre) das allgemeine Strafrecht Anwendung finden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-55dbd8c875f3a245",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5ad7f2d4e0dd8c0b",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften schaffen keine einzelne zuständige Stelle für Gründungen, Betriebsummeldungen und Betriebsaufgaben.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften schaffen keine einzelne zuständige Stelle für Gründungen, Betriebsummeldungen und Betriebsaufgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir sorgen dafür, dass für Gründungen, Betriebsummeldungen und -aufgaben nur noch eine Stelle zuständig ist.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5ad7f2d4e0dd8c0b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Verpackungsvorschriften verpflichten die Länder nicht, kommunale Empfänger und jeweilige Förderhöhen offenzulegen.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Verpackungsvorschriften verpflichten die Länder nicht, kommunale Empfänger und jeweilige Förderhöhen offenzulegen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Länder sollen transparent machen, inwieweit sie Geld vom Bund zweckmäßig eingesetzt haben und welche Kommune in welcher Höhe profitiert.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e2bfb6e7a15c664",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften stufen den Mobilfunkausbau nicht als überragendes öffentliches Interesse ein.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften stufen den Mobilfunkausbau nicht als überragendes öffentliches Interesse ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "bis zur Erreichung aller Ausbauziele sowohl den Mobilfunk als auch den Glasfaserausbau in das überragende öffentliche Interesse zu stellen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e2bfb6e7a15c664",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-611de4d9847cf432",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge benennen keine als nicht effektiv bewerteten Maßnahmen, deren Rücknahme sich prüfen ließe.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die Auszüge benennen keine als nicht effektiv bewerteten Maßnahmen, deren Rücknahme sich prüfen ließe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "nehmen zurück, was nicht effektiv ist",
+            "caveats": [
+              "Es ist nicht angegeben, welche Maßnahmen als nicht effektiv bewertet wurden."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-611de4d9847cf432",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Verpackungsvorschriften enthalten keine Arbeitspflicht im Rahmen der Grundsicherung.",
+          "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a750fa2c65b5fc45f4a41f8b9d8791ee39f0c70d58dc41b0d13c56c0beff53e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Verpackungsvorschriften enthalten keine Arbeitspflicht im Rahmen der Grundsicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wer arbeiten kann, muss auch arbeiten und darf nicht auf Kosten der Gemeinschaft leben.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6cb937be3d49de1d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz passt Verpackungsrecht an EU-Recht an; sein Regelungsinhalt belegt keine frühzeitige ablehnende Position zu neuen EU-Pflichten.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz passt Verpackungsrecht an EU-Recht an; sein Regelungsinhalt belegt keine frühzeitige ablehnende Position zu neuen EU-Pflichten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6cb937be3d49de1d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Registrierungs- und Verpackungsdaten von Herstellern, nicht die individuelle Kontrolle jeder Person über die Erhebung und Nutzung ihrer Daten.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Registrierungs- und Verpackungsdaten von Herstellern, nicht die individuelle Kontrolle jeder Person über die Erhebung und Nutzung ihrer Daten.",
+            "law_passage_id": "bgbl-1-2026-207-p-6593da40421e1476",
+            "law_quote": "Hersteller sind verpflichtet, sich […] bei der Zentralen Stelle Verpackungsregister registrieren zu lassen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6f9a1595c55e4e88",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und enthalten keine Nationale Sicherheitsstrategie.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und enthalten keine Nationale Sicherheitsstrategie.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6f9a1595c55e4e88",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-72a5d10adfc4e968",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Verpackungsrecht; eine Übernahme der FFH-Richtlinie in das Bundesnaturschutzgesetz ist nicht belegt.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen Verpackungsrecht; eine Übernahme der FFH-Richtlinie in das Bundesnaturschutzgesetz ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-72a5d10adfc4e968",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Verpackungssystemen und deren Zulassung enthalten keine Bestimmung, die Marktzugang an staatliche Förderung knüpft oder davon unabhängig macht.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zu Verpackungssystemen und deren Zulassung enthalten keine Bestimmung, die Marktzugang an staatliche Förderung knüpft oder davon unabhängig macht.",
+            "law_passage_id": "bgbl-1-2026-207-p-f9bc33c7cf4c3d4e",
+            "law_quote": "Die zuständige Landesbehörde erteilt einem System auf Antrag […] die Zulassung für das jeweilige Land, wenn das System",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-79edf26bd910140b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Verpackungsvorschriften regeln keine NATO-Finanzierungsverpflichtungen.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Verpackungsvorschriften regeln keine NATO-Finanzierungsverpflichtungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-79edf26bd910140b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-878272e6d6deffd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungen und führen keine digitale Kraftfahrzeug-Anmeldung ein.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungen und führen keine digitale Kraftfahrzeug-Anmeldung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-878272e6d6deffd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8ab611945333c874",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsabfälle und führen keine flächendeckende Pflichtversicherung für Elementarschäden ein.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsabfälle und führen keine flächendeckende Pflichtversicherung für Elementarschäden ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8ab611945333c874",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Verpackungsregisterregelungen stellen keine digitale Akte für Bürgerinnen und Bürger mit Behördenzugang bereit.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die Verpackungsregisterregelungen stellen keine digitale Akte für Bürgerinnen und Bürger mit Behördenzugang bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu Asylverfahren oder Schutzgewährung in Drittstaaten.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu Asylverfahren oder Schutzgewährung in Drittstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-90897897f5fdb789",
+          "disposition": "no_supported_link",
+          "rationale": "Die genannten Vorschriften zu schwermetallhaltigen Kunststoffkästen betreffen Schwermetalle, nicht ein grundsätzliches PFAS-Verbot oder dessen Ausschluss.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die genannten Vorschriften zu schwermetallhaltigen Kunststoffkästen betreffen Schwermetalle, nicht ein grundsätzliches PFAS-Verbot oder dessen Ausschluss.",
+            "law_passage_id": "bgbl-1-2026-207-p-2599a6e1c1e4dc92",
+            "law_quote": "Systemanforderungen hinsichtlich Rückgabe und Entsorgung von schwermetallhaltigen Kunststoffkästen und -paletten",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-90897897f5fdb789",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Verpackungsvorschriften betreffen weder den EU-Beitritt der Ukraine noch Beitrittskriterien.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Verpackungsvorschriften betreffen weder den EU-Beitritt der Ukraine noch Beitrittskriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Bestimmung zu einem Kassensturz zu Beginn einer Wahlperiode.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Bestimmung zu einem Kassensturz zu Beginn einer Wahlperiode.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93172a6313944f14",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keine Gründerschutzzone und sehen keine allgemeine Bürokratieentlastung für Unternehmen in der Startphase vor.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die vorgelegten Vorschriften schaffen keine Gründerschutzzone und sehen keine allgemeine Bürokratieentlastung für Unternehmen in der Startphase vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93172a6313944f14",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+          "disposition": "no_supported_link",
+          "rationale": "Die Frist von 18 Wochen betrifft die Zulassung eines Verpackungssystems nach Vorliegen der erforderlichen Unterlagen, nicht die zügige Prüfung von Unterlagen für Infrastrukturvorhaben.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Frist von 18 Wochen betrifft die Zulassung eines Verpackungssystems nach Vorliegen der erforderlichen Unterlagen, nicht die zügige Prüfung von Unterlagen für Infrastrukturvorhaben.",
+            "law_passage_id": "bgbl-1-2026-207-p-f9bc33c7cf4c3d4e",
+            "law_quote": "innerhalb einer Frist von 18 Wochen ab Vorliegen aller für die Bearbeitung erforderlichen Informationen und Unterlagen",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a0141e5c73963732",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz enthält nationale Registrierungs- und Nachweispflichten zur Umsetzung der Verpackungsverordnung; ob diese über deren Mindestmaß hinausgehen, lässt sich ohne vollständigen Vergleich mit den EU-Vorgaben nicht beurteilen.",
+          "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "713445da5f2aca9a5e22c4fd8652e0a940dfcfc5049892248d8302c8d5e9241d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält nationale Registrierungs- und Nachweispflichten zur Umsetzung der Verpackungsverordnung; ob diese über deren Mindestmaß hinausgehen, lässt sich ohne vollständigen Vergleich mit den EU-Vorgaben nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-207-p-6593da40421e1476",
+            "law_quote": "Hersteller sind verpflichtet, sich […] bei der Zentralen Stelle Verpackungsregister registrieren zu lassen.",
+            "criterion_quote": "Europarechtliche Vorgaben setzen wir national grundsätzlich eins zu eins um und gehen nicht über das vorhergesehene Mindestmaß an Regulierung hinaus.",
+            "caveats": [
+              "Für die Beurteilung, ob nationale Vorschriften über das EU-Mindestmaß hinausgehen, ist ein Vergleich mit den vollständigen EU-Vorgaben erforderlich."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-a0141e5c73963732",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge regeln Verpackungsrecht und Verpackungsabfälle; eine Einrichtung eines europäischen Normenkontrollrats ist darin nicht belegt.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.84,
+            "rationale": "Die vorgelegten Auszüge regeln Verpackungsrecht und Verpackungsabfälle; eine Einrichtung eines europäischen Normenkontrollrats ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b0e8c32716be2cd0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Maßnahme zur Bereitstellung von Bauland.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Die Auszüge enthalten keine Maßnahme zur Bereitstellung von Bauland.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-b0e8c32716be2cd0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b6888147d6e29d46",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften bewirken keine ausgewiesene Verringerung des Personals in Ministerial- oder Bundestagsverwaltung.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die vorgelegten Vorschriften bewirken keine ausgewiesene Verringerung des Personals in Ministerial- oder Bundestagsverwaltung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-b6888147d6e29d46",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bcbda44728920fbb",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Verbesserung der Behördenkommunikation über bereits vorliegende Daten ist in den vorgelegten Auszügen nicht geregelt.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.85,
+            "rationale": "Eine Verbesserung der Behördenkommunikation über bereits vorliegende Daten ist in den vorgelegten Auszügen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-bcbda44728920fbb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bdecbecaff87b658",
+          "disposition": "no_supported_link",
+          "rationale": "§ 61 erleichtert kleinen Unternehmen bestimmte Pflichten zu Mehrwegverpackungen; eine Befreiung von der Bestellung von Betriebsbeauftragten ist daraus nicht ersichtlich.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "§ 61 erleichtert kleinen Unternehmen bestimmte Pflichten zu Mehrwegverpackungen; eine Befreiung von der Bestellung von Betriebsbeauftragten ist daraus nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-bdecbecaff87b658",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge nennen Umsetzungsregelungen zum Verpackungsrecht, belegen aber keine Prüfung, ob die Richtlinienumsetzung über das notwendige EU-Regelungsmaß hinausgeht.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.83,
+            "rationale": "Die Auszüge nennen Umsetzungsregelungen zum Verpackungsrecht, belegen aber keine Prüfung, ob die Richtlinienumsetzung über das notwendige EU-Regelungsmaß hinausgeht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-c07cd891c9a29d2a",
+          "disposition": "no_supported_link",
+          "rationale": "Eine frühzeitige Einbeziehung von Kommunen in die Bund-Länder-Koordinierung ist in den vorgelegten Auszügen nicht geregelt.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Eine frühzeitige Einbeziehung von Kommunen in die Bund-Länder-Koordinierung ist in den vorgelegten Auszügen nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-c07cd891c9a29d2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-cc3e2719ad29f120",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge weisen dem NKR keine erweiterten Aufgaben zur Prüfung untergesetzlicher Vorschriften zu.",
+          "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4168f0cfbab9d66e4f2dd1445aaa41b149ca1ecb8d62396c79c0619bf8fe68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.87,
+            "rationale": "Die Auszüge weisen dem NKR keine erweiterten Aufgaben zur Prüfung untergesetzlicher Vorschriften zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-cc3e2719ad29f120",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-cc4575ea4bca4cf0",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Passagen regeln die Durchführung des EU-Verpackungsrechts; ob dabei bestehende deutsche Anforderungen über EU-Recht hinaus zurückgenommen werden, lässt sich ohne Vergleich mit den bisherigen und europäischen Vorgaben nicht beurteilen.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die vorgelegten Passagen regeln die Durchführung des EU-Verpackungsrechts; ob dabei bestehende deutsche Anforderungen über EU-Recht hinaus zurückgenommen werden, lässt sich ohne Vergleich mit den bisherigen und europäischen Vorgaben nicht beurteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Vergleichsmaßstab und vollständige einschlägige Regelungen fehlen."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-cc4575ea4bca4cf0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzespassagen betreffen Verpackungsrecht und belegen keine Ausweitung der Telekommunikationsüberwachung.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzespassagen betreffen Verpackungsrecht und belegen keine Ausweitung der Telekommunikationsüberwachung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d9a334fbf28381b5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Verankerung einheitlicher Schnittstellen für öffentliche IT-Systeme im Bundesdigitalministerium.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen belegen keine Verankerung einheitlicher Schnittstellen für öffentliche IT-Systeme im Bundesdigitalministerium.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d9a334fbf28381b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzespassagen enthalten keine Regelung zum Drei-Säulen-System der Banken.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzespassagen enthalten keine Regelung zum Drei-Säulen-System der Banken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-dc5d4aea2a2de9a2",
+          "disposition": "no_supported_link",
+          "rationale": "Die erwähnte Stiftung ist die Zentrale Stelle Verpackungsregister; die Passagen betreffen nicht die Stiftung Flucht, Vertreibung, Versöhnung.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die erwähnte Stiftung ist die Zentrale Stelle Verpackungsregister; die Passagen betreffen nicht die Stiftung Flucht, Vertreibung, Versöhnung.",
+            "law_passage_id": "bgbl-1-2026-207-p-f48d00ea04b0195b",
+            "law_quote": "Die nach § 24 des Verpackungsgesetzes in der bis zum 11. August 2026 geltenden Fassung errichtete Stiftung „Zentrale Stelle Verpackungsregister“ bleibt bestehen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-dc5d4aea2a2de9a2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e25cc18c49017d58",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine verpflichtende Herkunftskennzeichnung für Lebensmittel.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen belegen keine verpflichtende Herkunftskennzeichnung für Lebensmittel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e25cc18c49017d58",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz führt Vorschriften zur Durchführung der EU-Verpackungsverordnung auf; ob es ein Anti-Gold-Plating-Gesetz beschließt oder bestehende über EU-Recht hinausgehende Regeln zurücknimmt, erfordert einen Vergleich mit nicht vorgelegten EU- und bisherigen nationalen Vorschriften.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Das Gesetz führt Vorschriften zur Durchführung der EU-Verpackungsverordnung auf; ob es ein Anti-Gold-Plating-Gesetz beschließt oder bestehende über EU-Recht hinausgehende Regeln zurücknimmt, erfordert einen Vergleich mit nicht vorgelegten EU- und bisherigen nationalen Vorschriften.",
+            "law_passage_id": "bgbl-1-2026-207-p-75dc8492359f9f67",
+            "law_quote": "Gesetz zur Durchführung der Verordnung (EU) 2025/40 betreffend Verpackungen",
+            "criterion_quote": null,
+            "caveats": [
+              "Vergleich der nationalen Anforderungen mit EU-Recht und vorheriger Rechtslage fehlt."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f7cf97a4ced6947a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzespassagen enthalten keine Regelung zu Studienkrediten oder deren Zinssätzen.",
+          "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "792eb34f471a4bca280b5634ee532112b1cc8ae19ef8fe30e39853eda8faa52e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzespassagen enthalten keine Regelung zu Studienkrediten oder deren Zinssätzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f7cf97a4ced6947a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht; ein Grunderwerbsteuer-Freibetrag oder eine entsprechende Ermächtigung der Länder ist nicht geregelt.",
+          "input_sha256": "38142cabd963afc8816b5df663b9ed967e3c95511ea1b35048fcc707ecde568d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "38142cabd963afc8816b5df663b9ed967e3c95511ea1b35048fcc707ecde568d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht; ein Grunderwerbsteuer-Freibetrag oder eine entsprechende Ermächtigung der Länder ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Länder sollen einen Freibetrag bei der Grunderwerbsteuer von 250.000 Euro pro Erwachsenen und 150.000 Euro für jedes Kind",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-210a",
@@ -86801,45 +88914,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4865,
-    "cache_hits": 74,
-    "subdivision_cache_hits": 3,
+    "calls": 4959,
+    "cache_hits": 77,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.434295,
-    "reported_cost_calls": 4493,
+    "reported_cost_usd": 24.522328,
+    "reported_cost_calls": 4537,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.218879,
-    "unknown_cost_calls": 372,
+    "unknown_cost_reserved_usd": 2.496942,
+    "unknown_cost_calls": 422,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 26.653173,
-    "prompt_tokens": 50028952,
-    "completion_tokens": 7919983,
+    "budget_exposure_usd": 27.01927,
+    "prompt_tokens": 50569606,
+    "completion_tokens": 8022924,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 190,
-        "reported_cost_usd": 4.638897499999999,
+        "calls": 191,
+        "reported_cost_usd": 4.672009249999999,
         "unknown_cost_reserved_usd": 1.0130785099704553e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 73,
-        "reported_cost_usd": 0.9426190000000001,
-        "unknown_cost_reserved_usd": 1.0408340855860843e-16,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 74,
+        "reported_cost_usd": 0.9512682500000001,
+        "unknown_cost_reserved_usd": 1.3183898417423734e-16,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1705,
-        "reported_cost_usd": 1.9683081000000011,
-        "unknown_cost_reserved_usd": 1.2344030000000004,
-        "pending_reserved_usd": 1.6479873021779667e-17
+        "calls": 1797,
+        "reported_cost_usd": 2.014580520000001,
+        "unknown_cost_reserved_usd": 1.5124662000000004,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

@@ -109526,7 +109526,7 @@
     {
       "law_id": "bgbl-1-2026-195",
       "analysis_sha256": "31aa1b2ea88d598a806486b9d1f8520a134e4a1dcf8609d0536267d3f27f4bb4",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-077a825d988dc2e0",
@@ -110030,6 +110030,38 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-769c99f7fa900161",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-7c77a4109340cfb5",
+          "disposition": "proposed_link",
+          "rationale": "Zur Sicherung der Arzneimittelversorgung in ländlichen Regionen kann die Behörde im Einzelfall den zeitweisen Weiterbetrieb einer Apotheke durch einen pharmazeutisch-technischen Assistenten genehmigen. Die Erprobung ist bis Ende 2031 sowie auf höchstens 20 Tage jährlich begrenzt und schafft keine flächendeckende medizinische Versorgung.",
+          "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e1623cfed13f4b817d0d36b8a50a6c57791cde31d7b9e8f4dcbd10cf9a26f765"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e"
+            }
+          ],
+          "impact_id": "impact-5a972febfb997d93",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Zur Sicherung der Arzneimittelversorgung in ländlichen Regionen kann die Behörde im Einzelfall den zeitweisen Weiterbetrieb einer Apotheke durch einen pharmazeutisch-technischen Assistenten genehmigen. Die Erprobung ist bis Ende 2031 sowie auf höchstens 20 Tage jährlich begrenzt und schafft keine flächendeckende medizinische Versorgung.",
+            "law_passage_id": "bgbl-1-2026-195-p-472f9793d5a439a2",
+            "law_quote": "(1) Zur praktischen Erprobung einer vorübergehenden Aufrechterhaltung des Betriebs von Apotheken\ndurch einen pharmazeutisch-technischen Assistenten zur Sicherstellung der Arzneimittelversorgung in\nländlichen Regionen kann die zuständige Behörde im Einzelfall auf Antrag eines Apothekenleiters\ngenehmigen, dass er bis zum Ablauf des 31. Dezember 2031 für bis zu 20 Tage im Jahr, jedoch längstens\nan zehn zusammenhängenden Tagen, abwesend ist und der Apothekenbetrieb in dieser Zeit durch einen\npharmazeutisch-technischen Assistenten aufrechterhalten wird.",
+            "criterion_quote": "Die Versorgungsqualität darf nicht vom Wohnort abhängen. Es\nbraucht eine flächendeckende medizinische\nVersorgung, die entsprechenden Einrichtungen und",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-7c77a4109340cfb5",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -110599,6 +110631,38 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-f6aa5433606f64ce",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fd9e8dda5fcdb03a",
+          "disposition": "missing_context",
+          "rationale": "Die aufgeführte Medikationsberatung belegt für sich weder eine Erweiterung des Leistungsanspruchs der solidarischen Krankenversicherung noch die Abdeckung der genannten Leistungen. Der dafür nötige bisherige Leistungsumfang ist nicht ersichtlich.",
+          "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "49ab9f70d24495a7a06342e414250acb9a67fb1431988e6d0f8c5fa35150eeb7"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d95c130d7ff2d0364537ce3963213404cd39d6acdc71fb9f991f5bf8399c308e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.79,
+            "rationale": "Die aufgeführte Medikationsberatung belegt für sich weder eine Erweiterung des Leistungsanspruchs der solidarischen Krankenversicherung noch die Abdeckung der genannten Leistungen. Der dafür nötige bisherige Leistungsumfang ist nicht ersichtlich.",
+            "law_passage_id": "bgbl-1-2026-195-p-d2ec66d00d26c0f0",
+            "law_quote": "3. Erweiterte Medikationsberatung bei Polymedikation,",
+            "criterion_quote": "evidenzbasiert alle medizinisch sinnvollen Leistungen\nwie Zahnersatz, Brillen und Ibuprofen abdecken",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fd9e8dda5fcdb03a",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -111398,12 +111462,175 @@
         "linke-2025-ac-fda158ca4078c9ab"
       ],
       "omitted_count": 1361,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln nicht die Wahl des EZB-Führungspersonals oder der EZB-Gremien durch das Europäische Parlament.",
+          "input_sha256": "e23843dc1d2922c865aad5cc0efbd5367748a8e9e7fd01ed60dd32da0f654530",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e23843dc1d2922c865aad5cc0efbd5367748a8e9e7fd01ed60dd32da0f654530"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Bestimmungen regeln nicht die Wahl des EZB-Führungspersonals oder der EZB-Gremien durch das Europäische Parlament.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen sehen keine Besteuerung deutscher Staatsangehöriger unabhängig von Wohnsitz und Einkommensquelle vor.",
+          "input_sha256": "e23843dc1d2922c865aad5cc0efbd5367748a8e9e7fd01ed60dd32da0f654530",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e23843dc1d2922c865aad5cc0efbd5367748a8e9e7fd01ed60dd32da0f654530"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Bestimmungen sehen keine Besteuerung deutscher Staatsangehöriger unabhängig von Wohnsitz und Einkommensquelle vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e2985753c5e1f6f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten kein Verbot, bei Online-Ausweisvorgängen Daten zu speichern.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Passagen enthalten kein Verbot, bei Online-Ausweisvorgängen Daten zu speichern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e2985753c5e1f6f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f103b095073fddcf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln keine Mietendeckel für die genannten Gruppen.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen regeln keine Mietendeckel für die genannten Gruppen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f103b095073fddcf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Karenzzeit oder Wechselbeschränkung für ehemalige Regierungsmitglieder.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen enthalten keine Karenzzeit oder Wechselbeschränkung für ehemalige Regierungsmitglieder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fab3012ed972e9dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen betreffen keine Unterstützung des ICC bei der Aufarbeitung von Verbrechen im Nahostkrieg.",
+          "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c6de3296c7c18641e1cd90fa30b13c60ae8da260a080c2044e4fe77949a8c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen betreffen keine Unterstützung des ICC bei der Aufarbeitung von Verbrechen im Nahostkrieg.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fab3012ed972e9dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-2",
       "analysis_sha256": "740f831f6ab0a9d9a1a286ef61339573898f4615e39ad10398a5f1f36735c6ec",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-049259b81c7d756c",
@@ -111420,7 +111647,332 @@
         "linke-2025-ac-f2ea370314a14835"
       ],
       "omitted_count": 1372,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-049259b81c7d756c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Umgang mit neuen psychoaktiven Stoffen, nicht Beitrittshilfen oder soziale, ökologische und demokratische Standards.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Umgang mit neuen psychoaktiven Stoffen, nicht Beitrittshilfen oder soziale, ökologische und demokratische Standards.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-049259b81c7d756c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Wahl von EZB-Führungspersonal oder EZB-Gremien durch das Europäische Parlament.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Wahl von EZB-Führungspersonal oder EZB-Gremien durch das Europäische Parlament.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0da78bc5dfb5d694",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Co-Investments noch deren Besteuerung nach Beteiligungsquoten.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Co-Investments noch deren Besteuerung nach Beteiligungsquoten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0da78bc5dfb5d694",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0ed04eb1e56ec833",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz weist bestimmte Sicherstellungs- und Verwahrungskosten dem Verantwortlichen zu; es regelt nicht die Finanzierung von Kosten nach der sie verursachenden staatlichen Ebene.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz weist bestimmte Sicherstellungs- und Verwahrungskosten dem Verantwortlichen zu; es regelt nicht die Finanzierung von Kosten nach der sie verursachenden staatlichen Ebene.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0ed04eb1e56ec833",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Höhe oder Anhebung des gesetzlichen Mindestlohns.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Höhe oder Anhebung des gesetzlichen Mindestlohns.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-44145c3b404c519f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Pflicht, neue Gesetze auf ihre Auswirkungen auf Geschlechtergerechtigkeit zu untersuchen.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Pflicht, neue Gesetze auf ihre Auswirkungen auf Geschlechtergerechtigkeit zu untersuchen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-44145c3b404c519f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-7083bd919ca96a0d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt kein Klimageld ein und regelt keine Direktzahlungen oder deren Rückwirkung ab 2025.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt kein Klimageld ein und regelt keine Direktzahlungen oder deren Rückwirkung ab 2025.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-7083bd919ca96a0d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-81762a0baf8b00d3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung über reguläre Strafverfahren für Straftäter*innen unabhängig von ihrem Aufenthaltsstatus.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung über reguläre Strafverfahren für Straftäter*innen unabhängig von ihrem Aufenthaltsstatus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-81762a0baf8b00d3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz überträgt keine grundlegenden Entscheidungen an das Europäische Parlament.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz überträgt keine grundlegenden Entscheidungen an das Europäische Parlament.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c5946ae7ae138fa5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahmen zum Auf- oder Ausbau akademischer Kooperationen.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahmen zum Auf- oder Ausbau akademischer Kooperationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-c5946ae7ae138fa5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f103b095073fddcf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine rechtlichen Voraussetzungen für Mietendeckel durch Länder oder Kommunen.",
+          "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e9bf7f1b72a9c166eda4b3e526525a5e2a67dc79bd9a85cee15f02806faf502f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine rechtlichen Voraussetzungen für Mietendeckel durch Länder oder Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f103b095073fddcf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Neue-psychoaktive-Stoffe-Gesetz und regelt weder Karenzzeiten für Regierungsmitglieder noch deren Wechsel in Unternehmen.",
+          "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2f72c61eb5d7938f20023499cdeda43305d00c7adb8d047a1c0f05af1a4d018f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Neue-psychoaktive-Stoffe-Gesetz und regelt weder Karenzzeiten für Regierungsmitglieder noch deren Wechsel in Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bundesminister*innen und parlamentarische Staats­sekretär*innen müssen nach ihrem Ausscheiden aus dem Amt mindestens drei Jahre bzw. für die Dauer des zeitlichen Anspruchs auf Übergangsgeld warten, bevor sie in Unternehmen wechseln, mit deren wirtschaftlichen Interessen sie zuvor politisch befasst waren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-207",
@@ -111508,7 +112060,2095 @@
         "linke-2025-ac-ff1483b33eb0abc7"
       ],
       "omitted_count": 1306,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-0009fef45ff3df79",
+          "disposition": "no_supported_link",
+          "rationale": "Die Ausschnitte enthalten keine arbeitsrechtliche Regelung für ausländische Pflegearbeitskräfte und keine Vorgaben zu deren Arbeitszeit, Urlaub oder Mindestlohn.",
+          "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Ausschnitte enthalten keine arbeitsrechtliche Regelung für ausländische Pflegearbeitskräfte und keine Vorgaben zu deren Arbeitszeit, Urlaub oder Mindestlohn.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Keine Ausbeutung ausländischer Arbeitskräfte in der\n\nPflege! Die „24-Stunden-Betreuung“ ist eine Zumutung\nfür alle Beteiligten. Die prekäre Lage dieser Menschen in\nihren Herkunftsländern wird für eine Beschäftigung\nunter inakzeptablen Bedingungen ausgenutzt. Es\nbraucht endlich eine Regulierung dieser Beschäf­\ntigungs­verhältnisse mit Sozial­versicherungs­schutz,\ngesetzlicher Arbeitszeit, Urlaub und Mindestlohn.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0009fef45ff3df79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-071e98abc0f3656a",
+          "disposition": "no_supported_link",
+          "rationale": "Der Ausschnitt erwähnt Pfandpflichten für bestimmte Einweggetränkeverpackungen, legt aber kein einheitliches EU-Pfandsystem für Einweg- und Mehrwegflaschen fest.",
+          "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Der Ausschnitt erwähnt Pfandpflichten für bestimmte Einweggetränkeverpackungen, legt aber kein einheitliches EU-Pfandsystem für Einweg- und Mehrwegflaschen fest.",
+            "law_passage_id": "bgbl-1-2026-207-p-34b16a04b4405868",
+            "law_quote": "entgegen § 46 Absatz 2 Satz 1 eine Einweggetränkeverpackung nicht zurücknimmt oder das Pfand nicht\nerstattet,",
+            "criterion_quote": "In der EU setzen wir uns für ein\neinheitliches Pfandsystem für Ein- und Mehrweggetränkeflaschen ein.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-071e98abc0f3656a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Ausschnitte enthalten keine Regelung zur Wahl der EZB-Führung oder ihrer Gremien durch das Europäische Parlament.",
+          "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Ausschnitte enthalten keine Regelung zur Wahl der EZB-Führung oder ihrer Gremien durch das Europäische Parlament.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Führungspersonal und\n-gremien der EZB – wie EZB-Rat, EZB-Direktorium und\nEZB-Präsident*in – sollen vom Europäischen Parlament\ngewählt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0c0c58603742e402",
+          "disposition": "no_supported_link",
+          "rationale": "Die Ausschnitte betreffen Verpackungsentsorgung und enthalten keine bundesweite Vereinheitlichung der unterschiedlichen Länderregelungen im öffentlichen Nahverkehr.",
+          "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Ausschnitte betreffen Verpackungsentsorgung und enthalten keine bundesweite Vereinheitlichung der unterschiedlichen Länderregelungen im öffentlichen Nahverkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Erhöhung des\nAbopreises auf 58 Euro ist fatal und die unterschiedlichen\nLösungen in den Ländern müssen bundesweit einheitlich\ngestaltet werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0c0c58603742e402",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0da78bc5dfb5d694",
+          "disposition": "no_supported_link",
+          "rationale": "Die Ausschnitte enthalten keine Regelung zur Besteuerung von Co-Investments oder zur Zuordnung der Besteuerung nach Beteiligungsquoten.",
+          "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "99febaf7df8455d0224da9dad0021e93796647d81ea25f44e21f7ce7e118acb9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Ausschnitte enthalten keine Regelung zur Besteuerung von Co-Investments oder zur Zuordnung der Besteuerung nach Beteiligungsquoten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "durch mehrere Personen oder Gesellschaften\n(sogenannte Co-Investments) wird entsprechend der\njeweiligen Beteiligungsquote besteuert.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0da78bc5dfb5d694",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-13efb641a8e315c2",
+          "disposition": "no_supported_link",
+          "rationale": "§ 60 verpflichtet bestimmte Endvertreiber, Waren auch in wiederverwendbaren Verpackungen anzubieten; die Vorschrift regelt keinen Kitazugang oder dessen Gebühren.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 60 verpflichtet bestimmte Endvertreiber, Waren auch in wiederverwendbaren Verpackungen anzubieten; die Vorschrift regelt keinen Kitazugang oder dessen Gebühren.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "Alle Kinder müssen Zugang zu einem Platz haben, unabhängig vom Einkommen in den Familien.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-13efb641a8e315c2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-155b8e998443eb10",
+          "disposition": "no_supported_link",
+          "rationale": "Die zitierte Vorschrift betrifft Mehrwegangebote für bestimmte Einwegverpackungen, nicht die systematische Erfassung von Wohnungsleerständen.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die zitierte Vorschrift betrifft Mehrwegangebote für bestimmte Einwegverpackungen, nicht die systematische Erfassung von Wohnungsleerständen.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "Wohnungsleerstände müssen systematisch erfasst werden",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-155b8e998443eb10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-18e093c56daf6a46",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift regelt Mehrwegangebote im Verpackungsbereich; eine Förderung von CCU oder eine daran geknüpfte Nachweispflicht ist darin nicht vorgesehen.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschrift regelt Mehrwegangebote im Verpackungsbereich; eine Förderung von CCU oder eine daran geknüpfte Nachweispflicht ist darin nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "nur dann fördern, wenn es nachgewiesenermaßen kein alternatives, CO2-freies Produktionsverfahren gibt.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-18e093c56daf6a46",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-197b1a28e1db4520",
+          "disposition": "no_supported_link",
+          "rationale": "§ 60 verpflichtet bestimmte Endvertreiber zu Mehrwegangeboten; die Vorschrift verändert kein Angebot gesellschaftspolitischer Informationen im öffentlich-rechtlichen Rundfunk.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 60 verpflichtet bestimmte Endvertreiber zu Mehrwegangeboten; die Vorschrift verändert kein Angebot gesellschaftspolitischer Informationen im öffentlich-rechtlichen Rundfunk.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "Breit gefächerte gesellschaftspolitische Informationen müssen gestärkt werden, für die bei den Privaten kaum Platz ist.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-197b1a28e1db4520",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-1ba4e587d4a5963b",
+          "disposition": "no_supported_link",
+          "rationale": "Die zitierte Regel betrifft Mehrwegverpackungen bei bestimmten Endvertreibern, nicht eine Pflicht von Banken, Sparinstrumente bereitzustellen.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die zitierte Regel betrifft Mehrwegverpackungen bei bestimmten Endvertreibern, nicht eine Pflicht von Banken, Sparinstrumente bereitzustellen.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "einfachere und sichere Sparinstrumente",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-1ba4e587d4a5963b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-1ddc31c246a63066",
+          "disposition": "no_supported_link",
+          "rationale": "§ 60 regelt ein Mehrwegangebot für bestimmte Warenverpackungen; eine schriftliche Bestätigung als Voraussetzung für die Gültigkeit telefonischer Verträge wird nicht geregelt.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 60 regelt ein Mehrwegangebot für bestimmte Warenverpackungen; eine schriftliche Bestätigung als Voraussetzung für die Gültigkeit telefonischer Verträge wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "Telefonische Verträge sollen nur nach schriftlicher Bestätigung gelten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-1ddc31c246a63066",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-253882452adee04f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift verpflichtet bestimmte Endvertreiber zu Mehrwegangeboten; ein Busangebot in jedem Ort wird darin nicht geregelt.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschrift verpflichtet bestimmte Endvertreiber zu Mehrwegangeboten; ein Busangebot in jedem Ort wird darin nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "Bus, Bäcker, eine Möglichkeit zum Geldabheben, Arztpraxen und Begegnungsorte müssen in jedem Ort vorhanden sein.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-253882452adee04f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-25aef9db964398c1",
+          "disposition": "no_supported_link",
+          "rationale": "§ 60 betrifft Mehrwegangebote für bestimmte Einwegverpackungen; ein kommunales Vorkaufsrecht für Grundstücke wird darin nicht eingeräumt.",
+          "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "122ebb7edeb4dc37ec5f41a453c69b4cee6064d22163997d9ef1f0ac4ac1e171"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 60 betrifft Mehrwegangebote für bestimmte Einwegverpackungen; ein kommunales Vorkaufsrecht für Grundstücke wird darin nicht eingeräumt.",
+            "law_passage_id": "bgbl-1-2026-207-p-3eee076921476fd9",
+            "law_quote": "Endvertreiber von Einwegkunststofflebensmittelverpackungen und von Einweggetränkebechern, die jeweils erst beim Endvertreiber mit Waren befüllt werden, sind verpflichtet, die in diesen Einwegverpackungen angebotenen Waren am Ort der Bereitstellung im Bundesgebiet jeweils auch in wiederverwendbaren Verpackungen zum Verkauf anzubieten.",
+            "criterion_quote": "Kommunen sollen ein Vorkaufsrecht auf alle Grundstücke bekommen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-25aef9db964398c1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2b8dc1b92155f198",
+          "disposition": "no_supported_link",
+          "rationale": "Die Zulassungsvorschriften betreffen Verpackungen und Herstellerverantwortungsorganisationen, nicht Finanzinstrumente.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Zulassungsvorschriften betreffen Verpackungen und Herstellerverantwortungsorganisationen, nicht Finanzinstrumente.",
+            "law_passage_id": "bgbl-1-2026-207-p-65c46cbd086a3edf",
+            "law_quote": "Hersteller dürfen Verpackungen nach § 11 Nummer 4, § 39 Absatz 1 Satz 1 und Verpackungen, die nach § 46 Absatz 1 Satz 1 einer Pfandpflicht unterliegen, nicht im Bundesgebiet bereitstellen [...], wenn sie nicht nach § 19 Absatz 1 Satz 1 zugelassen sind.",
+            "criterion_quote": "In Zukunft sollen Finanzinstrumente eine ausdrückliche Zulassung durch einen Finanz-TÜV erhalten, bevor sie in Umlauf gebracht werden dürfen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2b8dc1b92155f198",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Verpackungsrecht; eine Anhebung des gesetzlichen Mindestlohns ist darin nicht belegt.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln Verpackungsrecht; eine Anhebung des gesetzlichen Mindestlohns ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "spätestens bis 2026 einen Mindestlohn von 16 Euro",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d641bc75595da45",
+          "disposition": "missing_context",
+          "rationale": "§ 59 verpflichtet bestimmte Verpackungsakteure zu Vermeidungsmaßnahmen, belegt aber keine Abgabe für verbleibende Einwegverpackungen; dafür fehlt im unvollständigen Gesetzesauszug der nötige Kontext.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "§ 59 verpflichtet bestimmte Verpackungsakteure zu Vermeidungsmaßnahmen, belegt aber keine Abgabe für verbleibende Einwegverpackungen; dafür fehlt im unvollständigen Gesetzesauszug der nötige Kontext.",
+            "law_passage_id": "bgbl-1-2026-207-p-13e20c052a7be210",
+            "law_quote": "Systeme, sonstige Organisationen für Herstellerverantwortung, Betreiber von Branchenlösungen und Hersteller, die die Erfüllung ihrer erweiterten Herstellerverantwortung individuell wahrnehmen, sind verpflichtet, Maßnahmen zur Reduzierung und Prävention von Verpackungen und Verpackungsabfällen durchzuführen.",
+            "criterion_quote": "und in den verbleibenden Fällen Abgaben für die Hersteller.",
+            "caveats": [
+              "Der bereitgestellte Gesetzestext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-2d641bc75595da45",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2e20231300ae0856",
+          "disposition": "no_supported_link",
+          "rationale": "Der Auszug verweist bei Verpackungspflichten auf einzelne DSA-Regeln, belegt aber keine zügige nationale Umsetzung des Digital Services Act.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Auszug verweist bei Verpackungspflichten auf einzelne DSA-Regeln, belegt aber keine zügige nationale Umsetzung des Digital Services Act.",
+            "law_passage_id": "bgbl-1-2026-207-p-0691b2838b7f0308",
+            "law_quote": "Artikel 30 Absatz 1 Buchstabe d der Verordnung (EU) 2022/2065 [...] sind zu beachten.",
+            "criterion_quote": "Die EU-Gesetze über Künstliche Intelligenz (AI Act) und über digitale Dienste (Digital Services Act) müssen zügig in nationales Recht überführt",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2e20231300ae0856",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2ef170d77439f674",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Verpflichtung von Banken, öffentliche oder private Investitionen zu finanzieren.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Verpflichtung von Banken, öffentliche oder private Investitionen zu finanzieren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Finanzierung öffentlicher und privater Investitionen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2ef170d77439f674",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-35b3a5177b395bd3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Verpackungsvorschriften belegen keinen jährlichen Bundesbeitrag von einer Milliarde Euro über 15 Jahre.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Verpackungsvorschriften belegen keinen jährlichen Bundesbeitrag von einer Milliarde Euro über 15 Jahre.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "in den kommenden 15 Jahren mit jeweils einer Milliarde Euro pro Jahr beteiligen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-35b3a5177b395bd3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-36724871725def41",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften richten kein bundesweites Kommunalentschuldungspaket ein.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften richten kein bundesweites Kommunalentschuldungspaket ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es braucht ein bundesweites Kommunalentschuldungspaket.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-36724871725def41",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3c4fd4d1d19c4f58",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften richten keinen Altschuldenfonds für überschuldete Kommunen ein.",
+          "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0aac9481f37ae8df290971cafeebf67e30140d353ff4740a106953134ff625"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften richten keinen Altschuldenfonds für überschuldete Kommunen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "einen Altschuldenfonds für überschuldete Kommunen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-3c4fd4d1d19c4f58",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3d738e621a8e17bb",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften regeln Verpackungsrücknahme und -verwertung, nicht die kostenlose Mitnahme von Kindern im Verkehr.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften regeln Verpackungsrücknahme und -verwertung, nicht die kostenlose Mitnahme von Kindern im Verkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-3d738e621a8e17bb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3e2ea1efc19f9e06",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zum 8. Mai als bundesweitem Feiertag.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zum 8. Mai als bundesweitem Feiertag.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-3e2ea1efc19f9e06",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-43b408b7b5c182eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften regeln Verpackungsrücknahme und -verwertung, nicht die Mitnahme von Fahrrädern im Verkehr.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften regeln Verpackungsrücknahme und -verwertung, nicht die Mitnahme von Fahrrädern im Verkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-43b408b7b5c182eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-49858140397a91d1",
+          "disposition": "missing_context",
+          "rationale": "§ 19 sieht eine Befreiung von der Systembeteiligungspflicht bei kostenloser Rücknahme und Verwertung vor; ohne die in Bezug genommenen Grund- und Finanzierungsregeln lässt sich nicht feststellen, ob und welche Kosten Hersteller tragen.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "§ 19 sieht eine Befreiung von der Systembeteiligungspflicht bei kostenloser Rücknahme und Verwertung vor; ohne die in Bezug genommenen Grund- und Finanzierungsregeln lässt sich nicht feststellen, ob und welche Kosten Hersteller tragen.",
+            "law_passage_id": "bgbl-1-2026-207-p-19f634328a0d1739",
+            "law_quote": "Die Systembeteiligungspflicht eines Herstellers nach § 7 Absatz 1 entfällt, soweit er die von ihm im Bundesgebiet bereitgestellten systembeteiligungspflichtigen Verpackungen ... unentgeltlich zurücknimmt und einer Verwertung ... zuführt.",
+            "criterion_quote": "Hersteller müssen für die Kosten für Rücknahme, Transport, Wiederaufbereitung oder Entsorgung ihrer Produkte verantwortlich sein.",
+            "caveats": [
+              "Der in Bezug genommene § 7 und die näheren Finanzierungsregeln sind nicht mitgeliefert."
+            ],
+            "criterion_id": "linke-2025-ac-49858140397a91d1",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-4f83de3eb6b52710",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Quote für Menschen mit Migrationsgeschichte in der öffentlichen Verwaltung.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Quote für Menschen mit Migrationsgeschichte in der öffentlichen Verwaltung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-4f83de3eb6b52710",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-51a32ebfb4d68029",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften richten kein 100-Milliarden-Euro-Sondervermögen für Bildungseinrichtungen ein.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften richten kein 100-Milliarden-Euro-Sondervermögen für Bildungseinrichtungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-51a32ebfb4d68029",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zur Befristung von Arbeitsverträgen.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zur Befristung von Arbeitsverträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-521dcc30b02d4f62",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-5c1ce3ff9270b86d",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften übertragen dem Europäischen Parlament keine Kontrolle der EZB.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften übertragen dem Europäischen Parlament keine Kontrolle der EZB.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-5c1ce3ff9270b86d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-6d4145faf3dc2358",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften führen keine jährliche öffentliche Steuerlückenschätzung als Zielvorgabe ein.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften führen keine jährliche öffentliche Steuerlückenschätzung als Zielvorgabe ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-6d4145faf3dc2358",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-6d8654827e4619d8",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zur Einstufung von Plattformarbeit als Beschäftigungsverhältnis.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zur Einstufung von Plattformarbeit als Beschäftigungsverhältnis.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-6d8654827e4619d8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-7083bd919ca96a0d",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften führen keine Klimageld-Direktzahlung ein.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften führen keine Klimageld-Direktzahlung ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-7083bd919ca96a0d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-71c50cd9dc2ee1f6",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten Recyclingvorgaben für Verpackungen, aber keine Vorgabe zur Vergärung gesammelter organischer Abfälle vor der Kompostierung.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften enthalten Recyclingvorgaben für Verpackungen, aber keine Vorgabe zur Vergärung gesammelter organischer Abfälle vor der Kompostierung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-71c50cd9dc2ee1f6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-736ecb8dfca649c0",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zu einem gemeinsamen Mobilfunk- und Glasfasernetz.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften enthalten keine Regelung zu einem gemeinsamen Mobilfunk- und Glasfasernetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-736ecb8dfca649c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-776f7822f93bedf9",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften schreiben keine Rückforderung von Fördergeldern bei Kündigungen oder Missachtung ökologischer Standards vor.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die bereitgestellten Vorschriften schreiben keine Rückforderung von Fördergeldern bei Kündigungen oder Missachtung ökologischer Standards vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-776f7822f93bedf9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-84cd37d81fb78beb",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften regeln Verpackungsrücknahme und -verwertung, nicht die kostenlose Mitnahme von Hunden im Verkehr.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften regeln Verpackungsrücknahme und -verwertung, nicht die kostenlose Mitnahme von Hunden im Verkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-84cd37d81fb78beb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-88a91f652850cc79",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften sehen Meldungen zu Eigentums- und Mitgliederverhältnissen von Verpackungssystemen vor, aber kein öffentliches Register der wahren Eigentümer großer Vermögen.",
+          "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4288e0ca9d094a2b7884eb35f5b8265d64e68a2511c0c8a26950f26b17a36eab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften sehen Meldungen zu Eigentums- und Mitgliederverhältnissen von Verpackungssystemen vor, aber kein öffentliches Register der wahren Eigentümer großer Vermögen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-88a91f652850cc79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-8af8757140fb185a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Verpackungen und Verpackungsabfällen enthalten keine Maßnahme zur Verkleinerung von Banken.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zu Verpackungen und Verpackungsabfällen enthalten keine Maßnahme zur Verkleinerung von Banken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-8af8757140fb185a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-92a316040b08506c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zum Verpackungsrecht regeln keinen Abzug von US-Atomwaffen aus Deutschland.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zum Verpackungsrecht regeln keinen Abzug von US-Atomwaffen aus Deutschland.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-92a316040b08506c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9621af994e84f8bd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen sehen keine Befugnisse für Preiswächter oder Eingriffe gegen Preisentwicklungen vor.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen sehen keine Befugnisse für Preiswächter oder Eingriffe gegen Preisentwicklungen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9621af994e84f8bd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-97a77ae466b8d6fb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert nach den vorgelegten Passagen Artikel 3 Absatz 3 GG nicht.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert nach den vorgelegten Passagen Artikel 3 Absatz 3 GG nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-97a77ae466b8d6fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9d62789a1416e753",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Verpackungsvorschriften gewähren Menschen keine Vertretungsbefugnis für Naturbelange vor Gericht.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Verpackungsvorschriften gewähren Menschen keine Vertretungsbefugnis für Naturbelange vor Gericht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9d62789a1416e753",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9dc017133a16feb6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Passagen regeln keine Gewährleistungsdauer für Produkte und richten sie nicht an deren Lebensdauer aus.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Passagen regeln keine Gewährleistungsdauer für Produkte und richten sie nicht an deren Lebensdauer aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9dc017133a16feb6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9edd568a4bb7ad95",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält in den vorgelegten Passagen keine Regelung zu erweiterten Befugnissen von Heilberufen.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält in den vorgelegten Passagen keine Regelung zu erweiterten Befugnissen von Heilberufen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9edd568a4bb7ad95",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a1c0db53cb79ce78",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kennzeichnung wiederverwendbarer Getränkeverpackungen betrifft deren Wiederverwendbarkeit, nicht die Gewährleistungsdauer von Produkten.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Kennzeichnung wiederverwendbarer Getränkeverpackungen betrifft deren Wiederverwendbarkeit, nicht die Gewährleistungsdauer von Produkten.",
+            "law_passage_id": "bgbl-1-2026-207-p-2b86cdaece28d8a7",
+            "law_quote": "die Endabnehmer in der Verkaufsstelle durch deutlich sicht- und lesbare, in unmittelbarer Nähe zu den wiederverwendbaren Getränkeverpackungen befindliche Informationstafeln oder -schilder mit dem Schriftzeichen „MEHRWEG“ auf die Wiederverwendbarkeit dieser Verpackungen hinzuweisen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a1c0db53cb79ce78",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a4ae60f24233c0a0",
+          "disposition": "no_supported_link",
+          "rationale": "Die regelmäßige Aktualitätsprüfung eines Verpackungs-Prüferregisters ist keine Prüfung von Geldanlagen oder Kreditgeschäften durch die BaFin.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die regelmäßige Aktualitätsprüfung eines Verpackungs-Prüferregisters ist keine Prüfung von Geldanlagen oder Kreditgeschäften durch die BaFin.",
+            "law_passage_id": "bgbl-1-2026-207-p-2bc86f4cc3b1340a",
+            "law_quote": "Die Zentrale Stelle Verpackungsregister überprüft das Prüferregister regelmäßig auf Aktualität der enthaltenen Informationen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a4ae60f24233c0a0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften weisen grundlegende Entscheidungen nicht dem Europaparlament zu.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften weisen grundlegende Entscheidungen nicht dem Europaparlament zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a765e010038d60f0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Getränkeverpackungen setzen kein Ziel für den Anteil des Schienengüterverkehrs.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zu Getränkeverpackungen setzen kein Ziel für den Anteil des Schienengüterverkehrs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a765e010038d60f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ab3c77246f56f584",
+          "disposition": "no_supported_link",
+          "rationale": "Die Verpackungsvorschriften begründen keine Pflicht für Handwerksinnungen, Tarifverträge abzuschließen.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Verpackungsvorschriften begründen keine Pflicht für Handwerksinnungen, Tarifverträge abzuschließen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ab3c77246f56f584",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ab5ae7b547d8a5fd",
+          "disposition": "no_supported_link",
+          "rationale": "Die jährliche Ermittlung des Mehrweganteils bei Getränkeverpackungen betrifft keine wiederkehrende Überprüfung landwirtschaftlicher Umwelt- und Verbraucherschutzstandards.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die jährliche Ermittlung des Mehrweganteils bei Getränkeverpackungen betrifft keine wiederkehrende Überprüfung landwirtschaftlicher Umwelt- und Verbraucherschutzstandards.",
+            "law_passage_id": "bgbl-1-2026-207-p-78b3efdd0d83a47d",
+            "law_quote": "Zur Überprüfung der Wirksamkeit der in diesem Gesetz vorgesehenen Förderung der Wiederverwendung von Verpackungen ermittelt das Bundesministerium ... jährlich den Anteil der in wiederverwendbaren Getränkeverpackungen abgefüllten Getränke",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ab5ae7b547d8a5fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b2ac3d8922a3b730",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Grundsteuerreform und untersagen keine Umlage der Grundsteuer auf Mieter*innen.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Grundsteuerreform und untersagen keine Umlage der Grundsteuer auf Mieter*innen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b2ac3d8922a3b730",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b457b40890abd205",
+          "disposition": "no_supported_link",
+          "rationale": "Die Verpackungsvorschriften verpflichten nicht zur Weitergabe oder kostenlosen Abgabe genießbarer Lebensmittel.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Verpackungsvorschriften verpflichten nicht zur Weitergabe oder kostenlosen Abgabe genießbarer Lebensmittel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b457b40890abd205",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b53538dbac6ee0c3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln nicht, wer die Kosten von Sozialleistungen trägt.",
+          "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "47875d41c1195b7594ed5f7e8cd86a46c03316f7b6bf42cae04988e5fcd16b22"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen regeln nicht, wer die Kosten von Sozialleistungen trägt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b53538dbac6ee0c3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b590ee2e6c5a7a57",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen Verpackungen und Herstellerverantwortung, nicht die Veröffentlichung von Ergebnissen amtlicher Lebensmittelkontrollen.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführten Vorschriften betreffen Verpackungen und Herstellerverantwortung, nicht die Veröffentlichung von Ergebnissen amtlicher Lebensmittelkontrollen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Veröffentlichung der Ergebnisse im Internet",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b590ee2e6c5a7a57",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-baa4385727c66c75",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Konformität betreffen Verpackungen; eine Absicherung landwirtschaftlicher Produktionsstandards gegen Agrarimporte ist daraus nicht ersichtlich.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Regelungen zur Konformität betreffen Verpackungen; eine Absicherung landwirtschaftlicher Produktionsstandards gegen Agrarimporte ist daraus nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "vor billigen Importen aus Drittländern, die unseren Standards nicht entsprechen, geschützt",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-baa4385727c66c75",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-baf2fa9930ab65b4",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Kredite oder Förderbedingungen für Beschäftigte zur Betriebsübernahme.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Kredite oder Förderbedingungen für Beschäftigte zur Betriebsübernahme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Beschäftigte sollen einen Kredit erhalten",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-baf2fa9930ab65b4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c3736f5e57b1c7e8",
+          "disposition": "missing_context",
+          "rationale": "Das Verpackungsgesetz ist thematisch einschlägig, aber die vorgelegten Ausschnitte belegen keine Pflicht der Hersteller, die Transportkosten ihrer Produkte zu tragen; dafür fehlt hier der maßgebliche Regelungstext.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.72,
+            "rationale": "Das Verpackungsgesetz ist thematisch einschlägig, aber die vorgelegten Ausschnitte belegen keine Pflicht der Hersteller, die Transportkosten ihrer Produkte zu tragen; dafür fehlt hier der maßgebliche Regelungstext.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Hersteller müssen für die Kosten für Rücknahme, Transport",
+            "caveats": [
+              "Der Gesetzestext ist als unvollständiger Kontext gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-c3736f5e57b1c7e8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d19f35f3ffd87471",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zu Verpackungs- und Entsorgungsaufgaben verpflichten Banken nicht zu Zahlungsverkehrsangeboten.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zu Verpackungs- und Entsorgungsaufgaben verpflichten Banken nicht zu Zahlungsverkehrsangeboten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Angebote im Bereich Zahlungsverkehr",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d19f35f3ffd87471",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d21d9383c71ffe5f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mindestens 15 Euro (spätestens 2026 auf 16 Euro)",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d21d9383c71ffe5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d46f45db22609353",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Verpackungsregelungen setzen keine Lebensmittelpreise fest oder begrenzen sie.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Verpackungsregelungen setzen keine Lebensmittelpreise fest oder begrenzen sie.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Preise … regulieren und begrenzen",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d46f45db22609353",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d657cf382415c8de",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Ausschnitte belegen keine Pflicht der Hersteller, die Kosten für die Rücknahme ihrer Produkte zu tragen; der hierfür maßgebliche Regelungstext fehlt im unvollständigen Kontext.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.72,
+            "rationale": "Die vorgelegten Ausschnitte belegen keine Pflicht der Hersteller, die Kosten für die Rücknahme ihrer Produkte zu tragen; der hierfür maßgebliche Regelungstext fehlt im unvollständigen Kontext.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Hersteller müssen für die Kosten für Rücknahme",
+            "caveats": [
+              "Der Gesetzestext ist als unvollständiger Kontext gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-d657cf382415c8de",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d72f436a0a452bcc",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungen und Abfallbewirtschaftung, nicht den Ausbau eines bundesweiten Radverkehrsnetzes.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungen und Abfallbewirtschaftung, nicht den Ausbau eines bundesweiten Radverkehrsnetzes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ein flächendeckendes bundesweites Radverkehrsnetz",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d72f436a0a452bcc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d9939678dac0c237",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Frist für die Entscheidung über Wohngeldanträge.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Frist für die Entscheidung über Wohngeldanträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "spätestens drei Monate nach Antragstellung beschieden",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d9939678dac0c237",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-de09fa359d584920",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und enthalten keine Regelung zur nuklearen Teilhabe oder zum Abzug von US-Atomwaffen.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Verpackungsrecht und enthalten keine Regelung zur nuklearen Teilhabe oder zum Abzug von US-Atomwaffen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die nukleare Teilhabe der Bundesrepublik beenden",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-de09fa359d584920",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e362061c59585a04",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Steuerprüfungen bei Millionären oder anderen Steuerpflichtigen.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Steuerprüfungen bei Millionären oder anderen Steuerpflichtigen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mehr Prüfungen bei den Superreichen",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e362061c59585a04",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e3a1bec8f8805c1c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Abgabe für Wohnungsleerstände.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Abgabe für Wohnungsleerstände.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Leerstandsabgabe von 10 Euro pro Quadratmeter",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e3a1bec8f8805c1c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e921b7c5fd2cb6db",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zu Ausschreibungen betreffen Verpackungs- und Sammelaufträge; eine Übernahmepflicht für Beschäftigte bei einem Wechsel des Auftragnehmers öffentlicher Dienstleistungen ist nicht ersichtlich.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zu Ausschreibungen betreffen Verpackungs- und Sammelaufträge; eine Übernahmepflicht für Beschäftigte bei einem Wechsel des Auftragnehmers öffentlicher Dienstleistungen ist nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "wenn bei einem öffentlichen Dienstleistungsauftrag der Auftragnehmer wechselt",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e921b7c5fd2cb6db",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-eeb1fd208411d714",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Preis des Deutschlandtickets.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zum Preis des Deutschlandtickets.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "den Preis für das Deutschlandticket wieder auf 9 Euro",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-eeb1fd208411d714",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f103b095073fddcf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keine rechtlichen Voraussetzungen für Mietendeckel zugunsten der genannten Gruppen.",
+          "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6827b35cff626a96a2f5c209a42256e4b4ecbd496daf0d96e32c3d81f8dbac44"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen keine rechtlichen Voraussetzungen für Mietendeckel zugunsten der genannten Gruppen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "rechtssicher Mietendeckel für Kleingewerbe, Handwerk, kulturelle Einrichtungen sowie für soziale und gemeinnützige Träger",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f103b095073fddcf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f11b97dc26d5929a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen betreffen Verpackungsrecht und belegen keine Regelung zum Takt von Verkehrsverbindungen.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen betreffen Verpackungsrecht und belegen keine Regelung zum Takt von Verkehrsverbindungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f11b97dc26d5929a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Karenzzeit für ehemalige Regierungsmitglieder beim Wechsel in Unternehmen.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Karenzzeit für ehemalige Regierungsmitglieder beim Wechsel in Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f6aa5433606f64ce",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Verpflichtung privater Gläubiger zur Beteiligung an einer Entschuldungsinitiative.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Verpflichtung privater Gläubiger zur Beteiligung an einer Entschuldungsinitiative.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f6aa5433606f64ce",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f6bc9e84bedacd7d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Umrüstung aufgegebener Produktionsstätten für den kollektiven Verkehr.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Umrüstung aufgegebener Produktionsstätten für den kollektiven Verkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f6bc9e84bedacd7d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fab3012ed972e9dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Unterstützung des ICC bei der juristischen Aufarbeitung und Verfolgung von Verbrechen.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Unterstützung des ICC bei der juristischen Aufarbeitung und Verfolgung von Verbrechen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fab3012ed972e9dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fcd4d095ca15f160",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen kein Hinwirken auf die Wiederauflage des Vertrags über Mittel- und Kurzstreckenraketen.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen kein Hinwirken auf die Wiederauflage des Vertrags über Mittel- und Kurzstreckenraketen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fcd4d095ca15f160",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-fd61f3244b748218",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen belegen keine Einführung eines bundesweiten Mietendeckels.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Passagen belegen keine Einführung eines bundesweiten Mietendeckels.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-fd61f3244b748218",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ff1483b33eb0abc7",
+          "disposition": "missing_context",
+          "rationale": "Die Überschriften nennen Beschränkungen und Verbote bei Verpackungen, doch die vorgelegten Auszüge zeigen nicht, ob Einwegverpackungen davon verbindlich erfasst sind.",
+          "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a96a26c1e1a18da6c9cb493048dc5123c537115313c398d6d0c049d7e5cfc214"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Überschriften nennen Beschränkungen und Verbote bei Verpackungen, doch die vorgelegten Auszüge zeigen nicht, ob Einwegverpackungen davon verbindlich erfasst sind.",
+            "law_passage_id": "bgbl-1-2026-207-p-fc7015b0486ff380",
+            "law_quote": "§ 12 Beschränkungen der Bereitstellung bestimmter Verpackungen",
+            "criterion_quote": "weitreichende Verbote bei Einwegverpackungen",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ff1483b33eb0abc7",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-210a",
@@ -116270,45 +118910,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4865,
-    "cache_hits": 74,
-    "subdivision_cache_hits": 3,
+    "calls": 4959,
+    "cache_hits": 77,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.434295,
-    "reported_cost_calls": 4493,
+    "reported_cost_usd": 24.522328,
+    "reported_cost_calls": 4537,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.218879,
-    "unknown_cost_calls": 372,
+    "unknown_cost_reserved_usd": 2.496942,
+    "unknown_cost_calls": 422,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 26.653173,
-    "prompt_tokens": 50028952,
-    "completion_tokens": 7919983,
+    "budget_exposure_usd": 27.01927,
+    "prompt_tokens": 50569606,
+    "completion_tokens": 8022924,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 190,
-        "reported_cost_usd": 4.638897499999999,
+        "calls": 191,
+        "reported_cost_usd": 4.672009249999999,
         "unknown_cost_reserved_usd": 1.0130785099704553e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 73,
-        "reported_cost_usd": 0.9426190000000001,
-        "unknown_cost_reserved_usd": 1.0408340855860843e-16,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 74,
+        "reported_cost_usd": 0.9512682500000001,
+        "unknown_cost_reserved_usd": 1.3183898417423734e-16,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1705,
-        "reported_cost_usd": 1.9683081000000011,
-        "unknown_cost_reserved_usd": 1.2344030000000004,
-        "pending_reserved_usd": 1.6479873021779667e-17
+        "calls": 1797,
+        "reported_cost_usd": 2.014580520000001,
+        "unknown_cost_reserved_usd": 1.5124662000000004,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
