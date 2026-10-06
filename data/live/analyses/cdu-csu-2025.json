@@ -166647,7 +166647,7 @@
     {
       "law_id": "bgbl-2-2026-61",
       "analysis_sha256": "7763ba07178b4a16c3f48ef1179f5d346a41b140338c8895928c553f9638f307",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-1a012d378b8305ae",
@@ -166667,6 +166667,60 @@
       ],
       "omitted_count": 951,
       "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-1a012d378b8305ae",
+          "disposition": "no_supported_link",
+          "rationale": "Das Abkommen betrifft grenzüberschreitende Luftsicherheitsmaßnahmen, nicht die Entsendung von Erwerbstätigen in das EU-Ausland oder deren Meldeverfahren.",
+          "input_sha256": "16632e4676038d4c8736e450f669472b506550c996d189f7f7c6c1c07426efff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16632e4676038d4c8736e450f669472b506550c996d189f7f7c6c1c07426efff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Abkommen betrifft grenzüberschreitende Luftsicherheitsmaßnahmen, nicht die Entsendung von Erwerbstätigen in das EU-Ausland oder deren Meldeverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1a012d378b8305ae",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Zusammenarbeit im Luftraum und enthält keine Änderungen des gerichtlichen Instanzenwegs.",
+          "input_sha256": "16632e4676038d4c8736e450f669472b506550c996d189f7f7c6c1c07426efff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16632e4676038d4c8736e450f669472b506550c996d189f7f7c6c1c07426efff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Zusammenarbeit im Luftraum und enthält keine Änderungen des gerichtlichen Instanzenwegs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
           "disposition": "no_supported_link",
@@ -166996,7 +167050,7 @@
     {
       "law_id": "bgbl-2-2026-62",
       "analysis_sha256": "6d87e324b9c5c50528f0703aea5be9bb6998946a8c1ad22bb7782d127abe9215",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-04af751d9a6c5e80",
@@ -168059,6 +168113,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6de4457cf788c36f",
+          "disposition": "proposed_link",
+          "rationale": "Das gebilligte Übereinkommen verlangt vor der Genehmigung bestimmter Tätigkeiten außerhalb nationaler Hoheitsbefugnisse eine Prüfung ihrer Auswirkungen auf die Meeresumwelt. Diese Schutzvorkehrung unterstützt den Schutz mariner Arten und Lebensräume teilweise; wann das Übereinkommen für Deutschland in Kraft tritt, geht aus den Auszügen nicht hervor.",
+          "input_sha256": "8bb944186c4b4323a95592ab1cf2a1d59463a7d8f2d3ede9ce87b8f58deaaa9d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d4b1cc7f1a38e98caa262d8a351e08452d9ea3a2d99380b985a2e3f0941309f"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8bb944186c4b4323a95592ab1cf2a1d59463a7d8f2d3ede9ce87b8f58deaaa9d"
+            }
+          ],
+          "impact_id": "impact-e9261e9caabf953c",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.77,
+            "rationale": "Das gebilligte Übereinkommen verlangt vor der Genehmigung bestimmter Tätigkeiten außerhalb nationaler Hoheitsbefugnisse eine Prüfung ihrer Auswirkungen auf die Meeresumwelt. Diese Schutzvorkehrung unterstützt den Schutz mariner Arten und Lebensräume teilweise; wann das Übereinkommen für Deutschland in Kraft tritt, geht aus den Auszügen nicht hervor.",
+            "law_passage_id": "bgbl-2-2026-62-p-8b223e1227c6bf87",
+            "law_quote": "(1) Die Vertragsparteien stellen sicher,\ndass die Auswirkungen auf die Meeresumwelt, die geplante, ihren Hoheitsbefugnissen\noder ihrer Kontrolle unterstehende Tätig keiten in Gebieten außerhalb nationaler\nHoheitsbefugnisse möglicherweise haben\nwerden, vor der Genehmigung der Tätig keiten entsprechend diesem Teil geprüft\nwerden.",
+            "criterion_quote": "Wir schützen bedrohte Arten und deren Lebensräume.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6de4457cf788c36f",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -169811,45 +169897,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7162,
+    "calls": 7231,
     "cache_hits": 110,
-    "subdivision_cache_hits": 2,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 30.039884,
-    "reported_cost_calls": 6527,
+    "reported_cost_usd": 30.212919,
+    "reported_cost_calls": 6596,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.672952,
     "unknown_cost_calls": 635,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 33.712836,
-    "prompt_tokens": 75007120,
-    "completion_tokens": 12805270,
+    "budget_exposure_usd": 33.885871,
+    "prompt_tokens": 75864296,
+    "completion_tokens": 12967838,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 284,
-        "reported_cost_usd": 7.047934599999999,
+        "calls": 286,
+        "reported_cost_usd": 7.115460599999999,
         "unknown_cost_reserved_usd": 1.2906342661267445e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 125,
-        "reported_cost_usd": 1.6148075000000002,
+        "calls": 127,
+        "reported_cost_usd": 1.6320610000000002,
         "unknown_cost_reserved_usd": 1.734723475976807e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 3855,
-        "reported_cost_usd": 4.471388529999998,
+        "calls": 3920,
+        "reported_cost_usd": 4.5596444824999995,
         "unknown_cost_reserved_usd": 2.688476350000003,
-        "pending_reserved_usd": 1.8214596497756474e-17
+        "pending_reserved_usd": 6.938893903907228e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
