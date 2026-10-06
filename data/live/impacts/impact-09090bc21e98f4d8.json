@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "id": "impact-09090bc21e98f4d8",
+  "dataset": "live",
+  "criterion_id": "spd-2025-ac-025194af967aeca7",
+  "law_id": "bgbl-1-2026-6",
+  "score": 1,
+  "confidence": 0.98,
+  "rationale": "Bei Beihilfeanträgen gilt eine beantragte Aufwendung nach vier Wochen ohne Entscheidung als erstattungsfähig. Ausnahmen und eine spätere Überprüfung sind vorgesehen; die Fiktion betrifft nicht Anträge allgemein.",
+  "law_passage_id": "bgbl-1-2026-6-p-eeda2aaf6d670695",
+  "law_quote": "(1) Hat die für die Gewährung der Beihilfe zuständige Stelle nicht innerhalb von vier Wochen nach Eingang\ndes Beihilfeantrags über den Antrag entschieden, so gilt die beantragte Aufwendung mit Ablauf dieser Frist als\nerstattungsfähig. Die beantragte Aufwendung gilt nicht als erstattungsfähig,",
+  "criterion_quote": "Wir führen eine **Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind**, wenn die\nBehörde nicht innerhalb einer gesetzten Frist reagiert.",
+  "caveats": [],
+  "verification": "passed",
+  "evaluation": {
+    "status": "accepted",
+    "model": "openai/gpt-6-sol",
+    "method": "sol-final-v1",
+    "input_sha256": "eb7dee2ef6b045d10f3e8e9c1a635c1f985ed03af223377320fe290aabd593f5",
+    "decided_at": "2026-10-06",
+    "previous_sha256": null
+  },
+  "review": {
+    "status": "proposed",
+    "reviewer": null,
+    "reviewed_at": null,
+    "note": ""
+  },
+  "generation": [
+    {
+      "model": "openai/gpt-6-luna",
+      "prompt_version": "politrace-evidence-v3",
+      "input_sha256": "9c111b5f0eefde6dccfab756f7a9d9d5ba43ff23c6c935acf04b81a3f591b7e7"
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "prompt_version": "politrace-evidence-v3",
+      "input_sha256": "eb7dee2ef6b045d10f3e8e9c1a635c1f985ed03af223377320fe290aabd593f5"
+    }
+  ]
+}

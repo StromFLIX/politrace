@@ -124496,7 +124496,7 @@
     {
       "law_id": "bgbl-1-2026-47",
       "analysis_sha256": "a9253b5653a0c603dae99bb34684f8ca03898fce05ad55584844dc84f15a99a1",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0604f581e0633eec",
@@ -124645,6 +124645,38 @@
             ],
             "criterion_id": "ssw-2025-ac-12bdb9cfe08e6fa0",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "proposed_link",
+          "rationale": "Die Auskunftsbefugnis des Bundesamtes zur Aufdeckung ungenehmigten Güterkraftverkehrs setzt tatsächliche Anhaltspunkte voraus und begrenzt die Datenerhebung auf das zur Identifizierung des Auftraggebers Erforderliche. Das unterstützt die geforderte Beschränkung eines Dateneingriffs teilweise; dass kein anderes geeignetes Mittel besteht, verlangt die Regelung nicht.",
+          "input_sha256": "402cb809b2cb9d87d99804d2b25567dd89b5e6cd075d7755f063f0b0f01fe358",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f135726505b927183de5bfbce715aa1064a0986ca12b3d5d72a9c122e6d75e6f"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "402cb809b2cb9d87d99804d2b25567dd89b5e6cd075d7755f063f0b0f01fe358"
+            }
+          ],
+          "impact_id": "impact-88d4937434f51793",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.79,
+            "rationale": "Die Auskunftsbefugnis des Bundesamtes zur Aufdeckung ungenehmigten Güterkraftverkehrs setzt tatsächliche Anhaltspunkte voraus und begrenzt die Datenerhebung auf das zur Identifizierung des Auftraggebers Erforderliche. Das unterstützt die geforderte Beschränkung eines Dateneingriffs teilweise; dass kein anderes geeignetes Mittel besteht, verlangt die Regelung nicht.",
+            "law_passage_id": "bgbl-1-2026-47-p-88ebeb9cece65114",
+            "law_quote": "tatsächliche Anhaltspunkte für ungenehmigten Güterkraftverkehr vorliegen und die zu erhebenden\nDaten zur Identifizierung des Auftraggebers erforderlich sind, um ungenehmigten Güterkraftverkehr\naufzudecken.",
+            "criterion_quote": "wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes\ngeeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu\nerreichen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -126142,7 +126174,7 @@
     {
       "law_id": "bgbl-1-2026-6",
       "analysis_sha256": "ba9491809a273d479a4226a5299d63724bf90f8cc292e4fe730d84cc77f3b890",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-169e5c0e8666dd18",
@@ -126355,6 +126387,38 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-479323e0651e0065",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz erlaubt der zuständigen Stelle, gespeicherte personenbezogene Daten unter den genannten Voraussetzungen für disziplinarische und dienstrechtliche Zwecke zu übermitteln. Das unterstützt die behördliche Datenweitergabe in einem begrenzten Bereich.",
+          "input_sha256": "eb7dee2ef6b045d10f3e8e9c1a635c1f985ed03af223377320fe290aabd593f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6da6498ef00af4a2010d3cc488f2f602b41fc875f74b7d3aa79aa58f95cdea4a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "eb7dee2ef6b045d10f3e8e9c1a635c1f985ed03af223377320fe290aabd593f5"
+            }
+          ],
+          "impact_id": "impact-28fe11baf62a3f62",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.86,
+            "rationale": "Das Gesetz erlaubt der zuständigen Stelle, gespeicherte personenbezogene Daten unter den genannten Voraussetzungen für disziplinarische und dienstrechtliche Zwecke zu übermitteln. Das unterstützt die behördliche Datenweitergabe in einem begrenzten Bereich.",
+            "law_passage_id": "bgbl-1-2026-6-p-09e5ec19f31556cb",
+            "law_quote": "„Die zuständige Stelle darf die gespeicherten personenbezogenen Daten darüber hinaus für Zwecke der\ndisziplinarrechtlichen Verfolgung sowie dienst- oder arbeitsrechtlicher Maßnahmen nutzen und\nübermitteln, wenn dies zu dem mit der Überprüfung verfolgten Zweck oder zur Verfolgung von\nkonkreten Verstößen gegen die Verpflichtung zur Verfassungstreue erforderlich ist.",
+            "criterion_quote": "und personenbezogene Daten besser zwischen Behörden\nkommuniziert werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -126608,7 +126672,7 @@
     {
       "law_id": "bgbl-1-2026-60",
       "analysis_sha256": "f0a2b66e1791a2c3e07b99586f295e30c77e8c08598078f182a1e06425e9b648",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0604f581e0633eec",
@@ -126643,12 +126707,835 @@
         "ssw-2025-ac-ee967859c2cfe1cb"
       ],
       "omitted_count": 981,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0604f581e0633eec",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Tierarzneimittel und Tiergesundheit; eine Überarbeitung von Richtlinien für trans*Personen in der gesetzlichen Krankenversicherung ist nicht geregelt.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen Tierarzneimittel und Tiergesundheit; eine Überarbeitung von Richtlinien für trans*Personen in der gesetzlichen Krankenversicherung ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen die Überarbeitung der geltenden Richtlinien für gesetzlich krankenversicherte trans*Personen im Sinne einer bedürfnisorientierten Gesundheitsversorgung.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-0604f581e0633eec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen belegen keine Regeln zu Einschränkungen von Freiheits- und Persönlichkeitsrechten zugunsten von Sicherheitsbehörden.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen belegen keine Regeln zu Einschränkungen von Freiheits- und Persönlichkeitsrechten zugunsten von Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bürgerliche Freiheits- und Persönlichkeitsrechte dürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden eingeschränkt werden, wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes geeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu erreichen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten tiergesundheitsrechtlichen Änderungen betreffen nicht das Wahlalter bei Bundestagswahlen.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten tiergesundheitsrechtlichen Änderungen betreffen nicht das Wahlalter bei Bundestagswahlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jugendliche ab 16 Jahren können eine reife Entscheidung treffen, darum sollen sie das Recht haben, auch bei Bundestagswahlen mitzuentscheiden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-185f373d35a4cd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln keine Endlagersuche oder geologische Kriterien für Endlagerstandorte.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen regeln keine Endlagersuche oder geologische Kriterien für Endlagerstandorte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen eine Endlagersuche nach wissenschaftlichen Kriterien, die nur solche Standorte in Betracht zieht, die entsprechend geeignete geologische Voraussetzungen bieten.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-185f373d35a4cd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten tiergesundheitsrechtlichen Änderungen enthalten keine Mindestmengenregelung für den im Kriterium gemeinten Zweck.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten tiergesundheitsrechtlichen Änderungen enthalten keine Mindestmengenregelung für den im Kriterium gemeinten Zweck.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "es darf dafür keine Mindestmengenregelung geben.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zu Grenzen der Meinungs- oder Pressefreiheit.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zu Grenzen der Meinungs- oder Pressefreiheit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Recht auf freie Meinungsäußerung und die Pressefreiheit dürfen nur dort ihre Grenzen finden, wo andere Menschen dadurch in ihren Rechten beeinträchtigt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln nicht, ob die Erhebung, Verarbeitung oder Nutzung persönlicher Daten bei öffentlichen Aufgaben privatisiert wird.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen regeln nicht, ob die Erhebung, Verarbeitung oder Nutzung persönlicher Daten bei öffentlichen Aufgaben privatisiert wird.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen, dass die Erhebung, Verarbeitung und Nutzung persönlicher Daten im Rahmen öffentlicher Aufgaben nicht privatisiert wird.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen schaffen keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen des Bundes.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen schaffen keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen des Bundes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In Zukunft soll eine externe Stelle alle Gesetzesvorhaben und Verordnungen des Bundes auf ihre Auswirkungen auf Jugendliche überprüfen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen nicht Artikel 6 des Grundgesetzes und verankern dort keine Kinderrechte.",
+          "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "11eaa149a55bffe740f6f32d9f83cfd73eca001fee11ce4167be209eb0cc661e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen nicht Artikel 6 des Grundgesetzes und verankern dort keine Kinderrechte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen Kinderrechte im Grundgesetz verankern und fordern eine eigenständige Formulierung unter Artikel 6 des Grundgesetzes.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6131edd61e344217",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Tiergesundheitsrecht; eine Ausstattung von Behörden für die Terrorismusbekämpfung ist darin nicht geregelt.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen Tiergesundheitsrecht; eine Ausstattung von Behörden für die Terrorismusbekämpfung ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die zuständigen Behörden mit dem benötigten Personal und den erforderlichen technischen Geräten auszustatten",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6131edd61e344217",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tiergesundheits- und Tierarzneimittelrecht, nicht Sperrklauseln oder Europawahlen.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Tiergesundheits- und Tierarzneimittelrecht, nicht Sperrklauseln oder Europawahlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "bei der Wahl zum Europäischen Parlament keine Sperrklausel gilt",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-784fc4eb8367a422",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Unterstützung kommunaler Baukultur oder zu Architekturberatungen.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Unterstützung kommunaler Baukultur oder zu Architekturberatungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der Bund muss die Kommunen ausreichend unterstützen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-784fc4eb8367a422",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-79f9e36aaf110355",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln Tiergesundheit und Tierarzneimittel, nicht den Ausbau von Schnellladestationen.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen regeln Tiergesundheit und Tierarzneimittel, nicht den Ausbau von Schnellladestationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ausbau von Schnellladern für PKW und LKW",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-79f9e36aaf110355",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-861b8a60c3bbeaf9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zu Mobilitätsangeboten für Dörfer ohne Bahnanschluss.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zu Mobilitätsangeboten für Dörfer ohne Bahnanschluss.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ihnen Mobilitätsangebote machen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-861b8a60c3bbeaf9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8cd42a507f8b921b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tiergesundheitsrecht; wiederholte Mahnungen zur EU-Grundrechtecharta werden darin nicht geregelt.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Tiergesundheitsrecht; wiederholte Mahnungen zur EU-Grundrechtecharta werden darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Bundesregierung muss die Einhaltung der EU-Grundrechtecharta immer wieder dort anmahnen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8cd42a507f8b921b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Vorschriften zur Speicherung personenbezogener Daten oder zu Richtervorbehalten.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Vorschriften zur Speicherung personenbezogener Daten oder zu Richtervorbehalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "nur mit Richtervorbehalt und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen deutsches Tiergesundheits- und Tierarzneimittelrecht, nicht die Regeln der Europäischen Bürgerinitiative.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen deutsches Tiergesundheits- und Tierarzneimittelrecht, nicht die Regeln der Europäischen Bürgerinitiative.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bei erfolgreichen Initiativen muss die EU-Kommission verpflichtet sein, einen Gesetzesentwurf vorzulegen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-aecc1a0f4789c2e7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Markenrecht oder zum Schutz von Begriffen aus Minderheitensprachen.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Markenrecht oder zum Schutz von Begriffen aus Minderheitensprachen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "kein kommerzieller Markenschutz für in den jeweiligen Regional- und Minderheitensprachen gebräuchliche Begriffe",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-aecc1a0f4789c2e7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b024297ef0bd36dc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tiergesundheitsrecht; Maßnahmen der EU für bezahlbaren Wohnraum sind darin nicht geregelt.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Tiergesundheitsrecht; Maßnahmen der EU für bezahlbaren Wohnraum sind darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die EU ihre Mitgliedstaaten bei der Sicherstellung von bezahlbarem Wohnraum unterstützt",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-b024297ef0bd36dc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b07c97d8c66977d6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Anerkennung von Pflegeausbildungen in der EU.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Anerkennung von Pflegeausbildungen in der EU.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "gegenseitige Anerkennung von Pflegeausbildungen innerhalb der EU",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-b07c97d8c66977d6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b0e5fe694aa0e327",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten weder Markenrechtsregeln noch ein erkennbares Hinwirken auf eine Änderung auf EU-Ebene.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten weder Markenrechtsregeln noch ein erkennbares Hinwirken auf eine Änderung auf EU-Ebene.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "auf EU-Ebene dafür einsetzen, die Regelungen im Markenrecht so zu verschärfen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-b0e5fe694aa0e327",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b57cd296ec46794f",
+          "disposition": "missing_context",
+          "rationale": "Die Fragmente erwähnen Vorschriften über das Verbringen lebender Tiere; ohne den vollständigen Regelungszusammenhang ist nicht erkennbar, ob dadurch Transporte national oder international neu begrenzt werden.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Die Fragmente erwähnen Vorschriften über das Verbringen lebender Tiere; ohne den vollständigen Regelungszusammenhang ist nicht erkennbar, ob dadurch Transporte national oder international neu begrenzt werden.",
+            "law_passage_id": "bgbl-1-2026-60-p-df2f5acdada9af75",
+            "law_quote": "lebende Tiere gehalten, behandelt oder verbracht werden",
+            "criterion_quote": "Transport von lebenden Tieren national und international begrenzen",
+            "caveats": [
+              "Der vollständige Zusammenhang der genannten Verordnungsermächtigung und ihre Anwendbarkeit sind in den vorgelegten Auszügen nicht enthalten."
+            ],
+            "criterion_id": "ssw-2025-ac-b57cd296ec46794f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-c2286d0679f58e26",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Tiergesundheits- und Tierarzneimittelrecht, nicht Transparenz bei staatlichen Beschaffungen, Subventionen oder Förderungen.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen Tiergesundheits- und Tierarzneimittelrecht, nicht Transparenz bei staatlichen Beschaffungen, Subventionen oder Förderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "bei Beschaffungen, Subventionen und Förderungen muss das staatliche Handeln nachvollziehbar sein",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-c2286d0679f58e26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-cb281c552c4eac51",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Finanzierung von Krankenhausinvestitionen durch Bundesmittel.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Finanzierung von Krankenhausinvestitionen durch Bundesmittel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "der Bund den Ländern und Kommunen ausreichende Mittel zur Verfügung stellt",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-cb281c552c4eac51",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e22d0ff8510c2f23",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln Tierarzneimittel und tierärztliche Sachverhalte, nicht die Beurteilung erforderlicher Behandlungen durch Therapeut:innen.",
+          "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93ab44feb26db9ea9fdd8bde0922b734af07fb969451d5a77b2ee58e436334d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln Tierarzneimittel und tierärztliche Sachverhalte, nicht die Beurteilung erforderlicher Behandlungen durch Therapeut:innen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die konkrete Beurteilung der erforderlichen und zielführenden Behandlung soll durch die Therapeut:innen im vorhandenen Kostenrahmen erfolgen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-e22d0ff8510c2f23",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e659aa37c222a4e3",
+          "disposition": "missing_context",
+          "rationale": "Der bereitgestellte, ausdrücklich unvollständige Gesetzeskontext belegt keine Ergänzung von Artikel 3; ob weitere, nicht vorgelegte Teile dies regeln, ist nicht feststellbar.",
+          "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der bereitgestellte, ausdrücklich unvollständige Gesetzeskontext belegt keine Ergänzung von Artikel 3; ob weitere, nicht vorgelegte Teile dies regeln, ist nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Artikel 3 des Grundgesetzes um das Merkmal „sexuelle Identität“ ergänzen",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-e659aa37c222a4e3",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-eadce8b32b658db2",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zu urheberrechtlichen Lizenzgebühren; wegen des unvollständigen Gesetzeskontexts ist eine abschließende Bewertung nicht möglich.",
+          "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zu urheberrechtlichen Lizenzgebühren; wegen des unvollständigen Gesetzeskontexts ist eine abschließende Bewertung nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Lizenzgebühren für die Verwendung urheberrechtlich geschützter Werke sollen nicht pauschal, sondern nach Umsatz gestaffelt erhoben werden",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-eadce8b32b658db2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Passagen belegen kein Verbandsklagerecht; ob nicht vorgelegte Teile des Gesetzes eine solche Regelung enthalten, bleibt offen.",
+          "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen belegen kein Verbandsklagerecht; ob nicht vorgelegte Teile des Gesetzes eine solche Regelung enthalten, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ein Verbandsklagerecht für nationale Minderheiten und Volksgruppen auf Bundesebene einführen",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ee348c0e7919cc74",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Passagen enthalten keine dokumentierte Untersuchung zur Bewältigung von Klimawandel und Biodiversitätskrise in der Landwirtschaft; entsprechende Ausarbeitungen außerhalb des Auszugs sind nicht belegt.",
+          "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine dokumentierte Untersuchung zur Bewältigung von Klimawandel und Biodiversitätskrise in der Landwirtschaft; entsprechende Ausarbeitungen außerhalb des Auszugs sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "zu klären, wie der Klimawandel und die Biodiversitätskrise bewältigt werden können",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-ee348c0e7919cc74",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Passagen belegen keine grenzüberschreitende Nutzung wirtschaftlicher Bundesförderprogramme bis zu 20 Prozent; der unvollständige Gesetzeskontext lässt keine abschließende Feststellung zu.",
+          "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3c85b6fa3dabee3b6ea1a5b5441c877ea6de80729e0610626af2951ca9e6416b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen belegen keine grenzüberschreitende Nutzung wirtschaftlicher Bundesförderprogramme bis zu 20 Prozent; der unvollständige Gesetzeskontext lässt keine abschließende Feststellung zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "wirtschaftliche Bundesförderprogramme bis zu einem Umfang von 20 % auch grenzüberschreitend eingesetzt werden dürfen",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-64",
       "analysis_sha256": "d24a0bb14fc295560430f41e54c2ab9fdfb53d5a9896060dc6a6871cb47b9012",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-15c98fa54f1ee2f0",
@@ -126669,12 +127556,459 @@
         "ssw-2025-ac-edc6634fc5ab754f"
       ],
       "omitted_count": 995,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verleiht dem Europäischen Parlament kein direktes Gesetzesinitiativrecht.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verleiht dem Europäischen Parlament kein direktes Gesetzesinitiativrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "direktes Gesetzesinitiativrecht für das Europäische Parlament",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz schränkt das Fernmeldegeheimnis für elektronische Beweismittel ein; ob die zugrunde liegenden Voraussetzungen Erforderlichkeit, Eignung und Alternativlosigkeit sichern, lässt sich ohne den maßgeblichen EU-Rechtstext nicht beurteilen.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Das Gesetz schränkt das Fernmeldegeheimnis für elektronische Beweismittel ein; ob die zugrunde liegenden Voraussetzungen Erforderlichkeit, Eignung und Alternativlosigkeit sichern, lässt sich ohne den maßgeblichen EU-Rechtstext nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-64-p-7bdcc21062ee2479",
+            "law_quote": "Das Fernmeldegeheimnis (Artikel 10 Absatz 1 des Grundgesetzes) wird nach Maßgabe dieses Gesetzes eingeschränkt.",
+            "criterion_quote": "wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes geeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu erreichen.",
+            "caveats": [
+              "Die Voraussetzungen der zugrunde liegenden Verordnung (EU) 2023/1543 sind in den vorliegenden Auszügen nicht vollständig enthalten."
+            ],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Wahlalter bei Bundestagswahlen nicht.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Wahlalter bei Bundestagswahlen nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jugendliche ab 16 Jahren können eine reife Entscheidung treffen, darum sollen sie das Recht haben, auch bei Bundestagswahlen mitzuentscheiden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2206b4e69fea474b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Vergütung schulischer Ausbildungen.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Vergütung schulischer Ausbildungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine bundesweit einheitliche Vergütung für schulische Ausbildungen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2206b4e69fea474b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3baa0dfb6f357dd8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Sanktionen der EU gegen Staaten wegen Verletzungen von Minderheitenrechten.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Sanktionen der EU gegen Staaten wegen Verletzungen von Minderheitenrechten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Nationalstaaten, die ihre nationalen Minderheiten und Volksgruppe diskriminieren und ihre Rechte verletzen, müssen sanktioniert werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3baa0dfb6f357dd8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz erlaubt Diensteanbietern die Verarbeitung personenbezogener Daten zur Erfüllung von Herausgabe- und Sicherungsanordnungen; ob dies eine Privatisierung von Tätigkeiten im Rahmen öffentlicher Aufgaben im Sinne des Kriteriums ist, geht aus den Auszügen nicht hervor.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Das Gesetz erlaubt Diensteanbietern die Verarbeitung personenbezogener Daten zur Erfüllung von Herausgabe- und Sicherungsanordnungen; ob dies eine Privatisierung von Tätigkeiten im Rahmen öffentlicher Aufgaben im Sinne des Kriteriums ist, geht aus den Auszügen nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-64-p-db46c69bbe702d5e",
+            "law_quote": "Anbieter von Telekommunikationsdiensten und die von ihnen gemäß § 3 Absatz 1 bis 3 des ElektronischeBeweismittel-Umsetzungs-und-Durchführungsgesetzes eingerichteten Adressaten dürfen personenbezogene Daten verarbeiten, soweit dies zur Erfüllung einer Europäischen Herausgabeanordnung oder einer Europäischen Sicherungsanordnungen gemäß der Verordnung (EU) 2023/1543 in der Fassung vom 12. Juli 2023 erforderlich ist.",
+            "criterion_quote": "Erhebung, Verarbeitung und Nutzung persönlicher Daten im Rahmen öffentlicher Aufgaben nicht privatisiert wird.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen des Bundes ein.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keinen verbindlichen Jugendcheck für Gesetzesvorhaben und Verordnungen des Bundes ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine externe Stelle alle Gesetzesvorhaben und Verordnungen des Bundes auf ihre Auswirkungen auf Jugendliche überprüfen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 6 des Grundgesetzes nicht und verankert keine eigenständigen Kinderrechte.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 6 des Grundgesetzes nicht und verankert keine eigenständigen Kinderrechte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kinderrechte im Grundgesetz verankern und fordern eine eigenständige Formulierung unter Artikel 6 des Grundgesetzes",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Sperrklauseln bei Europawahlen.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Sperrklauseln bei Europawahlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "für politische Vertretungen von nationalen Minderheiten bei der Wahl zum Europäischen Parlament keine Sperrklausel gilt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+          "disposition": "missing_context",
+          "rationale": "Das Bundesamt für Justiz soll mit zentralen Behörden anderer EU-Staaten kooperieren und Informationen austauschen; die Auszüge belegen jedoch nicht, dass dabei personenbezogene Daten zwischen Behörden übermittelt werden.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.87,
+            "rationale": "Das Bundesamt für Justiz soll mit zentralen Behörden anderer EU-Staaten kooperieren und Informationen austauschen; die Auszüge belegen jedoch nicht, dass dabei personenbezogene Daten zwischen Behörden übermittelt werden.",
+            "law_passage_id": "bgbl-1-2026-64-p-ffbc4d9de1d40bbc",
+            "law_quote": "Das Bundesamt für Justiz arbeitet zur Erfüllung seiner Aufgabe gemäß Absatz 1 mit den zentralen Behörden anderer Mitgliedstaaten der Europäischen Union und, soweit erforderlich, mit der Europäischen Kommission zusammen und stimmt sich mit diesen Akteuren ab. Dabei unterstützt das Bundesamt für Justiz die zentralen Behörden der anderen Mitgliedstaaten der Europäischen Union durch alle geeigneten Informationen und Amtshilfe.",
+            "criterion_quote": "personenbezogene Daten besser zwischen Behörden kommuniziert werden.",
+            "caveats": [
+              "Die vorliegenden Auszüge enthalten nicht den vollständigen Regelungsgehalt der zugrunde liegenden EU-Verordnung."
+            ],
+            "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-860df1cbb894e5ed",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft Verfahrensregeln für elektronische Beweismittel, weist aber keine zusätzlichen Stellen an Gerichten aus.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft Verfahrensregeln für elektronische Beweismittel, weist aber keine zusätzlichen Stellen an Gerichten aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mehr Personal an den Gerichten",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-860df1cbb894e5ed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz sieht die Sicherung angeforderter Daten vor; ob hierfür stets Richtervorbehalt und konkreter Anhaltspunkt gelten, lässt sich ohne die vollständigen Voraussetzungen der zugrunde liegenden EU-Verordnung nicht feststellen.",
+          "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a126e3883ffb4957be411130a100a0ed5fce89536b2748e7d8e79a6b1a667407"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.87,
+            "rationale": "Das Gesetz sieht die Sicherung angeforderter Daten vor; ob hierfür stets Richtervorbehalt und konkreter Anhaltspunkt gelten, lässt sich ohne die vollständigen Voraussetzungen der zugrunde liegenden EU-Verordnung nicht feststellen.",
+            "law_passage_id": "bgbl-1-2026-64-p-5d6f2af8e1c16f10",
+            "law_quote": "entgegen Artikel 11 Absatz 1 Satz 1 in Verbindung mit Satz 2 angeforderte Daten nicht oder nicht rechtzeitig oder nicht für die vorgeschriebene Dauer sichert",
+            "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt vorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+            "caveats": [
+              "Die maßgeblichen Voraussetzungen des Artikels 11 der Verordnung (EU) 2023/1543 sind in den vorliegenden Auszügen nicht wiedergegeben."
+            ],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-a65a516c0cd393e9",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz regelt grenzüberschreitende Verfahren zu elektronischen Beweismitteln, belegt aber keine Erhöhung von Bundesinvestitionen oder Personal; Angaben zum Investitionsstand fehlen.",
+          "input_sha256": "44c7c27ebe80b2bdb35210e44eaad016554e97140ab1f2f70e62c63430c60f83",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "44c7c27ebe80b2bdb35210e44eaad016554e97140ab1f2f70e62c63430c60f83"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz regelt grenzüberschreitende Verfahren zu elektronischen Beweismitteln, belegt aber keine Erhöhung von Bundesinvestitionen oder Personal; Angaben zum Investitionsstand fehlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der Bund muss hier mehr investieren und für eine zukunftsfähige Ausstattung der Justiz sorgen.",
+            "caveats": [
+              "Zum Vergleich mit dem Ausgangsstand fehlen Haushalts- oder Investitionsdaten."
+            ],
+            "criterion_id": "ssw-2025-ac-a65a516c0cd393e9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-aecc1a0f4789c2e7",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Vorschriften betreffen elektronische Beweismittel und Telekommunikationsrecht; eine Änderung des Markenrechts ist im Teilkontext nicht belegt.",
+          "input_sha256": "44c7c27ebe80b2bdb35210e44eaad016554e97140ab1f2f70e62c63430c60f83",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "44c7c27ebe80b2bdb35210e44eaad016554e97140ab1f2f70e62c63430c60f83"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die vorgelegten Vorschriften betreffen elektronische Beweismittel und Telekommunikationsrecht; eine Änderung des Markenrechts ist im Teilkontext nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "kein kommerzieller Markenschutz für in den jeweiligen Regional- und Minderheitensprachen gebräuchliche Begriffe",
+            "caveats": [
+              "Wegen des ausdrücklich unvollständigen Gesetzeskontexts lässt sich eine etwaige Markenrechtsänderung im übrigen Gesetzestext nicht ausschließen."
+            ],
+            "criterion_id": "ssw-2025-ac-aecc1a0f4789c2e7",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b0e5fe694aa0e327",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Europäische Herausgabe- und Sicherungsanordnungen für elektronische Beweismittel in Strafverfahren; eine Verschärfung des Markenrechts auf EU-Ebene enthält der vorliegende Text nicht.",
+          "input_sha256": "a9515771512f2f8dc1903f67c1413a26ad71a1ed9b7216c7d1f2add7754d761d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a9515771512f2f8dc1903f67c1413a26ad71a1ed9b7216c7d1f2add7754d761d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Europäische Herausgabe- und Sicherungsanordnungen für elektronische Beweismittel in Strafverfahren; eine Verschärfung des Markenrechts auf EU-Ebene enthält der vorliegende Text nicht.",
+            "law_passage_id": "bgbl-1-2026-64-p-33656be603ad8d54",
+            "law_quote": "Verordnung (EU) 2023/1543 des Europäischen Parlaments und des Rates vom 12. Juli 2023 über Europäische Herausgabeanordnungen und Europäische Sicherungsanordnungen für elektronische Beweismittel in Strafverfahren",
+            "criterion_quote": "die Regelungen im Markenrecht so zu verschärfen",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-b0e5fe694aa0e327",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft grenzüberschreitende elektronische Beweismittel in Strafverfahren; ein Verbandsklagerecht für Minderheiten oder Volksgruppen schafft es nicht.",
+          "input_sha256": "a9515771512f2f8dc1903f67c1413a26ad71a1ed9b7216c7d1f2add7754d761d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a9515771512f2f8dc1903f67c1413a26ad71a1ed9b7216c7d1f2add7754d761d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft grenzüberschreitende elektronische Beweismittel in Strafverfahren; ein Verbandsklagerecht für Minderheiten oder Volksgruppen schafft es nicht.",
+            "law_passage_id": "bgbl-1-2026-64-p-33656be603ad8d54",
+            "law_quote": "Verordnung (EU) 2023/1543 des Europäischen Parlaments und des Rates vom 12. Juli 2023 über Europäische Herausgabeanordnungen und Europäische Sicherungsanordnungen für elektronische Beweismittel in Strafverfahren",
+            "criterion_quote": "ein Verbandsklagerecht für nationale Minderheiten und Volksgruppen auf Bundesebene einführen",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-66",
       "analysis_sha256": "2f1390c34b3dba6ca1a2f43f6f5457f2f7ff45e9702150315a0e76361c053a58",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0604f581e0633eec",
@@ -126699,12 +128033,565 @@
         "ssw-2025-ac-f3b57cd89adb839b"
       ],
       "omitted_count": 991,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0604f581e0633eec",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen kritische Anlagen und enthalten keine Überarbeitung der Richtlinien für gesetzlich versicherte trans*Personen.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen kritische Anlagen und enthalten keine Überarbeitung der Richtlinien für gesetzlich versicherte trans*Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-0604f581e0633eec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "proposed_link",
+          "rationale": "Für die in § 23 geregelte Datenverarbeitung fehlt die Erforderlichkeit insbesondere dann, wenn anonymisierte oder künstlich erzeugte Daten den Zweck ebenso erfüllen. Das begrenzt Eingriffe in Persönlichkeitsrechte in diesem Bereich, legt aber nicht für sämtliche Maßnahmen von Sicherheitsbehörden die geforderten Voraussetzungen fest.",
+          "input_sha256": "fe60a3ee52c5508a2fd2f0d0c846886f4d6a4b6e21bf5e966b6afc1d2d7c3125",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fe60a3ee52c5508a2fd2f0d0c846886f4d6a4b6e21bf5e966b6afc1d2d7c3125"
+            }
+          ],
+          "impact_id": "impact-b2a950a2c86c3f69",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.84,
+            "rationale": "Für die in § 23 geregelte Datenverarbeitung fehlt die Erforderlichkeit insbesondere dann, wenn anonymisierte oder künstlich erzeugte Daten den Zweck ebenso erfüllen. Das begrenzt Eingriffe in Persönlichkeitsrechte in diesem Bereich, legt aber nicht für sämtliche Maßnahmen von Sicherheitsbehörden die geforderten Voraussetzungen fest.",
+            "law_passage_id": "bgbl-1-2026-66-p-1a0c74acabb218a8",
+            "law_quote": "(2a) Die Erforderlichkeit der Verarbeitung personenbezogener Daten im Sinne der Absätze 1 und 2 ist\ninsbesondere dann nicht gegeben, wenn durch eine Verarbeitung anonymisierter oder künstlich erzeugter Daten\nder Zweck in gleicher Weise erfüllt werden kann.",
+            "criterion_quote": "Bürgerliche Freiheits- und Persönlichkeitsrechte\ndürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden\neingeschränkt werden, wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes\ngeeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu\nerreichen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-185f373d35a4cd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Resilienz kritischer Anlagen, nicht wissenschaftliche Kriterien oder geologische Ausschlüsse bei der Endlagersuche.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Resilienz kritischer Anlagen, nicht wissenschaftliche Kriterien oder geologische Ausschlüsse bei der Endlagersuche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-185f373d35a4cd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-34f1a5f346146270",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verpflichtet Betreiber zu physischen Resilienzmaßnahmen, belegt in den vorgelegten Vorschriften aber keine verbesserte Abstimmung dieser Maßnahmen mit der Cybersicherheit.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.82,
+            "rationale": "Das Gesetz verpflichtet Betreiber zu physischen Resilienzmaßnahmen, belegt in den vorgelegten Vorschriften aber keine verbesserte Abstimmung dieser Maßnahmen mit der Cybersicherheit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-34f1a5f346146270",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3a2d12405f062110",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern keine EU-Abstimmungsregeln und führen keine qualifizierte Mehrheit ein.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften ändern keine EU-Abstimmungsregeln und führen keine qualifizierte Mehrheit ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3a2d12405f062110",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44bf77e6712f25c0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften verlangen eine Verhältnismäßigkeitsabwägung bei Resilienzmaßnahmen von Betreibern kritischer Anlagen, regeln aber keine Kosten-Nutzen-Analysen des Bundes für Verkehrsprojekte.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschriften verlangen eine Verhältnismäßigkeitsabwägung bei Resilienzmaßnahmen von Betreibern kritischer Anlagen, regeln aber keine Kosten-Nutzen-Analysen des Bundes für Verkehrsprojekte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44bf77e6712f25c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt bestimmten Behörden die erforderliche Verarbeitung personenbezogener Daten, regelt aber nicht, ob solche Tätigkeiten im Rahmen öffentlicher Aufgaben privatisiert werden.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Das Gesetz erlaubt bestimmten Behörden die erforderliche Verarbeitung personenbezogener Daten, regelt aber nicht, ob solche Tätigkeiten im Rahmen öffentlicher Aufgaben privatisiert werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften führen keine externe Stelle ein, die Bundesvorhaben verbindlich auf Jugendfolgen prüft.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften führen keine externe Stelle ein, die Bundesvorhaben verbindlich auf Jugendfolgen prüft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5b39dc5014cc43f9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Bundesgesetz enthält keine Regelung zur Aufhebung des Einstimmigkeitsprinzips in der EU.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Bundesgesetz enthält keine Regelung zur Aufhebung des Einstimmigkeitsprinzips in der EU.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5b39dc5014cc43f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6131edd61e344217",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften sehen keine Ausstattung zuständiger Behörden mit technischen Geräten für die Terrorismusbekämpfung vor.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Vorschriften sehen keine Ausstattung zuständiger Behörden mit technischen Geräten für die Terrorismusbekämpfung vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6131edd61e344217",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt Behörden bestimmte personenbezogene Daten zu verarbeiten, begründet in den vorgelegten Passagen aber keine behördenübergreifende Übermittlung solcher Daten.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.82,
+            "rationale": "Das Gesetz erlaubt Behörden bestimmte personenbezogene Daten zu verarbeiten, begründet in den vorgelegten Passagen aber keine behördenübergreifende Übermittlung solcher Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen kritische Anlagen und regeln keine digitale Antragstellung für armutsbekämpfende Leistungen.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen kritische Anlagen und regeln keine digitale Antragstellung für armutsbekämpfende Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-80b8c4ef9af9660c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften setzen keine unabhängige Expert:innen-Kommission zu LSBTIQ*-feindlicher Hasskriminalität ein.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften setzen keine unabhängige Expert:innen-Kommission zu LSBTIQ*-feindlicher Hasskriminalität ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-80b8c4ef9af9660c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8a355dfa142f3162",
+          "disposition": "proposed_link",
+          "rationale": "Betreiber kritischer Anlagen müssen Vorfälle über die gemeinsame Meldestelle melden, laufende Meldungen aktualisieren und einen ausführlichen Bericht übermitteln. Das schafft einen verbindlichen Informationsfluss zu Vorfällen zwischen Betreibern und Behörden, nicht aber einen allgemeinen Austausch aller Informationen.",
+          "input_sha256": "fe60a3ee52c5508a2fd2f0d0c846886f4d6a4b6e21bf5e966b6afc1d2d7c3125",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fe60a3ee52c5508a2fd2f0d0c846886f4d6a4b6e21bf5e966b6afc1d2d7c3125"
+            }
+          ],
+          "impact_id": "impact-07ddbf1885107900",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Betreiber kritischer Anlagen müssen Vorfälle über die gemeinsame Meldestelle melden, laufende Meldungen aktualisieren und einen ausführlichen Bericht übermitteln. Das schafft einen verbindlichen Informationsfluss zu Vorfällen zwischen Betreibern und Behörden, nicht aber einen allgemeinen Austausch aller Informationen.",
+            "law_passage_id": "bgbl-1-2026-66-p-9ef0db26b2f78349",
+            "law_quote": "(1) Der Betreiber kritischer Anlagen ist verpflichtet, dem Bundesamt für Bevölkerungsschutz und\nKatastrophenhilfe Vorfälle unverzüglich, spätestens 24 Stunden nach Kenntnis der vom Bundesamt für Sicherheit\nin der Informationstechnik und dem Bundesamt für Bevölkerungsschutz und Katastrophenhilfe eingerichteten\ngemeinsamen Meldestelle nach § 32 Absatz 1 des BSI-Gesetzes zu melden. Bei einem andauernden Vorfall ist\ndie Erstmeldung zu aktualisieren. Spätestens einen Monat nach Kenntnis des Vorfalls ist ein ausführlicher Bericht\nzu übermitteln. Meldepflichten auf Grund sonstiger gesetzlicher Vorgaben bleiben unberührt.",
+            "criterion_quote": "Bei der Umsetzung benötigen wir eine effiziente Informationsteilung\nzwischen Betreibern von kritischer Infrastruktur und unseren Behörden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8a355dfa142f3162",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften erlauben Behörden die Verarbeitung personenbezogener Daten für bestimmte Aufgaben, legen aber keinen Richtervorbehalt und keinen konkreten Anhaltspunkt als Voraussetzungen einer Speicherung fest.",
+          "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ae8f9a6130c917a6100ed5617e3bd9455a4fc60839979f349567fb9ac517cbe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die vorgelegten Vorschriften erlauben Behörden die Verarbeitung personenbezogener Daten für bestimmte Aufgaben, legen aber keinen Richtervorbehalt und keinen konkreten Anhaltspunkt als Voraussetzungen einer Speicherung fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die Richtlinie zur Resilienz kritischer Einrichtungen um; eine Pflicht der EU-Kommission, bei erfolgreichen Bürgerinitiativen Gesetzesentwürfe vorzulegen, ist darin nicht geregelt.",
+          "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz setzt die Richtlinie zur Resilienz kritischer Einrichtungen um; eine Pflicht der EU-Kommission, bei erfolgreichen Bürgerinitiativen Gesetzesentwürfe vorzulegen, ist darin nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-66-p-e3c9d368f02c58d7",
+            "law_quote": "Dieses Gesetz dient der Umsetzung der Richtlinie (EU) 2022/2557 des Europäischen Parlaments und des Rates vom 14. Dezember 2022 über die Resilienz kritischer Einrichtungen und zur Aufhebung der Richtlinie 2008/114/EG des Rates (ABl. L 333 vom 27.12.2022, S. 164).",
+            "criterion_quote": "Bei erfolgreichen Initiativen muss die EU-Kommission verpflichtet sein, einen Gesetzesentwurf vorzulegen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9e917e7e0d14ce96",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b0c7bd20d490ed3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verlangt Risikoanalysen für kritische Dienstleistungen, die auch Naturgefahren einbeziehen; eine Standortsuche mit Sicherheitskriterien für einen Standort über Jahrhunderte regelt es nicht.",
+          "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz verlangt Risikoanalysen für kritische Dienstleistungen, die auch Naturgefahren einbeziehen; eine Standortsuche mit Sicherheitskriterien für einen Standort über Jahrhunderte regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-66-p-3d5c05df8ce15aa9",
+            "law_quote": "naturbedingte, technische oder menschlich verursachte Risiken, die geeignet sein können, die Verfügbarkeit der kritischen Dienstleistungen entscheidend zu beeinträchtigen",
+            "criterion_quote": "neben geologischen Voraussetzungen auch andere Kriterien berücksichtigt werden, die einen solchen Standort über Jahrhunderte als sicher gelten lassen",
+            "caveats": [
+              "Die Risikoanalyse betrifft kritische Dienstleistungen und belegt keine Regelung zur im Kriterium gemeinten Standortsuche."
+            ],
+            "criterion_id": "ssw-2025-ac-b0c7bd20d490ed3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-cb281c552c4eac51",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Resilienzpflichten für Betreiber kritischer Anlagen, nicht Bundesmittel zur vollständigen Finanzierung von Krankenhausinvestitionen.",
+          "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Resilienzpflichten für Betreiber kritischer Anlagen, nicht Bundesmittel zur vollständigen Finanzierung von Krankenhausinvestitionen.",
+            "law_passage_id": "bgbl-1-2026-66-p-8c1b8343fe0b0960",
+            "law_quote": "Dieses Gesetz gilt für Betreiber kritischer Anlagen in den folgenden Sektoren:",
+            "criterion_quote": "der Bund den Ländern und Kommunen ausreichende Mittel zur Verfügung stellt, damit die gesetzlich festgelegte Länderfinanzierung der Krankenhausinvestitionen zu 100 % erfüllt werden kann",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-cb281c552c4eac51",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Resilienz kritischer Anlagen; ein Verbandsklagerecht für nationale Minderheiten oder Volksgruppen führen sie nicht ein.",
+          "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften betreffen Resilienz kritischer Anlagen; ein Verbandsklagerecht für nationale Minderheiten oder Volksgruppen führen sie nicht ein.",
+            "law_passage_id": "bgbl-1-2026-66-p-e3c9d368f02c58d7",
+            "law_quote": "Dieses Gesetz dient der Umsetzung der Richtlinie (EU) 2022/2557 des Europäischen Parlaments und des Rates vom 14. Dezember 2022 über die Resilienz kritischer Einrichtungen",
+            "criterion_quote": "ein Verbandsklagerecht für nationale Minderheiten und Volksgruppen auf Bundesebene einführen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f3b57cd89adb839b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Resilienzregeln für kritische Einrichtungen um; eine Änderung der Schuldenbremse zur Ermöglichung öffentlicher Investitionen ist darin nicht geregelt.",
+          "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "52d95f01d7f2d768538821f0cd0a5044d956675c53a9a342fe16f82bf04a24b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz setzt Resilienzregeln für kritische Einrichtungen um; eine Änderung der Schuldenbremse zur Ermöglichung öffentlicher Investitionen ist darin nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-66-p-e3c9d368f02c58d7",
+            "law_quote": "Dieses Gesetz dient der Umsetzung der Richtlinie (EU) 2022/2557 des Europäischen Parlaments und des Rates vom 14. Dezember 2022 über die Resilienz kritischer Einrichtungen",
+            "criterion_quote": "Reform der Schuldenbremse, um dringend notwendige Investitionen zu ermöglichen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-f3b57cd89adb839b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-68",
       "analysis_sha256": "80b3e04ad5e270a4a67ac4489acf99f4f74560dc172c106e4aa60f2ea1f59191",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-15c98fa54f1ee2f0",
@@ -126722,12 +128609,366 @@
         "ssw-2025-ac-d89f389a1bb0d02b"
       ],
       "omitted_count": 998,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine EU-Regelung, die dem Europäischen Parlament ein direktes Gesetzesinitiativrecht einräumt.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine EU-Regelung, die dem Europäischen Parlament ein direktes Gesetzesinitiativrecht einräumt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt kein Wahlrecht bei Bundestagswahlen und keine Absenkung des Wahlalters auf 16 Jahre.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt kein Wahlrecht bei Bundestagswahlen und keine Absenkung des Wahlalters auf 16 Jahre.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Meinungs- oder Pressefreiheit.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Meinungs- oder Pressefreiheit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3e2b5309e2a41993",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Gebäudeversicherungen noch eine Pflicht zur Elementarschadenversicherung.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Gebäudeversicherungen noch eine Pflicht zur Elementarschadenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3e2b5309e2a41993",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "missing_context",
+          "rationale": "§ 17 Absatz 1 erwähnt Einzelheiten zur Verarbeitung personenbezogener Daten bei Zuverlässigkeitsüberprüfungen, sagt aber nicht, ob deren Erhebung, Verarbeitung oder Nutzung privatisiert ist.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 17 Absatz 1 erwähnt Einzelheiten zur Verarbeitung personenbezogener Daten bei Zuverlässigkeitsüberprüfungen, sagt aber nicht, ob deren Erhebung, Verarbeitung oder Nutzung privatisiert ist.",
+            "law_passage_id": "bgbl-1-2026-68-p-2abed045e802c76d",
+            "law_quote": "die Einzelheiten der Verarbeitung personenbezogener Daten",
+            "criterion_quote": null,
+            "caveats": [
+              "Zur Beurteilung der Privatisierung wären Angaben zur tatsächlichen Durchführung der öffentlichen Aufgaben erforderlich."
+            ],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 6 GG nicht und verankert dort keine Kinderrechte.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 6 GG nicht und verankert dort keine Kinderrechte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu einem Recht auf schnelles Internet.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu einem Recht auf schnelles Internet.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-74907f89b02dea29",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verpflichtet Polizeikräfte nicht zu Aus- oder Fortbildungen.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verpflichtet Polizeikräfte nicht zu Aus- oder Fortbildungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-74907f89b02dea29",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Richtervorbehalt und keine Voraussetzung eines konkreten Anhaltspunkts für die Speicherung personenbezogener Daten.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen Richtervorbehalt und keine Voraussetzung eines konkreten Anhaltspunkts für die Speicherung personenbezogener Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-cb9ef278f74c2ad4",
+          "disposition": "no_supported_link",
+          "rationale": "§ 15a Absatz 3 betrifft Informationen zu unbemannten Luftfahrzeugen und erweitert keine Befugnisse der Bundespolizei auf See.",
+          "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b3982e061dd92873d876fd9e8389b1b9636f7d9d6767bd1114e50a57a0f73025"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "§ 15a Absatz 3 betrifft Informationen zu unbemannten Luftfahrzeugen und erweitert keine Befugnisse der Bundespolizei auf See.",
+            "law_passage_id": "bgbl-1-2026-68-p-dc0463b459a3a2f4",
+            "law_quote": "Die Bundespolizei übermittelt im Rahmen ihrer Zuständigkeit nach den §§ 4 und 14 des Bundespolizeigesetzes Informationen im Zusammenhang mit unbemannten Luftfahrzeugen […] an die Streitkräfte.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-cb9ef278f74c2ad4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d21cef15476eb47f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Abwehr von Gefahren durch unbemannte Luftfahrzeuge, nicht eine gemeinsame Finanzierung der Bergung von Munitionsaltlasten.",
+          "input_sha256": "06fc0129d62075cb67762dfa9354bec50f497a5162191afbc808769b70dda24d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06fc0129d62075cb67762dfa9354bec50f497a5162191afbc808769b70dda24d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt die Abwehr von Gefahren durch unbemannte Luftfahrzeuge, nicht eine gemeinsame Finanzierung der Bergung von Munitionsaltlasten.",
+            "law_passage_id": "bgbl-1-2026-68-p-021a6f625397b125",
+            "law_quote": "Die Streitkräfte leisten bei der Abwehr von Gefahren durch unbemannte Luftfahrzeuge Amtshilfe nach Artikel 35 Absatz 1 des Grundgesetzes.",
+            "criterion_quote": "Der Bund muss sich zügig für eine langfristige und gemeinsame Finanzierung mit den Ländern einsetzen, die eine nachhaltige Bergung von Munitionsaltlasten auch nach Abschluss des Pilotprojektes sicherstellt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d21cef15476eb47f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d81b3558d8684339",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung regelt unter anderem den Zugang zu Flugplatzbereichen und die Drohnenabwehr, enthält aber keine Bestimmungen zur Infrastrukturplanung oder zu deren Beteiligungs- und Klagerechten.",
+          "input_sha256": "06fc0129d62075cb67762dfa9354bec50f497a5162191afbc808769b70dda24d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06fc0129d62075cb67762dfa9354bec50f497a5162191afbc808769b70dda24d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Änderung regelt unter anderem den Zugang zu Flugplatzbereichen und die Drohnenabwehr, enthält aber keine Bestimmungen zur Infrastrukturplanung oder zu deren Beteiligungs- und Klagerechten.",
+            "law_passage_id": "bgbl-1-2026-68-p-21877452613a7a2f",
+            "law_quote": "Der Zugang oder die Verschaffung des Zugangs zur Luftseite eines Flugplatzes sowie zu dessen Sicherheitsbereich ohne Berechtigung ist verboten.",
+            "criterion_quote": "Gleichzeitig darf das Beteiligungs- und Klagerecht nicht eingeschränkt werden, der Umweltschutz und die individuellen Rechte Betroffener müssen gewährt bleiben.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d81b3558d8684339",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d89f389a1bb0d02b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Regelungen zur Luftsicherheit, aber keine Vorschriften zur Schleppnetzfischerei oder zum Einsatz schweren Geschirrs in sensiblen Gebieten.",
+          "input_sha256": "06fc0129d62075cb67762dfa9354bec50f497a5162191afbc808769b70dda24d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "06fc0129d62075cb67762dfa9354bec50f497a5162191afbc808769b70dda24d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Regelungen zur Luftsicherheit, aber keine Vorschriften zur Schleppnetzfischerei oder zum Einsatz schweren Geschirrs in sensiblen Gebieten.",
+            "law_passage_id": "bgbl-1-2026-68-p-021a6f625397b125",
+            "law_quote": "Die Streitkräfte leisten bei der Abwehr von Gefahren durch unbemannte Luftfahrzeuge Amtshilfe nach Artikel 35 Absatz 1 des Grundgesetzes.",
+            "criterion_quote": "Wir wollen **keine Schleppnetzfischerei** oder anderes schweres Geschirr **in** ökologisch **sensiblen Gebieten** .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d89f389a1bb0d02b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-69",
       "analysis_sha256": "7bff45fc74c04cce4911d97cb7843353c184b0eb5c68b3d854dede7ac1eb4a6a",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-15c98fa54f1ee2f0",
@@ -126744,7 +128985,349 @@
         "ssw-2025-ac-8feddbea1268f72b"
       ],
       "omitted_count": 999,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Durchführung der Eurojust-Verordnung, nicht ein direktes Gesetzesinitiativrecht des Europäischen Parlaments.",
+          "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Durchführung der Eurojust-Verordnung, nicht ein direktes Gesetzesinitiativrecht des Europäischen Parlaments.",
+            "law_passage_id": "bgbl-1-2026-69-p-ba65b7db0a34765a",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Verordnung (EU) 2018/1727 (Eurojust-Verordnung) in der Fassung vom 4. Oktober 2023.",
+            "criterion_quote": "Wir wollen ein direktes Gesetzesinitiativrecht für das Europäische Parlament.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "proposed_link",
+          "rationale": "Ab dem 1. April 2026 darf das nationale Mitglied personenbezogene Daten für Eurojust oder die Strafrechtspflege nur verarbeiten, soweit dies erforderlich ist. Die Vorschrift unterstützt damit einen Teil des Kriteriums; sie verlangt nicht ausdrücklich, dass kein anderes geeignetes Mittel besteht.",
+          "input_sha256": "6481e852674935b7efc299be006712ee89a09d16195c0430580424f75732a970",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6481e852674935b7efc299be006712ee89a09d16195c0430580424f75732a970"
+            }
+          ],
+          "impact_id": "impact-66dfae12b16f795a",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.89,
+            "rationale": "Ab dem 1. April 2026 darf das nationale Mitglied personenbezogene Daten für Eurojust oder die Strafrechtspflege nur verarbeiten, soweit dies erforderlich ist. Die Vorschrift unterstützt damit einen Teil des Kriteriums; sie verlangt nicht ausdrücklich, dass kein anderes geeignetes Mittel besteht.",
+            "law_passage_id": "bgbl-1-2026-69-p-90aac225846159e1",
+            "law_quote": "Das nationale Mitglied verarbeitet personenbezogene Daten gemäß Artikel 23 Absatz 7 der EurojustVerordnung in der Fassung vom 4. Oktober 2023, soweit dies zur Aufgabenerfüllung von Eurojust oder für\nZwecke der Strafrechtspflege erforderlich ist.",
+            "criterion_quote": "Bürgerliche Freiheits- und Persönlichkeitsrechte\ndürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden\neingeschränkt werden, wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes\ngeeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu\nerreichen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1c5511fd783f66e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Eurojust-Regeln, schafft aber kein Seesicherheitsgesetz und regelt keine Zuständigkeiten in deutschen Gewässern.",
+          "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Eurojust-Regeln, schafft aber kein Seesicherheitsgesetz und regelt keine Zuständigkeiten in deutschen Gewässern.",
+            "law_passage_id": "bgbl-1-2026-69-p-ba65b7db0a34765a",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Verordnung (EU) 2018/1727 (Eurojust-Verordnung) in der Fassung vom 4. Oktober 2023.",
+            "criterion_quote": "Wir wollen ein Seesicherheitsgesetz, das die maritimen Kompetenzen des Bundes bündelt und die im Ernstfall geltenden Zuständigkeiten in deutschen Gewässern regelt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1c5511fd783f66e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-26470a22bc29709a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Eurojust-Änderungen dokumentieren keine Prüfung einer Steigerung von Schüler:innenaustauschen mit EU-Ländern.",
+          "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Eurojust-Änderungen dokumentieren keine Prüfung einer Steigerung von Schüler:innenaustauschen mit EU-Ländern.",
+            "law_passage_id": "bgbl-1-2026-69-p-ba65b7db0a34765a",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Verordnung (EU) 2018/1727 (Eurojust-Verordnung) in der Fassung vom 4. Oktober 2023.",
+            "criterion_quote": "Wir wollen, dass der Bund die Steigerung der möglichen Schüler:innenaustausche mit anderen EU-Ländern prüft.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-26470a22bc29709a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+          "disposition": "missing_context",
+          "rationale": "Der Zweck der im Kriterium genannten Mindestmengenregelung ist im übermittelten Zitat nicht benannt; deshalb lässt sich ihre Anwendbarkeit auf das Eurojust-Gesetz nicht beurteilen.",
+          "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d15f5b6aa0ec9f447673521f31497e8cdd80499021e3f89fba2a7c637d4d21b9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der Zweck der im Kriterium genannten Mindestmengenregelung ist im übermittelten Zitat nicht benannt; deshalb lässt sich ihre Anwendbarkeit auf das Eurojust-Gesetz nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-69-p-ba65b7db0a34765a",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Verordnung (EU) 2018/1727 (Eurojust-Verordnung) in der Fassung vom 4. Oktober 2023.",
+            "criterion_quote": "es darf dafür keine Mindestmengenregelung geben.",
+            "caveats": [
+              "Der Bezug von „dafür“ ist im bereitgestellten Kriterium nicht enthalten."
+            ],
+            "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3c2a4bedc8cea0cd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Zugriff auf Eurojusts Fallbearbeitungssystem für Zwecke der Strafrechtspflege; eine Förderung der Zusammenarbeit von Ostseeparlamenten ist nicht vorgesehen.",
+          "input_sha256": "6ae51a46fa15128413c232957fc0aba4178f9e84856b20adcf59001361eb7880",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6ae51a46fa15128413c232957fc0aba4178f9e84856b20adcf59001361eb7880"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt den Zugriff auf Eurojusts Fallbearbeitungssystem für Zwecke der Strafrechtspflege; eine Förderung der Zusammenarbeit von Ostseeparlamenten ist nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2026-69-p-80537db9e82dec58",
+            "law_quote": "Das nationale Mitglied gestattet Personen nach Artikel 24 Absatz 2 der Eurojust-Verordnung […] Zugriff auf die von ihm selbst im Fallbearbeitungssystem angelegten Daten",
+            "criterion_quote": "Wir wollen, dass die gleichberechtige Zusammenarbeit von regionalen und nationalen Parlamenten der Ostseeanrainer weiter gefördert wird.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3c2a4bedc8cea0cd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "missing_context",
+          "rationale": "§ 8 weist die Verarbeitung Eurojust-Aufgaben beziehungsweise der Strafrechtspflege zu, belegt aber ohne die Regelungen zur Stellung des nationalen Mitglieds nicht, ob diese Tätigkeit öffentlich oder privatisiert ist.",
+          "input_sha256": "3ef60b651771352aa20e3d56baa47d778fc6670a71bce48528422de49fbb6935",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3ef60b651771352aa20e3d56baa47d778fc6670a71bce48528422de49fbb6935"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "§ 8 weist die Verarbeitung Eurojust-Aufgaben beziehungsweise der Strafrechtspflege zu, belegt aber ohne die Regelungen zur Stellung des nationalen Mitglieds nicht, ob diese Tätigkeit öffentlich oder privatisiert ist.",
+            "law_passage_id": "bgbl-1-2026-69-p-90aac225846159e1",
+            "law_quote": "Das nationale Mitglied verarbeitet personenbezogene Daten gemäß Artikel 23 Absatz 7 der EurojustVerordnung in der Fassung vom 4. Oktober 2023, soweit dies zur Aufgabenerfüllung von Eurojust oder für Zwecke der Strafrechtspflege erforderlich ist.",
+            "criterion_quote": "Wir wollen, dass die Erhebung, Verarbeitung und Nutzung persönlicher Daten im Rahmen öffentlicher Aufgaben nicht privatisiert wird.",
+            "caveats": [
+              "Die Stellung des nationalen Mitglieds und die hierfür maßgeblichen Grundregelungen sind im bereitgestellten Text nicht enthalten."
+            ],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Eurojust-Datenverarbeitung und Anlaufstellen, nicht die verbindliche externe Prüfung von Bundesgesetzen und Verordnungen auf Jugendfolgen.",
+          "input_sha256": "3ef60b651771352aa20e3d56baa47d778fc6670a71bce48528422de49fbb6935",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3ef60b651771352aa20e3d56baa47d778fc6670a71bce48528422de49fbb6935"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Eurojust-Datenverarbeitung und Anlaufstellen, nicht die verbindliche externe Prüfung von Bundesgesetzen und Verordnungen auf Jugendfolgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In Zukunft soll eine externe Stelle alle Gesetzesvorhaben und Verordnungen des Bundes auf ihre Auswirkungen auf Jugendliche überprüfen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5b39dc5014cc43f9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Durchführung der Eurojust-Verordnung und ändert weder EU-Entscheidungsverfahren noch das Einstimmigkeitsprinzip.",
+          "input_sha256": "39679b59c8e0e5d74f48c57c721fa1d4acaf4cbc19747f68449cd2e7ad4bbf5d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "39679b59c8e0e5d74f48c57c721fa1d4acaf4cbc19747f68449cd2e7ad4bbf5d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt die Durchführung der Eurojust-Verordnung und ändert weder EU-Entscheidungsverfahren noch das Einstimmigkeitsprinzip.",
+            "law_passage_id": "bgbl-1-2026-69-p-ba65b7db0a34765a",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Verordnung (EU) 2018/1727 (Eurojust-Verordnung) in der Fassung vom 4. Oktober 2023.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5b39dc5014cc43f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Eurojust und enthalten keine Regelung zu Sperrklauseln bei Europawahlen.",
+          "input_sha256": "39679b59c8e0e5d74f48c57c721fa1d4acaf4cbc19747f68449cd2e7ad4bbf5d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "39679b59c8e0e5d74f48c57c721fa1d4acaf4cbc19747f68449cd2e7ad4bbf5d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Eurojust und enthalten keine Regelung zu Sperrklauseln bei Europawahlen.",
+            "law_passage_id": "bgbl-1-2026-69-p-ba65b7db0a34765a",
+            "law_quote": "Dieses Gesetz regelt die Durchführung der Verordnung (EU) 2018/1727 (Eurojust-Verordnung) in der Fassung vom 4. Oktober 2023.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6434207d08b5b778",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+          "disposition": "proposed_link",
+          "rationale": "Ab dem 1. April 2026 erhalten angebundene Eurojust-Anlaufstellen Zugriff auf im Fallbearbeitungssystem gespeicherte Daten, soweit dies für die Strafrechtspflege erforderlich ist. Das unterstützt den behördenübergreifenden Datenaustausch in diesem Bereich.",
+          "input_sha256": "6481e852674935b7efc299be006712ee89a09d16195c0430580424f75732a970",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a1a6507dd8a6820ef6aba60e201c2625820928315208f735c05c40518c5b680"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6481e852674935b7efc299be006712ee89a09d16195c0430580424f75732a970"
+            }
+          ],
+          "impact_id": "impact-2a463a325a335126",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.9,
+            "rationale": "Ab dem 1. April 2026 erhalten angebundene Eurojust-Anlaufstellen Zugriff auf im Fallbearbeitungssystem gespeicherte Daten, soweit dies für die Strafrechtspflege erforderlich ist. Das unterstützt den behördenübergreifenden Datenaustausch in diesem Bereich.",
+            "law_passage_id": "bgbl-1-2026-69-p-a040c6d8e3e6a96d",
+            "law_quote": "(3) Das nationale Mitglied gewährt Eurojust-Anlaufstellen nach Artikel 20 Absatz 3 Buchstabe a, b und c der\nEurojust-Verordnung in der Fassung vom 4. Oktober 2023, die im Anwendungsbereich dieses Gesetzes oder in\nanderen Mitgliedstaaten an das Fallbearbeitungssystem angebunden sind, nach Artikel 25 Absatz 1 Buchstabe a\nder Eurojust-Verordnung in der Fassung vom 4. Oktober 2023 Zugriff auf Daten, die es in dem Fallbearbeitungs­\nsystem speichert, soweit dies für Zwecke der Strafrechtspflege erforderlich ist.",
+            "criterion_quote": "und personenbezogene Daten besser zwischen Behörden\nkommuniziert werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-653c8cf88e54be99",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "missing_context",
+          "rationale": "§ 8 Absatz 1 erlaubt dem nationalen Mitglied die Verarbeitung personenbezogener Daten, soweit sie zur Aufgabenerfüllung von Eurojust oder für Zwecke der Strafrechtspflege erforderlich ist; ob die in Bezug genommene Eurojust-Verordnung zusätzlich Richtervorbehalt und konkreten Anhaltspunkt verlangt oder Ausnahmen vorsieht, geht aus den vorliegenden Texten nicht hervor.",
+          "input_sha256": "9808205ae4700b5bb097a2aacea9a8438d2c3b3a181260003f1a257773627bba",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9808205ae4700b5bb097a2aacea9a8438d2c3b3a181260003f1a257773627bba"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "§ 8 Absatz 1 erlaubt dem nationalen Mitglied die Verarbeitung personenbezogener Daten, soweit sie zur Aufgabenerfüllung von Eurojust oder für Zwecke der Strafrechtspflege erforderlich ist; ob die in Bezug genommene Eurojust-Verordnung zusätzlich Richtervorbehalt und konkreten Anhaltspunkt verlangt oder Ausnahmen vorsieht, geht aus den vorliegenden Texten nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-69-p-90aac225846159e1",
+            "law_quote": "Das nationale Mitglied verarbeitet personenbezogene Daten gemäß Artikel 23 Absatz 7 der Eurojust-Verordnung in der Fassung vom 4. Oktober 2023, soweit dies zur Aufgabenerfüllung von Eurojust oder für Zwecke der Strafrechtspflege erforderlich ist.",
+            "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt vorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+            "caveats": [
+              "Die Änderung tritt am 1. April 2026 in Kraft.",
+              "Der Inhalt der in Bezug genommenen Eurojust-Verordnung ist nicht mitgeliefert."
+            ],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-7",
@@ -126860,7 +129443,415 @@
         "ssw-2025-ac-ffb4a2f519fbadef"
       ],
       "omitted_count": 905,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0ef3314a054f78f7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge betreffen Sicherheitsaufgaben der Bundeswehr und enthalten keine Finanzierung von Internet-Schutzprogrammen für Jugendliche.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge betreffen Sicherheitsaufgaben der Bundeswehr und enthalten keine Finanzierung von Internet-Schutzprogrammen für Jugendliche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen, dass der Bund Programme finanziert, um **Jugendliche vor Cyber-**\n**mobbing, Datenmissbrauch und schädlichen Inhalten** im Internet zu **schützen** .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-0ef3314a054f78f7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-15b41ad4f5295a34",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzesauszüge regeln weder Gewalthilfe noch Schutzrechte für Frauen und Kinder.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesauszüge regeln weder Gewalthilfe noch Schutzrechte für Frauen und Kinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen ein **Gewalthilfegesetz**, welches das Recht auf Schutz vor Gewalt für\nFrauen und deren Kindern absichert und einen einheitlichen Rechtsrahmen für die\nFinanzierung von Frauenhäusern sicherstellt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15b41ad4f5295a34",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge knüpfen bestimmte eingriffsintensive Befugnisse an Erforderlichkeit oder dringende Gefahr; ob auch Eignung und das Fehlen eines gleich geeigneten milderen Mittels für alle erfassten Eingriffe vorausgesetzt werden, ist aus dem nur teilweise vorliegenden Gesetz nicht ersichtlich.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die Auszüge knüpfen bestimmte eingriffsintensive Befugnisse an Erforderlichkeit oder dringende Gefahr; ob auch Eignung und das Fehlen eines gleich geeigneten milderen Mittels für alle erfassten Eingriffe vorausgesetzt werden, ist aus dem nur teilweise vorliegenden Gesetz nicht ersichtlich.",
+            "law_passage_id": "bgbl-1-2026-7-p-acd83fced4645ee3",
+            "law_quote": "(4) Wird aufgrund der äußerst erheblichen Eingriffsintensität auf diesen Absatz verwiesen, muss der Einsatz des\nnachrichtendienstlichen Mittels im Einzelfall zur Abwehr einer dringenden Gefahr erforderlich sein:",
+            "criterion_quote": "Wir stehen für eine Innen- und Rechtspolitik, die auf oberflächliche Symbolik und\nvermeintlich einfache Lösungen verzichtet. Bürgerliche Freiheits- und Persönlichkeitsrechte\ndürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden\neingeschränkt werden, wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes\ngeeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu\nerreichen.",
+            "caveats": [
+              "Die vorgelegten Gesetzesauszüge sind unvollständig."
+            ],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-175efba8b079cce8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regel, dass MAD-Befugnisse auf dem Gebiet eines Verbündeten dessen Einvernehmen erfordern, betrifft nicht die Abstimmung von Bundeswehreinsätzen zu Friedensmaßnahmen.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regel, dass MAD-Befugnisse auf dem Gebiet eines Verbündeten dessen Einvernehmen erfordern, betrifft nicht die Abstimmung von Bundeswehreinsätzen zu Friedensmaßnahmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Vor dem Hintergrund der deutschen Geschichte kann und darf die Bundeswehr nur in enger\nAbstimmung mit der internationalen Staatengemeinschaft (UN oder NATO) bei friedenssichernden oder friedenserhaltenden Maßnahmen eingesetzt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-175efba8b079cce8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-18e6c59978d853a3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Bereitstellung von Personal für zuständige Behörden zur Terrorismusbekämpfung.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Bereitstellung von Personal für zuständige Behörden zur Terrorismusbekämpfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen die **Terrorismusbekämpfung verbessern**, indem die zuständigen\nBehörden mit dem benötigten Personal und den erforderlichen technischen Geräten\nausgestattet werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-18e6c59978d853a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-194bc1851453d3af",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge schaffen keine bundesweiten Standards für den Katastrophenfall.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge schaffen keine bundesweiten Standards für den Katastrophenfall.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es ist dringend\nnotwendig, bundesweit Standards und Unterstützung für den Katastrophenfall zu schaffen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-194bc1851453d3af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1c5511fd783f66e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln keine maritimen Zuständigkeiten im Ernstfall in deutschen Gewässern.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge regeln keine maritimen Zuständigkeiten im Ernstfall in deutschen Gewässern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen ein **Seesicherheitsgesetz**, das die maritimen Kompetenzen des Bundes\nbündelt und die im Ernstfall geltenden Zuständigkeiten in deutschen Gewässern\nregelt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1c5511fd783f66e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1ef19e6e4c7090a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge betreffen Befugnisse des Militärischen Abschirmdienstes, nicht die Finanzierung von Frauenhäusern.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge betreffen Befugnisse des Militärischen Abschirmdienstes, nicht die Finanzierung von Frauenhäusern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen ein **Gewalthilfegesetz**, welches das Recht auf Schutz vor Gewalt für\nFrauen und deren Kindern absichert und einen einheitlichen Rechtsrahmen für die\nFinanzierung von Frauenhäusern sicherstellt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1ef19e6e4c7090a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1f1925b5861358f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten weder Maßnahmen zur Umsetzung des Schengener Abkommens noch Regelungen zu offenen Binnengrenzen.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten weder Maßnahmen zur Umsetzung des Schengener Abkommens noch Regelungen zu offenen Binnengrenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen, dass das **Schengener Abkommen** geschützt und **umgesetzt** wird.\n**Offene** **Binnengrenzen** sind eine zentrale Errungenschaft der EU. Grenzschließungen schaden dem innereuropäischen Handel und gefährden die\nReisefreiheit der europäischen Bürger:innen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1f1925b5861358f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-20f3e71a1dcd600b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Regelung zum Einsatz automatisierter Uploadfilter bei Urheberrechtsverstößen.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Regelung zum Einsatz automatisierter Uploadfilter bei Urheberrechtsverstößen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen **keinen Einsatz von automatisierten Uploadfiltern** zur Ahndung\nurheberrechtlicher Verstöße.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-20f3e71a1dcd600b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2168a4a22f8f6a64",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift über besonders qualifizierte und geschulte Personen betrifft den Militärischen Abschirmdienst, nicht verpflichtende Polizeischulungen.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschrift über besonders qualifizierte und geschulte Personen betrifft den Militärischen Abschirmdienst, nicht verpflichtende Polizeischulungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "verpflichtende Polizeischulungen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2168a4a22f8f6a64",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2376a7443fe6b23b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge verabschieden kein Gewalthilfegesetz und sichern keine Frauenhausfinanzierung.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge verabschieden kein Gewalthilfegesetz und sichern keine Frauenhausfinanzierung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und die Finanzierung von\nFrauenhäusern sicherstellt, muss kommen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2376a7443fe6b23b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2550bd2b9330e1e9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten weder ein Gewalthilfegesetz noch ein Schutzrecht für Frauen vor Gewalt.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten weder ein Gewalthilfegesetz noch ein Schutzrecht für Frauen vor Gewalt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Gewalthilfegesetz,\ndass Frauen endlich das Recht auf Schutz vor Gewalt garantiert",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2550bd2b9330e1e9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-25d5a3ccbb816fa3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Einvernehmen eines Verbündeten für bestimmte MAD-Befugnisse im Ausland regelt nicht die Abstimmung allgemeiner Bundesunterstützung mit europäischen und internationalen Partnern.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Einvernehmen eines Verbündeten für bestimmte MAD-Befugnisse im Ausland regelt nicht die Abstimmung allgemeiner Bundesunterstützung mit europäischen und internationalen Partnern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Diese Unterstützung muss\nin enger Abstimmung mit unseren europäischen und internationalen Partnern\nerfolgen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-25d5a3ccbb816fa3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3290b9a174e4840d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Tempolimits oder sonstigen Regelungen für innerörtliche Straßen.",
+          "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9527ba4164f56392a1201e4cfe7907e12264e6555e2d03e31c40d815932e49f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Tempolimits oder sonstigen Regelungen für innerörtliche Straßen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen die **Sicherheit** von Radfahrenden und anderen Verkehrsteilnehmern\n**erhöhen**, z. B. durch ein innerörtliches Tempolimit von 30 km/h auf Straßen, die nicht\nvorrangig dem Durchgangsverkehr dienen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3290b9a174e4840d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-70",
@@ -129166,45 +132157,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5980,
+    "calls": 6097,
     "cache_hits": 102,
-    "subdivision_cache_hits": 0,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 27.165531,
-    "reported_cost_calls": 5397,
+    "reported_cost_usd": 27.595865,
+    "reported_cost_calls": 5514,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.391395,
     "unknown_cost_calls": 583,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 30.556926,
-    "prompt_tokens": 61635899,
-    "completion_tokens": 10126619,
+    "budget_exposure_usd": 30.98726,
+    "prompt_tokens": 63150261,
+    "completion_tokens": 10412081,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 237,
-        "reported_cost_usd": 5.8834909999999985,
+        "calls": 245,
+        "reported_cost_usd": 6.09676875,
         "unknown_cost_reserved_usd": 1.1796119636642288e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 100,
-        "reported_cost_usd": 1.3146575000000003,
+        "calls": 103,
+        "reported_cost_usd": 1.3812965000000004,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2746,
-        "reported_cost_usd": 3.082912844999996,
+        "calls": 2852,
+        "reported_cost_usd": 3.2333293724999934,
         "unknown_cost_reserved_usd": 2.4069194000000014,
-        "pending_reserved_usd": 2.5153490401663703e-17
+        "pending_reserved_usd": 1.214306433183765e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
