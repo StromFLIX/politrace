@@ -1,7 +1,7 @@
 {
   "version": "all-party-sol-final-v2",
   "status": "continuing",
-  "input_signature": "f6ae1f7ae6ce7e179267060b7636a1f98206045ba58783b8226753432bcd4f3c",
+  "input_signature": "8c9c3184719178756dc2a04e1fcdb6e5326f5340eae020a23a3f18a0c81e1403",
   "total_laws": 173,
   "total_programmes": 6,
   "total_criteria": 6470,
@@ -9,49 +9,49 @@
   "final_model": "openai/gpt-6-sol",
   "retrieval": "Per-programme whole-law/provision/reverse BM25 union",
   "limitations": "Unselected pairs unknown; statistical recall not measured.",
-  "updated_at": "2026-10-06T19:41:54.144532+00:00",
+  "updated_at": "2026-10-06T20:07:06.685508+00:00",
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7469,
+    "calls": 7558,
     "cache_hits": 117,
-    "subdivision_cache_hits": 3,
+    "subdivision_cache_hits": 1,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 30.754418,
-    "reported_cost_calls": 6800,
+    "reported_cost_usd": 30.950718,
+    "reported_cost_calls": 6889,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.939243,
     "unknown_cost_calls": 669,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 34.69366,
-    "prompt_tokens": 78605545,
-    "completion_tokens": 13523972,
+    "budget_exposure_usd": 34.88996,
+    "prompt_tokens": 79758167,
+    "completion_tokens": 13728522,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 292,
-        "reported_cost_usd": 7.325039849999999,
+        "calls": 294,
+        "reported_cost_usd": 7.393134599999999,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 133,
-        "reported_cost_usd": 1.6940185000000003,
+        "calls": 135,
+        "reported_cost_usd": 1.7077607500000005,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4146,
-        "reported_cost_usd": 4.829606397499999,
+        "calls": 4231,
+        "reported_cost_usd": 4.944069472499998,
         "unknown_cost_reserved_usd": 2.8815740500000033,
-        "pending_reserved_usd": 6.071532165918825e-18
+        "pending_reserved_usd": 8.673617379884035e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
@@ -81,10 +81,10 @@
       }
     ]
   },
-  "completed_pairs": 38894,
-  "screened_pairs": 38910,
-  "pending_pairs": 875,
-  "final_pending": 16,
+  "completed_pairs": 39386,
+  "screened_pairs": 39406,
+  "pending_pairs": 383,
+  "final_pending": 20,
   "errors": {
     "screen:bgbl-1-2026-107:eda8a9d0b9e0f2bd915e": {
       "type": "provider",
@@ -124,45 +124,6 @@
       "stage": "screen",
       "attempts": 3,
       "next_retry_at": 1791240351.9962184
-    },
-    "screen:bgbl-2-2026-8:c73428d41bab40b95bb5": {
-      "type": "provider",
-      "retryable": true,
-      "http_status": 200,
-      "error_code": 502,
-      "category": "unspecified",
-      "upstream_provider_error": false,
-      "requested_output_tokens": null,
-      "affordable_output_tokens": null,
-      "stage": "screen",
-      "attempts": 1,
-      "next_retry_at": 1791315427.227022
-    },
-    "screen:bgbl-2-2026-8:afe6a388fdc958dc0cc7": {
-      "type": "provider",
-      "retryable": true,
-      "http_status": 200,
-      "error_code": 502,
-      "category": "unspecified",
-      "upstream_provider_error": false,
-      "requested_output_tokens": null,
-      "affordable_output_tokens": null,
-      "stage": "screen",
-      "attempts": 1,
-      "next_retry_at": 1791315428.5448349
-    },
-    "screen:bgbl-2-2026-8:f6d89e38616de527b99f": {
-      "type": "provider",
-      "retryable": true,
-      "http_status": 200,
-      "error_code": 502,
-      "category": "unspecified",
-      "upstream_provider_error": false,
-      "requested_output_tokens": null,
-      "affordable_output_tokens": null,
-      "stage": "screen",
-      "attempts": 1,
-      "next_retry_at": 1791315430.2943015
     }
   },
   "slices": 1,
@@ -2608,7 +2569,7 @@
     {
       "program_id": "gruene-2025",
       "criteria": 1640,
-      "laws_completed": 171,
+      "laws_completed": 172,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -3810,8 +3771,8 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 727,
-          "completed": 725,
-          "status": "pending",
+          "completed": 727,
+          "status": "completed",
           "omitted": 913
         },
         {
@@ -5029,7 +4990,7 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 579,
-          "completed": 522,
+          "completed": 577,
           "status": "pending",
           "omitted": 805
         },
@@ -6248,7 +6209,7 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 376,
-          "completed": 209,
+          "completed": 367,
           "status": "pending",
           "omitted": 411
         },
@@ -7467,7 +7428,7 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 419,
-          "completed": 0,
+          "completed": 277,
           "status": "pending",
           "omitted": 592
         },

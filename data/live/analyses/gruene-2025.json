@@ -280616,7 +280616,7 @@
     {
       "law_id": "bgbl-2-2026-8",
       "analysis_sha256": "e6d263d26b1fc03bc8154473bf89bef680c8b81f014d68b11ce01f4d60027bf9",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-0079c7c9415ccf00",
@@ -301344,6 +301344,38 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-fe0a195afb3f59ad",
+          "disposition": "proposed_link",
+          "rationale": "Das Abkommen nennt das Übereinkommen über die biologische Vielfalt ausdrücklich. Im Einklang damit verpflichtet es die Vertragsparteien zu Erhaltungsmaßnahmen, wenn sie Handels- und Investitionszwängen ausgesetzt sind; die Bindung ist auf diesen Zusammenhang begrenzt.",
+          "input_sha256": "ee34bba4bf011b61c7fdfdabfb9e5ee4c8307452fef695e070bd7291258613a6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "35069fa6053aff18156b5ff4d2a1a430a1217c102f92ff3f57cfb1319f3c1120"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ee34bba4bf011b61c7fdfdabfb9e5ee4c8307452fef695e070bd7291258613a6"
+            }
+          ],
+          "impact_id": "impact-14341a83a84e195a",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Das Abkommen nennt das Übereinkommen über die biologische Vielfalt ausdrücklich. Im Einklang damit verpflichtet es die Vertragsparteien zu Erhaltungsmaßnahmen, wenn sie Handels- und Investitionszwängen ausgesetzt sind; die Bindung ist auf diesen Zusammenhang begrenzt.",
+            "law_passage_id": "bgbl-2-2026-8-p-ece9330deb7873a7",
+            "law_quote": "(2) Im Einklang mit Absatz 1 ergreift jede Vertragspartei Maßnahmen zur Erhaltung der biologischen Vielfalt, wenn sie Handelsund Investitionszwängen ausgesetzt ist",
+            "criterion_quote": "und des Übereinkommens zur biologischen\nVielfalt",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-fe0a195afb3f59ad",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-fe3861a0ad593cf0",
           "disposition": "missing_context",
           "rationale": "Die vorliegenden Auszüge belegen keine Einführung oder Festlegung von Frauenquoten; wegen des unvollständigen Gesetzeskontexts lässt sich dies für den gesamten Text nicht ausschließen.",
@@ -301369,6 +301401,38 @@
             ],
             "criterion_id": "gruene-2025-ac-fe3861a0ad593cf0",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-fe9ca491ce810ae7",
+          "disposition": "no_supported_link",
+          "rationale": "Der Informationsaustausch über spezialisierte Staatsanwälte und mögliche gemeinsame Ausbildungen erhöht nicht die Zahl der Schwerpunktstaatsanwaltschaften gemeinsam mit den Ländern.",
+          "input_sha256": "ee34bba4bf011b61c7fdfdabfb9e5ee4c8307452fef695e070bd7291258613a6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3398970d537fa3fb5d0111e4ba942ec78e627ffc2826dce1d69a5f71f1039756"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ee34bba4bf011b61c7fdfdabfb9e5ee4c8307452fef695e070bd7291258613a6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.83,
+            "rationale": "Der Informationsaustausch über spezialisierte Staatsanwälte und mögliche gemeinsame Ausbildungen erhöht nicht die Zahl der Schwerpunktstaatsanwaltschaften gemeinsam mit den Ländern.",
+            "law_passage_id": "bgbl-2-2026-8-p-a910b7654be2bf63",
+            "law_quote": "(3) Die Vertragsparteien tauschen Informationen über die Aus- und Weiterbildung von Ermittlern und anderen Fachleuten oder\nStaatsanwälten aus, die auf Cyberkriminalität und digitale Forensik spezialisiert sind, und können gemeinsame Ausbildungs maßnahmen zum beiderseitigen Nutzen oder zum Nutzen Dritter durchführen.",
+            "criterion_quote": "Wir wollen zusammen mit den Ländern\nmehr Schwerpunktstaatsanwaltschaften\nschaffen, die sich auf komplexe Rechtsfelder spezialisieren und den Einsatz nicht\njuristischer Fachleute unterstützen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-fe9ca491ce810ae7",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -301474,45 +301538,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7469,
+    "calls": 7558,
     "cache_hits": 117,
-    "subdivision_cache_hits": 3,
+    "subdivision_cache_hits": 1,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 30.754418,
-    "reported_cost_calls": 6800,
+    "reported_cost_usd": 30.950718,
+    "reported_cost_calls": 6889,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.939243,
     "unknown_cost_calls": 669,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 34.69366,
-    "prompt_tokens": 78605545,
-    "completion_tokens": 13523972,
+    "budget_exposure_usd": 34.88996,
+    "prompt_tokens": 79758167,
+    "completion_tokens": 13728522,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 292,
-        "reported_cost_usd": 7.325039849999999,
+        "calls": 294,
+        "reported_cost_usd": 7.393134599999999,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 133,
-        "reported_cost_usd": 1.6940185000000003,
+        "calls": 135,
+        "reported_cost_usd": 1.7077607500000005,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4146,
-        "reported_cost_usd": 4.829606397499999,
+        "calls": 4231,
+        "reported_cost_usd": 4.944069472499998,
         "unknown_cost_reserved_usd": 2.8815740500000033,
-        "pending_reserved_usd": 6.071532165918825e-18
+        "pending_reserved_usd": 8.673617379884035e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
