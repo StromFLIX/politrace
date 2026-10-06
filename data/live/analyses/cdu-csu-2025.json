@@ -129317,7 +129317,7 @@
     {
       "law_id": "bgbl-1-2026-82",
       "analysis_sha256": "0caaccf972a203063b5ce40dcc37c75af66e890343feaa4889b0ade23d3b187e",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-0ef95629e5cadd0a",
@@ -129554,6 +129554,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-a189b569df8bb172",
+          "disposition": "proposed_link",
+          "rationale": "Der neue § 32f Absatz 3 erlaubt dem Bundeskartellamt verhaltensorientierte oder strukturelle Abhilfemaßnahmen bei erheblicher und fortwährender Wettbewerbsstörung, wenn sonstige Befugnisse voraussichtlich nicht ausreichen. Einen Rechtsverstoß setzt diese Eingriffsbefugnis nicht voraus. Das Gesetz tritt am Tag nach der Verkündung in Kraft.",
+          "input_sha256": "e63a317788eb831308433cef49871eb61e6294ea85a29c9cfcd7aa428436ce05",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2db9005a82b2e0a00bccb3da5b5523cd2cdb34f48f871a914bf22b562515a458"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e63a317788eb831308433cef49871eb61e6294ea85a29c9cfcd7aa428436ce05"
+            }
+          ],
+          "impact_id": "impact-d73cd5aebde8d722",
+          "judgment": {
+            "supported": true,
+            "score": -2,
+            "confidence": 0.94,
+            "rationale": "Der neue § 32f Absatz 3 erlaubt dem Bundeskartellamt verhaltensorientierte oder strukturelle Abhilfemaßnahmen bei erheblicher und fortwährender Wettbewerbsstörung, wenn sonstige Befugnisse voraussichtlich nicht ausreichen. Einen Rechtsverstoß setzt diese Eingriffsbefugnis nicht voraus. Das Gesetz tritt am Tag nach der Verkündung in Kraft.",
+            "law_passage_id": "bgbl-1-2026-82-p-efadb2ed602161a5",
+            "law_quote": "„Wenn eine erhebliche und fortwährende Störung des Wettbewerbs auf mindestens einem mindestens\nbundesweiten Markt, mehreren einzelnen Märkten oder marktübergreifend vorliegt, kann das\nBundeskartellamt, soweit die Anwendung der sonstigen Befugnisse nach Teil 1 nach den im Zeitpunkt der\nEntscheidung beim Bundeskartellamt vorliegenden Erkenntnissen voraussichtlich nicht ausreichend\nerscheint, gegenüber Unternehmen alle Abhilfemaßnahmen verhaltensorientierter oder struktureller Art\nvorschreiben, die zur Beseitigung oder Verringerung der Störung des Wettbewerbs erforderlich sind.“",
+            "criterion_quote": "Wir binden die wettbewerbsrechtlichen Befugnisse des Bundeskartellamts zum Markteingriff wieder an einen Rechtsverstoß.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a189b569df8bb172",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz richtet keinen europäischen Normenkontrollrat ein und regelt keine Messung von Bürokratiekosten oder EU-Rechtserfahrungen.",
@@ -129577,6 +129609,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bcbda44728920fbb",
+          "disposition": "proposed_link",
+          "rationale": "Bei Anhaltspunkten für die bezeichneten Verstöße muss die Markttransparenzstelle für Kraftstoffe die zuständige Behörde informieren und ihr bereits vorhandene, benötigte Informationen und Daten unverzüglich weiterleiten. Das verbessert den behördlichen Datenaustausch in diesen Fällen.",
+          "input_sha256": "e63a317788eb831308433cef49871eb61e6294ea85a29c9cfcd7aa428436ce05",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2db9005a82b2e0a00bccb3da5b5523cd2cdb34f48f871a914bf22b562515a458"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e63a317788eb831308433cef49871eb61e6294ea85a29c9cfcd7aa428436ce05"
+            }
+          ],
+          "impact_id": "impact-4fd4ba829b8e7321",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Bei Anhaltspunkten für die bezeichneten Verstöße muss die Markttransparenzstelle für Kraftstoffe die zuständige Behörde informieren und ihr bereits vorhandene, benötigte Informationen und Daten unverzüglich weiterleiten. Das verbessert den behördlichen Datenaustausch in diesen Fällen.",
+            "law_passage_id": "bgbl-1-2026-82-p-10af18c047b8bb94",
+            "law_quote": "In den Fällen des Satzes 1 leitet die Markttransparenzstelle für Kraftstoffe alle\nbei ihr vorhandenen und von der jeweils zuständigen Behörde für deren Aufgaben nach diesem Gesetz oder\nnach dem Kraftstoffpreisanpassungsgesetz benötigten Informationen und Daten unverzüglich an diese weiter.",
+            "criterion_quote": "Dafür muss die Behördenkommunikation über bereits vorliegende Daten besser werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bcbda44728920fbb",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -129666,7 +129730,7 @@
     {
       "law_id": "bgbl-1-2026-83",
       "analysis_sha256": "153842ff199a68aae0b56b02037fe01cb262f8a70694a86e1006cbcf61e80490",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -129686,7 +129750,415 @@
         "cdu-csu-2025-ac-f3573b231ba6487f"
       ],
       "omitted_count": 950,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz betrifft die Vaterschaftsanfechtung; ob das Mercosur-Abkommen in Kraft getreten ist und ob CDU/CSU auf ein zügiges Inkrafttreten hingewirkt haben, ist aus den vorliegenden Quellen nicht ersichtlich.",
+          "input_sha256": "fe561725d5afc422dcc629998e9d889d1ea1992ffd1fbb674ca25fa905bd3327",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fe561725d5afc422dcc629998e9d889d1ea1992ffd1fbb674ca25fa905bd3327"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Vaterschaftsanfechtung; ob das Mercosur-Abkommen in Kraft getreten ist und ob CDU/CSU auf ein zügiges Inkrafttreten hingewirkt haben, ist aus den vorliegenden Quellen nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Für Inkrafttreten und politisches Eintreten fehlen Nachweise."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Regelungen zur Vaterschaftsanfechtung und enthält keine Vorgaben zur Entlassung von Beamten oder Soldaten.",
+          "input_sha256": "fe561725d5afc422dcc629998e9d889d1ea1992ffd1fbb674ca25fa905bd3327",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fe561725d5afc422dcc629998e9d889d1ea1992ffd1fbb674ca25fa905bd3327"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Regelungen zur Vaterschaftsanfechtung und enthält keine Vorgaben zur Entlassung von Beamten oder Soldaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-225d2c26396603ad",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Vaterschaftsanfechtung; eine Regelung zum Renteneintrittsalter enthält es nicht.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Vaterschaftsanfechtung; eine Regelung zum Renteneintrittsalter enthält es nicht.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "An der bestehenden gesetzlichen Regelung\nzum Renteneintrittsalter halten wir fest.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-225d2c26396603ad",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zur Vaterschaftsanfechtung, nicht den Instanzenweg in den beschriebenen Fällen.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zur Vaterschaftsanfechtung, nicht den Instanzenweg in den beschriebenen Fällen.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Wo möglich und sinnvoll, sehen wir im Sinne schnellerer Rechtssicherheit eine Kürzung\ndes Instanzenwegs auf zwei Instanzen vor.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Vaterschaftsanfechtungen und ändert keine Vorschriften zu Grenzkontrollen.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Vaterschaftsanfechtungen und ändert keine Vorschriften zu Grenzkontrollen.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Die erforderlichen Kontrollen an\nden deutschen Grenzen verlängern wir, solange es notwendig ist.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3dd9fd5f3e4df99c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Kraftwerksabschaltungen oder Ersatzanlagen, sondern betrifft die Vaterschaftsanfechtung.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Kraftwerksabschaltungen oder Ersatzanlagen, sondern betrifft die Vaterschaftsanfechtung.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Auf dem Weg darf es kein weiteres endgültiges Abschalten von Kohlekraftwerken geben, solange als Ersatz keine neuen Gaskraftwerke und Kraft-WärmeKopplungs-Anlagen gebaut sind.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3dd9fd5f3e4df99c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3fd722e20b6e3cb9",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Anerkennung und Anfechtung der Vaterschaft, nicht Geschlechts- oder Vornamensänderungen Minderjähriger.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Anerkennung und Anfechtung der Vaterschaft, nicht Geschlechts- oder Vornamensänderungen Minderjähriger.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Es braucht in jedem Fall unabhängige psychologische Gutachten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3fd722e20b6e3cb9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-51ee0c35e86d4562",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Vaterschaftsanfechtungen und enthält keinen Vorschlag zu EU-Beitrittskandidaten oder Zwischenstufen.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Vaterschaftsanfechtungen und enthält keinen Vorschlag zu EU-Beitrittskandidaten oder Zwischenstufen.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "- Länder auf ihrem Weg in die EU unterstützen. Der Beitritt der Länder des westlichen Balkans, der Ukraine und der Republik Moldau liegt in unserem sicherheits- und geopolitischen Interesse. Deshalb schlagen wir Zwischenstufen für Kandidatenländer vor, die\nnoch nicht alle Beitrittsanforderungen erfüllen, aber die Reformen hin zu einer Mitgliedschaft beherzt umsetzen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-51ee0c35e86d4562",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert kein Altersvorsorgedepot und begründet keine monatlichen Einzahlungen für Kinder.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert kein Altersvorsorgedepot und begründet keine monatlichen Einzahlungen für Kinder.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Deshalb werden wir für jedes Kind vom 6. bis zum 18.\nLebensjahr pro Monat 10 Euro in ein individuelles, kapitalgedecktes und privatwirtschaftlich organisiertes Altersvorsorgedepot einzahlen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Gesetzesänderungen betreffen Vaterschaft und Personenstand, nicht die Kontrolle über Erhebung und Nutzung persönlicher Daten im Allgemeinen.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Gesetzesänderungen betreffen Vaterschaft und Personenstand, nicht die Kontrolle über Erhebung und Nutzung persönlicher Daten im Allgemeinen.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "- Eigenverantwortung stärken. Anstelle von Datenminimierung setzen wir auf Datensouveränität und Datensorgfalt: Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-709887b345ed348d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Umgangsrecht oder zum Ausschluss gewalttätiger Elternteile von der Betreuung.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Umgangsrecht oder zum Ausschluss gewalttätiger Elternteile von der Betreuung.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Im Umgangsrecht\nsoll gelten: Wenn ein Elternteil dem Kind Gewalt antut, muss es von der Betreuung ausgeschlossen werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-709887b345ed348d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a07b7d53468a9eec",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zur Vaterschaftsanfechtung, nicht arbeitsrechtliche Schriftformerfordernisse.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zur Vaterschaftsanfechtung, nicht arbeitsrechtliche Schriftformerfordernisse.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "- Schriftform im Arbeitsrecht lockern. Wir stellen alle noch bestehenden arbeitsrechtlichen Erfordernisse der Niederschrift auf Papier mit eigenhändiger Unterschrift und persönlicher oder postalischer Übergabe auf den Prüfstand.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a07b7d53468a9eec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-acd6ee4e57933023",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine wissenschaftliche Untersuchung zur Strafmündigkeitsgrenze vor; es regelt Vaterschaftsanfechtungen.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine wissenschaftliche Untersuchung zur Strafmündigkeitsgrenze vor; es regelt Vaterschaftsanfechtungen.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Wir lassen dies durch eine wissenschaftliche Untersuchung prüfen, um gegebenenfalls das Mindestalter für die Strafmündigkeit anzupassen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-acd6ee4e57933023",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Vaterschaftsanfechtung und enthält keine Prüfung der Umsetzung einer EU-Richtlinie.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Vaterschaftsanfechtung und enthält keine Prüfung der Umsetzung einer EU-Richtlinie.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Kurzfristig prüfen wir, wo die Umsetzung der entsprechenden\nRichtlinie entscheidend über das notwendige europäische Regelungsmaß hinausgeht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bf02ed16447f0713",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f3573b231ba6487f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Vaterschaftsanfechtungen, nicht die Prüfung einer Wiederaufnahme von Kernkraftwerken.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Vaterschaftsanfechtungen, nicht die Prüfung einer Wiederaufnahme von Kernkraftwerken.",
+            "law_passage_id": "bgbl-1-2026-83-p-8bdc882b80f25aa9",
+            "law_quote": "**zur Vaterschaftsanfechtung**",
+            "criterion_quote": "Die Wiederaufnahme des Betriebs der zuletzt abgeschalteten Kernkraftwerke\nprüfen wir.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f3573b231ba6487f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-84",
@@ -129712,12 +130184,420 @@
         "cdu-csu-2025-ac-f7d40c2c126e84d4"
       ],
       "omitted_count": 949,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Änderungen betreffen Wasserstoffzulassungen und enthalten keine Regel zur Entlassung von Beamten oder Soldaten.",
+          "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die bereitgestellten Änderungen betreffen Wasserstoffzulassungen und enthalten keine Regel zur Entlassung von Beamten oder Soldaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir\nlehnen es jedoch ab, einen Beamten oder Zeit- und Berufssoldaten ohne richterlichen\nBeschluss durch einfachen Verwaltungsakt zu entlassen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19bfeb14ca60eb16",
+          "disposition": "missing_context",
+          "rationale": "Die Änderung erwähnt Anzeigeverfahren für Wasserstoffanlagen an Bundesfernstraßen; ob die dafür geltenden Regeln auch die genannten Ersatzneubauten, Änderungen und Erweiterungen statt eines Planfeststellungsverfahrens erfassen, ist ohne den Wortlaut des § 9 Absatz 2c nicht feststellbar.",
+          "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.84,
+            "rationale": "Die Änderung erwähnt Anzeigeverfahren für Wasserstoffanlagen an Bundesfernstraßen; ob die dafür geltenden Regeln auch die genannten Ersatzneubauten, Änderungen und Erweiterungen statt eines Planfeststellungsverfahrens erfassen, ist ohne den Wortlaut des § 9 Absatz 2c nicht feststellbar.",
+            "law_passage_id": "bgbl-1-2026-84-p-d359262a01dc37b6",
+            "law_quote": "Absatz 2c Satz 2 ist für die in Satz 1 genannten Anlagen entsprechend anzuwenden, auch bei der Durchführung von Anzeigeverfahren.",
+            "criterion_quote": "Ersatzneubauten, unwesentliche Änderungen oder Erweiterungen können anstelle des Planfeststellungsverfahrens\ndurch ein Anzeigeverfahren zugelassen werden.",
+            "caveats": [
+              "Der zugrunde liegende Wortlaut des § 9 Absatz 2c und die genaue Reichweite der Verweisung sind nicht bereitgestellt."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-19bfeb14ca60eb16",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Vorschriften beschleunigen Wasserstoffzulassungen; eine Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke ist darin nicht belegt.",
+          "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Vorschriften beschleunigen Wasserstoffzulassungen; eine Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Gleichzeitig streben wir schnellstmöglich eine fachliche Bestandsaufnahme an,\nob angesichts des jeweiligen Rückbaustadiums eine Wiederaufnahme des Betriebs der\nzuletzt abgeschalteten Kernkraftwerke unter vertretbarem technischem und finanziellem Aufwand noch möglich ist.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Passagen enthalten keine Regelung zu Kontrollen an deutschen Grenzen oder deren Verlängerung.",
+          "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Passagen enthalten keine Regelung zu Kontrollen an deutschen Grenzen oder deren Verlängerung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die erforderlichen Kontrollen an\nden deutschen Grenzen verlängern wir, solange es notwendig ist.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-55dbd8c875f3a245",
+          "disposition": "no_supported_link",
+          "rationale": "Die bereitgestellten Passagen enthalten keine Änderung des Strafrechts für Heranwachsende oder zur Anwendung des allgemeinen Strafrechts auf 18- bis 21-Jährige.",
+          "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ebd340f6a2c89b700f8971bd7181f9fcb612601498cbdb4e99cd822b3bd3eb6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die bereitgestellten Passagen enthalten keine Änderung des Strafrechts für Heranwachsende oder zur Anwendung des allgemeinen Strafrechts auf 18- bis 21-Jährige.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Künftig soll\nauf alle Heranwachsende (18 bis 21 Jahre) das allgemeine Strafrecht Anwendung finden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-55dbd8c875f3a245",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft Rahmenbedingungen für Wasserstoffinfrastruktur, enthält aber keine Vorgabe zur öffentlichen Ausweisung kommunaler Empfänger oder Förderhöhen.",
+          "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz schafft Rahmenbedingungen für Wasserstoffinfrastruktur, enthält aber keine Vorgabe zur öffentlichen Ausweisung kommunaler Empfänger oder Förderhöhen.",
+            "law_passage_id": "bgbl-1-2026-84-p-265cf8795c38a649",
+            "law_quote": "Zweck dieses Gesetzes ist die Schaffung rechtlicher Rahmenbedingungen für den vereinfachten und\nbeschleunigten Auf- und Ausbau einer Infrastruktur für die Erzeugung, die Speicherung, den Import und den\nTransport von Wasserstoff.",
+            "criterion_quote": "Die Länder sollen transparent machen, inwieweit sie Geld vom Bund\nzweckmäßig eingesetzt haben und welche Kommune in welcher Höhe profitiert.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e2bfb6e7a15c664",
+          "disposition": "no_supported_link",
+          "rationale": "Das überragende öffentliche Interesse gilt hier nur für Wasserstoffanlagen und -leitungen bis zur Treibhausgasneutralität 2045; Mobilfunk und Glasfaser werden nicht erfasst.",
+          "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das überragende öffentliche Interesse gilt hier nur für Wasserstoffanlagen und -leitungen bis zur Treibhausgasneutralität 2045; Mobilfunk und Glasfaser werden nicht erfasst.",
+            "law_passage_id": "bgbl-1-2026-84-p-d37d81308deb6959",
+            "law_quote": "(1) Die Errichtung oder der Betrieb einer Anlage oder Leitung nach § 2 Absatz 1 liegen bis zum Erreichen der\nNetto-Treibhausgasneutralität im Jahr 2045 im überragenden öffentlichen Interesse und dienen der öffentlichen\nSicherheit.",
+            "criterion_quote": "bis zur Erreichung aller Ausbauziele sowohl den Mobilfunk als auch den Glasfaserausbau in das überragende öffentliche Interesse zu stellen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e2bfb6e7a15c664",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen den Ausbau von Wasserstoffinfrastruktur und gewähren keine individuelle Kontrolle über Erhebung oder Nutzung personenbezogener Daten.",
+          "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen den Ausbau von Wasserstoffinfrastruktur und gewähren keine individuelle Kontrolle über Erhebung oder Nutzung personenbezogener Daten.",
+            "law_passage_id": "bgbl-1-2026-84-p-265cf8795c38a649",
+            "law_quote": "Zweck dieses Gesetzes ist die Schaffung rechtlicher Rahmenbedingungen für den vereinfachten und\nbeschleunigten Auf- und Ausbau einer Infrastruktur für die Erzeugung, die Speicherung, den Import und den\nTransport von Wasserstoff.",
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-888836e482f3e4e0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht den Ausbau von Wasserstofftransportinfrastruktur, regelt aber nicht die Transportinfrastruktur für CO₂ aus CCU, CCS oder DACCS.",
+          "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a8c727144bb59eb80ed43b1cbb4e670bcb47b1ff5dbb85221a8be9c27f588ba8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ermöglicht den Ausbau von Wasserstofftransportinfrastruktur, regelt aber nicht die Transportinfrastruktur für CO₂ aus CCU, CCS oder DACCS.",
+            "law_passage_id": "bgbl-1-2026-84-p-265cf8795c38a649",
+            "law_quote": "Zweck dieses Gesetzes ist die Schaffung rechtlicher Rahmenbedingungen für den vereinfachten und\nbeschleunigten Auf- und Ausbau einer Infrastruktur für die Erzeugung, die Speicherung, den Import und den\nTransport von Wasserstoff.",
+            "criterion_quote": "Wir schaffen die\nnotwendigen Rahmenbedingungen, um Carbon Capture and Utilization (CCU), Carbon\nCapture and Storage (CCS) und Direct Air Capture (DACCS) sowie die erforderliche Transportinfrastruktur zu ermöglichen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-888836e482f3e4e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft Rahmenbedingungen für Wasserstoffinfrastruktur; einen Kassensturz zu Beginn der Wahlperiode regelt es nicht.",
+          "input_sha256": "e4005dc60d431df44483484419e2e9958534c8a51229e0bd319147493d3c2593",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e4005dc60d431df44483484419e2e9958534c8a51229e0bd319147493d3c2593"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft Rahmenbedingungen für Wasserstoffinfrastruktur; einen Kassensturz zu Beginn der Wahlperiode regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-84-p-265cf8795c38a649",
+            "law_quote": "Zweck dieses Gesetzes ist die Schaffung rechtlicher Rahmenbedingungen für den vereinfachten und beschleunigten Auf- und Ausbau einer Infrastruktur für die Erzeugung, die Speicherung, den Import und den Transport von Wasserstoff.",
+            "criterion_quote": "Unmittelbar zu Beginn der neuen Wahlperiode machen wir einen ehrlichen Kassensturz",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-c26b261ef4053ba9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft Rahmenbedingungen für Wasserstoffinfrastruktur; eine Klarstellung gegen Antisemitismus in Parteien oder gesellschaftlichen Bereichen enthält es nicht.",
+          "input_sha256": "bac0d250c8f05d61acf8149378e8fd4b278fc1812c9eebfb8f89873396bc0ef9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bac0d250c8f05d61acf8149378e8fd4b278fc1812c9eebfb8f89873396bc0ef9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft Rahmenbedingungen für Wasserstoffinfrastruktur; eine Klarstellung gegen Antisemitismus in Parteien oder gesellschaftlichen Bereichen enthält es nicht.",
+            "law_passage_id": "bgbl-1-2026-84-p-265cf8795c38a649",
+            "law_quote": "Zweck dieses Gesetzes ist die Schaffung rechtlicher Rahmenbedingungen für den vereinfachten und beschleunigten Auf- und Ausbau einer Infrastruktur für die Erzeugung, die Speicherung, den Import und den Transport von Wasserstoff.",
+            "criterion_quote": "Wir erwarten von Parteien, Wissenschaft, Medien, Kunst und Kultur die Klarstellung, dass es in ihren Reihen keinen Raum für antisemitische Ansichten gibt.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-c26b261ef4053ba9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-db119a963f610202",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stuft ausschließlich Wasserstoffanlagen und -leitungen bis zur Treibhausgasneutralität 2045 als überragendes öffentliches Interesse ein, nicht den Glasfaserausbau.",
+          "input_sha256": "bac0d250c8f05d61acf8149378e8fd4b278fc1812c9eebfb8f89873396bc0ef9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bac0d250c8f05d61acf8149378e8fd4b278fc1812c9eebfb8f89873396bc0ef9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stuft ausschließlich Wasserstoffanlagen und -leitungen bis zur Treibhausgasneutralität 2045 als überragendes öffentliches Interesse ein, nicht den Glasfaserausbau.",
+            "law_passage_id": "bgbl-1-2026-84-p-d37d81308deb6959",
+            "law_quote": "Die Errichtung oder der Betrieb einer Anlage oder Leitung nach § 2 Absatz 1 liegen bis zum Erreichen der Netto-Treibhausgasneutralität im Jahr 2045 im überragenden öffentlichen Interesse und dienen der öffentlichen Sicherheit.",
+            "criterion_quote": "bis zur Erreichung aller Ausbauziele sowohl den Mobilfunk als auch den Glasfaserausbau in das überragende öffentliche Interesse zu stellen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-db119a963f610202",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e1f514e4ee38ed93",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz beschleunigt Wasserstoffvorhaben; eine Nutzung von Windenergie an Land oder auf See wird dadurch nicht geregelt oder nachgewiesen.",
+          "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz beschleunigt Wasserstoffvorhaben; eine Nutzung von Windenergie an Land oder auf See wird dadurch nicht geregelt oder nachgewiesen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Windenergie an Land und auf See",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e1f514e4ee38ed93",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f3573b231ba6487f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Prüfung der Wiederinbetriebnahme abgeschalteter Kernkraftwerke.",
+          "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Gesetz enthält keine Prüfung der Wiederinbetriebnahme abgeschalteter Kernkraftwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Wiederaufnahme des Betriebs der zuletzt abgeschalteten Kernkraftwerke\nprüfen wir.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f3573b231ba6487f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f7d40c2c126e84d4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Sonderregeln beschleunigen bestimmte Wasserstoffverfahren; eine allgemeine Ausrichtung von Regelungen am Regelfall ist nicht vorgesehen.",
+          "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Sonderregeln beschleunigen bestimmte Wasserstoffverfahren; eine allgemeine Ausrichtung von Regelungen am Regelfall ist nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir richten Gesetze und andere Regelungen wieder stärker auf den grundsätzlichen Anwendungsfall aus, nicht in erster Linie\nauf den Ausnahmefall.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f7d40c2c126e84d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-85",
       "analysis_sha256": "98cee1aa79b67bd3405172833e7ef32fb4ca88b125993368fde7973f869871d2",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-16889e23b2bd4cfc",
@@ -129736,12 +130616,391 @@
         "cdu-csu-2025-ac-f9680e1924a12725"
       ],
       "omitted_count": 951,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Entlassung von Beamten oder Zeit- und Berufssoldaten.",
+          "input_sha256": "5eed0976dfe1396b225168cf9370b89ee17121df70c96743338b24aee8bd230e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eed0976dfe1396b225168cf9370b89ee17121df70c96743338b24aee8bd230e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Entlassung von Beamten oder Zeit- und Berufssoldaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+          "input_sha256": "5eed0976dfe1396b225168cf9370b89ee17121df70c96743338b24aee8bd230e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5eed0976dfe1396b225168cf9370b89ee17121df70c96743338b24aee8bd230e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1c99f6258866cedf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Ferienangebote der Jugendarbeit und ernennt keinen Staatsminister.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Ferienangebote der Jugendarbeit und ernennt keinen Staatsminister.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1c99f6258866cedf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung zu Ferienangeboten enthält keine Zuordnung ihrer Finanzierung und keinen Ausgleich von Mehrausgaben oder Mindereinnahmen.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelung zu Ferienangeboten enthält keine Zuordnung ihrer Finanzierung und keinen Ausgleich von Mehrausgaben oder Mindereinnahmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verpflichtet die Länder nicht, kommunale Empfänger oder Förderhöhen öffentlich auszuweisen.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verpflichtet die Länder nicht, kommunale Empfänger oder Förderhöhen öffentlich auszuweisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e3dfe6aa9fdbe1a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Ferienregelung betrifft Jugendarbeit, enthält aber keine Vorgabe zur Schwimmfähigkeit von Kindern.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Ferienregelung betrifft Jugendarbeit, enthält aber keine Vorgabe zur Schwimmfähigkeit von Kindern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e3dfe6aa9fdbe1a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b743f84d3e25c4d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert den Wettbewerb „Jugend forscht“ nicht.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert den Wettbewerb „Jugend forscht“ nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b743f84d3e25c4d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8ce02a5f3f0873f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schließt keine beobachteten Vereine oder Verbände von staatlichen Geldern aus.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schließt keine beobachteten Vereine oder Verbände von staatlichen Geldern aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8ce02a5f3f0873f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9865f28f7e14c69b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Anpassung des Kindergelds für im EU-Ausland lebende Kinder.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Anpassung des Kindergelds für im EU-Ausland lebende Kinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9865f28f7e14c69b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b30477f5a411a8e3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zur Stiftung für Engagement und Ehrenamt sehen keine gezielte Unterstützung von Menschenrechtsverteidigern vor.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen zur Stiftung für Engagement und Ehrenamt sehen keine gezielte Unterstützung von Menschenrechtsverteidigern vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b30477f5a411a8e3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b6888147d6e29d46",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorgabe zum Personalbestand der Ministerial- oder Bundestagsverwaltung.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Vorgabe zum Personalbestand der Ministerial- oder Bundestagsverwaltung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b6888147d6e29d46",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e342ffb714cd2e3d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz etabliert keine Gerichtsverfahren zur Aufarbeitung von Straftaten von Kindern.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz etabliert keine Gerichtsverfahren zur Aufarbeitung von Straftaten von Kindern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e342ffb714cd2e3d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f2e1b45e98ea6972",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt den Staatsminister für Sport und Ehrenamt im Bundeskanzleramt als Mitglied und Vorsitzenden des Stiftungsrats; es regelt aber nicht, dass die Sportpolitik dort angesiedelt wird.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz nennt den Staatsminister für Sport und Ehrenamt im Bundeskanzleramt als Mitglied und Vorsitzenden des Stiftungsrats; es regelt aber nicht, dass die Sportpolitik dort angesiedelt wird.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f2e1b45e98ea6972",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht keinen Grunderwerbsteuer-Freibetrag für den erstmaligen Eigenheimerwerb.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermöglicht keinen Grunderwerbsteuer-Freibetrag für den erstmaligen Eigenheimerwerb.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-86",
       "analysis_sha256": "e4daa27998e9bbf7525172eae0312a188a41de3e7cb2b03172c6ff37fef66e8f",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-04af751d9a6c5e80",
@@ -129759,7 +131018,361 @@
         "cdu-csu-2025-ac-ee4dbeaf4e03251b"
       ],
       "omitted_count": 952,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder die Übermittlung von Verwaltungsdaten noch ein Once-Only-Prinzip.",
+          "input_sha256": "79f11d4249f6ab5cc30d374ad5b5087b9d0b21d262487e79faba6df07bbcc776",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79f11d4249f6ab5cc30d374ad5b5087b9d0b21d262487e79faba6df07bbcc776"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder die Übermittlung von Verwaltungsdaten noch ein Once-Only-Prinzip.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Einsatz elektronischer Fußfesseln.",
+          "input_sha256": "79f11d4249f6ab5cc30d374ad5b5087b9d0b21d262487e79faba6df07bbcc776",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "79f11d4249f6ab5cc30d374ad5b5087b9d0b21d262487e79faba6df07bbcc776"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Einsatz elektronischer Fußfesseln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e46a9174b5327e5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Änderungsgesetz enthält keine Voraussetzung zur staatlichen Förderung von Einrichtungen.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Änderungsgesetz enthält keine Voraussetzung zur staatlichen Förderung von Einrichtungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2e46a9174b5327e5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Chemikalienrecht, nicht Kontrollen an deutschen Grenzen.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Chemikalienrecht, nicht Kontrollen an deutschen Grenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Möglichkeit, Dienst in einer Blaulichtorganisation abzuleisten, wird nicht geregelt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Möglichkeit, Dienst in einer Blaulichtorganisation abzuleisten, wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4791db7f0df08151",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Energie- oder Umsatzsteuer in Krisen.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Energie- oder Umsatzsteuer in Krisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4791db7f0df08151",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Arbeits- oder Arbeitspflicht im Rahmen der Grundsicherung wird nicht geregelt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Arbeits- oder Arbeitspflicht im Rahmen der Grundsicherung wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6b96263eac1f3571",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Verlegung der Bundesanstalt nach Berlin.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Verlegung der Bundesanstalt nach Berlin.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Eine allgemeine individuelle Kontrolle über Erhebung und Nutzung personenbezogener Daten wird nicht geregelt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine allgemeine individuelle Kontrolle über Erhebung und Nutzung personenbezogener Daten wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-90897897f5fdb789",
+          "disposition": "no_supported_link",
+          "rationale": "Der Text führt EU-Regeln zu fluorierten Treibhausgasen und ozonabbauenden Stoffen durch; ein grundsätzliches PFAS-Verbot oder dessen Ablehnung regelt er nicht.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Text führt EU-Regeln zu fluorierten Treibhausgasen und ozonabbauenden Stoffen durch; ein grundsätzliches PFAS-Verbot oder dessen Ablehnung regelt er nicht.",
+            "law_passage_id": "bgbl-1-2026-86-p-607fa9ad2117a95f",
+            "law_quote": "Dieses Gesetz dient der Durchführung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-90897897f5fdb789",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9ac203b5221051ec",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Ausweitung der Funkzellenauswertung wird im Änderungsgesetz nicht geregelt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Ausweitung der Funkzellenauswertung wird im Änderungsgesetz nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9ac203b5221051ec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Ausweitung der Telekommunikationsüberwachung wird im Änderungsgesetz nicht geregelt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Ausweitung der Telekommunikationsüberwachung wird im Änderungsgesetz nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ee4dbeaf4e03251b",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz erlaubt Verteidigungsressorts unter bestimmten Bedingungen Ausnahmen von Regelungen; ohne den Inhalt des in Bezug genommenen § 24 Absatz 1 lässt sich nicht feststellen, ob dies Einschränkungen militärischer Forschung aufhebt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.83,
+            "rationale": "Das Gesetz erlaubt Verteidigungsressorts unter bestimmten Bedingungen Ausnahmen von Regelungen; ohne den Inhalt des in Bezug genommenen § 24 Absatz 1 lässt sich nicht feststellen, ob dies Einschränkungen militärischer Forschung aufhebt.",
+            "law_passage_id": "bgbl-1-2026-86-p-3bcd685df68ffeba",
+            "law_quote": "Das Bundesministerium der Verteidigung und das Bundesministerium des Innern können für ihren Geschäftsbereich für bestimmte Stoffe, Gemische, Erzeugnisse und Einrichtungen Ausnahmen von den in Absatz 1 genannten Rechtsvorschriften zulassen, wenn dies im Interesse der Landesverteidigung erforderlich und unionsrechtlich zulässig ist.",
+            "criterion_quote": "und daraufhin wirkende Einschränkungen für militärische Forschung aufheben.",
+            "caveats": [
+              "Der Inhalt des in Bezug genommenen § 24 Absatz 1 ist nicht mitgeliefert."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-ee4dbeaf4e03251b",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-87",
@@ -131830,51 +133443,51 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6163,
-    "cache_hits": 102,
-    "subdivision_cache_hits": 0,
+    "calls": 6234,
+    "cache_hits": 103,
+    "subdivision_cache_hits": 6,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 27.708457,
-    "reported_cost_calls": 5580,
+    "reported_cost_usd": 27.861359,
+    "reported_cost_calls": 5645,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.391395,
-    "unknown_cost_calls": 583,
+    "unknown_cost_reserved_usd": 3.421889,
+    "unknown_cost_calls": 589,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 31.099853,
-    "prompt_tokens": 63910584,
-    "completion_tokens": 10579888,
+    "budget_exposure_usd": 31.283248,
+    "prompt_tokens": 64530694,
+    "completion_tokens": 10694767,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 246,
-        "reported_cost_usd": 6.118443,
+        "calls": 249,
+        "reported_cost_usd": 6.178767000000001,
         "unknown_cost_reserved_usd": 1.2073675392798577e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 104,
-        "reported_cost_usd": 1.3844357500000004,
+        "calls": 105,
+        "reported_cost_usd": 1.3977375000000003,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2916,
-        "reported_cost_usd": 3.3211087974999933,
-        "unknown_cost_reserved_usd": 2.4069194000000014,
-        "pending_reserved_usd": 8.673617379884035e-19
+        "calls": 2982,
+        "reported_cost_usd": 3.3791013249999935,
+        "unknown_cost_reserved_usd": 2.4374134500000015,
+        "pending_reserved_usd": 3.469446951953614e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
         "stage": "screening",
-        "calls": 2,
-        "reported_cost_usd": 0.02665575,
+        "calls": 3,
+        "reported_cost_usd": 0.04793875,
         "unknown_cost_reserved_usd": 0.0,
         "pending_reserved_usd": 0
       }

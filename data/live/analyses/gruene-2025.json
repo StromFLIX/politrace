@@ -222298,7 +222298,7 @@
     {
       "law_id": "bgbl-1-2026-83",
       "analysis_sha256": "a25be78adaaad8ffac8478f34ddbc18028d9dd3c2ccded724c954846b7686086",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-05886f382af52824",
@@ -222318,6 +222318,33 @@
       ],
       "omitted_count": 1626,
       "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-05886f382af52824",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung im SGB VIII betrifft die Beurkundung von Vaterschaftserklärungen; eine zentrale Ansprechstelle der Kinder- und Jugendhilfe regelt sie nicht.",
+          "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3976ea501b5d39145ece51d51e834d7577df1040eadb2652e526dd52c772e7de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung im SGB VIII betrifft die Beurkundung von Vaterschaftserklärungen; eine zentrale Ansprechstelle der Kinder- und Jugendhilfe regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2026-83-p-7ff4768774198e13",
+            "law_quote": "erforderliche Zustimmungserklärung des Mannes, der dem Kind bislang als Vater zugeordnet war, des Kindes,\ndes Jugendlichen oder eines gesetzlichen Vertreters zu einer solchen Erklärung (Erklärungen über die\nAnerkennung der Vaterschaft) zu beurkunden,“.",
+            "criterion_quote": "eine zentrale Ansprechstelle haben und\nganzheitlich und individuell gefördert\nwerden.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-05886f382af52824",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "gruene-2025-ac-06ce9c1b67ba6a7f",
           "disposition": "no_supported_link",
@@ -222674,7 +222701,7 @@
     {
       "law_id": "bgbl-1-2026-84",
       "analysis_sha256": "41b980d26c8805bdf003edd1d10fe2bd53a9adcf515adbb90898dd2b3cb1f3fb",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-0a6e0fc493498274",
@@ -222753,6 +222780,87 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-1e8e3c810fb734f7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2e58f76e61074242",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Wasserstoffvorhaben, nicht Priorisierung oder Beschleunigung von Hochwasserschutzmaßnahmen.",
+          "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die Regelungen betreffen Wasserstoffvorhaben, nicht Priorisierung oder Beschleunigung von Hochwasserschutzmaßnahmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Hochwasserschutzmaßnahmen wollen wir prioritär und beschleunigt\numsetzen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-2e58f76e61074242",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-4ea44e34fbc14764",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erleichtert Wasserstoffinfrastruktur, schreibt aber keinen Betrieb neuer Kraftwerke mit grünem Wasserstoff vor.",
+          "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz erleichtert Wasserstoffinfrastruktur, schreibt aber keinen Betrieb neuer Kraftwerke mit grünem Wasserstoff vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und eine neue Generation von möglichst\nbald mit grünem Wasserstoff betriebenen\nKraftwerken",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-4ea44e34fbc14764",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-6706728537c9ebb1",
+          "disposition": "no_supported_link",
+          "rationale": "Für bestimmte Wasserstoffvorhaben werden Vergabeverfahren beschleunigt; nachhaltige Beschaffung wird weder zur Regel gemacht noch als Vergabekriterium festgelegt.",
+          "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "342bf8e62b4ebbc2df1584d7345ff1349b5eb9e74a2210ab1b324faf82befb90"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Für bestimmte Wasserstoffvorhaben werden Vergabeverfahren beschleunigt; nachhaltige Beschaffung wird weder zur Regel gemacht noch als Vergabekriterium festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "modernisieren wir das\nVergaberecht umfassend, um nachhaltige\nBeschaffung zu vereinfachen und zur Regel\nzu machen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-6706728537c9ebb1",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -223262,7 +223370,7 @@
     {
       "law_id": "bgbl-1-2026-85",
       "analysis_sha256": "f75cf2ff1fc29d3e5b056a530bba127b89211d52cbc69c67afa53dc4a03ba310",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-0cbba64a7dbaf620",
@@ -223336,6 +223444,33 @@
               "Die bloße thematische Nähe zur Jugendarbeit belegt keine Unterstützung kommunaler Strukturen im Sinne des Kriteriums."
             ],
             "criterion_id": "gruene-2025-ac-0d4ed59dc61e85bb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-0f70f27316275342",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Verwendung von Einnahmen aus europäischen Instrumenten.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Verwendung von Einnahmen aus europäischen Instrumenten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-0f70f27316275342",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -223616,6 +223751,60 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-c9f11a0e6107e12c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz verstetigt das Programm „Jugend erinnert“ nicht.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz verstetigt das Programm „Jugend erinnert“ nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-c9f11a0e6107e12c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-d73093da18729574",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Jugendarbeitsangebote in Schulferien vor, regelt aber keine sicheren, selbst gestalteten Aufenthaltsorte im öffentlichen Raum.",
+          "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "08ada97458b825b1b52dc6458266371038e9fb25229d230d74c8aa7f5b553145"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz sieht Jugendarbeitsangebote in Schulferien vor, regelt aber keine sicheren, selbst gestalteten Aufenthaltsorte im öffentlichen Raum.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d73093da18729574",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-efda0f94f9264f0c",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz regelt Angebote der Jugendarbeit in den Schulferien und Änderungen an der Deutschen Stiftung für Engagement und Ehrenamt. Ein Abschluss der Zusatzvereinbarung zum Berlin-Bonn-Gesetz wird darin nicht behandelt; eine tatsächliche Wirkung auf dieses Kriterium ist daher nicht belegt.",
@@ -223649,7 +223838,7 @@
     {
       "law_id": "bgbl-1-2026-86",
       "analysis_sha256": "8bb7e213e6f5c936e89d086800cb10e0f99bb46db246a76c5095f90d86bf2c71",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-142b5e389aa6813d",
@@ -223693,6 +223882,60 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-142b5e389aa6813d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-24aa0b010c4d2f2d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Änderungsgesetz enthält keine Maßnahmen gegen Sanktionsverletzungen oder zur Einbeziehung internationaler Partner.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Änderungsgesetz enthält keine Maßnahmen gegen Sanktionsverletzungen oder zur Einbeziehung internationaler Partner.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-24aa0b010c4d2f2d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2a0500869c27f6d9",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Strafbarkeit der Verbreitung von Darstellungen einer Vergewaltigung wird nicht geregelt.",
+          "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "15b52525f85961ef9dad77169cb69be35769e25be4c3233f7e7886ed3b724382"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Strafbarkeit der Verbreitung von Darstellungen einer Vergewaltigung wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-2a0500869c27f6d9",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -260011,51 +260254,51 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6163,
-    "cache_hits": 102,
-    "subdivision_cache_hits": 0,
+    "calls": 6234,
+    "cache_hits": 103,
+    "subdivision_cache_hits": 6,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 27.708457,
-    "reported_cost_calls": 5580,
+    "reported_cost_usd": 27.861359,
+    "reported_cost_calls": 5645,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.391395,
-    "unknown_cost_calls": 583,
+    "unknown_cost_reserved_usd": 3.421889,
+    "unknown_cost_calls": 589,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 31.099853,
-    "prompt_tokens": 63910584,
-    "completion_tokens": 10579888,
+    "budget_exposure_usd": 31.283248,
+    "prompt_tokens": 64530694,
+    "completion_tokens": 10694767,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 246,
-        "reported_cost_usd": 6.118443,
+        "calls": 249,
+        "reported_cost_usd": 6.178767000000001,
         "unknown_cost_reserved_usd": 1.2073675392798577e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 104,
-        "reported_cost_usd": 1.3844357500000004,
+        "calls": 105,
+        "reported_cost_usd": 1.3977375000000003,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2916,
-        "reported_cost_usd": 3.3211087974999933,
-        "unknown_cost_reserved_usd": 2.4069194000000014,
-        "pending_reserved_usd": 8.673617379884035e-19
+        "calls": 2982,
+        "reported_cost_usd": 3.3791013249999935,
+        "unknown_cost_reserved_usd": 2.4374134500000015,
+        "pending_reserved_usd": 3.469446951953614e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
         "stage": "screening",
-        "calls": 2,
-        "reported_cost_usd": 0.02665575,
+        "calls": 3,
+        "reported_cost_usd": 0.04793875,
         "unknown_cost_reserved_usd": 0.0,
         "pending_reserved_usd": 0
       }
