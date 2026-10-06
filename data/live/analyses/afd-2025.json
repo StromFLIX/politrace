@@ -150164,7 +150164,7 @@
     {
       "law_id": "bgbl-2-2026-8",
       "analysis_sha256": "3b57d7eef3970b065d08ea9e711b5576fcc227405bde5a5aac94aeef096c2fa9",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-0239ae47de43fe7b",
@@ -155850,6 +155850,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-ae0f6cc693ee6e8d",
+          "disposition": "proposed_link",
+          "rationale": "Die Vertragsparteien verpflichten sich zur Zusammenarbeit, um die Regelung des internationalen Handels mit konventionellen Waffen zu verbessern und illegalen Waffenhandel zu bekämpfen. Das unterstützt Kontrollbemühungen für konventionelle, nicht aber für nukleare Waffen.",
+          "input_sha256": "c2f44d6b902539859017a79a1edddf12906f0db9aa3b821c7fb79504de5f1dc4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "328c5f4f6e421224c3cd7f26ea4f631c4d32b89c7ef52c5f465784b8a08b0084"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c2f44d6b902539859017a79a1edddf12906f0db9aa3b821c7fb79504de5f1dc4"
+            }
+          ],
+          "impact_id": "impact-e235bafd9e4f8b45",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Die Vertragsparteien verpflichten sich zur Zusammenarbeit, um die Regelung des internationalen Handels mit konventionellen Waffen zu verbessern und illegalen Waffenhandel zu bekämpfen. Das unterstützt Kontrollbemühungen für konventionelle, nicht aber für nukleare Waffen.",
+            "law_passage_id": "bgbl-2-2026-8-p-99ab794766f4b68a",
+            "law_quote": "(5) Die Parteien verpflichten sich daher, zusammenzuarbeiten und für Koordinierung, Komplementarität und Synergie bei den\nBemühungen zu sorgen, die sie zur Regelung oder Verbesserung der Regelung des internationalen Handels mit konventionellen\nWaffen und zur Verhütung, Bekämpfung und Beseitigung des illegalen Handels mit Waffen unternehmen.",
+            "criterion_quote": "Wir setzen uns für die Stärkung und Erweiterung der Kontroll\nmechanismen in der nuklearen und konventionellen Rüstung ein,",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ae0f6cc693ee6e8d",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-af09277460f39a13",
           "disposition": "missing_context",
           "rationale": "Die bereitgestellten Auszüge belegen kein Verbot gendergerechter Sprache in öffentlichen Einrichtungen und staatlichen Stellen; wegen des nur teilweisen Gesetzeskontexts lässt sich dies nicht abschließend beurteilen.",
@@ -157535,6 +157567,38 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-d48659215b955090",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgesehene Zollabbau für Ursprungswaren nach Stufenplänen erleichtert den Warenhandel mit Chile. Die angeführte Regel gewährleistet deutschen Unternehmen aber keinen diskriminierungsfreien Zugang zu ausländischen Märkten.",
+          "input_sha256": "c2f44d6b902539859017a79a1edddf12906f0db9aa3b821c7fb79504de5f1dc4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "eff1050788cbe1ad1eae214512322c251c74defe16db29b5fb0d0a1f8bf92ff7"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c2f44d6b902539859017a79a1edddf12906f0db9aa3b821c7fb79504de5f1dc4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Der vorgesehene Zollabbau für Ursprungswaren nach Stufenplänen erleichtert den Warenhandel mit Chile. Die angeführte Regel gewährleistet deutschen Unternehmen aber keinen diskriminierungsfreien Zugang zu ausländischen Märkten.",
+            "law_passage_id": "bgbl-2-2026-8-p-7d53fd2d39c2fff0",
+            "law_quote": "(1) Sofern in diesem Abkommen nichts anderes bestimmt ist, baut jede Vertragspartei ihre Zölle auf Ursprungswaren nach Maßgabe\nihres Stufenplans in Anhang 9 ab oder beseitigt sie.",
+            "criterion_quote": "Die deutsche Außenhandelspolitik muss dabei einen diskriminie\nrungsfreien Zugang zu ausländischen Import- und Exportmärkten\n\nfür deutsche Unternehmen gewährleisten.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d48659215b955090",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-d4c6548188f504d9",
           "disposition": "no_supported_link",
           "rationale": "Die angeführten Bestimmungen führen keinen Schutz sicherheits- oder grundversorgungsrelevanter Bereiche vor Übernahmen ein.",
@@ -158720,45 +158784,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7290,
+    "calls": 7356,
     "cache_hits": 112,
-    "subdivision_cache_hits": 2,
+    "subdivision_cache_hits": 1,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 30.321033,
-    "reported_cost_calls": 6633,
+    "reported_cost_usd": 30.463864,
+    "reported_cost_calls": 6699,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.801524,
     "unknown_cost_calls": 657,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 34.122557,
-    "prompt_tokens": 76367728,
-    "completion_tokens": 13067083,
+    "budget_exposure_usd": 34.265388,
+    "prompt_tokens": 77251150,
+    "completion_tokens": 13254402,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 288,
-        "reported_cost_usd": 7.171954099999999,
+        "calls": 289,
+        "reported_cost_usd": 7.208407099999999,
         "unknown_cost_reserved_usd": 1.2906342661267445e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 128,
-        "reported_cost_usd": 1.6421915000000002,
+        "calls": 129,
+        "reported_cost_usd": 1.6536782500000002,
         "unknown_cost_reserved_usd": 1.734723475976807e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 3976,
-        "reported_cost_usd": 4.601134372500001,
+        "calls": 4040,
+        "reported_cost_usd": 4.696025872499998,
         "unknown_cost_reserved_usd": 2.817047950000003,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 4.336808689942018e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
