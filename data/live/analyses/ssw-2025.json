@@ -166269,7 +166269,7 @@
     {
       "law_id": "bgbl-2-2026-49",
       "analysis_sha256": "bacd6e8ecc38564451338de981bb22de2bee9d2661623d036eda41bb0e47e022",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0476f5b6670d3679",
@@ -167565,6 +167565,38 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ff015c83fe59acb4",
+          "disposition": "proposed_link",
+          "rationale": "Die Änderung erleichtert unter der Voraussetzung einer Übereinkunft oder Abmachung CO₂-Ausfuhren zur dauerhaften Speicherung im Meeresuntergrund und erschwert damit das Ziel, solche Endlager zu verhindern. Sie belegt weder die Einrichtung eines Endlagers noch eine Erlaubnis für Endlager an Land; der Zeitpunkt des Inkrafttretens für Deutschland ist nicht angegeben.",
+          "input_sha256": "477c3c02e6a83b618f666525d3cd32c6fdac9d7d9ff7c1420cc7d2574d5d5b32",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "04c01f5727390debdad336e6a170e62b5342893e26689144ee3022cf76093cfc"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "477c3c02e6a83b618f666525d3cd32c6fdac9d7d9ff7c1420cc7d2574d5d5b32"
+            }
+          ],
+          "impact_id": "impact-4d21ecc7a8aae5d0",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.91,
+            "rationale": "Die Änderung erleichtert unter der Voraussetzung einer Übereinkunft oder Abmachung CO₂-Ausfuhren zur dauerhaften Speicherung im Meeresuntergrund und erschwert damit das Ziel, solche Endlager zu verhindern. Sie belegt weder die Einrichtung eines Endlagers noch eine Erlaubnis für Endlager an Land; der Zeitpunkt des Inkrafttretens für Deutschland ist nicht angegeben.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlen \ndioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben. Eine solche\nÜbereinkunft oder Abmachung muss Folgendes beinhalten:",
+            "criterion_quote": "- Wir wollen **kein CO2-Endlager im Meer oder an Land**",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ff015c83fe59acb4",
+            "disposition": "proposed_link"
+          },
+          "verification": null
         }
       ]
     },
@@ -168329,45 +168361,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6970,
+    "calls": 7015,
     "cache_hits": 110,
-    "subdivision_cache_hits": 4,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 29.599314,
-    "reported_cost_calls": 6352,
+    "reported_cost_usd": 29.7246,
+    "reported_cost_calls": 6397,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.582103,
     "unknown_cost_calls": 618,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 33.181417,
-    "prompt_tokens": 73168976,
-    "completion_tokens": 12380957,
+    "budget_exposure_usd": 33.306703,
+    "prompt_tokens": 73629696,
+    "completion_tokens": 12501714,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 278,
-        "reported_cost_usd": 6.86117285,
-        "unknown_cost_reserved_usd": 1.2628786905111156e-15,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 280,
+        "reported_cost_usd": 6.913972599999999,
+        "unknown_cost_reserved_usd": 1.2906342661267445e-15,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 118,
-        "reported_cost_usd": 1.548259,
+        "calls": 120,
+        "reported_cost_usd": 1.5690987500000002,
         "unknown_cost_reserved_usd": 1.5959455978986625e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 3676,
-        "reported_cost_usd": 4.284129017499995,
+        "calls": 3717,
+        "reported_cost_usd": 4.335775652499996,
         "unknown_cost_reserved_usd": 2.597627550000003,
-        "pending_reserved_usd": 4.336808689942018e-18
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
