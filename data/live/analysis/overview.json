@@ -1,7 +1,7 @@
 {
   "version": "all-party-sol-final-v2",
   "status": "continuing",
-  "input_signature": "82b7971f00a656a3903efa3c25a28b14d8cca6281abf2b34161bb9110caa1f8c",
+  "input_signature": "6bf02a90213f5b44d962a8393354328e4d21be6df6426c50ec97a948dea77c85",
   "total_laws": 173,
   "total_programmes": 6,
   "total_criteria": 6470,
@@ -9,24 +9,24 @@
   "final_model": "openai/gpt-6-sol",
   "retrieval": "Per-programme whole-law/provision/reverse BM25 union",
   "limitations": "Unselected pairs unknown; statistical recall not measured.",
-  "updated_at": "2026-10-06T20:32:25.962271+00:00",
+  "updated_at": "2026-10-06T20:58:40.935443+00:00",
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7667,
-    "cache_hits": 120,
-    "subdivision_cache_hits": 3,
+    "calls": 7816,
+    "cache_hits": 131,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.195659,
-    "reported_cost_calls": 6998,
+    "reported_cost_usd": 31.242123,
+    "reported_cost_calls": 7134,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.939243,
-    "unknown_cost_calls": 669,
+    "unknown_cost_reserved_usd": 3.970558,
+    "unknown_cost_calls": 682,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.134901,
-    "prompt_tokens": 80394347,
-    "completion_tokens": 13892518,
+    "budget_exposure_usd": 35.212681,
+    "prompt_tokens": 80705584,
+    "completion_tokens": 14006621,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
@@ -64,10 +64,10 @@
       "openai/gpt-6-luna:deduplication": {
         "model": "openai/gpt-6-luna",
         "stage": "deduplication",
-        "calls": 75,
-        "reported_cost_usd": 0.0284979375,
-        "unknown_cost_reserved_usd": 0.0,
-        "pending_reserved_usd": 4.336808689942018e-19
+        "calls": 224,
+        "reported_cost_usd": 0.07496256999999991,
+        "unknown_cost_reserved_usd": 0.03131505000000001,
+        "pending_reserved_usd": 4.7704895589362195e-18
       }
     },
     "migrations": [
@@ -132,6 +132,32 @@
       "stage": "screen",
       "attempts": 3,
       "next_retry_at": 1791240351.9962184
+    },
+    "group:cdu-csu-2025:b1d5d6bd1aa54459d13b": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "group",
+      "attempts": 1,
+      "next_retry_at": 1791319756.018848
+    },
+    "group:linke-2025:540849bc58d28c15f0a5": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "group",
+      "attempts": 1,
+      "next_retry_at": 1791320262.24473
     }
   },
   "slices": 1,
