@@ -148319,7 +148319,7 @@
     {
       "law_id": "bgbl-2-2026-4",
       "analysis_sha256": "f696d46dbf1813c65fa54309c89ce271920a782404f1251686c70f87c9c4540a",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-01bc038c5dbc131f",
@@ -149648,6 +149648,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-ccd8dfcd683750f3",
+          "disposition": "missing_context",
+          "rationale": "Die Präambel nennt ein hohes Arbeitsschutzniveau und die Berücksichtigung bestehender internationaler Normen. Sie vereinbart selbst keine Arbeits- oder Lohnstandards. Ob andere Bestimmungen existenzsichernde Löhne sicherstellen, ist aus den vorliegenden Auszügen nicht ersichtlich.",
+          "input_sha256": "9a43ee2371aba2b7278339ce735ed5206e5a0d06caf43cde9421dd11d4491fc1",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "724ec6a91d720020dd568d3d310a0b23e6520894c01423f6ad78e6c51b24d492"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9a43ee2371aba2b7278339ce735ed5206e5a0d06caf43cde9421dd11d4491fc1"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Die Präambel nennt ein hohes Arbeitsschutzniveau und die Berücksichtigung bestehender internationaler Normen. Sie vereinbart selbst keine Arbeits- oder Lohnstandards. Ob andere Bestimmungen existenzsichernde Löhne sicherstellen, ist aus den vorliegenden Auszügen nicht ersichtlich.",
+            "law_passage_id": "bgbl-2-2026-4-p-cf7d31e56353ed01",
+            "law_quote": "entschlossen, ihre Wirtschafts-, Handels- und Investitionsbeziehungen im Einklang mit dem Ziel einer wirtschaftlich, sozial und\nökologisch nachhaltigen Entwicklung zu intensivieren und die Investitionstätigkeit so zu fördern, dass auf ein hohes Umweltschutzund Arbeitsschutzniveau geachtet wird und einschlägige international anerkannte Normen sowie Übereinkünfte, deren Vertragsparteien\nsie sind, berücksichtigt werden,",
+            "criterion_quote": "Wir wollen konkrete Vereinbarungen zu internationalen Standards, die **gute Arbeit** mit\nexistenzsichernden Löhnen sicherstellt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ccd8dfcd683750f3",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
           "disposition": "no_supported_link",
           "rationale": "Das Abkommen enthält in den vorgelegten Passagen keine Regelung zur automatischen Beantragung oder Auszahlung von Sozialleistungen.",
@@ -149884,7 +149916,629 @@
         "spd-2025-ac-f9f451d12e1009d2"
       ],
       "omitted_count": 763,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Londoner Protokolls schafft keine Verpflichtung für private Anbieter, Barrieren abzubauen oder Vorkehrungen zu treffen.",
+          "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Londoner Protokolls schafft keine Verpflichtung für private Anbieter, Barrieren abzubauen oder Vorkehrungen zu treffen.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlendioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-094ef24a14e40808",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt grenzüberschreitende Kohlendioxidströme, nicht die Kreditaufnahme der Länder oder deren Vereinbarkeit mit europäischen Fiskalregeln.",
+          "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt grenzüberschreitende Kohlendioxidströme, nicht die Kreditaufnahme der Länder oder deren Vereinbarkeit mit europäischen Fiskalregeln.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlendioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-094ef24a14e40808",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0da057796a413fc3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft die Ausfuhr von Kohlendioxid zur Beseitigung im Meeresuntergrund und enthält keine Maßnahme zur Entbürokratisierung des CBAM.",
+          "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung betrifft die Ausfuhr von Kohlendioxid zur Beseitigung im Meeresuntergrund und enthält keine Maßnahme zur Entbürokratisierung des CBAM.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlendioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0da057796a413fc3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderungen zu Anerkennungsverfahren oder zur Transparenz ausländischer Abschlüsse und Qualifikationen.",
+          "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderungen zu Anerkennungsverfahren oder zur Transparenz ausländischer Abschlüsse und Qualifikationen.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlendioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2b5263322a1a97d4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift zur Kohlendioxid-Ausfuhr begründet keine Förderung für die Beschaffung klimafreundlicher Nahverkehrsbusse.",
+          "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift zur Kohlendioxid-Ausfuhr begründet keine Förderung für die Beschaffung klimafreundlicher Nahverkehrsbusse.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlendioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-2b5263322a1a97d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-340db410132ddf6c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift zur Kohlendioxid-Ausfuhr begründet keine Förderung für die Beschaffung klimafreundlicher Lkw.",
+          "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5c2cb757dc2cdc30e12005498253afae1a9f8fbcc171a4c8c9e85f69a0c26915"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift zur Kohlendioxid-Ausfuhr begründet keine Förderung für die Beschaffung klimafreundlicher Lkw.",
+            "law_passage_id": "bgbl-2-2026-49-p-4b238881acd653f1",
+            "law_quote": "„2 Ungeachtet des Absatzes 1 kann die Ausfuhr von Kohlendioxidströmen zum Zweck der Beseitigung nach Anlage 1 erfolgen, sofern die betroffenen Länder eine Übereinkunft geschlossen oder eine Abmachung getroffen haben.“",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-340db410132ddf6c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 6 des Londoner Protokolls zur grenzüberschreitenden Ausfuhr von Kohlendioxid; eine Weiterentwicklung der KI-Strategie oder systemische Innovationen regelt es nicht.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 6 des Londoner Protokolls zur grenzüberschreitenden Ausfuhr von Kohlendioxid; eine Weiterentwicklung der KI-Strategie oder systemische Innovationen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Weiterentwicklung der KI-Strategie",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-56ddabcf4a1ed9fc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Exportförderung als Ergänzung zum CBAM.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Exportförderung als Ergänzung zum CBAM.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und ergänzen ihn um eine Exportförderung.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-56ddabcf4a1ed9fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Londoner Protokolls betrifft Kohlendioxidströme, nicht Rückführungsvereinbarungen für ausreisepflichtige Personen.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Londoner Protokolls betrifft Kohlendioxidströme, nicht Rückführungsvereinbarungen für ausreisepflichtige Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "feste Vereinbarungen getroffen werden",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5c5386bbbc3e794f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-830fe361e407ffaa",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderungen oder Vereinfachungen der GAP-Regularien.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderungen oder Vereinfachungen der GAP-Regularien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Regularien der GAP sind grundlegend zu vereinfachen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-830fe361e407ffaa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-8f2892fabc3f74af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft weder CO₂-Flottengrenzwerte noch Strafzahlungen für Automobilhersteller.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft weder CO₂-Flottengrenzwerte noch Strafzahlungen für Automobilhersteller.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "keine Strafzahlungen im Zusammenhang mit den CO2-Flottengrenzwerten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8f2892fabc3f74af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-8ff5d4c0ed3e0df2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen den Export von Kohlendioxid zur Lagerung im Meeresuntergrund, nicht die Schaffung nachhaltiger Mobilitätslösungen.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen den Export von Kohlendioxid zur Lagerung im Meeresuntergrund, nicht die Schaffung nachhaltiger Mobilitätslösungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "nachhaltige Mobilitätslösungen schaffen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8ff5d4c0ed3e0df2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95960732a1ce7497",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Position zur Resolution 1701 oder zu Konfliktparteien.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Position zur Resolution 1701 oder zu Konfliktparteien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "muss von allen Konfliktparteien befolgt werden",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95960732a1ce7497",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 6 des Londoner Protokolls, nicht Artikel 3 Absatz 3 GG.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 6 des Londoner Protokolls, nicht Artikel 3 Absatz 3 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Artikel 3 Abs. 3 GG werden wir daher entsprechend erweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9a4759ec3b0666a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Annahme internationaler Änderungen zum Londoner Protokoll belegt keine deutsche Mitgestaltung der SDGs.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Annahme internationaler Änderungen zum Londoner Protokoll belegt keine deutsche Mitgestaltung der SDGs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die wir aktiv mitgestalten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9a4759ec3b0666a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b739339dbb65b45e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Fördermittel oder technische Unterstützung für kommunale Wärmeversorgung.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Fördermittel oder technische Unterstützung für kommunale Wärmeversorgung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "durch Fördermittel und technische Unterstützung ihre Wärmeversorgung klimaneutral zu gestalten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b739339dbb65b45e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Londoner Protokolls regelt nicht die Finanzierung von Freiwilligendiensten oder eine Bund-Länder-Vereinbarung dazu.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Londoner Protokolls regelt nicht die Finanzierung von Freiwilligendiensten oder eine Bund-Länder-Vereinbarung dazu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Finanzierung der Freiwilligendienste auf Grundlage einer Bund-Länder-Vereinbarung weiterentwickeln",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bdad475d17eed446",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahmen zur Überwindung von Barrieren zwischen Praxen, Krankenhäusern und weiteren Versorgungseinrichtungen.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahmen zur Überwindung von Barrieren zwischen Praxen, Krankenhäusern und weiteren Versorgungseinrichtungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Barrieren zwischen Praxen, Krankenhäusern und weiteren Versorgungseinrichtungen aufheben",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bdad475d17eed446",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c93e41608aa19e86",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Änderungen des Londoner Protokolls und enthalten keine gezielte Unterstützung für Regionen mit besonderen Herausforderungen.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Änderungen des Londoner Protokolls und enthalten keine gezielte Unterstützung für Regionen mit besonderen Herausforderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Regionen mit besonderen Herausforderungen gezielt unterstützen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c93e41608aa19e86",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2a1fc55f8d7d98a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Meeresschutzgebiete; es regelt unter Bedingungen die Ausfuhr von Kohlendioxidströmen zur Beseitigung im Meeresuntergrund.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Meeresschutzgebiete; es regelt unter Bedingungen die Ausfuhr von Kohlendioxidströmen zur Beseitigung im Meeresuntergrund.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Meeresschutzgebiete, die echte Rückzugs- und Erholungsräume für Arten sind",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2a1fc55f8d7d98a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d661c658bcbe3a30",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Londoner Protokolls betrifft nicht den Übergang zur neuen GAP-Förderperiode.",
+          "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87052f7cde82245fcb2e244e5fb28294a7a9e80ad7d2ec444c8562376cc0a362"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Londoner Protokolls betrifft nicht den Übergang zur neuen GAP-Förderperiode.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Den Übergang wollen wir schrittweise vollziehen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d661c658bcbe3a30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Änderung des Artikels 6 des Londoner Protokolls und regelt keinen Anerkennungsprozess für ausländische Abschlüsse.",
+          "input_sha256": "63c3ef945cbb1bced500fadf78beac33ec5e14672d3b0ca21b1e0b876763aa9f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "63c3ef945cbb1bced500fadf78beac33ec5e14672d3b0ca21b1e0b876763aa9f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Änderung des Artikels 6 des Londoner Protokolls und regelt keinen Anerkennungsprozess für ausländische Abschlüsse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f9f451d12e1009d2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Export von Kohlendioxidströmen zur Beseitigung im Meeresuntergrund, nicht dezentrale Energieversorgung oder Energy Sharing.",
+          "input_sha256": "63c3ef945cbb1bced500fadf78beac33ec5e14672d3b0ca21b1e0b876763aa9f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "63c3ef945cbb1bced500fadf78beac33ec5e14672d3b0ca21b1e0b876763aa9f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Export von Kohlendioxidströmen zur Beseitigung im Meeresuntergrund, nicht dezentrale Energieversorgung oder Energy Sharing.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f9f451d12e1009d2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-2-2026-60",
@@ -150588,29 +151242,29 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6894,
-    "cache_hits": 107,
-    "subdivision_cache_hits": 0,
+    "calls": 6970,
+    "cache_hits": 110,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 29.483364,
-    "reported_cost_calls": 6295,
+    "reported_cost_usd": 29.599314,
+    "reported_cost_calls": 6352,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.478683,
-    "unknown_cost_calls": 599,
+    "unknown_cost_reserved_usd": 3.582103,
+    "unknown_cost_calls": 618,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 32.962048,
-    "prompt_tokens": 72609862,
-    "completion_tokens": 12248485,
+    "budget_exposure_usd": 33.181417,
+    "prompt_tokens": 73168976,
+    "completion_tokens": 12380957,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 275,
-        "reported_cost_usd": 6.80515885,
+        "calls": 278,
+        "reported_cost_usd": 6.86117285,
         "unknown_cost_reserved_usd": 1.2628786905111156e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
@@ -150623,10 +151277,10 @@
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 3603,
-        "reported_cost_usd": 4.2241937324999945,
-        "unknown_cost_reserved_usd": 2.494207650000002,
-        "pending_reserved_usd": 0
+        "calls": 3676,
+        "reported_cost_usd": 4.284129017499995,
+        "unknown_cost_reserved_usd": 2.597627550000003,
+        "pending_reserved_usd": 4.336808689942018e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
