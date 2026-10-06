@@ -85597,7 +85597,7 @@
     {
       "law_id": "bgbl-1-2026-215",
       "analysis_sha256": "53b3e81c71a394a2d90c2909ef58b721e15b57b146427330bc4a831c9e895a4e",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-020564b181b1dd7c",
@@ -85639,6 +85639,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-020564b181b1dd7c",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "proposed_link",
+          "rationale": "Bei Anträgen auf Erlaubnis zur Ausübung eines Gewerbes gilt die Erlaubnis nach drei Monaten ohne Behördenentscheidung als erteilt. Verfahren nach § 31 Absatz 1 und § 34a Absatz 1 sind ausgenommen; die Regelung erfasst damit nur einen Teil der Anträge.",
+          "input_sha256": "1eb42e9ea731419fdc1bd007fde77c172ea2a5220c345676d8355fda56722f24",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a24a0549346641d0dd0260973e84ebca11f857940c3b0695da4c3bd2c6ce4648"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1eb42e9ea731419fdc1bd007fde77c172ea2a5220c345676d8355fda56722f24"
+            }
+          ],
+          "impact_id": "impact-1bf7d139f317315a",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.99,
+            "rationale": "Bei Anträgen auf Erlaubnis zur Ausübung eines Gewerbes gilt die Erlaubnis nach drei Monaten ohne Behördenentscheidung als erteilt. Verfahren nach § 31 Absatz 1 und § 34a Absatz 1 sind ausgenommen; die Regelung erfasst damit nur einen Teil der Anträge.",
+            "law_passage_id": "bgbl-1-2026-215-p-62e2e11ef4b04f48",
+            "law_quote": "„(1) Hat die Behörde über einen Antrag auf Erlaubnis zur Ausübung eines Gewerbes nicht innerhalb einer\nFrist von drei Monaten entschieden, gilt die Erlaubnis als erteilt. Satz 1 gilt nicht für Verfahren nach § 31 Absatz 1\nund § 34a Absatz 1.“",
+            "criterion_quote": "Wir führen eine **Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind**, wenn die\nBehörde nicht innerhalb einer gesetzten Frist reagiert. Das gibt Bau- und Investitionsprojekten mehr\nPlanungssicherheit.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -85917,7 +85949,7 @@
     {
       "law_id": "bgbl-1-2026-221",
       "analysis_sha256": "1ba68dcb126cf468e4cd673d8655c86fc94435eebd0874e1c48e4a87d797a5d8",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -85936,6 +85968,38 @@
       ],
       "omitted_count": 774,
       "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "proposed_link",
+          "rationale": "Die Zustimmung zur Vaterschaftsanerkennung gilt als erteilt, wenn die Ausländerbehörde nicht binnen vier Monaten entscheidet; die Frist kann gehemmt werden. Diese Fiktion betrifft nur das Zustimmungsverfahren zur Vaterschaftsanerkennung, nicht Bau- oder Investitionsanträge.",
+          "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f89a8cd3101bdd549e817c947f9c6de4dd8c6f145d120b9316ebfbdf37957e06"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8"
+            }
+          ],
+          "impact_id": "impact-f554c67000b1a9a7",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.99,
+            "rationale": "Die Zustimmung zur Vaterschaftsanerkennung gilt als erteilt, wenn die Ausländerbehörde nicht binnen vier Monaten entscheidet; die Frist kann gehemmt werden. Diese Fiktion betrifft nur das Zustimmungsverfahren zur Vaterschaftsanerkennung, nicht Bau- oder Investitionsanträge.",
+            "law_passage_id": "bgbl-1-2026-221-p-3ac1cebd667a135e",
+            "law_quote": "(3) Die Zustimmung zur Anerkennung einer Vaterschaft gilt als erteilt, wenn die Ausländerbehörde nicht\nbinnen vier Monaten nach Eingang des Antrags entschieden hat.",
+            "criterion_quote": "Wir führen eine **Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind**, wenn die\nBehörde nicht innerhalb einer gesetzten Frist reagiert.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "spd-2025-ac-037c2fab81418a0e",
           "disposition": "no_supported_link",
@@ -86157,6 +86221,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-993cee9e0194618a",
+          "disposition": "proposed_link",
+          "rationale": "Betreiber kritischer Anlagen müssen Registrierungsangaben an das BBK übermitteln; das BBK leitet die Daten an das BSI und die zuständige Behörde weiter. Das schafft einen verbindlichen Informationsaustausch, nennt aber keine Zusammenarbeit mit Kommunen oder kommunalen Versorgern.",
+          "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a2bf23ba492cf51fdc32ebd2b7b28da1fddcd0b7a7e8ae1d3b434db8ae99bd6f"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8"
+            }
+          ],
+          "impact_id": "impact-de46354677447ee2",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.78,
+            "rationale": "Betreiber kritischer Anlagen müssen Registrierungsangaben an das BBK übermitteln; das BBK leitet die Daten an das BSI und die zuständige Behörde weiter. Das schafft einen verbindlichen Informationsaustausch, nennt aber keine Zusammenarbeit mit Kommunen oder kommunalen Versorgern.",
+            "law_passage_id": "bgbl-1-2026-221-p-4f2bf4a1c2746bde",
+            "law_quote": "„(1) Ein Betreiber kritischer Anlagen ist verpflichtet, spätestens drei Monate, nachdem eine Anlage als\nkritische Anlage gilt, dem Bundesamt für Bevölkerungsschutz und Katastrophenhilfe über eine gemeinsam\nvom Bundesamt für Sicherheit in der Informationstechnik und dem Bundesamt für Bevölkerungsschutz und\nKatastrophenhilfe eingerichtete Registrierungsmöglichkeit folgende Angaben zu übermitteln:",
+            "criterion_quote": "Dafür werden wir Kommunen, Länder, den Bund,\nkommunale Versorger und die Betreiber kritischer Infrastruktur besser miteinander verzahnen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-993cee9e0194618a",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-aa8860cfdaa9ef81",
           "disposition": "missing_context",
           "rationale": "Die vorgelegten Auszüge regeln unter anderem die behördliche Prüfung von Vaterschaftsanerkennungen; ob der nicht vollständig vorliegende Gesetzestext Entwicklungsfeststellungen für Kinder vorsieht, lässt sich daraus nicht beurteilen.",
@@ -86246,7 +86342,7 @@
     {
       "law_id": "bgbl-1-2026-222",
       "analysis_sha256": "b5ec0325451275dd60a066bd88d0b76dfc0cd6104f6c594bcc34f822738cd8b6",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -86633,6 +86729,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-33d35ccee54b8673",
+          "disposition": "proposed_link",
+          "rationale": "Die Regelung erweitert die Unterstützung durch das AZR mittels Speicherung und Übermittlung von Registerdaten für ausländer- und asylrechtlich zuständige Behörden sowie andere öffentliche Stellen. Das entwickelt seine Informationsfunktion weiter, richtet aber keine umfassende zentrale Informationsplattform ein.",
+          "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "612c30c61d25c6b453e03887fb47c5f9ae6ad953727e53f02b59de985a6d03a2"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6"
+            }
+          ],
+          "impact_id": "impact-f395afb7411ae614",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.88,
+            "rationale": "Die Regelung erweitert die Unterstützung durch das AZR mittels Speicherung und Übermittlung von Registerdaten für ausländer- und asylrechtlich zuständige Behörden sowie andere öffentliche Stellen. Das entwickelt seine Informationsfunktion weiter, richtet aber keine umfassende zentrale Informationsplattform ein.",
+            "law_passage_id": "bgbl-1-2026-222-p-393a1c1ea29e3deb",
+            "law_quote": "Die Registerbehörde unterstützt durch Speicherung und Übermittlung der im Register gespeicherten Daten von\nAusländern sowie von natürlichen oder juristischen Personen, die eine Verpflichtungserklärung nach § 66\nAbsatz 2 oder § 68 Absatz 1 des Aufenthaltsgesetzes abgegeben haben, die mit der Durchführung\nausländer- oder asylrechtlicher Vorschriften betrauten Behörden und andere öffentliche Stellen.",
+            "criterion_quote": "Dazu gehört, dass wir **das Ausländerzentralregister (AZR)** **modernisieren**\nund es zur zentralen Informationsplattform im Ausländer- und Asylrecht machen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-33d35ccee54b8673",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-3ce613cc419dcca9",
           "disposition": "no_supported_link",
           "rationale": "Die gezeigten Vorschriften ordnen keine Ausweisung von Schleusern an.",
@@ -86822,6 +86950,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-68368210aff19a39",
+          "disposition": "proposed_link",
+          "rationale": "Bei begründeten Identitätszweifeln sind Lichtbilder und Fingerabdrücke für einen Folgeantrag auf ein nationales Visum erneut aufzunehmen. Das schafft eine konkrete Vorgabe zur Identitätsklärung in diesem Fall, aber keine umfassende Regelung dazu.",
+          "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e1eed35103d5e932710ec3d2b4d492d9594f4803603b5da7e6c785b19708e3d4"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6"
+            }
+          ],
+          "impact_id": "impact-1a18dc6e6f1a6519",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.9,
+            "rationale": "Bei begründeten Identitätszweifeln sind Lichtbilder und Fingerabdrücke für einen Folgeantrag auf ein nationales Visum erneut aufzunehmen. Das schafft eine konkrete Vorgabe zur Identitätsklärung in diesem Fall, aber keine umfassende Regelung dazu.",
+            "law_passage_id": "bgbl-1-2026-222-p-f3af1c56ac184bd3",
+            "law_quote": "Bei begründeten Zweifeln an\nder Identität des Ausländers sind innerhalb der in Satz 3 genannten Frist Maßnahmen im Sinne des Satzes 1\nerneut durchzuführen.",
+            "criterion_quote": "Bei der Identitätsklärung werden wir unter Beachtung des\nSicherheitsinteresses des Staates für klare Regelungen sorgen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-68368210aff19a39",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-6ab8f6b4f49e99d3",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz regelt keine fair ausgestalteten Anwerbeabkommen.",
@@ -86844,6 +87004,38 @@
             "criterion_quote": "und fairen Anwerbeabkommen schaffen wir dafür die Grundlage,",
             "caveats": [],
             "criterion_id": "spd-2025-ac-6ab8f6b4f49e99d3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6b28b539f56fa2bc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Aufnahme der Grenzübertrittsbescheinigung zur Durchsetzung der Ausreisepflicht regelt weder Abschiebungen nach verweigerter freiwilliger Ausreise noch deren Tempo oder eine besondere Berücksichtigung von Straftätern.",
+          "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e1eed35103d5e932710ec3d2b4d492d9594f4803603b5da7e6c785b19708e3d4"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die Aufnahme der Grenzübertrittsbescheinigung zur Durchsetzung der Ausreisepflicht regelt weder Abschiebungen nach verweigerter freiwilliger Ausreise noch deren Tempo oder eine besondere Berücksichtigung von Straftätern.",
+            "law_passage_id": "bgbl-1-2026-222-p-6c40ff1a35d4ba58",
+            "law_quote": "„2a. die Ausstellung einer Grenzübertrittsbescheinigung zur Durchsetzung der Ausreisepflicht,“.",
+            "criterion_quote": "Wird dies verweigert, setzen wir auf rasche wie konsequente Abschiebungen,\ninsbesondere bei Straftätern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6b28b539f56fa2bc",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -86926,6 +87118,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-77cfca4c6126888f",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7da992584a134625",
+          "disposition": "proposed_link",
+          "rationale": "Die automatisierte Übermittlung von AZR-Daten an berechtigte Stellen digitalisiert die Informationsbereitstellung für deren Verwaltungsaufgaben, sofern die unverzügliche Kenntnis erforderlich ist. Eine digitale Entscheidung selbst wird nicht geregelt.",
+          "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e1eed35103d5e932710ec3d2b4d492d9594f4803603b5da7e6c785b19708e3d4"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6"
+            }
+          ],
+          "impact_id": "impact-c888a94381d2bdbf",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.87,
+            "rationale": "Die automatisierte Übermittlung von AZR-Daten an berechtigte Stellen digitalisiert die Informationsbereitstellung für deren Verwaltungsaufgaben, sofern die unverzügliche Kenntnis erforderlich ist. Eine digitale Entscheidung selbst wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-222-p-9356c4b6519d30a2",
+            "law_quote": "(1) Die Registerbehörde übermittelt den nach § 22 Absatz 1 Satz 1 zum automatisierten Datenabruf\nzugelassenen öffentlichen Stellen, den Meldebehörden, der Familienkasse Direktion der Bundesagentur für\nArbeit und den deutschen Auslandsvertretungen in einem automatisierten Verfahren neben den Grundperso­\nnalien und der AZR-Nummer Daten nach § 3 unverzüglich nach deren Speicherung, wenn und soweit die\nunverzügliche Kenntnis der Daten zur Aufgabenerfüllung erforderlich ist und sofern die Angaben von den\ngenannten Stellen nicht selbst an die Registerbehörde übermittelt worden sind.",
+            "criterion_quote": "Wir werden das **Fachkräfteeinwanderungsgesetz weiterentwickeln** und die Digitalisierung\nder Verwaltungsentscheidungen vorantreiben.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7da992584a134625",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -88524,7 +88748,1431 @@
         "spd-2025-ac-fa85fa4cb1919222"
       ],
       "omitted_count": 730,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Regelungen zu Planfeststellungsverfahren begründen keine Pflicht privater Waren- und Dienstleistungsanbieter zum Barriereabbau oder zu angemessenen Vorkehrungen.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Regelungen zu Planfeststellungsverfahren begründen keine Pflicht privater Waren- und Dienstleistungsanbieter zum Barriereabbau oder zu angemessenen Vorkehrungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Frist- und Zustimmungsregeln betreffen bestimmte Infrastrukturverfahren; eine Genehmigungsfiktion für Anträge wird dadurch nicht eingeführt.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Frist- und Zustimmungsregeln betreffen bestimmte Infrastrukturverfahren; eine Genehmigungsfiktion für Anträge wird dadurch nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften enthalten keine Prüfung kommunaler Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften enthalten keine Prüfung kommunaler Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0ada3043d1e56162",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften enthalten kein Verfahren zur möglichst automatischen Auszahlung von Erstattungen.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften enthalten kein Verfahren zur möglichst automatischen Auszahlung von Erstattungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0ada3043d1e56162",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0b17bb0caeddd964",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen Infrastruktur- und Planungsverfahren, nicht den EU-Erweiterungsprozess oder Binnenmarktzugang.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften betreffen Infrastruktur- und Planungsverfahren, nicht den EU-Erweiterungsprozess oder Binnenmarktzugang.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0b17bb0caeddd964",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1315e63a7bf34209",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften bauen keine Zentralstelle für strafbare Internetinhalte beim BKA aus.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften bauen keine Zentralstelle für strafbare Internetinhalte beim BKA aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1315e63a7bf34209",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften ändern keine Verfahren oder Regeln zur Anerkennung ausländischer Abschlüsse und Qualifikationen.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften ändern keine Verfahren oder Regeln zur Anerkennung ausländischer Abschlüsse und Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften regeln weder Asylverfahren noch Verwaltungskapazitäten des BAMF oder der Verwaltungsgerichte.",
+          "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "130eb74f459d7aee01884ad872f76af83a7ea978b7e035a44ef393e3baca6b68"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften regeln weder Asylverfahren noch Verwaltungskapazitäten des BAMF oder der Verwaltungsgerichte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e70a7da767b60df",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge belegen keine Fortführung oder Weiterentwicklung des Digitalpakts Schule; der Gesetzeskontext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge belegen keine Fortführung oder Weiterentwicklung des Digitalpakts Schule; der Gesetzeskontext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Auch der **Digitalpakt**\n**Schule** muss fortgesetzt und inhaltlich weiterentwickelt werden.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-1e70a7da767b60df",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1fc2f33c4a7e4a3e",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keinen Nachweis einer Förderung des Sirenenausbaus; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob weitere Regelungen einschlägig sind.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten keinen Nachweis einer Förderung des Sirenenausbaus; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob weitere Regelungen einschlägig sind.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dazu werden\nwir den **flächendeckenden Ausbau mit Sirenen** weiter fördern",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-1fc2f33c4a7e4a3e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Regelungen betreffen Infrastruktur und belegen keine Schutzmaßnahmen gegen digitale Abzocke oder Manipulation; der Gesetzestext ist unvollständig.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen Infrastruktur und belegen keine Schutzmaßnahmen gegen digitale Abzocke oder Manipulation; der Gesetzestext ist unvollständig.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dies gilt insbesondere im digitalen Raum. Hier bedarf es eines besonderen Schutzes gegen Abzocke\nund Manipulation, insbesondere für Kinder und Jugendliche.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-20838b6859a7d02b",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten Regelungen zum Bau und Ausbau von Bundesfernstraßen, weisen aber keine Sanierung des Autobahnnetzes oder eine ausdrückliche Brückensanierung nach; der Gesetzeskontext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge enthalten Regelungen zum Bau und Ausbau von Bundesfernstraßen, weisen aber keine Sanierung des Autobahnnetzes oder eine ausdrückliche Brückensanierung nach; der Gesetzeskontext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das deutsche Autobahnnetz muss aber dringend saniert werden, insbesondere die Brücken.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-20838b6859a7d02b",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-24239ff57076f7f2",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge belegen keinen fortgesetzten Personalaufbau bei Sicherheitsbehörden; weitere Teile des Gesetzes liegen nicht vor.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge belegen keinen fortgesetzten Personalaufbau bei Sicherheitsbehörden; weitere Teile des Gesetzes liegen nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "**Personalaufbau bei den Sicherheitsbehörden konsequent fortsetzen**",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-24239ff57076f7f2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-245946bf2f1a03ec",
+          "disposition": "missing_context",
+          "rationale": "Die Regelungen zum Ausbau von Schienenwegen schaffen rechtliche Priorität, weisen aber für sich keine zusätzlichen Investitionen nach; mögliche Finanzierungsregelungen sind im vorgelegten Teil nicht vollständig erfasst.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Regelungen zum Ausbau von Schienenwegen schaffen rechtliche Priorität, weisen aber für sich keine zusätzlichen Investitionen nach; mögliche Finanzierungsregelungen sind im vorgelegten Teil nicht vollständig erfasst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir investieren weiter in Schienen, Brücken und digitale Netze.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-245946bf2f1a03ec",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2b61891a8b5e5c52",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keine Maßnahmen zur Umsetzung der Digitalen Automatischen Kupplung; der Gesetzeskontext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge belegen keine Maßnahmen zur Umsetzung der Digitalen Automatischen Kupplung; der Gesetzeskontext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "fördern die Umsetzung der Digitalen Automatischen Kupplung.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-2b61891a8b5e5c52",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-31c6d32175791714",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Änderungen betreffen keine Strafbarkeit bildbasierter Gewalt; weitere Teile des Gesetzes liegen nicht vor.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen keine Strafbarkeit bildbasierter Gewalt; weitere Teile des Gesetzes liegen nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Hierfür schließen wir Strafbarkeitslücken bei bildbasierter Gewalt",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-31c6d32175791714",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keinen Nachweis zum Aufbau branchenspezifischer KI-Ökosysteme; der Gesetzeskontext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten keinen Nachweis zum Aufbau branchenspezifischer KI-Ökosysteme; der Gesetzeskontext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden.\nDenn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt\nund damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden\nin Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und\numgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der\nQuantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht\ndeshalb die **Weiterentwicklung der KI-Strategie** an erster Stelle. Der Fokus soll dabei insbesondere\nauf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau\nvon branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Regelungen belegen keine Weiterentwicklung der KI-Strategie mit Schwerpunkt auf systemischen Innovationen; der Gesetzeskontext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen belegen keine Weiterentwicklung der KI-Strategie mit Schwerpunkt auf systemischen Innovationen; der Gesetzeskontext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden.\nDenn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt\nund damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden\nin Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und\numgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der\nQuantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht\ndeshalb die **Weiterentwicklung der KI-Strategie** an erster Stelle. Der Fokus soll dabei insbesondere\nauf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau\nvon branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4196c63cf8d9d19f",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keine verbindliche Verpflichtung von Plattformen zum Vorgehen gegen illegale Inhalte; der Gesetzeskontext ist unvollständig.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge belegen keine verbindliche Verpflichtung von Plattformen zum Vorgehen gegen illegale Inhalte; der Gesetzeskontext ist unvollständig.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Plattformen zu zwingen,\ngegen illegale Inhalte vorzugehen",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-4196c63cf8d9d19f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4f59effcc48acaf9",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen weder einen Ausbau der NATO-Logistikdrehscheibe noch koordinierte NATO-Reaktionsmaßnahmen; der Gesetzestext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Auszüge belegen weder einen Ausbau der NATO-Logistikdrehscheibe noch koordinierte NATO-Reaktionsmaßnahmen; der Gesetzestext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wegen seiner geografischen Lage\nin Europa soll **Deutschland als zentrale Drehscheibe** für die Logistik weiter ausgebaut werden, um\nschnelle und koordinierte Reaktionen der NATO auf sicherheitspolitische Herausforderungen in\nEuropa zu ermöglichen.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-4f59effcc48acaf9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-50cb900cac6aa140",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Regelungen zum Ausbau von Schienenwegen belegen keine zusätzlichen Brückeninvestitionen; mögliche Finanzierungsregelungen sind im teilweise vorgelegten Gesetzestext nicht vollständig erfasst.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Regelungen zum Ausbau von Schienenwegen belegen keine zusätzlichen Brückeninvestitionen; mögliche Finanzierungsregelungen sind im teilweise vorgelegten Gesetzestext nicht vollständig erfasst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir investieren weiter in Schienen, Brücken und digitale Netze.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-50cb900cac6aa140",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-50dc4d1b98140ae2",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keine zusätzlichen Investitionen in digitale Netze; mögliche Finanzierungsregelungen sind im teilweise vorgelegten Gesetzestext nicht vollständig erfasst.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge belegen keine zusätzlichen Investitionen in digitale Netze; mögliche Finanzierungsregelungen sind im teilweise vorgelegten Gesetzestext nicht vollständig erfasst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir investieren weiter in Schienen, Brücken und digitale Netze.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-50dc4d1b98140ae2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-515724d303aaabca",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Regelungen belegen keine Einführung eines Tempolimits von 130 km/h auf Bundesautobahnen; der Gesetzeskontext ist teilweise.",
+          "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56cc74cf28772f0267c1da11cdcfd29e69ab608eb305030815e387ccbdb6962b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen belegen keine Einführung eines Tempolimits von 130 km/h auf Bundesautobahnen; der Gesetzeskontext ist teilweise.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen ein **Tempolimit von 130 km/h auf Bundesautobahnen** einführen.",
+            "caveats": [
+              "Gesetzestext nur teilweise vorgelegt."
+            ],
+            "criterion_id": "spd-2025-ac-515724d303aaabca",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln keinen Abschluss eines Staatsvertrags zwischen Bund und Ländern.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln keinen Abschluss eines Staatsvertrags zwischen Bund und Ländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-51dda28533ed622e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bahnregelungen betreffen unter anderem Elektrifizierung, Digitalisierung und Bahnsteige, weisen aber keinen Neubau von Strecken zur Erweiterung des Schienennetzes aus.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Bahnregelungen betreffen unter anderem Elektrifizierung, Digitalisierung und Bahnsteige, weisen aber keinen Neubau von Strecken zur Erweiterung des Schienennetzes aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-51dda28533ed622e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-547f8d8c44b9720c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu Spionage-Apps.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu Spionage-Apps.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-547f8d8c44b9720c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-570e87917affb96e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Onlinezugangsgesetzes ist nur als Artikelüberschrift aufgeführt; eine Regelung zum Ausbau von Breitbandinternet ist nicht belegt.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung des Onlinezugangsgesetzes ist nur als Artikelüberschrift aufgeführt; eine Regelung zum Ausbau von Breitbandinternet ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-570e87917affb96e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6a126fb3d7adc723",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen keine GAP-Förderperiode und keine stärkere Förderung entsprechender Umwelt- und Klimaleistungen.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen keine GAP-Förderperiode und keine stärkere Förderung entsprechender Umwelt- und Klimaleistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6a126fb3d7adc723",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Bereitstellung personeller Ressourcen für das THW ist in den vorgelegten Regelungen nicht vorgesehen.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Bereitstellung personeller Ressourcen für das THW ist in den vorgelegten Regelungen nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln keine Förderung für einen Umstieg und keine Förderhöhe nach Bedarf.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln keine Förderung für einen Umstieg und keine Förderhöhe nach Bedarf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung zur Zuständigkeit von Bundesbehörden betrifft Aufgaben in einem bestimmten Rechtsbereich; eine dokumentierte Prüfung zur Bündelung von Ministeriumsaufgaben ist nicht belegt.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Regelung zur Zuständigkeit von Bundesbehörden betrifft Aufgaben in einem bestimmten Rechtsbereich; eine dokumentierte Prüfung zur Bündelung von Ministeriumsaufgaben ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-76f05230f73e3ad9",
+          "disposition": "no_supported_link",
+          "rationale": "Die elektronischen Verfahren betreffen die Einreichung und Bearbeitung von Plänen durch Planfeststellungsbehörden, nicht die Digitalisierung der Justiz mit bundesweit kompatiblen Systemen.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die elektronischen Verfahren betreffen die Einreichung und Bearbeitung von Plänen durch Planfeststellungsbehörden, nicht die Digitalisierung der Justiz mit bundesweit kompatiblen Systemen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-76f05230f73e3ad9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-864921bf72f1c855",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine Wartezeiten oder Behandlungsmöglichkeiten für privat und gesetzlich Versicherte.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine Wartezeiten oder Behandlungsmöglichkeiten für privat und gesetzlich Versicherte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-864921bf72f1c855",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-8ded7ffed5401462",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen erleichtern bestimmte Bau- und Planungsverfahren, enthalten aber keine Vorgabe zur Nutzbarkeit von Straßen, Brücken und Schienen in 30 Jahren.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Änderungen erleichtern bestimmte Bau- und Planungsverfahren, enthalten aber keine Vorgabe zur Nutzbarkeit von Straßen, Brücken und Schienen in 30 Jahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-8ded7ffed5401462",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-921aa6b95c58b989",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Überführung der Steuerklassenkombination III/V in das Faktorverfahren wird nicht geregelt.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Überführung der Steuerklassenkombination III/V in das Faktorverfahren wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-921aa6b95c58b989",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften ändern Artikel 3 Absatz 3 des Grundgesetzes nicht.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften ändern Artikel 3 Absatz 3 des Grundgesetzes nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+          "disposition": "no_supported_link",
+          "rationale": "Ein Verfahren zur Erfassung von IP-Adressen bei verdächtigen Benutzerkonten oder zur Ermittlung von Stammdaten ist nicht vorgesehen.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Ein Verfahren zur Erfassung von IP-Adressen bei verdächtigen Benutzerkonten oder zur Ermittlung von Stammdaten ist nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-993cee9e0194618a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Infrastrukturfinanzierung und Behördenzuständigkeiten enthalten keine organisatorische Maßnahme zur besseren Zusammenarbeit der genannten Akteure beim Schutz kritischer Infrastruktur.",
+          "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a829ee435dc535eb71ee414081788e25bf4e9c032a4abad023bd67594684ce1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelungen zu Infrastrukturfinanzierung und Behördenzuständigkeiten enthalten keine organisatorische Maßnahme zur besseren Zusammenarbeit der genannten Akteure beim Schutz kritischer Infrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-993cee9e0194618a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zur Prüfung wettbewerbsrechtlicher Verstöße; da der Gesetzestext ausdrücklich unvollständig ist, lässt sich ein möglicher Zusammenhang nicht abschließend beurteilen.",
+          "input_sha256": "80c31d4302649c09d31f2405aa188061f8ef57a2ece8b9bc67035256ba7568c8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "80c31d4302649c09d31f2405aa188061f8ef57a2ece8b9bc67035256ba7568c8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zur Prüfung wettbewerbsrechtlicher Verstöße; da der Gesetzestext ausdrücklich unvollständig ist, lässt sich ein möglicher Zusammenhang nicht abschließend beurteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die zuständigen Behörden sollen prüfen, ob es zu wettbewerbsrechtlichen Verstößen kommt.",
+            "caveats": [
+              "Der Gesetzestext liegt nur teilweise vor."
+            ],
+            "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zu EU-Beitritten oder den Kopenhagener Kriterien; wegen des unvollständigen Gesetzestextes bleibt offen, ob weitere Teile hierzu etwas bestimmen.",
+          "input_sha256": "80c31d4302649c09d31f2405aa188061f8ef57a2ece8b9bc67035256ba7568c8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "80c31d4302649c09d31f2405aa188061f8ef57a2ece8b9bc67035256ba7568c8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Ausschnitte enthalten keine Regelung zu EU-Beitritten oder den Kopenhagener Kriterien; wegen des unvollständigen Gesetzestextes bleibt offen, ob weitere Teile hierzu etwas bestimmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Kopenhagener Kriterien müssen immer erfüllt sein.",
+            "caveats": [
+              "Der Gesetzestext liegt nur teilweise vor."
+            ],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten, teilweise wiedergegebenen Gesetzesstellen belegen keine Weiterentwicklung der Finanzierung von Freiwilligendiensten auf Grundlage einer Bund-Länder-Vereinbarung; ob dies in nicht vorgelegten Regelungen geschieht, bleibt offen.",
+          "input_sha256": "6b4287b1b17892be4847400419af243a3199af8648f8461eaddeb55531738446",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4287b1b17892be4847400419af243a3199af8648f8461eaddeb55531738446"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten, teilweise wiedergegebenen Gesetzesstellen belegen keine Weiterentwicklung der Finanzierung von Freiwilligendiensten auf Grundlage einer Bund-Länder-Vereinbarung; ob dies in nicht vorgelegten Regelungen geschieht, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen daher die Finanzierung der Freiwilligendienste auf Grundlage einer Bund-Länder-Vereinbarung weiterentwickeln.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich teilweise."
+            ],
+            "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+          "disposition": "missing_context",
+          "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zum Initiativrecht des Europäischen Parlaments; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+          "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zum Initiativrecht des Europäischen Parlaments; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Europäischen Parlaments, inklusive eines echten Initiativrechts.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b9922dd8d4dbbdfb",
+          "disposition": "missing_context",
+          "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zu vorübergehenden Unternehmensbeteiligungen; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+          "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zu vorübergehenden Unternehmensbeteiligungen; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Manchmal\nhaben wir uns an Unternehmen vorübergehend beteiligt, um Arbeitsplätze in einer Krise zu sichern.\nDas werden wir auch in Zukunft tun, wenn das notwendig wird.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-b9922dd8d4dbbdfb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+          "disposition": "missing_context",
+          "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zur Einbeziehung von Beschäftigungsverhältnissen in die soziale Sicherung; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+          "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zur Einbeziehung von Beschäftigungsverhältnissen in die soziale Sicherung; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mini-Jobs sind vorgezeichnete Wege in die Altersarmut.\nUnser Ziel ist, alle Beschäftigungsverhältnisse in die soziale Sicherung einzubeziehen. Wir wollen\nMissbrauch bekämpfen und Beschäftigten den Weg aus Mini-Jobs in sozial gut abgesicherte Arbeit\nöffnen. Dabei wird es Übergänge für bestehende Arbeitsverhältnisse und Ausnahmen für bestimmte\nGruppen wie zum Beispiel Rentnerinnen und Rentner geben.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-c31fdf1b18330699",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c5fab5fc743009da",
+          "disposition": "missing_context",
+          "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zur Kfz-Steuer-Befreiung für E-Autos; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+          "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c24f3f8779bc3c12b58ce9bf26acb21242de1244a226c62d7980348eaaec3634"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der bereitgestellte, als teilweise gekennzeichnete Gesetzestext enthält keine Regelung zur Kfz-Steuer-Befreiung für E-Autos; eine Beurteilung anhand weiterer Rechtsvorschriften ist damit nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "E-Mobilität weiter verbessern. Die **Kfz-Steuer-Befreiung** für E-Autos werden wir **bis 2035 verlängern** .",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-c5fab5fc743009da",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c906dece35d66c50",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln kein kontaktloses oder einheitliches Bezahlsystem an Ladesäulen.",
+          "input_sha256": "0487068f167d12e5b8d76a546744e91cccc5ab099dbe8c83f0d6d8d1a61ad68c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0487068f167d12e5b8d76a546744e91cccc5ab099dbe8c83f0d6d8d1a61ad68c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln kein kontaktloses oder einheitliches Bezahlsystem an Ladesäulen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen ein kontaktloses und einheitliches Bezahlsystem an allen Ladesäulen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c906dece35d66c50",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln weder die automatische Prüfung von Ansprüchen auf Kindergeld noch eine antragslose Gewährung solcher Leistungen.",
+          "input_sha256": "0487068f167d12e5b8d76a546744e91cccc5ab099dbe8c83f0d6d8d1a61ad68c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0487068f167d12e5b8d76a546744e91cccc5ab099dbe8c83f0d6d8d1a61ad68c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln weder die automatische Prüfung von Ansprüchen auf Kindergeld noch eine antragslose Gewährung solcher Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Leistungen wie das Kindergeld sollen automatisch gewährt werden. Die Verwaltung prüft eigenständig, welche Ansprüche bestehen, und leitet diese ohne zusätzliche Anträge ein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen keine automatische Beantragung oder Auszahlung von Leistungen vor.",
+          "input_sha256": "0487068f167d12e5b8d76a546744e91cccc5ab099dbe8c83f0d6d8d1a61ad68c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0487068f167d12e5b8d76a546744e91cccc5ab099dbe8c83f0d6d8d1a61ad68c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften sehen keine automatische Beantragung oder Auszahlung von Leistungen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wo möglich sollen Leistungen automatisch beantragt und ausgezahlt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ec998bf9323d219a",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Änderungen regeln unter anderem Eisenbahnverfahren und automatisiertes Fahren, sagen aber nicht, ob die Deutsche Bahn integriert und in öffentlichem Eigentum bleibt; der Gesetzesauszug ist zudem unvollständig.",
+          "input_sha256": "6733212801b5abb975cc61d5da686af3b06a944be5e738381d1dbc15a91a1ab2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6733212801b5abb975cc61d5da686af3b06a944be5e738381d1dbc15a91a1ab2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Änderungen regeln unter anderem Eisenbahnverfahren und automatisiertes Fahren, sagen aber nicht, ob die Deutsche Bahn integriert und in öffentlichem Eigentum bleibt; der Gesetzesauszug ist zudem unvollständig.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir erhalten die Deutsche Bahn als integrierten Konzern im öffentlichen Eigentum.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-ec998bf9323d219a",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f2951160fee20b8b",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften betreffen Infrastrukturvorhaben und Planfeststellungsverfahren; sie schaffen keine gesetzliche Grundlage für eine ressortübergreifende Gleichstellungsstrategie des Bundes.",
+          "input_sha256": "9d4aa49c6a759282107742f0bee7b451a447875401163b14dbf354cd4653f40c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d4aa49c6a759282107742f0bee7b451a447875401163b14dbf354cd4653f40c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften betreffen Infrastrukturvorhaben und Planfeststellungsverfahren; sie schaffen keine gesetzliche Grundlage für eine ressortübergreifende Gleichstellungsstrategie des Bundes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ressortübergreifende Gleichstellungsstrategie des Bundes soll weiterentwickelt und auf eine gesetzliche Grundlage gestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f2951160fee20b8b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fa85fa4cb1919222",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung erlaubt Ländern und Kommunen, Mittel dieses Gesetzes für Eigenanteile anderer Förderungen einzusetzen; ein Ausbau der Städtebauförderung wird nicht geregelt.",
+          "input_sha256": "bdd9b6493e9eaea25ba937d2b5066a8de9ca8bf5ecf44711927fbeb93a66ef32",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bdd9b6493e9eaea25ba937d2b5066a8de9ca8bf5ecf44711927fbeb93a66ef32"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelung erlaubt Ländern und Kommunen, Mittel dieses Gesetzes für Eigenanteile anderer Förderungen einzusetzen; ein Ausbau der Städtebauförderung wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fa85fa4cb1919222",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-225",
@@ -88555,7 +90203,145 @@
         "spd-2025-ac-f6a98f03441c1607"
       ],
       "omitted_count": 766,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Regelungen betreffen Anerkennungsverfahren in Heilberufen; eine Genehmigungsfiktion für Anträge ist nicht enthalten.",
+          "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Regelungen betreffen Anerkennungsverfahren in Heilberufen; eine Genehmigungsfiktion für Anträge ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Anerkennungsverfahren in Heilberufen, nicht die Strafbarkeit von Seenotrettung.",
+          "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Anerkennungsverfahren in Heilberufen, nicht die Strafbarkeit von Seenotrettung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine dokumentierte Prüfung der Auswirkungen dieser Neuregelung oder weiterer Reformschritte.",
+          "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext enthält keine dokumentierte Prüfung der Auswirkungen dieser Neuregelung oder weiterer Reformschritte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1549de3fffc2b369",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ändert Anerkennungsregeln für Heilberufe, etwa durch Kriterien zur Gleichwertigkeit; ohne den vorherigen Regelungsstand lässt sich nicht feststellen, ob die Verfahren dadurch transparenter wurden.",
+          "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz ändert Anerkennungsregeln für Heilberufe, etwa durch Kriterien zur Gleichwertigkeit; ohne den vorherigen Regelungsstand lässt sich nicht feststellen, ob die Verfahren dadurch transparenter wurden.",
+            "law_passage_id": "bgbl-1-2026-225-p-9d7f106bc1642c82",
+            "law_quote": "Die erworbene Berufsqualifikation ist als gleichwertig anzusehen, wenn sie keine wesentlichen Unterschiede gegenüber der Berufsqualifikation aufweist",
+            "criterion_quote": "Die Verfahren oder Regeln zur Anerkennung im Ausland erworbener Abschlüsse und Qualifikationen werden so geändert, dass sie transparenter sind als zuvor.",
+            "caveats": [
+              "Der vorherige Regelungsstand ist im bereitgestellten Material nicht enthalten."
+            ],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-58ea683bc8e758c8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Beitritt der EU zur Europäischen Menschenrechtskonvention.",
+          "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ba4827b55c9414ad80a6f7b218762bd6d8a2cd02bfecfbfd588b84060fda2c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Beitritt der EU zur Europäischen Menschenrechtskonvention.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-58ea683bc8e758c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-226",
@@ -91928,45 +93714,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5290,
-    "cache_hits": 87,
-    "subdivision_cache_hits": 7,
+    "calls": 5387,
+    "cache_hits": 92,
+    "subdivision_cache_hits": 8,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 25.238369,
-    "reported_cost_calls": 4780,
+    "reported_cost_usd": 25.520987,
+    "reported_cost_calls": 4877,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 2.990946,
     "unknown_cost_calls": 510,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 28.229316,
-    "prompt_tokens": 53741594,
-    "completion_tokens": 8617098,
+    "budget_exposure_usd": 28.511933,
+    "prompt_tokens": 55015820,
+    "completion_tokens": 8819668,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 205,
-        "reported_cost_usd": 4.991553749999998,
+        "calls": 210,
+        "reported_cost_usd": 5.130427499999998,
         "unknown_cost_reserved_usd": 1.096345236817342e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 5.551115123125783e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 80,
-        "reported_cost_usd": 1.0614425,
+        "calls": 82,
+        "reported_cost_usd": 1.0844310000000001,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 1.3877787807814457e-17
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2108,
-        "reported_cost_usd": 2.300903264999998,
+        "calls": 2198,
+        "reported_cost_usd": 2.4216584024999976,
         "unknown_cost_reserved_usd": 2.0064706499999994,
-        "pending_reserved_usd": 1.1275702593849246e-17
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

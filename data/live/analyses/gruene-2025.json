@@ -172291,7 +172291,7 @@
     {
       "law_id": "bgbl-1-2026-224",
       "analysis_sha256": "4889e3702018d24096ab0f05c2431e3e9b0cd6ae2a353c595d9e49ebfdd90389",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-03bac71bcf0e41db",
@@ -172420,6 +172420,35 @@
       ],
       "omitted_count": 1517,
       "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-03bac71bcf0e41db",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug ermöglicht weder eine Login-Falle noch gerichtlich angeordnete Accountsperren; ob solche Vorschriften im vollständigen Text stehen, ist nicht ersichtlich.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug ermöglicht weder eine Login-Falle noch gerichtlich angeordnete Accountsperren; ob solche Vorschriften im vollständigen Text stehen, ist nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Strafverfolgung mit der Login-Falle und durch Gerichte angeordnete Accountsperren zu ermöglichen.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-03bac71bcf0e41db",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "gruene-2025-ac-0462008eb15e408e",
           "disposition": "no_supported_link",
@@ -172817,6 +172846,64 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-25ca50928652444d",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine Regelung zur bedarfsgerechten Anpassung der Mittel für Frühe Hilfen; der vollständige Gesetzesinhalt liegt nicht vor.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine Regelung zur bedarfsgerechten Anpassung der Mittel für Frühe Hilfen; der vollständige Gesetzesinhalt liegt nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und den Bedarfen entsprechend kontinuierlich anpassen.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-25ca50928652444d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2a0500869c27f6d9",
+          "disposition": "missing_context",
+          "rationale": "Im Teilauszug findet sich keine Regelung zur Strafbarkeit der Verbreitung von Vergewaltigungsdarstellungen; ob der vollständige Text hierzu etwas vorsieht, bleibt offen.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Im Teilauszug findet sich keine Regelung zur Strafbarkeit der Verbreitung von Vergewaltigungsdarstellungen; ob der vollständige Text hierzu etwas vorsieht, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "rechtssichere Regelungen finden, wie der Besitz und die Verbreitung von Bildmaterial, das die Vergewaltigung einer erwachsenen Person zeigt, unter Strafe gestellt werden können.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-2a0500869c27f6d9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-2f91f06bf7db60fc",
           "disposition": "no_supported_link",
           "rationale": "Die bereitgestellten Passagen betreffen Infrastruktur- und Planungsrecht; eine Pflegeleistung oder ihre Aufteilung auf mehrere pflegende Personen wird nicht geregelt.",
@@ -173149,6 +173236,35 @@
             "caveats": [],
             "criterion_id": "gruene-2025-ac-517c6251cef05997",
             "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-53f93954efa9908c",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine Vorgaben zu Preisangaben auf Stromrechnungen; ob der vollständige Text mittlere Preise oder Neukund*innen-Preisspannen regelt, ist nicht ersichtlich.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine Vorgaben zu Preisangaben auf Stromrechnungen; ob der vollständige Text mittlere Preise oder Neukund*innen-Preisspannen regelt, ist nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "durch die Angabe des mittleren Strompreises und der Preisspanne für Neukund*innen auf der Energierechnung.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-53f93954efa9908c",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -173852,6 +173968,35 @@
             ],
             "criterion_id": "gruene-2025-ac-92f22990f047165f",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-93402056c678deab",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine Schulungsvorgaben für Justiz und Polizei zum Umgang mit Partnerschaftsgewalt; der vollständige Gesetzesinhalt ist nicht verfügbar.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine Schulungsvorgaben für Justiz und Polizei zum Umgang mit Partnerschaftsgewalt; der vollständige Gesetzesinhalt ist nicht verfügbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dazu müssen Justiz sowie Polizei umfassend geschult werden.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-93402056c678deab",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -174576,6 +174721,35 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-bba6bef5aff92181",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug regelt nicht, ob ein Betreuungsmodell nach Trennung als Regelfall gilt oder Entscheidungen am Einzelfall und Kindeswohl auszurichten sind; der vollständige Text ist nicht ersichtlich.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug regelt nicht, ob ein Betreuungsmodell nach Trennung als Regelfall gilt oder Entscheidungen am Einzelfall und Kindeswohl auszurichten sind; der vollständige Text ist nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Eine Festlegung auf ein Betreuungsmodell nach Trennung der Eltern als Regelfall lehnen wir ab. Vielmehr muss dieses dem Einzelfall angemessen und am Kindeswohl orientiert sein.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-bba6bef5aff92181",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-bc6b9aae99a15ea3",
           "disposition": "no_supported_link",
           "rationale": "Keine der vorgelegten Passagen betrifft Privilegien für Privatjets oder deren Abschaffung.",
@@ -174633,6 +174807,35 @@
             "caveats": [],
             "criterion_id": "gruene-2025-ac-bd6f8150032c42c4",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-bde17392cc4a2f75",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine Regelung zur Veröffentlichung von Nebeneinkünften an obersten Bundesgerichten; ob der vollständige Text dies vorsieht, bleibt offen.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine Regelung zur Veröffentlichung von Nebeneinkünften an obersten Bundesgerichten; ob der vollständige Text dies vorsieht, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Nebeneinkünfte von Bundesrichter*innen sollen – wie schon jetzt beim Bundesverfassungsgericht – auch bei allen anderen obersten Bundesgerichten veröffentlicht werden.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-bde17392cc4a2f75",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -174720,6 +174923,35 @@
             ],
             "criterion_id": "gruene-2025-ac-c17bd185d6fb5060",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-c212f9c35cdf5dd1",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine Vorgaben zur Kreditaufnahme für Verteidigungsinvestitionen oder zur Vermeidung einer Verdrängung anderer Zukunftsinvestitionen; der vollständige Text liegt nicht vor.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine Vorgaben zur Kreditaufnahme für Verteidigungsinvestitionen oder zur Vermeidung einer Verdrängung anderer Zukunftsinvestitionen; der vollständige Text liegt nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mittelfristig auch über eine höhere Kreditaufnahme finanziert werden müssen, um zu verhindern, dass Investitionen im Verteidigungsbereich zulasten anderer notwendiger Zukunftsinvestitionen gehen.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-c212f9c35cdf5dd1",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -175005,6 +175237,35 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-d3c5a4a3358789c4",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug weist keine Fortführung der genannten Förderungen im Aktionsprogramm Natürlicher Klimaschutz aus; ob der vollständige Text dazu Regelungen enthält, ist offen.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug weist keine Fortführung der genannten Förderungen im Aktionsprogramm Natürlicher Klimaschutz aus; ob der vollständige Text dazu Regelungen enthält, ist offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Förderung schonender Bodenbearbeitung und mechanischer Unkrautregulierung im Aktionsprogramm Natürlicher Klimaschutz führen wir weiter.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-d3c5a4a3358789c4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-d4ce1bd5a77f039f",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Gesetzespassagen betreffen Infrastruktur- und Verwaltungsrecht. Ein Initiativrecht des Europäischen Parlaments wird nicht geregelt.",
@@ -175144,6 +175405,35 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-e1e3179ff87c2cfe",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine Regelung zum Ausbau von Förderprogrammen für klimafreundliche Alternativen; der vollständige Gesetzesinhalt ist nicht ersichtlich.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine Regelung zum Ausbau von Förderprogrammen für klimafreundliche Alternativen; der vollständige Gesetzesinhalt ist nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "wollen wir in Zukunft Förderprogramme weiter ausbauen",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-e1e3179ff87c2cfe",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-e225adb1503a31ac",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften belegen weder eine Verdoppelung der Fahrgastzahlen bis 2040 noch eine rechtliche Maßnahme, die dieses Ergebnis unmittelbar herbeiführt. Die Erleichterungen für bestimmte Bahnmaßnahmen belegen für sich genommen keine Wirkung auf die Fahrgastzahlen.",
@@ -175169,6 +175459,35 @@
             ],
             "criterion_id": "gruene-2025-ac-e225adb1503a31ac",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-e65455ecb6d94cea",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug regelt keine Rechtssicherheit für kommunale Verpackungssteuern; ob der vollständige Text entsprechende Vorschriften enthält, bleibt offen.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug regelt keine Rechtssicherheit für kommunale Verpackungssteuern; ob der vollständige Text entsprechende Vorschriften enthält, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zur Müllreduktion geben wir den Kommunen Rechtssicherheit zum Erlassen einer Verpackungssteuer.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-e65455ecb6d94cea",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -175226,6 +175545,35 @@
               "Für eine abschließende Einordnung wären die nicht vorgelegten Teile des Gesetzes erforderlich."
             ],
             "criterion_id": "gruene-2025-ac-eb38b8a8f6292744",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-ee6c721c4c8958df",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug enthält keine diplomatischen Maßnahmen zur Verhinderung einer nuklearen Bewaffnung Irans; der vollständige Gesetzesinhalt ist nicht verfügbar.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug enthält keine diplomatischen Maßnahmen zur Verhinderung einer nuklearen Bewaffnung Irans; der vollständige Gesetzesinhalt ist nicht verfügbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die nukleare Bewaffnung des Irans zu verhindern.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-ee6c721c4c8958df",
             "disposition": "missing_context"
           },
           "verification": null
@@ -175578,7 +175926,7 @@
     {
       "law_id": "bgbl-1-2026-225",
       "analysis_sha256": "83004f689f19909bc3bdfae55adb2a4e98a70d9caa6743d7cbc3fd64615bfd66",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-13c67fd8b17d2562",
@@ -175909,6 +176257,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-6df10f645e042320",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Überprüfung der Einhaltung von Iran-Sanktionen.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Überprüfung der Einhaltung von Iran-Sanktionen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-6df10f645e042320",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-7fbfeebfb2b3f6eb",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur Strafbarkeit des Besitzes oder der Verbreitung von Vergewaltigungsdarstellungen. Die dort genannten Strafvorschriften betreffen die unerlaubte Berufsausübung in Heilberufen.",
@@ -175933,6 +176308,33 @@
               "Der Gesetzestext ist als teilweise gekennzeichnet; daraus folgt kein Beweis für Wirkungslosigkeit."
             ],
             "criterion_id": "gruene-2025-ac-7fbfeebfb2b3f6eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-85f7e5f49836c9b9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen ändert keine Vorgaben zum öffentlichen Verkehr oder zur Anbindung von Dörfern.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen ändert keine Vorgaben zum öffentlichen Verkehr oder zur Anbindung von Dörfern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-85f7e5f49836c9b9",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -176225,6 +176627,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-b8bd03bc749f97b7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Anerkennung ausländischer Berufsqualifikationen, nicht die Organisation oder Aufgaben des Bundesnachrichtendienstes.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Anerkennung ausländischer Berufsqualifikationen, nicht die Organisation oder Aufgaben des Bundesnachrichtendienstes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-b8bd03bc749f97b7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-c381ee138630c89b",
           "disposition": "no_supported_link",
           "rationale": "Die vorliegenden Passagen enthalten keine Regelungen zu Ewigkeitschemikalien oder zu einem schrittweisen Ausstieg aus deren Verwendung.",
@@ -176357,6 +176786,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-d8748882b63b0c18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-dc85455aed3d87d0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln Anerkennungsverfahren für ausländische Berufsqualifikationen in Heilberufen, nicht ein europäisches Treibhausgasziel für 2040.",
+          "input_sha256": "3a903cd785581a7f9e3f0ebae50a410d67264581bdefce553bc87882244b94b6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a903cd785581a7f9e3f0ebae50a410d67264581bdefce553bc87882244b94b6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln Anerkennungsverfahren für ausländische Berufsqualifikationen in Heilberufen, nicht ein europäisches Treibhausgasziel für 2040.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Europa muss nach wissenschaftlichem\nRat nun bis 2040 seine Treibhausgasemissionen um mindestens 90 bis 95 Prozent\ngegenüber 1990 verringern.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-dc85455aed3d87d0",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -244922,45 +245378,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5290,
-    "cache_hits": 87,
-    "subdivision_cache_hits": 7,
+    "calls": 5387,
+    "cache_hits": 92,
+    "subdivision_cache_hits": 8,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 25.238369,
-    "reported_cost_calls": 4780,
+    "reported_cost_usd": 25.520987,
+    "reported_cost_calls": 4877,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 2.990946,
     "unknown_cost_calls": 510,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 28.229316,
-    "prompt_tokens": 53741594,
-    "completion_tokens": 8617098,
+    "budget_exposure_usd": 28.511933,
+    "prompt_tokens": 55015820,
+    "completion_tokens": 8819668,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 205,
-        "reported_cost_usd": 4.991553749999998,
+        "calls": 210,
+        "reported_cost_usd": 5.130427499999998,
         "unknown_cost_reserved_usd": 1.096345236817342e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 5.551115123125783e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 80,
-        "reported_cost_usd": 1.0614425,
+        "calls": 82,
+        "reported_cost_usd": 1.0844310000000001,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 1.3877787807814457e-17
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2108,
-        "reported_cost_usd": 2.300903264999998,
+        "calls": 2198,
+        "reported_cost_usd": 2.4216584024999976,
         "unknown_cost_reserved_usd": 2.0064706499999994,
-        "pending_reserved_usd": 1.1275702593849246e-17
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

@@ -89770,7 +89770,7 @@
     {
       "law_id": "bgbl-1-2026-221",
       "analysis_sha256": "c6c9105b1c54c497d48e0e4b40fa158729b28a27ae10c20c7ef42136cdf152f7",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-03c92dd2a40d4485",
@@ -89798,6 +89798,38 @@
       ],
       "omitted_count": 943,
       "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-03c92dd2a40d4485",
+          "disposition": "proposed_link",
+          "rationale": "Wenn die Zustimmung der Ausländerbehörde erforderlich ist, muss sie bei missbräuchlicher Anerkennung versagt werden; ohne erforderliche Zustimmung ist die Anerkennung unwirksam. Ausnahmen von der Zustimmungspflicht und die Zustimmungsfiktion nach vier Monaten begrenzen die Wirkung.",
+          "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bca84f9883b4f10aae5b71ad01d95249dc43430e6424181a0fbde8732af87834"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8"
+            }
+          ],
+          "impact_id": "impact-7386f06203ac8138",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.98,
+            "rationale": "Wenn die Zustimmung der Ausländerbehörde erforderlich ist, muss sie bei missbräuchlicher Anerkennung versagt werden; ohne erforderliche Zustimmung ist die Anerkennung unwirksam. Ausnahmen von der Zustimmungspflicht und die Zustimmungsfiktion nach vier Monaten begrenzen die Wirkung.",
+            "law_passage_id": "bgbl-1-2026-221-p-066b12ee9b9c44c2",
+            "law_quote": "(1) Die Ausländerbehörde versagt die Zustimmung, wenn es sich um eine missbräuchliche Anerkennung der\nVaterschaft handelt.",
+            "criterion_quote": "- Kein Aufenthalt durch Scheinvaterschaften.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-03c92dd2a40d4485",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "cdu-csu-2025-ac-08c6cbe5c7d4e378",
           "disposition": "no_supported_link",
@@ -90021,6 +90053,38 @@
             ],
             "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5ed757df5c916c05",
+          "disposition": "no_supported_link",
+          "rationale": "BSI und BBK richten gemeinsam eine Registrierungsmöglichkeit für Betreiber kritischer Anlagen ein. Eine Zuständigkeit des BSI als Zentralstelle für Informations- und Cybersicherheit wird damit nicht festgelegt.",
+          "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5a3c5fab1a64df1195d162802610fb0a919885dba2453e8ea93993bafdea95ba"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4cf6c7534c7a8380245122284def04f636168bdd6cc53bcb1bd8f27b680d4fd8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "BSI und BBK richten gemeinsam eine Registrierungsmöglichkeit für Betreiber kritischer Anlagen ein. Eine Zuständigkeit des BSI als Zentralstelle für Informations- und Cybersicherheit wird damit nicht festgelegt.",
+            "law_passage_id": "bgbl-1-2026-221-p-4f2bf4a1c2746bde",
+            "law_quote": "über eine gemeinsam\nvom Bundesamt für Sicherheit in der Informationstechnik und dem Bundesamt für Bevölkerungsschutz und\nKatastrophenhilfe eingerichtete Registrierungsmöglichkeit",
+            "criterion_quote": "Deshalb bauen wir das\nBundesamt für Sicherheit in der Informationstechnik zu einer Zentralstelle für Fragen\nder Informations- und Cybersicherheit aus.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5ed757df5c916c05",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -90355,7 +90419,7 @@
     {
       "law_id": "bgbl-1-2026-222",
       "analysis_sha256": "e7df66f5f98386e8d92da4547f6593d7b47fd774e9ee5fb1f5b06c421c7e6dba",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-027b3032ced0a3f6",
@@ -92483,6 +92547,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-ee897a353ce56b20",
+          "disposition": "proposed_link",
+          "rationale": "Das AZR übermittelt bestimmten zugelassenen Stellen Daten automatisiert, soweit deren unverzügliche Kenntnis für ihre Aufgaben erforderlich ist. Das unterstützt behördenübergreifenden Datenaustausch teilweise; ein vollständiger Austausch zwischen allen vier genannten Behördenbereichen wird nicht eingerichtet.",
+          "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd54dcbcc0f0547c51ba9c1dcbf7a6794910d3870436e1562961e55a58f93c75"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "59d9f0c7eb87774e935de74144698ce9439c0ccded06783d50f114e9768c18e6"
+            }
+          ],
+          "impact_id": "impact-0210ae0e9e1e3c6c",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.9,
+            "rationale": "Das AZR übermittelt bestimmten zugelassenen Stellen Daten automatisiert, soweit deren unverzügliche Kenntnis für ihre Aufgaben erforderlich ist. Das unterstützt behördenübergreifenden Datenaustausch teilweise; ein vollständiger Austausch zwischen allen vier genannten Behördenbereichen wird nicht eingerichtet.",
+            "law_passage_id": "bgbl-1-2026-222-p-9356c4b6519d30a2",
+            "law_quote": "Die Registerbehörde übermittelt den nach § 22 Absatz 1 Satz 1 zum automatisierten Datenabruf\nzugelassenen öffentlichen Stellen, den Meldebehörden, der Familienkasse Direktion der Bundesagentur für\nArbeit und den deutschen Auslandsvertretungen in einem automatisierten Verfahren",
+            "criterion_quote": "Dazu wollen wir\neinen vollständigen Datenaustausch zwischen den Sozial-, Finanz-, Sicherheits- und\nAusländerbehörden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ee897a353ce56b20",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-ef777bf74b5adecb",
           "disposition": "missing_context",
           "rationale": "Der vorliegende Auszug regelt die Übermittlung von Informationen über Strafverfahren an die Ausländerbehörde, nicht den Entzug eines Aufenthaltstitels wegen Unterstützung einer Terror-Organisation; wegen des unvollständigen Gesetzestextes bleibt offen, ob weitere einschlägige Regelungen enthalten sind.",
@@ -93396,6 +93492,232 @@
       "omitted_count": 889,
       "pairs": [
         {
+          "criterion_id": "cdu-csu-2025-ac-0b4eefb8587e93fa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen keine Befugnis zur Quellen-Telekommunikationsüberwachung für Bundessicherheitsbehörden.",
+          "input_sha256": "1acff8a26fb037a90451573db73d10f1b779edf2393343ac485114a8be2e3f94",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1acff8a26fb037a90451573db73d10f1b779edf2393343ac485114a8be2e3f94"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen keine Befugnis zur Quellen-Telekommunikationsüberwachung für Bundessicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir schaffen digitale Befugnisse wie Quellen-Telekommunikationsüberwachung",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0b4eefb8587e93fa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0fd220f5ac3e1ed1",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge belegen keine Einführung einer digitalen Fahrzeugakte; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob sie an anderer Stelle geregelt ist.",
+          "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge belegen keine Einführung einer digitalen Fahrzeugakte; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob sie an anderer Stelle geregelt ist.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Zudem führen wir die digitale Fahrzeugakte ein.",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-0fd220f5ac3e1ed1",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1372a9c0cfcd32a5",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen weder die Zuweisung noch die Einstellung von Cybersicherheitsfachpersonal; der unvollständige Gesetzeskontext lässt eine Beurteilung des Gesamtgesetzes nicht zu.",
+          "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge belegen weder die Zuweisung noch die Einstellung von Cybersicherheitsfachpersonal; der unvollständige Gesetzeskontext lässt eine Beurteilung des Gesamtgesetzes nicht zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir statten unsere Sicherheitsbehörden bei der Cybersicherheit mit den notwendigen Befugnissen, mit Fachpersonal und moderner Infrastruktur aus.",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-1372a9c0cfcd32a5",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten kein entsprechendes Kooperationsverbot für Vereine oder Verbände; wegen des unvollständigen Gesetzeskontexts bleibt die Regelungslage im Gesamtgesetz offen.",
+          "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten kein entsprechendes Kooperationsverbot für Vereine oder Verbände; wegen des unvollständigen Gesetzeskontexts bleibt die Regelungslage im Gesamtgesetz offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Vereine und Verbände, die Geld von\nausländischen Regierungen und mit ihnen verbundenen Organisationen erhalten, können weder staatliches Geld aus Deutschland erhalten noch Kooperationen mit unseren\nstaatlichen Stellen eingehen.",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-150136a5ce10fdbd",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keine Prüfung sämtlicher Ausgaben oder insbesondere der Subventionen; die Regelung zur Mittelverwendung ersetzt eine solche Prüfung nicht, und der Gesetzeskontext ist unvollständig.",
+          "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e22ab3aa2bf84dae99c1bb62c2aaacec810cc268cc617c9dafc9d7ab30fc1a39"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge belegen keine Prüfung sämtlicher Ausgaben oder insbesondere der Subventionen; die Regelung zur Mittelverwendung ersetzt eine solche Prüfung nicht, und der Gesetzeskontext ist unvollständig.",
+            "law_passage_id": "bgbl-1-2026-224-p-198661d73c5a9b17",
+            "law_quote": "Die nach diesem Gesetz zur Verfügung gestellten Mittel können durch die Länder und Kommunen zur Erbringung von in anderen Bundesgesetzen oder sonstigen Vorschriften des Bundes sowie in Verwaltungsvereinbarungen mit den Ländern vorgesehenen Eigenanteilen von Ländern und Kommunen wie eigene Haushaltsmittel eingesetzt werden.",
+            "criterion_quote": "Unmittelbar zu Beginn der neuen Wahlperiode machen wir einen ehrlichen Kassensturz\nund hinterfragen alle Ausgaben, insbesondere die Subventionen.",
+            "caveats": [
+              "Gesetzeskontext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-150136a5ce10fdbd",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19bfeb14ca60eb16",
+          "disposition": "missing_context",
+          "rationale": "Der Ausschnitt nennt nur den Wegfall von Planfeststellung und Plangenehmigung bei unwesentlicher Bedeutung unter bestimmten Voraussetzungen; ob für die genannten Infrastrukturvorhaben ein Anzeigeverfahren geschaffen wird, lässt sich ohne die fehlenden einschlägigen Regelungen nicht beurteilen.",
+          "input_sha256": "7c32ca4d48c4ab3cd4342dfa3a9cf05e72d52a6a47b73eb5781ee0493b4d7af0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7c32ca4d48c4ab3cd4342dfa3a9cf05e72d52a6a47b73eb5781ee0493b4d7af0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Der Ausschnitt nennt nur den Wegfall von Planfeststellung und Plangenehmigung bei unwesentlicher Bedeutung unter bestimmten Voraussetzungen; ob für die genannten Infrastrukturvorhaben ein Anzeigeverfahren geschaffen wird, lässt sich ohne die fehlenden einschlägigen Regelungen nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-224-p-1cd86a6c39378c59",
+            "law_quote": "Planfeststellung und Plangenehmigung entfallen in Fällen von unwesentlicher Bedeutung. Diese liegen vor, wenn",
+            "criterion_quote": "Ersatzneubauten, unwesentliche Änderungen oder Erweiterungen können anstelle des Planfeststellungsverfahrens durch ein Anzeigeverfahren zugelassen werden.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-19bfeb14ca60eb16",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-203f07e4be823eeb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung stuft Hochwasser- und Küstenschutz als vorrangigen Belang in Schutzgüterabwägungen ein; Maßnahmen zur Stärkung des Wissens über das Verhalten in Krisen enthält sie nicht.",
+          "input_sha256": "7c32ca4d48c4ab3cd4342dfa3a9cf05e72d52a6a47b73eb5781ee0493b4d7af0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7c32ca4d48c4ab3cd4342dfa3a9cf05e72d52a6a47b73eb5781ee0493b4d7af0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelung stuft Hochwasser- und Küstenschutz als vorrangigen Belang in Schutzgüterabwägungen ein; Maßnahmen zur Stärkung des Wissens über das Verhalten in Krisen enthält sie nicht.",
+            "law_passage_id": "bgbl-1-2026-224-p-c8bb0aa25ad57d19",
+            "law_quote": "Maßnahmen des Hochwasser- und Küstenschutzes liegen im überragenden öffentlichen Interesse und dienen der öffentlichen Sicherheit. Die Hochwasser- und Küstenschutzvorsorge soll als vorrangiger Belang in die jeweils durchzuführenden Schutzgüterabwägungen eingebracht werden.",
+            "criterion_quote": "Auch das Wissen um das Verhalten bei Hochwasser, Stromausfällen und anderen Krisen stärken wir.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-203f07e4be823eeb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-225d2c26396603ad",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Gesetzesauszüge betreffen keine Regelung zum Renteneintrittsalter; wegen des nur teilweisen Gesetzeskontexts lässt sich nicht feststellen, ob die bestehende Regelung beibehalten wurde.",
+          "input_sha256": "a422c11814852d368fbb74aee2860c9e537f7478a8b2aa804c41baa24ab93cee",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a422c11814852d368fbb74aee2860c9e537f7478a8b2aa804c41baa24ab93cee"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Gesetzesauszüge betreffen keine Regelung zum Renteneintrittsalter; wegen des nur teilweisen Gesetzeskontexts lässt sich nicht feststellen, ob die bestehende Regelung beibehalten wurde.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "An der bestehenden gesetzlichen Regelung\nzum Renteneintrittsalter halten wir fest.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-225d2c26396603ad",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
           "disposition": "missing_context",
           "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zur fachlichen Bestandsaufnahme abgeschalteter Kernkraftwerke; wegen des unvollständigen Gesetzeskontexts lässt sich die Umsetzung nicht feststellen.",
@@ -93541,6 +93863,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "proposed_link",
+          "rationale": "Bei Änderungen an Überführungen trägt grundsätzlich der Beteiligte die Kosten, der die Änderung verlangt; bei Verlangen beider Beteiligter gelten besondere Aufteilungsregeln. Das setzt das Veranlasserprinzip für diesen Bereich um, nicht aber einen allgemeinen Ausgleich von Länder- oder Kommunalbelastungen durch Bundesmaßnahmen.",
+          "input_sha256": "b1ff4c72866e6300e7fb0da7afabef6025e1d1c5ffdb559192a444682c0e8ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75ca4d0117850363ccb57efbe1e5b0ed154f8bf3acf2ad42fb254016db0016d5"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b1ff4c72866e6300e7fb0da7afabef6025e1d1c5ffdb559192a444682c0e8ac7"
+            }
+          ],
+          "impact_id": "impact-8e59e3566aa9781f",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.88,
+            "rationale": "Bei Änderungen an Überführungen trägt grundsätzlich der Beteiligte die Kosten, der die Änderung verlangt; bei Verlangen beider Beteiligter gelten besondere Aufteilungsregeln. Das setzt das Veranlasserprinzip für diesen Bereich um, nicht aber einen allgemeinen Ausgleich von Länder- oder Kommunalbelastungen durch Bundesmaßnahmen.",
+            "law_passage_id": "bgbl-1-2026-224-p-46e10e13782c36b1",
+            "law_quote": "1. demjenigen Beteiligten zur Last, der die Änderung der Überführung verlangt oder sie im Fall einer Anordnung\nhätte verlangen müssen;",
+            "criterion_quote": "Wer eine Leistung veranlasst oder ausweitet, muss für ihre Finanzierung aufkommen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-3a461b0ab298e374",
           "disposition": "missing_context",
           "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zur Einrichtung oder Aufrüstung einer Zollpolizei; wegen des unvollständigen Gesetzeskontexts lässt sich die Umsetzung nicht feststellen.",
@@ -93566,6 +93920,38 @@
             ],
             "criterion_id": "cdu-csu-2025-ac-3a461b0ab298e374",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3f147474cfd1553b",
+          "disposition": "proposed_link",
+          "rationale": "Der vollständige Plan ist im Planfeststellungsverfahren elektronisch einzureichen. Für bis Ende 2027 eingeleitete Verfahren kann die Behörde allerdings noch Verfahrensschritte nach der bisherigen Fassung durchführen.",
+          "input_sha256": "b1ff4c72866e6300e7fb0da7afabef6025e1d1c5ffdb559192a444682c0e8ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75ca4d0117850363ccb57efbe1e5b0ed154f8bf3acf2ad42fb254016db0016d5"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b1ff4c72866e6300e7fb0da7afabef6025e1d1c5ffdb559192a444682c0e8ac7"
+            }
+          ],
+          "impact_id": "impact-f4778e23faa88ae4",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.9,
+            "rationale": "Der vollständige Plan ist im Planfeststellungsverfahren elektronisch einzureichen. Für bis Ende 2027 eingeleitete Verfahren kann die Behörde allerdings noch Verfahrensschritte nach der bisherigen Fassung durchführen.",
+            "law_passage_id": "bgbl-1-2026-224-p-df9b365b3c2cd6cb",
+            "law_quote": "(1) Der Träger des Vorhabens hat den vollständigen Plan bei der Planfeststellungsbehörde elektronisch\neinzureichen.",
+            "criterion_quote": "Es muss aber durch einen verpflichtenden Verfahrensleitplan, eine Stichtagsregelung, eine Mitwirkungsverpflichtung\nund Digitalisierung effizienter werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3f147474cfd1553b",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -93620,6 +94006,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-4a24589107061231",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4a35dfc11a114a4f",
+          "disposition": "missing_context",
+          "rationale": "Für bestimmte Eisenbahnmaßnahmen ohne UVP-Pflicht entfällt die vorherige Planfeststellung oder Plangenehmigung. Ob sich die tatsächliche Dauer von Planungs- und Genehmigungsverfahren gegenüber dem vorherigen Stand verkürzt hat, ist daraus nicht ersichtlich.",
+          "input_sha256": "b1ff4c72866e6300e7fb0da7afabef6025e1d1c5ffdb559192a444682c0e8ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9c23ee07960b844de959a1dc802d7980b6a793edac7dadc5514b1484c2e7143d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b1ff4c72866e6300e7fb0da7afabef6025e1d1c5ffdb559192a444682c0e8ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Für bestimmte Eisenbahnmaßnahmen ohne UVP-Pflicht entfällt die vorherige Planfeststellung oder Plangenehmigung. Ob sich die tatsächliche Dauer von Planungs- und Genehmigungsverfahren gegenüber dem vorherigen Stand verkürzt hat, ist daraus nicht ersichtlich.",
+            "law_passage_id": "bgbl-1-2026-224-p-6e381a07e42bce2a",
+            "law_quote": "Für folgende Einzelmaßnahmen, die den Bau oder die Änderung von Betriebsanlagen einer\nEisenbahn vorsehen, bedarf es keiner vorherigen Planfeststellung oder Plangenehmigung, sofern keine\nPflicht zur Durchführung einer Umweltverträglichkeitsprüfung besteht:",
+            "criterion_quote": "- Wir wollen Planungs- und Genehmigungsverfahren beschleunigen – gerade bei Bau, Verkehr und digitalen Infrastrukturen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4a35dfc11a114a4f",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -94197,6 +94615,402 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-7739fa7f62e26ab1",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten, ausdrücklich unvollständigen Gesetzesauszüge enthalten keine Regelung zum Ausbau der Warninfrastruktur oder zum Schließen entsprechender Lücken.",
+          "input_sha256": "5922f39cf69010b5d36770e58c9efccb831872827decda9f91ab9f0f3d96f57d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5922f39cf69010b5d36770e58c9efccb831872827decda9f91ab9f0f3d96f57d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten, ausdrücklich unvollständigen Gesetzesauszüge enthalten keine Regelung zum Ausbau der Warninfrastruktur oder zum Schließen entsprechender Lücken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Aus den unvollständigen Auszügen lässt sich nicht beurteilen, ob eine solche Regelung an anderer Stelle des Gesetzes steht."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-7739fa7f62e26ab1",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8474f0e1075497b2",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten, ausdrücklich unvollständigen Gesetzesauszüge enthalten keine Regelung zur Energiesteuerbefreiung alternativer Kraftstoffe in der Land- und Forstwirtschaft.",
+          "input_sha256": "5922f39cf69010b5d36770e58c9efccb831872827decda9f91ab9f0f3d96f57d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5922f39cf69010b5d36770e58c9efccb831872827decda9f91ab9f0f3d96f57d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten, ausdrücklich unvollständigen Gesetzesauszüge enthalten keine Regelung zur Energiesteuerbefreiung alternativer Kraftstoffe in der Land- und Forstwirtschaft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Aus den unvollständigen Auszügen lässt sich nicht beurteilen, ob eine solche Regelung an anderer Stelle des Gesetzes steht."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8474f0e1075497b2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz digitalisiert die Einreichung und Bearbeitung von Infrastrukturplanungen, stellt Bürgerinnen und Bürgern aber keine gebündelte, personalisierte digitale Akte bereit.",
+          "input_sha256": "4ad633334addf314867e4bdd7a2279d49f3dd88e9f3bdf2114fd2d874eea875f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4ad633334addf314867e4bdd7a2279d49f3dd88e9f3bdf2114fd2d874eea875f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz digitalisiert die Einreichung und Bearbeitung von Infrastrukturplanungen, stellt Bürgerinnen und Bürgern aber keine gebündelte, personalisierte digitale Akte bereit.",
+            "law_passage_id": "bgbl-1-2026-224-p-df9b365b3c2cd6cb",
+            "law_quote": "Der Träger des Vorhabens hat den vollständigen Plan bei der Planfeststellungsbehörde elektronisch einzureichen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführten Vorschriften regeln Infrastrukturvorhaben und Fördermittel für Länder und Kommunen, nicht den Ausschluss ausländisch finanzierter Vereine oder Verbände von staatlichen Mitteln.",
+          "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die angeführten Vorschriften regeln Infrastrukturvorhaben und Fördermittel für Länder und Kommunen, nicht den Ausschluss ausländisch finanzierter Vereine oder Verbände von staatlichen Mitteln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Vereine und Verbände, die Geld von\nausländischen Regierungen und mit ihnen verbundenen Organisationen erhalten, können weder staatliches Geld aus Deutschland erhalten",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8d6c2a96e05278b8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft insbesondere Schienen- und Straßeninfrastruktur; ein Ausbau von Mobilfunknetzen oder eine Förderung ländlicher Mobilfunkversorgung ist in den vorgelegten Vorschriften nicht geregelt.",
+          "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft insbesondere Schienen- und Straßeninfrastruktur; ein Ausbau von Mobilfunknetzen oder eine Förderung ländlicher Mobilfunkversorgung ist in den vorgelegten Vorschriften nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Den Ausbau hochleistungsfähiger Breitband- und Mobilfunknetze bringen wir weiter in die Fläche, gerade auch in den ländlichen Raum.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8d6c2a96e05278b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f45cb64aecff56b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Einrichtung einer Wissenschaftsplattform im Weimarer Dreieck.",
+          "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur Einrichtung einer Wissenschaftsplattform im Weimarer Dreieck.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir erweitern das Weimarer\nDreieck um eine Wissenschaftsplattform.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8f45cb64aecff56b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Infrastruktur und Planungsverfahren; eine Fortführung des Aktionsplans für ein inklusives und barrierefreies Gesundheitswesen ist darin nicht geregelt.",
+          "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d7fa479e419430fd5ea42764b4a7a00c1245526d7ad3b853da4332a3c190ec2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Infrastruktur und Planungsverfahren; eine Fortführung des Aktionsplans für ein inklusives und barrierefreies Gesundheitswesen ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir führen den Aktionsplan für ein diverses, inklusives und barrierefreies Gesundheitswesen fort.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keinen Kassensturz; ob er unmittelbar zu Beginn der Wahlperiode durchgeführt wurde, erfordert Angaben zur Regierungspraxis und zum Zeitpunkt.",
+          "input_sha256": "a713a92a841fd925336708aca6cc9dfcabb9cbe0fe5811e9e07f6d09064dc434",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a713a92a841fd925336708aca6cc9dfcabb9cbe0fe5811e9e07f6d09064dc434"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge belegen keinen Kassensturz; ob er unmittelbar zu Beginn der Wahlperiode durchgeführt wurde, erfordert Angaben zur Regierungspraxis und zum Zeitpunkt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unmittelbar zu Beginn der neuen Wahlperiode machen wir einen ehrlichen Kassensturz und hinterfragen alle Ausgaben, insbesondere die Subventionen.",
+            "caveats": [
+              "Die vorgelegten Gesetzesauszüge erlauben keine Beurteilung der tatsächlichen Haushaltsprüfung."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9ac203b5221051ec",
+          "disposition": "missing_context",
+          "rationale": "Der Telekommunikationsbezug regelt die Anerkennung von Prüforganisationen, nicht die Funkzellenauswertung; für den Vergleich der strafprozessualen Befugnisse fehlen einschlägige Vorschriften.",
+          "input_sha256": "a713a92a841fd925336708aca6cc9dfcabb9cbe0fe5811e9e07f6d09064dc434",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a713a92a841fd925336708aca6cc9dfcabb9cbe0fe5811e9e07f6d09064dc434"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Telekommunikationsbezug regelt die Anerkennung von Prüforganisationen, nicht die Funkzellenauswertung; für den Vergleich der strafprozessualen Befugnisse fehlen einschlägige Vorschriften.",
+            "law_passage_id": "bgbl-1-2026-224-p-34fb30f4f8167b01",
+            "law_quote": "Prüforganisationen werden im Bereich der Signal-, Telekommunikations- und Elektronik anerkannt, sofern sie die erforderliche Fachkompetenz besitzen und vom Auftraggeber unabhängig sind.",
+            "criterion_quote": "Die Möglichkeit zur Überwachung der Telekommunikation und zur Funkzellenauswertung weiten wir aus. Das gilt insbesondere für Verbrechen wie den Wohnungseinbruchsdiebstahl und den Enkeltrick, die tief in das Sicherheitsgefühl der Opfer einschneiden.",
+            "caveats": [
+              "Die vorgelegten Gesetzesauszüge sind teilweise und enthalten keine Vorschriften zur Funkzellenauswertung."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-9ac203b5221051ec",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9fa672d90772c946",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug nennt ein Verwaltungsportal und weitere verfahrensbezogene Regeln, lässt aber ihren Anwendungsbereich und damit die Übertragung auf die genannten Bereiche nicht sicher erkennen.",
+          "input_sha256": "765b7df354d44576928a850aff06eb571e59d4c3b4d17ae1b55dda286ff502f9",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "765b7df354d44576928a850aff06eb571e59d4c3b4d17ae1b55dda286ff502f9"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Der Auszug nennt ein Verwaltungsportal und weitere verfahrensbezogene Regeln, lässt aber ihren Anwendungsbereich und damit die Übertragung auf die genannten Bereiche nicht sicher erkennen.",
+            "law_passage_id": "bgbl-1-2026-224-p-8c95ef26d8f7bb1c",
+            "law_quote": "Die Planfeststellungsbehörde soll festlegen, dass der Plan über eine von ihr oder ihrem Verwaltungsträger zur Verfügung gestelltes Verwaltungsportal einzureichen ist",
+            "criterion_quote": "Regelungen, die in einem Bereich zur Verfahrensbeschleunigung beitragen, müssen auch auf andere Bereiche wie Verkehr, Bau und digitale Infrastrukturen übertragen werden.",
+            "caveats": [
+              "Der bereitgestellte Gesetzestext ist teilweise; die für die sektorübergreifende Anwendbarkeit nötigen Zusammenhänge fehlen."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-9fa672d90772c946",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-aa65336311c000e6",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zu Kooperationsmodellen beim Breitband- oder Mobilfunkausbau; wegen des ausdrücklich lückenhaften Gesetzeskontexts ist eine abschließende Bewertung nicht möglich.",
+          "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zu Kooperationsmodellen beim Breitband- oder Mobilfunkausbau; wegen des ausdrücklich lückenhaften Gesetzeskontexts ist eine abschließende Bewertung nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Kooperationsmodelle",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-aa65336311c000e6",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b3ef15d6abeca56c",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge regeln unter anderem Schienenwege, belegen aber keine Berücksichtigung neuer Technologien im Güterverkehr; der unvollständige Gesetzeskontext lässt eine abschließende Bewertung nicht zu.",
+          "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Auszüge regeln unter anderem Schienenwege, belegen aber keine Berücksichtigung neuer Technologien im Güterverkehr; der unvollständige Gesetzeskontext lässt eine abschließende Bewertung nicht zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden dabei auch neue Technologien in den Blick nehmen.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-b3ef15d6abeca56c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b58fed7970ed7cf4",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten keine Maßnahmen zum Auf- oder Umbau klimastabiler und standortangepasster Wälder; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob das Gesetz hierzu weitere Regelungen enthält.",
+          "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Auszüge enthalten keine Maßnahmen zum Auf- oder Umbau klimastabiler und standortangepasster Wälder; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob das Gesetz hierzu weitere Regelungen enthält.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Gleichzeitig fördern wir den Auf- und Umbau klimastabiler und standortangepasster Wälder",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-b58fed7970ed7cf4",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b7a7c4ce3e40c37d",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge belegen keine verstärkte organisatorische Trennung von Infrastruktur- und Transportbereich; da der Gesetzeskontext unvollständig ist, lässt sich die Entwicklung gegenüber dem bisherigen Stand nicht abschließend beurteilen.",
+          "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea8bb09b47ff8a504b0b981797a0ae607cb0ecc00146e9741e8c8b3df56f255f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge belegen keine verstärkte organisatorische Trennung von Infrastruktur- und Transportbereich; da der Gesetzeskontext unvollständig ist, lässt sich die Entwicklung gegenüber dem bisherigen Stand nicht abschließend beurteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Für mehr Wettbewerb müssen Infrastruktur- und Transportbereich\nstärker als bisher voneinander getrennt werden.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-b7a7c4ce3e40c37d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-bef290587acbd0a7",
           "disposition": "missing_context",
           "rationale": "Die vorgelegten Passagen regeln unter anderem Erleichterungen für bestimmte Eisenbahn-Baumaßnahmen, zeigen aber keine stärkere Trennung von Infrastruktur- und Transportbereich; für den Strukturvergleich fehlt zudem der vollständige Kontext.",
@@ -94631,6 +95445,64 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fb8a2534ce14d3fb",
+          "disposition": "missing_context",
+          "rationale": "Der vorliegende Teilauszug enthält keine Regelung zum baulichen oder technischen Schutz der EU-Außengrenzen; ob der vollständige Text dazu etwas bestimmt, ist nicht ersichtlich.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der vorliegende Teilauszug enthält keine Regelung zum baulichen oder technischen Schutz der EU-Außengrenzen; ob der vollständige Text dazu etwas bestimmt, ist nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir dringen darauf, dass zu einem wirksamen Schutz der EU-Außengrenzen auch verstärkt der bauliche und technische Grenzschutz gehören.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-fb8a2534ce14d3fb",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+          "disposition": "missing_context",
+          "rationale": "Der Teilauszug positioniert das BSI nicht als dritte Säule unter Führung des BMI; ob der vollständige Text eine solche Regelung enthält, bleibt offen.",
+          "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92b13620d1451c1505642eaf64029ab65192bd4a496089f3ff76487d9318c108"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Teilauszug positioniert das BSI nicht als dritte Säule unter Führung des BMI; ob der vollständige Text eine solche Regelung enthält, bleibt offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es soll neben dem Bundesamt für Verfassungsschutz und dem Bundeskriminalamt eine starke dritte Säule der Cybersicherheitsarchitektur unter Führung des Bundesministeriums des Innern bilden.",
+            "caveats": [
+              "Der Gesetzestext ist als teilweise überliefert gekennzeichnet."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+            "disposition": "missing_context"
+          },
+          "verification": null
         }
       ]
     },
@@ -94664,7 +95536,575 @@
         "cdu-csu-2025-ac-e22ef6d3548fc985"
       ],
       "omitted_count": 943,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-0cd193640e719142",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Anerkennungsregeln für Heilberufe; ein Staatsvertrag von Bund und Ländern zum Deutschen Qualifikationsrahmen wird darin nicht geregelt.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Anerkennungsregeln für Heilberufe; ein Staatsvertrag von Bund und Ländern zum Deutschen Qualifikationsrahmen wird darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0cd193640e719142",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Handelspolitik und enthält weder eine Regelung zum Mercosur-Abkommen noch dessen Inkrafttreten.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Handelspolitik und enthält weder eine Regelung zum Mercosur-Abkommen noch dessen Inkrafttreten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorgaben zu staatlicher Förderung oder Kooperationen mit Vereinen und Verbänden aufgrund ausländischer Geldgeber.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Vorgaben zu staatlicher Förderung oder Kooperationen mit Vereinen und Verbänden aufgrund ausländischer Geldgeber.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zu erforderlichen Deutschkenntnissen beziehen sich auf die Berufsausübung in Heilberufen, nicht auf die Einschulung von Kindern.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zu erforderlichen Deutschkenntnissen beziehen sich auf die Berufsausübung in Heilberufen, nicht auf die Einschulung von Kindern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1c8c98920f3ef86b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Anerkennungsverfahren für Berufsqualifikationen, nicht die Durchführung von Asylverfahren in sicheren Drittstaaten.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Anerkennungsverfahren für Berufsqualifikationen, nicht die Durchführung von Asylverfahren in sicheren Drittstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1c8c98920f3ef86b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2d900ce668bc4d05",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine ausländerrechtlichen Regelungen zu Ausweisung oder Aufenthaltstiteln bei öffentlichen Aufrufen oder antisemitischen Straftaten.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine ausländerrechtlichen Regelungen zu Ausweisung oder Aufenthaltstiteln bei öffentlichen Aufrufen oder antisemitischen Straftaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2d900ce668bc4d05",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e46a9174b5327e5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder staatliche Fördervoraussetzungen noch Erklärungen gegen Antisemitismus.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder staatliche Fördervoraussetzungen noch Erklärungen gegen Antisemitismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2e46a9174b5327e5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Grenzkontrollen oder ihrer Verlängerung.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Grenzkontrollen oder ihrer Verlängerung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-39725cf0bd91464e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Anerkennungsverfahren in Heilberufen; eine Initiative zum Verzicht auf Gendersprache in öffentlichen Bereichen regelt es nicht.",
+          "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9b8a71ca54e20c6fe2df39bc4d4059bc7bbd5dfeebb330d24081cac6e51db963"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Anerkennungsverfahren in Heilberufen; eine Initiative zum Verzicht auf Gendersprache in öffentlichen Bereichen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-39725cf0bd91464e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-434af2852f7bb0f5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz beschleunigt Anerkennungsverfahren in Heilberufen; eine Erneuerung der Forschungsflotte regelt es nicht.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz beschleunigt Anerkennungsverfahren in Heilberufen; eine Erneuerung der Forschungsflotte regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-434af2852f7bb0f5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-49bc84edde3e40eb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Anerkennungsverfahren für ausländische Qualifikationen, belegt aber keine Anpassung von Aus- und Fortbildungsordnungen an veränderte berufliche Fähigkeiten.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Anerkennungsverfahren für ausländische Qualifikationen, belegt aber keine Anpassung von Aus- und Fortbildungsordnungen an veränderte berufliche Fähigkeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-49bc84edde3e40eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-51ee0c35e86d4562",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Anerkennung von Berufsqualifikationen in Heilberufen, nicht Zwischenstufen auf dem Weg zum EU-Beitritt.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Anerkennung von Berufsqualifikationen in Heilberufen, nicht Zwischenstufen auf dem Weg zum EU-Beitritt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-51ee0c35e86d4562",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Anerkennungsverfahren in Heilberufen; eine allgemeine individuelle Kontrolle über die Erhebung und Nutzung von Daten regeln sie nicht.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Anerkennungsverfahren in Heilberufen; eine allgemeine individuelle Kontrolle über die Erhebung und Nutzung von Daten regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen regelt weder Asylverfahren noch Schutzgewährung in sicheren Drittstaaten.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen regelt weder Asylverfahren noch Schutzgewährung in sicheren Drittstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu den Beitrittskriterien der Ukraine zur Europäischen Union.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu den Beitrittskriterien der Ukraine zur Europäischen Union.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen regelt keinen Kassensturz oder die Prüfung von Haushaltsausgaben zu Beginn einer Wahlperiode.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen regelt keinen Kassensturz oder die Prüfung von Haushaltsausgaben zu Beginn einer Wahlperiode.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Regelungen zur Besteuerung von Erwerbseinkommen im Rentenalter.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Regelungen zur Besteuerung von Erwerbseinkommen im Rentenalter.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a48ca0fc4f4a27d4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen enthält keine Regelung zur Haftung Deutschlands für Staatsschulden.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen enthält keine Regelung zur Haftung Deutschlands für Staatsschulden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a48ca0fc4f4a27d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet keinen europäischen Normenkontrollrat ein und regelt keine Messung von Bürokratiekosten oder EU-Rechtserfahrungen.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet keinen europäischen Normenkontrollrat ein und regelt keine Messung von Bürokratiekosten oder EU-Rechtserfahrungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-db0d4126451871d3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz beschleunigt Anerkennungsverfahren in Heilberufen, übernimmt aber keine Haftung für Schulden anderer EU-Staaten.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz beschleunigt Anerkennungsverfahren in Heilberufen, übernimmt aber keine Haftung für Schulden anderer EU-Staaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-db0d4126451871d3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e22ef6d3548fc985",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen enthält keine Regelung zum Auslands-BAföG oder dessen Vollzug.",
+          "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d460e78c5659099b436f3bcea751198cdcad0516a3081007594a86981a10b21d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz über Anerkennungsverfahren in Heilberufen enthält keine Regelung zum Auslands-BAföG oder dessen Vollzug.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e22ef6d3548fc985",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-226",
@@ -98314,45 +99754,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5290,
-    "cache_hits": 87,
-    "subdivision_cache_hits": 7,
+    "calls": 5387,
+    "cache_hits": 92,
+    "subdivision_cache_hits": 8,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 25.238369,
-    "reported_cost_calls": 4780,
+    "reported_cost_usd": 25.520987,
+    "reported_cost_calls": 4877,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 2.990946,
     "unknown_cost_calls": 510,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 28.229316,
-    "prompt_tokens": 53741594,
-    "completion_tokens": 8617098,
+    "budget_exposure_usd": 28.511933,
+    "prompt_tokens": 55015820,
+    "completion_tokens": 8819668,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 205,
-        "reported_cost_usd": 4.991553749999998,
+        "calls": 210,
+        "reported_cost_usd": 5.130427499999998,
         "unknown_cost_reserved_usd": 1.096345236817342e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 5.551115123125783e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 80,
-        "reported_cost_usd": 1.0614425,
+        "calls": 82,
+        "reported_cost_usd": 1.0844310000000001,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 1.3877787807814457e-17
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2108,
-        "reported_cost_usd": 2.300903264999998,
+        "calls": 2198,
+        "reported_cost_usd": 2.4216584024999976,
         "unknown_cost_reserved_usd": 2.0064706499999994,
-        "pending_reserved_usd": 1.1275702593849246e-17
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

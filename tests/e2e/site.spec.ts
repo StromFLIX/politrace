@@ -116,6 +116,7 @@ test('final impacts keep exact quotes and open the corresponding OCR law page', 
     await expect(card).toBeVisible();
     await expect(card.locator('[data-model-disagreement]')).toHaveCount(0);
     await expect(card).not.toContainText('menschliche Prüfung');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
     await card.locator('h3 a').click();
     await expect(page.getByRole('heading', { name: criterion.title, exact: true })).toBeVisible();
     expect(await page.locator(`[id="${impact.id}"] blockquote`).textContent()).toBe(impact.law_quote);
@@ -125,6 +126,17 @@ test('final impacts keep exact quotes and open the corresponding OCR law page', 
     await expect(page.locator(':target .document-prose')).toBeVisible();
     await expect(page.locator('[data-law-text], .law-evidence')).toHaveCount(0);
   }
+});
+
+test('long official law titles wrap without widening the mobile viewport', async ({ page, request }) => {
+  // This title contains long German compounds. Horizontal overflow makes mobile
+  // Chromium pan its visual viewport and prevents citation links receiving clicks.
+  const law = await (await request.get('/api/v1/live/laws/bgbl-1-2026-222.json')).json();
+  await page.goto(`/live/gesetze/${law.id}/`);
+  await expect(page.getByRole('heading', { name: law.title, exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth)).toBe(true);
+  await page.getByRole('link', { name: 'Gesetz lesen ↓', exact: true }).click();
+  await expect(page.locator(':target')).toHaveAttribute('id', 'gesetz-lesen');
 });
 
 test('URL search values are never rendered as executable HTML', async ({ page }) => {
