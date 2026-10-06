@@ -131409,7 +131409,7 @@
     {
       "law_id": "bgbl-1-2026-87",
       "analysis_sha256": "8e3341c571ba758eb1a1fbe308f661f981210d94681fad4390cfccb4d75aca8d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-1128dc4085bcf9c9",
@@ -131594,6 +131594,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-4a3ebc9226c1c5b2",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Passagen enthalten neue Jagdregelungen für den Wolf, aber nicht den Wortlaut der Änderung des Bundesnaturschutzgesetzes. Ob und wie sein Schutzstatus angepasst wird, lässt sich daraus nicht feststellen.",
+          "input_sha256": "b89f8230f26957fe2ea0f865daffbef1c9df8447aa478c711834b3ec9187c254",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2b309543137dd9a907e60466f4127cfefabc84d2761ce5f5b3cf202c5fbe76df"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b89f8230f26957fe2ea0f865daffbef1c9df8447aa478c711834b3ec9187c254"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Die vorgelegten Passagen enthalten neue Jagdregelungen für den Wolf, aber nicht den Wortlaut der Änderung des Bundesnaturschutzgesetzes. Ob und wie sein Schutzstatus angepasst wird, lässt sich daraus nicht feststellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dafür passen wir den Schutzstatus des Wolfs an",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4a3ebc9226c1c5b2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-51ee0c35e86d4562",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz enthält keinen Vorschlag zu Zwischenstufen für EU-Beitrittskandidaten.",
@@ -131675,6 +131707,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-6a4e296888f89599",
+          "disposition": "proposed_link",
+          "rationale": "Die Änderung fügt den Wolf ausdrücklich in die Tierartenliste des Bundesjagdgesetzes ein.",
+          "input_sha256": "b89f8230f26957fe2ea0f865daffbef1c9df8447aa478c711834b3ec9187c254",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2b309543137dd9a907e60466f4127cfefabc84d2761ce5f5b3cf202c5fbe76df"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b89f8230f26957fe2ea0f865daffbef1c9df8447aa478c711834b3ec9187c254"
+            }
+          ],
+          "impact_id": "impact-7269f2ac27be27fb",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.99,
+            "rationale": "Die Änderung fügt den Wolf ausdrücklich in die Tierartenliste des Bundesjagdgesetzes ein.",
+            "law_passage_id": "bgbl-1-2026-87-p-cde3bd6dc7316b55",
+            "law_quote": "1. In § 2 Absatz 1 Nummer 1 wird nach der Angabe „Murmeltier (Marmota marmota L.),“ die Angabe „Wolf (Canis\nlupus L.),“ eingefügt.",
+            "criterion_quote": "und nehmen ihn in das Bundesjagdgesetz auf.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6a4e296888f89599",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-72a5d10adfc4e968",
           "disposition": "no_supported_link",
           "rationale": "Die Änderung streicht § 45a BNatSchG; eine Übernahme der FFH-Regelung in das Bundesnaturschutzgesetz ist in den vorgelegten Änderungen nicht enthalten.",
@@ -131752,6 +131816,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-9f8c1b44e6620d55",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b5e3b4934fc19846",
+          "disposition": "proposed_link",
+          "rationale": "Die Behörde kann bestimmte Weidegebiete für die Wolfsbejagung ausweisen, auch bei ungünstigem Erhaltungszustand. Das ermöglicht regionale Unterschiede, sofern ernste wirtschaftliche Schäden abzuwenden sind und die Gebiete nicht oder nicht zumutbar wolfsabweisend geschützt werden können.",
+          "input_sha256": "b89f8230f26957fe2ea0f865daffbef1c9df8447aa478c711834b3ec9187c254",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7137b4ebf3e67c0376bd86b81b7ebefccd91952ed1e46b2b2aae9d6867a3c8bd"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b89f8230f26957fe2ea0f865daffbef1c9df8447aa478c711834b3ec9187c254"
+            }
+          ],
+          "impact_id": "impact-8bc465c1394f5992",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.99,
+            "rationale": "Die Behörde kann bestimmte Weidegebiete für die Wolfsbejagung ausweisen, auch bei ungünstigem Erhaltungszustand. Das ermöglicht regionale Unterschiede, sofern ernste wirtschaftliche Schäden abzuwenden sind und die Gebiete nicht oder nicht zumutbar wolfsabweisend geschützt werden können.",
+            "law_passage_id": "bgbl-1-2026-87-p-063c87650fba750c",
+            "law_quote": "3. Weidegebiete bestimmen, in denen eine Bejagung des Wolfs auch bei einem ungünstigen Erhaltungszustand\nder Tierart Wolf zulässig ist, wenn",
+            "criterion_quote": "Wölfe müssen – regional unterschiedlich – bejagt werden\nkönnen",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b5e3b4934fc19846",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -132838,7 +132934,7 @@
     {
       "law_id": "bgbl-1-2026-95",
       "analysis_sha256": "427fd177dff8280ba745d2b38b0e47a45d03316668a0e3112a5003dbaa3fcd58",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -132963,6 +133059,38 @@
             "criterion_quote": "unterstützen wir die Ukraine mit allen erforderlichen ... humanitären Mitteln",
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-38e0e8ec29f43ec8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-42e02086241f60d6",
+          "disposition": "no_supported_link",
+          "rationale": "§ 91 Abs. 1 Nr. 1 erfasst das Anpreisen oder Zugänglichmachen geeigneter Anleitungen zu terroristischen Straftaten unter bestimmten Verbreitungsumständen. Werbung für Ziele und Handlungen einer Terrororganisation ist nicht Gegenstand dieser Regelung.",
+          "input_sha256": "f738be97bb4a8352cb6d19ee4a6582755e2dce27fb87da76c6c1d9cd48f579d5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2464252131a1331733e003c320ee35bcb9a84dd429f974af1dff5094a3797724"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f738be97bb4a8352cb6d19ee4a6582755e2dce27fb87da76c6c1d9cd48f579d5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "§ 91 Abs. 1 Nr. 1 erfasst das Anpreisen oder Zugänglichmachen geeigneter Anleitungen zu terroristischen Straftaten unter bestimmten Verbreitungsumständen. Werbung für Ziele und Handlungen einer Terrororganisation ist nicht Gegenstand dieser Regelung.",
+            "law_passage_id": "bgbl-1-2026-95-p-43b9982eb7922edd",
+            "law_quote": "1. einen Inhalt (§ 11 Absatz 3), der geeignet ist, als Anleitung zu einer terroristischen Straftat nach § 89a\nAbsatz 1 Satz 2 Nummer 1 bis 8 zu dienen, anpreist oder einer anderen Person zugänglich macht, wenn\ndie Umstände seiner Verbreitung geeignet sind, die Bereitschaft anderer zu fördern oder zu wecken, eine\nderartige Straftat zu begehen,",
+            "criterion_quote": "Wer für Ziele und Handlungen einer Terrororganisation wirbt,\nmacht sich künftig strafbar.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-42e02086241f60d6",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -133244,7 +133372,7 @@
     {
       "law_id": "bgbl-1-2026-97",
       "analysis_sha256": "c631bafcca0ad03e739c6aeafc1fd450016b082ab3b456f85d47b2df6e0c0fe6",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-023e7cb42f262099",
@@ -133973,6 +134101,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-89ab298a098a8f36",
+          "disposition": "proposed_link",
+          "rationale": "Eine neu eingefügte Vorschrift verpflichtet die Bundesanstalt, bestimmte Informationen gleichzeitig an festgelegte Aufsichtsbehörden zu übermitteln. Das vereinheitlicht den behördlichen Austausch teilweise, beschränkt auf die Fondsaufsicht.",
+          "input_sha256": "49ab4a04c23f17753ee76d279e18162e95c459b452e85c32fad86233905955d7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "de086774abca6e4caf9ceeb2de65b1310a29db68562aaca94d9ee950b166fc7a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "49ab4a04c23f17753ee76d279e18162e95c459b452e85c32fad86233905955d7"
+            }
+          ],
+          "impact_id": "impact-763d5ca3ec123909",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Eine neu eingefügte Vorschrift verpflichtet die Bundesanstalt, bestimmte Informationen gleichzeitig an festgelegte Aufsichtsbehörden zu übermitteln. Das vereinheitlicht den behördlichen Austausch teilweise, beschränkt auf die Fondsaufsicht.",
+            "law_passage_id": "bgbl-1-2026-97-p-55897ccdbc229a9d",
+            "law_quote": "Die Bundesanstalt hat die Informationen nach Satz 1 Nummer 22 gleichzeitig zusätzlich den\nzuständigen Behörden des Aufnahmemitgliedstaates des Investmentvermögens, den zuständigen\nBehörden des Herkunftsmitgliedstaates der Verwaltungsgesellschaft und, falls potenzielle Risiken für\ndie Stabilität und Integrität des Finanzsystems bestehen, dem Europäischen Ausschuss für\nSystemrisiken zu übermitteln.",
+            "criterion_quote": "Es braucht mehr standardisierte Verfahren, etwa für Werkstätten und Arztpraxen sowie beim Austausch mit und zwischen staatlichen Behörden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-89ab298a098a8f36",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Änderungen enthalten keine Ausschlussregel für Vereine oder Verbände wegen ausländischer Geldgeber.",
@@ -134546,7 +134706,7 @@
     {
       "law_id": "bgbl-1-2026-98",
       "analysis_sha256": "da254c9b0cbf26c205164b1024bc06dace0e812111a224a4e73ea377a42152ca",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-040474136cc284f1",
@@ -134688,6 +134848,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-0a6036ade88e1b39",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-13fcd78f84d4e95b",
+          "disposition": "proposed_link",
+          "rationale": "Ab 2028 erhöht das Gesetz die Zuschläge für Krankenhäuser, die an der Notfallversorgung teilnehmen, um 33 Millionen Euro. Damit ist eine konkrete Maßnahme zu ihrer Weiterentwicklung beschlossen.",
+          "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1a7f8677dfb787c306eced6b4e3ebb5caea9572e7f1155063374e0ae0d28a049"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f"
+            }
+          ],
+          "impact_id": "impact-935cac1469b57904",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.96,
+            "rationale": "Ab 2028 erhöht das Gesetz die Zuschläge für Krankenhäuser, die an der Notfallversorgung teilnehmen, um 33 Millionen Euro. Damit ist eine konkrete Maßnahme zu ihrer Weiterentwicklung beschlossen.",
+            "law_passage_id": "bgbl-1-2026-98-p-f7dca0f756177ef2",
+            "law_quote": "ab dem Jahr 2028 sind die\nZuschläge für eine Teilnahme von Krankenhäusern an der Notfallversorgung um 33 Millionen Euro zu\nerhöhen;",
+            "criterion_quote": "Wir entwickeln die Notfallversorgung\nweiter",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-13fcd78f84d4e95b",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -135263,6 +135455,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-5c23c1f5d3313b7e",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz schreibt Evaluationsberichte im Abstand von zwölf Monaten vor, erstmals zum 31. Dezember 2026. Ob die beschlossene Maßnahme bereits tatsächlich evaluiert wurde, geht daraus nicht hervor.",
+          "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7a008cd55b46127dc12e381402c4cc0179142ae994781660b11cf19961695447"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz schreibt Evaluationsberichte im Abstand von zwölf Monaten vor, erstmals zum 31. Dezember 2026. Ob die beschlossene Maßnahme bereits tatsächlich evaluiert wurde, geht daraus nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-98-p-93293f932325979e",
+            "law_quote": "Die in Satz 1 genannten Institute legen ihren Evaluationsbericht im Abstand von jeweils zwölf Monaten,\nerstmals zum 31. Dezember 2026 unter Einbeziehung der für das Jahr 2026 vereinbarten Auswahl der\nLeistungen nach Absatz 1 Satz 1 Nummer 2, den Vertragsparteien und dem Bundesministerium für\nGesundheit sowie auf Verlangen dem Bewertungsausschuss in der Zusammensetzung nach § 87\nAbsatz 5a Satz 2 vor.",
+            "criterion_quote": "Mit einer neuen Fehlerkultur evaluieren wir\nbeschlossene Maßnahmen",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c23c1f5d3313b7e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
           "disposition": "no_supported_link",
           "rationale": "Veröffentlicht werden können die beantragbaren Förderbeträge je Land, nicht die begünstigten Kommunen und die jeweilige Höhe ihrer Vorteile.",
@@ -135539,6 +135763,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-825c9deb71e8819f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift erlaubt unter Voraussetzungen, Qualitätskriterien gemeinsam mit anderen Krankenhäusern oder vertragsärztlichen Leistungserbringern zu erfüllen. Eine gemeinsame Planung der stationären und ambulanten Versorgung sowie der Leistungen anderer Gesundheitsberufe regelt sie nicht.",
+          "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b204dbd02876305da17ae472d63d574d251ef20738c56a5913d9e2bbe7211fb4"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die Vorschrift erlaubt unter Voraussetzungen, Qualitätskriterien gemeinsam mit anderen Krankenhäusern oder vertragsärztlichen Leistungserbringern zu erfüllen. Eine gemeinsame Planung der stationären und ambulanten Versorgung sowie der Leistungen anderer Gesundheitsberufe regelt sie nicht.",
+            "law_passage_id": "bgbl-1-2026-98-p-87ba9218b140e805",
+            "law_quote": "dass Krankenhäuser ein Qualitätskriterium in Kooperationen und Verbünden insbesondere mit anderen\nKrankenhäusern oder Leistungserbringern der vertragsärztlichen Versorgung erfüllen können, wenn eine\nschriftliche Kooperationsvereinbarung vorliegt und",
+            "criterion_quote": "Die stationäre Versorgung mit einer flächendeckenden Grund- und Regelversorgung insbesondere im ländlichen Raum sowie der erforderlichen Konzentration von spezialisierten Leistungen denken wir zusammen mit der ambulanten hausund fachärztlichen Versorgung sowie den Leistungen der anderen Gesundheitsberufe,\ndie mehr Verantwortung für die Versorgung übernehmen sollen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-825c9deb71e8819f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-85d3afd5b0153459",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten KHAG-Auszüge regeln Krankenhausversorgung und -finanzierung, nicht Verwaltungsservice an sieben Tagen rund um die Uhr.",
@@ -135593,6 +135849,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+          "disposition": "no_supported_link",
+          "rationale": "Die barrierefreie Veröffentlichung zweier Berichte des Instituts für das Entgeltsystem im Krankenhaus ist vorgeschrieben. Sie belegt keine Fortführung des Aktionsplans für ein inklusives und barrierefreies Gesundheitswesen.",
+          "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ce2fbbc12053fa5cd4eff67bd9918cf6dd031ed6c9f45e96f1231bf23bc548f0"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.74,
+            "rationale": "Die barrierefreie Veröffentlichung zweier Berichte des Instituts für das Entgeltsystem im Krankenhaus ist vorgeschrieben. Sie belegt keine Fortführung des Aktionsplans für ein inklusives und barrierefreies Gesundheitswesen.",
+            "law_passage_id": "bgbl-1-2026-98-p-eca148276840ccbd",
+            "law_quote": "es hat diese Berichte jeweils zeitnah barrierefrei auf seiner Internetseite zu veröffentlichen.",
+            "criterion_quote": "Wir führen den Aktionsplan für ein diverses, inklusives und barrierefreies Gesundheitswesen fort.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
           "disposition": "no_supported_link",
           "rationale": "Die Regelungen zur Liquiditätsreserve betreffen die Finanzlage des Gesundheitsfonds; sie ordnen keinen Kassensturz zu Beginn der Wahlperiode und keine Prüfung sämtlicher Ausgaben oder Subventionen an.",
@@ -135616,6 +135904,70 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-958a4b9b1592dfd5",
+          "disposition": "proposed_link",
+          "rationale": "Wettbewerbsrechtlich zulässige Vorhaben zur Bildung und zum Ausbau von Behandlungszentren für unter anderem seltene Erkrankungen sind förderfähig. Das unterstützt deren Behandlung teilweise; eine konkrete Verbesserung einzelner Therapien ist nicht belegt.",
+          "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fc2c98e9dc63a6d2ce43d1fe331f11ab1ac21611d9b67b4ea539daddf86354fb"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f"
+            }
+          ],
+          "impact_id": "impact-50fafa3a3b5b23f4",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.96,
+            "rationale": "Wettbewerbsrechtlich zulässige Vorhaben zur Bildung und zum Ausbau von Behandlungszentren für unter anderem seltene Erkrankungen sind förderfähig. Das unterstützt deren Behandlung teilweise; eine konkrete Verbesserung einzelner Therapien ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-98-p-2d3d6265f8d038f6",
+            "law_quote": "Förderfähig sind wettbewerbsrechtlich zulässige Vorhaben zur Bildung und zum Ausbau von Zentren zur\nBehandlung von seltenen, komplexen oder schwerwiegenden Erkrankungen insbesondere an Hochschul­\nkliniken.",
+            "criterion_quote": "Gleiches gilt für Therapien für seltene Erkrankungen, um zur Verbesserung der Lebensqualität beizutragen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-958a4b9b1592dfd5",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9a19e664f2845be3",
+          "disposition": "proposed_link",
+          "rationale": "Die Landesbehörde kann Leistungsgruppen ausnahmsweise trotz nicht erfüllter Qualitätskriterien zuweisen, wenn dies zur Sicherung einer flächendeckenden Versorgung zwingend erforderlich ist. Das unterstützt die Versorgung in der Fläche, ohne eine besondere Planung für ländliche Räume festzulegen.",
+          "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d621aff43f372e8646548227c8106fe9364ac12496ed009d4459eec9611ce636"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a649c56c679cd2133ba5038164b5ab672491ab40ff16d885fb770895290bb03f"
+            }
+          ],
+          "impact_id": "impact-d2085a57d3ff9e96",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Die Landesbehörde kann Leistungsgruppen ausnahmsweise trotz nicht erfüllter Qualitätskriterien zuweisen, wenn dies zur Sicherung einer flächendeckenden Versorgung zwingend erforderlich ist. Das unterstützt die Versorgung in der Fläche, ohne eine besondere Planung für ländliche Räume festzulegen.",
+            "law_passage_id": "bgbl-1-2026-98-p-35b7f5abcbe32bc6",
+            "law_quote": "Die für die Krankenhausplanung zuständige Landesbehörde kann im Einvernehmen mit den\nLandesverbänden der Krankenkassen und den Ersatzkassen einem Krankenhaus für einen Krankenhaus­\nstandort Leistungsgruppen nach Absatz 1 Satz 1 zuweisen, obwohl abweichend von den in Absatz 1 Satz 1\ngenannten Voraussetzungen das Krankenhaus an dem jeweiligen Krankenhausstandort die für diese\nLeistungsgruppen jeweils maßgeblichen Qualitätskriterien nicht erfüllt, wenn diese Qualitätskriterien durch\ndas Krankenhaus an dem Krankenhausstandort auch nicht in Kooperationen oder Verbünden nach Absatz 3\nSatz 4 oder § 135e Absatz 4 Satz 1 Nummer 7, Satz 2 und 3 des Fünften Buches Sozialgesetzbuch erfüllt\nwerden können und",
+            "criterion_quote": "Die stationäre Versorgung mit einer flächendeckenden Grund- und Regelversorgung insbesondere im ländlichen Raum",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9a19e664f2845be3",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -136045,7 +136397,7 @@
     {
       "law_id": "bgbl-2-2025-142",
       "analysis_sha256": "70844582f57b7d29b7a8d7fcf2f002f645bbe96df44e9e7eb21a79907be544c7",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -136067,12 +136419,472 @@
         "cdu-csu-2025-ac-eed47b90b47f9028"
       ],
       "omitted_count": 948,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz betrifft den Afrikanischen Entwicklungsfonds und enthält weder Angaben zum Mercosur-Abkommen noch zu einem Einsatz von CDU und CSU für dessen Inkrafttreten.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft den Afrikanischen Entwicklungsfonds und enthält weder Angaben zum Mercosur-Abkommen noch zu einem Einsatz von CDU und CSU für dessen Inkrafttreten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1731f5b981d037e2",
+          "disposition": "missing_context",
+          "rationale": "Die Änderung regelt Fondsfinanzierungen, enthält aber keine Angaben zu jährlichen Forschungs- und Entwicklungsausgaben oder zum BIP-Anteil bis 2030.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung regelt Fondsfinanzierungen, enthält aber keine Angaben zu jährlichen Forschungs- und Entwicklungsausgaben oder zum BIP-Anteil bis 2030.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1731f5b981d037e2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung oder Angaben zur Dauer von Kontrollen an deutschen Grenzen.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung oder Angaben zur Dauer von Kontrollen an deutschen Grenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Fondsübereinkommens schafft keine Möglichkeit, einen Dienst in einer Blaulichtorganisation abzuleisten.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Fondsübereinkommens schafft keine Möglichkeit, einen Dienst in einer Blaulichtorganisation abzuleisten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-59cab3a5b11a8355",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Leitlinie oder Entscheidung, die deutsche Wirtschaftsinteressen zur Orientierung internationaler Zusammenarbeit macht.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Leitlinie oder Entscheidung, die deutsche Wirtschaftsinteressen zur Orientierung internationaler Zusammenarbeit macht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-59cab3a5b11a8355",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5ad7f2d4e0dd8c0b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft die Befugnisse und Finanzierung des Afrikanischen Entwicklungsfonds, nicht die Zuständigkeit für betriebliche An- oder Abmeldungen.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung betrifft die Befugnisse und Finanzierung des Afrikanischen Entwicklungsfonds, nicht die Zuständigkeit für betriebliche An- oder Abmeldungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5ad7f2d4e0dd8c0b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-615991ab3fcaf55b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Grundgesetz nicht und verankert Ernährungssicherung nicht als Staatsziel.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Grundgesetz nicht und verankert Ernährungssicherung nicht als Staatsziel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-615991ab3fcaf55b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Bundesanstalt nach § 96 BVFG oder zu deren Verlegung nach Berlin.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Bundesanstalt nach § 96 BVFG oder zu deren Verlegung nach Berlin.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Fondsänderung regelt keine individuelle Kontrolle darüber, wann und wozu personenbezogene Daten erhoben und genutzt werden.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Fondsänderung regelt keine individuelle Kontrolle darüber, wann und wozu personenbezogene Daten erhoben und genutzt werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bestimmungen zu Kreditaufnahme und Fondsfinanzierung legen keine Regeln für den Zugang zu neuen Märkten oder staatliche Förderung fest.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Bestimmungen zu Kreditaufnahme und Fondsfinanzierung legen keine Regeln für den Zugang zu neuen Märkten oder staatliche Förderung fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung über staatliche Mittel für Vereine und Verbände mit ausländischen Geldgebern.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung über staatliche Mittel für Vereine und Verbände mit ausländischen Geldgebern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8c49e56ada109f89",
+          "disposition": "no_supported_link",
+          "rationale": "Die Fondsänderung enthält keine Maßnahmen zur Vermittlung von Menschen mit Behinderungen auf den ersten Arbeitsmarkt.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Fondsänderung enthält keine Maßnahmen zur Vermittlung von Menschen mit Behinderungen auf den ersten Arbeitsmarkt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8c49e56ada109f89",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a48ca0fc4f4a27d4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung besagt, dass Wertpapiere des Fonds grundsätzlich keine Verbindlichkeit einer Regierung sind, regelt aber nicht, ob Deutschland für Schulden anderer Staaten haftet.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung besagt, dass Wertpapiere des Fonds grundsätzlich keine Verbindlichkeit einer Regierung sind, regelt aber nicht, ob Deutschland für Schulden anderer Staaten haftet.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a48ca0fc4f4a27d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-c062f36241a4ea01",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz enthält keine dokumentierte deutsche Position oder Verhandlung in der OECD zu Vorteilen aus Entwicklungsprojekten.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine dokumentierte deutsche Position oder Verhandlung in der OECD zu Vorteilen aus Entwicklungsprojekten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-c062f36241a4ea01",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-db0d4126451871d3",
+          "disposition": "missing_context",
+          "rationale": "Die Fondsänderung betrifft keine Haftungsübernahme Deutschlands für Schulden anderer EU-Staaten; ob eine solche Haftung besteht, ist daraus nicht feststellbar.",
+          "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "629a1b4fa4d2144ded96202d98884dea7eb6ecd7924efee845ed1508ac8cc6ce"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Fondsänderung betrifft keine Haftungsübernahme Deutschlands für Schulden anderer EU-Staaten; ob eine solche Haftung besteht, ist daraus nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-db0d4126451871d3",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt Änderungen des Übereinkommens über den Afrikanischen Entwicklungsfonds zu; eine Regelung zum Drei-Säulen-System der Banken enthält es nicht.",
+          "input_sha256": "056d7e2f780d757c6b53a76dcd9cdbad15e3e8eb352f029d1307e753915e187c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "056d7e2f780d757c6b53a76dcd9cdbad15e3e8eb352f029d1307e753915e187c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stimmt Änderungen des Übereinkommens über den Afrikanischen Entwicklungsfonds zu; eine Regelung zum Drei-Säulen-System der Banken enthält es nicht.",
+            "law_passage_id": "bgbl-2-2025-142-p-aa96baf1767846fa",
+            "law_quote": "Der vom Gouverneursrat des Afrikanischen Entwicklungsfonds in Scharm el-Scheich am 23. Mai 2023 durch Entschließung F/BG/2023/04 gebilligten Änderung des Übereinkommens vom 29. November 1972 über die Errichtung des Afrikanischen Entwicklungsfonds […] wird zugestimmt.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-eed47b90b47f9028",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Änderungen des Übereinkommens über den Afrikanischen Entwicklungsfonds, nicht den Ausbau von Stipendien.",
+          "input_sha256": "056d7e2f780d757c6b53a76dcd9cdbad15e3e8eb352f029d1307e753915e187c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "056d7e2f780d757c6b53a76dcd9cdbad15e3e8eb352f029d1307e753915e187c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Änderungen des Übereinkommens über den Afrikanischen Entwicklungsfonds, nicht den Ausbau von Stipendien.",
+            "law_passage_id": "bgbl-2-2025-142-p-aa96baf1767846fa",
+            "law_quote": "Der vom Gouverneursrat des Afrikanischen Entwicklungsfonds in Scharm el-Scheich am 23. Mai 2023 durch Entschließung F/BG/2023/04 gebilligten Änderung des Übereinkommens vom 29. November 1972 über die Errichtung des Afrikanischen Entwicklungsfonds […] wird zugestimmt.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-eed47b90b47f9028",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-2-2025-232",
       "analysis_sha256": "9257e93a8afb9f8d4be7c2721a05168d0a7f1d64718b90c2b06f6b1e83c9879d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-14d3c277b74a7210",
@@ -136091,12 +136903,391 @@
         "cdu-csu-2025-ac-dba5996f5a24babf"
       ],
       "omitted_count": 951,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft den Moselvertrag; Kooperationen von Vereinen mit staatlichen Stellen regelt es nicht.",
+          "input_sha256": "0c15ad87ffbf41e73b98c70edf83b5d3d7a80d558697c425f6f83d5e9c74d990",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0c15ad87ffbf41e73b98c70edf83b5d3d7a80d558697c425f6f83d5e9c74d990"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft den Moselvertrag; Kooperationen von Vereinen mit staatlichen Stellen regelt es nicht.",
+            "law_passage_id": "bgbl-2-2025-232-p-4f8cbf0ea48723cb",
+            "law_quote": "Dem in Schengen am 18. September 2023 von der Bundesrepublik Deutschland unterzeichneten Vierten Protokoll\nzur Änderung des Vertrags vom 27. Oktober 1956 zwischen der Bundesrepublik Deutschland, der Französischen\nRepublik und dem Großherzogtum Luxemburg über die Schiffbarmachung der Mosel […] wird zugestimmt.",
+            "criterion_quote": "Vereine und Verbände, die Geld von ausländischen Regierungen und mit ihnen verbundenen Organisationen erhalten, können weder staatliches Geld aus Deutschland erhalten noch Kooperationen mit unseren staatlichen Stellen eingehen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert den Moselvertrag und enthält keine Regelung zur Entlassung von Beamten oder Soldaten.",
+          "input_sha256": "0c15ad87ffbf41e73b98c70edf83b5d3d7a80d558697c425f6f83d5e9c74d990",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0c15ad87ffbf41e73b98c70edf83b5d3d7a80d558697c425f6f83d5e9c74d990"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert den Moselvertrag und enthält keine Regelung zur Entlassung von Beamten oder Soldaten.",
+            "law_passage_id": "bgbl-2-2025-232-p-4f8cbf0ea48723cb",
+            "law_quote": "Dem in Schengen am 18. September 2023 von der Bundesrepublik Deutschland unterzeichneten Vierten Protokoll\nzur Änderung des Vertrags vom 27. Oktober 1956 zwischen der Bundesrepublik Deutschland, der Französischen\nRepublik und dem Großherzogtum Luxemburg über die Schiffbarmachung der Mosel […] wird zugestimmt.",
+            "criterion_quote": "Wir lehnen es jedoch ab, einen Beamten oder Zeit- und Berufssoldaten ohne richterlichen Beschluss durch einfachen Verwaltungsakt zu entlassen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1fe1a58b5a2ca382",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt einer Änderung des Moselvertrags zu; Schritte zum Aufbau des Deutsch-Israelischen Jugendwerks regelt es nicht.",
+          "input_sha256": "0c15ad87ffbf41e73b98c70edf83b5d3d7a80d558697c425f6f83d5e9c74d990",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0c15ad87ffbf41e73b98c70edf83b5d3d7a80d558697c425f6f83d5e9c74d990"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stimmt einer Änderung des Moselvertrags zu; Schritte zum Aufbau des Deutsch-Israelischen Jugendwerks regelt es nicht.",
+            "law_passage_id": "bgbl-2-2025-232-p-4f8cbf0ea48723cb",
+            "law_quote": "Dem in Schengen am 18. September 2023 von der Bundesrepublik Deutschland unterzeichneten Vierten Protokoll\nzur Änderung des Vertrags vom 27. Oktober 1956 zwischen der Bundesrepublik Deutschland, der Französischen\nRepublik und dem Großherzogtum Luxemburg über die Schiffbarmachung der Mosel […] wird zugestimmt.",
+            "criterion_quote": "Gleichzeitig treiben wir den Aufbau des Deutsch-Israelischen Jugendwerks zügig voran.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1fe1a58b5a2ca382",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt Änderungen des Moselvertrags zu; eine Bestandsaufnahme zur Wiederinbetriebnahme von Kernkraftwerken regelt es nicht.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stimmt Änderungen des Moselvertrags zu; eine Bestandsaufnahme zur Wiederinbetriebnahme von Kernkraftwerken regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die Verwaltung und Nutzung der Mosel, nicht Kontrollen an deutschen Grenzen.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die Verwaltung und Nutzung der Mosel, nicht Kontrollen an deutschen Grenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-39725cf0bd91464e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Bestimmungen zum Moselvertrag; Maßnahmen zum Sprachgebrauch an Schulen, Universitäten, im Rundfunk oder in der Verwaltung enthält es nicht.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Bestimmungen zum Moselvertrag; Maßnahmen zum Sprachgebrauch an Schulen, Universitäten, im Rundfunk oder in der Verwaltung enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-39725cf0bd91464e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zum Moselvertrag enthalten keine Regelung über die Erhebung oder Nutzung personenbezogener Daten.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen zum Moselvertrag enthalten keine Regelung über die Erhebung oder Nutzung personenbezogener Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt unter anderem die Moselschifffahrt und einen finanziellen Ausgleich; den Ausschluss bestimmter Vereine von staatlichen Mitteln regelt es nicht.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt unter anderem die Moselschifffahrt und einen finanziellen Ausgleich; den Ausschluss bestimmter Vereine von staatlichen Mitteln regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-942bd589b634fa2b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert den Moselvertrag, nicht die Gesetzessprache im Steuerrecht.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert den Moselvertrag, nicht die Gesetzessprache im Steuerrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-942bd589b634fa2b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9fa672d90772c946",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vertragsänderungen betreffen die Mosel und enthalten keine Übertragung von Beschleunigungsregelungen auf andere Bereiche.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vertragsänderungen betreffen die Mosel und enthalten keine Übertragung von Beschleunigungsregelungen auf andere Bereiche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9fa672d90772c946",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a1993f4347fd0cec",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz hebt einzelne Bestimmungen des Moselvertrags auf, nicht veraltete, nicht mehr angewendete Vorschriften des Steuerrechts.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz hebt einzelne Bestimmungen des Moselvertrags auf, nicht veraltete, nicht mehr angewendete Vorschriften des Steuerrechts.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a1993f4347fd0cec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-adced906ea82e59d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen des Moselvertrags betreffen nicht den Anwendungsbereich der Arbeitsstättenverordnung oder mobiles Arbeiten.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen des Moselvertrags betreffen nicht den Anwendungsbereich der Arbeitsstättenverordnung oder mobiles Arbeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-adced906ea82e59d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-aff91124d2aa42c9",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vereinbarung im Gesetz betrifft Ausgleichszahlungen und die Auflösung der Internationalen Mosel-Gesellschaft, nicht Voraussetzungen für Bundesförderung gegen Antisemitismus.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vereinbarung im Gesetz betrifft Ausgleichszahlungen und die Auflösung der Internationalen Mosel-Gesellschaft, nicht Voraussetzungen für Bundesförderung gegen Antisemitismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-aff91124d2aa42c9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert den Moselvertrag und enthält keine Regelungen zum Drei-Säulen-System der Banken.",
+          "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d72e61df0fed1cbfdcc2804e3288975a486b2cf88084d12234e6608ccecffa38"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert den Moselvertrag und enthält keine Regelungen zum Drei-Säulen-System der Banken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-dba5996f5a24babf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-2-2025-270",
       "analysis_sha256": "9fed0bc98af52472a0acfe7f13ec530443365748cd601c34c78a8136ee38d9e7",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -136115,7 +137306,388 @@
         "cdu-csu-2025-ac-ef17c90bea3858aa"
       ],
       "omitted_count": 951,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt Änderungen eines deutsch-niederländischen Steuerabkommens zu; das Mercosur-Abkommen und dessen Inkrafttreten behandelt es nicht.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stimmt Änderungen eines deutsch-niederländischen Steuerabkommens zu; das Mercosur-Abkommen und dessen Inkrafttreten behandelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Steuerabkommen mit den Niederlanden; Entlassungsregeln für Beamte oder Soldaten enthält das Gesetz nicht.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das Steuerabkommen mit den Niederlanden; Entlassungsregeln für Beamte oder Soldaten enthält das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert steuerliche Vorschriften des deutsch-niederländischen Abkommens, nicht den Instanzenweg der Gerichte.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert steuerliche Vorschriften des deutsch-niederländischen Abkommens, nicht den Instanzenweg der Gerichte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-42112eebb11a2d44",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Änderungen eines Steuerabkommens; Regelungen zur Streichung der Grundsicherung bei Arbeitsverweigerung sind nicht enthalten.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Änderungen eines Steuerabkommens; Regelungen zur Streichung der Grundsicherung bei Arbeitsverweigerung sind nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-42112eebb11a2d44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt steuerliche Beziehungen zwischen Deutschland und den Niederlanden, nicht einen Dienst in Blaulichtorganisationen.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt steuerliche Beziehungen zwischen Deutschland und den Niederlanden, nicht einen Dienst in Blaulichtorganisationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6129ffb688712ae3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das deutsch-niederländische Steuerabkommen, nicht die Besteuerung von Mitarbeiterkapitalbeteiligungen bis zu ihrer Veräußerung.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das deutsch-niederländische Steuerabkommen, nicht die Besteuerung von Mitarbeiterkapitalbeteiligungen bis zu ihrer Veräußerung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6129ffb688712ae3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zur Besteuerung grenzüberschreitender Einkünfte; individuelle Kontrolle über Erhebung und Nutzung persönlicher Daten regelt es nicht.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zur Besteuerung grenzüberschreitender Einkünfte; individuelle Kontrolle über Erhebung und Nutzung persönlicher Daten regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-84e16aa809a5c041",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Änderungen eines Steuerabkommens, aber keine Vorschriften zur Vermögensprüfung in der Grundsicherung.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Änderungen eines Steuerabkommens, aber keine Vorschriften zur Vermögensprüfung in der Grundsicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-84e16aa809a5c041",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert steuerliche Regeln zwischen Deutschland und den Niederlanden; Asylverfahren und Schutzgewährung in Drittstaaten regelt es nicht.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert steuerliche Regeln zwischen Deutschland und den Niederlanden; Asylverfahren und Schutzgewährung in Drittstaaten regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-924d6fd7a2c8203f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft ein Steuerabkommen, nicht den Personalbestand der Ministerial- oder Bundestagsverwaltung.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft ein Steuerabkommen, nicht den Personalbestand der Ministerial- oder Bundestagsverwaltung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-924d6fd7a2c8203f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt Änderungen eines Steuerabkommens zu; einen Kassensturz zu Beginn der Wahlperiode schreibt es nicht vor.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stimmt Änderungen eines Steuerabkommens zu; einen Kassensturz zu Beginn der Wahlperiode schreibt es nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Steuerfreiheit von Arbeitslohn für Personen nach Erreichen des Rentenalters.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Steuerfreiheit von Arbeitslohn für Personen nach Erreichen des Rentenalters.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9ad2d7c5c03eb3c8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das deutsch-niederländische Steuerabkommen; Zuständigkeiten im Bundesinnenministerium werden darin nicht geregelt.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das deutsch-niederländische Steuerabkommen; Zuständigkeiten im Bundesinnenministerium werden darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9ad2d7c5c03eb3c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ef17c90bea3858aa",
+          "disposition": "missing_context",
+          "rationale": "Die Änderung betrifft zwar die Methode zur Vermeidung von Doppelbesteuerung im Abkommen, doch der bereitgestellte Text enthält nicht dessen vollständige Rentenregeln; die Wirkung auf Renten ist daher nicht feststellbar.",
+          "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3e47283f9b2af100d75da671d273466658ae6fba058481314809819fcb001e8e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.77,
+            "rationale": "Die Änderung betrifft zwar die Methode zur Vermeidung von Doppelbesteuerung im Abkommen, doch der bereitgestellte Text enthält nicht dessen vollständige Rentenregeln; die Wirkung auf Renten ist daher nicht feststellbar.",
+            "law_passage_id": "bgbl-2-2025-270-p-8fc8119578e98166",
+            "law_quote": "Bezieht jedoch eine in den Niederlanden ansässige Person Einkünfte, die nach Artikel 6 Absätze 1, 3 und 4, Artikel 7 Absatz 1, Artikel 8 Absätze 1 und 2, Artikel 10 Absatz 4, Artikel 11 Absatz 3, Artikel 12 Absatz 3, Artikel 13 Absätze 1 und 3, Artikel 14 Absätze 1, 1a, 3 und 4, Artikel 17 Absätze 2, 3 und 5, Artikel 18 Absätze 1 und 2 Satz 1 sowie Artikel 21 Absatz 2 auch oder nur in der Bundesrepublik Deutschland besteuert werden können",
+            "criterion_quote": "Doppelbesteuerung von Renten vermeiden wir.",
+            "caveats": [
+              "Das Änderungsprotokoll tritt erst nach Austausch der Ratifikationsurkunden in Kraft; der Austauschzeitpunkt ist im bereitgestellten Text nicht angegeben."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-ef17c90bea3858aa",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-2-2025-275",
@@ -137888,45 +139460,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6335,
-    "cache_hits": 103,
-    "subdivision_cache_hits": 2,
+    "calls": 6408,
+    "cache_hits": 104,
+    "subdivision_cache_hits": 3,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 28.074085,
-    "reported_cost_calls": 5746,
+    "reported_cost_usd": 28.300015,
+    "reported_cost_calls": 5819,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.421889,
     "unknown_cost_calls": 589,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 31.495974,
-    "prompt_tokens": 65777535,
-    "completion_tokens": 10929006,
+    "budget_exposure_usd": 31.721904,
+    "prompt_tokens": 66540984,
+    "completion_tokens": 11076648,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 254,
-        "reported_cost_usd": 6.24272835,
-        "unknown_cost_reserved_usd": 1.2073675392798577e-15,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 260,
+        "reported_cost_usd": 6.36676885,
+        "unknown_cost_reserved_usd": 1.2351231148954867e-15,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 106,
-        "reported_cost_usd": 1.4154605000000002,
+        "calls": 108,
+        "reported_cost_usd": 1.4407452500000004,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 3077,
-        "reported_cost_usd": 3.510143172499993,
+        "calls": 3142,
+        "reported_cost_usd": 3.586747544999993,
         "unknown_cost_reserved_usd": 2.4374134500000015,
-        "pending_reserved_usd": 1.8214596497756474e-17
+        "pending_reserved_usd": 1.214306433183765e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
