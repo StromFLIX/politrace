@@ -2,8 +2,18 @@
 import json
 import os
 import subprocess
+from pathlib import Path
 
-from pipeline.store import ROOT, validate_store
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def validate_checkout():
+    """Load the checked-out contracts in a fresh process, including after rebase."""
+    # A concurrent code/schema commit can replace modules already imported by the
+    # publisher. Reloading one module is not enough: Pydantic models and validators
+    # can still refer to the old classes. uv also syncs the current frozen lockfile.
+    subprocess.run(['uv', 'run', '--frozen', 'python', '-m', 'pipeline.cli', 'validate'],
+                   cwd=ROOT, check=True)
 
 
 def git(*args, **kwargs):
@@ -16,7 +26,7 @@ def main():
     config = json.loads((ROOT / '.github/production.json').read_text())
     if config['publication'] != 'main' or os.environ.get('GITHUB_REF') != 'refs/heads/main':
         raise RuntimeError('Automatic publication is restricted to the configured main-branch proposal channel')
-    validate_store()
+    validate_checkout()
     git('add', '--', 'data/live')
     changed = subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=ROOT).returncode
     if not changed:
@@ -28,7 +38,7 @@ def main():
         git('fetch', 'origin', 'main')
         # Only the new data commit is replayed; Git refuses conflicting citizen edits.
         git('rebase', 'origin/main')
-        validate_store()
+        validate_checkout()
         result = subprocess.run(['git', '-c', 'credential.helper=', '-c',
                                  'credential.helper=!gh auth git-credential',
                                  'push', 'origin', 'HEAD:refs/heads/main'], cwd=ROOT)
