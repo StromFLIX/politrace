@@ -54,9 +54,10 @@ test('live activity does not fabricate voting records', async ({ page }) => {
   const href = await page.locator('.activity-card').first().getByRole('link', { name: 'Gesetz & Belege' }).getAttribute('href');
   await page.goto(href!);
   const lawId = href!.split('/').filter(Boolean).at(-1);
-  if (!votes.items.some((v: { law_id: string; review: { status: string } }) => v.law_id === lawId && v.review.status === 'reviewed')) {
-    await expect(page.getByText('Keine belegten Abstimmungsdaten hinterlegt.')).toBeVisible();
-  }
+  const published = votes.items.filter((v: { law_id: string; evidence?: { method: string }; review: { status: string } }) =>
+    v.law_id === lawId && v.review.status !== 'rejected' && (v.review.status === 'reviewed' || ['bundestag-dip-v1', 'bundestag-structured-v2'].includes(v.evidence?.method ?? '')));
+  await expect(page.locator('.vote-record')).toHaveCount(published.length);
+  if (!published.length) await expect(page.getByText('Für dieses Gesetz sind noch keine eindeutig zugeordneten Abstimmungsbelege veröffentlicht.')).toBeVisible();
   await expect(page.getByRole('link', { name: 'Amtliche Veröffentlichung' })).toHaveAttribute('href', /^https:\/\/www.recht.bund.de\//);
   await expect(page.getByRole('heading', { name: 'Verbindungen zu Wahlversprechen' })).toBeVisible();
 });

@@ -89,13 +89,14 @@ describe('automatic final assessments', () => {
 
 describe('documented vote totals', () => {
   it('separates abstentions from absences', () => {
-    expect(voteTotals([{ yes: 4, no: 3, abstain: 2, absent: 1 }])).toEqual({ yes: 4, no: 3, abstain: 2, absent: 1, cast: 9, total: 10 });
+    expect(voteTotals([{ yes: 4, no: 3, abstain: 2, absent: 1 }])).toEqual({ yes: 4, no: 3, abstain: 2, absent: 1, invalid: 0, cast: 9, total: 10 });
   });
   it('requires separately sourced records for any real votes', () => {
     for (const vote of getData('live').votes) {
       expect(vote.source.url).toMatch(/^https:\/\//);
-      expect(vote.groups.length).toBeGreaterThan(0);
+      if (vote.type === 'plenary_record') expect(vote.groups).toEqual([]);
+      else expect(vote.groups.length).toBeGreaterThan(0);
     }
-    expect(voteTotals([]).total).toBe(0);
+    expect(voteTotals([])).toBeNull();
   });
 });

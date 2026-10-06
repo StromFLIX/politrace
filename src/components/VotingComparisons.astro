@@ -1,0 +1,89 @@
+---
+import type { Data } from '../lib/types';
+import { formatDate, impactLabels } from '../lib/data';
+import { readingPageHref } from '../lib/document-anchors';
+import { outcomeLabels, positionLabels, votingComparisons } from '../lib/voting';
+interface Props { data: Data; lawId?: string; criterionId?: string; partyId?: string; programIds?: string[]; limit?: number; filters?: boolean }
+const { data, lawId, criterionId, partyId, programIds, limit, filters = false } = Astro.props;
+const comparisons = votingComparisons(data).filter(c => (!lawId || c.law.id === lawId) && (!criterionId || c.criterion.id === criterionId) && (!partyId || c.party.id === partyId) && (!programIds || programIds.includes(c.program.id)));
+const shown = limit ? comparisons.slice(0, limit) : comparisons;
+const parties = data.parties.filter(p => comparisons.some(c => c.party.id === p.id));
+const years = [...new Set(comparisons.map(c => c.program.election_year))].sort((a, b) => b - a);
+---
+<section class="section-block voting-comparisons" data-voting-comparisons>
+  <h2>Abstimmung und Wahlversprechen</h2>
+  <p class="comparison-intro">Passt das dokumentierte Stimmverhalten zur Richtung des eigenen Wahlversprechens? Wir vergleichen nur eindeutig zugeordnete Schlussabstimmungen mit veröffentlichten, quellenbelegten Gesetzesbewertungen.</p>
+  <p class="comparison-intro"><strong>Ein potenzielles Spannungsfeld ist kein bewiesener Wortbruch.</strong> Ein Gesetz kann mehrere Ziele berühren; Motive, Alternativen und politische Abwägungen sind damit nicht erklärt. Zustimmung zu einem hilfreichen Gesetz ist noch keine Erfüllung. Enthaltung und Nichtabgabe sind keine Gegenstimmen.</p>
+  {filters && <div class="comparison-filters">
+    <label>Gesetz oder Zusage suchen<input type="search" data-comparison-search placeholder="Suchbegriff" /></label>
+    <label>Partei<select aria-label="Partei" data-comparison-party><option value="">Alle Parteien</option>{parties.map(p => <option value={p.id}>{p.short_name}</option>)}</select></label>
+    <label>Programmjahr<select aria-label="Programmjahr" data-comparison-year><option value="">Alle Jahre</option>{years.map(y => <option value={y}>{y}</option>)}</select></label>
+    <label>Einordnung<select aria-label="Einordnung" data-comparison-outcome><option value="">Alle Einordnungen</option>{Object.entries(outcomeLabels).map(([key, label]) => <option value={key}>{label}</option>)}</select></label>
+    <button type="button" class="button" data-comparison-reset>Zurücksetzen</button>
+  </div>}
+  <p class="result-count" aria-live="polite" data-comparison-count>{shown.length} von {comparisons.length} belegten Vergleichen · Einheit: Gesetz × Kriterium × Fraktion, keine unabhängigen „Versprechenbrüche“</p>
+  {shown.map(c => <article class="evidence-box comparison" data-comparison-row data-party={c.party.id} data-year={c.program.election_year} data-outcome={c.outcome} data-search={`${c.law.title} ${c.criterion.title} ${c.criterion.reference.quote} ${c.party.name}`.toLocaleLowerCase('de-DE')}>
+    <div class="comparison-heading"><a href={`/${data.dataset}/parteien/${c.party.id}/`}>{c.party.short_name} · Programm {c.program.election_year}</a><strong class:list={['outcome', { tension: c.outcome === 'tension' }]}>{outcomeLabels[c.outcome]}</strong></div>
+    <h3><a href={criterionId ? `/${data.dataset}/gesetze/${c.law.id}/` : `/${data.dataset}/kriterien/${c.criterion.id}/`}>{criterionId ? c.law.title : c.criterion.title}</a></h3>
+    <div class="comparison-columns">
+      <div><h4>Die eigene Zusage</h4><blockquote>{c.criterion.reference.quote}</blockquote><a class="text-link" href={readingPageHref('programs', c.program.id, c.criterion.reference.page)}>Originalprogramm · PDF-Seite {c.criterion.reference.page}</a></div>
+      <div><h4>Das dokumentierte Stimmverhalten</h4><p><strong>{c.group.group}: {positionLabels[c.position]}</strong></p>
+        {c.group.yes != null && <p>{c.group.yes} Ja · {c.group.no} Nein · {c.group.abstain} Enthaltungen · {c.group.absent} nicht abgegeben · {c.group.invalid ?? 0} ungültig</p>}
+        {c.tension_ballots != null && <p>{c.tension_ballots} Ja-/Nein-Stimmen in möglicher Spannung; {c.consistent_ballots} mit vereinbarer Richtung. Keine pauschale Mehrheitszuschreibung an die Fraktion.</p>}
+        <a class="text-link" href={`/${data.dataset}/gesetze/${c.law.id}/#${c.vote.id}`}>Schlussabstimmung am {formatDate(c.vote.date)} · Beleg{c.vote.type === 'roll_call' && ' und alle Einzelstimmen'} →</a>
+      </div>
+    </div>
+    <p class="law-effect"><a href={`/${data.dataset}/gesetze/${c.law.id}/`}>{c.law.title}</a><br /><strong>Gesetzeswirkung auf diese Zusage: {impactLabels[c.impact.score]}</strong></p>
+    <p>{c.impact.rationale}</p>
+    <details><summary>Gesetzesbeleg und Grenzen dieser Zuordnung</summary><blockquote>{c.impact.law_quote}</blockquote>
+      <p>{c.impact.caveats.length ? c.impact.caveats.join(' ') : 'Die Bewertung betrifft die gesetzliche Wirkung auf dieses Kriterium, nicht die Motive der abstimmenden Person oder die vollständige Umsetzung des Wahlprogramms.'}</p>
+      <p><a href={c.law.pdf_url ?? c.law.source.url}>Amtlich verkündeter Gesetzestext</a> · <a href={`/api/v1/${data.dataset}/impacts/${c.impact.id}.json`}>Bewertung mit Nachweisen (JSON)</a></p>
+    </details>
+  </article>)}
+  <div class="empty-state" data-comparison-empty hidden={shown.length > 0}><h3>Noch kein belegter Vergleich für diese Auswahl</h3><p>Es kann ein eindeutiger Schlussabstimmungsbeleg, eine Fraktionsposition oder eine veröffentlichte Gesetzesverbindung fehlen. Daraus folgt weder Übereinstimmung noch Widerspruch.</p></div>
+  {limit && comparisons.length > limit && <a class="text-link" href={`/live/abstimmungen/${partyId ? `?party=${encodeURIComponent(partyId)}` : ''}`}>Alle {comparisons.length} Vergleiche in der Übersicht →</a>}
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-voting-comparisons]').forEach(root => {
+    const search = root.querySelector<HTMLInputElement>('[data-comparison-search]');
+    if (!search) return;
+    const party = root.querySelector<HTMLSelectElement>('[data-comparison-party]')!;
+    const year = root.querySelector<HTMLSelectElement>('[data-comparison-year]')!;
+    const outcome = root.querySelector<HTMLSelectElement>('[data-comparison-outcome]')!;
+    const rows = [...root.querySelectorAll<HTMLElement>('[data-comparison-row]')];
+    const requested = new URLSearchParams(location.search).get('party');
+    if ([...party.options].some(o => o.value === requested)) party.value = requested!;
+    const update = () => {
+      let count = 0;
+      const query = search.value.trim().toLocaleLowerCase('de-DE');
+      for (const row of rows) {
+        row.hidden = !(row.dataset.search!.includes(query) && (!party.value || row.dataset.party === party.value) && (!year.value || row.dataset.year === year.value) && (!outcome.value || row.dataset.outcome === outcome.value));
+        if (!row.hidden) count++;
+      }
+      root.querySelector('[data-comparison-count]')!.textContent = `${count} von ${rows.length} belegten Vergleichen · Einheit: Gesetz × Kriterium × Fraktion`;
+      root.querySelector<HTMLElement>('[data-comparison-empty]')!.hidden = count > 0;
+    };
+    search.addEventListener('input', update);
+    for (const select of [party, year, outcome]) select.addEventListener('change', update);
+    root.querySelector('[data-comparison-reset]')!.addEventListener('click', () => { search.value = party.value = year.value = outcome.value = ''; update(); });
+    update();
+  });
+</script>
+<style>
+  .voting-comparisons { min-width: 0; }
+  .comparison-intro { font-size: 13px; line-height: 1.8; margin: 14px 0; }
+  .comparison-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-size: 12px; margin-bottom: 14px; }
+  .comparison h3 { line-height: 1.5; margin-bottom: 16px; }
+  .outcome { background: #eef2f8; padding: 5px 9px; border-radius: 5px; }
+  .outcome.tension { color: #70500e; background: #fff4d9; }
+  .comparison-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .comparison h4 { font-size: 12px; margin-bottom: 10px; }
+  .comparison p, .comparison blockquote { font-size: 13px; line-height: 1.75; margin: 12px 0; overflow-wrap: anywhere; }
+  .law-effect { border-top: 1px solid #e3e8ef; padding-top: 14px; }
+  details { margin-top: 14px; }
+  summary { cursor: pointer; font-size: 12px; font-weight: 600; }
+  .comparison-filters { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; align-items: end; }
+  .comparison-filters label { display: grid; gap: 5px; font-size: 12px; flex: 1 1 160px; min-width: 0; }
+  .comparison-filters input, .comparison-filters select { width: 100%; min-width: 0; padding: 10px; border: 1px solid #c8d0da; border-radius: 5px; background: white; color: inherit; font: inherit; }
+  @media (max-width: 700px) { .comparison-columns { grid-template-columns: 1fr; } }
+</style>

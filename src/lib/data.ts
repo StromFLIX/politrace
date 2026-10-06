@@ -26,6 +26,8 @@ export function getData(dataset: Dataset): Data {
     programs: records<Program>(dataset, 'programs'), criteria: records<Criterion>(dataset, 'criteria'),
     laws: records<Law>(dataset, 'laws').sort((a, b) => b.published_at.localeCompare(a.published_at)),
     impacts: records<Impact>(dataset, 'impacts'), votes: records<Vote>(dataset, 'votes'),
+    votingCoverage: dataset === 'live' && fs.existsSync(path.join(dataRoot, dataset, 'voting/coverage.json'))
+      ? JSON.parse(fs.readFileSync(path.join(dataRoot, dataset, 'voting/coverage.json'), 'utf8')) : null,
   };
   snapshots.set(dataset, data);
   return data;

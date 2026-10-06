@@ -1,6 +1,7 @@
 """The canonical, strict contracts. JSON Schemas are exported for non-Python consumers."""
 from __future__ import annotations
 
+import re
 from datetime import date
 from typing import Annotated, Literal
 
@@ -242,23 +243,219 @@ class Impact(Record):
     generation: list[Generation] = Field(default_factory=list)
 
 
+Ballot = Literal['yes', 'no', 'abstain', 'absent', 'invalid']
+VoteCount = Annotated[int, Field(ge=0, strict=True)]
+
+
 class GroupVote(Model):
-    group: str
+    group: str = Field(min_length=1)
     party_id: Identifier | None = None
-    yes: int = Field(ge=0)
-    no: int = Field(ge=0)
-    abstain: int = Field(ge=0)
-    absent: int = Field(ge=0)
+    # A protocol's faction position is NOT a counted ballot. Unknown is never zero.
+    yes: VoteCount | None = None
+    no: VoteCount | None = None
+    abstain: VoteCount | None = None
+    absent: VoteCount | None = None
+    invalid: VoteCount | None = None
+    position: Literal['yes', 'no', 'abstain', 'mixed', 'unknown'] = 'unknown'
+    evidence_quote: str = ''
+
+    @model_validator(mode='after')
+    def complete_counts(self):
+        counts = [self.yes, self.no, self.abstain, self.absent]
+        if any(n is not None for n in counts) and not all(n is not None for n in counts):
+            raise ValueError('Group counts must be complete or all unknown')
+        if self.yes is None and self.invalid is not None:
+            raise ValueError('Invalid ballots require a counted vote')
+        return self
+
+
+class MemberVote(Model):
+    # Identity is local to the official ballot sheet, not a guessed cross-term MP ID.
+    name: str = Field(min_length=1)
+    group: str = Field(min_length=1)
+    vote: Ballot
+    source_row: int = Field(ge=2)
+
+
+def official_vote_source(source: Source) -> bool:
+    query = source.url.query or ''
+    allowed_query = (not query or (source.url.host == 'www.bundestag.de' and (
+        re.fullmatch(r'id=\d+', query) or (
+            source.url.path.startswith('/ajax/filterlist/de/parlament/plenum/abstimmung/liste/')
+            and re.fullmatch(r'limit=\d+&offset=\d+', query)))))
+    return bool(source.sha256 and source.url.scheme == 'https' and source.url.port == 443 and source.url.host in {
+        'search.dip.bundestag.de', 'dserver.bundestag.de', 'www.bundestag.de',
+    } and not source.url.username and not source.url.password and allowed_query)
+
+
+class VoteCrossCheck(Model):
+    provider: Literal['abgeordnetenwatch'] = 'abgeordnetenwatch'
+    status: Literal['matched', 'partial', 'mismatch', 'unmatched', 'not_found', 'ambiguous', 'source_error']
+    checked_at: date
+    poll_id: Annotated[str, Field(pattern=r'^\d+$')] | None = None
+    source: Source | None = None
+    total_members: int = Field(default=0, ge=0)
+    compared_members: int = Field(default=0, ge=0)
+    matched_members: int = Field(default=0, ge=0)
+    note: str = ''
+
+    @model_validator(mode='after')
+    def supplementary_provenance(self):
+        if self.source:
+            url = self.source.url
+            if (not self.source.sha256 or url.scheme != 'https' or url.port != 443
+                    or url.host != 'www.abgeordnetenwatch.de' or url.username or url.password
+                    or url.path != f'/api/v2/polls/{self.poll_id}' or url.query != 'related_data=votes'):
+                raise ValueError('Cross-check requires a fingerprinted abgeordnetenwatch poll, without credentials')
+        if not self.matched_members <= self.compared_members <= self.total_members:
+            raise ValueError('Cross-check member counts do not reconcile')
+        if self.status in ('matched', 'partial', 'mismatch'):
+            if not self.source or not self.poll_id or not self.compared_members:
+                raise ValueError('Cross-check result requires source and member-level comparison')
+            if (self.matched_members == self.compared_members) != (self.status != 'mismatch'):
+                raise ValueError('Cross-check status disagrees with member-level results')
+            if self.status != 'mismatch' and (self.compared_members == self.total_members) != (self.status == 'matched'):
+                raise ValueError('Partial cross-check is not a complete identity match')
+        return self
+
+
+class VoteEvidence(Model):
+    method: Literal['bundestag-dip-v1', 'bundestag-structured-v2'] = 'bundestag-structured-v2'
+    procedure_id: Annotated[str, Field(pattern=r'^\d+$')]
+    position_id: Annotated[str, Field(pattern=r'^\d+$')]
+    decision_index: int = Field(ge=0)
+    law_match: Literal['official_reference', 'exact_title']
+    procedure_source: Source
+    position_source: Source
+    protocol_source: Source | None = None
+    protocol_page: str | None = None
+    protocol_format: Literal['xml'] | None = None
+    protocol_fallback: Literal['not_listed', 'opendata_unavailable'] | None = None
+    protocol_agenda: str | None = None
+    protocol_block: int | None = Field(default=None, ge=0)
+    protocol_comment_spans: list[tuple[int, int]] = Field(default_factory=list)
+    document_numbers: list[str] = Field(default_factory=list)
+    position_status: Literal['decision_only', 'no_structured_transcript', 'passage_not_found',
+                            'ambiguous_passage', 'no_explicit_groups', 'groups_found',
+                            'roll_call_found', 'roll_call_unmatched', 'partial_decision'] = 'decision_only'
+    # The preserved source excerpt and exact quoted decision are available in the API.
+    text: str = Field(min_length=1)
+    quote: str = Field(min_length=1)
+    roll_call_id: Annotated[str, Field(pattern=r'^\d+$')] | None = None
+    roll_call_source: Source | None = None
+    ballot_index_source: Source | None = None
+    ballot_number: int | None = Field(default=None, ge=1)
+    ballot_match: Literal['official_title_and_tallies', 'unique_official_tallies'] | None = None
+    cross_check: VoteCrossCheck | None = None
+
+    @model_validator(mode='after')
+    def source_citation(self):
+        previous = 0
+        for start, end in self.protocol_comment_spans:
+            if not previous <= start <= end <= len(self.text):
+                raise ValueError('XML commentary ranges must be ordered within the preserved excerpt')
+            previous = end
+        if self.quote not in self.text:
+            raise ValueError('Vote quote must occur verbatim in its source excerpt')
+        for source in [self.procedure_source, self.position_source,
+                       self.protocol_source, self.roll_call_source, self.ballot_index_source]:
+            if source and not official_vote_source(source):
+                raise ValueError('Vote evidence requires fingerprinted official sources without credentials')
+        return self
 
 
 class Vote(Record):
     law_id: Identifier
     date: date
     motion: str
-    type: Literal["roll_call", "group_record"]
+    type: Literal['roll_call', 'group_record', 'plenary_record']
     source: Source
-    groups: list[GroupVote] = Field(min_length=1)
-    review: Review
+    stage: Literal['final_passage', 'second_reading', 'amendment', 'resolution', 'procedural', 'unknown'] = 'unknown'
+    decision: str = ''
+    scope: Literal['whole_law', 'partial_law'] = 'whole_law'
+    # Only the confirmed final whole-law vote is comparable to the enacted law's effects.
+    compares_to_law: bool = False
+    groups: list[GroupVote] = Field(default_factory=list)
+    members: list[MemberVote] = Field(default_factory=list)
+    evidence: VoteEvidence | None = None
+    note: str = ''
+    review: Review = Field(default_factory=Review)
+    # Detect citizen edits before refreshing an automatically imported record.
+    import_sha256: Annotated[str, Field(pattern=r'^[a-f0-9]{64}$')] | None = None
+
+    @model_validator(mode='after')
+    def documented_ballots(self):
+        if len({g.group for g in self.groups}) != len(self.groups):
+            raise ValueError('Duplicate voting group')
+        parties = [g.party_id for g in self.groups if g.party_id]
+        if len(set(parties)) != len(parties):
+            raise ValueError('Duplicate party in voting groups')
+        if self.type == 'roll_call':
+            if not self.groups or any(g.yes is None for g in self.groups):
+                raise ValueError('Roll calls require exact group counts')
+        elif self.members or any(g.yes is not None for g in self.groups):
+            raise ValueError('Non-roll-call records cannot invent members or counts')
+        if self.type == 'group_record' and not self.groups:
+            raise ValueError('Group records need documented positions')
+        if self.type == 'plenary_record' and self.groups:
+            raise ValueError('Decision-only records have no group positions')
+        if self.compares_to_law and (self.stage != 'final_passage' or self.scope != 'whole_law' or not self.evidence
+                                    or self.evidence.law_match != 'official_reference'):
+            raise ValueError('Programme comparisons need a confirmed final whole-law vote')
+        if self.evidence:
+            if not official_vote_source(self.source):
+                raise ValueError('Imported votes need a fingerprinted official source without credentials')
+            if self.type == 'roll_call' and (not self.members or not self.evidence.roll_call_source
+                                            or any(g.invalid is None for g in self.groups)):
+                raise ValueError('Imported roll calls require reconciled individual ballots and all five counts')
+            if self.evidence.method == 'bundestag-structured-v2':
+                if self.type == 'group_record' and (not self.evidence.protocol_source
+                        or self.evidence.protocol_format != 'xml' or self.evidence.protocol_block is None):
+                    raise ValueError('Structured group positions require an identified XML chair block')
+                if self.type == 'roll_call' and (not self.evidence.ballot_index_source
+                        or not self.evidence.ballot_number or not self.evidence.ballot_match):
+                    raise ValueError('Structured roll calls require an identified official workbook')
+                if (self.compares_to_law and self.evidence.cross_check
+                        and self.evidence.cross_check.status == 'mismatch'):
+                    raise ValueError('Conflicting ballot sources are excluded from programme comparisons')
+            for group in self.groups:
+                if self.type != 'roll_call' and (not group.evidence_quote
+                                                or group.evidence_quote not in self.evidence.quote):
+                    raise ValueError('Group position must quote the specific voting decision')
+        if self.members:
+            if len({m.source_row for m in self.members}) != len(self.members):
+                raise ValueError('Duplicate member ballot row')
+            if {m.group for m in self.members} != {g.group for g in self.groups}:
+                raise ValueError('Member groups do not match totals')
+            for group in self.groups:
+                for choice in ('yes', 'no', 'abstain', 'absent', 'invalid'):
+                    total = sum(m.group == group.group and m.vote == choice for m in self.members)
+                    if total != (getattr(group, choice) or 0):
+                        raise ValueError('Member ballots do not reconcile with group totals')
+        return self
+
+
+class LawVotingCoverage(Model):
+    law_id: Identifier
+    checked_at: date
+    status: Literal['recorded', 'decision_only', 'not_found', 'ambiguous', 'source_error', 'source_changed']
+    procedure_ids: list[str] = Field(default_factory=list)
+    vote_ids: list[Identifier] = Field(default_factory=list)
+    reason: str
+
+
+class VotingCoverage(Model):
+    schema_version: Literal['1.0'] = '1.0'
+    dataset: Literal['live'] = 'live'
+    items: list[LawVotingCoverage]
+    note: str = ('Coverage of imported laws, not all Bundestag business. Missing evidence is unknown, '
+                 'not proof that a vote did not take place. Named ballots exist only for roll calls.')
+
+    @model_validator(mode='after')
+    def unique_laws(self):
+        if len({item.law_id for item in self.items}) != len(self.items):
+            raise ValueError('Duplicate law in voting coverage')
+        return self
 
 
 class ArchiveSourcePage(Model):

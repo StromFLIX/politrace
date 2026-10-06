@@ -1,0 +1,90 @@
+{
+  "$defs": {
+    "LawVotingCoverage": {
+      "additionalProperties": false,
+      "properties": {
+        "law_id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+          "title": "Law Id",
+          "type": "string"
+        },
+        "checked_at": {
+          "format": "date",
+          "title": "Checked At",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "recorded",
+            "decision_only",
+            "not_found",
+            "ambiguous",
+            "source_error",
+            "source_changed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "procedure_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Procedure Ids",
+          "type": "array"
+        },
+        "vote_ids": {
+          "items": {
+            "pattern": "^[a-z0-9][a-z0-9-]{1,119}$",
+            "type": "string"
+          },
+          "title": "Vote Ids",
+          "type": "array"
+        },
+        "reason": {
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "law_id",
+        "checked_at",
+        "status",
+        "reason"
+      ],
+      "title": "LawVotingCoverage",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "dataset": {
+      "const": "live",
+      "default": "live",
+      "title": "Dataset",
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "$ref": "#/$defs/LawVotingCoverage"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "note": {
+      "default": "Coverage of imported laws, not all Bundestag business. Missing evidence is unknown, not proof that a vote did not take place. Named ballots exist only for roll calls.",
+      "title": "Note",
+      "type": "string"
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "title": "VotingCoverage",
+  "type": "object"
+}

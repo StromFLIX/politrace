@@ -40,7 +40,7 @@ Topic progress uses the same accepted assessments and evidence rules as the part
 `.github/workflows/production.yml` is the single scheduled production entry point. It runs at **06:00 Europe/Berlin**, including DST, and automatically dispatches another bounded slice when work remains. CLI dispatch: `gh workflow run production.yml --ref main`. Do not rerun a paid job from an older snapshot.
 
 1. Restore the newest **results and cumulative charge ledger together**. A paid run with a missing ledger blocks spending rather than resetting costs.
-2. Reconcile the official publication inventory. Where archive search is unavailable, use the disclosed dated inventory plus current RSS; do not pretend this proves new full historical coverage.
+2. Reconcile the official publication inventory. Where archive search is unavailable, use the disclosed dated inventory plus current RSS; do not pretend this proves new full historical coverage. Independently recover Bundestag decisions, explicit faction positions and named ballots from DIP JSON, official Open Data XML and XLSX spreadsheets; cross-check names/choices against separately attributed abgeordnetenwatch JSON where possible. Retain unresolved coverage without inventing votes.
 3. Produce page-complete OCR reading editions with Mistral. Cache individual PDF-page subsets, preserve source hashes, retain headers/footers, flag suspicious transcription, and isolate document failures.
 4. Build shared law-passage indexes and retrieve candidates across every temporally applicable programme with independent programme quotas.
 5. Luna screens up to 16 candidates per batch. Sol Flex decides up to 12 links per law across parties and separately synthesizes overall criterion assessments. Persist validated results and report heartbeats; resume only pending work.
@@ -50,6 +50,15 @@ Topic progress uses the same accepted assessments and evidence rules as the part
 Model, route, concurrency, slice duration and cumulative limit are in `.github/production.json`. The routes are **GPT-6 Luna Flex** for screening and **GPT-6 Sol Flex** for final evaluation, both with no standard-price fallback. The inherited ledger includes earlier charges and uncertain reservations. A one-time, explicit $20 additional allocation funds the Sol migration; it is never added again on a retry. Legacy positive links are re-evaluated, not relabelled as approved. New costs are reported by model/stage.
 
 Required Actions secrets: `OPENROUTER_API_KEY`, `MISTRAL_API_KEY`. GitHub's workflow token needs `contents: write` and `actions: write`. Workflow publication does not rely on disabled automatic PR creation.
+
+## Bundestag votes and programme comparisons
+
+```sh
+uv run politrace votes
+uv run politrace votes --law-ids bgbl-1-2026-286
+```
+
+No LLM calls. The importer joins official publication references, parliamentary decisions and voting evidence, preserves citizen edits and exposes gaps per law. Counts are `null` unless actually counted; no coalition or majority inference. `/live/abstimmungen/` shows coverage, faction patterns and source-linked programme comparisons; law pages include individual ballots where available. Potential tensions are not proof of broken promises. See [voting sources, contracts and limits](docs/voting.md). An optional `DIP_API_KEY` stays in the job environment; otherwise the documented public access key is retrieved in memory only.
 
 ## OCR reading editions
 

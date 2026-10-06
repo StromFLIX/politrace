@@ -1,4 +1,4 @@
-import type { Criterion, Impact, Program } from './types';
+import type { Ballot, Criterion, Impact, Program } from './types';
 
 export function publicImpact(impact: Impact) {
   return impact.review.status !== 'rejected' && (impact.review.status === 'reviewed' ||
@@ -56,9 +56,12 @@ export function extractionCoverage(program: Program, criteria: Criterion[]) {
     remaining_leaves: source.size - processed.size, complete: source.size > 0 && source.size === processed.size };
 }
 
-export function voteTotals(groups: { yes: number; no: number; abstain: number; absent: number }[]) {
-  const totals = groups.reduce((acc, g) => ({
-    yes: acc.yes + g.yes, no: acc.no + g.no, abstain: acc.abstain + g.abstain, absent: acc.absent + g.absent,
-  }), { yes: 0, no: 0, abstain: 0, absent: 0 });
-  return { ...totals, cast: totals.yes + totals.no + totals.abstain, total: totals.yes + totals.no + totals.abstain + totals.absent };
+export function voteTotals(groups: { yes: number | null; no: number | null; abstain: number | null; absent: number | null; invalid?: number | null }[]) {
+  if (!groups.length || groups.some(g => [g.yes, g.no, g.abstain, g.absent].some(n => n == null))) return null;
+  const totals = groups.reduce<Record<Ballot, number>>((acc, g) => ({
+    yes: acc.yes + g.yes!, no: acc.no + g.no!, abstain: acc.abstain + g.abstain!, absent: acc.absent + g.absent!,
+    invalid: acc.invalid + (g.invalid ?? 0),
+  }), { yes: 0, no: 0, abstain: 0, absent: 0, invalid: 0 });
+  const cast = totals.yes + totals.no + totals.abstain + totals.invalid;
+  return { ...totals, cast, total: cast + totals.absent };
 }

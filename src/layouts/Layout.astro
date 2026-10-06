@@ -26,6 +26,7 @@ const root = `/${dataset}`;
         <nav class="main-nav" aria-label="Hauptnavigation">
           <a class:list={[{ active: active === 'parties' }]} href={`${root}/parteien/`} aria-current={active === 'parties' ? 'page' : undefined}><Icon name="parties" size={18} />Parteien</a>
           <a class:list={[{ active: active === 'activity' }]} href={`${root}/aktivitaet/`} aria-current={active === 'activity' ? 'page' : undefined}><Icon name="activity" size={18} />Aktivität</a>
+          <a class:list={[{ active: active === 'votes' }]} href={`${root}/abstimmungen/`} aria-current={active === 'votes' ? 'page' : undefined}><Icon name="check" size={18} />Abstimmungen</a>
         </nav>
         <div class="header-actions"><a href="/methodik/" class="quiet-link">So funktioniert’s</a><a href={repoUrl} class="icon-button" aria-label="Quellcode auf GitHub"><Icon name="github" /></a></div>
       </div>

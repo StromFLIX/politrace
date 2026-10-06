@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Icon from '../../../components/Icon.astro';
 import ImpactCard from '../../../components/ImpactCard.astro';
 import Votes from '../../../components/Votes.astro';
+import VotingComparisons from '../../../components/VotingComparisons.astro';
 import { publicImpact } from '../../../lib/metrics';
 import DocumentReader from '../../../components/DocumentReader.astro';
 import { readingEdition } from '../../../lib/readings';
@@ -17,11 +18,12 @@ const reading = readingEdition(law.id);
     <div class="breadcrumbs"><a href="/live/aktivitaet/">Aktivität</a><Icon name="chevron" size={12} /><span>Gesetz</span></div>
     <div class="eyebrow">Amtliche Verkündung · {formatDate(law.published_at)}</div>
     <h1>{law.title}</h1><p>{law.summary}</p>
-    <div class="page-actions" style="margin-top:20px"><a class="button primary" href="#gesetz-lesen">{reading ? 'Gesetz lesen ↓' : 'Quellen & Lesestatus ↓'}</a>{reading && <a class="button" href={`/api/v1/live/readings/${law.id}/source.md`}><Icon name="download" size={15} /> Lesefassung als Markdown</a>}<a class="button" href={`/api/v1/live/laws/${law.id}.json`}><Icon name="code" size={15} /> Gesetz als JSON</a></div>
+    <div class="page-actions" style="margin-top:20px"><a class="button" href="#abstimmungen">Abstimmungen ↓</a><a class="button primary" href="#gesetz-lesen">{reading ? 'Gesetz lesen ↓' : 'Quellen & Lesestatus ↓'}</a>{reading && <a class="button" href={`/api/v1/live/readings/${law.id}/source.md`}><Icon name="download" size={15} /> Lesefassung als Markdown</a>}<a class="button" href={`/api/v1/live/laws/${law.id}.json`}><Icon name="code" size={15} /> Gesetz als JSON</a></div>
   </header>
   <div class="two-column">
     <div>
-      <Votes votes={data.votes.filter(v => v.law_id === law.id)} dataset={data.dataset} />
+      <Votes votes={data.votes.filter(v => v.law_id === law.id)} dataset={data.dataset} coverage={data.votingCoverage?.items.find(row => row.law_id === law.id)} />
+      <VotingComparisons data={data} lawId={law.id} />
       <section class="section-block"><h2>Verbindungen zu Wahlversprechen</h2>
         {impacts.map(impact => <ImpactCard impact={impact} data={data} direction="criterion" />)}
         {!impacts.length && <div class="empty-state"><Icon name="link" size={25} /><h2>Noch keine Verknüpfungen</h2><p>Zu diesem Gesetz sind noch keine Verbindungen zu Wahlversprechen veröffentlicht.</p></div>}

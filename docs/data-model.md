@@ -19,13 +19,14 @@ Party ── Program ── Tree / Leaf ── Criterion
 - **Criterion**: programme/party/leaf IDs, atomic title and description, falsifiable test, tags/keywords, exact reference, optional deadline, review and independent fulfilment assessment.
 - **Law**: official publication ID/title/date/citation, source/PDF metadata, transcription status, bounded passages and a machine-owned matching audit. The importer supports promulgated laws from BGBl I and II, with dated archive coverage separate from RSS additions.
 - **Impact**: criterion and law IDs, signed ordinal score, uncalibrated confidence, rationale, exact law passage/quote and programme quote, caveats, second-pass verification, review and model provenance.
-- **Vote**: law ID, parliamentary motion/date, source, type and group counts, reviewed independently. There is no inference from impacts to votes.
+- **Vote**: stable law/DIP-position/decision identity, date, motion, stage, source fingerprints, exact quotation and independent editorial state. `roll_call` includes reconciled group counts and individual ballots; `group_record` includes explicit positions with null counts; `plenary_record` records a decision without inventing positions. No inference from impacts, coalition membership or an earlier reading.
+- **VotingCoverage**: per-law parliamentary lookup status and checked date, distinct from the BGBl publication inventory. Source failures/ambiguity are explicit. See [voting contracts](voting.md).
 
 Records other than shared party metadata include `schema_version: "1.0"` and `dataset`. File names equal record IDs. All models reject unknown fields. Schemas describe record shapes; cross-record constraints are enforced by `politrace validate`.
 
 ## Namespaces and identity
 
-`data/live/` contains sourced records. `data/demo/` contains fictional test fixtures. Demo IDs always start with `demo-`; live IDs must not. References cannot cross datasets. Parties are shared metadata, not shared policy records.
+`data/live/` contains sourced records. `tests/fixtures/demo/` contains fictional test fixtures, never public routes or API data. Demo IDs always start with `demo-`; live IDs must not. References cannot cross datasets. Parties are shared metadata, not shared policy records.
 
 Imported law IDs are deterministic, e.g. `bgbl-1-2026-285`. Programme IDs default to `<party>-<year>` and may have an explicit edition suffix. Paragraph, section and criterion IDs use content-derived hashes when first created. **After publication, IDs are stable identity, not fields to recompute whenever text is corrected.** Existing records are not overwritten by generators.
 
@@ -39,7 +40,7 @@ A pair of law and criterion has at most one canonical impact record. Revise its 
 - `Leaf.text` and `Leaf.reference.quote` are identical and must occur within the cited Markdown range.
 - A criterion quote is a substring of its programme leaf. Its page and line range equal that leaf's encompassing range.
 - An impact's `law_quote` occurs in its declared law passage; `criterion_quote` occurs in its criterion's source reference.
-- `source.sha256` is the downloaded **original PDF** hash, not the Markdown hash. Preserve it as original-ingestion provenance when documenting a later transcription correction.
+- For programmes/laws, `source.sha256` is the downloaded **original PDF** hash, not the Markdown hash. For new voting sources it hashes original JSON/XML/HTML/XLSX response bytes (older retained evidence can cite a PDF). The optional abgeordnetenwatch check is separately attributed and never replaces official ballots. Preserve fingerprints as source provenance; never substitute the hash of reserialized derived votes.
 - A `generation` entry records model, prompt version and a SHA-256 of the request inputs/schema/system policy. It does not include the API key.
 
 ## Review and temporal constraints
@@ -48,7 +49,7 @@ A pair of law and criterion has at most one canonical impact record. Revise its 
 
 The law publication date must be in the programme's `[period_start, period_end)` comparison window. The start must not precede programme publication. Windows are an explicit editorial choice, not inferred from government membership. A proposal about an older period needs an appropriately dated programme/window.
 
-A non-open assessment requires a reviewed programme/criterion and reviewed impact evidence for that criterion. JSON validators cannot establish whether a reviewer is qualified, whether a legal argument is sound, or whether all possible promises were extracted. Those require substantive PR review.
+A non-open editorial assessment requires signed review and reviewed evidence. An automatic assessment requires accepted Sol-final evidence and final-model provenance; it does not require invented human review. Rejections and citizen corrections take priority. Voting comparisons additionally require a unique confirmed final whole-law vote and programme eligibility at the vote date. Schema validation establishes neither interpretative infallibility nor exhaustive evidence coverage.
 
 ## API v1
 
@@ -66,6 +67,9 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 | `/{dataset}/stats.json` | Statistics for each programme/window, with denominator semantics |
 | `/{dataset}/search.json` | Searchable criterion text, tags, keywords and detail URLs |
 | `/{dataset}/coverage.json` | Dated law inventory, imported/pending IDs and source mode; RSS does not advance full-archive coverage |
+| `/{dataset}/voting-coverage.json` | Per-law voting lookup state, source errors and unresolved identity |
+| `/{dataset}/voting-summary.json` | Distinct-law faction patterns and explicit coverage denominators |
+| `/{dataset}/voting-comparisons.json` | Source-linked law × criterion × faction directional comparisons, not proven promise breaches |
 | `/{dataset}/extraction.json` | Processed and remaining source leaves for imported programmes; not semantic completeness, human review or coverage of unimported parties |
 | `/sources/bundestag-21.json` | Programme source/rights inventory for the seven elected parties |
 | `/sources/laws-bundestag-21.json` | Checked, dated official archive inventory with source-page hashes |
@@ -74,13 +78,11 @@ Base path: `/api/v1`. Everything is a public, read-only **static snapshot**.
 
 Party detail JSON adds `insights`: `method`, `timeline_basis`, `fulfilment_history_available`, `law_groups_overlap` and `periods` (one per election year). Each period contains criterion metrics, precise `fulfilment_percent` and `coverage_percent`, distinct-law direction counts, topic metrics, `law_effects` with criterion/impact references and exclusive/shared first-evidence counts, and monthly `timeline` points. The timeline describes current accepted evidence grouped by law publication date, **not historical fulfilment**. See [dashboard counting rules](methodology.md#party-dashboard-and-time-series). No source record schemas or existing statistics fields change.
 
-Collections: `parties`, `programs`, `criteria`, `laws`, `impacts`, `votes`. Dataset: `live` or `demo`. `/api/health.json` is the container readiness probe.
-
-Example from the fictional dataset:
+Collections: `parties`, `programs`, `criteria`, `laws`, `impacts`, `votes`. Published dataset: `live` only. `/api/health.json` is the container readiness probe.
 
 ```sh
-curl http://localhost:8080/api/v1/demo/programs/demo-spd-2025/tree.json
-curl http://localhost:8080/api/v1/demo/criteria/demo-spd-2025-ac-001.json
+curl http://localhost:8080/api/v1/live/index.json
+curl http://localhost:8080/api/v1/live/voting-summary.json
 curl http://localhost:8080/api/v1/live/laws.json
 ```
 

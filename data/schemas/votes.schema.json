@@ -4,6 +4,7 @@
       "additionalProperties": false,
       "properties": {
         "group": {
+          "minLength": 1,
           "title": "Group",
           "type": "string"
         },
@@ -21,34 +22,131 @@
           "title": "Party Id"
         },
         "yes": {
-          "minimum": 0,
-          "title": "Yes",
-          "type": "integer"
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Yes"
         },
         "no": {
-          "minimum": 0,
-          "title": "No",
-          "type": "integer"
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "No"
         },
         "abstain": {
-          "minimum": 0,
-          "title": "Abstain",
-          "type": "integer"
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Abstain"
         },
         "absent": {
-          "minimum": 0,
-          "title": "Absent",
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Absent"
+        },
+        "invalid": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Invalid"
+        },
+        "position": {
+          "default": "unknown",
+          "enum": [
+            "yes",
+            "no",
+            "abstain",
+            "mixed",
+            "unknown"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "evidence_quote": {
+          "default": "",
+          "title": "Evidence Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "group"
+      ],
+      "title": "GroupVote",
+      "type": "object"
+    },
+    "MemberVote": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "group": {
+          "minLength": 1,
+          "title": "Group",
+          "type": "string"
+        },
+        "vote": {
+          "enum": [
+            "yes",
+            "no",
+            "abstain",
+            "absent",
+            "invalid"
+          ],
+          "title": "Vote",
+          "type": "string"
+        },
+        "source_row": {
+          "minimum": 2,
+          "title": "Source Row",
           "type": "integer"
         }
       },
       "required": [
+        "name",
         "group",
-        "yes",
-        "no",
-        "abstain",
-        "absent"
+        "vote",
+        "source_row"
       ],
-      "title": "GroupVote",
+      "title": "MemberVote",
       "type": "object"
     },
     "Review": {
@@ -148,6 +246,345 @@
       ],
       "title": "Source",
       "type": "object"
+    },
+    "VoteCrossCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "const": "abgeordnetenwatch",
+          "default": "abgeordnetenwatch",
+          "title": "Provider",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "matched",
+            "partial",
+            "mismatch",
+            "unmatched",
+            "not_found",
+            "ambiguous",
+            "source_error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "checked_at": {
+          "format": "date",
+          "title": "Checked At",
+          "type": "string"
+        },
+        "poll_id": {
+          "anyOf": [
+            {
+              "pattern": "^\\d+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Poll Id"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Source"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "total_members": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Total Members",
+          "type": "integer"
+        },
+        "compared_members": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Compared Members",
+          "type": "integer"
+        },
+        "matched_members": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Matched Members",
+          "type": "integer"
+        },
+        "note": {
+          "default": "",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "checked_at"
+      ],
+      "title": "VoteCrossCheck",
+      "type": "object"
+    },
+    "VoteEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "default": "bundestag-structured-v2",
+          "enum": [
+            "bundestag-dip-v1",
+            "bundestag-structured-v2"
+          ],
+          "title": "Method",
+          "type": "string"
+        },
+        "procedure_id": {
+          "pattern": "^\\d+$",
+          "title": "Procedure Id",
+          "type": "string"
+        },
+        "position_id": {
+          "pattern": "^\\d+$",
+          "title": "Position Id",
+          "type": "string"
+        },
+        "decision_index": {
+          "minimum": 0,
+          "title": "Decision Index",
+          "type": "integer"
+        },
+        "law_match": {
+          "enum": [
+            "official_reference",
+            "exact_title"
+          ],
+          "title": "Law Match",
+          "type": "string"
+        },
+        "procedure_source": {
+          "$ref": "#/$defs/Source"
+        },
+        "position_source": {
+          "$ref": "#/$defs/Source"
+        },
+        "protocol_source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Source"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "protocol_page": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol Page"
+        },
+        "protocol_format": {
+          "anyOf": [
+            {
+              "const": "xml",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol Format"
+        },
+        "protocol_fallback": {
+          "anyOf": [
+            {
+              "enum": [
+                "not_listed",
+                "opendata_unavailable"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol Fallback"
+        },
+        "protocol_agenda": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol Agenda"
+        },
+        "protocol_block": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protocol Block"
+        },
+        "protocol_comment_spans": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Protocol Comment Spans",
+          "type": "array"
+        },
+        "document_numbers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Document Numbers",
+          "type": "array"
+        },
+        "position_status": {
+          "default": "decision_only",
+          "enum": [
+            "decision_only",
+            "no_structured_transcript",
+            "passage_not_found",
+            "ambiguous_passage",
+            "no_explicit_groups",
+            "groups_found",
+            "roll_call_found",
+            "roll_call_unmatched",
+            "partial_decision"
+          ],
+          "title": "Position Status",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "roll_call_id": {
+          "anyOf": [
+            {
+              "pattern": "^\\d+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Roll Call Id"
+        },
+        "roll_call_source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Source"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ballot_index_source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Source"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ballot_number": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ballot Number"
+        },
+        "ballot_match": {
+          "anyOf": [
+            {
+              "enum": [
+                "official_title_and_tallies",
+                "unique_official_tallies"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ballot Match"
+        },
+        "cross_check": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/VoteCrossCheck"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "procedure_id",
+        "position_id",
+        "decision_index",
+        "law_match",
+        "procedure_source",
+        "position_source",
+        "text",
+        "quote"
+      ],
+      "title": "VoteEvidence",
+      "type": "object"
     }
   },
   "additionalProperties": false,
@@ -188,7 +625,8 @@
     "type": {
       "enum": [
         "roll_call",
-        "group_record"
+        "group_record",
+        "plenary_record"
       ],
       "title": "Type",
       "type": "string"
@@ -196,16 +634,83 @@
     "source": {
       "$ref": "#/$defs/Source"
     },
+    "stage": {
+      "default": "unknown",
+      "enum": [
+        "final_passage",
+        "second_reading",
+        "amendment",
+        "resolution",
+        "procedural",
+        "unknown"
+      ],
+      "title": "Stage",
+      "type": "string"
+    },
+    "decision": {
+      "default": "",
+      "title": "Decision",
+      "type": "string"
+    },
+    "scope": {
+      "default": "whole_law",
+      "enum": [
+        "whole_law",
+        "partial_law"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "compares_to_law": {
+      "default": false,
+      "title": "Compares To Law",
+      "type": "boolean"
+    },
     "groups": {
       "items": {
         "$ref": "#/$defs/GroupVote"
       },
-      "minItems": 1,
       "title": "Groups",
       "type": "array"
     },
+    "members": {
+      "items": {
+        "$ref": "#/$defs/MemberVote"
+      },
+      "title": "Members",
+      "type": "array"
+    },
+    "evidence": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/VoteEvidence"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "note": {
+      "default": "",
+      "title": "Note",
+      "type": "string"
+    },
     "review": {
       "$ref": "#/$defs/Review"
+    },
+    "import_sha256": {
+      "anyOf": [
+        {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Import Sha256"
     }
   },
   "required": [
@@ -215,9 +720,7 @@
     "date",
     "motion",
     "type",
-    "source",
-    "groups",
-    "review"
+    "source"
   ],
   "title": "Vote",
   "type": "object"

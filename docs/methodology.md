@@ -53,6 +53,14 @@ Law highlights default to reach (distinct affected criteria), not claimed politi
 
 The party JSON export includes the same per-election-year dashboard aggregates, topic counts, law evidence references and monthly values, with an explicit `timeline_basis` and `fulfilment_history_available: false`. Existing rounded `statistics` fields remain compatible; precise dashboard percentages are separate fields. This is a build-time derivation only: no source records, evidence IDs, assessments, reviews or paid-model processing are changed.
 
+## Voting behaviour and programme tensions
+
+Votes have independent official evidence: DIP publication links and decisions, plenary protocols for explicitly named faction positions, and official spreadsheets for named individual ballots. Missing counts remain null; earlier readings, coalition membership and a law's effect cannot fill them in. Machine-sourced evidence is publishable without pretending that an editor reviewed it. Ambiguities and source errors remain visible in per-law coverage.
+
+Only a unique confirmed final whole-law vote can be compared with an accepted Sol-final or editorial law effect. The programme must have existed and been eligible at the vote date as well as promulgation. Yes on a negative effect or no on a positive effect is a **potential tension**, not proof of a broken promise; compatible direction is not fulfilment. Mixed law effects, abstentions, absences and invalid ballots do not establish opposition. Split factions retain their actual ballots, not a majority label.
+
+Patterns count distinct evidenced laws; programme comparisons count law × criterion × faction. Several criteria can concern one law and are not independent cases. No party ranking or promises-broken percentage is computed. Source coverage is the imported law corpus, not all Bundestag business. See [the voting evidence specification](voting.md) for exact matching, exclusions, provenance, API and correction behaviour.
+
 ## Migration and recovery
 
 `all-party-sol-final-v2` reuses 9,211 retained screening outcomes and the prior spending ledger. Previously proposed links, whether Sonnet agreed or disagreed, go back through Sol; they are **not bulk-approved**. Existing record IDs and correction links are retained. Rejected old impact records remain traceable in Git/API but are not shown as accepted connections.

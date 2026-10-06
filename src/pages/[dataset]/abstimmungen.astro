@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Stats from '../../components/Stats.astro';
+import VotingComparisons from '../../components/VotingComparisons.astro';
+import { datasets, formatDate, getData } from '../../lib/data';
+import { coverageLabels, publicVote, votingCoverage, votingPatterns } from '../../lib/voting';
+export function getStaticPaths() { return datasets.map(dataset => ({ params: { dataset }, props: { data: getData(dataset) } })); }
+const { data } = Astro.props;
+const coverage = votingCoverage(data);
+const patterns = votingPatterns(data);
+const byLaw = new Map(data.votingCoverage?.items.map(row => [row.law_id, row]) ?? []);
+const votes = data.votes.filter(publicVote);
+---
+<Layout title="Abstimmungen & Wahlversprechen" active="votes" dataset={data.dataset}>
+  <header class="page-heading"><div class="eyebrow">Vom Gesetz zur dokumentierten Stimme</div><h1>Abstimmungen & Wahlversprechen</h1><p>Wer stimmt wofür? Wo passt das zur eigenen Zusage, wo entstehen mögliche Spannungen? Die Spur führt immer zurück zur amtlichen Abstimmung und zum Originalprogramm.</p>
+    <div class="page-actions"><a class="button primary" href="#vergleiche">Belegte Vergleiche ↓</a><a class="button" href="#abdeckung">Datenabdeckung ↓</a><a class="button" href={`/api/v1/${data.dataset}/voting-summary.json`}>Muster als JSON</a></div>
+  </header>
+  <Stats items={[
+    { value: `${coverage.with_positions} / ${coverage.laws}`, label: 'Gesetze mit Stimmbelegen', detail: 'Im importierten Gesetzeskorpus, nicht im gesamten Bundestag', icon: 'check' },
+    { value: coverage.named_decisions, label: 'Namentliche Abstimmungen', detail: 'Mit abgeglichenen Einzelstimmen; keine Vollerhebung', icon: 'parties' },
+    { value: coverage.decision_only + coverage.without_decisions, label: 'Stimmverhalten noch offen', detail: `${coverage.decision_only} nur Beschluss · ${coverage.without_decisions} ohne zugeordneten Beschluss`, icon: 'file' },
+    { value: coverage.comparable_laws, label: 'Vergleichbare Schlussabstimmungen', detail: 'Amtlich dem verkündeten Gesetz zugeordnet, mit Fraktionspositionen', icon: 'link' },
+  ]} />
+  <section class="section-block"><h2>Das größere Bild: dokumentierte Fraktionspositionen</h2>
+    <p>Eine Zeile zählt Gesetze, nicht Abgeordnete. Nur eindeutig dem verkündeten Gesetz zugeordnete Schlussabstimmungen gehen ein. Unterschiedliche Stimmen innerhalb einer Fraktion bleiben „geteilt“; eine Mehrheit wird nicht zur Stimme aller Mitglieder.</p>
+    <div class="table-scroll"><table class="data-table"><caption>Keine Rangliste und keine Vollerhebung · unbekannte oder nicht vertretene Gruppen werden nicht als Ablehnung gezählt</caption><thead><tr><th>Fraktion / Programmpartei</th><th>Belegte Gesetze</th><th>Ja</th><th>Nein</th><th>Enthaltung</th><th>Geteilt</th><th>Keine Ja-/Nein-Position</th><th>Programmvergleiche</th></tr></thead><tbody>{patterns.map(row => <tr>
+      <th scope="row"><a href={`/${data.dataset}/parteien/${row.party_id}/`}>{data.parties.find(p => p.id === row.party_id)!.short_name}</a></th><td>{row.laws || '—'}</td><td>{row.laws ? row.positions.yes : '—'}</td><td>{row.laws ? row.positions.no : '—'}</td><td>{row.laws ? row.positions.abstain : '—'}</td><td>{row.laws ? row.positions.mixed : '—'}</td><td>{row.laws ? row.positions.unknown : '—'}</td><td>{row.comparisons ? <a href={`?party=${row.party_id}#vergleiche`}>{row.comparisons} zu {row.compared_laws} Gesetzen →</a> : 'Noch keine'}</td>
+    </tr>)}</tbody></table></div>
+    <p>Die Abdeckung unterscheidet sich je Partei und Zeitraum. Fehlende Stimmen und fehlende Programmverknüpfungen sind unbekannt, keine entlastende oder belastende Bewertung. Parteien und Fraktionen sind nicht identisch; nur ausdrücklich zuordenbare Fraktionen werden mit dem jeweiligen Programm verglichen.</p>
+  </section>
+  <div id="vergleiche"><VotingComparisons data={data} filters /></div>
+  <section class="section-block" id="abdeckung"><h2>Was belegt ist – und was noch fehlt</h2><p>{coverage.checked} von {coverage.laws} importierten Gesetzen wurden auf parlamentarische Belege geprüft. Der Belegstand unterscheidet zwischen dokumentiertem Beschluss und nachgewiesenen Stimmpositionen. Das Fehlen eines Belegs bedeutet nicht, dass keine Abstimmung stattgefunden hat.</p>
+    <p><a href={`/api/v1/${data.dataset}/voting-coverage.json`}>Abdeckung pro Gesetz (JSON)</a> · <a href={`/api/v1/${data.dataset}/votes.json`}>Alle Abstimmungsbelege (JSON)</a> · <a href="/methodik/#abstimmungen">Grenzen der Auswertung</a></p>
+    <details><summary>Alle {data.laws.length} Gesetze und ihren Belegstand ansehen</summary><div class="table-scroll"><table class="data-table"><caption>Unabhängig von der Existenz eines Programmvergleichs · nach Verkündungsdatum</caption><thead><tr><th>Gesetz</th><th>Verkündet</th><th>Belegstand</th><th>Abstimmungen</th></tr></thead><tbody>{data.laws.map(law => {
+      const row = byLaw.get(law.id);
+      const lawVotes = votes.filter(v => v.law_id === law.id);
+      return <tr><th scope="row"><a href={`/${data.dataset}/gesetze/${law.id}/#abstimmungen`}>{law.title}</a></th><td>{formatDate(law.published_at)}</td><td>{row ? coverageLabels[row.status] : 'Noch nicht geprüft'}{row && <small>Stand {formatDate(row.checked_at)}</small>}</td><td>{lawVotes.length || 'Noch offen'}</td></tr>;
+    })}</tbody></table></div></details>
+  </section>
+</Layout>
+<style>
+  .section-block > p { margin: 14px 0; font-size: 13px; line-height: 1.8; }
+  .data-table caption { text-align: left; padding: 12px 0; font-size: 12px; line-height: 1.7; }
+  .data-table th[scope="row"] { text-transform: none; font-weight: 500; min-width: 150px; }
+  .data-table small { display: block; margin-top: 6px; }
+  #abdeckung, #vergleiche { scroll-margin-top: 110px; }
+  #abdeckung .data-table th[scope="row"] { min-width: 250px; white-space: normal; }
+  summary { cursor: pointer; font-weight: 600; margin: 18px 0; }
+</style>

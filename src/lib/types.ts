@@ -32,6 +32,42 @@ export type Impact = Base & {
   caveats: string[]; verification: 'passed' | 'needs_review';
   evaluation?: { status: 'accepted' | 'rejected' | 'missing_context'; model: string; method: string; input_sha256: string; decided_at: string } | null;
 };
-export type GroupVote = { group: string; party_id: string | null; yes: number; no: number; abstain: number; absent: number };
-export type Vote = Base & { law_id: string; date: string; motion: string; type: string; source: Source; groups: GroupVote[] };
-export type Data = { dataset: Dataset; parties: Party[]; programs: Program[]; criteria: Criterion[]; laws: Law[]; impacts: Impact[]; votes: Vote[] };
+export type Ballot = 'yes' | 'no' | 'abstain' | 'absent' | 'invalid';
+export type GroupPosition = 'yes' | 'no' | 'abstain' | 'mixed' | 'unknown';
+export type VoteStage = 'final_passage' | 'second_reading' | 'amendment' | 'resolution' | 'procedural' | 'unknown';
+export type GroupVote = {
+  group: string; party_id: string | null; yes: number | null; no: number | null;
+  abstain: number | null; absent: number | null; invalid?: number | null;
+  position?: GroupPosition; evidence_quote?: string;
+};
+export type MemberVote = { name: string; group: string; vote: Ballot; source_row: number };
+export type VoteCrossCheck = {
+  provider: 'abgeordnetenwatch'; status: 'matched' | 'partial' | 'mismatch' | 'unmatched' | 'not_found' | 'ambiguous' | 'source_error';
+  checked_at: string; poll_id: string | null; source: Source | null;
+  total_members: number; compared_members: number; matched_members: number; note: string;
+};
+export type VoteEvidence = {
+  method: 'bundestag-dip-v1' | 'bundestag-structured-v2'; procedure_id: string; position_id: string; decision_index: number;
+  law_match: 'official_reference' | 'exact_title'; procedure_source: Source; position_source: Source;
+  protocol_source: Source | null; protocol_page: string | null; document_numbers: string[];
+  protocol_format?: 'xml' | null; protocol_fallback?: 'not_listed' | 'opendata_unavailable' | null;
+  protocol_agenda?: string | null; protocol_block?: number | null; protocol_comment_spans?: [number, number][];
+  position_status?: 'decision_only' | 'no_structured_transcript' | 'passage_not_found' | 'ambiguous_passage' |
+    'no_explicit_groups' | 'groups_found' | 'roll_call_found' | 'roll_call_unmatched' | 'partial_decision';
+  text: string; quote: string; roll_call_id: string | null; roll_call_source: Source | null;
+  ballot_index_source?: Source | null; ballot_number?: number | null;
+  ballot_match?: 'official_title_and_tallies' | 'unique_official_tallies' | null;
+  cross_check?: VoteCrossCheck | null;
+};
+export type Vote = Base & {
+  law_id: string; date: string; motion: string; type: 'roll_call' | 'group_record' | 'plenary_record';
+  source: Source; groups: GroupVote[]; members?: MemberVote[]; evidence?: VoteEvidence | null;
+  stage?: VoteStage; decision?: string; scope?: 'whole_law' | 'partial_law';
+  compares_to_law?: boolean; note?: string; import_sha256?: string | null;
+};
+export type VotingCoverageItem = {
+  law_id: string; checked_at: string; status: 'recorded' | 'decision_only' | 'not_found' | 'ambiguous' | 'source_error' | 'source_changed';
+  procedure_ids: string[]; vote_ids: string[]; reason: string;
+};
+export type VotingCoverage = { schema_version: string; dataset: 'live'; items: VotingCoverageItem[]; note: string };
+export type Data = { dataset: Dataset; parties: Party[]; programs: Program[]; criteria: Criterion[]; laws: Law[]; impacts: Impact[]; votes: Vote[]; votingCoverage?: VotingCoverage | null };

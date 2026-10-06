@@ -41,6 +41,12 @@ jobs:
         id: inventory
         continue-on-error: true
         run: uv run politrace archive --since 2025-03-25 --limit 2000 --snapshot-fallback
+      - name: Recover official Bundestag decisions and individual ballots
+        id: voting
+        continue-on-error: true
+        run: uv run politrace votes
+        env:
+          DIP_API_KEY: ${{ secrets.DIP_API_KEY }}
       - name: Refresh page-complete reading editions
         id: ocr
         continue-on-error: true
@@ -68,6 +74,7 @@ jobs:
             .cache/ocr/usage.json
             .cache/ocr/progress.json
             .cache/ocr/mistral-reading-v1/
+            .cache/votes/
           include-hidden-files: true
           retention-days: 90
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -112,11 +119,12 @@ jobs:
         env:
           INVENTORY: ${{ steps.inventory.outcome }}
           OCR: ${{ steps.ocr.outcome }}
+          VOTING: ${{ steps.voting.outcome }}
           ANALYSIS: ${{ steps.slice.outcome }}
         run: |
           python - <<'PY'
           import os
-          failed = [name for name in ('INVENTORY', 'OCR', 'ANALYSIS') if os.environ[name] == 'failure']
+          failed = [name for name in ('INVENTORY', 'VOTING', 'OCR', 'ANALYSIS') if os.environ[name] == 'failure']
           if failed:
               raise SystemExit('Incomplete stages: ' + ', '.join(failed) + '. Completed records and costs are retained; errors are not no-link conclusions.')
           PY

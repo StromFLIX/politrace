@@ -147,6 +147,10 @@ def main():
     # OCR usage/cache is also cumulative and separate from OpenRouter's invoice.
     if (incoming / '.cache/ocr').exists():
         shutil.copytree(incoming / '.cache/ocr', ROOT / '.cache/ocr', dirs_exist_ok=True)
+    # Public parliamentary snapshots contain no authorization material. They expire
+    # in the importer and are hash-checked before reuse; vote records remain canonical.
+    if (incoming / '.cache/votes').exists():
+        shutil.copytree(incoming / '.cache/votes', ROOT / '.cache/votes', dirs_exist_ok=True)
     validate_store()
     print(f'Restored run {selected}: source results, validated responses and cumulative costs together')
 

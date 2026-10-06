@@ -50,6 +50,13 @@ def parser():
     laws.add_argument("--limit", type=int, default=10)
     laws.add_argument("--since", type=date.fromisoformat)
     laws.add_argument("--feed-url", default=FEED_URL)
+    votes = sub.add_parser('votes', help='DIP proceedings → official decisions, faction positions and named ballots; no LLM')
+    votes.add_argument('--since', type=date.fromisoformat, help='Scope by law publication date, not vote date')
+    votes.add_argument('--law-ids', nargs='+', help='Explicit law IDs; unselected coverage remains untouched')
+    votes.add_argument('--limit', type=int)
+    votes.add_argument('--refresh', action='store_true', help='Re-fetch public sources instead of using the bounded cache')
+    votes.add_argument('--no-crosscheck', dest='crosscheck', action='store_false',
+                       help='Skip the supplementary abgeordnetenwatch JSON cross-check; official sources remain required')
     matching = sub.add_parser("match", help="Cheap retrieval → evidence judgment → second-pass challenge")
     matching.add_argument("--per-program", type=int, default=6)
     matching.add_argument("--limit", type=int, help="Maximum changed laws in this batch; unchanged audits cost no slot")
@@ -65,6 +72,12 @@ def main():
     elif command == "schemas":
         export_schemas(root / "schemas")
         result = {"exported": True}
+    elif command == 'votes':
+        from pipeline.votes import ingest_votes
+
+        validate_store(root)
+        result = ingest_votes(root=root, cache=cache.parent / 'votes', **args)
+        validate_store(root)
     elif command in {"laws", "archive", "snapshot-archive"}:
         validate_store(root)
         importer = {'laws': ingest_laws, 'archive': ingest_archive, 'snapshot-archive': snapshot_archive}[command]

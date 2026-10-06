@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
 import { extractionCoverage, publicImpact } from '../../lib/metrics';
 import { partyInsights } from '../../lib/party-insights';
+import { votingComparisons, votingCoverage, votingPatterns } from '../../lib/voting';
 import { experiments } from '../../lib/experiments';
 import { jsonBody } from '../../lib/json-stream';
 import { readingIndex, productionProgress, readingProgress } from '../../lib/readings';
@@ -32,6 +33,25 @@ export const getStaticPaths: GetStaticPaths = () => {
     const coverageDir = path.join(dataRoot, dataset, 'coverage');
     const coverage = fs.existsSync(coverageDir) ? fs.readdirSync(coverageDir).filter(f => f.endsWith('.json')).sort().map(f => JSON.parse(fs.readFileSync(path.join(coverageDir, f), 'utf8'))) : [];
     add(`${prefix}/coverage.json`, { schema_version: '1.0', dataset, total: coverage.length, items: coverage });
+    add(`${prefix}/voting-coverage.json`, data.votingCoverage ?? { schema_version: '1.0', dataset, items: [], note: 'Voting enrichment has not yet checked these laws.' });
+    add(`${prefix}/voting-summary.json`, {
+      schema_version: '1.0', dataset, coverage: votingCoverage(data), items: votingPatterns(data),
+      position_unit: 'Distinct imported law with a unique confirmed final whole-law vote and a documented faction position.',
+      comparison_unit: 'Law × criterion × faction; multiple criteria on one law are correlated, not independent promise breaches.',
+      note: 'No party ranking, no inferred coalition votes, no absence-as-opposition. Split ballots are never replaced by a majority label. Only accepted Sol-final or editorial law effects and programmes valid before the vote are compared. Tensions are not proof of broken promises.',
+    });
+    const comparisons = votingComparisons(data);
+    add(`${prefix}/voting-comparisons.json`, {
+      schema_version: '1.0', dataset, total: comparisons.length,
+      method: 'Directional comparison, not fulfilment or motivation. Only confirmed final whole-law votes and published law effects; abstention/absence are not opposition.',
+      items: comparisons.map(c => ({ id: c.id, vote_id: c.vote.id, law_id: c.law.id, impact_id: c.impact.id,
+        criterion_id: c.criterion.id, program_id: c.program.id, party_id: c.party.id, group: c.group.group,
+        date: c.vote.date, score: c.impact.score, position: c.position, outcome: c.outcome,
+        consistent_ballots: c.consistent_ballots, tension_ballots: c.tension_ballots,
+        vote_url: `/api/${prefix}/votes/${c.vote.id}.json`, impact_url: `/api/${prefix}/impacts/${c.impact.id}.json`,
+        criterion_url: `/api/${prefix}/criteria/${c.criterion.id}.json`,
+      })),
+    });
     const reports = experiments(dataset);
     // Keep the old v1 aliases for existing consumers, not as a second data product.
     add(`${prefix}/experiments.json`, { schema_version: '1.0', dataset, total: reports.length, items: reports });
@@ -72,6 +92,8 @@ export const getStaticPaths: GetStaticPaths = () => {
       collections: Object.fromEntries(collections.map(c => [c, `/api/${prefix}/${c}.json`])),
       counts: { ...Object.fromEntries(collections.map(c => [c, data[c].length])), accepted_impacts: acceptedImpacts.length },
       accepted_impacts: `/api/${prefix}/accepted-impacts.json`,
+      voting_coverage: `/api/${prefix}/voting-coverage.json`, voting_summary: `/api/${prefix}/voting-summary.json`,
+      voting_comparisons: `/api/${prefix}/voting-comparisons.json`,
       statistics: `/api/${prefix}/stats.json`, search: `/api/${prefix}/search.json`, coverage: `/api/${prefix}/coverage.json`,
       extraction: `/api/${prefix}/extraction.json`, analyses: `/api/${prefix}/analyses.json`,
       progress: `/api/${prefix}/analysis.json`, readings: `/api/${prefix}/readings.json`,
@@ -143,6 +165,9 @@ export const getStaticPaths: GetStaticPaths = () => {
       '/v1/{dataset}/stats.json': { get: { operationId: 'getStatistics', parameters: [datasetParameter], responses: response('Statistics by programme and period') } },
       '/v1/{dataset}/search.json': { get: { operationId: 'getSearchIndex', parameters: [datasetParameter], responses: response('Searchable criteria index') } },
       '/v1/{dataset}/coverage.json': { get: { operationId: 'getCoverage', parameters: [datasetParameter], responses: response('Archive counts, source snapshots and explicit remaining law IDs') } },
+      '/v1/{dataset}/voting-coverage.json': { get: { operationId: 'getVotingCoverage', parameters: [datasetParameter], responses: response('Per-law parliamentary lookup status, checked dates, unresolved ambiguity and source errors') } },
+      '/v1/{dataset}/voting-summary.json': { get: { operationId: 'getVotingSummary', parameters: [datasetParameter], responses: response('Explicit coverage denominators and faction patterns; no party ranking') } },
+      '/v1/{dataset}/voting-comparisons.json': { get: { operationId: 'getVotingComparisons', parameters: [datasetParameter], responses: response('Source-linked vote × criterion comparisons; possible tensions, not alleged promise breaches') } },
       '/v1/{dataset}/extraction.json': { get: { operationId: 'getExtractionCoverage', parameters: [datasetParameter], responses: response('Processed and remaining source leaves, for imported programmes only; not human review') } },
       '/v1/{dataset}/readings.json': { get: { operationId: 'getReadingEditions', parameters: [datasetParameter], responses: response('Versioned page-complete OCR reading editions; original evidence unchanged') } },
       '/v1/{dataset}/readings/{id}.json': { get: { operationId: 'getReadingEdition', parameters: [datasetParameter, idParameter], responses: response('OCR page text, original page numbers, provenance and warnings') } },

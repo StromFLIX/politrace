@@ -1,15 +1,110 @@
 ---
-import { formatDate } from '../lib/data';
+import { editUrl, formatDate } from '../lib/data';
 import { voteTotals } from '../lib/metrics';
+import { ballotLabels, coverageLabels, groupPosition, positionLabels, publicVote, stageLabels } from '../lib/voting';
 import Icon from './Icon.astro';
-import type { Vote, Dataset } from '../lib/types';
-interface Props { votes: Vote[]; dataset: Dataset }
-const { votes } = Astro.props;
-const reviewed = votes.filter(v => v.review.status === 'reviewed');
+import type { Vote, Dataset, VotingCoverageItem } from '../lib/types';
+interface Props { votes: Vote[]; dataset: Dataset; coverage?: VotingCoverageItem }
+const { votes, dataset, coverage } = Astro.props;
+const published = votes.filter(publicVote).sort((a, b) => b.date.localeCompare(a.date) || Number(b.stage === 'final_passage') - Number(a.stage === 'final_passage') || a.id.localeCompare(b.id));
 ---
-<section class="evidence-box"><h2>Wer hat wie abgestimmt?</h2>
-{reviewed.length === 0 ? <><p>Keine belegten Abstimmungsdaten hinterlegt.</p><p class="method-note"><Icon name="info" size={15} />Das Bundesgesetzblatt dokumentiert die Verkündung, nicht das Abstimmungsverhalten. Wir leiten Stimmen weder aus Koalitionen noch aus einer Gesetzeswirkung ab.</p></> : reviewed.map(vote => {
-  const t = voteTotals(vote.groups);
-  return <div><p>{vote.motion}</p><p style="font-size:10px;margin-top:7px">{formatDate(vote.date)} · {vote.type === 'roll_call' ? 'Namentliche Abstimmung' : 'Dokumentierter Fraktionsnachweis'}</p><div class="votes-bar" role="img" aria-label={`${t.yes} Ja, ${t.no} Nein, ${t.abstain} Enthaltungen, ${t.absent} nicht abgegeben`}><span class="vote-yes" style={`flex:${t.yes}`} /><span class="vote-no" style={`flex:${t.no}`} /><span class="vote-abstain" style={`flex:${t.abstain}`} /><span class="vote-absent" style={`flex:${t.absent}`} /></div><div class="legend" style="margin:10px 0 16px"><span><i style="--dot:#348a69" />{t.yes} Ja</span><span><i style="--dot:#c26b68" />{t.no} Nein</span><span><i style="--dot:#c1a457" />{t.abstain} Enthaltungen</span><span><i style="--dot:#c8d0da" />{t.absent} nicht abgegeben</span></div><div class="table-scroll"><table class="data-table"><caption class="sr-only">Stimmen nach Fraktion, einschließlich nicht abgegebener Stimmen</caption><thead><tr><th>Fraktion / Gruppe</th><th class="num">Ja</th><th class="num">Nein</th><th class="num">Enth.</th><th class="num">Nicht abg.</th></tr></thead><tbody>{vote.groups.map(g => <tr><td>{g.group}</td><td class="num">{g.yes}</td><td class="num">{g.no}</td><td class="num">{g.abstain}</td><td class="num">{g.absent}</td></tr>)}</tbody></table></div><div class="evidence-footer"><span>{vote.source.publisher}</span>{<a class="text-link" href={vote.source.url}>Amtlicher Abstimmungsnachweis <Icon name="arrow" size={13} /></a>}</div></div>;
-})}
+<section class="evidence-box voting-evidence" id="abstimmungen">
+  <h2>Wer hat wie abgestimmt?</h2>
+  <p>Amtlicher Beschluss, Fraktionsposition und namentliche Einzelstimme sind unterschiedliche Belege.</p>
+  {coverage && <p class="coverage-note"><strong>{coverageLabels[coverage.status]}</strong> · Stand {formatDate(coverage.checked_at)}</p>}
+  {!published.length && <><p>Für dieses Gesetz sind noch keine eindeutig zugeordneten Abstimmungsbelege veröffentlicht.</p><p class="method-note"><Icon name="info" size={15} />Das bedeutet nicht, dass keine Abstimmung stattgefunden hat. Das Bundesgesetzblatt dokumentiert die Verkündung, nicht das Stimmverhalten.</p></>}
+  {published.map(vote => {
+    const totals = vote.type === 'roll_call' ? voteTotals(vote.groups) : null;
+    const members = vote.members ?? [];
+    return <article class="vote-record" id={vote.id}>
+      <h3>{stageLabels[vote.stage ?? 'unknown']} · {formatDate(vote.date)}</h3>
+      <p>{vote.decision || vote.motion}</p>
+      <p class="vote-kind">{vote.type === 'roll_call' ? 'Namentliche Abstimmung · ausgezählte Einzelstimmen' : vote.type === 'group_record' ? 'Protokollierte Fraktionspositionen · keine Einzelstimmenzählung' : 'Beschlussnachweis · Stimmverhalten noch offen'}</p>
+      {vote.note && <p class="coverage-note">{vote.note}</p>}
+      {vote.stage !== 'final_passage' && <p>Dieser Beschluss ist keine Schlussabstimmung und wird nicht mit der Wirkung des verkündeten Gesetzes verrechnet.</p>}
+      {totals && <>
+        <div class="votes-bar" role="img" aria-label={`${totals.yes} Ja, ${totals.no} Nein, ${totals.abstain} Enthaltungen, ${totals.absent} nicht abgegeben, ${totals.invalid} ungültig`}>
+          <span class="vote-yes" style={`flex:${totals.yes}`} /><span class="vote-no" style={`flex:${totals.no}`} /><span class="vote-abstain" style={`flex:${totals.abstain}`} /><span class="vote-absent" style={`flex:${totals.absent}`} /><span class="vote-invalid" style={`flex:${totals.invalid}`} />
+        </div>
+        <p class="vote-totals">{totals.yes} Ja · {totals.no} Nein · {totals.abstain} Enthaltungen · {totals.absent} nicht abgegeben · {totals.invalid} ungültig</p>
+      </>}
+      {!!vote.groups.length && <div class="table-scroll"><table class="data-table">
+        <caption>Fraktionen und Gruppen zum Abstimmungszeitpunkt{!totals && ' · keine Stimmenzahlen belegt'}</caption>
+        <thead><tr><th>Fraktion / Gruppe</th><th>Dokumentierte Position</th>{totals && <><th class="num">Ja</th><th class="num">Nein</th><th class="num">Enth.</th><th class="num">Nicht abg.</th><th class="num">Ungültig</th></>}</tr></thead>
+        <tbody>{vote.groups.map(g => <tr><th scope="row">{g.group}</th><td>{positionLabels[groupPosition(g)]}</td>{totals && <><td class="num">{g.yes ?? '—'}</td><td class="num">{g.no ?? '—'}</td><td class="num">{g.abstain ?? '—'}</td><td class="num">{g.absent ?? '—'}</td><td class="num">{g.invalid ?? 0}</td></>}</tr>)}</tbody>
+      </table></div>}
+      {!totals && !!vote.groups.length && <p class="coverage-note">Für nicht genannte Fraktionen bleibt die Position unbekannt. Aus einer Fraktionsposition lassen sich weder Einzelstimmen noch Abweichler ableiten.</p>}
+      {!!members.length && <details class="member-votes" data-member-votes>
+        <summary>Alle {members.length} namentlichen Einzelstimmen ansehen</summary>
+        <div class="ballot-filters">
+          <label>Name suchen<input type="search" data-member-search placeholder="Vor- oder Nachname" /></label>
+          <label>Fraktion / Gruppe<select aria-label="Fraktion / Gruppe" data-member-group><option value="">Alle Gruppen</option>{vote.groups.map(g => <option value={g.group}>{g.group}</option>)}</select></label>
+          <label>Stimme<select aria-label="Stimme" data-member-choice><option value="">Alle Stimmen</option>{Object.entries(ballotLabels).map(([key, label]) => <option value={key}>{label}</option>)}</select></label>
+        </div>
+        <p aria-live="polite" data-member-count>{members.length} von {members.length} Einzelstimmen</p>
+        <div class="table-scroll"><table class="data-table"><caption>Amtliche Stimmzettelliste · Namen nur innerhalb dieser Abstimmung, keine geschätzte Personenidentität über Wahlperioden</caption>
+          <thead><tr><th scope="col">Abgeordnete Person</th><th scope="col">Fraktion / Gruppe</th><th scope="col">Stimme</th><th scope="col">Quellzeile</th></tr></thead>
+          <tbody>{members.map(m => <tr data-member-name={m.name.toLocaleLowerCase('de-DE')} data-member-party={m.group} data-member-ballot={m.vote}><th scope="row">{m.name}</th><td>{m.group}</td><td>{ballotLabels[m.vote]}</td><td>{m.source_row}</td></tr>)}</tbody>
+        </table></div><p data-member-empty hidden>Keine Einzelstimmen für diese Auswahl. Die Filter ändern nicht das amtliche Gesamtergebnis.</p>
+      </details>}
+      {vote.evidence && <details class="vote-provenance"><summary>Belegkette und genaue Zuordnung</summary>
+        <p>DIP-Vorgang {vote.evidence.procedure_id} · Position {vote.evidence.position_id} · Beschluss {vote.evidence.decision_index + 1}{vote.evidence.protocol_page && ` · Protokollseite ${vote.evidence.protocol_page}`}</p>
+        <p>Gesetzeszuordnung: {vote.evidence.law_match === 'official_reference' ? 'amtliche BGBl-Fundstelle' : 'nur exakter Titel, noch vorläufig'}. {vote.compares_to_law ? 'Bestätigte Schlussabstimmung über das Gesetz.' : 'Nicht für den Programmvergleich freigegeben.'}</p>
+        {vote.type !== 'roll_call' && <blockquote>{vote.evidence.quote}</blockquote>}
+        <ul class="vote-source-list">
+          <li><a href={`https://dip.bundestag.de/vorgang/${vote.evidence.procedure_id}`}>Vorgang im Dokumentationssystem DIP</a> · <a href={vote.evidence.procedure_source.url}>amtlicher Datensatz</a></li>
+          <li><a href={vote.evidence.position_source.url}>Beschluss im amtlichen DIP-Datensatz</a></li>
+          {vote.evidence.protocol_source && <li><a href={vote.evidence.protocol_source.url}>Original-Plenarprotokoll{vote.evidence.protocol_format === 'xml' ? ' (XML)' : ''}</a>{vote.evidence.protocol_agenda && ` · ${vote.evidence.protocol_agenda}`}</li>}
+          {vote.evidence.roll_call_source && <li><a href={vote.evidence.roll_call_source.url}>Namentliche Abstimmung beim Bundestag</a></li>}
+          {vote.evidence.ballot_index_source && <li><a href={vote.evidence.ballot_index_source.url}>Amtliches Verzeichnis der Abstimmungslisten</a> · Abstimmungsnummer {vote.evidence.ballot_number}</li>}
+          {vote.evidence.cross_check?.source && <li><a href={vote.evidence.cross_check.source.url}>Ergänzender Abgleich: abgeordnetenwatch (nicht amtlich)</a>
+            {['matched', 'partial'].includes(vote.evidence.cross_check.status) && ` · ${vote.evidence.cross_check.matched_members} von ${vote.evidence.cross_check.total_members} Einzelstimmen eindeutig zugeordnet und übereinstimmend.${vote.evidence.cross_check.status === 'partial' ? ' Übrige Einzelstimmen nicht abgeglichen.' : ''}`}
+            {vote.evidence.cross_check.status === 'mismatch' && ' · Abweichende Einzelstimmen; kein Programmvergleich bis zur Klärung.'}
+          </li>}
+        </ul>
+        <p class="coverage-note">{vote.review.status === 'reviewed' ? 'Redaktionell geprüft.' : 'Aus amtlichen Quellen maschinell erschlossen; keine menschliche Prüfung behauptet.'} Abgerufen {formatDate(vote.source.retrieved_at)}. Prüfsummen und der erhaltene Quellenausschnitt stehen im JSON-Datensatz.</p>
+        <p class="record-id">SHA-256: {vote.source.sha256 ?? 'Nicht erfasst'}</p>
+      </details>}
+      <div class="evidence-footer"><a class="text-link" href={vote.source.url}>{vote.type === 'roll_call' ? 'Amtliche Einzelstimmen (XLSX)' : 'Amtlicher Beschlussnachweis'} <Icon name="arrow" size={13} /></a><a class="text-link" href={`/api/v1/${dataset}/votes/${vote.id}.json`}>Abstimmung als JSON</a><a class="text-link" href={editUrl(dataset, 'votes', vote.id)}>Beleg korrigieren</a></div>
+    </article>;
+  })}
+  <p class="method-note">Stimmen werden niemals aus Regierungsteilnahme oder Gesetzeswirkung abgeleitet. <a href="/live/abstimmungen/">Abdeckung und größere Muster ansehen →</a></p>
 </section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-member-votes]').forEach(root => {
+    const search = root.querySelector<HTMLInputElement>('[data-member-search]')!;
+    const group = root.querySelector<HTMLSelectElement>('[data-member-group]')!;
+    const choice = root.querySelector<HTMLSelectElement>('[data-member-choice]')!;
+    const rows = [...root.querySelectorAll<HTMLTableRowElement>('[data-member-name]')];
+    const update = () => {
+      const query = search.value.trim().toLocaleLowerCase('de-DE');
+      let count = 0;
+      for (const row of rows) {
+        row.hidden = !(row.dataset.memberName!.includes(query) && (!group.value || row.dataset.memberParty === group.value) && (!choice.value || row.dataset.memberBallot === choice.value));
+        if (!row.hidden) count++;
+      }
+      root.querySelector('[data-member-count]')!.textContent = `${count} von ${rows.length} Einzelstimmen`;
+      root.querySelector<HTMLElement>('[data-member-empty]')!.hidden = count > 0;
+    };
+    search.addEventListener('input', update); group.addEventListener('change', update); choice.addEventListener('change', update);
+  });
+</script>
+<style>
+  .voting-evidence > p { margin: 12px 0; }
+  .coverage-note, .vote-kind { font-size: 12px; line-height: 1.65; margin: 12px 0; }
+  .vote-record { border-top: 1px solid var(--line, #e3e8ef); padding-top: 20px; margin-top: 22px; scroll-margin-top: 110px; min-width: 0; }
+  .vote-record h3 { font-size: 17px; margin-bottom: 10px; }
+  .vote-totals { margin: 10px 0 16px; font-size: 12px; }
+  .vote-invalid { background: #6b6677; }
+  .data-table caption { text-align: left; font-size: 11px; line-height: 1.6; padding: 12px 0; }
+  .data-table th[scope="row"] { font-weight: 500; text-transform: none; }
+  details { margin: 18px 0; padding: 14px; background: #f7f9fc; border-radius: 8px; min-width: 0; }
+  summary { cursor: pointer; font-weight: 600; line-height: 1.6; }
+  details p { margin: 12px 0; }
+  blockquote { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .record-id { overflow-wrap: anywhere; }
+  .vote-source-list { padding-left: 20px; line-height: 1.9; font-size: 12px; }
+  .ballot-filters { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+  .ballot-filters label { display: grid; gap: 5px; font-size: 12px; flex: 1 1 160px; min-width: 0; }
+  .ballot-filters input, .ballot-filters select { width: 100%; min-width: 0; padding: 9px; border: 1px solid #c8d0da; border-radius: 5px; background: white; color: inherit; font: inherit; }
+</style>

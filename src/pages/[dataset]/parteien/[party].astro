@@ -4,6 +4,7 @@ import Icon from '../../../components/Icon.astro';
 import PartyInsights from '../../../components/PartyInsights.astro';
 import CriteriaBrowser from '../../../components/CriteriaBrowser.astro';
 import PeriodSwitch from '../../../components/PeriodSwitch.astro';
+import VotingComparisons from '../../../components/VotingComparisons.astro';
 import { datasets, getData, metrics, formatDate, repoUrl } from '../../../lib/data';
 import { partyInsights, formatPercentage, percentage } from '../../../lib/party-insights';
 export function getStaticPaths() { return datasets.flatMap(dataset => { const data = getData(dataset); return data.parties.map(party => ({ params: { dataset, party: party.id }, props: { party, data } })); }); }
@@ -21,6 +22,7 @@ const years = [...new Set(programs.map(p => p.election_year))];
     const insights = partyInsights(data, selected);
     return <section data-period-panel={year} hidden={index !== 0}>
       <PartyInsights insights={insights} dataset={data.dataset} partyId={party.id} year={year} active={index === 0} />
+      <VotingComparisons data={data} partyId={party.id} programIds={selected.map(p => p.id)} limit={8} />
       <div class="two-column"><section data-period-anchor="kriterien" id={index === 0 ? 'kriterien' : undefined}><div class="section-heading"><div><h2>Woran wir die Zusagen messen</h2><p>Konkrete Tests statt politischer Schlagworte. Nach Thema entdecken oder alle Kriterien durchsuchen.</p></div></div><CriteriaBrowser id={`kriterien-${year}`} criteria={criteria} data={data} programs={selected} /></section>
       <aside><div class="side-card"><Icon name="file" size={22} /><h2 style="margin-top:12px">Das Programm als Datenprodukt</h2><p>Das vollständige Wahlprogramm in lesbarer Form, mit Originalseiten und den zugehörigen Kriterien.</p>{selected.map(program => <a class="text-link" href={`/${data.dataset}/programme/${program.id}/`}>Programm {year} lesen <Icon name="arrow" size={14} /></a>)}</div><div class="side-card"><h2>Was sagt diese Zahl?</h2><p>Die KI bewertet für jedes Kriterium die zugehörigen Gesetze. Die Kennzahlen fassen diese Bewertungen zusammen. Jede Verbindung führt zur Originalquelle und kann korrigiert werden.</p><a href="/methodik/" class="text-link">Wie die Bewertung entsteht <Icon name="arrow" size={14} /></a></div></aside></div>
     </section>;

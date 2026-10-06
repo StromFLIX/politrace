@@ -7,7 +7,7 @@ from pathlib import Path
 
 from pydantic import TypeAdapter
 
-from pipeline.models import RECORD_TYPES, LawCoverage, Party, Record, TreeNode
+from pipeline.models import RECORD_TYPES, LawCoverage, Party, Record, TreeNode, VotingCoverage
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -221,11 +221,33 @@ def validate_store(root: Path = ROOT / "data") -> dict[str, int]:
         pairs = [(i.criterion_id, i.law_id) for i in data["impacts"].values()]
         if len(set(pairs)) != len(pairs):
             raise ValueError("Only one canonical impact per criterion/law; revise it through a PR")
+        decisions = set()
         for vote in data["votes"].values():
-            if vote.law_id not in data["laws"]:
+            law = data['laws'].get(vote.law_id)
+            if not law:
                 raise ValueError(f"Vote for unknown law: {vote.id}")
+            if vote.date > law.published_at:
+                raise ValueError(f'Vote occurs after the promulgated law: {vote.id}')
             if any(g.party_id and g.party_id not in party_ids for g in vote.groups):
                 raise ValueError(f"Vote references unknown party: {vote.id}")
+            if vote.evidence:
+                identity = (vote.law_id, vote.evidence.position_id, vote.evidence.decision_index)
+                if identity in decisions:
+                    raise ValueError(f'Duplicate parliamentary decision: {vote.id}')
+                decisions.add(identity)
+        voting_path = root / dataset / 'voting/coverage.json'
+        if voting_path.exists():
+            coverage = VotingCoverage.model_validate_json(voting_path.read_text())
+            if dataset != 'live':
+                raise ValueError('Official voting coverage cannot be demo data')
+            for item in coverage.items:
+                if item.law_id not in data['laws']:
+                    raise ValueError(f'Voting coverage references unknown law: {item.law_id}')
+                for identifier in item.vote_ids:
+                    if identifier not in data['votes'] or data['votes'][identifier].law_id != item.law_id:
+                        raise ValueError(f'Voting coverage references wrong vote: {identifier}')
+                if item.status in ('recorded', 'decision_only') and not item.vote_ids:
+                    raise ValueError('Voting coverage cannot claim evidence without records')
     return counts
 
 
@@ -237,5 +259,6 @@ def export_schemas(root: Path = ROOT / "data" / "schemas"):
 
     for name, model in {**RECORD_TYPES, "parties": Party, "coverage": LawCoverage,
                         "source-catalog": SourceCatalog, 'archive-inventory': ArchiveInventory,
-                        'experiments': Experiment, 'analyses': Experiment, 'readings': ReadingEdition}.items():
+                        'experiments': Experiment, 'analyses': Experiment, 'readings': ReadingEdition,
+                        'voting-coverage': VotingCoverage}.items():
         write_json(root / f"{name}.schema.json", model.model_json_schema())
