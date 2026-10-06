@@ -169424,7 +169424,7 @@
     {
       "law_id": "bgbl-2-2026-8",
       "analysis_sha256": "dcc1296a1b266715a1b79e7cba6631b5a5e1daef21c5f544a02ee4517b5542db",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-013093c71d20a747",
@@ -180555,6 +180555,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-ea35011cfdab2a2e",
+          "disposition": "proposed_link",
+          "rationale": "Bei Drittfinanzierung eines Investitionsstreits muss die finanzierte Streitpartei den Finanzierenden gegenüber der anderen Streitpartei und dem Gericht benennen. Die Pflicht betrifft nur diese Verfahren; eine Offenlegung der Finanzierungshöhe oder eine allgemeine Spenderoffenlegung sieht die zitierte Vorschrift nicht vor.",
+          "input_sha256": "f10f05d4b5897420a47ec138b3e38a2588297a2e5dd0f02266f005e812801530",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "16ec74b63e9a177bba40bca31fbb06af9e5b1ef8865339f9b5fe4fd2c02ffe97"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f10f05d4b5897420a47ec138b3e38a2588297a2e5dd0f02266f005e812801530"
+            }
+          ],
+          "impact_id": "impact-e59b6aa04a0abb4d",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.9,
+            "rationale": "Bei Drittfinanzierung eines Investitionsstreits muss die finanzierte Streitpartei den Finanzierenden gegenüber der anderen Streitpartei und dem Gericht benennen. Die Pflicht betrifft nur diese Verfahren; eine Offenlegung der Finanzierungshöhe oder eine allgemeine Spenderoffenlegung sieht die zitierte Vorschrift nicht vor.",
+            "law_passage_id": "bgbl-2-2026-8-p-a592dc0ca2eb14fc",
+            "law_quote": "(1) Hat eine Streitpartei eine Finanzierung durch Dritte erhalten, erhält sie diese oder hat sie deren Erhalt vereinbart, so legt\ndie Streitpartei, die in den Genuss dieser Finanzierung kommt, der anderen Streitpartei und der Kammer des Gerichts oder, wenn\nkeine Kammer des Gerichts eingerichtet wurde, dem Präsidenten des Gerichts den Namen und die Anschrift des die Finanzierung\nübernehmenden Dritten sowie gegebenenfalls den letztendlichen wirtschaftlichen Eigentümer und die Unternehmensstruktur offen.",
+            "criterion_quote": "Deshalb führen wir eine Pflicht zur Offenlegung der\nFinanzierung und Spender ein.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ea35011cfdab2a2e",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-ea79a77ad171dd43",
           "disposition": "no_supported_link",
           "rationale": "Das Abkommen erwähnt Breitbandzugang und elektronische Kommunikation, enthält in den vorliegenden Bestimmungen aber keine Maßnahme zur Stärkung des Wettbewerbs beim Netzausbau.",
@@ -181519,45 +181551,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7356,
-    "cache_hits": 112,
-    "subdivision_cache_hits": 1,
+    "calls": 7390,
+    "cache_hits": 116,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 30.463864,
-    "reported_cost_calls": 6699,
+    "reported_cost_usd": 30.624075,
+    "reported_cost_calls": 6731,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.801524,
-    "unknown_cost_calls": 657,
+    "unknown_cost_reserved_usd": 3.88059,
+    "unknown_cost_calls": 659,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 34.265388,
-    "prompt_tokens": 77251150,
-    "completion_tokens": 13254402,
+    "budget_exposure_usd": 34.504665,
+    "prompt_tokens": 77679252,
+    "completion_tokens": 13347992,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 289,
-        "reported_cost_usd": 7.208407099999999,
+        "calls": 291,
+        "reported_cost_usd": 7.289091849999998,
         "unknown_cost_reserved_usd": 1.2906342661267445e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 129,
-        "reported_cost_usd": 1.6536782500000002,
-        "unknown_cost_reserved_usd": 1.734723475976807e-16,
+        "calls": 132,
+        "reported_cost_usd": 1.6895692500000004,
+        "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4040,
-        "reported_cost_usd": 4.696025872499998,
-        "unknown_cost_reserved_usd": 2.817047950000003,
-        "pending_reserved_usd": 4.336808689942018e-18
+        "calls": 4069,
+        "reported_cost_usd": 4.739661047499998,
+        "unknown_cost_reserved_usd": 2.822920800000003,
+        "pending_reserved_usd": 1.734723475976807e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

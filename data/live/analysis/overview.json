@@ -1,7 +1,7 @@
 {
   "version": "all-party-sol-final-v2",
   "status": "continuing",
-  "input_signature": "32732164f826ad60cc35237b06bdc48ed9f197b14a9579e4f2f19cb389bc6505",
+  "input_signature": "3e8176628be032199ae0374db1cf0bfc8871e99b5ab97dc14b118165c1bd513a",
   "total_laws": 173,
   "total_programmes": 6,
   "total_criteria": 6470,
@@ -9,49 +9,49 @@
   "final_model": "openai/gpt-6-sol",
   "retrieval": "Per-programme whole-law/provision/reverse BM25 union",
   "limitations": "Unselected pairs unknown; statistical recall not measured.",
-  "updated_at": "2026-10-06T18:49:59.594581+00:00",
+  "updated_at": "2026-10-06T19:16:50.357287+00:00",
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 7356,
-    "cache_hits": 112,
-    "subdivision_cache_hits": 1,
+    "calls": 7390,
+    "cache_hits": 116,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 30.463864,
-    "reported_cost_calls": 6699,
+    "reported_cost_usd": 30.624075,
+    "reported_cost_calls": 6731,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.801524,
-    "unknown_cost_calls": 657,
+    "unknown_cost_reserved_usd": 3.88059,
+    "unknown_cost_calls": 659,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 34.265388,
-    "prompt_tokens": 77251150,
-    "completion_tokens": 13254402,
+    "budget_exposure_usd": 34.504665,
+    "prompt_tokens": 77679252,
+    "completion_tokens": 13347992,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 289,
-        "reported_cost_usd": 7.208407099999999,
+        "calls": 291,
+        "reported_cost_usd": 7.289091849999998,
         "unknown_cost_reserved_usd": 1.2906342661267445e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 129,
-        "reported_cost_usd": 1.6536782500000002,
-        "unknown_cost_reserved_usd": 1.734723475976807e-16,
+        "calls": 132,
+        "reported_cost_usd": 1.6895692500000004,
+        "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4040,
-        "reported_cost_usd": 4.696025872499998,
-        "unknown_cost_reserved_usd": 2.817047950000003,
-        "pending_reserved_usd": 4.336808689942018e-18
+        "calls": 4069,
+        "reported_cost_usd": 4.739661047499998,
+        "unknown_cost_reserved_usd": 2.822920800000003,
+        "pending_reserved_usd": 1.734723475976807e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
@@ -81,10 +81,10 @@
       }
     ]
   },
-  "completed_pairs": 37942,
-  "screened_pairs": 37966,
-  "pending_pairs": 1827,
-  "final_pending": 24,
+  "completed_pairs": 38199,
+  "screened_pairs": 38206,
+  "pending_pairs": 1570,
+  "final_pending": 7,
   "errors": {
     "screen:bgbl-1-2026-107:eda8a9d0b9e0f2bd915e": {
       "type": "provider",
@@ -1350,7 +1350,7 @@
     {
       "program_id": "cdu-csu-2025",
       "criteria": 965,
-      "laws_completed": 170,
+      "laws_completed": 171,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -2552,8 +2552,8 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 423,
-          "completed": 422,
-          "status": "pending",
+          "completed": 423,
+          "status": "completed",
           "omitted": 542
         },
         {
@@ -3771,7 +3771,7 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 727,
-          "completed": 505,
+          "completed": 714,
           "status": "pending",
           "omitted": 913
         },
@@ -4990,7 +4990,7 @@
         {
           "law_id": "bgbl-2-2026-8",
           "candidates": 579,
-          "completed": 0,
+          "completed": 47,
           "status": "pending",
           "omitted": 805
         },
