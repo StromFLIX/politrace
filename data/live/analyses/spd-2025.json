@@ -122872,7 +122872,7 @@
     {
       "law_id": "bgbl-1-2026-84",
       "analysis_sha256": "237818af6f8cf1f9a88750a804a3a6cfb800af1d1fea5cb8c8505975e25e19e8",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-02422eecdac91e67",
@@ -123137,6 +123137,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-78abc7c22d309a55",
+          "disposition": "proposed_link",
+          "rationale": "Die Errichtung von Wasserstoffspeicheranlagen erhält bei Schutzgüterabwägungen grundsätzlich Vorrang als Belang von überragendem öffentlichem Interesse. Das unterstützt den Aufbau von Speicherkapazitäten, ordnet aber weder einen tatsächlichen Zubau noch eine bestimmte Kapazität an. Der Vorrang gilt bis zum Erreichen der Netto-Treibhausgasneutralität im Jahr 2045 und unterliegt den gesetzlichen Ausnahmen.",
+          "input_sha256": "cce98293c14926932f5ecca2e5b615f5cab22bdc3a4d590a555b42d1b1b3c359",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1414e79af38dcfef9d066612c5c658551d771be9b13eddf55e40dee3706fac8d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce98293c14926932f5ecca2e5b615f5cab22bdc3a4d590a555b42d1b1b3c359"
+            }
+          ],
+          "impact_id": "impact-262caddec0463a03",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.97,
+            "rationale": "Die Errichtung von Wasserstoffspeicheranlagen erhält bei Schutzgüterabwägungen grundsätzlich Vorrang als Belang von überragendem öffentlichem Interesse. Das unterstützt den Aufbau von Speicherkapazitäten, ordnet aber weder einen tatsächlichen Zubau noch eine bestimmte Kapazität an. Der Vorrang gilt bis zum Erreichen der Netto-Treibhausgasneutralität im Jahr 2045 und unterliegt den gesetzlichen Ausnahmen.",
+            "law_passage_id": "bgbl-1-2026-84-p-d37d81308deb6959",
+            "law_quote": "(1) Die Errichtung oder der Betrieb einer Anlage oder Leitung nach § 2 Absatz 1 liegen bis zum Erreichen der\nNetto-Treibhausgasneutralität im Jahr 2045 im überragenden öffentlichen Interesse und dienen der öffentlichen\nSicherheit. Sie sollen als vorrangiger Belang in die jeweils durchzuführenden Schutzgüterabwägungen\neingebracht werden.",
+            "criterion_quote": "Gleichzeitig müssen ausreichende Speicherkapazitäten,\netwa im Rahmen einer nationalen Wasserstoffreserve, aufgebaut werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-78abc7c22d309a55",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-8f2375a7f571be8e",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften regeln Wasserstoffinfrastruktur und enthalten keinen Bezug zu einem europäischen Tariftreuegesetz.",
@@ -123241,6 +123273,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-c2b5ddd07c2b326d",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f9f451d12e1009d2",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz erfasst auch Stromleitungen zur direkten Versorgung bestimmter Wasserstoffanlagen mit erneuerbarem Strom und erleichtert deren Zulassung durch den Vorrang bei Schutzgüterabwägungen. Das unterstützt einen begrenzten Fall dezentraler Versorgung, regelt jedoch kein allgemeines Energy Sharing.",
+          "input_sha256": "cce98293c14926932f5ecca2e5b615f5cab22bdc3a4d590a555b42d1b1b3c359",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1414e79af38dcfef9d066612c5c658551d771be9b13eddf55e40dee3706fac8d"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cce98293c14926932f5ecca2e5b615f5cab22bdc3a4d590a555b42d1b1b3c359"
+            }
+          ],
+          "impact_id": "impact-29b23e5d22c5e3a6",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz erfasst auch Stromleitungen zur direkten Versorgung bestimmter Wasserstoffanlagen mit erneuerbarem Strom und erleichtert deren Zulassung durch den Vorrang bei Schutzgüterabwägungen. Das unterstützt einen begrenzten Fall dezentraler Versorgung, regelt jedoch kein allgemeines Energy Sharing.",
+            "law_passage_id": "bgbl-1-2026-84-p-c88210fea629be2f",
+            "law_quote": "14. Stromleitung, die eine Anlage zur Erzeugung von Strom aus erneuerbaren Energien mit dem Standort einer\nAnlage nach den Nummern 1 bis 10, 15 und 16 zum Zweck der direkten Versorgung verbindet,",
+            "criterion_quote": "Wir wollen darum die **dezentrale Versorgung**\n**mit Energie** weiter vereinfachen, vom Balkonkraftwerk bis zum Bürgerwindpark (Energy Sharing).",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f9f451d12e1009d2",
+            "disposition": "proposed_link"
           },
           "verification": null
         }
@@ -124085,7 +124149,7 @@
     {
       "law_id": "bgbl-1-2026-87",
       "analysis_sha256": "d9929c04ae9aa20494eb983ca18b8c7468447f492551ed6ad2f1f44ace31184c",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -124103,12 +124167,364 @@
         "spd-2025-ac-ec998bf9323d219a"
       ],
       "omitted_count": 774,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung führt keine Genehmigungsfiktion für Anträge bei Behörden ein.",
+          "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung führt keine Genehmigungsfiktion für Anträge bei Behörden ein.",
+            "law_passage_id": "bgbl-1-2026-87-p-8df19594b9e7238c",
+            "law_quote": "Soweit sich die Tierart Wolf in einem günstigen Erhaltungszustand befindet, hat die zuständige Behörde einen revierübergreifenden Managementplan aufzustellen",
+            "criterion_quote": "Wir führen eine Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind, wenn die Behörde nicht innerhalb einer gesetzten Frist reagiert.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft das Jagd- und Naturschutzrecht zum Wolf; sie verlängert keine Regelung des Baugesetzbuchs zur Umwandlung von Miet- in Eigentumswohnungen.",
+          "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung betrifft das Jagd- und Naturschutzrecht zum Wolf; sie verlängert keine Regelung des Baugesetzbuchs zur Umwandlung von Miet- in Eigentumswohnungen.",
+            "law_passage_id": "bgbl-1-2026-87-p-8df19594b9e7238c",
+            "law_quote": "Soweit sich die Tierart Wolf in einem günstigen Erhaltungszustand befindet, hat die zuständige Behörde einen revierübergreifenden Managementplan aufzustellen",
+            "criterion_quote": "Die Möglichkeit zum Verbot der Umwandlung von Miet- in Eigentumswohnungen im BauGB wollen wir über 2025 hinaus verlängern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung enthält keine Vorschrift zur Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung enthält keine Vorschrift zur Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": "bgbl-1-2026-87-p-8df19594b9e7238c",
+            "law_quote": "Soweit sich die Tierart Wolf in einem günstigen Erhaltungszustand befindet, hat die zuständige Behörde einen revierübergreifenden Managementplan aufzustellen",
+            "criterion_quote": "Dementsprechend muss der Mindestlohn spätestens ab 2026 bei 15 Euro liegen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung enthält keine Regelung zu stationärer Pflege oder einem Besitzstandsschutz für bereits länger Gepflegte.",
+          "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "007031181f26f1bfd1b4bfe45e978a67650dac485a47fce3b47f2c2d0f7489b5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung enthält keine Regelung zu stationärer Pflege oder einem Besitzstandsschutz für bereits länger Gepflegte.",
+            "law_passage_id": "bgbl-1-2026-87-p-8df19594b9e7238c",
+            "law_quote": "Soweit sich die Tierart Wolf in einem günstigen Erhaltungszustand befindet, hat die zuständige Behörde einen revierübergreifenden Managementplan aufzustellen",
+            "criterion_quote": "Für Menschen, die bereits jetzt länger stationär gepflegt werden, garantieren wir Besitzstandsschutz. Sie sollen nicht schlechter gestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Jagd- und Naturschutzrecht, stellt dem THW aber keine personellen Ressourcen bereit.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Jagd- und Naturschutzrecht, stellt dem THW aber keine personellen Ressourcen bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7140c2a71436b0ca",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Nutzung finanzieller Transaktionen für öffentliche oder private Investitionen.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Nutzung finanzieller Transaktionen für öffentliche oder private Investitionen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7140c2a71436b0ca",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Jagd- und Naturschutzrecht, nicht Artikel 3 Absatz 3 GG.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Jagd- und Naturschutzrecht, nicht Artikel 3 Absatz 3 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Schwangerschaftsabbrüchen oder deren strafrechtlicher Einordnung.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Schwangerschaftsabbrüchen oder deren strafrechtlicher Einordnung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt nicht die Finanzierung von Freiwilligendiensten oder eine Bund-Länder-Vereinbarung dazu.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt nicht die Finanzierung von Freiwilligendiensten oder eine Bund-Länder-Vereinbarung dazu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Bereitstellung materieller Ressourcen für das THW.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Bereitstellung materieller Ressourcen für das THW.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ba2a5ac6c14cd51e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf8ab43adc37c158",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Befugnissen von Pflegefachpersonen.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Befugnissen von Pflegefachpersonen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf8ab43adc37c158",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e99da3e3d8a418b6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahmen zum Zugang zu Psychotherapie oder Therapieplätzen.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahmen zum Zugang zu Psychotherapie oder Therapieplätzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e99da3e3d8a418b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ec998bf9323d219a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Deutschen Bahn, ihrem öffentlichen Eigentum oder ihrer Konzernstruktur.",
+          "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d92d97f6c8e2ae2d9c3a65811f3a2239d5b7c6647d61d555778fd62794984e0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Deutschen Bahn, ihrem öffentlichen Eigentum oder ihrer Konzernstruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ec998bf9323d219a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-9",
       "analysis_sha256": "748471162327632d1bc1fb5ce5b2a9ea89303eae67f312c1368cfd7b2101222b",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -124148,12 +124564,958 @@
         "spd-2025-ac-fc9e6bcd778decc5"
       ],
       "omitted_count": 752,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen geografische Angaben; eine Genehmigungsfiktion für Anträge ist darin nicht ersichtlich.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen geografische Angaben; eine Genehmigungsfiktion für Anträge ist darin nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Geoschutzverfahren und -kontrollen, nicht kommunale Befugnisse zum Abbrennen von Feuerwerk.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Geoschutzverfahren und -kontrollen, nicht kommunale Befugnisse zum Abbrennen von Feuerwerk.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zum Schutz geografischer Bezeichnungen regeln keine Strafbarkeit der Seenotrettung.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zum Schutz geografischer Bezeichnungen regeln keine Strafbarkeit der Seenotrettung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-08743c5c113cac79",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Geoschutz und dessen Kontrollen; eine Prüfung des Zugangs zu Waffen ist nicht enthalten.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Geoschutz und dessen Kontrollen; eine Prüfung des Zugangs zu Waffen ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-08743c5c113cac79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt geografische Schutzbezeichnungen, nicht die Dauer oder Kapazität von Asylverfahren.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt geografische Schutzbezeichnungen, nicht die Dauer oder Kapazität von Asylverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schützen geografische Angaben; Maßnahmen gegen digitale Abzocke oder Manipulation sind nicht geregelt.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schützen geografische Angaben; Maßnahmen gegen digitale Abzocke oder Manipulation sind nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1ff78bab3f439ed9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-26490701b2527526",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Regelungen zu Geoschutz und Kontrollen, aber keine Bereitstellung oder Finanzierung von Feuerwehrausstattung.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Regelungen zu Geoschutz und Kontrollen, aber keine Bereitstellung oder Finanzierung von Feuerwehrausstattung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-26490701b2527526",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln geografische Schutzbezeichnungen; der Aufbau branchenspezifischer KI-Ökosysteme ist nicht enthalten.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln geografische Schutzbezeichnungen; der Aufbau branchenspezifischer KI-Ökosysteme ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Geoschutz, nicht die Weiterentwicklung einer KI-Strategie oder systemische Innovationen.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Geoschutz, nicht die Weiterentwicklung einer KI-Strategie oder systemische Innovationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen geografische Angaben; Änderungen an Mietpreisbremse oder Mietrecht sind nicht ersichtlich.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen geografische Angaben; Änderungen an Mietpreisbremse oder Mietrecht sind nicht ersichtlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Geoschutz und dessen Vollzug, nicht die Erhebung oder Veröffentlichung von Lebensmittelpreisen.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Geoschutz und dessen Vollzug, nicht die Erhebung oder Veröffentlichung von Lebensmittelpreisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-58ea683bc8e758c8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Beitritt der Europäischen Union zur Europäischen Menschenrechtskonvention.",
+          "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f1679a09bb71ad86c57ceb2d0a63945789407812da7756e3bf808dbc8e526fb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Beitritt der Europäischen Union zur Europäischen Menschenrechtskonvention.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-58ea683bc8e758c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft den Schutz geografischer Angaben; eine Änderung der Abstimmungsverfahren im Europäischen Rat oder Ministerrat ist darin nicht belegt.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft den Schutz geografischer Angaben; eine Änderung der Abstimmungsverfahren im Europäischen Rat oder Ministerrat ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Geoschutzverfahren und Zuständigkeiten, enthält aber keine dokumentierte Prüfung möglicher Aufgabenbündelungen in Ministerien.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Geoschutzverfahren und Zuständigkeiten, enthält aber keine dokumentierte Prüfung möglicher Aufgabenbündelungen in Ministerien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen die Überwachung und Durchsetzung des Agrargeoschutzrechts, nicht die Strafbarkeit sexueller Handlungen ohne eindeutiges Einverständnis.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen die Überwachung und Durchsetzung des Agrargeoschutzrechts, nicht die Strafbarkeit sexueller Handlungen ohne eindeutiges Einverständnis.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-881116ec00a0aa9d",
+          "disposition": "no_supported_link",
+          "rationale": "Die im Gesetz geregelte Durchsetzung betrifft geografische Angaben; Maßnahmen zur Bot-Kennzeichnung nach der KI-Verordnung sind nicht belegt.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die im Gesetz geregelte Durchsetzung betrifft geografische Angaben; Maßnahmen zur Bot-Kennzeichnung nach der KI-Verordnung sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-881116ec00a0aa9d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderung des Artikels 3 Absatz 3 GG und ergänzt dort keine geschützten Merkmale.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderung des Artikels 3 Absatz 3 GG und ergänzt dort keine geschützten Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9ce366d5602634d7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht zwar Regelungen zu einzelnen geoschutzrechtlichen Antragsverfahren vor, belegt aber keine Vereinfachung von Antragsverfahren.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz sieht zwar Regelungen zu einzelnen geoschutzrechtlichen Antragsverfahren vor, belegt aber keine Vereinfachung von Antragsverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9ce366d5602634d7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+          "disposition": "no_supported_link",
+          "rationale": "Die Überwachungs- und Durchsetzungsbefugnisse im Gesetz beziehen sich auf das Agrargeoschutzrecht, nicht auf die Prüfung wettbewerbsrechtlicher Verstöße.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Überwachungs- und Durchsetzungsbefugnisse im Gesetz beziehen sich auf das Agrargeoschutzrecht, nicht auf die Prüfung wettbewerbsrechtlicher Verstöße.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Stellungnahme oder Handlung der SPD zu Verhandlungen über ein deutsch-britisches Abkommen.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Stellungnahme oder Handlung der SPD zu Verhandlungen über ein deutsch-britisches Abkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Geoschutz und belegt keine raschen öffentlichen Investitionen zum Abbau des Investitionsstaus.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt den Geoschutz und belegt keine raschen öffentlichen Investitionen zum Abbau des Investitionsstaus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Durchsetzungsregelungen des Gesetzes betreffen das Agrargeoschutzrecht; Maßnahmen zur Durchsetzung von DMA, DSA und KI-Verordnung sind nicht belegt.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Durchsetzungsregelungen des Gesetzes betreffen das Agrargeoschutzrecht; Maßnahmen zur Durchsetzung von DMA, DSA und KI-Verordnung sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a91495c49cb6454d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu EU-Beitritten oder zur Anwendung der Kopenhagener Kriterien.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu EU-Beitritten oder zur Anwendung der Kopenhagener Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Elterngeldansprüche oder zusätzliche frei verteilbare Elterngeldmonate.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Elterngeldansprüche oder zusätzliche frei verteilbare Elterngeldmonate.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b2a157060443f437",
+          "disposition": "no_supported_link",
+          "rationale": "Die im Gesetz geregelte behördliche Kontrolle betrifft geografische Angaben; eine Priorität des Verbraucherschutzes für die Wettbewerbsaufsicht wird nicht festgelegt.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die im Gesetz geregelte behördliche Kontrolle betrifft geografische Angaben; eine Priorität des Verbraucherschutzes für die Wettbewerbsaufsicht wird nicht festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b2a157060443f437",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b3f41e9d81c38f82",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Einführung europaweiter Schnellzugverbindungen.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Einführung europaweiter Schnellzugverbindungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b3f41e9d81c38f82",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Finanzierung von Freiwilligendiensten oder Bund-Länder-Vereinbarung dazu.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Finanzierung von Freiwilligendiensten oder Bund-Länder-Vereinbarung dazu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b7ca391ff9bcd543",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen den Geoschutz; eine Strafbarkeit sexueller Belästigungen oder von Catcalling wird nicht geregelt.",
+          "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "412e31a4e10442c1b9bc9b2942952818dc1547d0290877e38be09ab8128780e3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen den Geoschutz; eine Strafbarkeit sexueller Belästigungen oder von Catcalling wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c016673669030481",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft laut Titel den Schutz geografischer Angaben; eine Regelung zum Verbleib von Verfassungsfeinden im Staatsdienst ist nicht erkennbar.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft laut Titel den Schutz geografischer Angaben; eine Regelung zum Verbleib von Verfassungsfeinden im Staatsdienst ist nicht erkennbar.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "Verfassungsfeinde nicht mehr im Staatsdienst verbleiben",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c016673669030481",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c242913d648b92fd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft den Schutz geografischer Angaben und regelt weder den gesetzlichen Mindestlohn noch dessen Höhe.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft den Schutz geografischer Angaben und regelt weder den gesetzlichen Mindestlohn noch dessen Höhe.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "mindestens 60 Prozent des mittleren Einkommens in Deutschland",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c242913d648b92fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c2d7198f2eddb7de",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft geografische Angaben; es regelt keinen EU-Beitritt der Ukraine oder Moldaus.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft geografische Angaben; es regelt keinen EU-Beitritt der Ukraine oder Moldaus.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "Auch die **Ukraine und Moldau** sollen ein Teil der EU werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c2d7198f2eddb7de",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft geografische Angaben; Regelungen zu automatischen Leistungsanträgen sind nicht erkennbar.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft geografische Angaben; Regelungen zu automatischen Leistungsanträgen sind nicht erkennbar.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "Leistungen automatisch beantragt und ausgezahlt werden",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ec998bf9323d219a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft geografische Angaben; es enthält keine Regelung zur Deutschen Bahn oder deren öffentlichem Eigentum.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft geografische Angaben; es enthält keine Regelung zur Deutschen Bahn oder deren öffentlichem Eigentum.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "Deutsche Bahn als integrierten Konzern im öffentlichen Eigentum",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ec998bf9323d219a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft geografische Angaben; Regelungen zur Außen- oder Entwicklungspolitik sind nicht erkennbar.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft geografische Angaben; Regelungen zur Außen- oder Entwicklungspolitik sind nicht erkennbar.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "feministische Außen- und Entwicklungspolitik fortführen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fc9e6bcd778decc5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft geografische Angaben; eine Reform des Straßenverkehrsrechts ist nicht erkennbar.",
+          "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e3c61bf93a1129ee3f803943a77e2c073be3025e6f86f3de0f81c2a8133666c2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft geografische Angaben; eine Reform des Straßenverkehrsrechts ist nicht erkennbar.",
+            "law_passage_id": "bgbl-1-2026-9-p-0a9d995b2c9783fe",
+            "law_quote": "**geografischer Angaben** **(Geoschutzreformgesetz)**",
+            "criterion_quote": "Straßenverkehrsrecht** **weiter reformieren",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fc9e6bcd778decc5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-95",
       "analysis_sha256": "0a926b0232fb944e85f995303f6e00ccae6ce322975861158cfa0d749365ee1e",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-08743c5c113cac79",
@@ -124173,12 +125535,418 @@
         "spd-2025-ac-fe712d98404e2c83"
       ],
       "omitted_count": 772,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-08743c5c113cac79",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen am Waffengesetz betreffen Folgen bestimmter Verurteilungen; eine Prüfung des allgemeinen Waffenzugangs ist nicht dokumentiert.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Änderungen am Waffengesetz betreffen Folgen bestimmter Verurteilungen; eine Prüfung des allgemeinen Waffenzugangs ist nicht dokumentiert.",
+            "law_passage_id": "bgbl-1-2026-95-p-7afdd5dbc7bcab2c",
+            "law_quote": "§ 5 Absatz 1 Nummer 1 Buchstabe c wird durch den folgenden Buchstaben c ersetzt:",
+            "criterion_quote": "prüfen, wie wir den Zugang zu Waffen noch besser kontrollieren",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-08743c5c113cac79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-10d0aeb50b82b0a2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine diplomatische Unterstützung der Ukraine.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt keine diplomatische Unterstützung der Ukraine.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "diplomatischen, militärischen, finanziellen und humanitären Unterstützung",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-10d0aeb50b82b0a2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Veröffentlichung von Lebensmittelpreisen oder deren Zusammensetzung.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Veröffentlichung von Lebensmittelpreisen oder deren Zusammensetzung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Lebensmittelpreise von der Produktion bis zum Verkauf transparent und öffentlich machen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-48f931cdc385f6f3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Schuldenregel und verschafft den Ländern keinen zusätzlichen finanziellen Spielraum.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert keine Schuldenregel und verschafft den Ländern keinen zusätzlichen finanziellen Spielraum.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Reform der Schuldenregel, um auch den Ländern mehr finanziellen Spielraum zu verschaffen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-48f931cdc385f6f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Entscheidungsverfahren des Europäischen Rates oder des Ministerrates.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert keine Entscheidungsverfahren des Europäischen Rates oder des Ministerrates.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das Einstimmigkeitsprinzip im Europäischen Rat und im Ministerrat durch die Einführung von Mehrheitsentscheidungen abzulösen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Untersuchung zur Bündelung von Aufgaben oder Zuständigkeiten in Ministerien ist nicht Gegenstand des Gesetzes.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Eine Untersuchung zur Bündelung von Aufgaben oder Zuständigkeiten in Ministerien ist nicht Gegenstand des Gesetzes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "prüfen, welche Aufgaben, Dienste und Zuständigkeiten der Ministerien gebündelt werden können",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-73ce9b66b1697c10",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen terroristische Straftaten und begründen keine Strafbarkeit sexueller Handlungen ohne eindeutiges Einverständnis.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen terroristische Straftaten und begründen keine Strafbarkeit sexueller Handlungen ohne eindeutiges Einverständnis.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jede ohne eindeutiges Einverständnis vorgenommene sexuelle Handlung muss unter Strafe gestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9005f24f4b3d5117",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine staatliche Förderung für den Umstieg auf klimafreundliche Technologien.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt keine staatliche Förderung für den Umstieg auf klimafreundliche Technologien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Geld vom Staat bekommen vor allem diejenigen, die sich den Umstieg auf klimafreundliche Technologien",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9005f24f4b3d5117",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine Diskriminierungsmerkmale.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Artikel 3 Absatz 3 GG nicht und ergänzt keine Diskriminierungsmerkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sexuelle Orientierung und geschlechtliche Identität erweitern",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9de66148eb8fc831",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine finanzielle Unterstützung der Ukraine.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine finanzielle Unterstützung der Ukraine.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "finanziellen ... Unterstützung der Ukrainerinnen und Ukrainer",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9de66148eb8fc831",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Strafbarkeit sexueller Belästigungen oder von Catcalling ein; es ändert Strafvorschriften zu Terrorismus und Agententätigkeit.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz führt keine Strafbarkeit sexueller Belästigungen oder von Catcalling ein; es ändert Strafvorschriften zu Terrorismus und Agententätigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "erhebliche sexuelle Belästigungen unter Strafe",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c23ddc440f39ad47",
+          "disposition": "no_supported_link",
+          "rationale": "Die aufgeführten Strafvorschriften betreffen terroristische Straftaten und Agententätigkeit, nicht Schleuserkriminalität.",
+          "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2d21ddd7a144a83054ccdcbfa23bb57b21dd8593054461467ff18fc0de988436"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die aufgeführten Strafvorschriften betreffen terroristische Straftaten und Agententätigkeit, nicht Schleuserkriminalität.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Schlepper hart bestraft",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c23ddc440f39ad47",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c2a6c1ff79ee03c9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Strafvorschriften zur Terrorismusbekämpfung, regelt aber keine militärische Unterstützung der Ukraine.",
+          "input_sha256": "3aea2b702499f40efc44cfd4054e387fd438fd86cb420e1d992491b624d48543",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3aea2b702499f40efc44cfd4054e387fd438fd86cb420e1d992491b624d48543"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Strafvorschriften zur Terrorismusbekämpfung, regelt aber keine militärische Unterstützung der Ukraine.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c2a6c1ff79ee03c9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderung der Besteuerung privater Immobilienverkäufe oder der Spekulationsfrist.",
+          "input_sha256": "3aea2b702499f40efc44cfd4054e387fd438fd86cb420e1d992491b624d48543",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3aea2b702499f40efc44cfd4054e387fd438fd86cb420e1d992491b624d48543"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderung der Besteuerung privater Immobilienverkäufe oder der Spekulationsfrist.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fe712d98404e2c83",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine humanitäre Unterstützung der Ukraine.",
+          "input_sha256": "3aea2b702499f40efc44cfd4054e387fd438fd86cb420e1d992491b624d48543",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3aea2b702499f40efc44cfd4054e387fd438fd86cb420e1d992491b624d48543"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine humanitäre Unterstützung der Ukraine.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fe712d98404e2c83",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-97",
       "analysis_sha256": "85e167f95bb1acd1c1eb511574a916b44d0760eb8ff99f76c007dfc701755d9e",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-01603982d11b31ad",
@@ -124228,7 +125996,1223 @@
         "spd-2025-ac-fe2ee599dfc130dd"
       ],
       "omitted_count": 742,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-01603982d11b31ad",
+          "disposition": "no_supported_link",
+          "rationale": "Das Fondsrisikobegrenzungsgesetz setzt keine politische Forderung der SPD zur Verteidigungsfinanzierung fest.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Fondsrisikobegrenzungsgesetz setzt keine politische Forderung der SPD zur Verteidigungsfinanzierung fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir setzen uns daher auch\nzukünftig für eine nachhaltige Verteidigungsfinanzierung von mindestens zwei Prozent des BIP\nein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-01603982d11b31ad",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Verpflichtung privater Waren- oder Dienstleistungsanbieter zum Barriereabbau.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Verpflichtung privater Waren- oder Dienstleistungsanbieter zum Barriereabbau.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden private Anbieter\nvon Waren und Dienstleistungen verpflichten, Barrieren abzubauen oder – wo dies nicht möglich\nist – angemessene Vorkehrungen zu ergreifen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt für bestimmte Fonds-Erlaubnisanträge eine Entscheidungsfrist, aber keine Genehmigungsfiktion bei Fristablauf.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt für bestimmte Fonds-Erlaubnisanträge eine Entscheidungsfrist, aber keine Genehmigungsfiktion bei Fristablauf.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir führen eine **Genehmigungsfiktion ein, bei der Anträge automatisch genehmigt sind**, wenn die\nBehörde nicht innerhalb einer gesetzten Frist reagiert. Das gibt Bau- und Investitionsprojekten mehr\nPlanungssicherheit.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine kommunalen Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine kommunalen Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Damit besser sichergestellt werden kann, dass beim Abbrennen von Feuerwerkskörpern niemand zu\nSchaden kommt, prüfen wir die Ausweitung der rechtlichen Möglichkeiten der Kommunen, vor Ort\nzielgenauer handeln zu können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-037392490e04bd4d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält weder eine EU-Charta der Frauenrechte noch eine Regelung zu deren politischer Unterstützung.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält weder eine EU-Charta der Frauenrechte noch eine Regelung zu deren politischer Unterstützung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden uns dafür einsetzen, dass eine **EU-Charta der Frauenrechte** verabschiedet und somit ein\neffektiver Schutz von Frauenrechten in der ganzen EU gewährt wird.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-037392490e04bd4d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Seenotrettung oder deren Strafbarkeit.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Seenotrettung oder deren Strafbarkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir stellen klar: **Seenotrettung ist eine Verpflichtung aus dem internationalen Seerecht und darf**\n**nicht kriminalisiert werden.**",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-091488700f11bcf7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahme zur Unterstützung der EU-Kommission bei der Umsetzung der genannten Berichte.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahme zur Unterstützung der EU-Kommission bei der Umsetzung der genannten Berichte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir begrüßen die Berichte von Enrico Letta und Mario Draghi zur Stärkung der europäischen\nWettbewerbsfähigkeit und unterstützen die EU-Kommission bei der Umsetzung.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-091488700f11bcf7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0b17bb0caeddd964",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen EU-Erweiterungsprozess und keinen Zugang zum Binnenmarkt für Beitrittskandidaten.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen EU-Erweiterungsprozess und keinen Zugang zum Binnenmarkt für Beitrittskandidaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Durch spürbare Fortschritte im Erweiterungsprozess, wie etwa dem Zugang zum gemeinsamen\nBinnenmarkt, sollen die Menschen spüren, dass sich der Weg in die EU lohnt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0b17bb0caeddd964",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert die Möglichkeit eines kommunalen Umwandlungsverbots für Miet- in Eigentumswohnungen nicht.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert die Möglichkeit eines kommunalen Umwandlungsverbots für Miet- in Eigentumswohnungen nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Möglichkeit zum Verbot der Umwandlung von\nMiet- in Eigentumswohnungen im BauGB wollen wir über 2025 hinaus verlängern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Anerkennungsverfahren für ausländische Abschlüsse oder Qualifikationen.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Anerkennungsverfahren für ausländische Abschlüsse oder Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Deutschland profitiert seit Langem davon, dass wir ein Einwanderungsland sind. Wir treten Menschen\nmit Respekt gegenüber, völlig egal, wo sie ihre Wurzeln haben; mit klaren und nachvollziehbaren\nRegeln, weniger Bürokratie und einer deutlich transparenteren und vereinfachten **Anerkennung**\n**von im Ausland erworbenen Abschlüssen und Qualifikationen** .",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-19fe71928c8dcc2e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet keine zentrale Ansprechstelle für Sozialleistungen ein.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet keine zentrale Ansprechstelle für Sozialleistungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mit einer zentralen Ansprechstelle soll\nzudem die Zugänglichkeit dieser Leistungen weiter verbessert und die (digitale) Beantragung weiter\nerleichtert werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-19fe71928c8dcc2e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Fondsaufsicht und Kreditvergabe, nicht den Aufbau branchenspezifischer KI-Ökosysteme.",
+          "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "caada95e8b47f19b19ce1ad41dcbdf9d24616cdab0efef1df53d30d8d7ae1c2f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Fondsaufsicht und Kreditvergabe, nicht den Aufbau branchenspezifischer KI-Ökosysteme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der viel beschworene Erfindergeist in Deutschland muss wieder zur obersten Priorität werden.\nDenn Erfindergeist war schon immer zentral für den wirtschaftlichen Erfolg, den sozialen Fortschritt\nund damit auch den gesellschaftlichen Wohlstand. In den letzten Jahren und Jahrzehnten wurden\nin Deutschland zahlreiche technologische und soziale Innovationen erdacht, entwickelt und\numgesetzt. Mit fundamental neuen Technologien wie der Künstlichen Intelligenz (KI) oder der\nQuantentechnologie muss sich auch die Innovationspolitik des Bundes wandeln. Für uns steht\ndeshalb die **Weiterentwicklung der KI-Strategie** an erster Stelle. Der Fokus soll dabei insbesondere\nauf der Entwicklung systemischer Innovationen liegen. Dazu zählen unter anderem der Aufbau\nvon branchenspezifischen KI-Ökosystemen sowie die Entwicklung generativer Sprachmodelle für",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Investmentfonds und Finanzmarktaufsicht; eine Weiterentwicklung der KI-Strategie oder systemische KI-Innovationen werden darin nicht geregelt.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Investmentfonds und Finanzmarktaufsicht; eine Weiterentwicklung der KI-Strategie oder systemische KI-Innovationen werden darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Weiterentwicklung der KI-Strategie",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3af9f89c3e347785",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen Aufsichts- und Prüfpflichten betreffen Kapitalverwaltungsgesellschaften und Fonds, nicht ein unabhängiges Gremium zur Überwachung bestehender Instrumente im Sinne des Kriteriums.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehenen Aufsichts- und Prüfpflichten betreffen Kapitalverwaltungsgesellschaften und Fonds, nicht ein unabhängiges Gremium zur Überwachung bestehender Instrumente im Sinne des Kriteriums.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "ein unabhängiges Kontrollgremium zur Überwachung des konsequenten Einsatzes bestehender Instrumente",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3af9f89c3e347785",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Fonds- und Finanzmarktregeln; Änderungen zum Schutz bereits stationär gepflegter Menschen enthält es nicht.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Fonds- und Finanzmarktregeln; Änderungen zum Schutz bereits stationär gepflegter Menschen enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Für Menschen, die bereits jetzt länger stationär gepflegt werden, garantieren wir Besitzstandsschutz.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Investmentfonds und Finanzmarktaufsicht, nicht den Anwendungsbereich der Mietpreisbremse.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Investmentfonds und Finanzmarktaufsicht, nicht den Anwendungsbereich der Mietpreisbremse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "auch für Immobilien, die bis 2019 bezogen wurden, gelten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Fonds- und Finanzmarktregeln, aber keine Vorschriften zur Erhebung oder Veröffentlichung von Lebensmittelpreisen.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Fonds- und Finanzmarktregeln, aber keine Vorschriften zur Erhebung oder Veröffentlichung von Lebensmittelpreisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Entwicklung und Zusammensetzung ausgewählter Lebensmittelpreise von der Produktion bis zum Verkauf transparent und öffentlich machen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e9e1bed21fd933e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln Fondsaufsicht und Liquiditätsrisiken; sie sehen keine Erstattung von WG-Mietdifferenzen durch eine Plattform vor.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln Fondsaufsicht und Liquiditätsrisiken; sie sehen keine Erstattung von WG-Mietdifferenzen durch eine Plattform vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Differenz erstatten, wenn die Miete für ihr Zimmer oberhalb von 400 Euro liegt",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Fonds- und Finanzmarktvorschriften um; eine Umsetzung der EU-Entgelttransparenzrichtlinie enthält es nicht.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt Fonds- und Finanzmarktvorschriften um; eine Umsetzung der EU-Entgelttransparenzrichtlinie enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die EU-Entgelttransparenzrichtlinie bis 2026 in nationales Recht umsetzen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5a00e520fd63ec47",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen verpflichten Finanzmarktakteure zu fondsbezogenen Aufsichts- und Risikomanagementvorgaben, nicht Plattformen zu Maßnahmen gegen Desinformation oder andere systemische Plattformrisiken.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen verpflichten Finanzmarktakteure zu fondsbezogenen Aufsichts- und Risikomanagementvorgaben, nicht Plattformen zu Maßnahmen gegen Desinformation oder andere systemische Plattformrisiken.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "wirksame Vorkehrungen gegen systemische Risiken wie Desinformation und Fake News zu treffen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5a00e520fd63ec47",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+          "disposition": "no_supported_link",
+          "rationale": "Die im Gesetz erwähnten personellen und technischen Ressourcen betreffen Kapitalverwaltungsgesellschaften; Personal für das THW wird damit nicht bereitgestellt.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die im Gesetz erwähnten personellen und technischen Ressourcen betreffen Kapitalverwaltungsgesellschaften; Personal für das THW wird damit nicht bereitgestellt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mit den erforderlichen personellen und materiellen Ressourcen ausstatten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6ac53f33170cf541",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Fonds- und Finanzmarktregeln, nicht die Entscheidungsverfahren des Europäischen Rates oder des Ministerrates.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Fonds- und Finanzmarktregeln, nicht die Entscheidungsverfahren des Europäischen Rates oder des Ministerrates.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das Einstimmigkeitsprinzip im Europäischen Rat und im Ministerrat durch die Einführung von Mehrheitsentscheidungen abzulösen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6d1aa31dbf33c57f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-843b0f0a2f28e442",
+          "disposition": "no_supported_link",
+          "rationale": "Die Aufsichtsvorschriften des Gesetzes betreffen Finanzmarktakteure; Kontrollrechte des Europäischen Parlaments gegenüber Frontex werden nicht geregelt.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Aufsichtsvorschriften des Gesetzes betreffen Finanzmarktakteure; Kontrollrechte des Europäischen Parlaments gegenüber Frontex werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine Stärkung der Kontrollrechte des Europäischen Parlaments",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-843b0f0a2f28e442",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95960732a1ce7497",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Fonds- und Finanzmarktregeln, keine Position zur Befolgung der Resolution 1701 durch Konfliktparteien.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Fonds- und Finanzmarktregeln, keine Position zur Befolgung der Resolution 1701 durch Konfliktparteien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Resolution 1701 des UN-Sicherheitsrats aus dem Jahr 2006 muss von allen Konfliktparteien befolgt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95960732a1ce7497",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zum Fonds- und Finanzmarktrecht, nicht Artikel 3 Absatz 3 GG oder geschützte Diskriminierungsmerkmale.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zum Fonds- und Finanzmarktrecht, nicht Artikel 3 Absatz 3 GG oder geschützte Diskriminierungsmerkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Artikel 3 Abs. 3 GG werden wir daher entsprechend erweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Investmentfonds und Finanzmarktaufsicht; Ganztagsbetreuung oder deren Gewährleistung für Grundschulkinder werden nicht geregelt.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Investmentfonds und Finanzmarktaufsicht; Ganztagsbetreuung oder deren Gewährleistung für Grundschulkinder werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dort, wo wir in politischer Verantwortung sind, werden wir ihn zuverlässig einlösen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9d33dc5b3fcc4fa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Fonds- und Finanzmarktfragen und belegt keine Unterstützung von Verhandlungen über ein deutsch-britisches Abkommen.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Fonds- und Finanzmarktfragen und belegt keine Unterstützung von Verhandlungen über ein deutsch-britisches Abkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "werden wir die Verhandlungen zu einem umfassenden bilateralen Abkommen mit der britischen Regierung unterstützen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften für Investmentfonds und Finanzmarktaufsicht; öffentliche Investitionen zum Abbau eines Investitionsstaus oder zur Förderung privater Investitionen werden darin nicht festgelegt.",
+          "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a6173596f06f793785d1e49c54e38e811f4f3cefec6a5b46269f4367047d27c6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften für Investmentfonds und Finanzmarktaufsicht; öffentliche Investitionen zum Abbau eines Investitionsstaus oder zur Förderung privater Investitionen werden darin nicht festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die erforderlichen öffentlichen Investitionen müssen rasch getätigt werden, damit der vorhandene Investitionsstau aufgelöst wird",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Investmentfonds und Finanzmarktaufsicht; EU-Beitrittsbedingungen oder die Kopenhagener Kriterien sind nicht Gegenstand der vorliegenden Vorschriften.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Investmentfonds und Finanzmarktaufsicht; EU-Beitrittsbedingungen oder die Kopenhagener Kriterien sind nicht Gegenstand der vorliegenden Vorschriften.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Investmentfonds und Kreditvergabe durch AIF, nicht Elterngeld oder zusätzliche Elternzeitmonate.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Investmentfonds und Kreditvergabe durch AIF, nicht Elterngeld oder zusätzliche Elternzeitmonate.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b290631ad160d141",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Änderungen betreffen Finanzmarktregulierung; Führungspositionen, Geschlechterparität und das Führungspositionen-Gesetz werden nicht geregelt.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Änderungen betreffen Finanzmarktregulierung; Führungspositionen, Geschlechterparität und das Führungspositionen-Gesetz werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b290631ad160d141",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b2a157060443f437",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält zwar ein Verbot bestimmter Verbraucherkredite durch AIF, setzt aber den Verbraucherschutz nicht als Priorität der Wettbewerbsaufsicht fest.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält zwar ein Verbot bestimmter Verbraucherkredite durch AIF, setzt aber den Verbraucherschutz nicht als Priorität der Wettbewerbsaufsicht fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b2a157060443f437",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften betreffen Finanzmarktregulierung; Schwangerschaftsabbrüche oder deren strafrechtliche Einordnung werden nicht geregelt.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Vorschriften betreffen Finanzmarktregulierung; Schwangerschaftsabbrüche oder deren strafrechtliche Einordnung werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen deutsche Vorschriften für Finanzmarktakteure und enthalten keine Regelung zu einem Initiativrecht des Europäischen Parlaments.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen deutsche Vorschriften für Finanzmarktakteure und enthalten keine Regelung zu einem Initiativrecht des Europäischen Parlaments.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8bd09851c863db1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften enthalten keine strafrechtlichen Regelungen zu sexueller Belästigung oder Catcalling.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Vorschriften enthalten keine strafrechtlichen Regelungen zu sexueller Belästigung oder Catcalling.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8e8d5e7e9fd46b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b9f1640b1c57421d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt EU-Vorgaben zu Investmentfonds und Risiken bei zentralen Gegenparteien um; ein Vorantreiben der Banken- und Kapitalmarktunion wird in den vorliegenden Regelungen nicht ausdrücklich festgelegt.",
+          "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f2cf4278ee6b796153860a2cb4a8fd0d1ae1582254af4a7ae992f93b7521d0db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Das Gesetz setzt EU-Vorgaben zu Investmentfonds und Risiken bei zentralen Gegenparteien um; ein Vorantreiben der Banken- und Kapitalmarktunion wird in den vorliegenden Regelungen nicht ausdrücklich festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b9f1640b1c57421d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c016673669030481",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln Investmentfonds und Finanzmarktaufsicht, nicht die Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge regeln Investmentfonds und Finanzmarktaufsicht, nicht die Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c016673669030481",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c242913d648b92fd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zur Höhe oder Berechnung des gesetzlichen Mindestlohns.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung zur Höhe oder Berechnung des gesetzlichen Mindestlohns.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c242913d648b92fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c7d4a2d4e2110caa",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zu Standards für grünen Stahl oder zum Klimaclub.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung zu Standards für grünen Stahl oder zum Klimaclub.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c7d4a2d4e2110caa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zur automatischen Ermittlung oder Gewährung von Kindergeldansprüchen.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung zur automatischen Ermittlung oder Gewährung von Kindergeldansprüchen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zur automatischen Beantragung oder Auszahlung der genannten Leistungen.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung zur automatischen Beantragung oder Auszahlung der genannten Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d8aab836b0f94e7a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge betreffen die Regulierung von Investmentfonds und enthalten keine Maßnahme für digitale Infrastruktur im grenzüberschreitenden Dienstleistungsverkehr.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge betreffen die Regulierung von Investmentfonds und enthalten keine Maßnahme für digitale Infrastruktur im grenzüberschreitenden Dienstleistungsverkehr.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d8aab836b0f94e7a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Änderung der Besteuerung privater Immobilienverkäufe nach Ablauf der Spekulationsfrist.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Änderung der Besteuerung privater Immobilienverkäufe nach Ablauf der Spekulationsfrist.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-dfbfb26ed84c7200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e01b5a051537918d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zu Vergütungsregeln für digitale Plattformen oder Künstliche Intelligenz.",
+          "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "299adf2ccade0fea5896fd62a8818b2e6efe9f33517a9a4c428ed9b733cf7cff"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Regelung zu Vergütungsregeln für digitale Plattformen oder Künstliche Intelligenz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e01b5a051537918d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-fe2ee599dfc130dd",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Investmentfonds, unter anderem deren Aufsicht und Kreditvergabe; dass Versicherungen oder Pensionskassen dadurch in die genannten Unternehmen investieren können, ergibt sich aus den vorliegenden Passagen nicht.",
+          "input_sha256": "cc91d23f4d433dd0a23a8b369c2f73d7b1c8528d092397969e244b9b05c509cf",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cc91d23f4d433dd0a23a8b369c2f73d7b1c8528d092397969e244b9b05c509cf"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Investmentfonds, unter anderem deren Aufsicht und Kreditvergabe; dass Versicherungen oder Pensionskassen dadurch in die genannten Unternehmen investieren können, ergibt sich aus den vorliegenden Passagen nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-fe2ee599dfc130dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-98",
@@ -124305,7 +127289,817 @@
         "spd-2025-ac-f6b019c7792e6e3f"
       ],
       "omitted_count": 720,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-01603982d11b31ad",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zur Verteidigungsfinanzierung oder zum Anteil am BIP.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zur Verteidigungsfinanzierung oder zum Anteil am BIP.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-01603982d11b31ad",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Genehmigungsfiktion für Behördenanträge.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Genehmigungsfiktion für Behördenanträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-06c6d917f70b19a6",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Vorgaben zum physischen Schutz kritischer Infrastrukturen.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Vorgaben zum physischen Schutz kritischer Infrastrukturen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-06c6d917f70b19a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zur Seenotrettung oder ihrer Strafbarkeit.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zur Seenotrettung oder ihrer Strafbarkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-147889d95be648e0",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Kriterien zur Förderung sozialer oder gemeinwohlorientierter KI-Projekte.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Kriterien zur Förderung sozialer oder gemeinwohlorientierter KI-Projekte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-147889d95be648e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-16636faf520fb8df",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug erwähnt Mittel aus dem Ausgleichsfonds der Pflegeversicherung für eine Geschäftsstelle, belegt aber kein gemeinsames solidarisch finanziertes Pflegesystem; der übrige Gesetzestext fehlt.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Der Auszug erwähnt Mittel aus dem Ausgleichsfonds der Pflegeversicherung für eine Geschäftsstelle, belegt aber kein gemeinsames solidarisch finanziertes Pflegesystem; der übrige Gesetzestext fehlt.",
+            "law_passage_id": "bgbl-1-2026-98-p-c693151bf206c08d",
+            "law_quote": "Die Geschäftsstelle wird aus Mitteln des Ausgleichsfonds der Pflegeversicherung finanziert.",
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-16636faf520fb8df",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Regelungen zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Regelungen zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-1941fa05a73460a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1dc065693e1ad104",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug enthält Krankenhausregelungen, weist aber keine Einführung von Advanced Practice Nurses aus; der übrige Gesetzestext fehlt.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Auszug enthält Krankenhausregelungen, weist aber keine Einführung von Advanced Practice Nurses aus; der übrige Gesetzestext fehlt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-1dc065693e1ad104",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Regelungen zu Asylverfahren oder deren Dauer.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Regelungen zu Asylverfahren oder deren Dauer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-1e0d6a3e571c8e20",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-239b777293b99dd2",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug betrifft Krankenhausversorgung, enthält aber keine Termingarantie im Gesundheitswesen; der übrige Gesetzestext fehlt.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Auszug betrifft Krankenhausversorgung, enthält aber keine Termingarantie im Gesundheitswesen; der übrige Gesetzestext fehlt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-239b777293b99dd2",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zum gesetzlichen Mindestlohn.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zum gesetzlichen Mindestlohn.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-26490701b2527526",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zur Ausstattung von Feuerwehren oder zu deren Unterstützung durch den Bund.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der vorliegende Gesetzestext enthält keine Regelung zur Ausstattung von Feuerwehren oder zu deren Unterstützung durch den Bund.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-26490701b2527526",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-27e2a074cd40a9fa",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug enthält Preisregeln für bestimmte Arzneimittel, aber keine Ausweitung von Liefersicherheitsregeln auf alle Arzneimittel; der übrige Gesetzestext fehlt.",
+          "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8419c489caa86290301bdb32d022f0ad096812cf831098bac958378435f86f06"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Auszug enthält Preisregeln für bestimmte Arzneimittel, aber keine Ausweitung von Liefersicherheitsregeln auf alle Arzneimittel; der übrige Gesetzestext fehlt.",
+            "law_passage_id": "bgbl-1-2026-98-p-62cb1d01b5c7fe41",
+            "law_quote": "Beinhaltet eine Leistung die Gabe eines Arzneimittels mit einem neuen Wirkstoff, für das nach § 130b Absatz 3a oder 4 Satz 3 des Fünften Buches Sozialgesetzbuch ein Erstattungsbetrag gilt, so darf für eine solche Leistung für Vereinbarungszeiträume ab dem Jahr 2027 kein Entgelt vereinbart werden, das höher ist als der für das jeweilige Arzneimittel geltende Erstattungsbetrag.",
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "spd-2025-ac-27e2a074cd40a9fa",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2ee630f660f5c15b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen unter anderem Krankenhausplanung und Qualitätsinformationen; dass damit Maßnahmen des Aktionsplans umgesetzt werden, ist nicht belegt.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Die vorgelegten Regelungen betreffen unter anderem Krankenhausplanung und Qualitätsinformationen; dass damit Maßnahmen des Aktionsplans umgesetzt werden, ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-2ee630f660f5c15b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-354d4b160c7552b8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Erwähnung des PKV-Verbands bei Krankenhausvereinbarungen begründet keine Beiträge privater Versicherungen zum Risikostrukturausgleich.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Erwähnung des PKV-Verbands bei Krankenhausvereinbarungen begründet keine Beiträge privater Versicherungen zum Risikostrukturausgleich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-354d4b160c7552b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Krankenhausversorgung und Finanzierung, nicht den Aufbau branchenspezifischer KI-Ökosysteme.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln Krankenhausversorgung und Finanzierung, nicht den Aufbau branchenspezifischer KI-Ökosysteme.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-36602a42e5d4401a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Weiterentwicklung einer KI-Strategie oder einen Schwerpunkt auf systemischen Innovationen.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Weiterentwicklung einer KI-Strategie oder einen Schwerpunkt auf systemischen Innovationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Krankenhausstrukturen, Qualitätsanforderungen und Fördermittel; ein Besitzstandsschutz für bereits länger stationär Gepflegte ist darin nicht geregelt.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Änderungen betreffen Krankenhausstrukturen, Qualitätsanforderungen und Fördermittel; ein Besitzstandsschutz für bereits länger stationär Gepflegte ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen das Krankenhauswesen und ändern keine Vorschriften zur Mietpreisbremse oder zum Bezugszeitpunkt von Immobilien.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen das Krankenhauswesen und ändern keine Vorschriften zur Mietpreisbremse oder zum Bezugszeitpunkt von Immobilien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3fe78ed2f5d9bc46",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften sehen keine automatische Beantragung oder Auszahlung von Leistungen vor; die geregelten Zahlungen betreffen Krankenhausförderung und deren Verfahren.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften sehen keine automatische Beantragung oder Auszahlung von Leistungen vor; die geregelten Zahlungen betreffen Krankenhausförderung und deren Verfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3fe78ed2f5d9bc46",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-41bd84d14d2f8c54",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Krankenhausstandorte und Leistungsgruppen, nicht die Erleichterung der Gründung kommunaler Medizinischer Versorgungszentren.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Regelungen betreffen Krankenhausstandorte und Leistungsgruppen, nicht die Erleichterung der Gründung kommunaler Medizinischer Versorgungszentren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-41bd84d14d2f8c54",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten weder eine Plattform für Studierende und Auszubildende noch eine Erstattung von Zimmermietdifferenzen.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten weder eine Plattform für Studierende und Auszubildende noch eine Erstattung von Zimmermietdifferenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-42ea47ca4694f0f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ändern Krankenhausplanung und -finanzierung, enthalten aber keine auf Endometriose, Geburt oder Wechseljahre ausgerichteten Versorgungsmaßnahmen.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften ändern Krankenhausplanung und -finanzierung, enthalten aber keine auf Endometriose, Geburt oder Wechseljahre ausgerichteten Versorgungsmaßnahmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-42ea47ca4694f0f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-436ed92be0830210",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Einordnung von Schwangerschaftsabbrüchen als medizinische Grundversorgung ist in den vorgelegten Regelungen nicht enthalten.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Einordnung von Schwangerschaftsabbrüchen als medizinische Grundversorgung ist in den vorgelegten Regelungen nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-436ed92be0830210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-45a5fa2f9d0b6f30",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen kein Wahlrecht für Bundesbeamtinnen und Bundesbeamte zur gesetzlichen Krankenversicherung und regeln keine pauschale Beihilfe.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen kein Wahlrecht für Bundesbeamtinnen und Bundesbeamte zur gesetzlichen Krankenversicherung und regeln keine pauschale Beihilfe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-45a5fa2f9d0b6f30",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-46c2e7bd888736eb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu kostenlosem Mittagessen für Kita-Kinder oder Schüler*innen.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zu kostenlosem Mittagessen für Kita-Kinder oder Schüler*innen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-46c2e7bd888736eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften setzen keine EU-Entgelttransparenzrichtlinie in nationales Recht um.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften setzen keine EU-Entgelttransparenzrichtlinie in nationales Recht um.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen keinen Staatsvertrag zwischen Bund und Ländern für das angesprochene System vor.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften sehen keinen Staatsvertrag zwischen Bund und Ländern für das angesprochene System vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-51c489aae2b4def2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5a51c22a89768abb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln Aufgaben und Verfahren im Krankenhauswesen, nicht eine bessere personelle Ausstattung der Justiz.",
+          "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bb3d43d46d4a8665f13a07405d41c92989a7bd3f6424c67947f072230c3450c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln Aufgaben und Verfahren im Krankenhauswesen, nicht eine bessere personelle Ausstattung der Justiz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5a51c22a89768abb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-2-2025-142",
@@ -125939,45 +129733,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 6234,
+    "calls": 6335,
     "cache_hits": 103,
-    "subdivision_cache_hits": 6,
+    "subdivision_cache_hits": 2,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 27.861359,
-    "reported_cost_calls": 5645,
+    "reported_cost_usd": 28.074085,
+    "reported_cost_calls": 5746,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.421889,
     "unknown_cost_calls": 589,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 31.283248,
-    "prompt_tokens": 64530694,
-    "completion_tokens": 10694767,
+    "budget_exposure_usd": 31.495974,
+    "prompt_tokens": 65777535,
+    "completion_tokens": 10929006,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 249,
-        "reported_cost_usd": 6.178767000000001,
+        "calls": 254,
+        "reported_cost_usd": 6.24272835,
         "unknown_cost_reserved_usd": 1.2073675392798577e-15,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 105,
-        "reported_cost_usd": 1.3977375000000003,
+        "calls": 106,
+        "reported_cost_usd": 1.4154605000000002,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2982,
-        "reported_cost_usd": 3.3791013249999935,
+        "calls": 3077,
+        "reported_cost_usd": 3.510143172499993,
         "unknown_cost_reserved_usd": 2.4374134500000015,
-        "pending_reserved_usd": 3.469446951953614e-18
+        "pending_reserved_usd": 1.8214596497756474e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
