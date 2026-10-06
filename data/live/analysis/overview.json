@@ -1,7 +1,7 @@
 {
   "version": "all-party-sol-final-v2",
   "status": "continuing",
-  "input_signature": "fca2bd65b20258d001d00b1cdce534d338becf4b80e570d3f26b6c874792f057",
+  "input_signature": "1f3c6cbb4b13280fd5d482f8825828e1ad176dcb3f559a66a5e941be4bf92f9b",
   "total_laws": 173,
   "total_programmes": 6,
   "total_criteria": 6470,
@@ -9,49 +9,49 @@
   "final_model": "openai/gpt-6-sol",
   "retrieval": "Per-programme whole-law/provision/reverse BM25 union",
   "limitations": "Unselected pairs unknown; statistical recall not measured.",
-  "updated_at": "2026-10-06T06:49:03.618693+00:00",
+  "updated_at": "2026-10-06T10:33:05.860623+00:00",
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5532,
-    "cache_hits": 96,
-    "subdivision_cache_hits": 4,
+    "calls": 5646,
+    "cache_hits": 97,
+    "subdivision_cache_hits": 2,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 26.093792,
-    "reported_cost_calls": 5022,
+    "reported_cost_usd": 26.174582,
+    "reported_cost_calls": 5063,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.990946,
-    "unknown_cost_calls": 510,
+    "unknown_cost_reserved_usd": 3.391395,
+    "unknown_cost_calls": 583,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 29.084738,
-    "prompt_tokens": 56980171,
-    "completion_tokens": 9207311,
+    "budget_exposure_usd": 29.565977,
+    "prompt_tokens": 57487823,
+    "completion_tokens": 9321295,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 218,
-        "reported_cost_usd": 5.4285489999999985,
+        "calls": 219,
+        "reported_cost_usd": 5.454379499999998,
         "unknown_cost_reserved_usd": 1.1518563880486e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 89,
-        "reported_cost_usd": 1.1600332500000001,
+        "calls": 90,
+        "reported_cost_usd": 1.1664262500000002,
         "unknown_cost_reserved_usd": 1.457167719820518e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 2328,
-        "reported_cost_usd": 2.620739372499998,
-        "unknown_cost_reserved_usd": 2.0064706499999994,
-        "pending_reserved_usd": 0
+        "calls": 2440,
+        "reported_cost_usd": 2.6693062624999984,
+        "unknown_cost_reserved_usd": 2.4069194000000014,
+        "pending_reserved_usd": 8.673617379884035e-19
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
@@ -81,10 +81,10 @@
       }
     ]
   },
-  "completed_pairs": 24025,
-  "screened_pairs": 24028,
-  "pending_pairs": 15744,
-  "final_pending": 3,
+  "completed_pairs": 24343,
+  "screened_pairs": 24348,
+  "pending_pairs": 15426,
+  "final_pending": 5,
   "errors": {
     "screen:bgbl-1-2026-107:eda8a9d0b9e0f2bd915e": {
       "type": "provider",
@@ -124,6 +124,253 @@
       "stage": "screen",
       "attempts": 3,
       "next_retry_at": 1791240351.9962184
+    },
+    "screen:bgbl-1-2026-228:03d9b2e7c05688f69522": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791281959.8362596
+    },
+    "screen:bgbl-1-2026-228:817d36ca330ed9c83ff9": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282160.061815
+    },
+    "screen:bgbl-1-2026-228:8e649bdd0f9938ca33a5": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282175.560552
+    },
+    "screen:bgbl-1-2026-228:011720fe3fcc7dae8a2d": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282175.947193
+    },
+    "screen:bgbl-1-2026-228:16dfe4a24ac425edb09d": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282176.3394036
+    },
+    "screen:bgbl-1-2026-228:e064b684c05666e5483d": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282176.7299547
+    },
+    "screen:bgbl-1-2026-228:33c72baf5e7d178d10a9": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282184.1861343
+    },
+    "screen:bgbl-1-2026-228:36faa163d6c69f2d84fa": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282184.6831577
+    },
+    "screen:bgbl-1-2026-228:10011f9f201994bb73e2": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282185.0818362
+    },
+    "screen:bgbl-1-2026-228:0185f838e216fba3aeab": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282185.4744735
+    },
+    "screen:bgbl-1-2026-228:2b419b5e998ea53113b3": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282191.7488227
+    },
+    "screen:bgbl-1-2026-228:866e221766a5c7e647b5": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282192.1838212
+    },
+    "screen:bgbl-1-2026-228:5796b29e8491596030e2": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282209.0328646
+    },
+    "screen:bgbl-1-2026-228:569dba6ca90350a9de61": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282221.0014122
+    },
+    "screen:bgbl-1-2026-228:5979a4c6c69489c4e14a": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282260.9930441
+    },
+    "screen:bgbl-1-2026-228:637421ebe8ed8c85bfaa": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282338.1749957
+    },
+    "screen:bgbl-1-2026-228:9b9659b472c37c2a6edf": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282343.6490943
+    },
+    "screen:bgbl-1-2026-228:4c16fc7b0fa53090fac5": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282409.943233
+    },
+    "screen:bgbl-1-2026-26:a78c06a12c71f1a5daf5": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791282475.7470808
     }
   },
   "slices": 1,
@@ -131,7 +378,7 @@
     {
       "program_id": "afd-2025",
       "criteria": 683,
-      "laws_completed": 112,
+      "laws_completed": 114,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -920,15 +1167,15 @@
         {
           "law_id": "bgbl-1-2026-26",
           "candidates": 13,
-          "completed": 0,
-          "status": "pending",
+          "completed": 13,
+          "status": "completed",
           "omitted": 670
         },
         {
           "law_id": "bgbl-1-2026-27",
           "candidates": 23,
-          "completed": 0,
-          "status": "pending",
+          "completed": 23,
+          "status": "completed",
           "omitted": 660
         },
         {
@@ -1350,7 +1597,7 @@
     {
       "program_id": "cdu-csu-2025",
       "criteria": 965,
-      "laws_completed": 111,
+      "laws_completed": 112,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -2139,15 +2386,15 @@
         {
           "law_id": "bgbl-1-2026-26",
           "candidates": 12,
-          "completed": 0,
+          "completed": 10,
           "status": "pending",
           "omitted": 953
         },
         {
           "law_id": "bgbl-1-2026-27",
           "candidates": 24,
-          "completed": 0,
-          "status": "pending",
+          "completed": 24,
+          "status": "completed",
           "omitted": 941
         },
         {
@@ -2569,7 +2816,7 @@
     {
       "program_id": "gruene-2025",
       "criteria": 1640,
-      "laws_completed": 117,
+      "laws_completed": 119,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -3358,15 +3605,15 @@
         {
           "law_id": "bgbl-1-2026-26",
           "candidates": 13,
-          "completed": 12,
-          "status": "pending",
+          "completed": 13,
+          "status": "completed",
           "omitted": 1627
         },
         {
           "law_id": "bgbl-1-2026-27",
           "candidates": 25,
-          "completed": 22,
-          "status": "pending",
+          "completed": 25,
+          "status": "completed",
           "omitted": 1615
         },
         {
@@ -3788,7 +4035,7 @@
     {
       "program_id": "linke-2025",
       "criteria": 1384,
-      "laws_completed": 111,
+      "laws_completed": 113,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -4570,22 +4817,22 @@
         {
           "law_id": "bgbl-1-2026-228",
           "candidates": 240,
-          "completed": 131,
+          "completed": 205,
           "status": "pending",
           "omitted": 1144
         },
         {
           "law_id": "bgbl-1-2026-26",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 1372
         },
         {
           "law_id": "bgbl-1-2026-27",
           "candidates": 20,
-          "completed": 0,
-          "status": "pending",
+          "completed": 20,
+          "status": "completed",
           "omitted": 1364
         },
         {
@@ -5007,7 +5254,7 @@
     {
       "program_id": "spd-2025",
       "criteria": 787,
-      "laws_completed": 111,
+      "laws_completed": 112,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -5789,22 +6036,22 @@
         {
           "law_id": "bgbl-1-2026-228",
           "candidates": 147,
-          "completed": 0,
+          "completed": 22,
           "status": "pending",
           "omitted": 640
         },
         {
           "law_id": "bgbl-1-2026-26",
           "candidates": 13,
-          "completed": 0,
+          "completed": 10,
           "status": "pending",
           "omitted": 774
         },
         {
           "law_id": "bgbl-1-2026-27",
           "candidates": 22,
-          "completed": 0,
-          "status": "pending",
+          "completed": 22,
+          "status": "completed",
           "omitted": 765
         },
         {
@@ -7008,7 +7255,7 @@
         {
           "law_id": "bgbl-1-2026-228",
           "candidates": 202,
-          "completed": 0,
+          "completed": 80,
           "status": "pending",
           "omitted": 809
         },
@@ -7022,7 +7269,7 @@
         {
           "law_id": "bgbl-1-2026-27",
           "candidates": 20,
-          "completed": 0,
+          "completed": 4,
           "status": "pending",
           "omitted": 991
         },
