@@ -118690,7 +118690,7 @@
     {
       "law_id": "bgbl-1-2026-212",
       "analysis_sha256": "050d98913a981eb851d3396e93ec0844f5f46434c1e2afa50f216aa9ac148341",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-06b2171984af8c27",
@@ -118928,6 +118928,70 @@
           "verification": null
         },
         {
+          "criterion_id": "linke-2025-ac-9dc017133a16feb6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Verjährungsfrist für Mängelansprüche verlängert sich einmalig um zwölf Monate, wenn ein Mangel durch Nachbesserung behoben wird. Die Verlängerung richtet sich weder nach der Produktlebensdauer noch speziell nach langlebigen Produkten.",
+          "input_sha256": "5ae3a7295e4b00462b4af2b9ec775866ca20784458d5ac2d3d99c6f7e6d9205c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ae3a7295e4b00462b4af2b9ec775866ca20784458d5ac2d3d99c6f7e6d9205c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Verjährungsfrist für Mängelansprüche verlängert sich einmalig um zwölf Monate, wenn ein Mangel durch Nachbesserung behoben wird. Die Verlängerung richtet sich weder nach der Produktlebensdauer noch speziell nach langlebigen Produkten.",
+            "law_passage_id": "bgbl-1-2026-212-p-9fc6704ddbd1b7e4",
+            "law_quote": "Wird Nacherfüllung gemäß § 439 durch Nachbesserung geleistet, verlängert sich die ursprüngliche\nVerjährungsfrist von Ansprüchen wegen eines Mangels einmalig um zwölf Monate.",
+            "criterion_quote": "Für langlebige Produkte\nbraucht es eine Gewährleistungsdauer, die sich an der\nLebensdauer der Produkte orientiert.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9dc017133a16feb6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a079987706250f49",
+          "disposition": "missing_context",
+          "rationale": "§ 479b verpflichtet Hersteller zur Reparatur auf Verlangen, beschränkt den Anspruch aber auf Waren im Anwendungsbereich des § 479a. Dessen Inhalt fehlt; damit lässt sich nicht feststellen, für welche Produkte die Pflicht gilt.",
+          "input_sha256": "5ae3a7295e4b00462b4af2b9ec775866ca20784458d5ac2d3d99c6f7e6d9205c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ae3a7295e4b00462b4af2b9ec775866ca20784458d5ac2d3d99c6f7e6d9205c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "§ 479b verpflichtet Hersteller zur Reparatur auf Verlangen, beschränkt den Anspruch aber auf Waren im Anwendungsbereich des § 479a. Dessen Inhalt fehlt; damit lässt sich nicht feststellen, für welche Produkte die Pflicht gilt.",
+            "law_passage_id": "bgbl-1-2026-212-p-a78407579d3e4b15",
+            "law_quote": "Der Hersteller einer Ware, die in den Anwendungsbereich des § 479a fällt, ist verpflichtet, die Ware auf\nVerlangen eines Verbrauchers zu reparieren.",
+            "criterion_quote": "Updates, Upgrades, Reparaturen und die Weiterverwendung müssen möglich sein.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a079987706250f49",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "linke-2025-ac-b046811b6dcd783e",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz ändert das Initiativrecht des Europäischen Parlaments nicht.",
@@ -119067,7 +119131,7 @@
     {
       "law_id": "bgbl-1-2026-213",
       "analysis_sha256": "9781d4a4700669036b3c62f9b7c2842f19dd3fea9f98a13bff1acef74415af04",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-11883d04cabc9df4",
@@ -119085,7 +119149,359 @@
         "linke-2025-ac-f2ea370314a14835"
       ],
       "omitted_count": 1371,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-11883d04cabc9df4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt unter Voraussetzungen automatisierte Pass- und Bildabgleiche bei der Fluggastabfertigung; es regelt nicht die Nutzung äußerer Merkmale für polizeiliche Maßnahmen.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erlaubt unter Voraussetzungen automatisierte Pass- und Bildabgleiche bei der Fluggastabfertigung; es regelt nicht die Nutzung äußerer Merkmale für polizeiliche Maßnahmen.",
+            "law_passage_id": "bgbl-1-2026-213-p-a6b6f8b9bb95bcb0",
+            "law_quote": "das Lichtbild zum einmaligen Abgleich mit den physiologischen Merkmalen einer den Fluggast zeigenden",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-11883d04cabc9df4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-1b620fe6134d3810",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt das Auslesen von Ausweisdaten bei der Fluggastabfertigung, nicht finanzielle Voraussetzungen der Einbürgerung.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt das Auslesen von Ausweisdaten bei der Fluggastabfertigung, nicht finanzielle Voraussetzungen der Einbürgerung.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-1b620fe6134d3810",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2b8dc1b92155f198",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Vorschriften zur digitalen Fluggastabfertigung, nicht zur Zulassung von Finanzinstrumenten durch einen Finanz-TÜV.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Vorschriften zur digitalen Fluggastabfertigung, nicht zur Zulassung von Finanzinstrumenten durch einen Finanz-TÜV.",
+            "law_passage_id": "bgbl-1-2026-213-p-9ab70413090d881e",
+            "law_quote": "Digitale Fluggastabfertigung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2b8dc1b92155f198",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Mindestlohnregelung oder deren Höhe, sondern die digitale Fluggastabfertigung.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Mindestlohnregelung oder deren Höhe, sondern die digitale Fluggastabfertigung.",
+            "law_passage_id": "bgbl-1-2026-213-p-9ab70413090d881e",
+            "law_quote": "Digitale Fluggastabfertigung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2e20231300ae0856",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt die digitale Verarbeitung von Fluggastdaten; es überführt den Digital Services Act nicht in nationales Recht.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erlaubt die digitale Verarbeitung von Fluggastdaten; es überführt den Digital Services Act nicht in nationales Recht.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2e20231300ae0856",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-3e2ea1efc19f9e06",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Fluggastabfertigung und bestimmt keinen bundesweiten Feiertag am 8. Mai.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Fluggastabfertigung und bestimmt keinen bundesweiten Feiertag am 8. Mai.",
+            "law_passage_id": "bgbl-1-2026-213-p-7ca7c5a8cac309a5",
+            "law_quote": "Gesetz zur Ermöglichung der digitalen Fluggastabfertigung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-3e2ea1efc19f9e06",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-4698d3ddd388b334",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft Regelungen zur digitalen Fluggastabfertigung; Schritte Deutschlands gegen die Waljagd sind darin nicht vorgesehen.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft Regelungen zur digitalen Fluggastabfertigung; Schritte Deutschlands gegen die Waljagd sind darin nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2026-213-p-9ab70413090d881e",
+            "law_quote": "Digitale Fluggastabfertigung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-4698d3ddd388b334",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-5a5cd75073f31c09",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Verarbeitung von Ausweisdaten bei der Fluggastabfertigung, nicht kommunale Sanierungspläne für Bestandsbauten.",
+          "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "affa898fa081ad5780e7c85897f7b91270781e9406103fe300300653bc0076dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Verarbeitung von Ausweisdaten bei der Fluggastabfertigung, nicht kommunale Sanierungspläne für Bestandsbauten.",
+            "law_passage_id": "bgbl-1-2026-213-p-9ab70413090d881e",
+            "law_quote": "Digitale Fluggastabfertigung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-5a5cd75073f31c09",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-6b5c60b17fc727eb",
+          "disposition": "no_supported_link",
+          "rationale": "§ 19e regelt die digitale Fluggastabfertigung, nicht das V-Leute-System; eine Beendigung wird nicht angeordnet.",
+          "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "§ 19e regelt die digitale Fluggastabfertigung, nicht das V-Leute-System; eine Beendigung wird nicht angeordnet.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Als erster Schritt muss das V-Leute-System des Inlandsgeheimdienstes mit seinen Verstrickungen mit der extremen Rechten aufgedeckt und beendet werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-6b5c60b17fc727eb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-97a77ae466b8d6fb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht digitale Fluggastabfertigung und ändert Artikel 3 Absatz 3 GG nicht.",
+          "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermöglicht digitale Fluggastabfertigung und ändert Artikel 3 Absatz 3 GG nicht.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Wir wollen Altersdiskriminierung verbieten: Artikel 3 (3) GG soll um das Merkmal Alter ergänzt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-97a77ae466b8d6fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-abb494a92274a12d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Fluggastabfertigung und legen keine Verstrickungen des V-Leute-Systems offen.",
+          "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Fluggastabfertigung und legen keine Verstrickungen des V-Leute-Systems offen.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Als erster Schritt muss das V-Leute-System des Inlandsgeheimdienstes mit seinen Verstrickungen mit der extremen Rechten aufgedeckt",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-abb494a92274a12d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b49a46ceb2d8aa35",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Vergabe öffentlicher Aufträge und enthält keine Tariftreuepflicht.",
+          "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Vergabe öffentlicher Aufträge und enthält keine Tariftreuepflicht.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "In einem Bundestariftreuegesetz muss festgeschrieben werden, dass öffentliche Aufträge nur noch diejenigen Unternehmen bekommen, die tarifvertragliche Standards einhalten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b49a46ceb2d8aa35",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Verarbeitung von Fluggastdaten; es enthält keine Karenzzeit für ausgeschiedene Regierungsmitglieder.",
+          "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "75bb71004715110251f009cb432c0712f413120ad3d8748171184cb3665607ca"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Verarbeitung von Fluggastdaten; es enthält keine Karenzzeit für ausgeschiedene Regierungsmitglieder.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Bundesminister*innen und parlamentarische Staats­sekretär*innen müssen nach ihrem Ausscheiden aus dem Amt mindestens drei Jahre bzw. für die Dauer des zeitlichen Anspruchs auf Übergangsgeld warten, bevor sie in Unternehmen wechseln, mit deren wirtschaftlichen Interessen sie zuvor politisch befasst waren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-214",
@@ -119107,7 +119523,305 @@
         "linke-2025-ac-f2ea370314a14835"
       ],
       "omitted_count": 1372,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorschriften zur Besteuerung deutscher Staatsangehöriger nach Wohnsitz oder Einkommensquelle.",
+          "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Vorschriften zur Besteuerung deutscher Staatsangehöriger nach Wohnsitz oder Einkommensquelle.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-11883d04cabc9df4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen technische Anforderungen an Geräte und enthalten keine Regeln zu polizeilichen Kontrollen, Ermittlungen oder Überwachungen anhand äußerer Merkmale.",
+          "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen technische Anforderungen an Geräte und enthalten keine Regeln zu polizeilichen Kontrollen, Ermittlungen oder Überwachungen anhand äußerer Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-11883d04cabc9df4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2b8dc1b92155f198",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Konformitätsbewertung von Funkanlagen, nicht die Zulassung von Finanzinstrumenten durch einen Finanz-TÜV.",
+          "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Konformitätsbewertung von Funkanlagen, nicht die Zulassung von Finanzinstrumenten durch einen Finanz-TÜV.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2b8dc1b92155f198",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum gesetzlichen Mindestlohn oder dessen Höhe.",
+          "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c366a8b718e0aee508f96ba986b2006d9a62c0d0773e7105be5f3e951c95eb6c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum gesetzlichen Mindestlohn oder dessen Höhe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-736ecb8dfca649c0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Notfallverfahren für bestimmte Geräte und Funkanlagen, nicht die gemeinsame Nutzung eines Mobilfunk- und Glasfasernetzes.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Notfallverfahren für bestimmte Geräte und Funkanlagen, nicht die gemeinsame Nutzung eines Mobilfunk- und Glasfasernetzes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-736ecb8dfca649c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-8e166d0c45125689",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft technische Notfallverfahren im Binnenmarkt; Maßnahmen der EU oder NATO gegenüber der türkischen Regierung regelt es nicht.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft technische Notfallverfahren im Binnenmarkt; Maßnahmen der EU oder NATO gegenüber der türkischen Regierung regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-8e166d0c45125689",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a1c0db53cb79ce78",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Konformität und Marktüberwachung von Geräten, nicht die Gewährleistungsdauer oder Produktkennzeichnungen dazu.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Konformität und Marktüberwachung von Geräten, nicht die Gewährleistungsdauer oder Produktkennzeichnungen dazu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a1c0db53cb79ce78",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert technische Notfallverfahren; eine Übertragung grundlegender Entscheidungen an das Europäische Parlament sieht es nicht vor.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert technische Notfallverfahren; eine Übertragung grundlegender Entscheidungen an das Europäische Parlament sieht es nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Initiativrecht des Europäischen Parlaments.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Initiativrecht des Europäischen Parlaments.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e9a9ef6b249e65c0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Notfallverfahren für Produkte und legt keine geldpolitischen Ziele fest oder weist deren Festlegung einem Parlament zu.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Notfallverfahren für Produkte und legt keine geldpolitischen Ziele fest oder weist deren Festlegung einem Parlament zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e9a9ef6b249e65c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Karenzzeit für Regierungsmitglieder beim Wechsel in Unternehmen.",
+          "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a15da4e75f68bdbcf4518953cf5db2cc74446ff2bfb09186caa277f619fb50b4"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Karenzzeit für Regierungsmitglieder beim Wechsel in Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-215",
@@ -119130,7 +119844,170 @@
         "linke-2025-ac-f2ea370314a14835"
       ],
       "omitted_count": 1371,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-0704f9c2bd51ea00",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine einmalige Vermögensabgabe ein und enthält keine Regelung zur Finanzierung der sozialen und ökologischen Transformation durch eine solche Abgabe.",
+          "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine einmalige Vermögensabgabe ein und enthält keine Regelung zur Finanzierung der sozialen und ökologischen Transformation durch eine solche Abgabe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0704f9c2bd51ea00",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert den gesetzlichen Mindestlohn nicht.",
+          "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert den gesetzlichen Mindestlohn nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2e20231300ae0856",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine nationale Umsetzung des Digital Services Act.",
+          "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine nationale Umsetzung des Digital Services Act.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2e20231300ae0856",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-51a32ebfb4d68029",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet kein Sondervermögen für die Sanierung, Modernisierung oder Unterstützung von Bildungseinrichtungen ein.",
+          "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet kein Sondervermögen für die Sanierung, Modernisierung oder Unterstützung von Bildungseinrichtungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-51a32ebfb4d68029",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-5a5cd75073f31c09",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Pflicht für Immobilienkonzerne, kommunale Sanierungspläne für Bestandsbauten einzureichen.",
+          "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Pflicht für Immobilienkonzerne, kommunale Sanierungspläne für Bestandsbauten einzureichen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-5a5cd75073f31c09",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-5c1ce3ff9270b86d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Zuständigkeits- oder Aufsichtsregeln zur Kontrolle der EZB durch das Europäische Parlament.",
+          "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd78b7d370cdb75d6d929c63aeb159940640209a5fe98f17c427bc766cf18220"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Zuständigkeits- oder Aufsichtsregeln zur Kontrolle der EZB durch das Europäische Parlament.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-5c1ce3ff9270b86d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-221",
@@ -119158,7 +120035,467 @@
         "linke-2025-ac-ffe4482c70ff75ff"
       ],
       "omitted_count": 1366,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-139e6d233293eb94",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext betrifft nicht die US-Liste der Staaten, die den internationalen Terrorismus unterstützen.",
+          "input_sha256": "7d31448e1be66ce70bab2e66c8b219cd304e93683dbf286707d62815be8f5d23",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d31448e1be66ce70bab2e66c8b219cd304e93683dbf286707d62815be8f5d23"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Der Gesetzestext betrifft nicht die US-Liste der Staaten, die den internationalen Terrorismus unterstützen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-139e6d233293eb94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-14fc8aae5c5fdf55",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Vorrangregel zum Schutz von Frauen und Kindern gegenüber Umgangsregelungen ist im Gesetz nicht enthalten.",
+          "input_sha256": "7d31448e1be66ce70bab2e66c8b219cd304e93683dbf286707d62815be8f5d23",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d31448e1be66ce70bab2e66c8b219cd304e93683dbf286707d62815be8f5d23"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Vorrangregel zum Schutz von Frauen und Kindern gegenüber Umgangsregelungen ist im Gesetz nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-14fc8aae5c5fdf55",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen vor allem Vaterschaftsanerkennungen und kritische Infrastruktur; eine Anhebung des Mindestlohns auf 16 Euro bis 2026 ist nicht belegt.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen vor allem Vaterschaftsanerkennungen und kritische Infrastruktur; eine Anhebung des Mindestlohns auf 16 Euro bis 2026 ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Um die Europäische Richtlinie klar zu erfüllen, fordern wir spätestens bis 2026 einen Mindestlohn von 16 Euro,",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2e20231300ae0856",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zum BSI-Gesetz betreffen unter anderem Cyberbedrohungen und kritische Komponenten; eine nationale Umsetzung des Digital Services Act ist nicht geregelt.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen zum BSI-Gesetz betreffen unter anderem Cyberbedrohungen und kritische Komponenten; eine nationale Umsetzung des Digital Services Act ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die EU-Gesetze über Künstliche Intelligenz (AI Act) und über digitale Dienste (Digital Services Act) müssen zügig in nationales Recht überführt",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2e20231300ae0856",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-37ac4954b51c6f32",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften legen keine langfristigen Umbauziele fest, die Technologien und Förderungen benennen.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften legen keine langfristigen Umbauziele fest, die Technologien und Förderungen benennen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es braucht klare und langfristige Zielvorgaben, mit welchen Technologien und mit welchen Förderungen der Umbau erreicht werden soll, denn ohne einen klaren Rahmen können auch Private nicht investieren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-37ac4954b51c6f32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-57db52a0feb9a7e9",
+          "disposition": "no_supported_link",
+          "rationale": "Die BSI-Änderungen betreffen unter anderem Pflichten zu kritischen Anlagen und Cyberbedrohungen; eine Stärkung der institutionellen Unabhängigkeit des BSI ist nicht ausgewiesen.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die BSI-Änderungen betreffen unter anderem Pflichten zu kritischen Anlagen und Cyberbedrohungen; eine Stärkung der institutionellen Unabhängigkeit des BSI ist nicht ausgewiesen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das Bundesamt für Sicherheit in der Informationstechnik unabhängiger machen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-57db52a0feb9a7e9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-736ecb8dfca649c0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften sehen kein gemeinsames Mobilfunk- und Glasfasernetz für alle Anbieter vor.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften sehen kein gemeinsames Mobilfunk- und Glasfasernetz für alle Anbieter vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es macht keinen Sinn, dass jeder Anbieter ein eigenes Mobilfunk- und Glasfasernetz aufbaut. Ein einziges Netz, über das alle ihre Dienstleistungen anbieten können",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-736ecb8dfca649c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-970415d931a47075",
+          "disposition": "no_supported_link",
+          "rationale": "Eine Überprüfung von Neubau-Regulierungen unter sozialen, ökologischen oder preisbezogenen Gesichtspunkten ist in den vorgelegten Vorschriften nicht belegt.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine Überprüfung von Neubau-Regulierungen unter sozialen, ökologischen oder preisbezogenen Gesichtspunkten ist in den vorgelegten Vorschriften nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen Regulierungen überprüfen: Nicht alle Regulierungen beim Neubau sind sozial und ökologisch sinnvoll, manche treiben lediglich die Preise in die Höhe.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-970415d931a47075",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ab6935efc077641a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Umsetzung des EU-Aktionsplans für bezahlbares Wohnen und keine entsprechende Zusammenarbeit mit Betroffenen oder Gemeinden.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Umsetzung des EU-Aktionsplans für bezahlbares Wohnen und keine entsprechende Zusammenarbeit mit Betroffenen oder Gemeinden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen das kommunale Vorkaufsrecht wieder einführen und stärken. Mit einem (Re-)Kommunalisierungsfonds sollen Kommunen unterstützt werden, Wohnungen in die öffentliche Hand (zurück) zu holen. Wir setzen uns für ein preislimitiertes Vorkaufsrecht ein, das sich nicht am spekulativen „Marktpreis“ orientiert, sondern an für die Bewohner*innen bezahlbaren Mieten (sozialer Ertragswert). Wir werden dafür sorgen, dass der kommende EU-Aktionsplan für bezahlbares Wohnen mit den Menschen und ihren Erfahrungen vor Ort und mit ihren Gemeinden gemeinsam durchgesetzt, und nicht von oben durchgedrückt wird.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ab6935efc077641a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+          "disposition": "no_supported_link",
+          "rationale": "Ein Initiativrecht des Europäischen Parlaments wird durch die vorgelegten deutschen Gesetzesänderungen nicht eingeführt.",
+          "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac449bf2f59d5941acdc5726a7003e4720454cc9f8f221d7b911a56ad6a24590"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Ein Initiativrecht des Europäischen Parlaments wird durch die vorgelegten deutschen Gesetzesänderungen nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen, dass das Europäische Parlament endlich das volle Initiativrecht bekommt und eigene Gesetzesvorschläge einbringen kann.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b4a12f3e53c72e12",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln die Zustimmung zu Vaterschaftsanerkennungen, nicht die Anerkennung ausländischer Qualifikationen oder Abschlüsse.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen regeln die Zustimmung zu Vaterschaftsanerkennungen, nicht die Anerkennung ausländischer Qualifikationen oder Abschlüsse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Qualifikationen und Abschlüsse auch von Nicht-EU-Bürger*innen müssen schneller anerkannt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b4a12f3e53c72e12",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d9939678dac0c237",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Entscheidungsfrist für Wohngeldanträge.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Entscheidungsfrist für Wohngeldanträge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Anträge müssen spätestens drei Monate nach Antragstellung beschieden werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d9939678dac0c237",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-dd5806faaeccc758",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln weder Besetzungen leer stehenden Wohnraums noch ein daraus folgendes Wohnrecht.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen regeln weder Besetzungen leer stehenden Wohnraums noch ein daraus folgendes Wohnrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Die Besetzung von Wohnraum, der seit mindestens einem Jahr leer steht, muss zu einem dauerhaften Wohnrecht führen, es sei denn, die Eigentümer*innen verpflichten sich, den Wohnraum zu sozialverträglichen Mieten zur Verfügung zu stellen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-dd5806faaeccc758",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ecf5f7e75e1b281a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen führen kein Wahlrecht für Menschen ohne deutsche Staatsangehörigkeit ein oder ändern Wahlberechtigungen.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen führen kein Wahlrecht für Menschen ohne deutsche Staatsangehörigkeit ein oder ändern Wahlberechtigungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Linke tritt für ein Wahlrecht auf allen Ebenen auch für Menschen ohne deutsche Staatsangehörigkeit ein, die sich seit mindestens fünf Jahren in Deutschland aufhalten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ecf5f7e75e1b281a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f1de4851c689ae4c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum BAföG-Zugang bei humanitären Aufenthaltserlaubnissen.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum BAföG-Zugang bei humanitären Aufenthaltserlaubnissen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Auch Menschen mit Duldung oder einer Aufenthaltserlaubnis aus humanitären Gründen sollen Zugang zu BAföG erhalten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f1de4851c689ae4c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen regeln keine Karenzzeit für ehemalige Regierungsmitglieder beim Wechsel in Unternehmen.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen regeln keine Karenzzeit für ehemalige Regierungsmitglieder beim Wechsel in Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Bundesminister*innen und parlamentarische Staatssekretär*innen müssen nach ihrem Ausscheiden aus dem Amt mindestens drei Jahre bzw. für die Dauer des zeitlichen Anspruchs auf Übergangsgeld warten, bevor sie in Unternehmen wechseln, mit deren wirtschaftlichen Interessen sie zuvor politisch befasst waren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ffe4482c70ff75ff",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Kündigungsschutz von Eltern oder zu dessen Dauer.",
+          "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "063e378a42907943f9db4050a0b3c8c6d494bb113976db07f3035d798d66483f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zum Kündigungsschutz von Eltern oder zu dessen Dauer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen den Kündigungsschutz für Eltern bis zur Vollendung des sechsten Lebensjahres des Kindes ausweiten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ffe4482c70ff75ff",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-222",
@@ -123654,45 +124991,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5130,
-    "cache_hits": 81,
-    "subdivision_cache_hits": 0,
+    "calls": 5196,
+    "cache_hits": 82,
+    "subdivision_cache_hits": 2,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.927918,
-    "reported_cost_calls": 4645,
+    "reported_cost_usd": 25.052665,
+    "reported_cost_calls": 4686,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.84799,
-    "unknown_cost_calls": 485,
+    "unknown_cost_reserved_usd": 2.990946,
+    "unknown_cost_calls": 510,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 27.775908,
-    "prompt_tokens": 51953839,
-    "completion_tokens": 8303140,
+    "budget_exposure_usd": 28.043611,
+    "prompt_tokens": 52488311,
+    "completion_tokens": 8400592,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 199,
-        "reported_cost_usd": 4.880419499999998,
-        "unknown_cost_reserved_usd": 1.0685896612017132e-15,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 202,
+        "reported_cost_usd": 4.9459347499999975,
+        "unknown_cost_reserved_usd": 1.096345236817342e-15,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 78,
-        "reported_cost_usd": 1.02244025,
+        "calls": 79,
+        "reported_cost_usd": 1.046532,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1956,
-        "reported_cost_usd": 2.1405881175,
-        "unknown_cost_reserved_usd": 1.8635145499999992,
-        "pending_reserved_usd": 2.6020852139652106e-18
+        "calls": 2018,
+        "reported_cost_usd": 2.175728127499999,
+        "unknown_cost_reserved_usd": 2.0064706499999994,
+        "pending_reserved_usd": 1.9081958235744878e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
