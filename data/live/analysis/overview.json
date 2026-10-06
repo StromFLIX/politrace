@@ -1,7 +1,7 @@
 {
   "version": "all-party-sol-final-v2",
   "status": "continuing",
-  "input_signature": "60380dd2f25b64c7b8a21838b8a2afb15b17fe6a385bd18d883a0a64e4febc36",
+  "input_signature": "23ee2309e014debab027a730b0adc93f07c0c2d33f3afea4803b807bedf3e53e",
   "total_laws": 173,
   "total_programmes": 6,
   "total_criteria": 6470,
@@ -9,49 +9,49 @@
   "final_model": "openai/gpt-6-sol",
   "retrieval": "Per-programme whole-law/provision/reverse BM25 union",
   "limitations": "Unselected pairs unknown; statistical recall not measured.",
-  "updated_at": "2026-10-06T02:18:55.177092+00:00",
+  "updated_at": "2026-10-06T02:43:02.758221+00:00",
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5037,
+    "calls": 5130,
     "cache_hits": 81,
-    "subdivision_cache_hits": 4,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.700733,
-    "reported_cost_calls": 4597,
+    "reported_cost_usd": 24.927918,
+    "reported_cost_calls": 4645,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.602643,
-    "unknown_cost_calls": 440,
+    "unknown_cost_reserved_usd": 2.84799,
+    "unknown_cost_calls": 485,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 27.303376,
-    "prompt_tokens": 51392175,
-    "completion_tokens": 8192628,
+    "budget_exposure_usd": 27.775908,
+    "prompt_tokens": 51953839,
+    "completion_tokens": 8303140,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 194,
-        "reported_cost_usd": 4.737448249999998,
-        "unknown_cost_reserved_usd": 1.0130785099704553e-15,
-        "pending_reserved_usd": 5.551115123125783e-17
+        "calls": 199,
+        "reported_cost_usd": 4.880419499999998,
+        "unknown_cost_reserved_usd": 1.0685896612017132e-15,
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 75,
-        "reported_cost_usd": 0.9850437500000001,
+        "calls": 78,
+        "reported_cost_usd": 1.02244025,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1871,
-        "reported_cost_usd": 2.093771510000001,
-        "unknown_cost_reserved_usd": 1.6181668999999999,
-        "pending_reserved_usd": 5.204170427930421e-18
+        "calls": 1956,
+        "reported_cost_usd": 2.1405881175,
+        "unknown_cost_reserved_usd": 1.8635145499999992,
+        "pending_reserved_usd": 2.6020852139652106e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
@@ -81,10 +81,10 @@
       }
     ]
   },
-  "completed_pairs": 21205,
-  "screened_pairs": 21231,
-  "pending_pairs": 18564,
-  "final_pending": 26,
+  "completed_pairs": 21567,
+  "screened_pairs": 21573,
+  "pending_pairs": 18202,
+  "final_pending": 6,
   "errors": {
     "screen:bgbl-1-2026-107:eda8a9d0b9e0f2bd915e": {
       "type": "provider",
@@ -125,7 +125,7 @@
       "attempts": 3,
       "next_retry_at": 1791240351.9962184
     },
-    "screen:bgbl-1-2026-197:229aac9173f98b3547f9": {
+    "screen:bgbl-1-2026-213:bdce11f2ad2e65d1576b": {
       "type": "provider",
       "retryable": true,
       "http_status": 200,
@@ -135,10 +135,10 @@
       "requested_output_tokens": null,
       "affordable_output_tokens": null,
       "stage": "screen",
-      "attempts": 2,
-      "next_retry_at": 1791252461.220049
+      "attempts": 1,
+      "next_retry_at": 1791254436.4646668
     },
-    "screen:bgbl-1-2026-198:083ce9530580e1b53b75": {
+    "screen:bgbl-1-2026-214:5a7e297d2e85be74e361": {
       "type": "provider",
       "retryable": true,
       "http_status": 200,
@@ -148,10 +148,10 @@
       "requested_output_tokens": null,
       "affordable_output_tokens": null,
       "stage": "screen",
-      "attempts": 2,
-      "next_retry_at": 1791252451.6487296
+      "attempts": 1,
+      "next_retry_at": 1791254476.5127938
     },
-    "screen:bgbl-1-2026-198:0a832bbf21a1fc4faa2b": {
+    "screen:bgbl-1-2026-214:1dfa5c529656c851e190": {
       "type": "provider",
       "retryable": true,
       "http_status": 200,
@@ -161,10 +161,10 @@
       "requested_output_tokens": null,
       "affordable_output_tokens": null,
       "stage": "screen",
-      "attempts": 2,
-      "next_retry_at": 1791252444.4158833
+      "attempts": 1,
+      "next_retry_at": 1791254479.2139742
     },
-    "screen:bgbl-1-2026-197:f0c788f36029d13b0e8e": {
+    "screen:bgbl-1-2026-214:30a645b57ef381a52b2f": {
       "type": "provider",
       "retryable": true,
       "http_status": 200,
@@ -174,8 +174,164 @@
       "requested_output_tokens": null,
       "affordable_output_tokens": null,
       "stage": "screen",
-      "attempts": 2,
-      "next_retry_at": 1791252445.0852137
+      "attempts": 1,
+      "next_retry_at": 1791254481.0649986
+    },
+    "screen:bgbl-1-2026-215:4d81c7f82108123afa54": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254481.4256659
+    },
+    "screen:bgbl-1-2026-213:7dcef95aa06b58ff0ab2": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254481.787395
+    },
+    "screen:bgbl-1-2026-214:30a89df34f217fc85b9f": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254482.1459136
+    },
+    "screen:bgbl-1-2026-214:5393fdb24dacb8d6ca34": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254504.249183
+    },
+    "screen:bgbl-1-2026-213:d75ff308d85ad5894dee": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254511.287433
+    },
+    "screen:bgbl-1-2026-221:7cb443260471a7fb5f8a": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254522.8972423
+    },
+    "screen:bgbl-1-2026-215:b8b703c368599091fe01": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254527.2412431
+    },
+    "screen:bgbl-1-2026-221:69bc7f8f68e0b4476d0e": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254527.6055229
+    },
+    "screen:bgbl-1-2026-221:297969a9c56b7a3d4699": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254527.9654398
+    },
+    "screen:bgbl-1-2026-215:c397360ab1af0ff20db9": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254532.23416
+    },
+    "screen:bgbl-1-2026-215:d929f768bddef31793b5": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254532.8613467
+    },
+    "screen:bgbl-1-2026-221:d0eb6f6c9170e8722aad": {
+      "type": "provider",
+      "retryable": true,
+      "http_status": 200,
+      "error_code": 502,
+      "category": "unspecified",
+      "upstream_provider_error": false,
+      "requested_output_tokens": null,
+      "affordable_output_tokens": null,
+      "stage": "screen",
+      "attempts": 1,
+      "next_retry_at": 1791254537.3026097
     }
   },
   "slices": 1,
@@ -183,7 +339,7 @@
     {
       "program_id": "afd-2025",
       "criteria": 683,
-      "laws_completed": 97,
+      "laws_completed": 102,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -846,8 +1002,8 @@
         {
           "law_id": "bgbl-1-2026-198",
           "candidates": 15,
-          "completed": 0,
-          "status": "pending",
+          "completed": 15,
+          "status": "completed",
           "omitted": 668
         },
         {
@@ -874,29 +1030,29 @@
         {
           "law_id": "bgbl-1-2026-210a",
           "candidates": 53,
-          "completed": 52,
-          "status": "pending",
+          "completed": 53,
+          "status": "completed",
           "omitted": 630
         },
         {
           "law_id": "bgbl-1-2026-211",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 671
         },
         {
           "law_id": "bgbl-1-2026-212",
           "candidates": 14,
-          "completed": 0,
-          "status": "pending",
+          "completed": 14,
+          "status": "completed",
           "omitted": 669
         },
         {
           "law_id": "bgbl-1-2026-213",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 671
         },
         {
@@ -1402,7 +1558,7 @@
     {
       "program_id": "cdu-csu-2025",
       "criteria": 965,
-      "laws_completed": 96,
+      "laws_completed": 100,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -2065,8 +2221,8 @@
         {
           "law_id": "bgbl-1-2026-198",
           "candidates": 16,
-          "completed": 10,
-          "status": "pending",
+          "completed": 16,
+          "status": "completed",
           "omitted": 949
         },
         {
@@ -2093,28 +2249,28 @@
         {
           "law_id": "bgbl-1-2026-210a",
           "candidates": 76,
-          "completed": 72,
-          "status": "pending",
+          "completed": 76,
+          "status": "completed",
           "omitted": 889
         },
         {
           "law_id": "bgbl-1-2026-211",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 953
         },
         {
           "law_id": "bgbl-1-2026-212",
           "candidates": 16,
-          "completed": 0,
-          "status": "pending",
+          "completed": 16,
+          "status": "completed",
           "omitted": 949
         },
         {
           "law_id": "bgbl-1-2026-213",
           "candidates": 12,
-          "completed": 0,
+          "completed": 4,
           "status": "pending",
           "omitted": 953
         },
@@ -2621,7 +2777,7 @@
     {
       "program_id": "gruene-2025",
       "criteria": 1640,
-      "laws_completed": 105,
+      "laws_completed": 108,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -3284,7 +3440,7 @@
         {
           "law_id": "bgbl-1-2026-198",
           "candidates": 21,
-          "completed": 4,
+          "completed": 18,
           "status": "pending",
           "omitted": 1619
         },
@@ -3312,22 +3468,22 @@
         {
           "law_id": "bgbl-1-2026-210a",
           "candidates": 104,
-          "completed": 102,
-          "status": "pending",
+          "completed": 104,
+          "status": "completed",
           "omitted": 1536
         },
         {
           "law_id": "bgbl-1-2026-211",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 1628
         },
         {
           "law_id": "bgbl-1-2026-212",
           "candidates": 14,
-          "completed": 0,
-          "status": "pending",
+          "completed": 14,
+          "status": "completed",
           "omitted": 1626
         },
         {
@@ -3840,7 +3996,7 @@
     {
       "program_id": "linke-2025",
       "criteria": 1384,
-      "laws_completed": 97,
+      "laws_completed": 100,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -4503,8 +4659,8 @@
         {
           "law_id": "bgbl-1-2026-198",
           "candidates": 16,
-          "completed": 12,
-          "status": "pending",
+          "completed": 16,
+          "status": "completed",
           "omitted": 1368
         },
         {
@@ -4531,21 +4687,21 @@
         {
           "law_id": "bgbl-1-2026-210a",
           "candidates": 113,
-          "completed": 109,
-          "status": "pending",
+          "completed": 113,
+          "status": "completed",
           "omitted": 1271
         },
         {
           "law_id": "bgbl-1-2026-211",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 1372
         },
         {
           "law_id": "bgbl-1-2026-212",
           "candidates": 15,
-          "completed": 0,
+          "completed": 13,
           "status": "pending",
           "omitted": 1369
         },
@@ -5059,7 +5215,7 @@
     {
       "program_id": "spd-2025",
       "criteria": 787,
-      "laws_completed": 95,
+      "laws_completed": 101,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -5715,22 +5871,22 @@
         {
           "law_id": "bgbl-1-2026-197",
           "candidates": 26,
-          "completed": 20,
-          "status": "pending",
+          "completed": 26,
+          "status": "completed",
           "omitted": 761
         },
         {
           "law_id": "bgbl-1-2026-198",
           "candidates": 17,
-          "completed": 16,
-          "status": "pending",
+          "completed": 17,
+          "status": "completed",
           "omitted": 770
         },
         {
           "law_id": "bgbl-1-2026-199",
           "candidates": 18,
-          "completed": 17,
-          "status": "pending",
+          "completed": 18,
+          "status": "completed",
           "omitted": 769
         },
         {
@@ -5750,22 +5906,22 @@
         {
           "law_id": "bgbl-1-2026-210a",
           "candidates": 62,
-          "completed": 14,
-          "status": "pending",
+          "completed": 62,
+          "status": "completed",
           "omitted": 725
         },
         {
           "law_id": "bgbl-1-2026-211",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 775
         },
         {
           "law_id": "bgbl-1-2026-212",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 775
         },
         {
@@ -6278,7 +6434,7 @@
     {
       "program_id": "ssw-2025",
       "criteria": 1011,
-      "laws_completed": 95,
+      "laws_completed": 100,
       "laws": [
         {
           "law_id": "bgbl-1-2025-101",
@@ -6934,15 +7090,15 @@
         {
           "law_id": "bgbl-1-2026-197",
           "candidates": 21,
-          "completed": 0,
+          "completed": 20,
           "status": "pending",
           "omitted": 990
         },
         {
           "law_id": "bgbl-1-2026-198",
           "candidates": 15,
-          "completed": 14,
-          "status": "pending",
+          "completed": 15,
+          "status": "completed",
           "omitted": 996
         },
         {
@@ -6962,29 +7118,29 @@
         {
           "law_id": "bgbl-1-2026-207",
           "candidates": 53,
-          "completed": 52,
-          "status": "pending",
+          "completed": 53,
+          "status": "completed",
           "omitted": 958
         },
         {
           "law_id": "bgbl-1-2026-210a",
           "candidates": 62,
-          "completed": 0,
-          "status": "pending",
+          "completed": 62,
+          "status": "completed",
           "omitted": 949
         },
         {
           "law_id": "bgbl-1-2026-211",
           "candidates": 12,
-          "completed": 0,
-          "status": "pending",
+          "completed": 12,
+          "status": "completed",
           "omitted": 999
         },
         {
           "law_id": "bgbl-1-2026-212",
           "candidates": 15,
-          "completed": 0,
-          "status": "pending",
+          "completed": 15,
+          "status": "completed",
           "omitted": 996
         },
         {

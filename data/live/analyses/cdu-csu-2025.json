@@ -82564,7 +82564,7 @@
     {
       "law_id": "bgbl-1-2026-198",
       "analysis_sha256": "85a6e904a36b2760c4a073b8118e1a663e44ec8d2bc5ae264ba52d1e6ba50bd6",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-023e7cb42f262099",
@@ -82586,6 +82586,33 @@
       ],
       "omitted_count": 949,
       "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Bekenntnisanforderung zu den genannten Werten, Israel oder der Ablehnung von Antisemitismus ein.",
+          "input_sha256": "b975b3782497bbd0b41ebb38f1d202ffd4911a89ff04ef9bcabe826b88972d33",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b975b3782497bbd0b41ebb38f1d202ffd4911a89ff04ef9bcabe826b88972d33"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine Bekenntnisanforderung zu den genannten Werten, Israel oder der Ablehnung von Antisemitismus ein.",
+            "law_passage_id": "bgbl-1-2026-198-p-af0fbe86956882db",
+            "law_quote": "Gesetz zur Einführung der elektronischen Aufenthaltsüberwachung",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
           "disposition": "missing_context",
@@ -82610,6 +82637,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Juli 2027 können Gerichte zur Kontrolle bestimmter Gewaltschutzanordnungen eine elektronische Aufenthaltsüberwachung anordnen. Das erweitert die rechtlichen Einsatzmöglichkeiten; eine tatsächliche Zunahme des Einsatzes ist nicht belegt.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "82bd5e1dcd65e8996980bd4c2361a02dcd7fa092acb78ea81031e8b532d57033"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-8e530e8c89a66245",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Ab 1. Juli 2027 können Gerichte zur Kontrolle bestimmter Gewaltschutzanordnungen eine elektronische Aufenthaltsüberwachung anordnen. Das erweitert die rechtlichen Einsatzmöglichkeiten; eine tatsächliche Zunahme des Einsatzes ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-198-p-f2112c62f263dc53",
+            "law_quote": "„Ordnet das Gericht eine Maßnahme nach Satz 3 Nummer 1, 2, 3 oder 5 an, kann es ferner die\nelektronische Aufenthaltsüberwachung unter den Voraussetzungen von § 1a anordnen.“",
+            "criterion_quote": "Die\nelektronische Fußfessel setzen wir verstärkt ein, damit Gewalttäter gegen Frauen Abstand zu ihren ehemaligen Partnerinnen halten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -82668,6 +82727,70 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "proposed_link",
+          "rationale": "Bei gerichtlich angeordneter Aufenthaltsüberwachung erhebt und speichert die Koordinierungsstelle ab 1. Juli 2027 automatisiert Aufenthaltsdaten des Täters. Über diese Erhebung entscheidet die überwachte Person nicht selbst; die Einschränkung betrifft diesen besonderen Anwendungsfall.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "82bd5e1dcd65e8996980bd4c2361a02dcd7fa092acb78ea81031e8b532d57033"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-febae8bf5ab4d49f",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.88,
+            "rationale": "Bei gerichtlich angeordneter Aufenthaltsüberwachung erhebt und speichert die Koordinierungsstelle ab 1. Juli 2027 automatisiert Aufenthaltsdaten des Täters. Über diese Erhebung entscheidet die überwachte Person nicht selbst; die Einschränkung betrifft diesen besonderen Anwendungsfall.",
+            "law_passage_id": "bgbl-1-2026-198-p-5c71e0be4fbe366d",
+            "law_quote": "(1) Die Koordinierungsstelle erhebt und speichert mit Hilfe des von dem Täter mitzuführenden technischen\nMittels automatisiert die Daten über dessen Aufenthaltsort sowie über etwaige Beeinträchtigungen der\nDatenerhebung.",
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-709887b345ed348d",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei einer vom Elternteil ausgehenden Kindeswohlgefahr Kontakte zum Kind verbieten und so auch dessen Betreuung unterbinden. Ein zwingender Ausschluss bei Gewalt gegen das Kind wird nicht eingeführt.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "82bd5e1dcd65e8996980bd4c2361a02dcd7fa092acb78ea81031e8b532d57033"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-b416535c1b58c71b",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.89,
+            "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei einer vom Elternteil ausgehenden Kindeswohlgefahr Kontakte zum Kind verbieten und so auch dessen Betreuung unterbinden. Ein zwingender Ausschluss bei Gewalt gegen das Kind wird nicht eingeführt.",
+            "law_passage_id": "bgbl-1-2026-198-p-3996aa7b7dea6677",
+            "law_quote": "4. Verbote, ein Zusammentreffen mit dem Kind herbeizuführen oder sich in einem bestimmten Umkreis des Kindes\naufzuhalten,",
+            "criterion_quote": "Wenn ein Elternteil dem Kind Gewalt antut, muss es von der Betreuung ausgeschlossen werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-709887b345ed348d",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz enthält keine Regelung zur steuerfreien Aktivrente oder zu Weiterarbeitenden nach Erreichen des Rentenalters.",
@@ -82691,6 +82814,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7a3e8cd9b10c225c",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Juli 2027 müssen die bei elektronischer Aufenthaltsüberwachung erhobenen Daten besonders gegen unbefugte Kenntnisnahme und Verarbeitung gesichert werden. Der verbindliche Standard betrifft diese Daten, nicht sämtliche Datenerheber und Datenverarbeiter.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "82bd5e1dcd65e8996980bd4c2361a02dcd7fa092acb78ea81031e8b532d57033"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-608ce0ace26580bd",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.93,
+            "rationale": "Ab 1. Juli 2027 müssen die bei elektronischer Aufenthaltsüberwachung erhobenen Daten besonders gegen unbefugte Kenntnisnahme und Verarbeitung gesichert werden. Der verbindliche Standard betrifft diese Daten, nicht sämtliche Datenerheber und Datenverarbeiter.",
+            "law_passage_id": "bgbl-1-2026-198-p-5c71e0be4fbe366d",
+            "law_quote": "Die Daten sind zu kennzeichnen und gegen unbefugte Kenntnisnahme und Verarbeitung\nbesonders zu sichern.",
+            "criterion_quote": "Datenerheber und Datenverarbeiter müssen\nSorgfaltsstandards erfüllen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7a3e8cd9b10c225c",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -82772,6 +82927,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-b8bc0fd1ae423109",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bf0c845a62ee1786",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei einer vom Elternteil ausgehenden Kindeswohlgefahr ein Zusammentreffen mit dem Kind verbieten. Das ermöglicht Schutz auch in Fällen von Partnerschaftsgewalt, sofern diese Voraussetzung vorliegt; einen generellen Ausschluss des Umgangsrechts bei Partnerschaftsgewalt regelt das Gesetz nicht.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "82bd5e1dcd65e8996980bd4c2361a02dcd7fa092acb78ea81031e8b532d57033"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-d4b1e2e736fce914",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.84,
+            "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei einer vom Elternteil ausgehenden Kindeswohlgefahr ein Zusammentreffen mit dem Kind verbieten. Das ermöglicht Schutz auch in Fällen von Partnerschaftsgewalt, sofern diese Voraussetzung vorliegt; einen generellen Ausschluss des Umgangsrechts bei Partnerschaftsgewalt regelt das Gesetz nicht.",
+            "law_passage_id": "bgbl-1-2026-198-p-3996aa7b7dea6677",
+            "law_quote": "4. Verbote, ein Zusammentreffen mit dem Kind herbeizuführen oder sich in einem bestimmten Umkreis des Kindes\naufzuhalten,",
+            "criterion_quote": "bei Partnerschaftsgewalt das Sorge- und Umgangsrecht des gewalttätigen Elternteils ausschließen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bf0c845a62ee1786",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -85440,7 +85627,7 @@
     {
       "law_id": "bgbl-1-2026-210a",
       "analysis_sha256": "3bae0a475c48b8c559b78a0d539814f9fda0f6b419e63da189606e4759e72b2a",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-045dd1d40944f52b",
@@ -86544,6 +86731,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+          "disposition": "proposed_link",
+          "rationale": "Gebote für Anlagen mit bestimmten bestehenden Förderungen werden ausgeschlossen; bei anderen staatlichen Förderungen gilt dies, soweit dieselben förderfähigen Kosten betroffen sind. Der Zugang zu dieser Ausschreibung hängt damit in diesen Fällen vom Förderstatus ab.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "87549ed28a465ad66cc130fdab3b00f92431210d7e76036297e01d9b4d077e46"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": "impact-fc59218fd4a20aa2",
+          "judgment": {
+            "supported": true,
+            "score": -2,
+            "confidence": 0.98,
+            "rationale": "Gebote für Anlagen mit bestimmten bestehenden Förderungen werden ausgeschlossen; bei anderen staatlichen Förderungen gilt dies, soweit dieselben förderfähigen Kosten betroffen sind. Der Zugang zu dieser Ausschreibung hängt damit in diesen Fällen vom Förderstatus ab.",
+            "law_passage_id": "bgbl-1-2026-210a-p-85be5d753ee6b23f",
+            "law_quote": "11. für die gebotsgegenständliche Anlage beziehungsweise den gebotsgegenständlichen Anlagenpool bereits ein\nZuschlag nach diesem Gesetz erteilt wurde oder eine Förderung nach dem Erneuerbare-Energien-Gesetz oder\neiner aufgrund des Erneuerbare-Energien-Gesetzes erlassenen Rechtsverordnung, nach dem Kraft-WärmeKopplungsgesetz oder einer aufgrund des Kraft-Wärme-Kopplungsgesetzes erlassenen Rechtsverordnung\noder eine andere staatliche Förderung, soweit diese dieselben förderfähigen Kosten wie die nach diesem\nGesetz betrifft, erhalten hat oder erhält,",
+            "criterion_quote": "So entscheidet nicht der Staat durch Förderung, wer\nam Markt teilnehmen darf.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-76b2ab8d936d867c",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-780c339c77af5443",
           "disposition": "missing_context",
           "rationale": "Der vorliegende Gesetzesauszug regelt vor allem Stromkapazitäten; wegen des ausdrücklich unvollständigen Gesetzeskontexts lässt sich nicht beurteilen, ob weitere Vorschriften Standardisierung der genannten Infrastrukturen vorsehen.",
@@ -87233,6 +87452,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-cd5e1f91686c7a99",
+          "disposition": "missing_context",
+          "rationale": "Die Pflicht zum klimaneutralen Betrieb ab 2045 betrifft Anlagen mit 15-jähriger Kapazitätsverpflichtung. Ob klimafreundliche und systemdienliche Kapazitäten tatsächlich ans Netz gebracht wurden, geht daraus nicht hervor.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5151da51d005d4308072e0936b303d06b34263d1311aacd9ac9efd5c029077a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.84,
+            "rationale": "Die Pflicht zum klimaneutralen Betrieb ab 2045 betrifft Anlagen mit 15-jähriger Kapazitätsverpflichtung. Ob klimafreundliche und systemdienliche Kapazitäten tatsächlich ans Netz gebracht wurden, geht daraus nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-210a-p-1e9449eac1c6614b",
+            "law_quote": "Bei einem Verpflichtungszeitraum von 15 Jahren muss der Kapazitätsverpflichtete die gebotsgegenständliche\nAnlage spätestens ab dem Jahr 2045 klimaneutral betreiben.",
+            "criterion_quote": "Wir bringen alle Kapazitäten\nans Netz, die klimafreundlich und systemdienlich sind",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-cd5e1f91686c7a99",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-d7c3e7fd8918b26c",
           "disposition": "missing_context",
           "rationale": "Das Gesetz führt einen Kapazitätsmarkt für 2031 ein; aus den vorliegenden Auszügen gehen dessen vollständige Teilnahmebedingungen und die Technologieoffenheit nicht hervor.",
@@ -87316,6 +87567,38 @@
           "verification": null
         },
         {
+          "criterion_id": "cdu-csu-2025-ac-e0fa7136f9763360",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz führt für 2031 einen Kapazitätsmarkt zur Bereitstellung gesicherter elektrischer Leistung ein. Damit regelt es einen Teil des Strommarktdesigns und vergütet bezuschlagte Kapazitäten, ohne ein umfassendes Strommarktdesign zu belegen.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5151da51d005d4308072e0936b303d06b34263d1311aacd9ac9efd5c029077a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": "impact-165d95c4642b6617",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz führt für 2031 einen Kapazitätsmarkt zur Bereitstellung gesicherter elektrischer Leistung ein. Damit regelt es einen Teil des Strommarktdesigns und vergütet bezuschlagte Kapazitäten, ohne ein umfassendes Strommarktdesign zu belegen.",
+            "law_passage_id": "bgbl-1-2026-210a-p-b3baeecbb109eb33",
+            "law_quote": "Ziel dieses Gesetzes ist es, im Interesse einer sicheren und zuverlässigen Versorgung mit Elektrizität einen\nKapazitätsmarkt für das Jahr 2031 einzuführen, um ausreichend gesicherte elektrische Leistung zur Deckung der\nStromnachfrage im Erbringungszeitraum bereitzustellen.",
+            "criterion_quote": "Wir setzen ein Strommarktdesign um, das die neuen Realitäten anerkennt und die notwendigen Investitionen absichert.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e0fa7136f9763360",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Vorschriften zum Kapazitätsmarkt belegen weder ein beschlossenes Anti-Gold-Plating-Gesetz noch die Rücknahme von Regelungen über EU-Recht hinaus.",
@@ -87339,6 +87622,38 @@
             "caveats": [],
             "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f1e2f8984cff3e4a",
+          "disposition": "proposed_link",
+          "rationale": "Anlagen mit 15-jähriger Kapazitätsverpflichtung müssen spätestens ab 2045 klimaneutral betrieben werden. Das unterstützt das Ziel für einen begrenzten Teil des Stromsektors, belegt aber nicht Deutschlands Klimaneutralität.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b5151da51d005d4308072e0936b303d06b34263d1311aacd9ac9efd5c029077a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": "impact-15c03a8003fdcb82",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.95,
+            "rationale": "Anlagen mit 15-jähriger Kapazitätsverpflichtung müssen spätestens ab 2045 klimaneutral betrieben werden. Das unterstützt das Ziel für einen begrenzten Teil des Stromsektors, belegt aber nicht Deutschlands Klimaneutralität.",
+            "law_passage_id": "bgbl-1-2026-210a-p-1e9449eac1c6614b",
+            "law_quote": "Bei einem Verpflichtungszeitraum von 15 Jahren muss der Kapazitätsverpflichtete die gebotsgegenständliche\nAnlage spätestens ab dem Jahr 2045 klimaneutral betreiben.",
+            "criterion_quote": "Die Klimaneutralität bis 2045 haben wir fest im Blick.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f1e2f8984cff3e4a",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -87509,7 +87824,7 @@
     {
       "law_id": "bgbl-1-2026-211",
       "analysis_sha256": "d336202ff0fa1750c7de533213dbb4d018dff044182633c085670787a35b1482",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -87526,12 +87841,337 @@
         "cdu-csu-2025-ac-fea8b875f294a705"
       ],
       "omitted_count": 953,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; das Mercosur-Abkommen oder sein Inkrafttreten betrifft es nicht.",
+          "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; das Mercosur-Abkommen oder sein Inkrafttreten betrifft es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; eine Bestandsaufnahme zu Kernkraftwerken veranlasst es nicht.",
+          "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; eine Bestandsaufnahme zu Kernkraftwerken veranlasst es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; einen Dienst in einer Blaulichtorganisation ermöglicht es nicht.",
+          "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; einen Dienst in einer Blaulichtorganisation ermöglicht es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; Einzahlungen für Kinder in Altersvorsorgedepots regelt es nicht.",
+          "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a73b6357b708e5f1575ce9481d17523afbd0147caf3b63160022273b07f08ebe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt die Abgeordnetenentschädigung für August und ab September 2026 abweichend fest und ändert die Anwesenheitserfassung im Bundestag; Einzahlungen für Kinder in Altersvorsorgedepots regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Abgeordnetenentschädigungen und die Erfassung der Anwesenheit im Bundestag, nicht die Verlegung der Bundesanstalt nach Berlin.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Abgeordnetenentschädigungen und die Erfassung der Anwesenheit im Bundestag, nicht die Verlegung der Bundesanstalt nach Berlin.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder die Besteuerung von Arbeit nach dem Rentenalter noch führt es eine Aktivrente ein.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder die Besteuerung von Arbeit nach dem Rentenalter noch führt es eine Aktivrente ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e6ff1d785b8175b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zu Vereinen, Verbänden, Verfassungsschutzbeobachtung oder staatlichen Kooperationen.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zu Vereinen, Verbänden, Verfassungsschutzbeobachtung oder staatlichen Kooperationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e6ff1d785b8175b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Abgeordnetenentschädigungen für August und ab September 2026 fest; einen Kassensturz zu Beginn der Wahlperiode regelt es nicht.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt Abgeordnetenentschädigungen für August und ab September 2026 fest; einen Kassensturz zu Beginn der Wahlperiode regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Abgeordnetenentschädigungen, nicht eine Steuerbefreiung für freiwillig weiterarbeitende Rentnerinnen und Rentner.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Abgeordnetenentschädigungen, nicht eine Steuerbefreiung für freiwillig weiterarbeitende Rentnerinnen und Rentner.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-aadb257c78469da8",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zur Abgeordnetenentschädigung und Anwesenheitserfassung, sieht aber keine Verfallsdaten für Gesetze oder Regelungen vor.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zur Abgeordnetenentschädigung und Anwesenheitserfassung, sieht aber keine Verfallsdaten für Gesetze oder Regelungen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-aadb257c78469da8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nimmt keine Regelungen zurück, die über europäisches Recht hinausgehen, und enthält kein Anti-Gold-Plating-Gesetz.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz nimmt keine Regelungen zurück, die über europäisches Recht hinausgehen, und enthält kein Anti-Gold-Plating-Gesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-eba8bc2c8ef15370",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder die Stellung des BSI noch dessen Führung durch das Bundesministerium des Innern.",
+          "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab92abac6e0921516506d0130794733dee4795918d69259dfb26169f6873c7e7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder die Stellung des BSI noch dessen Führung durch das Bundesministerium des Innern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-212",
       "analysis_sha256": "a228d105788b6d1bd3a84938e8411f22a9fbd22988d0437cf526ab44cc26451d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-01acc580d4430e0b",
@@ -87552,7 +88192,444 @@
         "cdu-csu-2025-ac-ebf2a75a1b95bef0"
       ],
       "omitted_count": 949,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-01acc580d4430e0b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine verbindliche Informationspflicht zu Tierwohl und Herkunft tierischer Produkte.",
+          "input_sha256": "5e6075fa543cc2cee7699607684c3c028a6369c68c65ab1f41f9559525555ad5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5e6075fa543cc2cee7699607684c3c028a6369c68c65ab1f41f9559525555ad5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine verbindliche Informationspflicht zu Tierwohl und Herkunft tierischer Produkte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-01acc580d4430e0b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Anforderung zu einem Bekenntnis zu den im Kriterium genannten Werten ein.",
+          "input_sha256": "5e6075fa543cc2cee7699607684c3c028a6369c68c65ab1f41f9559525555ad5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5e6075fa543cc2cee7699607684c3c028a6369c68c65ab1f41f9559525555ad5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine Anforderung zu einem Bekenntnis zu den im Kriterium genannten Werten ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Reparaturrechte und Vorsorgeverfügungen, nicht die einmalige Übermittlung von Verwaltungsdaten.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Reparaturrechte und Vorsorgeverfügungen, nicht die einmalige Übermittlung von Verwaltungsdaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Vorgabe zu Deutschkenntnissen bei der Einschulung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-19f6766f801513b5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Reparaturen und Vorsorgeregister, nicht Grenzkontrollen oder deren Dauer.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Reparaturen und Vorsorgeregister, nicht Grenzkontrollen oder deren Dauer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3dd9fd5f3e4df99c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Kraftwerksabschaltungen oder Ersatzanlagen.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Kraftwerksabschaltungen oder Ersatzanlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3dd9fd5f3e4df99c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Dienst in Blaulichtorganisationen.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen Dienst in Blaulichtorganisationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "missing_context",
+          "rationale": "Die Änderung betrifft Daten im Zentralen Vorsorgeregister; die vorliegenden Auszüge klären nicht, welche individuellen Entscheidungsrechte dabei gelten.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.82,
+            "rationale": "Die Änderung betrifft Daten im Zentralen Vorsorgeregister; die vorliegenden Auszüge klären nicht, welche individuellen Entscheidungsrechte dabei gelten.",
+            "law_passage_id": "bgbl-1-2026-212-p-76c44d6752c62124",
+            "law_quote": "In das Zentrale Vorsorgeregister dürfen zum Zweck der Registrierung der Vorsorgeverfügungen neben Angaben zu den jeweiligen Dokumenten folgende Angaben eingetragen werden:",
+            "criterion_quote": null,
+            "caveats": [
+              "Die Änderung von § 78a BNotO ist laut Inkrafttretensregelung ab 1. Oktober 2026 anzuwenden."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-85d3afd5b0153459",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Öffnungszeiten oder zur Verfügbarkeit von Verwaltungsservices.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Öffnungszeiten oder zur Verfügbarkeit von Verwaltungsservices.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-85d3afd5b0153459",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ermöglicht elektronische Abschriften bestimmter Vorsorgeverfügungen im Register; die Auszüge belegen aber nicht, dass Bürgerinnen und Bürger eine zugängliche digitale Akte für Behördengänge erhalten.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.84,
+            "rationale": "Das Gesetz ermöglicht elektronische Abschriften bestimmter Vorsorgeverfügungen im Register; die Auszüge belegen aber nicht, dass Bürgerinnen und Bürger eine zugängliche digitale Akte für Behördengänge erhalten.",
+            "law_passage_id": "bgbl-1-2026-212-p-71c6e29ccd76051c",
+            "law_quote": "Ergänzend zu der Registrierung einer in Absatz 1 Satz 1 Nummer 1 bis 3 genannten Vorsorgeverfügung darf auch eine elektronische Abschrift der Vorsorgeverfügung aufgenommen werden.",
+            "criterion_quote": null,
+            "caveats": [
+              "Die Änderung von § 78a BNotO tritt am 1. Oktober 2026 in Kraft."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Beitrittskriterien der Ukraine oder einem EU-Beitritt.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Beitrittskriterien der Ukraine oder einem EU-Beitritt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9175d3b188455882",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-adced906ea82e59d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert die Arbeitsstättenverordnung nicht und regelt mobiles Arbeiten nicht.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert die Arbeitsstättenverordnung nicht und regelt mobiles Arbeiten nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-adced906ea82e59d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-c12e7c10f645f5f9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Befugnis zur elektronischen Gesichtserkennung.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Befugnis zur elektronischen Gesichtserkennung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-c12e7c10f645f5f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e5028bdc7d39e19b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Lohnfindung noch Mindestlohn oder Mindestlohnkommission.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Lohnfindung noch Mindestlohn oder Mindestlohnkommission.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e5028bdc7d39e19b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e81402cec942cbe0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine digitale Identität mit persönlichem Postfach für Behördengänge.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine digitale Identität mit persönlichem Postfach für Behördengänge.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e81402cec942cbe0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ebf2a75a1b95bef0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur individuellen Überprüfung KI-gestützter Bescheide.",
+          "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b6178901c96e40128401beefac2baba05a16d082a55fc5720bf2aafa0b03b6d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur individuellen Überprüfung KI-gestützter Bescheide.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ebf2a75a1b95bef0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-213",
@@ -87574,7 +88651,116 @@
         "cdu-csu-2025-ac-eba8bc2c8ef15370"
       ],
       "omitted_count": 953,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift erlaubt digitale Kontrollen von Flugscheinen und Reisedokumenten; eine Bekenntnisanforderung zu den genannten Werten führt sie nicht ein.",
+          "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift erlaubt digitale Kontrollen von Flugscheinen und Reisedokumenten; eine Bekenntnisanforderung zu den genannten Werten führt sie nicht ein.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Wir verlangen ein klares Bekenntnis zu Freiheit, Gleichberechtigung, Demokratie und Rechtsstaat. Wir verlangen ein eindeutiges Bekenntnis zu Israel und seinem Existenzrecht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1c8c98920f3ef86b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt digitale Abfertigung und Passdatenverarbeitung im Luftverkehr, nicht die Durchführung von Asylverfahren in sicheren Drittstaaten.",
+          "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt digitale Abfertigung und Passdatenverarbeitung im Luftverkehr, nicht die Durchführung von Asylverfahren in sicheren Drittstaaten.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Jeder, der in Europa Asyl beantragt, soll in einen sicheren Drittstaat überführt werden, dort sein Verfahren durchlaufen",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1c8c98920f3ef86b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-1d480873b493a6de",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift betrifft digitale Fluggastabfertigung; sie regelt weder Asylverfahren noch Schutzgewährung durch einen Drittstaat.",
+          "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift betrifft digitale Fluggastabfertigung; sie regelt weder Asylverfahren noch Schutzgewährung durch einen Drittstaat.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "Im Falle eines positiven Ausgangs wird der sichere Drittstaat dem Antragsteller vor Ort Schutz gewähren.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-1d480873b493a6de",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht automatisierte Kontrollen vor dem Abflug; eine fachliche Bestandsaufnahme zu abgeschalteten Kernkraftwerken schreibt es nicht vor.",
+          "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "532ef9053753e3e0b748ff3e34fbb1f719044875bfae1b84debea75d749b8eaa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermöglicht automatisierte Kontrollen vor dem Abflug; eine fachliche Bestandsaufnahme zu abgeschalteten Kernkraftwerken schreibt es nicht vor.",
+            "law_passage_id": "bgbl-1-2026-213-p-17cf0819728f5a8c",
+            "law_quote": "Luftfahrtunternehmen dürfen die Kontrolle der Flugscheine und der Reisedokumente vor Abflug auch unter Verwendung automatisierter Systeme durchführen (digitale Fluggastabfertigung).",
+            "criterion_quote": "eine fachliche Bestandsaufnahme an, ob angesichts des jeweiligen Rückbaustadiums eine Wiederaufnahme des Betriebs der zuletzt abgeschalteten Kernkraftwerke unter vertretbarem technischem und finanziellem Aufwand noch möglich ist",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-214",
@@ -91546,45 +92732,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5037,
+    "calls": 5130,
     "cache_hits": 81,
-    "subdivision_cache_hits": 4,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.700733,
-    "reported_cost_calls": 4597,
+    "reported_cost_usd": 24.927918,
+    "reported_cost_calls": 4645,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.602643,
-    "unknown_cost_calls": 440,
+    "unknown_cost_reserved_usd": 2.84799,
+    "unknown_cost_calls": 485,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 27.303376,
-    "prompt_tokens": 51392175,
-    "completion_tokens": 8192628,
+    "budget_exposure_usd": 27.775908,
+    "prompt_tokens": 51953839,
+    "completion_tokens": 8303140,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 194,
-        "reported_cost_usd": 4.737448249999998,
-        "unknown_cost_reserved_usd": 1.0130785099704553e-15,
-        "pending_reserved_usd": 5.551115123125783e-17
+        "calls": 199,
+        "reported_cost_usd": 4.880419499999998,
+        "unknown_cost_reserved_usd": 1.0685896612017132e-15,
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 75,
-        "reported_cost_usd": 0.9850437500000001,
+        "calls": 78,
+        "reported_cost_usd": 1.02244025,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1871,
-        "reported_cost_usd": 2.093771510000001,
-        "unknown_cost_reserved_usd": 1.6181668999999999,
-        "pending_reserved_usd": 5.204170427930421e-18
+        "calls": 1956,
+        "reported_cost_usd": 2.1405881175,
+        "unknown_cost_reserved_usd": 1.8635145499999992,
+        "pending_reserved_usd": 2.6020852139652106e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

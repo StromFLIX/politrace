@@ -111408,7 +111408,7 @@
     {
       "law_id": "bgbl-1-2026-198",
       "analysis_sha256": "43304c78c3ec951b67ce2ed024bcfd684dfe92da76b9ca494ed048475c9bf2e4",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-0f7c96bb556addeb",
@@ -111453,6 +111453,38 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "linke-2025-ac-0f7c96bb556addeb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-14fc8aae5c5fdf55",
+          "disposition": "no_supported_link",
+          "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei Umgangsregelungen Maßnahmen gegen eine Kindeswohlgefahr treffen. Die Vorschrift stellt keinen Vorrang des Schutzes von Frauen und Kindern vor Umgangsregelungen klar.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c2d3ead84663b94b0969f8b9939ba3db07f6ec9276cd555857f72f6c450820ab"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei Umgangsregelungen Maßnahmen gegen eine Kindeswohlgefahr treffen. Die Vorschrift stellt keinen Vorrang des Schutzes von Frauen und Kindern vor Umgangsregelungen klar.",
+            "law_passage_id": "bgbl-1-2026-198-p-6a4d58a8fd3064b5",
+            "law_quote": "„(5) Soweit es zur Abwendung einer von einem Elternteil ausgehenden Gefahr für das Wohl des Kindes\nerforderlich ist, kann das Familiengericht bei einer Regelung des Umgangs insbesondere folgende Maßnahmen\ntreffen:",
+            "criterion_quote": "Hier muss eine\nKlarstellung erfolgen, dass der Schutz vor Gewalt gegen\nFrauen und Kinder Vorrang hat vor der Regelung des\nUmgangs.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-14fc8aae5c5fdf55",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -111728,6 +111760,38 @@
           "verification": null
         },
         {
+          "criterion_id": "linke-2025-ac-e4f1837a62bbbcc8",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ermöglicht unter engen Voraussetzungen eine elektronische Aufenthaltsüberwachung zum Gewaltschutz. Welche Anforderungen der Istanbul-Konvention dadurch erfüllt werden und ob sie vollständig umgesetzt ist, lässt sich ohne deren Regelungen und weiteren Umsetzungskontext nicht beurteilen.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f582f60070594c60efcc7b1c19d808dbf43a00514b7907adeb48bcf99f64e0cb"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.84,
+            "rationale": "Das Gesetz ermöglicht unter engen Voraussetzungen eine elektronische Aufenthaltsüberwachung zum Gewaltschutz. Welche Anforderungen der Istanbul-Konvention dadurch erfüllt werden und ob sie vollständig umgesetzt ist, lässt sich ohne deren Regelungen und weiteren Umsetzungskontext nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-198-p-96d82c8392861059",
+            "law_quote": "Die\nÜberwachung des Aufenthalts des Täters und die Verwendung seiner Aufenthaltsdaten sind unerlässlich, wenn\nbestimmte Tatsachen im Einzelfall die Annahme rechtfertigen, dass eine Zuwiderhandlung gegen die\nGewaltschutzanordnung durch den Täter zu erwarten ist und daraus eine konkrete Gefahr für Leben, Körper,\nFreiheit oder sexuelle Selbstbestimmung der verletzten Person entsteht.",
+            "criterion_quote": "Die Istanbul-Konvention zur Verhütung und Bekämpfung\n\nvon Gewalt gegen Frauen und häuslicher Gewalt muss in\nDeutschland endlich vollständig umgesetzt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e4f1837a62bbbcc8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "linke-2025-ac-f2ea370314a14835",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz regelt elektronische Aufenthaltsüberwachung und Täterarbeit im Gewaltschutz, nicht den Wechsel ehemaliger Regierungsmitglieder in betroffene Unternehmen.",
@@ -111751,6 +111815,70 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-f2ea370314a14835",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f8d966900795160a",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei der Regelung des Umgangs Schutzmaßnahmen gegen eine vom Elternteil ausgehende Kindeswohlgefahr treffen. Das verankert Gewaltschutz im Umgangsrecht, nicht gleichermaßen im Sorgerecht.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "96239b260848ea884aa78f51b53c1f5e3fdddb58c89c6b5dbe374fc5a96b48e9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-818a4c0af2c3e66e",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.98,
+            "rationale": "Ab 1. Juli 2027 kann das Familiengericht bei der Regelung des Umgangs Schutzmaßnahmen gegen eine vom Elternteil ausgehende Kindeswohlgefahr treffen. Das verankert Gewaltschutz im Umgangsrecht, nicht gleichermaßen im Sorgerecht.",
+            "law_passage_id": "bgbl-1-2026-198-p-6a4d58a8fd3064b5",
+            "law_quote": "„(5) Soweit es zur Abwendung einer von einem Elternteil ausgehenden Gefahr für das Wohl des Kindes\nerforderlich ist, kann das Familiengericht bei einer Regelung des Umgangs insbesondere folgende Maßnahmen\ntreffen:",
+            "criterion_quote": "Im Sorge- und Umgangsrecht wollen wir den\nGewaltschutz verankern.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f8d966900795160a",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ff833dd77c6b6797",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz schafft ab 1. Juli 2027 eine Möglichkeit zur elektronischen Aufenthaltsüberwachung bei konkreter Gefahr. Ob diese Maßnahme Bestandteil der genannten Gesamtstrategie ist oder diese umgesetzt wurde, lässt sich ohne Angaben zur Strategie nicht feststellen.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "96239b260848ea884aa78f51b53c1f5e3fdddb58c89c6b5dbe374fc5a96b48e9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz schafft ab 1. Juli 2027 eine Möglichkeit zur elektronischen Aufenthaltsüberwachung bei konkreter Gefahr. Ob diese Maßnahme Bestandteil der genannten Gesamtstrategie ist oder diese umgesetzt wurde, lässt sich ohne Angaben zur Strategie nicht feststellen.",
+            "law_passage_id": "bgbl-1-2026-198-p-96d82c8392861059",
+            "law_quote": "Die\nÜberwachung des Aufenthalts des Täters und die Verwendung seiner Aufenthaltsdaten sind unerlässlich, wenn\nbestimmte Tatsachen im Einzelfall die Annahme rechtfertigen, dass eine Zuwiderhandlung gegen die\nGewaltschutzanordnung durch den Täter zu erwarten ist und daraus eine konkrete Gefahr für Leben, Körper,\nFreiheit oder sexuelle Selbstbestimmung der verletzten Person entsteht.",
+            "criterion_quote": "und die\nGesamtstrategie zur Bekämpfung und Prävention von\nGewalt gegen Frauen umgesetzt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ff833dd77c6b6797",
+            "disposition": "missing_context"
           },
           "verification": null
         }
@@ -114976,7 +115104,7 @@
     {
       "law_id": "bgbl-1-2026-210a",
       "analysis_sha256": "7594d9bab66248c61462f706f33a57f7a1fdc153de3e62af462534111083d02e",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-030a8a36ca8ebd81",
@@ -115744,6 +115872,38 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-34e5ebe45a45e7a7",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-37ac4954b51c6f32",
+          "disposition": "proposed_link",
+          "rationale": "Der Kapazitätsmarkt setzt ein Ziel für gesicherte Stromleistung im Jahr 2031; weitere Passagen benennen Technologieklassen und eine jährliche Kapazitätsvergütung. Das ist ein begrenzter Technologie- und Vergütungsrahmen für Stromkapazitäten, kein umfassendes langfristiges Umbauziel.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cd71d3345cf42d597fb0b01283bd4ad65052b16d45cc23249e8fc64a290ef3f4"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": "impact-f6461f922670b981",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.78,
+            "rationale": "Der Kapazitätsmarkt setzt ein Ziel für gesicherte Stromleistung im Jahr 2031; weitere Passagen benennen Technologieklassen und eine jährliche Kapazitätsvergütung. Das ist ein begrenzter Technologie- und Vergütungsrahmen für Stromkapazitäten, kein umfassendes langfristiges Umbauziel.",
+            "law_passage_id": "bgbl-1-2026-210a-p-b3baeecbb109eb33",
+            "law_quote": "Ziel dieses Gesetzes ist es, im Interesse einer sicheren und zuverlässigen Versorgung mit Elektrizität einen\nKapazitätsmarkt für das Jahr 2031 einzuführen, um ausreichend gesicherte elektrische Leistung zur Deckung der\nStromnachfrage im Erbringungszeitraum bereitzustellen.",
+            "criterion_quote": "Es braucht klare und langfristige Zielvorgaben, mit\nwelchen Technologien und mit welchen Förderungen der\nUmbau erreicht werden soll, denn ohne einen klaren\nRahmen können auch Private nicht investieren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-37ac4954b51c6f32",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -117082,6 +117242,38 @@
           "verification": null
         },
         {
+          "criterion_id": "linke-2025-ac-9d3da28ee25873b8",
+          "disposition": "missing_context",
+          "rationale": "Die Vorschrift berücksichtigt Erdgas-Kraftwerke bei Geboten für 15-jährige Verpflichtungen. Der vorliegende Text legt nicht hinreichend fest, ob und bis wann solche Kraftwerke Erdgas nutzen; eine Nutzung nach 2035 ist damit nicht belegt.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ddc7d364e9d03526c03be3dac47ccc70783904e8445155d0f84c60dcfb56aa46"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Die Vorschrift berücksichtigt Erdgas-Kraftwerke bei Geboten für 15-jährige Verpflichtungen. Der vorliegende Text legt nicht hinreichend fest, ob und bis wann solche Kraftwerke Erdgas nutzen; eine Nutzung nach 2035 ist damit nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-210a-p-3eafdd82ad57b0e5",
+            "law_quote": "(1) Bei einem Gebot für einen Verpflichtungszeitraum von 15 Jahren, bei dem die gebotsgegenständliche Anlage\nein Kraftwerk ist, das Erdgas als Hauptenergieträger im Verpflichtungszeitraum zur Stromerzeugung einsetzt, muss\ndieses für den Betrieb mit Wasserstoff vorbereitet sein.",
+            "criterion_quote": "Die Nutzung von Erdgas zur Stromerzeugung wollen wir bis 2035 beenden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9d3da28ee25873b8",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "linke-2025-ac-9d62789a1416e753",
           "disposition": "no_supported_link",
           "rationale": "Die Regelungen betreffen Kapazitätsanlagen; sie verleihen Menschen keine Befugnis, Naturbelange vor Gericht zu vertreten.",
@@ -117213,6 +117405,38 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-a311f828cea7a4da",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a450cd5b9b8cc5a7",
+          "disposition": "proposed_link",
+          "rationale": "Gas- und Dampfturbinenkraftwerke zählen zu den Technologieklassen des Kapazitätsmarkts; für die Erfüllung einer Kapazitätsverpflichtung können auch Investitionen zur Herstellung technischer Anforderungen angerechnet werden. Die Regeln beschränken den Kapazitäts- und Investitionsrahmen somit nicht auf erneuerbare Energiequellen.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca9e150c7583d6180ddca1bc2b94dfc0f5170d7744546cbf9c3b2232103b67df"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": "impact-96dc2be937c11c64",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.84,
+            "rationale": "Gas- und Dampfturbinenkraftwerke zählen zu den Technologieklassen des Kapazitätsmarkts; für die Erfüllung einer Kapazitätsverpflichtung können auch Investitionen zur Herstellung technischer Anforderungen angerechnet werden. Die Regeln beschränken den Kapazitäts- und Investitionsrahmen somit nicht auf erneuerbare Energiequellen.",
+            "law_passage_id": "bgbl-1-2026-210a-p-520e219b48beb917",
+            "law_quote": "Gas- und Dampfturbinenkraftwerk, auch bei Einsatz von Wasserstoff",
+            "criterion_quote": "Die Linke will nur in echte erneuerbare Energiequellen und\nInfrastruktur investieren.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a450cd5b9b8cc5a7",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -117456,6 +117680,38 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-baf2fa9930ab65b4",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-bb5167acf3f69308",
+          "disposition": "proposed_link",
+          "rationale": "Für Anlagen im Kapazitätsmarkt gilt eine verbindliche Grenze von 550 Gramm CO₂ aus fossilen Brennstoffen je Kilowattstunde erzeugter Elektrizität. Sie unterstützt die Forderung nach Emissionsgrenzen, stellt aber keine Sektorziele wieder her.",
+          "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca9e150c7583d6180ddca1bc2b94dfc0f5170d7744546cbf9c3b2232103b67df"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ad59d873e5411e71a144b989a7e20a22843aeb61a77b71f54d3b3570d83612f5"
+            }
+          ],
+          "impact_id": "impact-f2f9781a7242d78e",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.96,
+            "rationale": "Für Anlagen im Kapazitätsmarkt gilt eine verbindliche Grenze von 550 Gramm CO₂ aus fossilen Brennstoffen je Kilowattstunde erzeugter Elektrizität. Sie unterstützt die Forderung nach Emissionsgrenzen, stellt aber keine Sektorziele wieder her.",
+            "law_passage_id": "bgbl-1-2026-210a-p-9b95bba6cc4f37d9",
+            "law_quote": "(1) Die Anlage darf keine Emissionen von mehr als 550 Gramm Kohlenstoffdioxid aus fossilen Brennstoffen je\nKilowattstunde erzeugter Elektrizität ausstoßen.",
+            "criterion_quote": "- Wir wollen verbindliche Ziele und Emissionsgrenzen und\n\nmachen den Konzernen klare Vorschriften. Die Sektorziele stellen wir wieder her.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-bb5167acf3f69308",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -118087,7 +118343,7 @@
     {
       "law_id": "bgbl-1-2026-211",
       "analysis_sha256": "7f233be85756ef081684d8abeea85b53f9bb62ef0859080e28f7ce24221e6f0f",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
         "linke-2025-ac-2d2ad7082c02e890",
@@ -118104,7 +118360,332 @@
         "linke-2025-ac-f2ea370314a14835"
       ],
       "omitted_count": 1372,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift setzt die Abgeordnetenentschädigung fest und ändert den gesetzlichen Mindestlohn nicht.",
+          "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift setzt die Abgeordnetenentschädigung fest und ändert den gesetzlichen Mindestlohn nicht.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Um die Europäische\nRichtlinie klar zu erfüllen, fordern wir spätestens bis\n2026 einen Mindestlohn von 16 Euro,",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-35b3a5177b395bd3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Abgeordnetenentschädigung und Anwesenheitserfassung, keinen jährlichen Bundesbeitrag über 15 Jahre.",
+          "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Abgeordnetenentschädigung und Anwesenheitserfassung, keinen jährlichen Bundesbeitrag über 15 Jahre.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Daran soll sich der Bund in den\nkommenden 15 Jahren mit jeweils einer Milliarde Euro\npro Jahr beteiligen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-35b3a5177b395bd3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-393bd42c19ecb8fa",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung betrifft das Abgeordnetengesetz, nicht Höhe oder Einkommensabhängigkeit des Kindergeldes.",
+          "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelung betrifft das Abgeordnetengesetz, nicht Höhe oder Einkommensabhängigkeit des Kindergeldes.",
+            "law_passage_id": "bgbl-1-2026-211-p-eba17b213cc67b8b",
+            "law_quote": "§ 14 wird wie folgt geändert:",
+            "criterion_quote": "1. Kindergeld für alle Kinder in Höhe von 350 Euro\nmonatlich (unabhängig vom Einkommen der Eltern).",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-393bd42c19ecb8fa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-437a620c5572f184",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Abgeordnetenentschädigung und Anwesenheitserfassung, nicht Ansprüche auf Entschädigung für Aktionäre.",
+          "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "819ae601107aa22007526edd9a447f29d9c41db0011ccfbdd0942143e07f688f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Abgeordnetenentschädigung und Anwesenheitserfassung, nicht Ansprüche auf Entschädigung für Aktionäre.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Entschädigungen soll es nur für Kleinaktionäre\ngeben.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-437a620c5572f184",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-49b70d838812c69e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Abgeordnetenentschädigung und die Anwesenheitserfassung im Bundestag; ein Recht auf anonymes Bezahlen wird darin nicht verankert.",
+          "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Abgeordnetenentschädigung und die Anwesenheitserfassung im Bundestag; ein Recht auf anonymes Bezahlen wird darin nicht verankert.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bei kleinen Beträgen muss das Recht auf anonymes Bezahlen gesetzlich verankert werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-49b70d838812c69e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-49c2711e24f7d31d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Beträge der Abgeordnetenentschädigung fest; eine Festlegung des gesetzlichen Mindestlohns enthält es nicht.",
+          "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt Beträge der Abgeordnetenentschädigung fest; eine Festlegung des gesetzlichen Mindestlohns enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mit einem Mindestlohn von mindestens 15 Euro – spätestens ab 2026 16 Euro –",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-49c2711e24f7d31d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-71b32baad986b932",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Abgeordnetengesetz, nicht Artikel 3 des Grundgesetzes; eine Schutz- und Förderklausel für Betroffene rassistischer Diskriminierung wird nicht eingefügt.",
+          "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert das Abgeordnetengesetz, nicht Artikel 3 des Grundgesetzes; eine Schutz- und Förderklausel für Betroffene rassistischer Diskriminierung wird nicht eingefügt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In Artikel 3 des Grundgesetzes soll eine Schutz- und Förderklausel für von rassistischer Diskriminierung Betroffene eingefügt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-71b32baad986b932",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-97a77ae466b8d6fb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 14 des Abgeordnetengesetzes; eine Ergänzung des Artikels 3 Absatz 3 GG um das Merkmal Alter enthält es nicht.",
+          "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "40959445a05c2c4966e525548e4d967414edc2cfb646a5b209c0545bc57361d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 14 des Abgeordnetengesetzes; eine Ergänzung des Artikels 3 Absatz 3 GG um das Merkmal Alter enthält es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen Altersdiskriminierung verbieten: Artikel 3 (3) GG soll um das Merkmal Alter ergänzt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-97a77ae466b8d6fb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-abb2bc967c1e725a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift setzt die Abgeordnetenentschädigung für August und ab September 2026 fest; sie verankert kein Recht auf eine eigene Wohnung im Grundgesetz.",
+          "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift setzt die Abgeordnetenentschädigung für August und ab September 2026 fest; sie verankert kein Recht auf eine eigene Wohnung im Grundgesetz.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "In Abweichung von der Anpassung gemäß § 11 Absatz 4 des Abgeordnetengesetzes beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes für den Monat August 2026 11 336,46 Euro. Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Dies wollen wir im Grundgesetz klar verankern.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-abb2bc967c1e725a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-d21d9383c71ffe5f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift regelt die Abgeordnetenentschädigung, nicht die Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift regelt die Abgeordnetenentschädigung, nicht die Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "In Abweichung von der Anpassung gemäß § 11 Absatz 4 des Abgeordnetengesetzes beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes für den Monat August 2026 11 336,46 Euro. Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Der gesetzliche Mindestlohn muss hoch auf mindestens 15 Euro (spätestens 2026 auf 16 Euro)",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-d21d9383c71ffe5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ecf5f7e75e1b281a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift betrifft die Abgeordnetenentschädigung und regelt kein Wahlrecht für Menschen ohne deutsche Staatsangehörigkeit.",
+          "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift betrifft die Abgeordnetenentschädigung und regelt kein Wahlrecht für Menschen ohne deutsche Staatsangehörigkeit.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "In Abweichung von der Anpassung gemäß § 11 Absatz 4 des Abgeordnetengesetzes beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes für den Monat August 2026 11 336,46 Euro. Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Die Linke tritt für ein Wahlrecht auf allen Ebenen auch für Menschen ohne deutsche Staatsangehörigkeit ein, die sich seit mindestens fünf Jahren in Deutschland aufhalten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ecf5f7e75e1b281a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift setzt Beträge der Abgeordnetenentschädigung fest; sie enthält keine Karenzzeit für Regierungsmitglieder beim Wechsel in Unternehmen.",
+          "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "711bc0dca3f58a6bc992af74b842653a2cfc25b83edeb3883232566c2afef731"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift setzt Beträge der Abgeordnetenentschädigung fest; sie enthält keine Karenzzeit für Regierungsmitglieder beim Wechsel in Unternehmen.",
+            "law_passage_id": "bgbl-1-2026-211-p-07a536c2c0a46b58",
+            "law_quote": "In Abweichung von der Anpassung gemäß § 11 Absatz 4 des Abgeordnetengesetzes beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes für den Monat August 2026 11 336,46 Euro. Ab dem 1. September 2026 beträgt die Abgeordnetenentschädigung nach § 11 Absatz 1 des Abgeordnetengesetzes 11 833,47 Euro.",
+            "criterion_quote": "Bundesminister*innen und parlamentarische Staatssekretär*innen müssen nach ihrem Ausscheiden aus dem Amt mindestens drei Jahre bzw. für die Dauer des zeitlichen Anspruchs auf Übergangsgeld warten, bevor sie in Unternehmen wechseln",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-212",
@@ -118129,7 +118710,359 @@
         "linke-2025-ac-f2ea370314a14835"
       ],
       "omitted_count": 1369,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-06b2171984af8c27",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz zählt Haltbarkeit zu den üblichen Produkteigenschaften und regelt Reparaturansprüche; es führt aber keine Ökodesignvorgaben zur Lebensdauer ein. Die Haltbarkeitsregel gilt für Unternehmer-Kaufverträge erst ab dem 1. Januar 2028.",
+          "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz zählt Haltbarkeit zu den üblichen Produkteigenschaften und regelt Reparaturansprüche; es führt aber keine Ökodesignvorgaben zur Lebensdauer ein. Die Haltbarkeitsregel gilt für Unternehmer-Kaufverträge erst ab dem 1. Januar 2028.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-06b2171984af8c27",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-14fc8aae5c5fdf55",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Klarstellung zum Vorrang des Gewaltschutzes vor Umgangsregelungen.",
+          "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Klarstellung zum Vorrang des Gewaltschutzes vor Umgangsregelungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-14fc8aae5c5fdf55",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-22d34feb879d5bb2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz begründet keinen Anspruch auf ein kostenfreies Basiskonto.",
+          "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz begründet keinen Anspruch auf ein kostenfreies Basiskonto.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-22d34feb879d5bb2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert weder den gesetzlichen Mindestlohn noch legt es einen Betrag von 16 Euro fest.",
+          "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d111245fdd4248cb51ab5bef1a1c70ad3ae5ebe424aeab89624c5c641b2c612a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert weder den gesetzlichen Mindestlohn noch legt es einen Betrag von 16 Euro fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-37ac4954b51c6f32",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine langfristigen Zielvorgaben zu Umbau-Technologien oder Förderungen.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine langfristigen Zielvorgaben zu Umbau-Technologien oder Förderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-37ac4954b51c6f32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-56894c6afe566ce4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zu Reparatur und Vorsorgeverfügungen regeln keinen Sprachgebrauch dänischer Minderheiten vor Gericht.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen zu Reparatur und Vorsorgeverfügungen regeln keinen Sprachgebrauch dänischer Minderheiten vor Gericht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-56894c6afe566ce4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-919ad0cd5d28819c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine konsumfreien Begegnungsorte und regelt deren Zugänglichkeit nicht.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz schafft keine konsumfreien Begegnungsorte und regelt deren Zugänglichkeit nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-919ad0cd5d28819c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-9d62789a1416e753",
+          "disposition": "no_supported_link",
+          "rationale": "Die Gesetzesänderungen betreffen nicht die Vertretung von Naturbelangen vor Gericht.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Gesetzesänderungen betreffen nicht die Vertretung von Naturbelangen vor Gericht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-9d62789a1416e753",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Initiativrecht des Europäischen Parlaments nicht.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert das Initiativrecht des Europäischen Parlaments nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b4d467dc00f7a63a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln nicht das Recht friesischer Minderheiten, ihre Muttersprache vor Gericht zu gebrauchen.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen regeln nicht das Recht friesischer Minderheiten, ihre Muttersprache vor Gericht zu gebrauchen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b4d467dc00f7a63a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-dd5806faaeccc758",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Besetzung, Leerstand oder dauerhaftem Wohnrecht.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zu Besetzung, Leerstand oder dauerhaftem Wohnrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-dd5806faaeccc758",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-e135303f7fc91da6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Wohnungstausch und keine damit verbundenen Mietsteigerungen oder Ablehnungsgründe.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt keinen Wohnungstausch und keine damit verbundenen Mietsteigerungen oder Ablehnungsgründe.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-e135303f7fc91da6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-f2ea370314a14835",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen sehen keine Karenzzeit für ausgeschiedene Regierungsmitglieder beim Wechsel in Unternehmen vor.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen sehen keine Karenzzeit für ausgeschiedene Regierungsmitglieder beim Wechsel in Unternehmen vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-f2ea370314a14835",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-213",
@@ -122721,45 +123654,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5037,
+    "calls": 5130,
     "cache_hits": 81,
-    "subdivision_cache_hits": 4,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.700733,
-    "reported_cost_calls": 4597,
+    "reported_cost_usd": 24.927918,
+    "reported_cost_calls": 4645,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.602643,
-    "unknown_cost_calls": 440,
+    "unknown_cost_reserved_usd": 2.84799,
+    "unknown_cost_calls": 485,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 27.303376,
-    "prompt_tokens": 51392175,
-    "completion_tokens": 8192628,
+    "budget_exposure_usd": 27.775908,
+    "prompt_tokens": 51953839,
+    "completion_tokens": 8303140,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 194,
-        "reported_cost_usd": 4.737448249999998,
-        "unknown_cost_reserved_usd": 1.0130785099704553e-15,
-        "pending_reserved_usd": 5.551115123125783e-17
+        "calls": 199,
+        "reported_cost_usd": 4.880419499999998,
+        "unknown_cost_reserved_usd": 1.0685896612017132e-15,
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 75,
-        "reported_cost_usd": 0.9850437500000001,
+        "calls": 78,
+        "reported_cost_usd": 1.02244025,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1871,
-        "reported_cost_usd": 2.093771510000001,
-        "unknown_cost_reserved_usd": 1.6181668999999999,
-        "pending_reserved_usd": 5.204170427930421e-18
+        "calls": 1956,
+        "reported_cost_usd": 2.1405881175,
+        "unknown_cost_reserved_usd": 1.8635145499999992,
+        "pending_reserved_usd": 2.6020852139652106e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

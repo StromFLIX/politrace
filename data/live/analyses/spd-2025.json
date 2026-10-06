@@ -78597,7 +78597,7 @@
     {
       "law_id": "bgbl-1-2026-197",
       "analysis_sha256": "8f2cf14c9e60c777e1eb3b5ca355b9d26b2613367df9ca7e1ab5ecea6ced1e88",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -79051,6 +79051,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+          "disposition": "proposed_link",
+          "rationale": "Bei Hinweisen auf unbefugte geschäftsmäßige Hilfe in Steuersachen dürfen Finanzbehörden oder das Bundesamt für Justiz der zuständigen Steuerberaterkammer Informationen zur Prüfung möglicher Ansprüche nach dem Gesetz gegen den unlauteren Wettbewerb übermitteln. Das unterstützt eine solche Prüfung in diesem begrenzten Bereich, verpflichtet Behörden aber nicht, selbst wettbewerbsrechtliche Verstöße zu prüfen.",
+          "input_sha256": "be9a7d3194fefded0796b3637c1f2ef8f438e8efa0cc25fee437d284181e33ec",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "81a22a4625dc99bd7adf166f03149aff9ce9fed8adac7b0fc5637f280fbe3d0c"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "be9a7d3194fefded0796b3637c1f2ef8f438e8efa0cc25fee437d284181e33ec"
+            }
+          ],
+          "impact_id": "impact-eff62de0a280b53a",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.9,
+            "rationale": "Bei Hinweisen auf unbefugte geschäftsmäßige Hilfe in Steuersachen dürfen Finanzbehörden oder das Bundesamt für Justiz der zuständigen Steuerberaterkammer Informationen zur Prüfung möglicher Ansprüche nach dem Gesetz gegen den unlauteren Wettbewerb übermitteln. Das unterstützt eine solche Prüfung in diesem begrenzten Bereich, verpflichtet Behörden aber nicht, selbst wettbewerbsrechtliche Verstöße zu prüfen.",
+            "law_passage_id": "bgbl-1-2026-197-p-1677867d65c8451c",
+            "law_quote": "(3) Werden den Finanzbehörden oder dem Bundesamt für Justiz Tatsachen bekannt, die darauf hinweisen,\ndass eine Person oder Vereinigung entgegen Absatz 1 geschäftsmäßig Hilfe in Steuersachen leistet, so können\nsie der zuständigen Steuerberaterkammer diejenigen Informationen mitteilen, die zur Prüfung der Geltend­\nmachung von Ansprüchen nach den Vorschriften des Gesetzes gegen den unlauteren Wettbewerb\nerforderlich sind.",
+            "criterion_quote": "Die\nzuständigen Behörden sollen prüfen, ob es zu wettbewerbsrechtlichen Verstößen kommt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a088ae44d91fae50",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Passagen regeln steuerberatungsrechtliche und steuerliche Fragen; sie enthalten keine Regelung, öffentliche Investitionen rasch zu tätigen oder einen Investitionsstau abzubauen.",
@@ -79186,13 +79218,148 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cc6d89d4360105bb",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften belegen weder eine Einladung zu einem Praxisgipfel noch dort vereinbarte Bürokratieabbau-Maßnahmen.",
+          "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften belegen weder eine Einladung zu einem Praxisgipfel noch dort vereinbarte Bürokratieabbau-Maßnahmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cc6d89d4360105bb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift zur Hilfe im Familienleistungsausgleich erlaubt steuerliche Beratung; sie ordnet keine automatische Anspruchsprüfung oder Gewährung von Kindergeld an.",
+          "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschrift zur Hilfe im Familienleistungsausgleich erlaubt steuerliche Beratung; sie ordnet keine automatische Anspruchsprüfung oder Gewährung von Kindergeld an.",
+            "law_passage_id": "bgbl-1-2026-197-p-3ee6a7ddcba2527a",
+            "law_quote": "beim Familienleistungsausgleich im Sinne des Einkommensteuergesetzes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung, nach der Leistungsanträge automatisch gestellt oder Leistungen automatisch ausgezahlt werden.",
+          "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung, nach der Leistungsanträge automatisch gestellt oder Leistungen automatisch ausgezahlt werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d5ba1591ee85e1aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zur Steuerberatung schaffen keine eigenständige Rechtsform für treuhänderische Unternehmensnachfolge im Mittelstand.",
+          "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zur Steuerberatung schaffen keine eigenständige Rechtsform für treuhänderische Unternehmensnachfolge im Mittelstand.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d5ba1591ee85e1aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen keine Anerkennungsverfahren für ausländische Abschlüsse oder Qualifikationen.",
+          "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f772a1437e39807df3603bdf01a5e047f12d9360802f432ed13bff9093c37dab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen keine Anerkennungsverfahren für ausländische Abschlüsse oder Qualifikationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
         }
       ]
     },
     {
       "law_id": "bgbl-1-2026-198",
       "analysis_sha256": "a22911fa840b1de711f2b208b1ac1c6a034691156327b2ce7a9470be59a570fd",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -79409,6 +79576,38 @@
             ],
             "criterion_id": "spd-2025-ac-49f9dbec2f137c17",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4b4cafce9684c587",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Juli 2027 kann das Gericht zur Kontrolle bestimmter Gewaltschutzanordnungen eine elektronische Aufenthaltsüberwachung des Täters anordnen, wenn sie unerlässlich ist. Damit wird eine Rechtsgrundlage für diese Schutzmaßnahme geschaffen.",
+          "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cbdb8ca54eef66497ba368f6cfb25649c10a8393f52159dbe94d826f0ee78486"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "796de7d7ab760f969954649520c7c3c08cb03686b49e155b18ac9471dac5bc5c"
+            }
+          ],
+          "impact_id": "impact-2b18773fe0f926ea",
+          "judgment": {
+            "supported": true,
+            "score": 2,
+            "confidence": 0.99,
+            "rationale": "Ab 1. Juli 2027 kann das Gericht zur Kontrolle bestimmter Gewaltschutzanordnungen eine elektronische Aufenthaltsüberwachung des Täters anordnen, wenn sie unerlässlich ist. Damit wird eine Rechtsgrundlage für diese Schutzmaßnahme geschaffen.",
+            "law_passage_id": "bgbl-1-2026-198-p-f2112c62f263dc53",
+            "law_quote": "„Ordnet das Gericht eine Maßnahme nach Satz 3 Nummer 1, 2, 3 oder 5 an, kann es ferner die\nelektronische Aufenthaltsüberwachung unter den Voraussetzungen von § 1a anordnen.“",
+            "criterion_quote": "Maßnahmen wie elektronische Fußfesseln, verpflichtende\nAnti-Gewalt-Trainings für Täter und Aufenthaltsverbote sowie Hausarreste bieten besseren Schutz vor\nTätern und ermöglichen eine engmaschigere Überwachung in Gefahrensituationen. Hierfür passen\nwir die einschlägigen Rechtsgrundlagen an.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4b4cafce9684c587",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -79668,7 +79867,7 @@
     {
       "law_id": "bgbl-1-2026-199",
       "analysis_sha256": "d88ef119813788a79d7dec85139c2ff981c88f561fa4aed417223c0d488ac240",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -80153,6 +80352,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-ec20adf678c0cfac",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f4c5c9cc3ff714e7",
+          "disposition": "missing_context",
+          "rationale": "Die Vorschrift lässt automatisierte Abrufe personenbezogener Daten nur für vollzugspolizeiliche Aufgaben und unter weiteren Voraussetzungen zu. Wer abrufen darf und welche Bedingungen § 12 Absatz 2 bis 4 festlegt, geht aus den vorliegenden Auszügen nicht hervor. Daher lässt sich die digitale Bereitstellung an relevante Behörden nicht beurteilen.",
+          "input_sha256": "ae0d7e88f3e25ae0bd2532b0eff8290054ec8ca3515940bc53d4767c1c4c5e89",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6e9174a8a46d388a737b0bd7d6ebf0e3c4a9ffc6e08f0f39851b96e56ed5b5c2"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ae0d7e88f3e25ae0bd2532b0eff8290054ec8ca3515940bc53d4767c1c4c5e89"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Die Vorschrift lässt automatisierte Abrufe personenbezogener Daten nur für vollzugspolizeiliche Aufgaben und unter weiteren Voraussetzungen zu. Wer abrufen darf und welche Bedingungen § 12 Absatz 2 bis 4 festlegt, geht aus den vorliegenden Auszügen nicht hervor. Daher lässt sich die digitale Bereitstellung an relevante Behörden nicht beurteilen.",
+            "law_passage_id": "bgbl-1-2026-199-p-f15d76a921dc1de4",
+            "law_quote": "Die Einrichtung eines automatisierten Verfahrens für die Übermittlung von personenbezogenen Daten durch\nAbruf aus dem Informationssystem ist unter Beachtung des § 12 Absatz 2 bis 4 nur zur Erfüllung vollzugs­\npolizeilicher Aufgaben zulässig, soweit diese Form der Datenübermittlung unter Berücksichtigung der\nschutzwürdigen Interessen der betroffenen Personen wegen der Vielzahl der Übermittlungen oder wegen\nihrer besonderen Eilbedürftigkeit angemessen ist.",
+            "criterion_quote": "allen relevanten Behörden digital bereitgestellt.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f4c5c9cc3ff714e7",
+            "disposition": "missing_context"
           },
           "verification": null
         }
@@ -82089,7 +82320,7 @@
     {
       "law_id": "bgbl-1-2026-210a",
       "analysis_sha256": "5549c36017222fd3a6156e16cbb5875bb1bf393d01a6715527f102df0e37ddf2",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0229ee4b51a1790b",
@@ -82536,13 +82767,1309 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt einen Kapazitätsmarkt für Strom ein; eine Weiterentwicklung der KI-Strategie oder ein Schwerpunkt auf systemischen Innovationen ist nicht geregelt.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt einen Kapazitätsmarkt für Strom ein; eine Weiterentwicklung der KI-Strategie oder ein Schwerpunkt auf systemischen Innovationen ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-398cb7ec4a25bcd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-39bd0950f36ec91e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt neue Stromkapazitäten, aber keine Senkung der durchschnittlichen Belastung von Haushalten und Unternehmen auf die Hälfte.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt neue Stromkapazitäten, aber keine Senkung der durchschnittlichen Belastung von Haushalten und Unternehmen auf die Hälfte.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-39bd0950f36ec91e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3db2b917a979fcf2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Terminvergabe oder zu Unterschieden zwischen gesetzlich und privat Versicherten.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Terminvergabe oder zu Unterschieden zwischen gesetzlich und privat Versicherten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3db2b917a979fcf2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3eb39c1f346d1abe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften über einen Stromkapazitätsmarkt schaffen keine EU-Eigenmittel und regeln keine entsprechenden Einnahmen der EU.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften über einen Stromkapazitätsmarkt schaffen keine EU-Eigenmittel und regeln keine entsprechenden Einnahmen der EU.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3eb39c1f346d1abe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3fe78ed2f5d9bc46",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder die automatische Beantragung noch die automatische Auszahlung von Sozial- oder anderen Leistungen.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder die automatische Beantragung noch die automatische Auszahlung von Sozial- oder anderen Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3fe78ed2f5d9bc46",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Stromkapazitäten, nicht Mietverträge, die Mietpreisbremse oder die Erstattung von WG-Mietdifferenzen.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Stromkapazitäten, nicht Mietverträge, die Mietpreisbremse oder die Erstattung von WG-Mietdifferenzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-429dc4e125b148f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4f5210a65f0e3f11",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur europäischen Rüstungsexportpolitik oder zu deren gemeinsamen Werten und Prioritäten.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur europäischen Rüstungsexportpolitik oder zu deren gemeinsamen Werten und Prioritäten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4f5210a65f0e3f11",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-56ddabcf4a1ed9fc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ergänzt den CBAM nicht um eine Exportförderung und regelt keine entsprechende Förderung.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ergänzt den CBAM nicht um eine Exportförderung und regelt keine entsprechende Förderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-56ddabcf4a1ed9fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-580ef554c0e219b0",
+          "disposition": "no_supported_link",
+          "rationale": "Netzentgelte werden in einer Berechnungsformel als Kostenbestandteil erwähnt; eine Begrenzung oder Zusage gegen weitere Erhöhungen enthält das Gesetz nicht.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Netzentgelte werden in einer Berechnungsformel als Kostenbestandteil erwähnt; eine Begrenzung oder Zusage gegen weitere Erhöhungen enthält das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-580ef554c0e219b0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5b5492b30d6ff444",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Einkommensteuern und regelt keine Entlastung für 95 Prozent der Steuerzahlenden.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Einkommensteuern und regelt keine Entlastung für 95 Prozent der Steuerzahlenden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5b5492b30d6ff444",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-63ba0af2dcc5d25b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft einen Kapazitätsmarkt für Strom; einen tatsächlichen Ausbau von Ladeinfrastruktur für Pkw oder Lkw regelt es nicht.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft einen Kapazitätsmarkt für Strom; einen tatsächlichen Ausbau von Ladeinfrastruktur für Pkw oder Lkw regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-63ba0af2dcc5d25b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6caae85da50102af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Deckelung der Übertragungsnetzentgelte; die Erwähnung dynamischer Netzentgelte in einer Berechnungsformel begrenzt deren Höhe nicht.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Deckelung der Übertragungsnetzentgelte; die Erwähnung dynamischer Netzentgelte in einer Berechnungsformel begrenzt deren Höhe nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6caae85da50102af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6caeec99a0bddca2",
+          "disposition": "no_supported_link",
+          "rationale": "Die geregelten Voraussetzungen für Stromkapazitäten betreffen keine Kreditobergrenzen oder Ausnahmen für Zukunftsinvestitionen in der Schuldenregel.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die geregelten Voraussetzungen für Stromkapazitäten betreffen keine Kreditobergrenzen oder Ausnahmen für Zukunftsinvestitionen in der Schuldenregel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6caeec99a0bddca2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-6f45fcdd8dbe7b83",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Förderungen für den Heizungstausch noch gezielte Hilfen, wenn Wärmenetze oder ÖPNV nicht ausreichen.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Förderungen für den Heizungstausch noch gezielte Hilfen, wenn Wärmenetze oder ÖPNV nicht ausreichen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-6f45fcdd8dbe7b83",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kapazitätsvergütungen des Gesetzes betreffen Stromanlagen; eine Förderung für den Umstieg in jeweils benötigter Höhe wird nicht geregelt.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Kapazitätsvergütungen des Gesetzes betreffen Stromanlagen; eine Förderung für den Umstieg in jeweils benötigter Höhe wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-71be14145c1ac9e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-73736d7b2ec383b6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt einen Kapazitätsmarkt, ändert aber nicht die Defizitregel oder deren Flexibilität.",
+          "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a78a572cc44dd145821ce9aefde7fd3841cf8cdf96b32fa48377dcaa0aaa417c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt einen Kapazitätsmarkt, ändert aber nicht die Defizitregel oder deren Flexibilität.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-73736d7b2ec383b6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Stromkapazitätsausschreibungen; eine Strafbarkeit sexueller Handlungen oder Änderungen des Sexualstrafrechts sind nicht belegt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Regelungen betreffen Stromkapazitätsausschreibungen; eine Strafbarkeit sexueller Handlungen oder Änderungen des Sexualstrafrechts sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jede ohne eindeutiges Einverständnis vorgenommene sexuelle Handlung muss unter\nStrafe gestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-788ade36dc9d7d64",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln Kapazitätsausschreibungen, nicht eine Entlastung energieintensiver Großabnehmer ohne Flexibilisierungspotenzial.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.87,
+            "rationale": "Die Auszüge regeln Kapazitätsausschreibungen, nicht eine Entlastung energieintensiver Großabnehmer ohne Flexibilisierungspotenzial.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dazu gehört\nauch, die energieintensiven Großabnehmer ohne Flexibilisierungspotenzial wie bisher zu entlasten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-788ade36dc9d7d64",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-78abc7c22d309a55",
+          "disposition": "no_supported_link",
+          "rationale": "Erwähnt wird die nutzbare Speicherkapazität einer Stromspeicheranlage; der Aufbau von Wasserstoffspeichern ist damit nicht geregelt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Erwähnt wird die nutzbare Speicherkapazität einer Stromspeicheranlage; der Aufbau von Wasserstoffspeichern ist damit nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-210a-p-71a1cc184c0a047e",
+            "law_quote": "bei einer Stromspeicheranlage die nutzbare Speicherkapazität in Megawattstunden",
+            "criterion_quote": "Gleichzeitig müssen ausreichende Speicherkapazitäten,\netwa im Rahmen einer nationalen Wasserstoffreserve, aufgebaut werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-78abc7c22d309a55",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7c66f4dad87f9bbf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Stromkapazitäten und Ausschreibungen; eine Mietobergrenze für angespannte Wohnungsmärkte ist nicht belegt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen Stromkapazitäten und Ausschreibungen; eine Mietobergrenze für angespannte Wohnungsmärkte ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dass in Gebieten mit angespanntem Wohnungsmarkt nur eine maximale Mietsteigerung von sechs\nProzent in drei Jahren bis zur ortsüblichen Vergleichsmiete gestattet ist.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7c66f4dad87f9bbf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-847770ba14936ced",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Regelung zu Eigenanteilen in der stationären Langzeitpflege oder einem Pflegekosten-Deckel.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Auszüge enthalten keine Regelung zu Eigenanteilen in der stationären Langzeitpflege oder einem Pflegekosten-Deckel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die hohen **Eigenanteile bei den Pflegekosten** in der stationären\nLangzeitpflege wollen wir durch eine **Begrenzung auf 1.000 Euro pro Monat** (sogenannter\n**Pflegekosten-Deckel** ) maßgeblich reduzieren.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-847770ba14936ced",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9005f24f4b3d5117",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge schaffen kein Förderangebot für den Umstieg auf klimafreundliche Technologien und enthalten keine Vorrangregel für Personen mit geringem finanziellen Spielraum.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge schaffen kein Förderangebot für den Umstieg auf klimafreundliche Technologien und enthalten keine Vorrangregel für Personen mit geringem finanziellen Spielraum.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Geld vom Staat bekommen vor allem\ndiejenigen, die sich den Umstieg auf klimafreundliche Technologien wie eine Wärmepumpe oder\nein E-Auto ansonsten nicht leisten können.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9005f24f4b3d5117",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-90557b5434eb3a4f",
+          "disposition": "no_supported_link",
+          "rationale": "Die genannten Mindestinvestitionen gelten für bezuschlagte Kapazitätsanlagen; eine Steuererstattung von zehn Prozent für Maschinen oder Geräte ist nicht belegt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die genannten Mindestinvestitionen gelten für bezuschlagte Kapazitätsanlagen; eine Steuererstattung von zehn Prozent für Maschinen oder Geräte ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-210a-p-069f259ab8836437",
+            "law_quote": "Im Fall eines Verpflichtungszeitraums von 7 oder 15 Jahren hat der Bieter nach erteiltem Zuschlag bis zum\nAbschluss der vorläufigen Präqualifizierung nach Abschnitt 8 folgende Mindestinvestition in die gebotsgegen­ständliche Anlage zu tätigen:",
+            "criterion_quote": "Jede Betriebs- bzw. Unternehmensinvestition in Maschinen und Geräte (aus den sogenannten\nAusrüstungsinvestitionen) soll mit 10 Prozent der Anschaffungssumme direkt und unkompliziert über\neine Steuererstattung gefördert werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-90557b5434eb3a4f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9451410df724f54b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge regeln Kapazitätsausschreibungen; eine Ausweitung des Just Transition Fund auf Industrieregionen ist nicht belegt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge regeln Kapazitätsausschreibungen; eine Ausweitung des Just Transition Fund auf Industrieregionen ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Den Just Transition Fund werden wir auf alle Industrieregionen ausweiten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9451410df724f54b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9526f8e2dec4d1ab",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetzesmaterial belegt weder die Unterstützung noch die Initiierung zusätzlicher Formate; dafür fehlen Angaben zu konkreten Aktivitäten.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetzesmaterial belegt weder die Unterstützung noch die Initiierung zusätzlicher Formate; dafür fehlen Angaben zu konkreten Aktivitäten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen weitere Formate initiieren und unterstützen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9526f8e2dec4d1ab",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Auszüge enthalten keine Änderung des Artikels 3 Absatz 3 GG und keine Ergänzung geschützter Merkmale.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine Änderung des Artikels 3 Absatz 3 GG und keine Ergänzung geschützter Merkmale.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen den **Schutz vor Diskriminierung im Grundgesetz (GG) explizit auf sexuelle Orientierung**\n**und geschlechtliche Identität erweitern** . Artikel 3 Abs. 3 GG werden wir daher entsprechend\nerweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Stromkapazitäten; ein Log-in-Verfahren zur Erfassung von IP-Adressen und Ermittlung von Stammdaten ist nicht belegt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen Stromkapazitäten; ein Log-in-Verfahren zur Erfassung von IP-Adressen und Ermittlung von Stammdaten ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ergänzend setzen wir dabei auf die **Log-in-**\n**Falle**, die bei der Anmeldung an einem verdächtigen Benutzerkonto die IP-Adresse erfasst, wodurch\nper Justiz-Schnittstellen Stammdaten ermittelt werden können – selbstverständlich unter strikter\nWahrung der Grundrechte und des Datenschutzes.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-9b280adb5c71a870",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen keine Erweiterung des Kreises von Unternehmen mit Anspruch auf reduzierte Netzentgelte; dafür fehlen die einschlägigen Netzentgeltregelungen.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Die Auszüge belegen keine Erweiterung des Kreises von Unternehmen mit Anspruch auf reduzierte Netzentgelte; dafür fehlen die einschlägigen Netzentgeltregelungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Darüber hinaus setzen wir uns dafür ein, dass ein größerer Kreis besonders stromintensiver\nUnternehmen von den bestehenden Regeln **reduzierter Netzentgelte** profitieren kann.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9b280adb5c71a870",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a2cd618670f68982",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetzesmaterial dokumentiert keine Abstimmung der SPD über eine Zentralisierung der EU-Kohäsionspolitik; dafür wären Abstimmungsdaten erforderlich.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetzesmaterial dokumentiert keine Abstimmung der SPD über eine Zentralisierung der EU-Kohäsionspolitik; dafür wären Abstimmungsdaten erforderlich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Einer Zentralisierung der\nKohäsionspolitik werden wir nicht zustimmen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a2cd618670f68982",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge enthalten keine offizielle Stellungnahme oder Handlung der SPD zu Verhandlungen mit der britischen Regierung.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Auszüge enthalten keine offizielle Stellungnahme oder Handlung der SPD zu Verhandlungen mit der britischen Regierung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Basierend auf der deutsch-britischen Vereinbarung über Verteidigungspolitik (Trinity-HouseVereinbarung) werden wir die Verhandlungen zu einem umfassenden bilateralen Abkommen mit\nder britischen Regierung unterstützen, welches unsere Beziehungen mit London breiter aufstellt und\nintensiviert – von Bildung über Wirtschaft bis zu Sicherheitsfragen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a3e9c4d7f5b9050d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a4f1d212ff3d87df",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetzesmaterial belegt weder die Initiierung noch die Durchführung zusätzlicher Formate; dazu fehlen Angaben zu konkreten Aktivitäten.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetzesmaterial belegt weder die Initiierung noch die Durchführung zusätzlicher Formate; dazu fehlen Angaben zu konkreten Aktivitäten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen weitere Formate initiieren und unterstützen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a4f1d212ff3d87df",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Mindestinvestitionen betreffen bezuschlagte Anlagen und private Bieter; rasche öffentliche Investitionen zur Auflösung des Investitionsstaus sind damit nicht belegt.",
+          "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef9aab9f2560045790c8b7e6d8f3ac0aa910827c5dac90fe7b2a84791b66f24e"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Mindestinvestitionen betreffen bezuschlagte Anlagen und private Bieter; rasche öffentliche Investitionen zur Auflösung des Investitionsstaus sind damit nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-210a-p-069f259ab8836437",
+            "law_quote": "Im Fall eines Verpflichtungszeitraums von 7 oder 15 Jahren hat der Bieter nach erteiltem Zuschlag bis zum\nAbschluss der vorläufigen Präqualifizierung nach Abschnitt 8 folgende Mindestinvestition in die gebotsgegen­ständliche Anlage zu tätigen:",
+            "criterion_quote": "Die\nerforderlichen öffentlichen Investitionen müssen rasch getätigt werden, damit der vorhandene\nInvestitionsstau aufgelöst wird und um bessere Voraussetzungen für private Investitionen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a809d6ff7146f0e4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aa8860cfdaa9ef81",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln Ausschreibungen für Stromkapazitäten; eine Entwicklungsstandsfeststellung bei Kindern ist darin nicht vorgesehen.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln Ausschreibungen für Stromkapazitäten; eine Entwicklungsstandsfeststellung bei Kindern ist darin nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aa8860cfdaa9ef81",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Stromkapazitäten und enthalten keine Regel zu EU-Beitritten oder den Kopenhagener Kriterien.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Stromkapazitäten und enthalten keine Regel zu EU-Beitritten oder den Kopenhagener Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften regeln Stromkapazitäten; zusätzliche oder frei verteilbare Elterngeldmonate werden nicht behandelt.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften regeln Stromkapazitäten; zusätzliche oder frei verteilbare Elterngeldmonate werden nicht behandelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ab287b99ec54959e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Stromkapazitäten und ändern die strafrechtliche Regelung von Schwangerschaftsabbrüchen nicht.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Stromkapazitäten und ändern die strafrechtliche Regelung von Schwangerschaftsabbrüchen nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b54120e0d31ccd0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b739339dbb65b45e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift zur Klimaneutralität betrifft bestimmte gebotsgegenständliche Stromanlagen ab 2045, nicht technische Unterstützung für kommunale Wärmeversorgung.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift zur Klimaneutralität betrifft bestimmte gebotsgegenständliche Stromanlagen ab 2045, nicht technische Unterstützung für kommunale Wärmeversorgung.",
+            "law_passage_id": "bgbl-1-2026-210a-p-1e9449eac1c6614b",
+            "law_quote": "Bei einem Verpflichtungszeitraum von 15 Jahren muss der Kapazitätsverpflichtete die gebotsgegenständliche Anlage spätestens ab dem Jahr 2045 klimaneutral betreiben.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b739339dbb65b45e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b8f0c47d7e6ae394",
+          "disposition": "no_supported_link",
+          "rationale": "Die Klimaneutralitätsanforderung gilt für gebotsgegenständliche Stromanlagen mit 15-jährigem Verpflichtungszeitraum ab 2045; kommunale Fördermittel für Wärmeversorgung sieht der Auszug nicht vor.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Klimaneutralitätsanforderung gilt für gebotsgegenständliche Stromanlagen mit 15-jährigem Verpflichtungszeitraum ab 2045; kommunale Fördermittel für Wärmeversorgung sieht der Auszug nicht vor.",
+            "law_passage_id": "bgbl-1-2026-210a-p-1e9449eac1c6614b",
+            "law_quote": "Bei einem Verpflichtungszeitraum von 15 Jahren muss der Kapazitätsverpflichtete die gebotsgegenständliche Anlage spätestens ab dem Jahr 2045 klimaneutral betreiben.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b8f0c47d7e6ae394",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c016673669030481",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Ausschreibungen und Verpflichtungen für Stromkapazitäten, nicht die Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln Ausschreibungen und Verpflichtungen für Stromkapazitäten, nicht die Entfernung von Verfassungsfeinden aus dem Staatsdienst.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c016673669030481",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c242913d648b92fd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Stromkapazitäten; eine Festlegung zur Höhe des gesetzlichen Mindestlohns oder zum mittleren Einkommen enthält der Auszug nicht.",
+          "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d16d2af6357ce5b56867271f5afeed253d2993c2c80e1a81c1152b249f68a723"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Stromkapazitäten; eine Festlegung zur Höhe des gesetzlichen Mindestlohns oder zum mittleren Einkommen enthält der Auszug nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c242913d648b92fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c2a4e22a2a0ec012",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln Stromkapazitäten und Ausschreibungen; Fördermaßnahmen für kommunale Wärmepläne sind darin nicht belegt.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften regeln Stromkapazitäten und Ausschreibungen; Fördermaßnahmen für kommunale Wärmepläne sind darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c2a4e22a2a0ec012",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ca8ad3518f880846",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Stromversorgungskapazitäten; Unterstützung für eine nachhaltige und widerstandsfähige Umstellung von Agrarsystemen ist nicht belegt.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen Stromversorgungskapazitäten; Unterstützung für eine nachhaltige und widerstandsfähige Umstellung von Agrarsystemen ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ca8ad3518f880846",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur eigenständigen Prüfung oder antragslosen Gewährung von Kindergeld oder vergleichbaren Leistungen.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Regelung zur eigenständigen Prüfung oder antragslosen Gewährung von Kindergeld oder vergleichbaren Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine automatische Antragstellung oder Auszahlung von Leistungen.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine automatische Antragstellung oder Auszahlung von Leistungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e3dc89bfc4ce415c",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften setzen keine Preise für öffentliches Laden fest und vergleichen diese nicht mit Tankkosten.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften setzen keine Preise für öffentliches Laden fest und vergleichen diese nicht mit Tankkosten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e3dc89bfc4ce415c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ecc6dd3e59fe0630",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften erkennen bestimmte Investitionen in Stromerzeugungs- und Kapazitätsanlagen an; eine Ausrichtung dieser Investitionen auf Klimaschutz ist nicht belegt.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Vorschriften erkennen bestimmte Investitionen in Stromerzeugungs- und Kapazitätsanlagen an; eine Ausrichtung dieser Investitionen auf Klimaschutz ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ecc6dd3e59fe0630",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f4c5c9cc3ff714e7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften sehen eine Datenbereitstellung auf Verlangen für die Kapazitätsermittlung und eine Internetplattform für Präqualifizierung und Ausschreibungen vor; eine digitale Bereitstellung an alle relevanten Behörden ist damit nicht belegt.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Vorschriften sehen eine Datenbereitstellung auf Verlangen für die Kapazitätsermittlung und eine Internetplattform für Präqualifizierung und Ausschreibungen vor; eine digitale Bereitstellung an alle relevanten Behörden ist damit nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f4c5c9cc3ff714e7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6065a3c58367c99",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften führen keine Zusammenfassung oder Abstimmung sozialer oder sonstiger Verwaltungsleistungen ein.",
+          "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf37237020c5d9d622d7077bb3fb47d9532e21ca9c35d4d051b43ccf778165"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften führen keine Zusammenfassung oder Abstimmung sozialer oder sonstiger Verwaltungsleistungen ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6065a3c58367c99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
         }
       ]
     },
     {
       "law_id": "bgbl-1-2026-211",
       "analysis_sha256": "5b5516f32623c2e08ac47d62e47ef3183d7fa8e7c30a29ec482f5370a1d559b0",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0c35d43f18d7353f",
@@ -82559,12 +84086,337 @@
         "spd-2025-ac-f6a98f03441c1607"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln Abgeordnetenentschädigung und Anwesenheit im Bundestag; eine Verlängerung des Umwandlungsverbots ist nicht belegt.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Bestimmungen regeln Abgeordnetenentschädigung und Anwesenheit im Bundestag; eine Verlängerung des Umwandlungsverbots ist nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Möglichkeit zum Verbot der Umwandlung von Miet- in Eigentumswohnungen im BauGB wollen wir über 2025 hinaus verlängern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0c35d43f18d7353f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Abgeordnetenentschädigung und Anwesenheit im Bundestag, nicht die Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft die Abgeordnetenentschädigung und Anwesenheit im Bundestag, nicht die Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dementsprechend muss der Mindestlohn spätestens ab 2026 bei 15 Euro liegen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-353b131f40efca78",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Abgeordnete; ein Verfahren für Angebote an Bürgergeldbeziehende enthalten sie nicht.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen betreffen Abgeordnete; ein Verfahren für Angebote an Bürgergeldbeziehende enthalten sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jede Bürgerin und jeder Bürger hat das Recht auf Arbeit. Deshalb soll jeder Bürgergeldbezieher ein passendes Angebot erhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-353b131f40efca78",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Abgeordnetengesetz; eine Umsetzung der EU-Entgelttransparenzrichtlinie ist darin nicht belegt.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen das Abgeordnetengesetz; eine Umsetzung der EU-Entgelttransparenzrichtlinie ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "deswegen die EU-Entgelttransparenzrichtlinie bis 2026 in nationales Recht umsetzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Regelungen zur Abgeordnetenentschädigung und Anwesenheit, nicht die Durchführung einer Bürokratieabbaukonferenz.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Regelungen zur Abgeordnetenentschädigung und Anwesenheit, nicht die Durchführung einer Bürokratieabbaukonferenz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Um weitere konkrete Möglichkeiten des Bürokratieabbaus zu ermitteln, wird ein sozialdemokratischer Bundeskanzler eine Konferenz mit Vertreterinnen und Vertretern von Wirtschaft und Verwaltung durchführen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-545f75b76dd3ad7d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen des Abgeordnetengesetzes ändern Artikel 3 Absatz 3 GG nicht und ergänzen die dort genannten Merkmale nicht.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen des Abgeordnetengesetzes ändern Artikel 3 Absatz 3 GG nicht und ergänzen die dort genannten Merkmale nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen den Schutz vor Diskriminierung im Grundgesetz (GG) explizit auf sexuelle Orientierung und geschlechtliche Identität erweitern. Artikel 3 Abs. 3 GG werden wir daher entsprechend erweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ändern Anwesenheitsbestimmungen für Bundestagsmitglieder; Gesetzesprüfungen auf die vier genannten Aspekte sind nicht belegt.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen ändern Anwesenheitsbestimmungen für Bundestagsmitglieder; Gesetzesprüfungen auf die vier genannten Aspekte sind nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden alle neuen Gesetze und größeren Novellierungen vor Verabschiedung auf Wirksamkeit, Bürgernähe, Praxistauglichkeit und Digitaltauglichkeit testen",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bd67981b2fd165e8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-bee474ad7385688c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Elterngeldanspruch von Elternteilen.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zum Elterngeldanspruch von Elternteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Modell beim Elterngeld, nach dem jeder Elternteil Anspruch auf 6 Monate Elterngeld erhält",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-bee474ad7385688c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c1734e184bf6d191",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Abgeordnetenentschädigung und Anwesenheit, nicht Elterngeldmonate oder deren Übertragbarkeit.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen betreffen Abgeordnetenentschädigung und Anwesenheit, nicht Elterngeldmonate oder deren Übertragbarkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jeder Elternteil soll Anspruch auf sechs nicht übertragbare Monate Elterngeld erhalten.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c1734e184bf6d191",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c79f5759dd2378e1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt keinen Mindestlohn fest; es regelt unter anderem die Abgeordnetenentschädigung für 2026.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz setzt keinen Mindestlohn fest; es regelt unter anderem die Abgeordnetenentschädigung für 2026.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "15 Euro Mindestlohn.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c79f5759dd2378e1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cabc62e75ea294b2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen ändern das Grundgesetz nicht und verankern Sport nicht als Staatsziel.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Regelungen ändern das Grundgesetz nicht und verankern Sport nicht als Staatsziel.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen Sport als Staatsziel im Grundgesetz verankern, um mit der Kraft des Sports Gesundheit, soziale Teilhabe, Inklusion und Integration zu stärken.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cabc62e75ea294b2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Außen- oder Entwicklungspolitik.",
+          "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "087dab704598cd090eea5fc5cce67987d867a281cfa39138a770b905f200470d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Außen- oder Entwicklungspolitik.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden eine feministische Außen- und Entwicklungspolitik fortführen, die der Überzeugung folgt, dass alle Menschen die gleichen Rechte, Freiheiten und Möglichkeiten unabhängig vom Geschlecht und von sexueller Orientierung besitzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f6a98f03441c1607",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-212",
       "analysis_sha256": "92c9425faa7c8d89218ba039ef10aab7460ad1ae4248cf305c217a10077060bc",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-0229ee4b51a1790b",
@@ -82581,7 +84433,332 @@
         "spd-2025-ac-cf136cd05cc9ce44"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Reparatur- und Vorsorgeregelungen führen keine Verpflichtung privater Waren- und Dienstleistungsanbieter zum Barriereabbau ein.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Reparatur- und Vorsorgeregelungen führen keine Verpflichtung privater Waren- und Dienstleistungsanbieter zum Barriereabbau ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0229ee4b51a1790b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025194af967aeca7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Genehmigungsfiktion für Anträge bei ausbleibender Behördenreaktion.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Genehmigungsfiktion für Anträge bei ausbleibender Behördenreaktion.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025194af967aeca7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz prüft oder erweitert keine kommunalen Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz prüft oder erweitert keine kommunalen Befugnisse zum Abbrennen von Feuerwerkskörpern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen keinen Besitzstandsschutz für bereits länger stationär gepflegte Menschen.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen keinen Besitzstandsschutz für bereits länger stationär gepflegte Menschen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3ca72f42f576b1fe",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3e7a2e6fac02e24f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Erklärung oder Regelung zu öffentlichen Entwicklungsleistungen gegenüber Partnern oder dem G7-Kreis.",
+          "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ba51660f0fd975c2669cc6a9b8145160430660779f555c103e0f545f5004271"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Erklärung oder Regelung zu öffentlichen Entwicklungsleistungen gegenüber Partnern oder dem G7-Kreis.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3e7a2e6fac02e24f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-5520d61e92229eef",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Reparatur- und Kaufrecht, nicht gemeinsame längerfristige Arzneimitteleinkäufe durch Krankenkassen.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Reparatur- und Kaufrecht, nicht gemeinsame längerfristige Arzneimitteleinkäufe durch Krankenkassen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Außerdem wollen wir für eine **stärkere Produktion**\n**von Arzneimitteln in Deutschland und Europa** sorgen: Krankenkassen sollen zusammen mit anderen\nnationalen und europäischen Akteuren größere Mengen an Therapien über längere Zeiträume\neinkaufen dürfen, wenn diese bei uns hergestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-5520d61e92229eef",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine strafrechtliche Regelung zu sexuellen Handlungen oder Einverständnis.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine strafrechtliche Regelung zu sexuellen Handlungen oder Einverständnis.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jede ohne eindeutiges Einverständnis vorgenommene sexuelle Handlung muss unter\nStrafe gestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-7622c8b9b7ac3098",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das BGB, das EGBGB und die Bundesnotarordnung; Artikel 3 Absatz 3 GG wird nicht geändert.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das BGB, das EGBGB und die Bundesnotarordnung; Artikel 3 Absatz 3 GG wird nicht geändert.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen den **Schutz vor Diskriminierung im Grundgesetz (GG) explizit auf sexuelle Orientierung**\n**und geschlechtliche Identität erweitern** . Artikel 3 Abs. 3 GG werden wir daher entsprechend\nerweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft kein Verfahren zur Erfassung von IP-Adressen oder zur Ermittlung von Stammdaten bei verdächtigen Konten.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft kein Verfahren zur Erfassung von IP-Adressen oder zur Ermittlung von Stammdaten bei verdächtigen Konten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Ergänzend setzen wir dabei auf die **Log-in-**\n**Falle**, die bei der Anmeldung an einem verdächtigen Benutzerkonto die IP-Adresse erfasst, wodurch\nper Justiz-Schnittstellen Stammdaten ermittelt werden können – selbstverständlich unter strikter\nWahrung der Grundrechte und des Datenschutzes.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-96ff14438dc30e67",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu EU-Beitritten oder den Kopenhagener Kriterien.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu EU-Beitritten oder den Kopenhagener Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die\n**Kopenhagener Kriterien** müssen immer erfüllt sein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-aafb0797c80bd107",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-b2a157060443f437",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stärkt einzelne Verbraucherrechte bei Reparaturen, legt aber keine Priorität für den Verbraucherschutz in der Wettbewerbsaufsicht fest.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz stärkt einzelne Verbraucherrechte bei Reparaturen, legt aber keine Priorität für den Verbraucherschutz in der Wettbewerbsaufsicht fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Verbraucherinnen und Verbraucher benötigen handlungsfähige\nMarktaufsichtsbehörden und eine Wettbewerbsaufsicht an ihrer Seite, die den Verbraucherschutz\nan die erste Stelle setzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-b2a157060443f437",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur automatischen Ermittlung oder Gewährung von Sozialleistungen wie Kindergeld.",
+          "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d9a664d5aa07452e0ef78e72bf10d238b7e78351fc02d4d6193d284579572c15"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur automatischen Ermittlung oder Gewährung von Sozialleistungen wie Kindergeld.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Leistungen wie das Kindergeld sollen automatisch gewährt werden. Die Verwaltung prüft\neigenständig, welche Ansprüche bestehen, und leitet diese ohne zusätzliche Anträge ein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-213",
@@ -86247,45 +88424,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 5037,
+    "calls": 5130,
     "cache_hits": 81,
-    "subdivision_cache_hits": 4,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 24.700733,
-    "reported_cost_calls": 4597,
+    "reported_cost_usd": 24.927918,
+    "reported_cost_calls": 4645,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.602643,
-    "unknown_cost_calls": 440,
+    "unknown_cost_reserved_usd": 2.84799,
+    "unknown_cost_calls": 485,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 27.303376,
-    "prompt_tokens": 51392175,
-    "completion_tokens": 8192628,
+    "budget_exposure_usd": 27.775908,
+    "prompt_tokens": 51953839,
+    "completion_tokens": 8303140,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 194,
-        "reported_cost_usd": 4.737448249999998,
-        "unknown_cost_reserved_usd": 1.0130785099704553e-15,
-        "pending_reserved_usd": 5.551115123125783e-17
+        "calls": 199,
+        "reported_cost_usd": 4.880419499999998,
+        "unknown_cost_reserved_usd": 1.0685896612017132e-15,
+        "pending_reserved_usd": 2.7755575615628914e-17
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 75,
-        "reported_cost_usd": 0.9850437500000001,
+        "calls": 78,
+        "reported_cost_usd": 1.02244025,
         "unknown_cost_reserved_usd": 1.3183898417423734e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1871,
-        "reported_cost_usd": 2.093771510000001,
-        "unknown_cost_reserved_usd": 1.6181668999999999,
-        "pending_reserved_usd": 5.204170427930421e-18
+        "calls": 1956,
+        "reported_cost_usd": 2.1405881175,
+        "unknown_cost_reserved_usd": 1.8635145499999992,
+        "pending_reserved_usd": 2.6020852139652106e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
