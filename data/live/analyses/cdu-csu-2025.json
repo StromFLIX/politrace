@@ -71435,7 +71435,7 @@
     {
       "law_id": "bgbl-1-2026-14",
       "analysis_sha256": "6977d00b4fb00164da7438730fe4de68d0fdc94150e75c59562559a7cfb3a432",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -71971,6 +71971,38 @@
             ],
             "criterion_id": "cdu-csu-2025-ac-6c6333795524b8a9",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "proposed_link",
+          "rationale": "Reichen vorgelegte Unterlagen nicht aus, darf der Träger der Insolvenzsicherung erforderliche Rentenversicherungsdaten zur Leistungsfeststellung anfordern und verarbeiten. Eine Entscheidung der betroffenen Person über diese Datenübermittlung sieht die Vorschrift nicht vor.",
+          "input_sha256": "658f491bdf5a6325384cb41949424212a219ea8e6e6227cb3776e2d6026c411c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "56b4a0c89db27f7435345fb0bb682bd6797463bc1f4b87d865365db17cc770b1"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "658f491bdf5a6325384cb41949424212a219ea8e6e6227cb3776e2d6026c411c"
+            }
+          ],
+          "impact_id": "impact-c8973fdcd60ef3f5",
+          "judgment": {
+            "supported": true,
+            "score": -1,
+            "confidence": 0.79,
+            "rationale": "Reichen vorgelegte Unterlagen nicht aus, darf der Träger der Insolvenzsicherung erforderliche Rentenversicherungsdaten zur Leistungsfeststellung anfordern und verarbeiten. Eine Entscheidung der betroffenen Person über diese Datenübermittlung sieht die Vorschrift nicht vor.",
+            "law_passage_id": "bgbl-1-2026-14-p-56d234506a599771",
+            "law_quote": "Reichen die von dem nach § 7 Berechtigten\nvorgelegten Unterlagen für die Feststellung der Leistungen nicht aus, kann der Träger der Insolvenzsicherung\ndie zur Feststellung der Leistungen erforderlichen Daten von den Trägern der gesetzlichen Rentenversicherung\nanfordern und verarbeiten, soweit dies für die Erfüllung seiner Aufgaben nach diesem Abschnitt erforderlich ist.",
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu\nDaten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -73297,7 +73329,494 @@
         "cdu-csu-2025-ac-fea8b875f294a705"
       ],
       "omitted_count": 946,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft weder das Mercosur-Abkommen noch dessen Inkrafttreten.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft weder das Mercosur-Abkommen noch dessen Inkrafttreten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keinen Einsatz elektronischer Fußfesseln.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keinen Einsatz elektronischer Fußfesseln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Bestandsaufnahme oder Regelung zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Bestandsaufnahme oder Regelung zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e35cc36e905b94b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Tariföffnungsklauseln.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Tariföffnungsklauseln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2e35cc36e905b94b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Dauer von Grenzkontrollen.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Dauer von Grenzkontrollen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-34c50978997a0b3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3dd9fd5f3e4df99c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Kraftwerksabschaltungen noch den Bau von Ersatzanlagen.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Kraftwerksabschaltungen noch den Bau von Ersatzanlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3dd9fd5f3e4df99c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3fd722e20b6e3cb9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Geschlechts- oder Vornamensänderungen Minderjähriger oder psychologischen Gutachten.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Geschlechts- oder Vornamensänderungen Minderjähriger oder psychologischen Gutachten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3fd722e20b6e3cb9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6caeb3a52856526d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Steuerveranlagung oder deren Automatisierung.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Steuerveranlagung oder deren Automatisierung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6caeb3a52856526d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die begrenzten Datenverarbeitungsregeln für Verkehrskontrollen schaffen keine allgemeine individuelle Entscheidungsbefugnis darüber, wann, wo und wozu eigene Daten erhoben und genutzt werden.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die begrenzten Datenverarbeitungsregeln für Verkehrskontrollen schaffen keine allgemeine individuelle Entscheidungsbefugnis darüber, wann, wo und wozu eigene Daten erhoben und genutzt werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6f196967f1f59c90",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht den digitalen Führerschein, regelt aber nicht die digitale Kraftfahrzeug-Anmeldung als bundesweit einheitlichen Standard.",
+          "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ca06486beeb6ae54f98f85876c202199a849f94f3824e8808d0e3e11e3d11ac7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ermöglicht den digitalen Führerschein, regelt aber nicht die digitale Kraftfahrzeug-Anmeldung als bundesweit einheitlichen Standard.",
+            "law_passage_id": "bgbl-1-2026-142-p-347eea9605f4fded",
+            "law_quote": "Digitaler Führerschein",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6f196967f1f59c90",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-878272e6d6deffd5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt unter anderem den digitalen Führerschein, führt aber keine digitale Kraftfahrzeug-Anmeldung als bundesweit einheitlichen Standard ein.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt unter anderem den digitalen Führerschein, führt aber keine digitale Kraftfahrzeug-Anmeldung als bundesweit einheitlichen Standard ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die digitale Kraftfahrzeug-Anmeldung wollen wir zum Standard machen, indem wir sie bundesweit einheitlich und unkompliziert gestalten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-878272e6d6deffd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Straßenverkehrsgesetz enthält keine Regelung zu Asylverfahren oder Schutzgewährung in Drittstaaten.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Straßenverkehrsgesetz enthält keine Regelung zu Asylverfahren oder Schutzgewährung in Drittstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jeder, der in Europa Asyl beantragt, soll in einen sicheren Drittstaat überführt werden, dort sein Verfahren durchlaufen und dort bei Bedarf Schutz finden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu einem Kassensturz oder zur Prüfung von Haushaltsausgaben zu Beginn einer Wahlperiode.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Gesetz enthält keine Regelung zu einem Kassensturz oder zur Prüfung von Haushaltsausgaben zu Beginn einer Wahlperiode.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unmittelbar zu Beginn der neuen Wahlperiode machen wir einen ehrlichen Kassensturz und hinterfragen alle Ausgaben, insbesondere die Subventionen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder steuerfreie Einkünfte weiterarbeitender Rentner noch eine monatliche Steuerfreigrenze.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Gesetz regelt weder steuerfreie Einkünfte weiterarbeitender Rentner noch eine monatliche Steuerfreigrenze.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wer das gesetzliche Rentenalter erreicht und freiwillig weiterarbeitet, bekommt sein Gehalt bis zu 2.000 Euro im Monat steuerfrei.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a9bb7dde0bc01229",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Fahrverbote für Innenstädte; seine Videokontrollregeln betreffen stichprobenartige Kontrollen des ruhenden Verkehrs.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz schafft keine Fahrverbote für Innenstädte; seine Videokontrollregeln betreffen stichprobenartige Kontrollen des ruhenden Verkehrs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Fahrverbote für Innenstädte",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a9bb7dde0bc01229",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b02cc7949ef1675d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Genehmigungsfiktion für Anträge bei Ämtern oder Behörden ein.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Gesetz führt keine Genehmigungsfiktion für Anträge bei Ämtern oder Behörden ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mit einer Genehmigungsfiktion sorgen wir dafür, dass Anträge bei Ämtern und Behörden schneller beschieden werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b02cc7949ef1675d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ahndet bestimmte Täuschungen über Beteiligte an Verkehrsverstößen, nicht das Zeigen verfassungsfeindlicher Symbole oder verfassungsfeindliche beziehungsweise antisemitische Äußerungen.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Das Gesetz ahndet bestimmte Täuschungen über Beteiligte an Verkehrsverstößen, nicht das Zeigen verfassungsfeindlicher Symbole oder verfassungsfeindliche beziehungsweise antisemitische Äußerungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Delikte wie das Zeigen verfassungsfeindlicher Symbole sowie verfassungsfeindliche und antisemitische Äußerungen müssen mit der ganzen Konsequenz des Rechtsstaates verfolgt und geahndet werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Kraftfahrt-Bundesamt und das Bundesverkehrsministerium, nicht die Position oder Unterstellung des BSI.",
+          "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "50e80ca053db2cb6cbbc4f12829be808ee8fe9c3f222aa0c700da55b51c5b71a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 1.0,
+            "rationale": "Die Änderungen betreffen das Kraftfahrt-Bundesamt und das Bundesverkehrsministerium, nicht die Position oder Unterstellung des BSI.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es soll neben dem Bundesamt für Verfassungsschutz und dem Bundeskriminalamt eine starke dritte Säule der Cybersicherheitsarchitektur unter Führung des Bundesministeriums des Innern bilden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-fea8b875f294a705",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-143",
@@ -73338,7 +73857,818 @@
         "cdu-csu-2025-ac-f7cf97a4ced6947a"
       ],
       "omitted_count": 934,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-043a35a436090f08",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Änderungen betreffen die Lebendorganspende und führen keine zusätzlichen Anreize für private Gelder oder Spenden ein.",
+          "input_sha256": "009f126a9e74ceeac56386d9b2003087cfbe31e0bf124aa8e8037532746c9923",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "009f126a9e74ceeac56386d9b2003087cfbe31e0bf124aa8e8037532746c9923"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Änderungen betreffen die Lebendorganspende und führen keine zusätzlichen Anreize für private Gelder oder Spenden ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-043a35a436090f08",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Regelungen betreffen die Organspende; ein Kooperationsverbot für Vereine und Verbände mit ausländischen Geldgebern ist nicht enthalten.",
+          "input_sha256": "009f126a9e74ceeac56386d9b2003087cfbe31e0bf124aa8e8037532746c9923",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "009f126a9e74ceeac56386d9b2003087cfbe31e0bf124aa8e8037532746c9923"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Regelungen betreffen die Organspende; ein Kooperationsverbot für Vereine und Verbände mit ausländischen Geldgebern ist nicht enthalten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Regelungen zur Lebendorganspende; elektronische Fußfesseln oder Maßnahmen gegen Gewalt an Frauen regelt es nicht.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Regelungen zur Lebendorganspende; elektronische Fußfesseln oder Maßnahmen gegen Gewalt an Frauen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-222cad6738732931",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e35cc36e905b94b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen das Transplantationsrecht und ermöglichen keine zusätzlichen Tariföffnungsklauseln.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen das Transplantationsrecht und ermöglichen keine zusätzlichen Tariföffnungsklauseln.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2e35cc36e905b94b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-355a844f69469e3a",
+          "disposition": "no_supported_link",
+          "rationale": "Ein einheitliches Antragsverfahren für Rehabilitationsleistungen wird in den vorliegenden Regelungen nicht eingeführt.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Ein einheitliches Antragsverfahren für Rehabilitationsleistungen wird in den vorliegenden Regelungen nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-355a844f69469e3a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3755895e2197bbed",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Bereitstellung einer Sportmilliarde.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Bereitstellung einer Sportmilliarde.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3755895e2197bbed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3e5d8c43d337e4b3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Transplantationszentren und Lebendorganspenden, nicht zusätzliche Gestaltungsmöglichkeiten für Pflegeeinrichtungen.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Transplantationszentren und Lebendorganspenden, nicht zusätzliche Gestaltungsmöglichkeiten für Pflegeeinrichtungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3e5d8c43d337e4b3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3fd722e20b6e3cb9",
+          "disposition": "no_supported_link",
+          "rationale": "Die unabhängige psychosoziale Beratung im Gesetz betrifft Organspender; Änderungen von Geschlechtseintrag oder Vornamen Minderjähriger regelt es nicht.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die unabhängige psychosoziale Beratung im Gesetz betrifft Organspender; Änderungen von Geschlechtseintrag oder Vornamen Minderjähriger regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3fd722e20b6e3cb9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4791db7f0df08151",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine steuerlichen Regelungen oder Ermächtigungen zu schnellen Steuerreduzierungen in Krisen.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine steuerlichen Regelungen oder Ermächtigungen zu schnellen Steuerreduzierungen in Krisen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4791db7f0df08151",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-496dc88e7befe9f8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Organvermittlung und Transplantationsversorgung, nicht die Vernetzung von Rettungsdiensten mit Kommunen und Katastrophenschutz.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Organvermittlung und Transplantationsversorgung, nicht die Vernetzung von Rettungsdiensten mit Kommunen und Katastrophenschutz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-496dc88e7befe9f8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4b0a400349143366",
+          "disposition": "no_supported_link",
+          "rationale": "Eine stärkere Steuerungsfunktion von Haus- und Kinderarztpraxen bei der Patientenversorgung wird nicht geregelt.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine stärkere Steuerungsfunktion von Haus- und Kinderarztpraxen bei der Patientenversorgung wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4b0a400349143366",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-4fe20abd84958d99",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Änderungen betreffen das Transplantationsgesetz und enthalten keine Regelung zur Planungshoheit der Länder für Krankenhäuser.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Änderungen betreffen das Transplantationsgesetz und enthalten keine Regelung zur Planungshoheit der Länder für Krankenhäuser.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-4fe20abd84958d99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e2bfb6e7a15c664",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Einstufung des Mobilfunkausbaus als überragendes öffentliches Interesse.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Einstufung des Mobilfunkausbaus als überragendes öffentliches Interesse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e2bfb6e7a15c664",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften erlauben die Erhebung bestimmter personenbezogener Daten im Transplantationsbereich und begrenzen deren Verarbeitung; eine allgemeine individuelle Entscheidung über Erhebung und Nutzung der eigenen Daten begründen sie nicht.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Vorschriften erlauben die Erhebung bestimmter personenbezogener Daten im Transplantationsbereich und begrenzen deren Verarbeitung; eine allgemeine individuelle Entscheidung über Erhebung und Nutzung der eigenen Daten begründen sie nicht.",
+            "law_passage_id": "bgbl-1-2026-143-p-e488cf4de5ed66dd",
+            "law_quote": "Das Bundesinstitut für Arzneimittel und Medizinprodukte darf folgende personenbezogene Daten erheben und speichern:",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-73236d33f385b0dc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen vereinfachen keine Antragsprozesse für Hilfsmittel und enthalten keine besondere Regelung für Kinder mit Behinderungen.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen vereinfachen keine Antragsprozesse für Hilfsmittel und enthalten keine besondere Regelung für Kinder mit Behinderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-73236d33f385b0dc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-825c9deb71e8819f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Regelungen betreffen Organvermittlung und Transplantationsversorgung, nicht die gemeinsame Planung stationärer und ambulanter Versorgungsangebote.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorliegenden Regelungen betreffen Organvermittlung und Transplantationsversorgung, nicht die gemeinsame Planung stationärer und ambulanter Versorgungsangebote.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-825c9deb71e8819f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-892d1f9e4b89e4b7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keine Maßnahme zum Abbau von Bürokratie für Berufsgruppen im Gesundheitsbereich.",
+          "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3a1ce43f4e7f19e1683e7d5812f3f4e493f539ab3a202e22dd952a8b6e697661"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keine Maßnahme zum Abbau von Bürokratie für Berufsgruppen im Gesundheitsbereich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-892d1f9e4b89e4b7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Lebendorganspenden und schafft keine allgemeine digitale Bürgerakte für den Umgang mit Behörden.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Lebendorganspenden und schafft keine allgemeine digitale Bürgerakte für den Umgang mit Behörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Organ- und Gewebespende, nicht die Vergabe staatlicher Mittel an Vereine oder Verbände.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Organ- und Gewebespende, nicht die Vergabe staatlicher Mittel an Vereine oder Verbände.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Transplantationsregeln; eine Fortführung des Aktionsplans für ein barrierefreies Gesundheitswesen regelt es nicht.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Transplantationsregeln; eine Fortführung des Aktionsplans für ein barrierefreies Gesundheitswesen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8f6c3bef75cf7012",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9356aa4d1897eb2f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Lebendorganspenden und deren Vermittlung, nicht die Aufklärung von Vorwürfen gegen Sicherheitsbehörden.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Lebendorganspenden und deren Vermittlung, nicht die Aufklärung von Vorwürfen gegen Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9356aa4d1897eb2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a41df20adf9f161b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Transplantation und enthalten keine Regelung zur Entscheidungsfindung der Mindestlohnkommission.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Transplantation und enthalten keine Regelung zur Entscheidungsfindung der Mindestlohnkommission.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a41df20adf9f161b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a7118ae619ef4496",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen Aufklärungs- und Beratungsregeln betreffen Organspender, nicht die freiwillige Weitergabe von Gesundheitsdaten für klinische Studien.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgesehenen Aufklärungs- und Beratungsregeln betreffen Organspender, nicht die freiwillige Weitergabe von Gesundheitsdaten für klinische Studien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a7118ae619ef4496",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Organisation der Organvermittlung und richtet keinen europäischen Normenkontrollrat ein.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Organisation der Organvermittlung und richtet keinen europäischen Normenkontrollrat ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-acd6ee4e57933023",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Lebendorganspende enthalten keine wissenschaftliche Untersuchung zur Strafmündigkeitsgrenze.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zur Lebendorganspende enthalten keine wissenschaftliche Untersuchung zur Strafmündigkeitsgrenze.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-acd6ee4e57933023",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b40869d64e418f84",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Entnahmen von Organen und Gewebe; sie regeln keine allgemeine Ablehnung operativer Eingriffe bei Minderjährigen.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Entnahmen von Organen und Gewebe; sie regeln keine allgemeine Ablehnung operativer Eingriffe bei Minderjährigen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b40869d64e418f84",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e432253f3ca6a2b3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu privaten Einzahlungen in ein angespartes Depot.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu privaten Einzahlungen in ein angespartes Depot.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e432253f3ca6a2b3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e9da87ea35aed428",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung des Transplantationsgesetzes beschließt kein Suizidpräventionsgesetz.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung des Transplantationsgesetzes beschließt kein Suizidpräventionsgesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e9da87ea35aed428",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f7cf97a4ced6947a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Bestimmungen zu Studienkrediten oder deren Zinssätzen.",
+          "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01fc3ad8b6acbb09b3bfb4a135bc58a64c0ab609768abf00b929ac8fa9915310"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Bestimmungen zu Studienkrediten oder deren Zinssätzen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f7cf97a4ced6947a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-148",
@@ -73369,12 +74699,526 @@
         "cdu-csu-2025-ac-f9680e1924a12725"
       ],
       "omitted_count": 944,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine fachliche Bestandsaufnahme zur Wiederaufnahme abgeschalteter Kernkraftwerke.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Gleichzeitig streben wir schnellstmöglich eine fachliche Bestandsaufnahme an, ob angesichts des jeweiligen Rückbaustadiums eine Wiederaufnahme des Betriebs der zuletzt abgeschalteten Kernkraftwerke unter vertretbarem technischem und finanziellem Aufwand noch möglich ist.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2670f8b075dc65f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2f30e3c1d53606a6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen intelligente Verkehrssysteme und die Datenbereitstellung, nicht die organisatorische Aufstellung der Deutschen Bahn.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen intelligente Verkehrssysteme und die Datenbereitstellung, nicht die organisatorische Aufstellung der Deutschen Bahn.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "stellen es neu auf.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2f30e3c1d53606a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Möglichkeit, den Dienst in einer Blaulichtorganisation abzuleisten.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Möglichkeit, den Dienst in einer Blaulichtorganisation abzuleisten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wie bereits vor Aussetzung der Wehrpflicht im Jahr 2011 wird es wieder möglich sein, seinen Dienst beispielsweise in einer „Blaulichtorganisation“ abzuleisten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-47465855fd9e0a9f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zur Verkehrsdatenbereitstellung sehen keine Ausweisung kommunaler Empfänger oder der Höhe kommunaler Vorteile durch die Länder vor.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zur Verkehrsdatenbereitstellung sehen keine Ausweisung kommunaler Empfänger oder der Höhe kommunaler Vorteile durch die Länder vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Länder sollen transparent machen, inwieweit sie Geld vom Bund zweckmäßig eingesetzt haben und welche Kommune in welcher Höhe profitiert.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6537f83053d9d719",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Verkehrsdaten und IVS-Dienste, nicht gemeinsame Cyberübungen von Bund, Ländern und Kommunen.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Verkehrsdaten und IVS-Dienste, nicht gemeinsame Cyberübungen von Bund, Ländern und Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir nehmen regelmäßige gemeinsame Cyberübungen der Bundes-, der Landes- und der kommunalen Ebene vor.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6537f83053d9d719",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz weist der Bundesanstalt für Straßen- und Verkehrswesen Aufgaben als Nationale Stelle zu; eine Verlegung der nach § 96 BVFG bezeichneten Bundesanstalt nach Berlin regelt es nicht.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz weist der Bundesanstalt für Straßen- und Verkehrswesen Aufgaben als Nationale Stelle zu; eine Verlegung der nach § 96 BVFG bezeichneten Bundesanstalt nach Berlin regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und überführen die Bundesanstalt für ihren Kernauftrag der Beratung und Unterstützung der Bundesregierung gemäß § 96 BVFG nach Berlin.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz begrenzt die Verarbeitung personenbezogener Daten auf bestimmte Zwecke und verlangt gegebenenfalls Anonymisierung oder Pseudonymisierung, gewährt aber keine individuelle Entscheidung darüber, wann, wo und wozu Daten erhoben und genutzt werden.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz begrenzt die Verarbeitung personenbezogener Daten auf bestimmte Zwecke und verlangt gegebenenfalls Anonymisierung oder Pseudonymisierung, gewährt aber keine individuelle Entscheidung darüber, wann, wo und wozu Daten erhoben und genutzt werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu Daten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6f196967f1f59c90",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz standardisiert die Bereitstellung und Nutzung von Verkehrsdaten, regelt aber weder die digitale Kraftfahrzeug-Anmeldung noch deren bundesweiten Standard.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz standardisiert die Bereitstellung und Nutzung von Verkehrsdaten, regelt aber weder die digitale Kraftfahrzeug-Anmeldung noch deren bundesweiten Standard.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir machen die digitale Kraftfahrzeug-Anmeldung zum Standard, indem wir sie bundesweit einheitlich und unkompliziert gestalten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6f196967f1f59c90",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6f9a1595c55e4e88",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz beschließt oder überprüft keine Nationale Sicherheitsstrategie und enthält keine entsprechenden operativen Ableitungen.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz beschließt oder überprüft keine Nationale Sicherheitsstrategie und enthält keine entsprechenden operativen Ableitungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In unserem ersten Regierungsjahr unterziehen wir die mit Mängeln behaftete Nationale Sicherheitsstrategie einer grundlegenden Überprüfung.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6f9a1595c55e4e88",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8474f0e1075497b2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Energiesteuerbefreiung für alternative Kraftstoffe in der Land- und Forstwirtschaft.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Energiesteuerbefreiung für alternative Kraftstoffe in der Land- und Forstwirtschaft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Alternative Kraftstoffe wie Biokraftstoffe und synthetische Kraftstoffe in der Land- und Forstwirtschaft befreien wir von der Energiesteuer.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8474f0e1075497b2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-86606d94d72ea084",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt intelligente Verkehrssysteme und Verkehrsdaten, nicht allgemeine Tempolimits auf deutschen Autobahnen.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt intelligente Verkehrssysteme und Verkehrsdaten, nicht allgemeine Tempolimits auf deutschen Autobahnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und ein generelles Tempolimit auf deutschen Autobahnen lehnen wir ab.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-86606d94d72ea084",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-878272e6d6deffd5",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zum Nationalen Zugangspunkt betreffen Verkehrsdaten, nicht die digitale Kraftfahrzeug-Anmeldung als bundesweiten Standard.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zum Nationalen Zugangspunkt betreffen Verkehrsdaten, nicht die digitale Kraftfahrzeug-Anmeldung als bundesweiten Standard.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die digitale Kraftfahrzeug-Anmeldung wollen wir zum Standard machen, indem wir sie bundesweit einheitlich und unkompliziert gestalten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-878272e6d6deffd5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9fa672d90772c946",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Vorgaben zu intelligenten Verkehrssystemen, aber keine Übertragung verfahrensbeschleunigender Regelungen auf weitere Bereiche.",
+          "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "596fb27ab858cb91bfb4f260beb46afcdd37964d181a2fc9b2a6ca535ffdc0c0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Vorgaben zu intelligenten Verkehrssystemen, aber keine Übertragung verfahrensbeschleunigender Regelungen auf weitere Bereiche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Regelungen, die in einem Bereich zur Verfahrensbeschleunigung beitragen, müssen auch auf andere Bereiche wie Verkehr, Bau und digitale Infrastrukturen übertragen werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9fa672d90772c946",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a5fb2da58e72bf4f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften ordnen Datenbereitstellung und IVS-Dienste, nicht die Einrichtung oder Förderung von Mobilstationen.",
+          "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Vorschriften ordnen Datenbereitstellung und IVS-Dienste, nicht die Einrichtung oder Förderung von Mobilstationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und Mobilstationen, vor allem an Verkehrsknotenpunkten.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a5fb2da58e72bf4f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a9bb7dde0bc01229",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden IVS-Regelungen führen weder Fahrverbote ein noch belegen sie, dass solche Verbote unterbleiben.",
+          "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden IVS-Regelungen führen weder Fahrverbote ein noch belegen sie, dass solche Verbote unterbleiben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Fahrverbote für Innenstädte",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a9bb7dde0bc01229",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b607d592ddfba694",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Berichte zu IVS vor, regelt aber keine transparente Ausweisung der zweckmäßigen Verwendung von Bundesmitteln durch Länder.",
+          "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz sieht Berichte zu IVS vor, regelt aber keine transparente Ausweisung der zweckmäßigen Verwendung von Bundesmitteln durch Länder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Länder sollen transparent machen, inwieweit sie Geld vom Bund\nzweckmäßig eingesetzt haben",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b607d592ddfba694",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-bbc6e5d9bb3889d3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Datenzugangsregeln betreffen Verkehrsdaten; ein Bildungsverlaufsregister oder Forschungszugang dazu ist nicht geregelt.",
+          "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Datenzugangsregeln betreffen Verkehrsdaten; ein Bildungsverlaufsregister oder Forschungszugang dazu ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Evidenzbasierte Bildungspolitik benötigt Daten. Deshalb fordern wir Bund und Länder\nauf, ein bundesweites Bildungsverlaufsregister über alle Stufen formaler Bildung zu\nschaffen und einen regelhaften Zugang der Forschung zu diesen Daten vorzusehen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-bbc6e5d9bb3889d3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d6a6cbb6a6545a8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden IVS-Regelungen behandeln keine Umwidmung von Parkplätzen und belegen auch kein Unterbleiben solcher Maßnahmen.",
+          "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden IVS-Regelungen behandeln keine Umwidmung von Parkplätzen und belegen auch kein Unterbleiben solcher Maßnahmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das\nUmwidmen von Parkplätzen",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d6a6cbb6a6545a8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Grunderwerbsteuer oder zu Freibeträgen beim erstmaligen Eigenheimerwerb.",
+          "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642901f8cdc07bce3eb1b5a7349215b4e7942fa9b1ed939aafdd1cf8c5d215db"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Grunderwerbsteuer oder zu Freibeträgen beim erstmaligen Eigenheimerwerb.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Traum vom Eigenheim verwirklichen. Wir unterstützen vor allem Familien, sich den\nTraum vom Eigenheim zu erfüllen. Länder sollen einen Freibetrag bei der Grunderwerbsteuer von 250.000 Euro pro Erwachsenen und 150.000 Euro für jedes Kind beim erstmaligen Erwerb selbstgenutzten Wohneigentums gewähren können.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-152",
       "analysis_sha256": "e2be3340ac77d2c4702b7c80c264f181b751f702ae4c76b578a970057dca5811",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-12555c30f50c0832",
@@ -73395,12 +75239,445 @@
         "cdu-csu-2025-ac-f9680e1924a12725"
       ],
       "omitted_count": 949,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zur Zwangsvollstreckung; es regelt weder das Mercosur-Abkommen noch dessen Inkrafttreten.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zur Zwangsvollstreckung; es regelt weder das Mercosur-Abkommen noch dessen Inkrafttreten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Vollstreckungsverfahren und enthalten kein Verbot staatlicher Kooperationen mit Vereinen oder Verbänden.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Vollstreckungsverfahren und enthalten kein Verbot staatlicher Kooperationen mit Vereinen oder Verbänden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2e46a9174b5327e5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz knüpft staatliche Förderung nicht an eine Erklärung gegen Antisemitismus.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz knüpft staatliche Förderung nicht an eine Erklärung gegen Antisemitismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2e46a9174b5327e5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Zwangsvollstreckung ordnen keine Finanzierung veranlasster Leistungen zu und gleichen keine Mehrausgaben von Ländern oder Kommunen aus.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zur Zwangsvollstreckung ordnen keine Finanzierung veranlasster Leistungen zu und gleichen keine Mehrausgaben von Ländern oder Kommunen aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5ad7f2d4e0dd8c0b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine einheitliche zuständige Stelle für Gründungen, Betriebsummeldungen oder Betriebsaufgaben.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine einheitliche zuständige Stelle für Gründungen, Betriebsummeldungen oder Betriebsaufgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5ad7f2d4e0dd8c0b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen sehen keine öffentliche Ausweisung kommunaler Empfänger oder der jeweiligen Förderhöhe vor.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen sehen keine öffentliche Ausweisung kommunaler Empfänger oder der jeweiligen Förderhöhe vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5c4a421dcac5d89a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zur elektronischen Übermittlung von Vollstreckungsdokumenten begründen kein allgemeines individuelles Entscheidungsrecht über Erhebung und Nutzung persönlicher Daten.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zur elektronischen Übermittlung von Vollstreckungsdokumenten begründen kein allgemeines individuelles Entscheidungsrecht über Erhebung und Nutzung persönlicher Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-888836e482f3e4e0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahmen zu CO₂-Nutzung, -Speicherung oder deren Transportinfrastruktur.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahmen zu CO₂-Nutzung, -Speicherung oder deren Transportinfrastruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-888836e482f3e4e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "no_supported_link",
+          "rationale": "Die elektronische Übermittlung von Dokumenten im Vollstreckungsverfahren stellt keine digitale Bürgerakte mit Behördenzugang bereit.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die elektronische Übermittlung von Dokumenten im Vollstreckungsverfahren stellt keine digitale Bürgerakte mit Behördenzugang bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schließt Vereine und Verbände nicht wegen ausländischer Geldgeber von staatlichen Mitteln aus.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schließt Vereine und Verbände nicht wegen ausländischer Geldgeber von staatlichen Mitteln aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8bed4ab511d13bc7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8ce02a5f3f0873f4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen enthalten keinen Ausschluss beobachteter Vereine oder Verbände von staatlichen Geldern.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen enthalten keinen Ausschluss beobachteter Vereine oder Verbände von staatlichen Geldern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8ce02a5f3f0873f4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ordnet keinen Kassensturz zu Beginn einer Wahlperiode an; es ändert Vorschriften zur Zwangsvollstreckung.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ordnet keinen Kassensturz zu Beginn einer Wahlperiode an; es ändert Vorschriften zur Zwangsvollstreckung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Vollstreckungsabläufe und verpflichten Genehmigungsbehörden nicht zur zügigen Prüfung eingereichter Unterlagen.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Vollstreckungsabläufe und verpflichten Genehmigungsbehörden nicht zur zügigen Prüfung eingereichter Unterlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a006bf4e52c5e978",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-aff91124d2aa42c9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz macht Bundesförderung nicht von Bekenntnissen zur freiheitlich-demokratischen Grundordnung, zum Existenzrecht Israels oder gegen Antisemitismus abhängig.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz macht Bundesförderung nicht von Bekenntnissen zur freiheitlich-demokratischen Grundordnung, zum Existenzrecht Israels oder gegen Antisemitismus abhängig.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-aff91124d2aa42c9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b02cc7949ef1675d",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen führen keine Genehmigungsfiktion für Anträge bei Ämtern und Behörden ein.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen führen keine Genehmigungsfiktion für Anträge bei Ämtern und Behörden ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b02cc7949ef1675d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Grunderwerbsteuer oder zu einem Freibetrag für erstmaligen selbstgenutzten Wohneigentum.",
+          "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ab4f43a7a688ca5a8d989d90490a500a7867447b909eda881a8b0ddae49c4529"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Grunderwerbsteuer oder zu einem Freibetrag für erstmaligen selbstgenutzten Wohneigentum.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-156",
       "analysis_sha256": "f0b9e4a76ab06ad72ebc1fa2381421eb13b0cef50724e9e951051e4388115eb4",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 965,
       "candidate_ids": [
         "cdu-csu-2025-ac-01acc580d4430e0b",
@@ -73434,7 +75711,797 @@
         "cdu-csu-2025-ac-fb75d3a0b5565c38"
       ],
       "omitted_count": 936,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-01acc580d4430e0b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Informationsvorschriften beziehen sich auf Altersvorsorgeverträge; eine verbindliche Herkunfts- oder Tierwohlkennzeichnung für tierische Produkte wird nicht eingeführt.",
+          "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Informationsvorschriften beziehen sich auf Altersvorsorgeverträge; eine verbindliche Herkunfts- oder Tierwohlkennzeichnung für tierische Produkte wird nicht eingeführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-01acc580d4430e0b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Altersvorsorgeverträge und Zulagen, nicht die einmalige Übermittlung von Daten an die Verwaltung.",
+          "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Altersvorsorgeverträge und Zulagen, nicht die einmalige Übermittlung von Daten an die Verwaltung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-04af751d9a6c5e80",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-0ef95629e5cadd0a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht eine Kinderzulage von höchstens 300 Euro jährlich je Kind vor, die an geleistete Altersvorsorgebeiträge anknüpft; eine monatliche Förderung von 10 Euro für individuelle Vorsorgekonten aller 6- bis 18-Jährigen regelt es nicht.",
+          "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz sieht eine Kinderzulage von höchstens 300 Euro jährlich je Kind vor, die an geleistete Altersvorsorgebeiträge anknüpft; eine monatliche Förderung von 10 Euro für individuelle Vorsorgekonten aller 6- bis 18-Jährigen regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-0ef95629e5cadd0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Mercosur-Abkommen oder zu dessen Inkrafttreten.",
+          "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zum Mercosur-Abkommen oder zu dessen Inkrafttreten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-12555c30f50c0832",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften zur privaten Altersvorsorge betreffen keine staatlichen Kooperationen mit Vereinen oder Verbänden und deren ausländische Geldgeber.",
+          "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften zur privaten Altersvorsorge betreffen keine staatlichen Kooperationen mit Vereinen oder Verbänden und deren ausländische Geldgeber.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-14d3c277b74a7210",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Erwähnung von Beamten und Zeit- oder Berufssoldaten betrifft Altersvorsorgeberechtigungen; Entlassungen durch Verwaltungsakt oder richterlichen Beschluss werden nicht geregelt.",
+          "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "86d7f19ef644d5c9f80544787c441a896b8ae09b7e0249b1f28d1302d04f710b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Erwähnung von Beamten und Zeit- oder Berufssoldaten betrifft Altersvorsorgeberechtigungen; Entlassungen durch Verwaltungsakt oder richterlichen Beschluss werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-16889e23b2bd4cfc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen betreffen die private Altersvorsorge und enthalten keine Regelung zum Instanzenweg.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Passagen betreffen die private Altersvorsorge und enthalten keine Regelung zum Instanzenweg.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wo möglich und sinnvoll, sehen wir im Sinne schnellerer Rechtssicherheit eine Kürzung des Instanzenwegs auf zwei Instanzen vor.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-29b8e2f735b1f4d1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-2a7318794c8d989b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift erlaubt unter Bedingungen, gefördertes Altersvorsorgekapital für energetische Sanierungen zu verwenden; sie macht Sanierungskosten nicht von Erbschaft- oder Schenkungsteuer abziehbar.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Vorschrift erlaubt unter Bedingungen, gefördertes Altersvorsorgekapital für energetische Sanierungen zu verwenden; sie macht Sanierungskosten nicht von Erbschaft- oder Schenkungsteuer abziehbar.",
+            "law_passage_id": "bgbl-1-2026-156-p-cfb38b72d148db86",
+            "law_quote": "für die Finanzierung eines barrierereduzierenden Umbaus oder der energetischen Sanierung einer Wohnung, wenn",
+            "criterion_quote": "Wir machen Kosten für energetische Sanierungen von der Erbschaft- und Schenkungsteuer abzugsfähig.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-2a7318794c8d989b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-362b4b8deddef47e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen zu Altersvorsorgeverträgen regeln keine Erhöhung von Erbschaftsteuerfreibeträgen.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Änderungen zu Altersvorsorgeverträgen regeln keine Erhöhung von Erbschaftsteuerfreibeträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir erhöhen die Freibeträge bei der Erbschaftsteuer deutlich.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-362b4b8deddef47e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-3755895e2197bbed",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Bereitstellung von Mitteln für den Sport.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Bereitstellung von Mitteln für den Sport.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Für die kommende Wahlperiode stellen wir sicher, dass die Sportmilliarde zur Verfügung steht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-3755895e2197bbed",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-42112eebb11a2d44",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen ändern keine Regeln zur Grundsicherung oder zu Sanktionen bei Arbeitsverweigerung.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen ändern keine Regeln zur Grundsicherung oder zu Sanktionen bei Arbeitsverweigerung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dann muss die Grundsicherung komplett gestrichen werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-42112eebb11a2d44",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-55dbd8c875f3a245",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen zur Altersvorsorge enthalten keine Regelung zum auf Heranwachsende anwendbaren Strafrecht.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen zur Altersvorsorge enthalten keine Regelung zum auf Heranwachsende anwendbaren Strafrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Künftig soll auf alle Heranwachsende (18 bis 21 Jahre) das allgemeine Strafrecht Anwendung finden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-55dbd8c875f3a245",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt eine jährliche Kinderzulage, die an Altersvorsorgebeiträge anknüpft und höchstens 300 Euro je Kind beträgt; eine monatliche Einzahlung von 10 Euro für jedes Kind ist damit nicht belegt.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt eine jährliche Kinderzulage, die an Altersvorsorgebeiträge anknüpft und höchstens 300 Euro je Kind beträgt; eine monatliche Einzahlung von 10 Euro für jedes Kind ist damit nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-156-p-76e61fbe88555724",
+            "law_quote": "Für jedes Kind, für das gegenüber dem Zulageberechtigten Kindergeld festgesetzt wird, beträgt die Kinderzulage jährlich 100 Prozent der im Beitragsjahr bis zu einer Höhe von 1 800 Euro geleisteten Altersvorsorgebeiträge (§ 82); die Kinderzulage beträgt jedoch höchstens 300 Euro pro Kind.",
+            "criterion_quote": "Deshalb werden wir für jedes Kind vom 6. bis zum 18. Lebensjahr pro Monat 10 Euro in ein individuelles, kapitalgedecktes und privatwirtschaftlich organisiertes Altersvorsorgedepot einzahlen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-5e1d923748470a94",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen zur Altersvorsorge enthalten keine Verlegung einer Bundesanstalt nach Berlin.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen zur Altersvorsorge enthalten keine Verlegung einer Bundesanstalt nach Berlin.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und überführen die Bundesanstalt für ihren Kernauftrag der Beratung und Unterstützung der Bundesregierung gemäß § 96 BVFG nach Berlin.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6e95d7ffb21a3aa1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln Altersvorsorgeförderung und Vertragsinformationen, aber keine allgemeine individuelle Kontrolle über Erhebung und Nutzung personenbezogener Daten.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen regeln Altersvorsorgeförderung und Vertragsinformationen, aber keine allgemeine individuelle Kontrolle über Erhebung und Nutzung personenbezogener Daten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jeder muss selbst bestimmen können, wann, wo und wozu Daten von ihm erhoben und genutzt werden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-6eca5143504bad8e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-7a9396f2b0e7fff3",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten kein Verweisungsrecht für Unternehmen und ändern keine allgemeinen Statistikpflichten oder Meldungen.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten kein Verweisungsrecht für Unternehmen und ändern keine allgemeinen Statistikpflichten oder Meldungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir reduzieren Statistikpflichten, Datenerhebungen und Meldungen durch ein Verweisungsrecht für Unternehmen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-7a9396f2b0e7fff3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-817d31563120532d",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge belegen nicht, ob das Sparkapital eines Altersvorsorgedepots vor staatlichem Zugriff geschützt ist; dafür fehlt der einschlägige rechtliche Kontext.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.62,
+            "rationale": "Die vorgelegten Auszüge belegen nicht, ob das Sparkapital eines Altersvorsorgedepots vor staatlichem Zugriff geschützt ist; dafür fehlt der einschlägige rechtliche Kontext.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Sparkapital ist vor staatlichem Zugriff geschützt",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-817d31563120532d",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Altersvorsorgevorschriften enthalten keine Regelung zu Asylverfahren oder Schutzgewährung in Drittstaaten.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Altersvorsorgevorschriften enthalten keine Regelung zu Asylverfahren oder Schutzgewährung in Drittstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jeder, der in Europa Asyl beantragt, soll in einen sicheren Drittstaat überführt werden, dort sein Verfahren durchlaufen und dort bei Bedarf Schutz finden.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8e7c35f197059f4b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen führen keinen Kassensturz zu Beginn einer Wahlperiode durch und regeln keine Haushaltsprüfung.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen führen keinen Kassensturz zu Beginn einer Wahlperiode durch und regeln keine Haushaltsprüfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unmittelbar zu Beginn der neuen Wahlperiode machen wir einen ehrlichen Kassensturz und hinterfragen alle Ausgaben, insbesondere die Subventionen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen die steuerliche Förderung privater Altersvorsorge, nicht die Steuerfreiheit von Arbeitslohn nach Erreichen des Rentenalters.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen die steuerliche Förderung privater Altersvorsorge, nicht die Steuerfreiheit von Arbeitslohn nach Erreichen des Rentenalters.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wer das gesetzliche Rentenalter erreicht und freiwillig weiterarbeitet, bekommt sein Gehalt bis zu 2.000 Euro im Monat steuerfrei.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9865f28f7e14c69b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen ordnen die Kinderzulage für Altersvorsorgeverträge zwischen Eltern zu; sie passen das Kindergeld nicht an die Unterhaltskosten im jeweiligen EU-Staat an.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen ordnen die Kinderzulage für Altersvorsorgeverträge zwischen Eltern zu; sie passen das Kindergeld nicht an die Unterhaltskosten im jeweiligen EU-Staat an.",
+            "law_passage_id": "bgbl-1-2026-156-p-8ab47547b6d73366",
+            "law_quote": "Bei Eltern, die miteinander verheiratet sind, nicht dauernd getrennt leben (§ 26 Absatz 1) und ihren Wohnsitz oder gewöhnlichen Aufenthalt in einem Mitgliedstaat der Europäischen Union oder in einem Staat haben, auf den das EWR-Abkommen anwendbar ist, ist die Kinderzulage demjenigen Elternteil zuzuordnen, dem gegenüber das Kindergeld festgesetzt wird;",
+            "criterion_quote": "dass das Kindergeld für im EU-Ausland lebende Kinder an die Unterhaltskosten des jeweiligen Landes angepasst werden kann.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9865f28f7e14c69b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9de4c29dcc5ca11b",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug beschreibt Altersvorsorgedepotverträge, enthält aber nicht die vollständigen Anlagebedingungen und belegt daher nicht, ob Ertrags- oder Kapitalgarantien ausgeschlossen sind.",
+          "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a1de50fa8d3c2287e39efa55c29f6c277c3dc262cb8c46f0d83dfba692691911"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.63,
+            "rationale": "Der Auszug beschreibt Altersvorsorgedepotverträge, enthält aber nicht die vollständigen Anlagebedingungen und belegt daher nicht, ob Ertrags- oder Kapitalgarantien ausgeschlossen sind.",
+            "law_passage_id": "bgbl-1-2026-156-p-8f1337e0f045e6dd",
+            "law_quote": "die eingezahlten Altersvorsorgebeiträge und Altersvorsorgezulagen sowie die bis zum Beginn der Auszahlungsphase aus der Vermögensanlage des Vertrags erzielten Erträge verwendet werden für den Erwerb von",
+            "criterion_quote": "Erst so entfaltet die Frühstart-Rente durch eine renditeorientierte, kapitalgedeckte Anlage ohne Garantien ihren vollen Effekt.",
+            "caveats": [
+              "Die aufgeführten Anlagekategorien und vollständigen Vertragsbedingungen sind im Auszug nicht enthalten."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-9de4c29dcc5ca11b",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b02efb486f698012",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen steuerlich geförderte Altersvorsorge; eine Erhöhung des Kindergeldbetrags ist darin nicht geregelt.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Regelungen betreffen steuerlich geförderte Altersvorsorge; eine Erhöhung des Kindergeldbetrags ist darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Entsprechend heben wir auch das Kindergeld an,",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b02efb486f698012",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-b360b1ea2963cee8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen enthalten keine Vorgaben zu geschlechtsangleichenden Operationen oder einer Zweitberatung.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen enthalten keine Vorgaben zu geschlechtsangleichenden Operationen oder einer Zweitberatung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Jeder geschlechtsangleichenden Operation muss eine ausführliche unabhängige Zweitberatung vorausgehen.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-b360b1ea2963cee8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e1037ce66d5cc7aa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen private Altersvorsorge, nicht die grenzüberschreitende Entsendung oder A1- und Meldeverfahren.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen private Altersvorsorge, nicht die grenzüberschreitende Entsendung oder A1- und Meldeverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und digitalisiert wird (A1-Bescheinigung, Melde- und Registrierungsverfahren).",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-e1037ce66d5cc7aa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-e432253f3ca6a2b3",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz regelt Einzahlungen in Altersvorsorgeverträge und -depots; die vorgelegten Auszüge klären aber nicht, ob und ab wann Einzahlungen speziell ab dem 18. Lebensjahr bis zum Renteneintritt möglich sind.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.86,
+            "rationale": "Das Gesetz regelt Einzahlungen in Altersvorsorgeverträge und -depots; die vorgelegten Auszüge klären aber nicht, ob und ab wann Einzahlungen speziell ab dem 18. Lebensjahr bis zum Renteneintritt möglich sind.",
+            "law_passage_id": "bgbl-1-2026-156-p-383a32d98f975e82",
+            "law_quote": "Als Altersvorsorgevertrag gilt auch ein Altersvorsorgedepot-Vertrag.",
+            "criterion_quote": "Der in dieser Zeit angesparte Betrag kann durch private Einzahlungen ab dem 18. Lebensjahr bis zum Renteneintritt weiter bespart werden.",
+            "caveats": [
+              "Die einschlägigen Alters- und Anwendungsbedingungen für den gesamten genannten Zeitraum sind in den vorgelegten Auszügen nicht vollständig enthalten."
+            ],
+            "criterion_id": "cdu-csu-2025-ac-e432253f3ca6a2b3",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ebf2a75a1b95bef0",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen enthalten keine Vorgaben zu KI-gestützten Bescheiden oder einem Recht auf individuelle Überprüfung.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen enthalten keine Vorgaben zu KI-gestützten Bescheiden oder einem Recht auf individuelle Überprüfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "wobei für die Bürgerinnen und Bürger selbstverständlich immer ein Recht auf individuelle Überprüfung besteht.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ebf2a75a1b95bef0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften zur Altersvorsorge regeln keinen Freibetrag bei der Grunderwerbsteuer.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften zur Altersvorsorge regeln keinen Freibetrag bei der Grunderwerbsteuer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Länder sollen einen Freibetrag bei der Grunderwerbsteuer von 250.000 Euro pro Erwachsenen und 150.000 Euro für jedes Kind beim erstmaligen Erwerb selbstgenutzten Wohneigentums gewähren können.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-fb75d3a0b5565c38",
+          "disposition": "no_supported_link",
+          "rationale": "Eine automatische Auszahlung von Kindergeld nach einer Geburt ist in den vorgelegten Regelungen nicht vorgesehen.",
+          "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6b4d0527899d2a2ef53037ac4da2201d3b386f0554336d943b26376c4cc2590d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine automatische Auszahlung von Kindergeld nach einer Geburt ist in den vorgelegten Regelungen nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das künftig nach der Geburt automatisch ausgezahlt werden soll.",
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-fb75d3a0b5565c38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-157",
@@ -73460,7 +76527,413 @@
         "cdu-csu-2025-ac-f9680e1924a12725"
       ],
       "omitted_count": 949,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "cdu-csu-2025-ac-013093c71d20a747",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt die Durchführung der EU-Datenverordnung; es enthält keine Vorgabe zu den Maastricht-Kriterien.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Durchführung der EU-Datenverordnung; es enthält keine Vorgabe zu den Maastricht-Kriterien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-013093c71d20a747",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Anforderung zu einem Bekenntnis zu den genannten demokratischen und politischen Werten.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Anforderung zu einem Bekenntnis zu den genannten demokratischen und politischen Werten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-023e7cb42f262099",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ordnet keine Finanzierung von Leistungen oder Ausgleichszahlungen an Länder und Kommunen zu.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ordnet keine Finanzierung von Leistungen oder Ausgleichszahlungen an Länder und Kommunen zu.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-35e1223b5703dcd2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-49cb3c364c0da7cf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine nationale Strategie oder Maßnahmen zum Schutz von Kulturgütern.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine nationale Strategie oder Maßnahmen zum Schutz von Kulturgütern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-49cb3c364c0da7cf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-56d1a43252c596d4",
+          "disposition": "no_supported_link",
+          "rationale": "Die Informationspflichten der Bundesnetzagentur betreffen die Datenverordnung, nicht die Information oder Sensibilisierung von Mittelstandsunternehmen für Cyber-Gefahren.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Informationspflichten der Bundesnetzagentur betreffen die Datenverordnung, nicht die Information oder Sensibilisierung von Mittelstandsunternehmen für Cyber-Gefahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-56d1a43252c596d4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine Aktivrente und keine Steuerbefreiung für weiterarbeitende Rentnerinnen und Rentner ein.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine Aktivrente und keine Steuerbefreiung für weiterarbeitende Rentnerinnen und Rentner ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-79ffbf1342d2618a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehenen elektronischen Übermittlungswege dienen der Kommunikation mit der Bundesnetzagentur; eine digitale Bürgerakte für den Umgang mit Behörden wird nicht geregelt.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehenen elektronischen Übermittlungswege dienen der Kommunikation mit der Bundesnetzagentur; eine digitale Bürgerakte für den Umgang mit Behörden wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8b970c868711a88f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-8f20ad374abe2f64",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur grundgesetzlichen Schuldenbremse.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur grundgesetzlichen Schuldenbremse.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-8f20ad374abe2f64",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ordnet keinen Kassensturz zu Beginn einer Wahlperiode an.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ordnet keinen Kassensturz zu Beginn einer Wahlperiode an.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-9295d790149e109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Steuerbefreiung für Gehalt aus freiwilliger Weiterarbeit nach Erreichen des gesetzlichen Rentenalters.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Steuerbefreiung für Gehalt aus freiwilliger Weiterarbeit nach Erreichen des gesetzlichen Rentenalters.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-93edb5687a603145",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet keinen europäischen Normenkontrollrat ein und überträgt ihm keine Aufgaben zur Messung von Bürokratiekosten.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet keinen europäischen Normenkontrollrat ein und überträgt ihm keine Aufgaben zur Messung von Bürokratiekosten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-a83073345f0a0c2e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-ba23855f843dee26",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Europol noch ein gemeinsames Daten- und Informationshaus für nationale Sicherheitsbehörden.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Europol noch ein gemeinsames Daten- und Informationshaus für nationale Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-ba23855f843dee26",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erweitert keine Befugnisse zur Telekommunikationsüberwachung oder Funkzellenauswertung.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz erweitert keine Befugnisse zur Telekommunikationsüberwachung oder Funkzellenauswertung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-d668ec77d75c0695",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bußgeldvorschriften betreffen Verstöße gegen die Datenverordnung; Vorgaben zur Verfolgung oder Ahndung der genannten Hass- und antisemitischen Delikte enthält das Gesetz nicht.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Bußgeldvorschriften betreffen Verstöße gegen die Datenverordnung; Vorgaben zur Verfolgung oder Ahndung der genannten Hass- und antisemitischen Delikte enthält das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-de167277d3c12104",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Grunderwerbsteuer-Freibeträgen für den erstmaligen Erwerb selbstgenutzten Wohneigentums.",
+          "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "837ffa0e56157678882d191b806b69466a211783d1c069677a4c0bb56af6a690"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Grunderwerbsteuer-Freibeträgen für den erstmaligen Erwerb selbstgenutzten Wohneigentums.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "cdu-csu-2025-ac-f9680e1924a12725",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-163",
@@ -78005,45 +81478,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 4637,
-    "cache_hits": 70,
-    "subdivision_cache_hits": 2,
+    "calls": 4722,
+    "cache_hits": 71,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 23.718971,
-    "reported_cost_calls": 4269,
+    "reported_cost_usd": 23.872667,
+    "reported_cost_calls": 4351,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 2.199191,
-    "unknown_cost_calls": 368,
+    "unknown_cost_reserved_usd": 2.213272,
+    "unknown_cost_calls": 371,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 25.918163,
-    "prompt_tokens": 47085156,
-    "completion_tokens": 7413529,
+    "budget_exposure_usd": 26.085939,
+    "prompt_tokens": 48136615,
+    "completion_tokens": 7603900,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 177,
-        "reported_cost_usd": 4.300323499999998,
-        "unknown_cost_reserved_usd": 9.853229343548264e-16,
-        "pending_reserved_usd": 2.7755575615628914e-17
+        "calls": 178,
+        "reported_cost_usd": 4.333350249999999,
+        "unknown_cost_reserved_usd": 1.0130785099704553e-15,
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 67,
-        "reported_cost_usd": 0.8494447500000001,
+        "calls": 68,
+        "reported_cost_usd": 0.8611527500000001,
         "unknown_cost_reserved_usd": 1.0408340855860843e-16,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 1496,
-        "reported_cost_usd": 1.6847330025000002,
-        "unknown_cost_reserved_usd": 1.2147157500000003,
-        "pending_reserved_usd": 0
+        "calls": 1579,
+        "reported_cost_usd": 1.7936938325000003,
+        "unknown_cost_reserved_usd": 1.2287964500000004,
+        "pending_reserved_usd": 1.734723475976807e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
