@@ -307,3 +307,76 @@ def test_credit_diagnostics_compare_new_funds_to_remaining_not_historical_budget
     status = agent.key_status()
     assert status['key_limit_covers_run_budget'] and status['account_credit_covers_run_budget']
     assert agent.calls == 0
+
+
+def test_exhausted_provider_recovery_uses_small_batches_and_finishes_without_repeating_results(corpus, tmp_path, monkeypatch):
+    root, program, criterion, law = ready(corpus, monkeypatch)
+    # One failed 16-item batch and one successful item emulate the real final-three-batches checkpoint.
+    ids = []
+    for n in range(17):
+        item = criterion.model_copy(deep=True, update={'id': f'{program.id}-recovery-{n:02d}'})
+        write_json(root / 'live/criteria' / f'{item.id}.json', item)
+        ids.append(item.id)
+    (root / 'live/criteria' / f'{criterion.id}.json').unlink()
+    program.criteria_extraction[0].criterion_ids = ids
+    write_json(root / 'live/programs' / f'{program.id}.json', program)
+    monkeypatch.setattr('pipeline.final_queue.retrieve', lambda *args: ({law.id: set(ids)}, {law.id: set(ids)}))
+    agent = Stub(tmp_path / 'cache/llm', law, criterion)
+    original = agent.ask
+    screening_sizes = []
+    def ask(task, data, schema, **options):
+        if schema == Judgments:
+            screening_sizes.append(len(data['criteria']))
+            if len(data['criteria']) > 4:
+                raise ProviderError(200, {'error': {'code': 502}})
+        return original(task, data, schema, **options)
+    agent.ask = ask
+    result = run_final_slice(root, agent, workers=2, seconds=30, max_attempts=1, clock=lambda: 10000)
+    assert result['status'] == 'needs_attention' and result['completed_pairs'] == 1
+    path = agent.cache.parent / 'queue.json'
+    prior = json.loads(path.read_text())
+    key, = prior['errors']
+    calls = len(agent.calls)
+    assert run_final_slice(root, agent, seconds=30, max_attempts=1, clock=lambda: 20000)['status'] == 'needs_attention'
+    assert len(agent.calls) == calls
+    request = {'id': 'provider-recovery-failed-batch', 'task_keys': [key],
+               'additional_attempts': 2, 'screen_batch_size': 4}
+    result = run_final_slice(root, agent, workers=2, seconds=30, max_attempts=1,
+                             recoveries=[request], clock=lambda: 30000)
+    assert result['status'] == 'completed' and not result['automatic_continue']
+    assert result['completed_pairs'] == result['candidate_pairs'] == 17
+    assert result['pending_assessments'] == result['final_pending'] == 0
+    assert not result['errors']
+    state = json.loads(path.read_text())
+    assert state['attempts'][key] == 2  # Never reset back to one or erase the failure history.
+    for saved_key, pair in prior['pairs'].items():
+        assert state['pairs'][saved_key] == pair
+    assert state['grouped'] == prior['grouped']
+    assert screening_sizes == [16, 1, 4, 4, 4, 4]
+    assert len(load_records(root, 'live', 'impacts')) == 17
+    assert all(c.assessment.method == 'agent' for c in load_records(root, 'live', 'criteria'))
+    calls = len(agent.calls)
+    assert run_final_slice(root, agent, seconds=30, max_attempts=1, recoveries=[request])['status'] == 'completed'
+    assert len(agent.calls) == calls  # Later daily runs do not buy another recovery.
+    validate_store(root)
+
+
+def test_recovery_failure_keeps_new_ceiling_across_continuations(corpus, tmp_path, monkeypatch):
+    root, _, criterion, law = ready(corpus, monkeypatch)
+    agent = Stub(tmp_path / 'cache/llm', law, criterion)
+    def unavailable(*args, **kwargs):
+        raise ProviderError(200, {'error': {'code': 502}})
+    agent.ask = unavailable
+    result = run_final_slice(root, agent, seconds=30, max_attempts=1, clock=lambda: 10000)
+    key, = result['errors']
+    request = {'id': 'provider-recovery-bounded', 'task_keys': [key],
+               'additional_attempts': 2, 'screen_batch_size': 4}
+    result = run_final_slice(root, agent, seconds=30, max_attempts=1, recoveries=[request], clock=lambda: 20000)
+    assert result['status'] == 'continuing' and result['automatic_continue']
+    assert result['errors'][key]['attempts'] == 2
+    result = run_final_slice(root, agent, seconds=30, max_attempts=1, recoveries=[request], clock=lambda: 30000)
+    assert result['status'] == 'needs_attention' and not result['automatic_continue']
+    assert result['errors'][key]['attempts'] == 3
+    assert result['completed_pairs'] == 0  # A persistent error is never a no-link conclusion.
+    repeated = run_final_slice(root, agent, seconds=30, max_attempts=1, recoveries=[request], clock=lambda: 40000)
+    assert repeated['errors'] == result['errors']

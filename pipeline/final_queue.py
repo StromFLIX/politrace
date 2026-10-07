@@ -34,6 +34,7 @@ from pipeline.experiment import (
 )
 from pipeline.models import MatchAudit
 from pipeline.production import law_fingerprint, retrieve, safe_failure
+from pipeline.recovery import apply_provider_recoveries
 from pipeline.store import digest, json_text, load_records, validate_store, write_json
 
 logger = logging.getLogger(__name__)
@@ -186,7 +187,7 @@ def load_state(path, laws, criteria, existing, signature=None):
     return state
 
 
-def run_final_slice(root, agent, *, workers=8, seconds=600, max_attempts=3, clock=time.time):
+def run_final_slice(root, agent, *, workers=8, seconds=600, max_attempts=3, recoveries=(), clock=time.time):
     if agent.model != 'openai/gpt-6-luna' or agent.review_model != FINAL_MODEL or not agent.flex:
         raise ValueError('Production requires Luna Flex screening and Sol Flex final evaluation')
     if not 1 <= workers <= 16 or not 30 <= seconds <= 14400:
@@ -267,14 +268,15 @@ def run_final_slice(root, agent, *, workers=8, seconds=600, max_attempts=3, cloc
         while not done.wait(45):
             persist()
     reporter = Thread(target=heartbeat, daemon=True)
-    reporter.start()
     @lru_cache(maxsize=workers)
     def index(lid):
         return Index({p.id: p.text for p in by_law[lid].passages})
     def task_key(stage, lid, ids):
         return stage + ':' + lid + ':' + digest(':'.join(signatures[f'{lid}:{cid}'] for cid in ids))[:20]
+    def attempt_limit(key):
+        return recovery_limits.get(key, {}).get('max_attempts', max_attempts)
     def available(key):
-        return (state['attempts'].get(key, 0) < max_attempts
+        return (state['attempts'].get(key, 0) < attempt_limit(key)
                 and state['errors'].get(key, {}).get('next_retry_at', 0) <= clock())
     def execute(tasks, worker, apply):
         tasks = [t for t in tasks if available(t[0])]
@@ -326,8 +328,12 @@ def run_final_slice(root, agent, *, workers=8, seconds=600, max_attempts=3, cloc
             by_id[lid].append(cid)
         return [(task_key('final', lid, part), lid, part) for lid, ids in by_id.items() for part in batches(ids, 12)]
     def screening_worker(task):
-        _, lid, ids = task
-        return list(screen(by_law[lid], [by_criterion[cid] for cid in ids], agent, index(lid)))
+        key, lid, ids = task
+        size = recovery_limits.get(key, {}).get('screen_batch_size', 16)
+        # Keep the original task identity/attempt history. Small successful requests are
+        # cached independently, so another provider failure cannot cause repeat charges.
+        return [audit for part in batches(ids, size)
+                for audit in screen(by_law[lid], [by_criterion[cid] for cid in part], agent, index(lid))]
     def screened(task, results):
         _, lid, _ = task
         for audit in results:
@@ -362,6 +368,11 @@ def run_final_slice(root, agent, *, workers=8, seconds=600, max_attempts=3, cloc
         for cid, value in results:
             by_criterion[cid].assessment = value
             write_json(root / 'live/criteria' / f'{cid}.json', by_criterion[cid])
+    recovery_limits = apply_provider_recoveries(state, recoveries,
+        active_keys={task[0] for task in screen_tasks()}, default_attempts=max_attempts)
+    if state.get('provider_recoveries'):
+        status['provider_recoveries'] = state['provider_recoveries']
+    reporter.start()
     try:
         persist()
         while clock() < deadline and not halted.is_set():
@@ -398,7 +409,7 @@ def run_final_slice(root, agent, *, workers=8, seconds=600, max_attempts=3, cloc
         active = {t[0] for t in remaining} | {'group:' + p.id + ':' + corpus_fingerprint(
                     [c for c in criteria if c.program_id == p.id])[:20] for p in groups_pending}
         state['errors'] = {k: v for k, v in state['errors'].items() if k in active}
-        actionable = any(state['attempts'].get(k, 0) < max_attempts for k in active)
+        actionable = any(state['attempts'].get(k, 0) < attempt_limit(k) for k in active)
         status['status'] = ('blocked' if halted.is_set() else 'completed' if not active
                             else 'continuing' if actionable else 'needs_attention')
         if any(law.text_status != 'available' for law in laws) and status['status'] == 'completed':

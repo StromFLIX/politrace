@@ -19,7 +19,8 @@ def main():
                          topups=config.get('budget_topups', []))
     agent = Agent(cache=cache / 'llm', model=config['model'], max_usd=cap,
                   max_calls=10000, flex=True, ledger=cache / 'budget.json')
-    result = run_final_slice(ROOT / 'data', agent, workers=config['workers'], seconds=config['slice_seconds'])
+    result = run_final_slice(ROOT / 'data', agent, workers=config['workers'], seconds=config['slice_seconds'],
+                             recoveries=config.get('provider_recoveries', []))
     write_json(cache / 'result.json', result)
     if summary := os.environ.get('GITHUB_STEP_SUMMARY'):
         with Path(summary).open('a') as f:

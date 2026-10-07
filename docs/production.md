@@ -29,6 +29,33 @@ Pushing this config to `main` queues a normal continuation. The concurrency grou
 
 Provider/validation failures have bounded retries and batch-level deferral; persistent errors remain visible. A quarantined batch does not stop unrelated laws or programmes. Once only exhausted items remain, the run explicitly needs attention. Credit errors stop automatic spending. Source-sensitive signatures invalidate stale audits after editorial changes; new zero-candidate laws still update coverage. The maximum slice count bounds continuations of the same corpus, not all future daily imports. Completed pairs can legitimately be no-supported-link or missing-context decisions; neither means the programme was fulfilled.
 
+### Targeted recovery of exhausted provider batches
+
+An ordinary dispatch cannot revive a task that has exhausted its attempts. After inspecting its
+checkpoint, authorize an exact recovery in `provider_recoveries` in `.github/production.json`:
+
+```json
+{
+  "id": "provider-recovery-unique-incident",
+  "task_keys": ["screen:bgbl-1-2026-107:eda8a9d0b9e0f2bd915e"],
+  "additional_attempts": 2,
+  "screen_batch_size": 4
+}
+```
+
+This applies once, only to the named active screening tasks with exhausted **transient provider**
+errors. Smaller request batches reuse their own validated response caches. Original attempts and
+failure details remain in the queue; completed pairs, final decisions, grouping, the cost ledger and
+budget ceiling are unchanged. The checkpoint and technical API record the immutable recovery request.
+Repeating a dispatch or removing/re-adding the same request cannot grant more attempts. No recovery
+can exceed nine attempts per task, change Flex routes, override credit/authentication errors, or turn
+an unresolved failure into a no-link result. A stale/mistyped target fails before model calls.
+
+The 2026-10-07 recovery grants two additional attempts to the three remaining HTTP-502 batches
+(48 checks for BGBl I 2026 Nr. 107), split into four-criterion requests. Publication and automatic
+continuation still require the normal source, assessment and browser checks. Completion requires
+no pending pairs, final evaluations, overall assessments, or programme grouping—not just a green job.
+
 Deduplication stays within programme ownership and preserves every criterion/source ID. Singleton fallback groups are marked pending, not falsely labelled fully deduplicated. Large programmes cannot consume smaller programmes' retrieval allowance. Omitted candidates remain **unknown**, not disproven.
 
 ## OCR and local acceptance testing
