@@ -124,6 +124,7 @@
     "bgbl-1-2026-28",
     "bgbl-1-2026-285",
     "bgbl-1-2026-286",
+    "bgbl-1-2026-289",
     "bgbl-1-2026-29",
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
@@ -59843,7 +59844,7 @@
     },
     {
       "law_id": "bgbl-1-2025-259",
-      "analysis_sha256": "791b9d1191153be1cf10fb4d4392b7ba7584ea51092b400832009cc894d7a9f2",
+      "analysis_sha256": "39206b8fef8b65859ead1ee69481c82cd7603969f3b7054ccb704bf469f0c3a1",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -59928,6 +59929,7 @@
         "gruene-2025-ac-6cf386abfc8ec7dc",
         "gruene-2025-ac-6df10f645e042320",
         "gruene-2025-ac-6f496bff593ccfdf",
+        "gruene-2025-ac-725f3cce314fbdeb",
         "gruene-2025-ac-74bbc69e81412ad2",
         "gruene-2025-ac-75cb3318536f0058",
         "gruene-2025-ac-7805f95115072f04",
@@ -60055,7 +60057,7 @@
         "gruene-2025-ac-fb830be3ce2bf6fd",
         "gruene-2025-ac-fbb91e9b83b26a46"
       ],
-      "omitted_count": 1433,
+      "omitted_count": 1432,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-013b9f136ed40b64",
@@ -62322,6 +62324,35 @@
             "caveats": [],
             "criterion_id": "gruene-2025-ac-6f496bff593ccfdf",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-725f3cce314fbdeb",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge betreffen die Pflegefachassistenzausbildung; wegen des unvollständigen Gesetzeskontexts lässt sich nicht feststellen, ob einkommensabhängige Kitagebühren als Standard eingeführt wurden.",
+          "input_sha256": "0af23f01e49a8a869b65aa25ae39fdf7fb7930e2c1b0ab185b9c9d087b96f7b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0af23f01e49a8a869b65aa25ae39fdf7fb7930e2c1b0ab185b9c9d087b96f7b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge betreffen die Pflegefachassistenzausbildung; wegen des unvollständigen Gesetzeskontexts lässt sich nicht feststellen, ob einkommensabhängige Kitagebühren als Standard eingeführt wurden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir fordern einkommensabhängige Kitagebühren als Standard.",
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-725f3cce314fbdeb",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -79447,7 +79478,7 @@
     },
     {
       "law_id": "bgbl-1-2025-325",
-      "analysis_sha256": "b4a8103c6621ea17155c0af2a0f71882cd55698ac125546efb2313dae81ec76c",
+      "analysis_sha256": "903e632438987ae76599bc01f8f8f83b900d5c2efa174eca42bfb22ea1924517",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -79466,9 +79497,10 @@
         "gruene-2025-ac-c9a733e57ee922c1",
         "gruene-2025-ac-ce7dbdc96b19f2ef",
         "gruene-2025-ac-e5807afcad81692d",
-        "gruene-2025-ac-efda0f94f9264f0c"
+        "gruene-2025-ac-efda0f94f9264f0c",
+        "gruene-2025-ac-f386ce2cb330f9bc"
       ],
-      "omitted_count": 1624,
+      "omitted_count": 1623,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-180371e95ee294d0",
@@ -79908,6 +79940,33 @@
             "criterion_quote": "Wir wollen die Zusatzvereinbarung zum\nBerlin-Bonn-Gesetz zeitnah abschließen.",
             "caveats": [],
             "criterion_id": "gruene-2025-ac-efda0f94f9264f0c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-f386ce2cb330f9bc",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift verteilt Kosten für Errichtung, Betrieb und Weiterentwicklung des NOOTS; sie betrifft nicht die Bildungsfinanzierung.",
+          "input_sha256": "4de60849f55e4afd09c3276e4d0647dffcf107625a59852a52220b52cceb216f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4de60849f55e4afd09c3276e4d0647dffcf107625a59852a52220b52cceb216f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschrift verteilt Kosten für Errichtung, Betrieb und Weiterentwicklung des NOOTS; sie betrifft nicht die Bildungsfinanzierung.",
+            "law_passage_id": "bgbl-1-2025-325-p-99c60c592d762afe",
+            "law_quote": "Die Vertragsparteien tragen die Kosten für die Errichtung, den Betrieb und die Weiterentwicklung des NOOTS gemeinsam.",
+            "criterion_quote": "Statt nur\nnach dem Königsteiner Schlüssel nach Einwohnerzahl und Finanzkraft zu finanzieren,\nwollen wir die Finanzierung stärker an\nden tatsächlichen Bedarfen ausrichten.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-f386ce2cb330f9bc",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -108287,7 +108346,7 @@
     },
     {
       "law_id": "bgbl-1-2025-369",
-      "analysis_sha256": "0ba90af6477dc4e52f2de08a3537d8e2c2efd2b30c17d7fe5b5a4ab4faa4b84b",
+      "analysis_sha256": "93ebb5ec75420d3f77addf4bf53c9222fed64e25cc7472bae21b7e4468f18a21",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -108343,10 +108402,11 @@
         "gruene-2025-ac-e8f47a22bd4b1666",
         "gruene-2025-ac-e982fbbdd88cfef5",
         "gruene-2025-ac-eed88c56f6e6e97f",
+        "gruene-2025-ac-f40d86d3301cad03",
         "gruene-2025-ac-f5f0fe2e65300af2",
         "gruene-2025-ac-fc613c3504322876"
       ],
-      "omitted_count": 1586,
+      "omitted_count": 1585,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-18410875c83cec8d",
@@ -109815,6 +109875,33 @@
               "Der Gesetzeskontext ist als partiell gekennzeichnet."
             ],
             "criterion_id": "gruene-2025-ac-eed88c56f6e6e97f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-f40d86d3301cad03",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen die Bekämpfung von Schwarzarbeit und enthalten keine Regelung zur Unterstützung berufsbegleitender Anerkennungsverfahren.",
+          "input_sha256": "023ea86344547fee1a703cbba262a90cf0eeb768c1a3953d11102523e4cd1465",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "023ea86344547fee1a703cbba262a90cf0eeb768c1a3953d11102523e4cd1465"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften betreffen die Bekämpfung von Schwarzarbeit und enthalten keine Regelung zur Unterstützung berufsbegleitender Anerkennungsverfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "berufsbegleitende Anerkennungsverfahren",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-f40d86d3301cad03",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -139208,7 +139295,7 @@
     },
     {
       "law_id": "bgbl-1-2026-137",
-      "analysis_sha256": "92ed920b3d16f2536f34586afc919aff6c647c79cec28636194a06a7dfe31146",
+      "analysis_sha256": "0b76f081be9dc85ff56538c762455a397b075342edb2d7c6650062f76d618eb1",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -139233,6 +139320,7 @@
         "gruene-2025-ac-412fd15f8267a947",
         "gruene-2025-ac-453f25b3597d99f0",
         "gruene-2025-ac-4b2a3591133a2d9b",
+        "gruene-2025-ac-50d4014f98bb8a4e",
         "gruene-2025-ac-51e810fc5f8c98ec",
         "gruene-2025-ac-53bda4e1d8d95697",
         "gruene-2025-ac-53f93954efa9908c",
@@ -139311,7 +139399,7 @@
         "gruene-2025-ac-f98bffde4f39534d",
         "gruene-2025-ac-ff6ac8853dbebda1"
       ],
-      "omitted_count": 1542,
+      "omitted_count": 1541,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-0462008eb15e408e",
@@ -139905,6 +139993,35 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-4b2a3591133a2d9b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-50d4014f98bb8a4e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vergaberegelungen enthalten keine Bestimmung zur Streckung möglicher Strafzahlungen.",
+          "input_sha256": "1553955efe3c9d34ca0b71346bde22b1adbc499b2414b4e989d34fdfe8890b77",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1553955efe3c9d34ca0b71346bde22b1adbc499b2414b4e989d34fdfe8890b77"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die vorgelegten Vergaberegelungen enthalten keine Bestimmung zur Streckung möglicher Strafzahlungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mögliche Strafzahlungen sollen\nim Rahmen der bestehenden Regelungen\ngegebenenfalls gestreckt",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-50d4014f98bb8a4e",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -162475,7 +162592,7 @@
     },
     {
       "law_id": "bgbl-1-2026-210a",
-      "analysis_sha256": "a97fc81bf2ff883ca996114497e3210f5aff5995af2f1290c22400b448caef9d",
+      "analysis_sha256": "3bfb09d6a34098801f25e8ba7eb14698f760447bfb27b995ad457a5a9f4db061",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -162571,6 +162688,7 @@
         "gruene-2025-ac-ee4e48765ac5e9a0",
         "gruene-2025-ac-efda0f94f9264f0c",
         "gruene-2025-ac-f09b968c48c614ee",
+        "gruene-2025-ac-f0cdb7e7ca8d70e8",
         "gruene-2025-ac-f0f89202079c2a79",
         "gruene-2025-ac-f1453238e8e8b424",
         "gruene-2025-ac-f15d71026d2e7d0f",
@@ -162584,7 +162702,7 @@
         "gruene-2025-ac-f84c29a6e6f63463",
         "gruene-2025-ac-fa09a7ef8340b564"
       ],
-      "omitted_count": 1536,
+      "omitted_count": 1535,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-07967e6c5e0ba879",
@@ -165186,6 +165304,35 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-f09b968c48c614ee",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-f0cdb7e7ca8d70e8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegte Gebührenregel betrifft ausschließlich Zuschlagsverfahren für Anlagen nach dem StromVKG; eine Beteiligung von Kunststoffherstellern an Umweltkosten ihrer Produkte wird darin nicht geregelt.",
+          "input_sha256": "df4797f18ccbe874651dd2425af27c9341a4e08cfa1652d476e297eefc87fd8f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "df4797f18ccbe874651dd2425af27c9341a4e08cfa1652d476e297eefc87fd8f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegte Gebührenregel betrifft ausschließlich Zuschlagsverfahren für Anlagen nach dem StromVKG; eine Beteiligung von Kunststoffherstellern an Umweltkosten ihrer Produkte wird darin nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-210a-p-fd5c53eb28c28b3e",
+            "law_quote": "Durchführung eines Zuschlagsverfahrens für Ausschreibungen für Anlagen nach dem StromVKG|956“.",
+            "criterion_quote": "Kunststoffhersteller werden wir stärker an\nden Umweltkosten ihrer Produkte beteiligen.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist unvollständig."
+            ],
+            "criterion_id": "gruene-2025-ac-f0cdb7e7ca8d70e8",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -185166,7 +185313,7 @@
     },
     {
       "law_id": "bgbl-1-2026-228",
-      "analysis_sha256": "db795c5995f698f219d6b6dfa8026f048a1c8639c1f8f9b3a1397a0af3386f5d",
+      "analysis_sha256": "922898e10c064dce918eb8463f4201c657775e28832495a5fc8857b43be0972d",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -185378,6 +185525,7 @@
         "gruene-2025-ac-ea02c3e070a8c0dd",
         "gruene-2025-ac-eab3b01ae45089eb",
         "gruene-2025-ac-ebc44f5d90fb4d04",
+        "gruene-2025-ac-eed88c56f6e6e97f",
         "gruene-2025-ac-ef23ed335336d6d2",
         "gruene-2025-ac-efda0f94f9264f0c",
         "gruene-2025-ac-f0071ecda91625f5",
@@ -185395,7 +185543,7 @@
         "gruene-2025-ac-fdc1381cdc57b8b3",
         "gruene-2025-ac-fe3861a0ad593cf0"
       ],
-      "omitted_count": 1416,
+      "omitted_count": 1415,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-04dca3eb5d16a574",
@@ -191280,6 +191428,38 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-ebc44f5d90fb4d04",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-eed88c56f6e6e97f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschrift verpflichtet Arbeitgeber ab dem 1. Juli 2028 zum elektronischen Abruf und zur Übermittlung von Angaben bei Teilarbeitsunfähigkeit. Sie regelt damit einen Datenaustausch, schafft aber keine erkennbaren Schutzvorgaben für Beschäftigtendaten oder Persönlichkeitsrechte.",
+          "input_sha256": "92df078e539cad95849aaa8844c3ba42a9468161f7db65af57716f89d87c0f1f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a23f328c3c76d22ce5622b4224d9a4599f3f99a83164cd64ae5ba4c6e9f90483"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "92df078e539cad95849aaa8844c3ba42a9468161f7db65af57716f89d87c0f1f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.78,
+            "rationale": "Die Vorschrift verpflichtet Arbeitgeber ab dem 1. Juli 2028 zum elektronischen Abruf und zur Übermittlung von Angaben bei Teilarbeitsunfähigkeit. Sie regelt damit einen Datenaustausch, schafft aber keine erkennbaren Schutzvorgaben für Beschäftigtendaten oder Persönlichkeitsrechte.",
+            "law_passage_id": "bgbl-1-2026-228-p-6da1d29edc4752e5",
+            "law_quote": "„(2) Der Arbeitgeber ruft ab dem 1. Juli 2028 die Daten nach Absatz 1 zu einer ärztlich festgestellten\nTeilarbeitsunfähigkeit nach § 44c des Fünften Buches ab und teilt seine Zustimmung zur teilweisen\nArbeitsleistung des Beschäftigten und den Zeitpunkt der Arbeitsaufnahme elektronisch der Krankenkasse\nmit. Eine vorzeitige Beendigung der Teilarbeitsunfähigkeit durch Arbeitnehmer oder Arbeitgeber ist der\nKrankenkasse unverzüglich durch den Arbeitgeber zu melden. Der Beendigungszeitpunkt ist anzugeben.“",
+            "criterion_quote": "Zudem werden wir Regelungen\nzum Beschäftigtendatenschutz schaffen, um\nRechtsklarheit für Arbeitgeber sowie Beschäftigte zu erreichen und die Persönlichkeitsrechte effektiv zu schützen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-eed88c56f6e6e97f",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -197935,6 +198115,576 @@
       ]
     },
     {
+      "law_id": "bgbl-1-2026-289",
+      "analysis_sha256": "d6ad1826370cf51edb6551702ba71e0d3109ca605e5c5b07e66fc83dec61a527",
+      "status": "completed",
+      "eligible_count": 1640,
+      "candidate_ids": [
+        "gruene-2025-ac-180371e95ee294d0",
+        "gruene-2025-ac-1e8e3c810fb734f7",
+        "gruene-2025-ac-2f91f06bf7db60fc",
+        "gruene-2025-ac-33121a7bf9b64d49",
+        "gruene-2025-ac-49bf2d13571f909b",
+        "gruene-2025-ac-69e8b6245a8af707",
+        "gruene-2025-ac-82f6339b23c58c6f",
+        "gruene-2025-ac-8c9b8a862968acce",
+        "gruene-2025-ac-9a13f38c70980451",
+        "gruene-2025-ac-a1963a1622808528",
+        "gruene-2025-ac-a4822add0d0a6963",
+        "gruene-2025-ac-a99411ff765c561f",
+        "gruene-2025-ac-af73393f3157855d",
+        "gruene-2025-ac-b334e0b72f753137",
+        "gruene-2025-ac-b85b425e7f5c8cb5",
+        "gruene-2025-ac-bde17392cc4a2f75",
+        "gruene-2025-ac-c9a733e57ee922c1",
+        "gruene-2025-ac-f092667d5ed65a1e",
+        "gruene-2025-ac-fb76e87635a3ebc4"
+      ],
+      "omitted_count": 1621,
+      "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-180371e95ee294d0",
+          "disposition": "proposed_link",
+          "rationale": "Ausnahmen nach der allgemeinen Erprobungsklausel dürfen Verpflichtungen aus völkerrechtlichen Verträgen nicht entgegenstehen. Das wahrt solche Verpflichtungen in diesem begrenzten Anwendungsbereich.",
+          "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca"
+            }
+          ],
+          "impact_id": "impact-1cc677dd7873d617",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Ausnahmen nach der allgemeinen Erprobungsklausel dürfen Verpflichtungen aus völkerrechtlichen Verträgen nicht entgegenstehen. Das wahrt solche Verpflichtungen in diesem begrenzten Anwendungsbereich.",
+            "law_passage_id": "bgbl-1-2026-289-p-682f4452669ced93",
+            "law_quote": "4. Vorgaben aus höherrangigem Recht oder Verpflichtungen aus völkerrechtlichen Verträgen nicht entgegenstehen,",
+            "criterion_quote": "mit\nunseren Partnern unsere Verpflichtungen\nzu völkerrechtlichen Verträgen auch in\nschwierigen Zeiten aufrechterhalten",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-180371e95ee294d0",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-1e8e3c810fb734f7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Evaluation und Beteiligung des NKR sowie beteiligter Stellen vor, aber keine gemeinsame Beratung über Änderungen des Prostituiertenschutzgesetzes unter Einbeziehung der dort genannten Gruppen.",
+          "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz sieht Evaluation und Beteiligung des NKR sowie beteiligter Stellen vor, aber keine gemeinsame Beratung über Änderungen des Prostituiertenschutzgesetzes unter Einbeziehung der dort genannten Gruppen.",
+            "law_passage_id": "bgbl-1-2026-289-p-38c075552d630e53",
+            "law_quote": "Die Prüfung erfolgt unter Beteiligung des Antragstellers, des Nationalen Normenkontrollrates",
+            "criterion_quote": "Bund, Länder und Kommunen sowie Betroffene und Expert*innen auf dieser Grundlage gemeinsam ergebnisoffen beraten",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-1e8e3c810fb734f7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2f91f06bf7db60fc",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext enthält keine Regelung zur Aufteilung einer Pflegeleistung auf mehrere Pflegepersonen.",
+          "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Gesetzestext enthält keine Regelung zur Aufteilung einer Pflegeleistung auf mehrere Pflegepersonen.",
+            "law_passage_id": "bgbl-1-2026-289-p-3ad6739b5424ebaa",
+            "law_quote": "Dieses Gesetz",
+            "criterion_quote": "Die Leistung soll so ausgestaltet sein, dass mehrere Personen sich die Pflege teilen können.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-2f91f06bf7db60fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-33121a7bf9b64d49",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erleichtert Erprobungen innovativer Technologien und Produkte allgemein, enthält aber keine Regelung zu tierfreien Methoden oder deren strukturellen Hürden.",
+          "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz erleichtert Erprobungen innovativer Technologien und Produkte allgemein, enthält aber keine Regelung zu tierfreien Methoden oder deren strukturellen Hürden.",
+            "law_passage_id": "bgbl-1-2026-289-p-722434bf4212c113",
+            "law_quote": "fördert Innovationen, indem Rahmenbedingungen für die praktische Erprobung innovativer Technologien, Produkte, Dienstleistungen oder Ansätze in Reallaboren verbessert werden",
+            "criterion_quote": "deren strukturelle Hürden wir abbauen wollen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-33121a7bf9b64d49",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-49bf2d13571f909b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz erlaubt Erprobungen zur Verwaltungsdigitalisierung, verpflichtet den Bund aber nicht, einen digitalen Dienst für bundesweit geregelte Leistungen bereitzustellen.",
+          "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz erlaubt Erprobungen zur Verwaltungsdigitalisierung, verpflichtet den Bund aber nicht, einen digitalen Dienst für bundesweit geregelte Leistungen bereitzustellen.",
+            "law_passage_id": "bgbl-1-2026-289-p-92a25e198b6e1ae0",
+            "law_quote": "zur Verwaltungsdigitalisierung zu erproben und auszuwerten",
+            "criterion_quote": "der Bund für bundesweit gesetzlich geregelte Leistungen einen digitalen Dienst bereithalten",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-49bf2d13571f909b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-69e8b6245a8af707",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht Erprobungen innovativer Technologien und Produkte, sieht aber keine Forschung zu neuen gentechnischen Verfahren in der Landwirtschaft vor.",
+          "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz ermöglicht Erprobungen innovativer Technologien und Produkte, sieht aber keine Forschung zu neuen gentechnischen Verfahren in der Landwirtschaft vor.",
+            "law_passage_id": "bgbl-1-2026-289-p-722434bf4212c113",
+            "law_quote": "fördert Innovationen, indem Rahmenbedingungen für die praktische Erprobung innovativer Technologien, Produkte, Dienstleistungen oder Ansätze in Reallaboren verbessert werden",
+            "criterion_quote": "für neue gentechnische Verfahren in der Landwirtschaft, die zugleich weiterhin hinsichtlich ihrer Chancen, Risiken und Folgen erforscht werden sollen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-69e8b6245a8af707",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-82f6339b23c58c6f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften ermöglichen keine Anwendung von CCS/CCU und enthalten weder die verlangten Vorgaben zur CO₂-Speicherung noch zu geschlossenen Kohlenstoffkreisläufen.",
+          "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a3cf5f7f1e034599be1022c6971634c7a8733d713494d61d7f5dfd97dc5a757a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften ermöglichen keine Anwendung von CCS/CCU und enthalten weder die verlangten Vorgaben zur CO₂-Speicherung noch zu geschlossenen Kohlenstoffkreisläufen.",
+            "law_passage_id": "bgbl-1-2026-289-p-722434bf4212c113",
+            "law_quote": "fördert Innovationen, indem Rahmenbedingungen für die praktische Erprobung innovativer Technologien, Produkte, Dienstleistungen oder Ansätze in Reallaboren verbessert werden",
+            "criterion_quote": "Deshalb ermöglichen wir für diesen Bereich die Anwendung dieser Technologien.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-82f6339b23c58c6f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-8c9b8a862968acce",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Erprobungen und deren Evaluation, schreibt aber nicht vor, Ergebnisse einer Überwachungsgesamtrechnung bei der Bewertung von Befugnissen zu berücksichtigen.",
+          "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Erprobungen und deren Evaluation, schreibt aber nicht vor, Ergebnisse einer Überwachungsgesamtrechnung bei der Bewertung von Befugnissen zu berücksichtigen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Ergebnisse der Überwachungsgesamtrechnung werden wir bei der Evaluierung\nbestehender und bei der Einführung neuer\nBefugnisse berücksichtigen",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-8c9b8a862968acce",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-9a13f38c70980451",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Zusammenarbeit von Behörden in Gemeinsamen Zentren zur Terrorismusbekämpfung.",
+          "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Zusammenarbeit von Behörden in Gemeinsamen Zentren zur Terrorismusbekämpfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Auf nationaler Ebene müssen alle zuständigen Behörden von Bund und Ländern\nengstens in den Gemeinsamen Zentren\nzur Terrorismusbekämpfung zusammenarbeiten",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-9a13f38c70980451",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-a1963a1622808528",
+          "disposition": "proposed_link",
+          "rationale": "Der Anschluss des Unternehmensbasisdatenregisters an das Once-Only-System kann befristet erprobt werden. Eine allgemeine Pflicht zur einmaligen Einreichung von Unternehmensdaten wird damit nicht eingeführt.",
+          "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca"
+            }
+          ],
+          "impact_id": "impact-024d52f88f156a97",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.88,
+            "rationale": "Der Anschluss des Unternehmensbasisdatenregisters an das Once-Only-System kann befristet erprobt werden. Eine allgemeine Pflicht zur einmaligen Einreichung von Unternehmensdaten wird damit nicht eingeführt.",
+            "law_passage_id": "bgbl-1-2026-289-p-b551f16926e48588",
+            "law_quote": "1. des Anschlusses des Basisregisters an das Nationale Once-Only-Technical-System im Sinne des Vertrages\nüber die Errichtung, den Betrieb und die Weiterentwicklung des Nationalen Once-Only-Technical-Systems\n(NOOTS) – Vertrag zur Ausführung von Artikel 91c Absatz 1, Absatz 2 GG – NOOTS-Staatsvertrag vom\n24. März 2025 (BGBl. 2025 I Nr. 325, S. 3; 2026 I Nr. 35) sowie",
+            "criterion_quote": "und Daten nach dem Once-Only-Prinzip nur\neinmal eingereicht werden müssen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a1963a1622808528",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
+          "disposition": "no_supported_link",
+          "rationale": "Die Mitteilungs- und Berichtspflichten des Gesetzes betreffen Reallabore; eine frühzeitige Weitergabe von Informationen an jeweils zuständige Behörden wird damit nicht allgemein geregelt.",
+          "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bc9bcd585177719527109bd989811f06be4173f16db4f8832e68dcdfa318bb11"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Mitteilungs- und Berichtspflichten des Gesetzes betreffen Reallabore; eine frühzeitige Weitergabe von Informationen an jeweils zuständige Behörden wird damit nicht allgemein geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Es muss sichergestellt sein, dass\nInformationen die zuständigen Behörden\nfrühzeitig erreichen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a4822add0d0a6963",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-a99411ff765c561f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Erprobungsräume und Verwaltungsverfahren; Maßnahmen zur Unterstützung besonders klimabetroffener Staaten oder Gemeinschaften, insbesondere in Afrika oder kleinen Inselstaaten, sind in den vorgelegten Passagen nicht vorgesehen.",
+          "input_sha256": "dc4f9d36413ca6eb76895fe7f32c87d2b6966a83c80f38214a804134ec57f995",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "dc4f9d36413ca6eb76895fe7f32c87d2b6966a83c80f38214a804134ec57f995"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Erprobungsräume und Verwaltungsverfahren; Maßnahmen zur Unterstützung besonders klimabetroffener Staaten oder Gemeinschaften, insbesondere in Afrika oder kleinen Inselstaaten, sind in den vorgelegten Passagen nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Im Sinne der Klimagerechtigkeit gilt besondere Unterstützung den vom Klimawandel besonders betroffenen Staaten und Gemeinschaften, gerade in Afrika und den kleinen Inselentwicklungsstaaten.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a99411ff765c561f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-af73393f3157855d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft bundesrechtliche Erprobungsregeln und ändert einzelne Bundesgesetze; es ändert nicht die Beteiligung des Europäischen Parlaments und des Rates an der Gesetzgebung in allen Politikfeldern.",
+          "input_sha256": "dc4f9d36413ca6eb76895fe7f32c87d2b6966a83c80f38214a804134ec57f995",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "dc4f9d36413ca6eb76895fe7f32c87d2b6966a83c80f38214a804134ec57f995"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft bundesrechtliche Erprobungsregeln und ändert einzelne Bundesgesetze; es ändert nicht die Beteiligung des Europäischen Parlaments und des Rates an der Gesetzgebung in allen Politikfeldern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und in allen Politikfeldern mit dem Rat gleichberechtigt Gesetze beschließen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-af73393f3157855d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-b334e0b72f753137",
+          "disposition": "proposed_link",
+          "rationale": "Das Bundeserprobungsgesetz schafft einen Rahmen für befristete Reallabore unter Beteiligung zuständiger Behörden und möglicher Akteure aus Wissenschaft und Verwaltung. Eine gemeinsame Erprobung durch Wissenschaft und lokale Akteure ist nicht vorgeschrieben.",
+          "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2275a5ceb879e0c0b2f4fb764e0ae5cf9ed724ef9ea2c3df4093d002e433fff9"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca"
+            }
+          ],
+          "impact_id": "impact-aa91229dd5f95c80",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.94,
+            "rationale": "Das Bundeserprobungsgesetz schafft einen Rahmen für befristete Reallabore unter Beteiligung zuständiger Behörden und möglicher Akteure aus Wissenschaft und Verwaltung. Eine gemeinsame Erprobung durch Wissenschaft und lokale Akteure ist nicht vorgeschrieben.",
+            "law_passage_id": "bgbl-1-2026-289-p-4d4e83de65753038",
+            "law_quote": "3. sind Reallabore befristete Erprobungen innovativer Technologien, Produkte, Dienstleistungen, Verwaltungsver­\nfahren oder Ansätze, die unter möglichst realen Bedingungen und unter Beteiligung der jeweils zuständigen\nBehörde von Akteuren aus Wirtschaft, Wissenschaft, Verwaltung oder Zivilgesellschaft durchgeführt werden\nund zum regulatorischen Lernen beitragen können,",
+            "criterion_quote": "Mit einem Reallabor-Gesetz werden wir\nExperimentierräume schaffen, in denen\nWissenschaftler*innen und lokale Akteur*innen gemeinsam neue Technologien\nund Anwendungen erproben können.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-b334e0b72f753137",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-b85b425e7f5c8cb5",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ermöglicht befristete Abweichungen zur Erprobung aufwandsärmerer Verwaltungsverfahren; ob dies Zugangsverfahren für EU-Fördermittel von Unternehmen erfasst, geht aus den vorliegenden Texten nicht hervor.",
+          "input_sha256": "642ddc9d7f40dad0dc598be2f9e1c1ddc63851fb528e573652a3c60c6b220884",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "642ddc9d7f40dad0dc598be2f9e1c1ddc63851fb528e573652a3c60c6b220884"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz ermöglicht befristete Abweichungen zur Erprobung aufwandsärmerer Verwaltungsverfahren; ob dies Zugangsverfahren für EU-Fördermittel von Unternehmen erfasst, geht aus den vorliegenden Texten nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-289-p-4480003755fc21db",
+            "law_quote": "die Ausnahme oder die Abweichung zur Erprobung von zeitlich optimierten, aufwandsärmer oder digitaler ausgestalteten Verwaltungs- oder Genehmigungsverfahren dient",
+            "criterion_quote": "Für zivilgesellschaftliche Akteure und Unternehmen muss es einfacher werden, auf EU-Fördermittel zuzugreifen.",
+            "caveats": [
+              "Die einschlägigen Regeln und die Anwendbarkeit der Erprobungsklausel auf EU-Förderverfahren sind im bereitgestellten Kontext nicht enthalten."
+            ],
+            "criterion_id": "gruene-2025-ac-b85b425e7f5c8cb5",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-bde17392cc4a2f75",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen weder Nebeneinkünfte von Bundesrichter*innen noch deren Veröffentlichung.",
+          "input_sha256": "f59fc3b2b18799d679b9a4810db8ed2dcb2f4476102828dd6754fb8f987a1bf8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f59fc3b2b18799d679b9a4810db8ed2dcb2f4476102828dd6754fb8f987a1bf8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen weder Nebeneinkünfte von Bundesrichter*innen noch deren Veröffentlichung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Nebeneinkünfte von Bundesrichter*innen sollen – wie schon jetzt beim Bundesverfassungsgericht – auch bei allen anderen obersten Bundesgerichten veröffentlicht werden.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-bde17392cc4a2f75",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-c9a733e57ee922c1",
+          "disposition": "proposed_link",
+          "rationale": "Bei zugelassenen Erprobungen können weitere öffentliche Stellen Daten an das Unternehmensbasisdatenregister übermitteln oder daraus abrufen. Das fördert behördlichen Datenaustausch, verpflichtet Bürger und Unternehmen aber nicht zur nur einmaligen Dateneingabe.",
+          "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f59fc3b2b18799d679b9a4810db8ed2dcb2f4476102828dd6754fb8f987a1bf8"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca"
+            }
+          ],
+          "impact_id": "impact-c8643763b9f13b8f",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Bei zugelassenen Erprobungen können weitere öffentliche Stellen Daten an das Unternehmensbasisdatenregister übermitteln oder daraus abrufen. Das fördert behördlichen Datenaustausch, verpflichtet Bürger und Unternehmen aber nicht zur nur einmaligen Dateneingabe.",
+            "law_passage_id": "bgbl-1-2026-289-p-fc1e5ff3a94150d6",
+            "law_quote": "(4) Im Rahmen der nach den Absätzen 1 oder 2 zugelassenen Abweichungen dürfen zusätzlich zu den Stellen,\ndie in § 4 Absatz 1 und 2, § 5 sowie in der nach § 10 Satz 1 Nummer 6 und 7 erlassenen Verordnung genannt\nwerden, weitere öffentliche Stellen als datenübermittelnde oder datenabrufende Stellen an das Basisregister\nangeschlossen werden.",
+            "criterion_quote": "Die\nBehörden sollen Datentools vorhalten, bei\ndenen Bürger*innen und Unternehmen\nihre Daten nur einmal einpflegen müssen.\nDann müssen die verschiedenen Ebenen\nder Verwaltung darauf selbst zurückgreifen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-c9a733e57ee922c1",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-f092667d5ed65a1e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften regeln keine flexibleren Übergänge vom Arbeitsleben in den Rentenbezug.",
+          "input_sha256": "f59fc3b2b18799d679b9a4810db8ed2dcb2f4476102828dd6754fb8f987a1bf8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f59fc3b2b18799d679b9a4810db8ed2dcb2f4476102828dd6754fb8f987a1bf8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften regeln keine flexibleren Übergänge vom Arbeitsleben in den Rentenbezug.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Und wir erleichtern den selbstbestimmten Übergang vom Arbeitsleben in den Rentenbezug durch flexiblere Übergänge",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-f092667d5ed65a1e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-fb76e87635a3ebc4",
+          "disposition": "proposed_link",
+          "rationale": "Das Gesetz führt eine allgemeine Erprobungsklausel für bundesrechtliche Verwaltungsverfahren ein. Damit sieht dieses neue Gesetz einen Erprobungsraum vor, ohne solche Räume für jedes künftige Gesetzgebungsvorhaben vorzuschreiben.",
+          "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f59fc3b2b18799d679b9a4810db8ed2dcb2f4476102828dd6754fb8f987a1bf8"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cacf74d2a712d6ccc6ec66a3342eaaedf7ac61c964b0bd45e43b2337322ad2ca"
+            }
+          ],
+          "impact_id": "impact-c64d1fddd90ebb8d",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz führt eine allgemeine Erprobungsklausel für bundesrechtliche Verwaltungsverfahren ein. Damit sieht dieses neue Gesetz einen Erprobungsraum vor, ohne solche Räume für jedes künftige Gesetzgebungsvorhaben vorzuschreiben.",
+            "law_passage_id": "bgbl-1-2026-289-p-6e32987997c52869",
+            "law_quote": "Von verwaltungsrechtlichen Regelungen des Bundes zu Verfahren, Form und Zuständigkeiten sowie der\npersonellen und sachlichen Ausstattung von Behörden kann die nach § 4 Absatz 2 zuständige oberste Bundesoder Landesbehörde auf Antrag befristete Ausnahmen oder Abweichungen genehmigen, wenn",
+            "criterion_quote": "sowie Experimentierräume und Reallabore\nvorzusehen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-fb76e87635a3ebc4",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
       "law_id": "bgbl-1-2026-29",
       "analysis_sha256": "32d5f8bfa02d75c1163af4625cbb509412c9cca6128c3fb723f2547ec43ef2f5",
       "status": "completed",
@@ -202247,7 +202997,7 @@
     },
     {
       "law_id": "bgbl-1-2026-40",
-      "analysis_sha256": "d69a97ae0394edcdb1a350fa590d9dd2ae80861821b2aa734709b49935015136",
+      "analysis_sha256": "3275fae55f8afc1c668bcdd9b2add86d2595c60a38fd03b360464cb350d67da3",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -202290,6 +203040,7 @@
         "gruene-2025-ac-8586367c7f81f048",
         "gruene-2025-ac-865313d423330efe",
         "gruene-2025-ac-8854483200318e23",
+        "gruene-2025-ac-8a0d1a5c8dc2c1db",
         "gruene-2025-ac-8e99fb18307a4181",
         "gruene-2025-ac-8f6a00eb526ed2e1",
         "gruene-2025-ac-9243f2e8444ed892",
@@ -202328,7 +203079,7 @@
         "gruene-2025-ac-f6df7f289b27e369",
         "gruene-2025-ac-f7bbe487600677f5"
       ],
-      "omitted_count": 1564,
+      "omitted_count": 1563,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-04dca3eb5d16a574",
@@ -203418,6 +204169,33 @@
             "criterion_quote": "einklagbaren Sanktionsmöglichkeiten",
             "caveats": [],
             "criterion_id": "gruene-2025-ac-8854483200318e23",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-8a0d1a5c8dc2c1db",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt beschleunigte Beschaffung und Vergabeverfahren für die Bundeswehr; es enthält keine Regelung zum Aussprechen von Vereinsverboten.",
+          "input_sha256": "40e85176af495a3f8280f9365dd06b28ebac31054a8cc09258970b61885c969f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "40e85176af495a3f8280f9365dd06b28ebac31054a8cc09258970b61885c969f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt beschleunigte Beschaffung und Vergabeverfahren für die Bundeswehr; es enthält keine Regelung zum Aussprechen von Vereinsverboten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und Vereinsverbote\nkonsequent ausgesprochen werden.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-8a0d1a5c8dc2c1db",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -258776,7 +259554,7 @@
     },
     {
       "law_id": "bgbl-2-2026-3",
-      "analysis_sha256": "519922e5f797fa27252e0b42645cc85035444da0d33e92a1e5556565fbff9c0b",
+      "analysis_sha256": "c4ac786fc62fa340524fa3bfb1f533017f33ef74d26d4941ee4bfa5a0e3c4a92",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -258856,6 +259634,7 @@
         "gruene-2025-ac-dc85455aed3d87d0",
         "gruene-2025-ac-dedb4ae9c2db0d2b",
         "gruene-2025-ac-e5807afcad81692d",
+        "gruene-2025-ac-e79a8d46263f1ec7",
         "gruene-2025-ac-e982fbbdd88cfef5",
         "gruene-2025-ac-ea15f8ebd746a445",
         "gruene-2025-ac-edb080c0c718bb39",
@@ -258869,7 +259648,7 @@
         "gruene-2025-ac-fdcd5e3379c27fa4",
         "gruene-2025-ac-fe9ca491ce810ae7"
       ],
-      "omitted_count": 1552,
+      "omitted_count": 1551,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-00b2a8122cbfa847",
@@ -260971,6 +261750,33 @@
               "Kein belegter Link ist kein Nachweis dafür, dass die Maßnahme anderweitig unbeeinflusst blieb."
             ],
             "criterion_id": "gruene-2025-ac-e5807afcad81692d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-e79a8d46263f1ec7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft ein Investitionsschutzabkommen mit Vietnam; eine Prüfung von Schlupflöchern bei Auslandsspenden ist in den vorgelegten Passagen nicht erkennbar.",
+          "input_sha256": "9d87ae8b17ec6c1148d6b2adcefe37f5fea2c3c53ed8428c04b15afd9c813f41",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9d87ae8b17ec6c1148d6b2adcefe37f5fea2c3c53ed8428c04b15afd9c813f41"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft ein Investitionsschutzabkommen mit Vietnam; eine Prüfung von Schlupflöchern bei Auslandsspenden ist in den vorgelegten Passagen nicht erkennbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-e79a8d46263f1ec7",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -263950,7 +264756,7 @@
     },
     {
       "law_id": "bgbl-2-2026-49",
-      "analysis_sha256": "4a7e8dba201ca4901720f20ad2336d6c3dbb3f3544c5b635b017708f8cc81619",
+      "analysis_sha256": "db0eb5be3a88e0fd382ef0ce7f2b6b27e33ae22d4d82bc42d7e4305467570e22",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -263958,6 +264764,7 @@
         "gruene-2025-ac-0c2cd54ff18b87ec",
         "gruene-2025-ac-137413a334d9df98",
         "gruene-2025-ac-1558238dd60b5384",
+        "gruene-2025-ac-15a283a4bae1ae23",
         "gruene-2025-ac-169930327d4aa7d8",
         "gruene-2025-ac-180371e95ee294d0",
         "gruene-2025-ac-1c4537f11a1f2dac",
@@ -264019,6 +264826,7 @@
         "gruene-2025-ac-c68489cd5cb5ee2d",
         "gruene-2025-ac-c6a7069801a35483",
         "gruene-2025-ac-cbb754b4a93c1513",
+        "gruene-2025-ac-d5595cc6eda9cc32",
         "gruene-2025-ac-d6b8c49d9e1f2d6c",
         "gruene-2025-ac-d9caaa297f660a64",
         "gruene-2025-ac-da71209d8b0a0e57",
@@ -264040,7 +264848,7 @@
         "gruene-2025-ac-fed9b54802088e8a",
         "gruene-2025-ac-ff32d7668df232bf"
       ],
-      "omitted_count": 1555,
+      "omitted_count": 1553,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-0203fa88f6490ef5",
@@ -264146,6 +264954,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-1558238dd60b5384",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-15a283a4bae1ae23",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 6 des Londoner Protokolls zur Ausfuhr von CO₂ zur dauerhaften Lagerung im Meeresuntergrund; eine Umsetzung der CSRD ist damit nicht belegt.",
+          "input_sha256": "4b9302e6b58a34d09c65e953c1896e9426dba7f0f22e9a20dd32f696bea78cfb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4b9302e6b58a34d09c65e953c1896e9426dba7f0f22e9a20dd32f696bea78cfb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 6 des Londoner Protokolls zur Ausfuhr von CO₂ zur dauerhaften Lagerung im Meeresuntergrund; eine Umsetzung der CSRD ist damit nicht belegt.",
+            "law_passage_id": "bgbl-2-2026-49-p-f506ff37d2dd736d",
+            "law_quote": "mit der der Export von Kohlendioxid zum Zweck der dauerhaften Lagerung in geologischen Formationen des Meeresuntergrunds erlaubt wird,",
+            "criterion_quote": "Wir werden die EU- Nachhaltigkeitsberichterstattung (CSRD) in nationales Recht\numsetzen",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-15a283a4bae1ae23",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -265814,6 +266649,33 @@
               "Das Gesetz tritt am Tag nach der Verkündung in Kraft; der Zeitpunkt des Inkrafttretens der Protokolländerungen für Deutschland wird gesondert bekanntgegeben."
             ],
             "criterion_id": "gruene-2025-ac-cbb754b4a93c1513",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-d5595cc6eda9cc32",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft CO₂-Ausfuhren zur Lagerung im Meeresuntergrund, nicht europäische Kooperationen in der Meeres- oder Polarforschung.",
+          "input_sha256": "4b9302e6b58a34d09c65e953c1896e9426dba7f0f22e9a20dd32f696bea78cfb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4b9302e6b58a34d09c65e953c1896e9426dba7f0f22e9a20dd32f696bea78cfb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderung betrifft CO₂-Ausfuhren zur Lagerung im Meeresuntergrund, nicht europäische Kooperationen in der Meeres- oder Polarforschung.",
+            "law_passage_id": "bgbl-2-2026-49-p-f506ff37d2dd736d",
+            "law_quote": "mit der der Export von Kohlendioxid zum Zweck der dauerhaften Lagerung in geologischen Formationen des Meeresuntergrunds erlaubt wird,",
+            "criterion_quote": "Die Meeres- und Polarforschung liefert\ndafür wichtige Beiträge. Wir sorgen für die\nnotwendigen Investitionen und setzen auf\neuropäische Kooperationen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d5595cc6eda9cc32",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -302352,45 +303214,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8183,
+    "calls": 8236,
     "cache_hits": 326,
     "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.439352,
-    "reported_cost_calls": 7501,
+    "reported_cost_usd": 31.589792,
+    "reported_cost_calls": 7554,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.970558,
     "unknown_cost_calls": 682,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.40991,
-    "prompt_tokens": 81664608,
-    "completion_tokens": 14354159,
+    "budget_exposure_usd": 35.56035,
+    "prompt_tokens": 82241027,
+    "completion_tokens": 14428155,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 299,
-        "reported_cost_usd": 7.573974599999999,
+        "calls": 302,
+        "reported_cost_usd": 7.647513599999998,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 140,
-        "reported_cost_usd": 1.7533045000000007,
+        "calls": 142,
+        "reported_cost_usd": 1.7823105000000008,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4267,
-        "reported_cost_usd": 5.001104622499998,
+        "calls": 4315,
+        "reported_cost_usd": 5.048999247499996,
         "unknown_cost_reserved_usd": 2.8815740500000033,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 9.540979117872439e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

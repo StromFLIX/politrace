@@ -124,6 +124,7 @@
     "bgbl-1-2026-28",
     "bgbl-1-2026-285",
     "bgbl-1-2026-286",
+    "bgbl-1-2026-289",
     "bgbl-1-2026-29",
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
@@ -34376,7 +34377,7 @@
     },
     {
       "law_id": "bgbl-1-2025-259",
-      "analysis_sha256": "38833f91956b691475e5251ebd0401dfe6fa282ad73c2e2e37bcd2bdcfd38fcf",
+      "analysis_sha256": "09a76b8da249d0fe333d298f945b16f4c82e50aae162e2a9ddc00fddcdaf119f",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -34384,6 +34385,7 @@
         "ssw-2025-ac-0604f581e0633eec",
         "ssw-2025-ac-081deafb027be1cd",
         "ssw-2025-ac-0a899ff78adfe0f5",
+        "ssw-2025-ac-0c0a887928638ac8",
         "ssw-2025-ac-0f63845133fe18b4",
         "ssw-2025-ac-0f8a590364841d65",
         "ssw-2025-ac-116ec7b6a850c221",
@@ -34524,7 +34526,7 @@
         "ssw-2025-ac-fec82de00d54551c",
         "ssw-2025-ac-ffb4a2f519fbadef"
       ],
-      "omitted_count": 868,
+      "omitted_count": 867,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-053fe8f32c4c335a",
@@ -34639,6 +34641,35 @@
             ],
             "criterion_id": "ssw-2025-ac-0a899ff78adfe0f5",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-0c0a887928638ac8",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge betreffen die Pflegefachassistenzausbildung; wegen des unvollständigen Gesetzeskontexts lässt sich nicht feststellen, ob die deutsch-dänische Pendler:innenberatung fortgesetzt wird.",
+          "input_sha256": "0af23f01e49a8a869b65aa25ae39fdf7fb7930e2c1b0ab185b9c9d087b96f7b8",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0af23f01e49a8a869b65aa25ae39fdf7fb7930e2c1b0ab185b9c9d087b96f7b8"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Auszüge betreffen die Pflegefachassistenzausbildung; wegen des unvollständigen Gesetzeskontexts lässt sich nicht feststellen, ob die deutsch-dänische Pendler:innenberatung fortgesetzt wird.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen, dass der Bund sich an der **Finanzierung der deutsch-dänischen**\n**Pendler:innenberatung** beteiligt, damit diese wichtige Arbeit auch in Zukunft\nfortgesetzt und auf die Fehmarnbeltregion ausgeweitet werden kann.",
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-0c0a887928638ac8",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -38931,7 +38962,7 @@
     },
     {
       "law_id": "bgbl-1-2025-282",
-      "analysis_sha256": "80e8ef34c43dfb8b04f3d344bcc9708b3362b91677350dc108bc2a4dae26c118",
+      "analysis_sha256": "a8cc1fa4c5ff7e4a8a47165b05f1d1a0146f4066a8af72a892c54b191ae5f411",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -38997,6 +39028,7 @@
         "ssw-2025-ac-cd98d9f54058072f",
         "ssw-2025-ac-d5305a768b87aec4",
         "ssw-2025-ac-d89f389a1bb0d02b",
+        "ssw-2025-ac-db4837198087ac27",
         "ssw-2025-ac-dbb32d7f60a0b44c",
         "ssw-2025-ac-e60d69875cfdfad9",
         "ssw-2025-ac-e7637752b3ae53f6",
@@ -39011,7 +39043,7 @@
         "ssw-2025-ac-f5846933e1cbf713",
         "ssw-2025-ac-fa14d93f5e10422f"
       ],
-      "omitted_count": 936,
+      "omitted_count": 935,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0476f5b6670d3679",
@@ -40724,6 +40756,35 @@
             ],
             "criterion_id": "ssw-2025-ac-d89f389a1bb0d02b",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-db4837198087ac27",
+          "disposition": "no_supported_link",
+          "rationale": "Der Gesetzestext regelt Kohlendioxidinfrastruktur und enthält keine Fördermaßnahmen oder Vorrangregel für grüne Nah- und Fernwärmenetze.",
+          "input_sha256": "f3bcd9a95a0d1daa350945454843dd9cecaddc179dd7bd6108b8b1f39eadd299",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f3bcd9a95a0d1daa350945454843dd9cecaddc179dd7bd6108b8b1f39eadd299"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Der Gesetzestext regelt Kohlendioxidinfrastruktur und enthält keine Fördermaßnahmen oder Vorrangregel für grüne Nah- und Fernwärmenetze.",
+            "law_passage_id": "bgbl-1-2025-282-p-2d5a2eb006eb69b2",
+            "law_quote": "1. die Genehmigung und den Betrieb von Kohlendioxidleitungen,",
+            "criterion_quote": "Hierbei wollen wir, dass die Fördermaßnahmen für grüne Nah- und Fernwärmenetze Vorrang haben.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-db4837198087ac27",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -79180,7 +79241,7 @@
     },
     {
       "law_id": "bgbl-1-2026-107",
-      "analysis_sha256": "e15ff60661c247d5274da683dae8539f41ae157908178bb5ff81e3b67bffae22",
+      "analysis_sha256": "d7eea1b5280b5354d75d75b1b7c82e563b27b28be2af286fd8c7f29dc30d4eb3",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -79325,6 +79386,7 @@
         "ssw-2025-ac-eaa8fff9aaae8dff",
         "ssw-2025-ac-eb9dd2eaa31db42d",
         "ssw-2025-ac-ec075472ccac5bf5",
+        "ssw-2025-ac-ec26a71e46058fed",
         "ssw-2025-ac-ec4ef2894712b9cc",
         "ssw-2025-ac-ec98631e57fc789a",
         "ssw-2025-ac-ecb8564e73ec4596",
@@ -79336,7 +79398,7 @@
         "ssw-2025-ac-fde6fe7fac025fdb",
         "ssw-2025-ac-ffa24d9ea0b5ec9a"
       ],
-      "omitted_count": 860,
+      "omitted_count": 859,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-001830851a70035a",
@@ -83264,6 +83326,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-ec075472ccac5bf5",
             "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ec26a71e46058fed",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge regeln insbesondere Pflichten zur Arbeitsaufnahme und Leistungsminderungen; ob der unvollständig überlieferte Gesetzestext außerdem Maßnahmen der Istanbul-Konvention umsetzt, lässt sich daraus nicht feststellen.",
+          "input_sha256": "76e71641de52d680d63f6248bc546e11682bebbc39a920b895a42d2d7daf3581",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "76e71641de52d680d63f6248bc546e11682bebbc39a920b895a42d2d7daf3581"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.9,
+            "rationale": "Die vorliegenden Auszüge regeln insbesondere Pflichten zur Arbeitsaufnahme und Leistungsminderungen; ob der unvollständig überlieferte Gesetzestext außerdem Maßnahmen der Istanbul-Konvention umsetzt, lässt sich daraus nicht feststellen.",
+            "law_passage_id": "bgbl-1-2026-107-p-5f97b50571c2d900",
+            "law_quote": "Erwerbsfähige Leistungsberechtigte müssen ihre Arbeitskraft in dem Umfang einsetzen, der zur vollständigen Überwindung ihrer Hilfebedürftigkeit ... erforderlich ist.",
+            "criterion_quote": "Wir wollen, dass die Istanbul-Konvention und ihre Maßnahmen konsequent und zielgerichtet umgesetzt werden.",
+            "caveats": [
+              "Der bereitgestellte Gesetzestext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-ec26a71e46058fed",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -87861,7 +87952,7 @@
     },
     {
       "law_id": "bgbl-1-2026-137",
-      "analysis_sha256": "693f4b79694cda5b84b6250d7b097cebd9530a49ab81e395dcc2db1698e88dbc",
+      "analysis_sha256": "b010fc0a0ae8739af2764153292b922e7615356e2adabc408832b816aa552aa5",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -87880,6 +87971,7 @@
         "ssw-2025-ac-26470a22bc29709a",
         "ssw-2025-ac-286ad5844af6f85f",
         "ssw-2025-ac-3290b9a174e4840d",
+        "ssw-2025-ac-331437589b4b3ad1",
         "ssw-2025-ac-3a2f7786464151af",
         "ssw-2025-ac-3ba0d4b08a123142",
         "ssw-2025-ac-3baa0dfb6f357dd8",
@@ -87957,7 +88049,7 @@
         "ssw-2025-ac-fa94d276513dbe5c",
         "ssw-2025-ac-fe8cedcc8e6be1ca"
       ],
-      "omitted_count": 920,
+      "omitted_count": 919,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-021550007ab3c528",
@@ -88360,6 +88452,35 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "ssw-2025-ac-3290b9a174e4840d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-331437589b4b3ad1",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen öffentliche Auftragsvergabe; ein bundesweites Familienticket zum Deutschlandticket wird darin nicht geregelt.",
+          "input_sha256": "1553955efe3c9d34ca0b71346bde22b1adbc499b2414b4e989d34fdfe8890b77",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "1553955efe3c9d34ca0b71346bde22b1adbc499b2414b4e989d34fdfe8890b77"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die vorgelegten Regelungen betreffen öffentliche Auftragsvergabe; ein bundesweites Familienticket zum Deutschlandticket wird darin nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen das **Deutschlandticket um** ein bundesweites **Familienticket ergänzen** .",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-331437589b4b3ad1",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -116764,7 +116885,7 @@
     },
     {
       "law_id": "bgbl-1-2026-226",
-      "analysis_sha256": "870258787ed312a7cbcac84a2cce4ad4cf3a94d4170e28f97317c91e15800839",
+      "analysis_sha256": "bdc5d2185dfb48e19f9a43de5659b55c66c59cfb3e549241995a82ce113710ba",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -116799,6 +116920,7 @@
         "ssw-2025-ac-366a3aae0a833bf7",
         "ssw-2025-ac-36b08411d18ec051",
         "ssw-2025-ac-379870337f0ebc93",
+        "ssw-2025-ac-38c5ec7bee569b61",
         "ssw-2025-ac-3c52e00c717b421a",
         "ssw-2025-ac-3cbba149fc6719af",
         "ssw-2025-ac-3df67b777b422bdf",
@@ -116901,7 +117023,7 @@
         "ssw-2025-ac-ff015c83fe59acb4",
         "ssw-2025-ac-ffda7ee808cda2d0"
       ],
-      "omitted_count": 879,
+      "omitted_count": 878,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0476f5b6670d3679",
@@ -117759,6 +117881,35 @@
               "Der Gesetzeskontext ist als teilweise gekennzeichnet."
             ],
             "criterion_id": "ssw-2025-ac-379870337f0ebc93",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-38c5ec7bee569b61",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Regelung, nach der Mittel eines Solidaritätsfonds für Prävention oder Klimaanpassung eingesetzt werden.",
+          "input_sha256": "05ec0d7c6b4ba31fcb8aebdfb345c523384c22e587b6066e89783fc1376081dd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "05ec0d7c6b4ba31fcb8aebdfb345c523384c22e587b6066e89783fc1376081dd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Regelung, nach der Mittel eines Solidaritätsfonds für Prävention oder Klimaanpassung eingesetzt werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen diesen Solidaritätsfonds anteilig für **Präventivmaßnahmen und Klima-**\n**anpassungen** einsetzen, um Risiken für die Bevölkerung zu minimieren und die\nWiderstandsfähigkeit betroffener Gebiete zu erhöhen.",
+            "caveats": [
+              "Die bereitgestellten Gesetzesauszüge sind unvollständig."
+            ],
+            "criterion_id": "ssw-2025-ac-38c5ec7bee569b61",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -131734,6 +131885,493 @@
       ]
     },
     {
+      "law_id": "bgbl-1-2026-289",
+      "analysis_sha256": "d41352f4872ec4718e0a333da162a714adf7c87cc669d276a999f2c5ae6b8322",
+      "status": "completed",
+      "eligible_count": 1011,
+      "candidate_ids": [
+        "ssw-2025-ac-12e9870ca132d544",
+        "ssw-2025-ac-169e5c0e8666dd18",
+        "ssw-2025-ac-185f373d35a4cd7c",
+        "ssw-2025-ac-2206b4e69fea474b",
+        "ssw-2025-ac-26470a22bc29709a",
+        "ssw-2025-ac-2aa17cf2f6ab4046",
+        "ssw-2025-ac-44e99dcd50024064",
+        "ssw-2025-ac-4602137315fadb99",
+        "ssw-2025-ac-479323e0651e0065",
+        "ssw-2025-ac-78a24a46792ba01e",
+        "ssw-2025-ac-7e0bcc9ddff8b85f",
+        "ssw-2025-ac-8feddbea1268f72b",
+        "ssw-2025-ac-a93606c70fc09d02",
+        "ssw-2025-ac-d8547ae35cbfb2c1",
+        "ssw-2025-ac-db8370347f3c2a53",
+        "ssw-2025-ac-edc6634fc5ab754f",
+        "ssw-2025-ac-eea09352e9a13a76"
+      ],
+      "omitted_count": 994,
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-12e9870ca132d544",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahme für ein gemeinsames Digitalisierungsprojekt des Bundes mit Dänemark.",
+          "input_sha256": "54ff9396f65ee145bb5b038992364b0498a998a082dfb1a2f531cdeff01a6dee",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "54ff9396f65ee145bb5b038992364b0498a998a082dfb1a2f531cdeff01a6dee"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahme für ein gemeinsames Digitalisierungsprojekt des Bundes mit Dänemark.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dass der Bund ein gemeinsames Digitalisierungsprojekt mit Dänemark startet",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-12e9870ca132d544",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die möglichen Abweichungen betreffen Verwaltungsverfahren und Erprobungen, nicht die Voraussetzungen für Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+          "input_sha256": "54ff9396f65ee145bb5b038992364b0498a998a082dfb1a2f531cdeff01a6dee",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "54ff9396f65ee145bb5b038992364b0498a998a082dfb1a2f531cdeff01a6dee"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die möglichen Abweichungen betreffen Verwaltungsverfahren und Erprobungen, nicht die Voraussetzungen für Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bürgerliche Freiheits- und Persönlichkeitsrechte dürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden eingeschränkt werden, wenn diese Maßnahmen unbedingt erforderlich sind, es kein anderes geeignetes Mittel zum selben Zweck gibt und die Maßnahmen geeignet sind, ihr Ziel zu erreichen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-185f373d35a4cd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Der Anwendungsbereich ist auf bundesrechtliche Regelungen und dadurch ermöglichte Reallabore begrenzt; der vorgelegte Text sagt nichts zu geologischen Kriterien der Endlagersuche.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Der Anwendungsbereich ist auf bundesrechtliche Regelungen und dadurch ermöglichte Reallabore begrenzt; der vorgelegte Text sagt nichts zu geologischen Kriterien der Endlagersuche.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-185f373d35a4cd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2206b4e69fea474b",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text regelt Erprobungsfreiräume für Verwaltungsverfahren und Reallabore, nicht eine bundesweit einheitliche Mindestvergütung für schulische Ausbildungen.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Der vorgelegte Text regelt Erprobungsfreiräume für Verwaltungsverfahren und Reallabore, nicht eine bundesweit einheitliche Mindestvergütung für schulische Ausbildungen.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2206b4e69fea474b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-26470a22bc29709a",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text sieht keinen dokumentierten Prüfauftrag zur Steigerung von Schüler:innenaustauschen mit EU-Ländern vor.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text sieht keinen dokumentierten Prüfauftrag zur Steigerung von Schüler:innenaustauschen mit EU-Ländern vor.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-26470a22bc29709a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2aa17cf2f6ab4046",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Erprobung und Reallaboren schaffen im vorgelegten Text keine bundesweite Legalisierung von Drug-Checking-Angeboten.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Regelungen zu Erprobung und Reallaboren schaffen im vorgelegten Text keine bundesweite Legalisierung von Drug-Checking-Angeboten.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2aa17cf2f6ab4046",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "no_supported_link",
+          "rationale": "Der Text erlaubt für Erprobungen die Verarbeitung personenbezogener Daten im Basisregister, weist diese Tätigkeit aber keiner Privatisierung zu und regelt nicht allgemein die Erbringung öffentlicher Aufgaben.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.83,
+            "rationale": "Der Text erlaubt für Erprobungen die Verarbeitung personenbezogener Daten im Basisregister, weist diese Tätigkeit aber keiner Privatisierung zu und regelt nicht allgemein die Erbringung öffentlicher Aufgaben.",
+            "law_passage_id": "bgbl-1-2026-289-p-a64238d67ae6677d",
+            "law_quote": "Soweit dies für die Erprobung nach den Absätzen 1 bis 4 erforderlich ist, dürfen Daten einschließlich personenbezogener Daten an das Basisregister übermittelt, vom Basisregister erhoben, gespeichert sowie an datenabrufende öffentliche Stellen übermittelt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text führt keinen verbindlichen Jugendcheck ein, der Gesetzesvorhaben und Verordnungen des Bundes auf Jugendfolgen prüft.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text führt keinen verbindlichen Jugendcheck ein, der Gesetzesvorhaben und Verordnungen des Bundes auf Jugendfolgen prüft.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text ändert Artikel 6 des Grundgesetzes nicht und enthält keine eigenständige Verankerung von Kinderrechten dort.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text ändert Artikel 6 des Grundgesetzes nicht und enthält keine eigenständige Verankerung von Kinderrechten dort.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Verwaltungsdigitalisierung und Reallaboren schaffen keine digitale Antragstellung für armutsbekämpfende Leistungen.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Regelungen zu Verwaltungsdigitalisierung und Reallaboren schaffen keine digitale Antragstellung für armutsbekämpfende Leistungen.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-7e0bcc9ddff8b85f",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text enthält keine Regelung zu EU-Grenzverfahren oder Ausnahmen für vulnerable Gruppen.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text enthält keine Regelung zu EU-Grenzverfahren oder Ausnahmen für vulnerable Gruppen.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-7e0bcc9ddff8b85f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "no_supported_link",
+          "rationale": "Der Text erlaubt personenbezogene Datenverarbeitung für Erprobungen im Basisregister, knüpft sie aber nicht an einen Richtervorbehalt oder einen konkreten Anhaltspunkt.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Der Text erlaubt personenbezogene Datenverarbeitung für Erprobungen im Basisregister, knüpft sie aber nicht an einen Richtervorbehalt oder einen konkreten Anhaltspunkt.",
+            "law_passage_id": "bgbl-1-2026-289-p-a64238d67ae6677d",
+            "law_quote": "Soweit dies für die Erprobung nach den Absätzen 1 bis 4 erforderlich ist, dürfen Daten einschließlich personenbezogener Daten an das Basisregister übermittelt, vom Basisregister erhoben, gespeichert sowie an datenabrufende öffentliche Stellen übermittelt werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-a93606c70fc09d02",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text schafft keine gesetzlichen Rahmenbedingungen zur bundesweiten Ausweitung von Drug-Checking-Angeboten.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text schafft keine gesetzlichen Rahmenbedingungen zur bundesweiten Ausweitung von Drug-Checking-Angeboten.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-a93606c70fc09d02",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d8547ae35cbfb2c1",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text ändert § 184 GVG nicht und erkennt Dänisch oder Friesisch nicht als Gerichtssprachen an.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text ändert § 184 GVG nicht und erkennt Dänisch oder Friesisch nicht als Gerichtssprachen an.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d8547ae35cbfb2c1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-db8370347f3c2a53",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text enthält keine Regelung zu Elternzeit oder beruflicher Weiterentwicklung.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text enthält keine Regelung zu Elternzeit oder beruflicher Weiterentwicklung.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-db8370347f3c2a53",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text führt kein Verbandsklagerecht für nationale Minderheiten oder Volksgruppen ein.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text führt kein Verbandsklagerecht für nationale Minderheiten oder Volksgruppen ein.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-eea09352e9a13a76",
+          "disposition": "no_supported_link",
+          "rationale": "Der vorgelegte Text verpflichtet den Bund nicht zu einem regelmäßigen Bericht über Küstenschutzniveau und Küstenschutzeinrichtungen.",
+          "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "175c22e3d981b93aee3beac9d58ea86cf3fb3bfa60642bc3ddf71f40f02a497c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Der vorgelegte Text verpflichtet den Bund nicht zu einem regelmäßigen Bericht über Küstenschutzniveau und Küstenschutzeinrichtungen.",
+            "law_passage_id": "bgbl-1-2026-289-p-089844248190ae36",
+            "law_quote": "Dieses Gesetz gilt für bundesrechtliche Regelungen und für Reallabore, die aufgrund bundesrechtlicher Regelungen ermöglicht werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-eea09352e9a13a76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
       "law_id": "bgbl-1-2026-29",
       "analysis_sha256": "c80172842841ca240ce755eaca9e66151987d720e6c9feabeb1d1cf6143afa74",
       "status": "completed",
@@ -137257,7 +137895,7 @@
     },
     {
       "law_id": "bgbl-1-2026-47",
-      "analysis_sha256": "a9253b5653a0c603dae99bb34684f8ca03898fce05ad55584844dc84f15a99a1",
+      "analysis_sha256": "9af4fd403eb34719359d29ebc4dba33c92c8653521e6741b525a1e30c671b9a4",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -137317,11 +137955,12 @@
         "ssw-2025-ac-ee967859c2cfe1cb",
         "ssw-2025-ac-eef8d46beed4e78f",
         "ssw-2025-ac-f10752e7f50621e9",
+        "ssw-2025-ac-f1196728d3254992",
         "ssw-2025-ac-f23e2ed4575dedc6",
         "ssw-2025-ac-f343474b48b36a87",
         "ssw-2025-ac-fa92cffedba14ff3"
       ],
-      "omitted_count": 952,
+      "omitted_count": 951,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0604f581e0633eec",
@@ -138846,6 +139485,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "ssw-2025-ac-f10752e7f50621e9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f1196728d3254992",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung betrifft die Marktbeobachtung, darunter den Eisenbahngüterverkehr; sie ermöglicht keine zusätzlichen Personenzüge zwischen Niebüll und Westerland.",
+          "input_sha256": "73fa4f4ad2107693080d66694d7b23d9e80e4fc170a716ee0efaeef8e18612ab",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "73fa4f4ad2107693080d66694d7b23d9e80e4fc170a716ee0efaeef8e18612ab"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regelung betrifft die Marktbeobachtung, darunter den Eisenbahngüterverkehr; sie ermöglicht keine zusätzlichen Personenzüge zwischen Niebüll und Westerland.",
+            "law_passage_id": "bgbl-1-2026-47-p-9e30f25f0b4c6f48",
+            "law_quote": "Die Marktbeobachtung umfasst den Eisenbahn- und Straßengüterverkehr, die Frachtschifffahrt, den Luftverkehr, den gewerblichen Personenverkehr mit Kraftomnibussen sowie die Logistik.",
+            "criterion_quote": "Wir wollen, dass zwischen Niebüll und Westerland mehr Personenzüge verkehren können als heute.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-f1196728d3254992",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -161256,7 +161922,7 @@
     },
     {
       "law_id": "bgbl-2-2025-295",
-      "analysis_sha256": "bf9feb2cb916b6717f85daa1fb9af551d28f939299f16c0e876b4a8e6abaf367",
+      "analysis_sha256": "0775837a2caffedbda542e198490714e96772b4942ec53e2c466e8bc38eba51f",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -161371,6 +162037,7 @@
         "ssw-2025-ac-9a2b1d7e44afb5d3",
         "ssw-2025-ac-9caa28af7d204f21",
         "ssw-2025-ac-a6c4d81a53192b81",
+        "ssw-2025-ac-a709b35387fa9836",
         "ssw-2025-ac-a77e03128694ee60",
         "ssw-2025-ac-a93ed6aeba2e4f66",
         "ssw-2025-ac-aae6540c3d8c1e2e",
@@ -161419,7 +162086,7 @@
         "ssw-2025-ac-eea09352e9a13a76",
         "ssw-2025-ac-f0f06d81f89b0b78"
       ],
-      "omitted_count": 853,
+      "omitted_count": 852,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0173f5f13f6580e1",
@@ -164422,6 +165089,33 @@
               "Der übermittelte Gesetzestext ist unvollständig."
             ],
             "criterion_id": "ssw-2025-ac-a6c4d81a53192b81",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-a709b35387fa9836",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Zustimmung zu einem Wirtschaftspartnerschaftsabkommen mit SADC-Staaten; eine Umsetzung des Europäischen Jugendchecks in Politikbereichen oder Ressorts ist nicht erkennbar.",
+          "input_sha256": "a43276d27ce32eaa34348554704c03c86fe2946f83f49dc9d0c8004fa4d0124d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "a43276d27ce32eaa34348554704c03c86fe2946f83f49dc9d0c8004fa4d0124d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft die Zustimmung zu einem Wirtschaftspartnerschaftsabkommen mit SADC-Staaten; eine Umsetzung des Europäischen Jugendchecks in Politikbereichen oder Ressorts ist nicht erkennbar.",
+            "law_passage_id": "bgbl-2-2025-295-p-330f140b6df0b36a",
+            "law_quote": "Dem in Brüssel am 1. Juni 2016 von der Bundesrepublik Deutschland unterzeichneten Wirtschaftspartnerschafts abkommen von Kasane vom 10. Juni 2016 zwischen der Europäischen Union und ihren Mitgliedstaaten einerseits und den SADC-WPA-Staaten andererseits wird zugestimmt.",
+            "criterion_quote": "Wir wollen, dass der **Europäische Jugendcheck** konsequent in allen Politikbereichen und Ressorts umgesetzt wird. So werden mögliche Auswirkungen von\nGesetzen und Maßnahmen auf junge Menschen sichtbar.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-a709b35387fa9836",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -179030,7 +179724,7 @@
     },
     {
       "law_id": "bgbl-2-2026-49",
-      "analysis_sha256": "bacd6e8ecc38564451338de981bb22de2bee9d2661623d036eda41bb0e47e022",
+      "analysis_sha256": "39333b94ae62d174c70ff801f6fa4b150231acbd4713ec72af8b785523110835",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -179060,6 +179754,7 @@
         "ssw-2025-ac-86576a3f6f6233b7",
         "ssw-2025-ac-8ae32325c47971bc",
         "ssw-2025-ac-8cd4802851a2fc84",
+        "ssw-2025-ac-8f8eed49e1886ac8",
         "ssw-2025-ac-91ac7a957c13f63a",
         "ssw-2025-ac-934204c5b15f2e71",
         "ssw-2025-ac-96e4b050202186b9",
@@ -179082,7 +179777,7 @@
         "ssw-2025-ac-fa14d93f5e10422f",
         "ssw-2025-ac-ff015c83fe59acb4"
       ],
-      "omitted_count": 964,
+      "omitted_count": 963,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0476f5b6670d3679",
@@ -179789,6 +180484,33 @@
           "verification": null
         },
         {
+          "criterion_id": "ssw-2025-ac-8f8eed49e1886ac8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelung betrifft CO₂-Ausfuhren zur Lagerung im Meeresuntergrund; das dänische Grüne Dreierabkommen wird darin nicht als Vorbild für die Landwirtschaft genannt.",
+          "input_sha256": "4b9302e6b58a34d09c65e953c1896e9426dba7f0f22e9a20dd32f696bea78cfb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4b9302e6b58a34d09c65e953c1896e9426dba7f0f22e9a20dd32f696bea78cfb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelung betrifft CO₂-Ausfuhren zur Lagerung im Meeresuntergrund; das dänische Grüne Dreierabkommen wird darin nicht als Vorbild für die Landwirtschaft genannt.",
+            "law_passage_id": "bgbl-2-2026-49-p-f506ff37d2dd736d",
+            "law_quote": "mit der der Export von Kohlendioxid zum Zweck der dauerhaften Lagerung in geologischen Formationen des Meeresuntergrunds erlaubt wird,",
+            "criterion_quote": "- Wir wollen das **dänische „Grüne Dreierabkommen“** („grøn trepartsaftale“) **als**\n**Inspiration** für die Reduzierung von CO2-Emissionen in der deutschen\nLandwirtschaft **nutzen** .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8f8eed49e1886ac8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "ssw-2025-ac-91ac7a957c13f63a",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz richtet keine Gewässerrandstreifenprogramme ein; es betrifft die Änderung des Londoner Protokolls zur Kohlendioxidausfuhr.",
@@ -180364,7 +181086,7 @@
     },
     {
       "law_id": "bgbl-2-2026-60",
-      "analysis_sha256": "5a1ac2c3fced5994ae14d0d0ecb7054dcba5424bce3ba10fdc508060133c1e8e",
+      "analysis_sha256": "81ee016b60f4c9ba99fc6d5f47ff917e6d83a5dfff1b9adb0836520195acb254",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -180463,6 +181185,7 @@
         "ssw-2025-ac-95e35c6412c83db8",
         "ssw-2025-ac-96e4b050202186b9",
         "ssw-2025-ac-9730d1d678b06990",
+        "ssw-2025-ac-983bfbbbb9e24df2",
         "ssw-2025-ac-9c28fe48f0da8906",
         "ssw-2025-ac-9cd757ff55217e11",
         "ssw-2025-ac-a173c563180614ef",
@@ -180525,7 +181248,7 @@
         "ssw-2025-ac-fe8cedcc8e6be1ca",
         "ssw-2025-ac-ffb4a2f519fbadef"
       ],
-      "omitted_count": 855,
+      "omitted_count": 854,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-042e609909ede8ff",
@@ -183121,6 +183844,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "ssw-2025-ac-9730d1d678b06990",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-983bfbbbb9e24df2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vertragsbestimmungen enthalten keine Regelung zu Fördermöglichkeiten über die Bundeszentrale für politische Bildung.",
+          "input_sha256": "03ccf33baa2ab5fe90569de51ae24afd8ae7eade8371efe24b4f3930091c6472",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "03ccf33baa2ab5fe90569de51ae24afd8ae7eade8371efe24b4f3930091c6472"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vertragsbestimmungen enthalten keine Regelung zu Fördermöglichkeiten über die Bundeszentrale für politische Bildung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen eine Erhöhung der Fördermöglichkeiten über die Bundeszentrale für politische Bildung.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-983bfbbbb9e24df2",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -200500,45 +201250,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8183,
+    "calls": 8236,
     "cache_hits": 326,
     "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.439352,
-    "reported_cost_calls": 7501,
+    "reported_cost_usd": 31.589792,
+    "reported_cost_calls": 7554,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.970558,
     "unknown_cost_calls": 682,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.40991,
-    "prompt_tokens": 81664608,
-    "completion_tokens": 14354159,
+    "budget_exposure_usd": 35.56035,
+    "prompt_tokens": 82241027,
+    "completion_tokens": 14428155,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 299,
-        "reported_cost_usd": 7.573974599999999,
+        "calls": 302,
+        "reported_cost_usd": 7.647513599999998,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 140,
-        "reported_cost_usd": 1.7533045000000007,
+        "calls": 142,
+        "reported_cost_usd": 1.7823105000000008,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4267,
-        "reported_cost_usd": 5.001104622499998,
+        "calls": 4315,
+        "reported_cost_usd": 5.048999247499996,
         "unknown_cost_reserved_usd": 2.8815740500000033,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 9.540979117872439e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
