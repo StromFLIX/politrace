@@ -1,7 +1,7 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import fs from 'node:fs';
 import path from 'node:path';
-import { createHash } from 'node:crypto';
+import { snapshotDigest } from '../../lib/snapshot-digest';
 import { dataRoot, datasets, defaultDataset, getData, metrics } from '../../lib/data';
 import { extractionCoverage, publicImpact } from '../../lib/metrics';
 import { partyInsights } from '../../lib/party-insights';
@@ -71,7 +71,7 @@ export const getStaticPaths: GetStaticPaths = () => {
       add(`${prefix}/readings/${reading.document_id}.json`, reading);
       add(`${prefix}/readings/${reading.document_id}/source.md`, markdown(reading.markdown_path, dataset), 'text/markdown; charset=utf-8');
     }
-    const dataDigest = createHash('sha256').update(JSON.stringify(reports.length ? { ...data, experiments: reports } : data)).digest('hex');
+    const dataDigest = snapshotDigest(reports.length ? { ...data, experiments: reports } : { ...data });
     const acceptedImpacts = data.impacts.filter(publicImpact);
     add(`${prefix}/accepted-impacts.json`, { schema_version: '1.0', dataset, total: acceptedImpacts.length, items: acceptedImpacts });
     const statistics = data.programs.map(p => ({

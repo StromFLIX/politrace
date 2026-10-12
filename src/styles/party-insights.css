@@ -7,7 +7,7 @@
   margin-bottom: 48px;
   font-variant-numeric: tabular-nums;
 }
-[data-period-anchor], .law-highlight { scroll-margin-top: 100px; }
+[data-period-anchor], .timeline-jump { scroll-margin-top: 100px; }
 .insight-section-heading, .insight-card-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .insight-section-heading { margin-bottom: 21px; }
 .insight-section-heading .eyebrow, .insight-card-heading .eyebrow { margin-bottom: 8px; }
@@ -65,18 +65,56 @@
 .timeline-headline span { font-size: 10px; color: var(--muted); }
 .evidence-chart { margin: 0; }
 .chart-unit { font-size: 10px; color: var(--muted); margin-bottom: 5px; }
+.timeline-card, .topic-breakdown { grid-column: 1 / -1; }
+.chart-scroll { overflow-x: auto; padding-top: 8px; }
+.chart-surface { min-width: 600px; position: relative; }
 .chart-layout { display: grid; grid-template-columns: 43px minmax(0, 1fr); }
-.chart-y-labels { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 3px 0 0; height: 200px; font-size: 10px; color: var(--muted); }
-.chart-layout svg { width: 100%; height: 200px; overflow: visible; }
+.chart-y-labels { position: relative; height: 400px; font-size: 10px; color: var(--muted); }
+.chart-y-labels span { position: absolute; transform: translateY(-50%); }
+.chart-plot { position: relative; }
+.chart-layout svg { display: block; width: 100%; height: 400px; }
 .chart-grid-line { stroke: #e2e7ed; stroke-width: 1; stroke-dasharray: 3 4; }
-.chart-area { fill: #edf2ff; }
-.chart-coverage-line { stroke: var(--blue); stroke-width: 2.5; fill: none; }
-.chart-opposition-line { stroke: var(--contradicted); stroke-width: 2; stroke-dasharray: 5 4; fill: none; }
+.chart-baseline { stroke: #98a7b6; stroke-width: 1; }
+.chart-score { stroke: #fff; stroke-width: .5; }
+.chart-score-direct { --score-color: #258160; fill: var(--score-color); }
+.chart-score-partial { --score-color: #8ac9ac; fill: var(--score-color); }
+.chart-score-contradicts { --score-color: #a34439; fill: var(--score-color); }
+.chart-score-impedes { --score-color: #e8ab72; fill: var(--score-color); }
+.chart-score-mixed { --score-color: #886097; fill: var(--score-color); }
+.chart-direction { position: absolute; left: 53px; font-size: 10px; font-weight: 600; pointer-events: none; }
+.chart-negative-label { top: 27px; color: #a34439; }
+.chart-positive-label { top: 324px; color: #258160; }
+.chart-mixed-label { top: 390px; color: #886097; }
+.chart-jump-line { stroke: var(--blue); stroke-width: 1; stroke-dasharray: 2 5; opacity: .5; }
+.chart-jump-marker { position: absolute; top: 0; transform: translateX(-50%); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 12px; font-weight: 650; box-shadow: 0 0 0 3px #fff; }
+.chart-jump-marker:hover, .chart-jump-marker:focus-visible { background: var(--ink); outline: 2px solid var(--blue); outline-offset: 3px; }
+.timeline-jumps { margin-top: 23px; padding-top: 20px; border-top: 1px solid var(--border); }
+.timeline-jumps h3 { font-size: 15px; }
+.timeline-jump-list { margin-top: 15px; }
+.timeline-jump { border: 1px solid var(--border); border-radius: 8px; margin-top: 10px; }
+.timeline-jump > summary { display: flex; align-items: center; gap: 12px; padding: 14px; cursor: pointer; list-style: none; }
+.timeline-jump > summary::-webkit-details-marker { display: none; }
+.timeline-jump > summary::after { content: '+'; font-size: 20px; color: var(--blue); }
+.timeline-jump[open] > summary::after { content: '−'; }
+.jump-number { display: grid; place-items: center; width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; color: var(--blue); background: #edf2ff; font-size: 12px; font-weight: 600; }
+.timeline-jump summary strong { font-size: 13px; }
+.timeline-jump summary small { display: block; color: var(--muted); font-size: 10px; font-weight: 400; }
+.jump-count { color: var(--blue); margin-left: auto; text-align: right; white-space: nowrap; }
+.jump-laws { list-style: none; margin: 0; padding: 0 18px 16px; }
+.jump-laws > li { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 12px; }
+.jump-law-meta { color: var(--muted); font-size: 10px; }
+.jump-laws h4 { font-size: 13px; line-height: 1.7; margin: 7px 0; overflow-wrap: anywhere; }
+.jump-laws h4 a:hover { color: var(--blue); }
+.jump-law-counts { font-size: 10px; margin-top: 5px; }
+.jump-evidence { margin-bottom: 16px; }
+@media (min-width: 761px) {
+  .topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+}
 .chart-date-labels { display: flex; justify-content: space-between; gap: 8px; margin: 7px 0 0 43px; font-size: 10px; color: var(--muted); }
 .chart-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 19px 0 14px; font-size: 10px; }
 .chart-legend > span { display: flex; gap: 7px; align-items: center; }
-.chart-legend i { display: inline-block; width: 17px; border-top: 3px solid var(--blue); }
-.chart-legend .opposition-key { border-color: var(--contradicted); border-top-style: dashed; }
+.chart-legend i { display: inline-block; width: 14px; height: 10px; border-radius: 2px; background: var(--score-color); }
+.chart-legend strong { font-weight: 600; }
 .evidence-chart figcaption { color: var(--muted); font-size: 10px; line-height: 1.8; }
 .evidence-chart figcaption strong { font-weight: 600; }
 .insight-details { border-top: 1px solid var(--border); margin-top: 17px; padding-top: 13px; }
@@ -97,34 +135,7 @@
 .topic-more { border: none; background: none; padding: 14px 0 0; }
 .insight-empty { background: var(--paper); border-radius: 8px; padding: 25px 18px; margin-top: 20px; font-size: 12px; }
 .insight-empty p + p { margin-top: 8px; font-size: 11px; }
-.law-controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin: 20px 0 12px; }
-.law-controls label { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted); }
-.law-controls select { max-width: 100%; min-width: 0; background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; color: var(--ink); font-size: 11px; }
-.law-result-count { font-size: 10px; }
-.law-highlight-list { list-style: none; margin: 0; padding: 0; }
-.law-highlight { border-top: 1px solid var(--border); padding: 22px 0; }
-.law-highlight:first-child { border-top: 0; }
-.law-highlight-main { display: grid; grid-template-columns: 28px minmax(0, 1fr) 165px; gap: 18px; align-items: start; }
-.law-rank { color: #8491a1; font-size: 15px; font-weight: 500; padding-top: 2px; }
-.law-highlight-meta { display: flex; gap: 7px 12px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: 10px; margin-bottom: 10px; }
-.law-direction { font-size: 9px; padding: 2px 7px; border-radius: 4px; }
-.law-direction.supporting { color: var(--fulfilled); background: #edf6f1; }
-.law-direction.opposing { color: var(--contradicted); background: #fff4e6; }
-.law-direction.mixed { color: var(--mixed); background: #f5eef8; }
-.law-highlight h3 { font-size: 14px; line-height: 1.65; letter-spacing: -.02em; font-weight: 580; overflow-wrap: anywhere; }
-.law-highlight h3 a:hover { color: var(--blue); }
-.law-highlight h3 svg { margin-left: 5px; color: var(--blue); }
-.law-effect-counts { display: flex; flex-wrap: wrap; gap: 5px 14px; font-size: 10px; margin-top: 12px; }
-.law-effect-counts strong { font-weight: 600; }
-.effect-supporting { color: var(--fulfilled); }
-.effect-opposing { color: var(--contradicted); }
-.effect-mixed { color: var(--mixed); }
-.law-contribution { display: flex; flex-direction: column; border-left: 1px solid var(--border); padding-left: 19px; }
-.law-contribution strong { color: var(--blue); font-size: 22px; font-weight: 630; line-height: 1.4; letter-spacing: -.03em; }
-.law-contribution abbr { text-decoration: none; font-size: 12px; letter-spacing: 0; }
-.law-contribution span { color: var(--muted); font-size: 10px; }
-.law-contribution small { font-size: 9px; line-height: 1.7; color: var(--muted); margin-top: 5px; }
-.law-evidence-details { margin-left: 46px; border: 0; padding-top: 0; margin-top: 13px; }
+
 .law-criterion-evidence { list-style: none; margin: 0; padding: 0 16px; border-left: 2px solid #e2e9fb; }
 .law-criterion-evidence li { padding: 12px 0; border-top: 1px solid var(--border); }
 .law-criterion-evidence li:first-child { border-top: 0; }
@@ -133,7 +144,6 @@
 .law-evidence-effect { display: block; font-size: 10px; font-weight: 600; margin: 7px 0; }
 .law-criterion-evidence p { font-size: 11px; }
 .law-criterion-evidence .text-link { font-size: 10px; margin-top: 8px; }
-.law-more { margin-bottom: 5px; }
 .insights-source-note { display: flex; gap: 9px; align-items: flex-start; margin-top: 18px; color: var(--muted); }
 .insights-source-note svg { margin-top: 2px; }
 .insights-source-note p { font-size: 10px; }
@@ -174,16 +184,9 @@
   .law-kpi > span { font-size: 10px; }
   .insights-grid { grid-template-columns: minmax(0, 1fr); }
   .insight-card-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
-  .law-controls { flex-direction: column; align-items: stretch; gap: 10px; }
-  .law-controls label { display: grid; grid-template-columns: 65px minmax(0, 1fr); }
-  .law-highlight-main { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-  .law-rank { display: none; }
-  .law-contribution { border-left: 0; padding: 12px 14px; border-radius: 6px; background: var(--paper); display: grid; grid-template-columns: auto 1fr; gap: 0 15px; align-items: baseline; }
-  .law-contribution strong { grid-row: 1 / 4; align-self: center; }
-  .law-contribution small { grid-column: 2; margin-top: 0; }
-  .law-evidence-details { margin-left: 0; }
   .law-criterion-evidence { padding-right: 0; }
-  .law-highlight h3 { font-size: 13px; }
+  .timeline-jump > summary { gap: 8px; padding: 12px; }
+  .timeline-jump summary small { font-size: 9px; }
 }
 @media (max-width: 390px) {
   .balance-card, .insight-card { padding: 17px; }
@@ -197,7 +200,9 @@
   .chart-date-labels { font-size: 9px; }
 }
 @media print {
-  .law-controls, .topic-more, .law-more { display: none; }
+  .topic-more { display: none; }
+  .chart-scroll { overflow: visible; }
+  .chart-surface { min-width: 0; }
   .balance-card, .insight-card { break-inside: avoid; }
   .insights-grid { grid-template-columns: 1fr; }
 }

@@ -169,6 +169,42 @@ describe('law reach and the reconstructed evidence timeline', () => {
     expect(f.report()).toEqual(r);
   });
 
+  it('stacks all five scores without cancelling effects or counting duplicate evidence', () => {
+    const f = fixture();
+    const c = f.criterion('same-criterion', 'mixed');
+    for (const score of [-2, -1, 0, 1, 2] as const) {
+      f.impact(c, f.law(`score-${score}`, '2025-03-15'), score);
+    }
+    f.data.impacts.push(f.data.impacts[0]);
+    f.impact(c, f.law('later-positive', '2025-05-02'), 2);
+    const r = f.report();
+    expect(r.timeline[0]).toMatchObject({ evidence: 0, new_evidence: 0,
+      evidence_by_score: { '-2': 0, '-1': 0, 0: 0, 1: 0, 2: 0 } });
+    expect(r.timeline[1]).toMatchObject({ evidence: 5, new_evidence: 5, covered: 1,
+      evidence_by_score: { '-2': 1, '-1': 1, 0: 1, 1: 1, 2: 1 } });
+    expect(r.timeline[2]).toMatchObject({ evidence: 5, new_evidence: 0,
+      evidence_by_score: { '-2': 1, '-1': 1, 0: 1, 1: 1, 2: 1 } });
+    expect(r.timeline.at(-1)).toMatchObject({ evidence: 6, new_evidence: 1, covered: 1,
+      evidence_by_score: { '-2': 1, '-1': 1, 0: 1, 1: 1, 2: 2 } });
+    expect(r.criteria.fulfilled).toBe(0);
+    expect(r.timeline.reduce((sum, point) => sum + point.new_evidence, 0)).toBe(r.laws.evidence);
+  });
+
+  it('marks the largest monthly evidence additions regardless of direction with stable date ties', () => {
+    const f = fixture();
+    const c = f.criterion('shared');
+    for (const [month, count, score] of [[3, 2, 1], [4, 4, -2], [5, 3, 0], [6, 3, 2], [7, 1, -1]] as const) {
+      for (let n = 0; n < count; n++) f.impact(c, f.law(`law-${month}-${n}`, `2025-0${month}-15`), score);
+    }
+    const r = f.report();
+    expect(r.timeline_jumps.map(point => [point.date, point.new_evidence])).toEqual([
+      ['2025-04-30', 4], ['2025-05-31', 3], ['2025-06-30', 3],
+    ]);
+    expect(r.timeline_jumps[0].newly_covered).toBe(0); // More evidence, not invented progress.
+    f.data.impacts.reverse(); f.data.laws.reverse();
+    expect(f.report().timeline_jumps).toEqual(r.timeline_jumps);
+  });
+
   it('keeps topic denominators independent and includes uncovered topics', () => {
     const f = fixture();
     const c = f.criterion('multi-topic', 'partial', ['arbeit', 'soziales']);
@@ -186,7 +222,15 @@ describe('law reach and the reconstructed evidence timeline', () => {
       const report = partyInsights(data, [program]);
       const { total, fulfilled, partial, contradicted, mixed, unknown, covered } = report.criteria;
       expect(fulfilled + partial + contradicted + mixed + unknown).toBe(total);
-      if (report.timeline.length) expect(report.timeline.at(-1)!.covered).toBe(covered);
+      if (report.timeline.length) {
+        const last = report.timeline.at(-1)!;
+        expect(last.covered).toBe(covered);
+        expect(last.evidence).toBe(report.laws.evidence);
+        expect(Object.values(last.evidence_by_score).reduce((sum, count) => sum + count, 0)).toBe(report.laws.evidence);
+        for (const score of [-2, -1, 0, 1, 2] as const) {
+          expect(last.evidence_by_score[score]).toBe(report.law_effects.flatMap(law => law.evidence).filter(i => i.score === score).length);
+        }
+      }
       expect(report.laws.total).toBe(new Set(report.law_effects.map(l => l.id)).size);
     }
   });

@@ -3,7 +3,6 @@ import '../styles/party-insights.css';
 import Icon from './Icon.astro';
 import Meter from './Meter.astro';
 import EvidenceTimeline from './EvidenceTimeline.astro';
-import PartyLawHighlights from './PartyLawHighlights.astro';
 import { formatDate, topics } from '../lib/data';
 import { formatPercentage, percentage, type PartyInsights } from '../lib/party-insights';
 import type { Dataset } from '../lib/types';
@@ -43,7 +42,7 @@ const lawCounts = [
   </div>
 
   <div class="law-summary" aria-label="Gesetzeswirkungen im ausgewählten Programm">
-    <div class="law-summary-grid">{lawCounts.map(item => <a href="#gesetzeswirkung" class:list={['law-kpi', item.id || 'all']} data-law-shortcut={item.id}>
+    <div class="law-summary-grid">{lawCounts.map(item => <a href="#gesetzeswirkung" class:list={['law-kpi', item.id || 'all']} aria-label={`${item.label}: ${number(item.value)}. Gesetzeswirkungen im Zeitdiagramm ansehen.`}>
       <div><span class="law-kpi-icon"><Icon name={item.icon} size={18} /></span><strong data-law-total={item.id || 'all'}>{number(item.value)}</strong></div><span>{item.label}</span>
     </a>)}</div>
     <p>Gezählt werden unterschiedliche Gesetze mit akzeptierten Belegen. Ein Gesetz kann mehrere Kriterien unterstützen und anderen widersprechen; die Wirkungsgruppen überlappen. Daraus folgt keine Aussage über das Abstimmungsverhalten der Partei.</p>
@@ -67,7 +66,6 @@ const lawCounts = [
     </section>
   </div>
 
-  <PartyLawHighlights insights={insights} dataset={dataset} year={year} active={active} />
   <div class="insights-source-note"><Icon name="info" size={16} /><p>{insights.period_start && <>Vergleich ab {formatDate(insights.period_start)}. </>}{insights.laws_through && <>Gesetzesdaten bis {formatDate(insights.laws_through)}. </>}Alle Kennzahlen beziehen sich auf die ausgewählten Wahlprogramme und die derzeit akzeptierten Belege. <a href="/methodik/#parteibilanz">Methodik & Zählweise</a></p></div>
 </section>
 <script>

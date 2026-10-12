@@ -74,15 +74,21 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
   const timeline: {
     date: string; baseline: boolean; covered: number; coverage_percent: number | null;
     opposing: number; opposing_percent: number | null; newly_covered: number; law_ids: string[];
+    evidence_by_score: Record<Impact['score'], number>; evidence: number; new_evidence: number;
   }[] = [];
   if (start && through && impacts.length && stats.total) {
     const covered = new Set<string>();
     const opposing = new Set<string>();
+    // Count each accepted impact once, in its own score band. These are evidence
+    // counts, not disjoint criterion states or a sum of signed progress scores.
+    const evidenceByScore: Record<Impact['score'], number> = { '-2': 0, '-1': 0, 0: 0, 1: 0, 2: 0 };
+    let evidenceCount = 0;
     const chronological = [...lawEffects].sort((a, b) => a.published_at.localeCompare(b.published_at) || a.id.localeCompare(b.id));
     const before = new Date(`${start}T00:00:00Z`);
     before.setUTCDate(before.getUTCDate() - 1);
     timeline.push({ date: before.toISOString().slice(0, 10), baseline: true, covered: 0, coverage_percent: 0,
-      opposing: 0, opposing_percent: 0, newly_covered: 0, law_ids: [] });
+      opposing: 0, opposing_percent: 0, newly_covered: 0, law_ids: [],
+      evidence_by_score: { ...evidenceByScore }, evidence: 0, new_evidence: 0 });
     let cursor = 0;
     let month = start.slice(0, 7);
     while (month <= through.slice(0, 7)) {
@@ -90,15 +96,22 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
       const monthEnd = new Date(Date.UTC(year, number, 0)).toISOString().slice(0, 10);
       const date = monthEnd < through ? monthEnd : through;
       const previous = covered.size;
+      const previousEvidence = evidenceCount;
       const lawIds: string[] = [];
       while (cursor < chronological.length && chronological[cursor].published_at <= date) {
         const law = chronological[cursor++];
         lawIds.push(law.id);
-        law.evidence.forEach(i => { covered.add(i.criterion_id); if (i.score < 0) opposing.add(i.criterion_id); });
+        law.evidence.forEach(i => {
+          covered.add(i.criterion_id);
+          if (i.score < 0) opposing.add(i.criterion_id);
+          evidenceByScore[i.score]++;
+          evidenceCount++;
+        });
       }
       timeline.push({ date, baseline: false, covered: covered.size, coverage_percent: percentage(covered.size, stats.total),
         opposing: opposing.size, opposing_percent: percentage(opposing.size, stats.total),
-        newly_covered: covered.size - previous, law_ids: lawIds });
+        newly_covered: covered.size - previous, law_ids: lawIds,
+        evidence_by_score: { ...evidenceByScore }, evidence: evidenceCount, new_evidence: evidenceCount - previousEvidence });
       month = new Date(Date.UTC(year, number, 1)).toISOString().slice(0, 7);
     }
   }
@@ -119,7 +132,13 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
     laws: { total: lawEffects.length, supporting: lawEffects.filter(l => l.supporting > 0).length,
       opposing: lawEffects.filter(l => l.opposing > 0).length, mixed: lawEffects.filter(l => l.direction === 'mixed').length,
       evidence: impacts.length },
-    timeline, law_effects: lawEffects, topics,
+    timeline,
+    // Largest monthly additions, including negative and mixed evidence. Resolve
+    // ties by date, and present markers chronologically so they are easy to follow.
+    timeline_jumps: timeline.filter(point => point.new_evidence > 0)
+      .sort((a, b) => b.new_evidence - a.new_evidence || a.date.localeCompare(b.date)).slice(0, 3)
+      .sort((a, b) => a.date.localeCompare(b.date)),
+    law_effects: lawEffects, topics,
   };
 }
 

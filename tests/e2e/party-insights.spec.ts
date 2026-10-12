@@ -137,42 +137,41 @@ test('topic breakdown expands and links to the selected programme topic', async 
   expect(new URL(page.url()).hash).toBe('#kriterien');
 });
 
-test('law highlights sort, paginate and filter overlapping directions', async ({ page, request }) => {
+test('chart replaces the separate law ranking and markers open the biggest jumps', async ({ page, request }) => {
   const { period, panel } = await openParty(page, request);
-  const highlights = panel.locator('[data-law-highlights]');
-  const visible = highlights.locator('[data-law-item]:visible');
-  const ids = () => visible.evaluateAll(items => items.map(item => (item as HTMLElement).dataset.id));
-  await expect(visible).toHaveCount(Math.min(3, period.laws.total));
-  expect(await ids()).toEqual(period.law_effects.slice(0, 3).map(law => law.id));
-  if (period.laws.total > 3) {
-    await highlights.locator('[data-law-more]').click();
-    await expect(visible).toHaveCount(Math.min(8, period.laws.total));
+  await expect(panel.locator('[data-law-highlights]')).toHaveCount(0);
+  await expect(panel.getByRole('heading', { name: 'Welche Gesetze bewegen am meisten?' })).toHaveCount(0);
+  const timeline = panel.locator('.timeline-card');
+  await expect(timeline.getByRole('heading', { name: 'Belege über Zeit' })).toBeVisible();
+  await expect(timeline.locator('path[data-score]')).toHaveCount(5);
+  const expectedJumps = period.timeline.filter(point => point.new_evidence > 0)
+    .sort((a, b) => b.new_evidence - a.new_evidence || a.date.localeCompare(b.date)).slice(0, 3)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  expect(period.timeline_jumps).toEqual(expectedJumps);
+  await expect(timeline.locator('[data-jump-marker]')).toHaveCount(expectedJumps.length);
+  for (const [index, point] of expectedJumps.entries()) {
+    const marker = timeline.locator('[data-jump-marker]').nth(index);
+    const detail = timeline.locator(`[data-timeline-jump][data-date="${point.date}"]`);
+    await marker.focus();
+    await page.keyboard.press('Enter');
+    await expect(detail).toHaveAttribute('open', '');
+    await expect(detail.locator(':scope > summary')).toBeFocused();
+    await expect(detail.locator(':scope > summary')).toContainText(`+${number(point.new_evidence)}`);
+    expect(await detail.locator('[data-jump-law]').evaluateAll(items => items.map(item => item.getAttribute('data-jump-law')))).toEqual(point.law_ids);
   }
-  for (const order of ['coverage', 'recent'] as const) {
-    await highlights.locator('[data-law-order]').selectOption(order);
-    const expected = [...period.law_effects].sort((a, b) =>
-      (order === 'coverage' ? b.newly_covered - a.newly_covered : b.published_at.localeCompare(a.published_at)) ||
-      b.affected - a.affected || b.newly_covered - a.newly_covered || b.published_at.localeCompare(a.published_at) || a.id.localeCompare(b.id));
-    expect(await ids()).toEqual(expected.slice(0, 3).map(law => law.id));
-  }
-  for (const direction of ['supporting', 'opposing', 'mixed', ''] as const) {
-    await panel.locator(`[data-law-shortcut="${direction}"]`).click();
-    await expect(highlights.locator('[data-law-direction]')).toHaveValue(direction);
-    await expect(highlights.locator('[data-law-direction]')).toBeFocused();
-    const count = direction ? period.laws[direction] : period.laws.total;
-    await expect(highlights.locator('[data-law-count]')).toContainText(`${count} von ${period.laws.total} Gesetzen`);
-    await expect(visible).toHaveCount(Math.min(3, count));
-    if (!count) await expect(highlights.locator('[data-law-empty]')).toBeVisible();
-    else await expect(highlights.locator('[data-law-empty]')).toBeHidden();
-  }
+  await panel.locator('.law-kpi.opposing').click();
+  expect(new URL(page.url()).hash).toBe('#gesetzeswirkung');
+  await expect(timeline.locator('#gesetzeswirkung')).toBeVisible();
   await fitsViewport(page);
 });
 
 test('law evidence opens the exact criterion and original-law evidence', async ({ page, request }) => {
   const { period, panel } = await openParty(page, request);
-  const law = period.law_effects[0];
+  const point = period.timeline_jumps[0];
+  const law = period.law_effects.find(law => law.id === point.law_ids[0])!;
   const evidence = law.evidence[0];
-  const card = panel.locator(`[data-law-item][data-id="${law.id}"]`);
+  await panel.locator('[data-jump-marker]').first().click();
+  const card = panel.locator(`[data-jump-law="${law.id}"]`);
   await card.locator('summary').click();
   const evidenceRow = card.locator('.law-criterion-evidence > li').first();
   const lawLink = await evidenceRow.getByRole('link', { name: 'Gesetz & Originalbeleg' }).getAttribute('href');
@@ -189,18 +188,22 @@ test('law evidence opens the exact criterion and original-law evidence', async (
 test('timeline exposes monthly values without inventing historical fulfilment', async ({ page, request }) => {
   const { period, panel } = await openParty(page, request, 'linke');
   const timeline = panel.locator('.timeline-card');
-  await expect(timeline.getByRole('img')).toHaveAccessibleName(`Entwicklung der Belegabdeckung für Programm ${period.election_year}`);
+  await expect(timeline.getByRole('img')).toHaveAccessibleName(`Gestapelte Gesetzesbelege nach Wirkung für Programm ${period.election_year}`);
   await expect(timeline.getByRole('img')).toHaveAccessibleDescription(/Keine historische Umsetzungsquote/);
   await expect(timeline.locator('figcaption')).toContainText('keine historische Umsetzungsquote');
   const last = period.timeline.at(-1)!;
   expect(last.covered).toBe(period.criteria.covered);
   expect(last.opposing).toBeLessThanOrEqual(last.covered);
-  await timeline.locator('summary').click();
+  await timeline.locator('.timeline-values > summary').click();
   await expect(timeline.locator('tbody tr')).toHaveCount(period.timeline.length);
   const cells = timeline.locator('tbody tr').last().locator('td');
-  await expect(cells.nth(1)).toHaveText(number(last.covered));
-  await expect(cells.nth(2)).toHaveText(percent(period.coverage_percent));
-  await expect(cells.nth(3)).toHaveText(number(last.opposing));
+  await expect(cells.nth(0)).toHaveText(number(last.new_evidence));
+  for (const [index, score] of ([2, 1, -2, -1, 0] as const).entries()) {
+    await expect(cells.nth(index + 1)).toHaveText(number(last.evidence_by_score[score]));
+    await expect(timeline.locator('.chart-legend > span').nth(index)).toContainText(number(last.evidence_by_score[score]));
+  }
+  await expect(cells.nth(6)).toHaveText(number(last.covered));
+  await expect(cells.nth(7)).toHaveText(percent(period.coverage_percent));
   for (const law of period.law_effects) {
     await expect(timeline.locator(`tbody a[href="/live/gesetze/${law.id}/"]`)).toHaveCount(1);
   }
@@ -222,11 +225,15 @@ test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false });
   test('all evidence and topics remain readable without interactive controls', async ({ page, request }) => {
     const { period, panel } = await openParty(page, request);
-    await expect(panel.locator('[data-law-item]:visible')).toHaveCount(period.laws.total);
+    await expect(panel.locator('[data-law-highlights]')).toHaveCount(0);
+    await expect(panel.locator('[data-timeline-jump]:visible')).toHaveCount(period.timeline_jumps.length);
+    await panel.locator('.timeline-values > summary').click();
+    await expect(panel.locator('.timeline-table tbody a')).toHaveCount(period.laws.total);
+    const jump = panel.locator('[data-timeline-jump]').first();
+    await jump.locator(':scope > summary').click();
+    await expect(jump.locator('[data-jump-law]:visible')).toHaveCount(period.timeline_jumps[0].law_ids.length);
     await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(period.topics.length);
     await expect(panel.locator('.criterion-row:visible')).toHaveCount(period.criteria.total);
-    await expect(panel.locator('[data-law-controls]')).toBeHidden();
-    await expect(panel.locator('[data-law-more]')).toBeHidden();
     await expect(panel.locator('[data-topic-more]')).toBeHidden();
     await expect(panel.locator('noscript .notice')).toBeVisible();
     await expect(panel.locator('noscript .notice')).toContainText('Alle Kriterien sind darunter vollständig lesbar');
