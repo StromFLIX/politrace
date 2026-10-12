@@ -11,6 +11,10 @@ from scripts import ci_scope
 def repository(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     subprocess.run(['git', 'init', '--quiet'], check=True)
+    # Temporary fixture repositories must work on clean Actions runners too.
+    # This does not change the real repository's configured authorship or hooks.
+    subprocess.run(['git', 'config', '--local', 'user.name', 'CI scope fixture'], check=True)
+    subprocess.run(['git', 'config', '--local', 'user.email', 'ci-scope@example.invalid'], check=True)
 
     def commit(path, content='version one'):
         target = Path(path)

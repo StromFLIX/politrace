@@ -26,7 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
+          # Scope needs commit/tree history, not every historic OCR/data blob.
+          # Sparse checkout enables blob:none filtering in actions/checkout v4.
           fetch-depth: 0
+          sparse-checkout: scripts/ci_scope.py
+          sparse-checkout-cone-mode: false
           persist-credentials: false
       - name: Select checks conservatively from Git history
         id: checks
