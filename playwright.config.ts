@@ -5,8 +5,9 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
-  // Keep browser processes within small CI/container memory budgets.
-  workers: 1,
+  // GitHub's hosted runners can run two browsers; small development containers cannot.
+  // Override explicitly with Playwright's --workers flag when investigating failures.
+  workers: process.env.GITHUB_ACTIONS === 'true' ? 2 : 1,
   reporter: [['list']],
   // Full-programme DOM snapshots are large; capture diagnostics only on a failed retry.
   use: {

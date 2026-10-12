@@ -16,6 +16,7 @@ def publisher(tmp_path, monkeypatch):
     config.write_text(json.dumps({'publication': 'main'}))
     monkeypatch.setattr(publish_data, 'ROOT', tmp_path)
     monkeypatch.setenv('GITHUB_REF', 'refs/heads/main')
+    monkeypatch.delenv('POLITRACE_VALIDATED_REVISION', raising=False)
     events = []
     state = {'changed': True, 'push_code': 0, 'invalid_after_rebase': False,
              'conflict': False, 'validations': 0}
@@ -41,7 +42,10 @@ def publisher(tmp_path, monkeypatch):
             assert command[-3:] == ['push', 'origin', 'HEAD:refs/heads/main']
             assert '--force' not in command
             return subprocess.CompletedProcess(command, state['push_code'])
-        assert command == ['gh', 'workflow', 'run', 'ci.yml', '--ref', 'main']
+        expected = ['gh', 'workflow', 'run', 'ci.yml', '--ref', 'main']
+        if validated := state.get('validated_revision'):
+            expected += ['--field', f'validated_revision={validated}']
+        assert command == expected
         assert kwargs['check'] is True
         return subprocess.CompletedProcess(command, 0)
 
@@ -58,6 +62,15 @@ def test_rebase_validates_new_code_before_push_and_ci(publisher):
     assert events[rebase + 1] == ('uv', 'run', '--frozen', 'python', '-m', 'pipeline.cli', 'validate')
     assert 'push' in events[rebase + 2]
     assert events[-1] == ('gh', 'workflow', 'run', 'ci.yml', '--ref', 'main')
+
+
+def test_publisher_passes_tested_revision_not_rebased_head(publisher, monkeypatch):
+    events, state = publisher
+    state['validated_revision'] = 'a' * 40
+    monkeypatch.setenv('POLITRACE_VALIDATED_REVISION', state['validated_revision'])
+    publish_data.main()
+    assert events[-1] == ('gh', 'workflow', 'run', 'ci.yml', '--ref', 'main',
+                          '--field', f"validated_revision={state['validated_revision']}")
 
 
 def test_new_contract_failure_blocks_push_not_just_initial_validation(publisher):

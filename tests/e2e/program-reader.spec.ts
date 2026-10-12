@@ -77,7 +77,7 @@ test('old paragraph and source-disclosure fragments reveal the OCR page without 
   }
 });
 
-test('page criteria round-trip through unchanged exact quotes to the OCR reader', async ({ page, request }) => {
+test('page criteria round-trip through unchanged exact quotes to the OCR reader', { tag: '@smoke' }, async ({ page, request }) => {
   const { items } = await (await request.get('/api/v1/live/criteria.json')).json();
   const criterion = items.find((c: { program_id: string }) => c.program_id === 'gruene-2025');
   const href = `${programme}#reading-page-${criterion.reference.page}`;

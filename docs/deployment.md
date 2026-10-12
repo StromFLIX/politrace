@@ -58,9 +58,11 @@ Secrets are never committed, placed in build args, or copied into the web contai
 2. Source/schema/unit/build/browser checks run against the publishable snapshot, including valid partial results.
 3. The publisher fetches/rebases instead of force-pushing; conflicting citizen corrections stop publication.
 4. Coolify receives the installed GitHub App's push event for `main` and builds the Compose image.
-5. A `GITHUB_TOKEN` push suppresses GitHub push-workflow triggers, so the publisher explicitly dispatches `ci.yml`.
-6. CI runs the full suite and Compose smoke test, then `scripts/verify_deployment.py` waits up to ten minutes for the **exact built snapshot** over public HTTPS.
-7. CI runs the complete read-only desktop/mobile browser suite against production, including source links and OCR readers. A failed deployment/probe is a CI failure, not a green "queued" result.
+5. A `GITHUB_TOKEN` push suppresses GitHub push-workflow triggers, so the publisher explicitly dispatches `ci.yml` with the original tested revision. Only bot dispatches can use that hint. CI skips repeated code-only checks only when Git proves the code still matches that tested revision and all differences are under `data/live/`; missing history, invalid hints or concurrent code/schema changes get full checks. Data validation, schema drift checks, the build and the full local browser suite always run.
+6. CI runs Python and frontend checks in parallel. A separate Compose build/smoke job runs when packaging inputs change (Dockerfile, Compose, Nginx, package/lock/build configuration or CI scope logic), or when history is unavailable. The existing `test` status requires every applicable job to pass.
+7. A separate **Verify production deployment** status downloads the exact probe files from the frontend's tested build, without rebuilding. `scripts/verify_deployment.py` waits up to ten minutes for that **exact built snapshot** over public HTTPS, then a small read-only desktop/mobile `@smoke` browser suite checks the homepage, API, reader and a citation round-trip. A failed deployment/probe remains a failure, not a green "queued" result, but does not keep the code-test status pending.
+
+The exhaustive production browser suite is available through the **Full production browser checks** (`production-browser.yml`) manual workflow on `main`. Use it for investigations or release checks; it no longer repeats on every push. Browser tests use two workers on GitHub-hosted runners and one in small local containers. New smoke tests should be tagged `@smoke` so they also remain part of the full local suite.
 
 The HTTPS probe compares the political data index, reading-edition index, OCR progress, all-party progress, landing/progress HTML, every programme reader and a law reader. This deliberately checks more than `data_sha256`: that legacy digest alone does not cover OCR-only or presentation-only changes. It also requires genuine 404s for unknown API records and removed demo routes, and checks that the snapshot did not change during the probe. Provider error bodies are not logged.
 
@@ -72,6 +74,8 @@ Build the exact intended checkout first, then:
 
 ```sh
 uv run python scripts/verify_deployment.py --timeout 600
+POLITRACE_TEST_BASE_URL=https://politrace.stromflix.com npm run test:e2e -- --grep @smoke
+# Optional exhaustive production checks:
 POLITRACE_TEST_BASE_URL=https://politrace.stromflix.com npm run test:e2e
 ```
 

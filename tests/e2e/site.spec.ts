@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('production home has no demo switch or POC branding', async ({ page, request }) => {
+test('production home has no demo switch or POC branding', { tag: '@smoke' }, async ({ page, request }) => {
   const index = await (await request.get('/api/v1/index.json')).json();
   expect(index.default_dataset).toBe('live');
   expect(index.datasets).toEqual(['/api/v1/live/index.json']);
@@ -32,7 +32,7 @@ test('2025 overviews show only Bundestag parties and fit the viewport', async ({
   expect(errors).toEqual([]);
 });
 
-test('real party criteria have searchable evidence and Git correction links', async ({ page }) => {
+test('real party criteria have searchable evidence and Git correction links', { tag: '@smoke' }, async ({ page }) => {
   await page.goto('/live/parteien/spd/');
   const section = page.locator('[data-period-panel="2025"]');
   await section.getByRole('searchbox').fill('nichtvorhandenerbegriffxyz');
@@ -62,7 +62,7 @@ test('live activity does not fabricate voting records', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Verbindungen zu Wahlversprechen' })).toBeVisible();
 });
 
-test('API exposes source contracts and actual 404s', async ({ request }) => {
+test('API exposes source contracts and actual 404s', { tag: '@smoke' }, async ({ request }) => {
   const programs = await (await request.get('/api/v1/live/programs.json')).json();
   expect(programs.total).toBe(6);
   expect(programs.items.every((p: { dataset: string; id: string }) => p.dataset === 'live' && !p.id.startsWith('demo-'))).toBe(true);

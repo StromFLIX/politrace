@@ -67,6 +67,15 @@ def expected_snapshot(dist: Path) -> dict[str, bytes]:
     return {url: (dist / path).read_bytes() for url, path in paths.items()}
 
 
+def export_snapshot(dist: Path, destination: Path) -> None:
+    """Retain only the exact probe inputs, not a second build or the entire website."""
+    for url, body in expected_snapshot(dist).items():
+        relative = url.lstrip('/') + 'index.html' if url.endswith('/') else url.lstrip('/')
+        target = destination / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(body)
+
+
 def verify_once(base_url: str, expected: dict[str, bytes], *, request=fetch) -> None:
     for path, wanted in expected.items():
         status, actual = request(base_url + path)
@@ -116,7 +125,12 @@ def main():
     parser.add_argument('--dist', type=Path, default=Path('dist'))
     parser.add_argument('--base-url', default='https://politrace.stromflix.com')
     parser.add_argument('--timeout', type=int, default=600)
+    parser.add_argument('--export-snapshot', type=Path,
+                        help='Export exact probe inputs from the tested build and exit (no network)')
     args = parser.parse_args()
+    if args.export_snapshot:
+        export_snapshot(args.dist, args.export_snapshot)
+        return
     wait_for_deployment(args.base_url, expected_snapshot(args.dist), timeout=args.timeout)
 
 

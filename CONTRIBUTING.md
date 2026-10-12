@@ -67,6 +67,6 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-If changing models, also run `uv run politrace schemas` and include the generated schemas. CI checks schema drift and builds/smoke-tests the production Compose stack. Browser tests use one headless worker to fit small development containers.
+If changing models, also run `uv run politrace schemas` and include the generated schemas. CI always checks schema drift, builds the site and runs the full local browser suite. Python and frontend jobs run in parallel; the production Compose build/smoke job runs for packaging changes or unknown history. Deployment has its own exact-snapshot and production smoke status on `main`, with exhaustive production browser checks available manually (see [deployment](docs/deployment.md)). Browser tests use two headless workers on GitHub-hosted runners and one in small development containers.
 
 For code contributions, include regression tests and describe any effects on past metrics, record identity or model costs. Never add credentials, personal contact details, downloaded PDFs, LLM caches or generated build output to a PR.

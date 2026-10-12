@@ -46,7 +46,13 @@ def main():
             # GITHUB_TOKEN pushes suppress Actions push triggers. Dispatch CI explicitly.
             # The installed Coolify GitHub App receives the push; CI verifies its exact
             # public deployment as well as the build. No branch protection bypass.
-            subprocess.run(['gh', 'workflow', 'run', 'ci.yml', '--ref', 'main'], check=True)
+            command = ['gh', 'workflow', 'run', 'ci.yml', '--ref', 'main']
+            # The processing workflow already ran code tests on this revision. CI
+            # skips repeats only if Git proves all changes since it are data/live.
+            # A concurrent code change during rebase therefore gets full CI.
+            if validated := os.environ.get('POLITRACE_VALIDATED_REVISION'):
+                command += ['--field', f'validated_revision={validated}']
+            subprocess.run(command, check=True)
             print('Published final source/analysis snapshot; CI explicitly dispatched')
             return
         if attempt == 2:

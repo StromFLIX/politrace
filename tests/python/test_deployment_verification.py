@@ -6,6 +6,7 @@ import pytest
 from scripts.verify_deployment import (
     SnapshotMismatch,
     expected_snapshot,
+    export_snapshot,
     verify_once,
     wait_for_deployment,
 )
@@ -100,6 +101,13 @@ def test_build_expectations_include_all_programmes_and_a_law(tmp_path):
     result = expected_snapshot(tmp_path)
     assert '/live/programme/first-2025/' in result and '/live/programme/second-2025/' in result
     assert '/live/gesetze/bgbl-1-2025-1/' in result
+    # The deployment job downloads just these byte-exact probes, not a second build.
+    (tmp_path / 'unrelated.html').write_text('not a probe')
+    artifact = tmp_path / 'exported'
+    export_snapshot(tmp_path, artifact)
+    assert expected_snapshot(artifact) == result
+    assert not (artifact / 'unrelated.html').exists()
+    assert len(list(artifact.rglob('*.*'))) == len(result)
 
 
 def test_ci_checks_public_snapshot_and_browsers_only_on_main():
