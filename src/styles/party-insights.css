@@ -75,6 +75,7 @@
 .chart-layout svg { display: block; width: 100%; height: 400px; }
 .chart-grid-line { stroke: #e2e7ed; stroke-width: 1; stroke-dasharray: 3 4; }
 .chart-baseline { stroke: #98a7b6; stroke-width: 1; }
+.chart-zero-baseline { stroke: var(--ink); stroke-width: 1.5; }
 .chart-score { stroke: #fff; stroke-width: .5; }
 .chart-score-direct { --score-color: #258160; fill: var(--score-color); }
 .chart-score-partial { --score-color: #8ac9ac; fill: var(--score-color); }
@@ -82,8 +83,8 @@
 .chart-score-impedes { --score-color: #e8ab72; fill: var(--score-color); }
 .chart-score-mixed { --score-color: #886097; fill: var(--score-color); }
 .chart-direction { position: absolute; left: 53px; font-size: 10px; font-weight: 600; pointer-events: none; }
-.chart-negative-label { top: 27px; color: #a34439; }
-.chart-positive-label { top: 324px; color: #258160; }
+.chart-negative-label { top: 324px; color: #a34439; }
+.chart-positive-label { top: 84px; color: #258160; }
 .chart-mixed-label { top: 390px; color: #886097; }
 .chart-jump-line { stroke: var(--blue); stroke-width: 1; stroke-dasharray: 2 5; opacity: .5; }
 .chart-jump-marker { position: absolute; top: 0; transform: translateX(-50%); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 12px; font-weight: 650; box-shadow: 0 0 0 3px #fff; }
@@ -97,6 +98,7 @@
 .timeline-jump > summary::after { content: '+'; font-size: 20px; color: var(--blue); }
 .timeline-jump[open] > summary::after { content: '−'; }
 .jump-number { display: grid; place-items: center; width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%; color: var(--blue); background: #edf2ff; font-size: 12px; font-weight: 600; }
+.timeline-jump > summary > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
 .timeline-jump summary strong { font-size: 13px; }
 .timeline-jump summary small { display: block; color: var(--muted); font-size: 10px; font-weight: 400; }
 .jump-count { color: var(--blue); margin-left: auto; text-align: right; white-space: nowrap; }

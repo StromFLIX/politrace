@@ -108,7 +108,7 @@ export const getStaticPaths: GetStaticPaths = () => {
           ...item, dataset, programs: data.programs.filter(p => p.party_id === item.id).map(p => p.id),
           statistics: statistics.filter(s => s.party_id === item.id),
           insights: {
-            method: '/methodik/#parteibilanz', timeline_basis: 'current_accepted_evidence_by_law_publication_month',
+            method: '/methodik/#parteibilanz', timeline_basis: 'current_accepted_evidence_by_law_publication_date',
             fulfilment_history_available: false, law_groups_overlap: true,
             periods: [...new Set(data.programs.filter(p => p.party_id === item.id && p.review.status !== 'rejected').map(p => p.election_year))]
               .sort((a, b) => b - a).map(year => ({ election_year: year,

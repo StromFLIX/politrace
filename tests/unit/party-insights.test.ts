@@ -138,7 +138,7 @@ describe('law reach and the reconstructed evidence timeline', () => {
     expect(r.timeline.at(-1)).toMatchObject({ covered: 2, coverage_percent: 100, opposing: 1, opposing_percent: 50 });
   });
 
-  it('uses publication dates, fills empty months and does not backdate current fulfilment', () => {
+  it('uses exact publication events and an unchanged endpoint without backdating current fulfilment', () => {
     const f = fixture();
     const c = f.criterion('implemented-now', 'fulfilled');
     f.impact(c, f.law('first', '2025-03-15'), 1);
@@ -146,7 +146,7 @@ describe('law reach and the reconstructed evidence timeline', () => {
     f.law('latest-unlinked', '2025-06-04');
     const r = f.report();
     expect(r.timeline.map(p => [p.date, p.covered, p.newly_covered])).toEqual([
-      ['2025-02-28', 0, 0], ['2025-03-31', 1, 1], ['2025-04-30', 1, 0], ['2025-05-31', 1, 0], ['2025-06-04', 1, 0],
+      ['2025-02-28', 0, 0], ['2025-03-15', 1, 1], ['2025-05-02', 1, 0], ['2025-06-04', 1, 0],
     ]);
     expect(r.timeline.flatMap(p => p.law_ids)).toEqual(['first', 'later']);
     expect(r.last_assessed_at).toBe('2026-02-01');
@@ -182,27 +182,34 @@ describe('law reach and the reconstructed evidence timeline', () => {
       evidence_by_score: { '-2': 0, '-1': 0, 0: 0, 1: 0, 2: 0 } });
     expect(r.timeline[1]).toMatchObject({ evidence: 5, new_evidence: 5, covered: 1,
       evidence_by_score: { '-2': 1, '-1': 1, 0: 1, 1: 1, 2: 1 } });
-    expect(r.timeline[2]).toMatchObject({ evidence: 5, new_evidence: 0,
-      evidence_by_score: { '-2': 1, '-1': 1, 0: 1, 1: 1, 2: 1 } });
+    expect(r.timeline[2].date).toBe('2025-05-02');
     expect(r.timeline.at(-1)).toMatchObject({ evidence: 6, new_evidence: 1, covered: 1,
       evidence_by_score: { '-2': 1, '-1': 1, 0: 1, 1: 1, 2: 2 } });
     expect(r.criteria.fulfilled).toBe(0);
     expect(r.timeline.reduce((sum, point) => sum + point.new_evidence, 0)).toBe(r.laws.evidence);
   });
 
-  it('marks the largest monthly evidence additions regardless of direction with stable date ties', () => {
+  it('ranks three individual laws, not busy months or days, with stable date and ID ties', () => {
     const f = fixture();
-    const c = f.criterion('shared');
-    for (const [month, count, score] of [[3, 2, 1], [4, 4, -2], [5, 3, 0], [6, 3, 2], [7, 1, -1]] as const) {
-      for (let n = 0; n < count; n++) f.impact(c, f.law(`law-${month}-${n}`, `2025-0${month}-15`), score);
+    for (const [id, date, count, score] of [
+      ['small-a', '2025-03-04', 1, 1], ['small-b', '2025-03-04', 1, 1],
+      ['small-c', '2025-03-04', 1, 1], ['small-d', '2025-03-04', 1, 1],
+      ['top', '2025-05-12', 3, -2], ['tied-b', '2025-04-09', 2, 0],
+      ['tied-a', '2025-04-09', 2, 2], ['later-tie', '2025-06-15', 2, -1],
+    ] as const) {
+      const law = f.law(id, date);
+      for (let n = 0; n < count; n++) f.impact(f.criterion(`${id}-${n}`), law, score);
     }
     const r = f.report();
-    expect(r.timeline_jumps.map(point => [point.date, point.new_evidence])).toEqual([
-      ['2025-04-30', 4], ['2025-05-31', 3], ['2025-06-30', 3],
+    expect(r.timeline_jumps.map(point => [point.date, point.new_evidence, point.law_ids])).toEqual([
+      ['2025-05-12', 3, ['top']], ['2025-04-09', 2, ['tied-a']], ['2025-04-09', 2, ['tied-b']],
     ]);
-    expect(r.timeline_jumps[0].newly_covered).toBe(0); // More evidence, not invented progress.
+    expect(r.timeline.map(point => point.date)).toEqual([
+      '2025-02-28', '2025-03-04', '2025-04-09', '2025-05-12', '2025-06-15',
+    ]);
+    expect(r.timeline[1].new_evidence).toBe(4); // Busy day excluded from individual-law ranking.
     f.data.impacts.reverse(); f.data.laws.reverse();
-    expect(f.report().timeline_jumps).toEqual(r.timeline_jumps);
+    expect(f.report()).toEqual(r);
   });
 
   it('keeps topic denominators independent and includes uncovered topics', () => {

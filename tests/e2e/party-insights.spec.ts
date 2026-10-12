@@ -37,7 +37,7 @@ test('party balances match their exported programme counts, including empty part
   const { items: parties } = await (await request.get('/api/v1/live/parties.json')).json();
   for (const { id } of parties) {
     const { insights } = await partyExport(request, id);
-    expect(insights.timeline_basis).toBe('current_accepted_evidence_by_law_publication_month');
+    expect(insights.timeline_basis).toBe('current_accepted_evidence_by_law_publication_date');
     expect(insights.fulfilment_history_available).toBe(false);
     expect(insights.law_groups_overlap).toBe(true);
     await page.goto(`/live/parteien/${id}/`);
@@ -144,14 +144,23 @@ test('chart replaces the separate law ranking and markers open the biggest jumps
   const timeline = panel.locator('.timeline-card');
   await expect(timeline.getByRole('heading', { name: 'Belege über Zeit' })).toBeVisible();
   await expect(timeline.locator('path[data-score]')).toHaveCount(5);
-  const expectedJumps = period.timeline.filter(point => point.new_evidence > 0)
-    .sort((a, b) => b.new_evidence - a.new_evidence || a.date.localeCompare(b.date)).slice(0, 3)
-    .sort((a, b) => a.date.localeCompare(b.date));
+  const expectedJumps = [...period.law_effects]
+    .sort((a, b) => b.evidence.length - a.evidence.length || a.published_at.localeCompare(b.published_at) || a.id.localeCompare(b.id))
+    .slice(0, 3).map(law => ({ date: law.published_at, new_evidence: law.evidence.length,
+      newly_covered: law.newly_covered, law_ids: [law.id] }));
   expect(period.timeline_jumps).toEqual(expectedJumps);
   await expect(timeline.locator('[data-jump-marker]')).toHaveCount(expectedJumps.length);
+  const markers = await timeline.locator('[data-jump-marker]').evaluateAll(items => items.map(item => {
+    const { left, right, top, bottom } = item.getBoundingClientRect();
+    return { left, right, top, bottom };
+  }));
+  for (let i = 0; i < markers.length; i++) for (let j = i + 1; j < markers.length; j++) {
+    const a = markers[i], b = markers[j];
+    expect(a.right <= b.left || b.right <= a.left || a.bottom <= b.top || b.bottom <= a.top).toBe(true);
+  }
   for (const [index, point] of expectedJumps.entries()) {
     const marker = timeline.locator('[data-jump-marker]').nth(index);
-    const detail = timeline.locator(`[data-timeline-jump][data-date="${point.date}"]`);
+    const detail = timeline.locator('[data-timeline-jump]').nth(index);
     await marker.focus();
     await page.keyboard.press('Enter');
     await expect(detail).toHaveAttribute('open', '');
@@ -185,12 +194,26 @@ test('law evidence opens the exact criterion and original-law evidence', async (
   await expect(sourceCard.locator('blockquote')).not.toBeEmpty();
 });
 
-test('timeline exposes monthly values without inventing historical fulfilment', async ({ page, request }) => {
+test('timeline exposes exact publication events and a single zero baseline without inventing historical fulfilment', async ({ page, request }) => {
   const { period, panel } = await openParty(page, request, 'linke');
   const timeline = panel.locator('.timeline-card');
   await expect(timeline.getByRole('img')).toHaveAccessibleName(`Gestapelte Gesetzesbelege nach Wirkung für Programm ${period.election_year}`);
   await expect(timeline.getByRole('img')).toHaveAccessibleDescription(/Keine historische Umsetzungsquote/);
   await expect(timeline.locator('figcaption')).toContainText('keine historische Umsetzungsquote');
+  await expect(timeline.locator('[data-zero-label]')).toHaveCount(1);
+  await expect(timeline.locator('[data-zero-label]')).toHaveText('0');
+  await expect(timeline.locator('.chart-zero-baseline')).toHaveCount(1);
+  const zero = Number(await timeline.locator('.chart-zero-baseline').getAttribute('y1'));
+  expect(zero).toBe(213);
+  for (const score of [2, 1, -2, -1]) {
+    const path = (await timeline.locator(`path[data-score="${score}"]`).getAttribute('d'))!;
+    const ys = [...path.matchAll(/(?:M|L)\d+\.\d+ (\d+\.\d+)|V(\d+\.\d+)/g)].map(match => Number(match[1] ?? match[2]));
+    expect(ys.length).toBeGreaterThan(0);
+    expect(ys.every(y => score > 0 ? y <= zero : y >= zero)).toBe(true);
+  }
+  for (const point of period.timeline.filter(point => point.new_evidence)) {
+    expect(point.law_ids.every(id => period.law_effects.find(law => law.id === id)?.published_at === point.date)).toBe(true);
+  }
   const last = period.timeline.at(-1)!;
   expect(last.covered).toBe(period.criteria.covered);
   expect(last.opposing).toBeLessThanOrEqual(last.covered);
@@ -231,7 +254,7 @@ test.describe('without JavaScript', () => {
     await expect(panel.locator('.timeline-table tbody a')).toHaveCount(period.laws.total);
     const jump = panel.locator('[data-timeline-jump]').first();
     await jump.locator(':scope > summary').click();
-    await expect(jump.locator('[data-jump-law]:visible')).toHaveCount(period.timeline_jumps[0].law_ids.length);
+    await expect(jump.locator('[data-jump-law]:visible')).toHaveCount(1);
     await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(period.topics.length);
     await expect(panel.locator('.criterion-row:visible')).toHaveCount(period.criteria.total);
     await expect(panel.locator('[data-topic-more]')).toBeHidden();

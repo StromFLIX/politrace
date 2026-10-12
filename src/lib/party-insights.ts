@@ -90,11 +90,10 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
       opposing: 0, opposing_percent: 0, newly_covered: 0, law_ids: [],
       evidence_by_score: { ...evidenceByScore }, evidence: 0, new_evidence: 0 });
     let cursor = 0;
-    let month = start.slice(0, 7);
-    while (month <= through.slice(0, 7)) {
-      const [year, number] = month.split('-').map(Number);
-      const monthEnd = new Date(Date.UTC(year, number, 0)).toISOString().slice(0, 10);
-      const date = monthEnd < through ? monthEnd : through;
+    // Exact publication events, not calendar buckets. Keep an unchanged endpoint
+    // when the latest in-window law has no accepted links.
+    const dates = [...new Set([...chronological.map(law => law.published_at), through])].sort();
+    for (const date of dates) {
       const previous = covered.size;
       const previousEvidence = evidenceCount;
       const lawIds: string[] = [];
@@ -112,7 +111,6 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
         opposing: opposing.size, opposing_percent: percentage(opposing.size, stats.total),
         newly_covered: covered.size - previous, law_ids: lawIds,
         evidence_by_score: { ...evidenceByScore }, evidence: evidenceCount, new_evidence: evidenceCount - previousEvidence });
-      month = new Date(Date.UTC(year, number, 1)).toISOString().slice(0, 7);
     }
   }
 
@@ -133,11 +131,13 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
       opposing: lawEffects.filter(l => l.opposing > 0).length, mixed: lawEffects.filter(l => l.direction === 'mixed').length,
       evidence: impacts.length },
     timeline,
-    // Largest monthly additions, including negative and mixed evidence. Resolve
-    // ties by date, and present markers chronologically so they are easy to follow.
-    timeline_jumps: timeline.filter(point => point.new_evidence > 0)
-      .sort((a, b) => b.new_evidence - a.new_evidence || a.date.localeCompare(b.date)).slice(0, 3)
-      .sort((a, b) => a.date.localeCompare(b.date)),
+    // Rank individual laws by their actual addition to this evidence-count chart,
+    // never by the sum of unrelated laws in a month (or even on the same day).
+    // Stable ties use publication date and ID; marker numbers indicate rank.
+    timeline_jumps: [...lawEffects]
+      .sort((a, b) => b.evidence.length - a.evidence.length || a.published_at.localeCompare(b.published_at) || a.id.localeCompare(b.id))
+      .slice(0, 3).map(law => ({ date: law.published_at, new_evidence: law.evidence.length,
+        newly_covered: law.newly_covered, law_ids: [law.id] })),
     law_effects: lawEffects, topics,
   };
 }
