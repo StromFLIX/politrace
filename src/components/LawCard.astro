@@ -1,16 +1,75 @@
 ---
 import Icon from './Icon.astro';
 import { topics, formatDate } from '../lib/data';
-import { voteTotals, publicImpact } from '../lib/metrics';
+import { cardVote, groupVotePreview, partyLinks } from '../lib/law-card';
 import type { Law, Data } from '../lib/types';
 interface Props { law: Law; data: Data }
 const { law, data } = Astro.props;
-const impacts = data.impacts.filter(i => i.law_id === law.id && publicImpact(i));
-const affectedParties = [...new Set(impacts.map(i => data.criteria.find(c => c.id === i.criterion_id)!.party_id))];
-const vote = data.votes.find(v => v.law_id === law.id && v.review.status === 'reviewed');
-const totals = vote && voteTotals(vote.groups);
+const parties = partyLinks(data, law.id);
+const vote = cardVote(data, law.id);
+const detailUrl = `/${data.dataset}/gesetze/${law.id}/`;
 ---
-<article class="activity-card" data-filter-item data-search={`${law.title} ${law.summary} ${law.citation} ${law.tags.map(t => topics[t]).join(' ')}`} data-party={affectedParties.join(' ')} data-topic={law.tags.join(' ')} data-status={impacts.length ? 'linked' : 'pending'}>
-  <div class="activity-card-main"><div class="activity-top"><span><Icon name="clock" size={12} /> {formatDate(law.published_at)}</span><span class="status reviewed">Verkündet</span>{law.tags.map(t => <span class="tag">{topics[t]}</span>)}</div><h2><a href={`/${data.dataset}/gesetze/${law.id}/`}>{law.title}</a></h2><p>{law.summary}</p><div class="activity-impact-row">{impacts.map(i => { const c = data.criteria.find(c => c.id === i.criterion_id)!; const p = data.parties.find(p => p.id === c.party_id)!; return <a href={`/${data.dataset}/kriterien/${c.id}/#${i.id}`} class:list={['impact-pill', { negative: i.score < 0 }]} title={c.title}><Icon name="link" size={11} />{p.short_name} <strong>{i.score > 0 ? '+' : ''}{i.score}</strong></a>; })}{!impacts.length && <span class="subtle-link"><Icon name="link" size={13} /> Noch keine belegte Verknüpfung</span>}</div></div>
-  <div class="activity-card-footer">{totals ? <span class="votes-preview"><span class="mini-vote-bar" aria-hidden="true"><span class="vote-yes" style={`flex:${totals.yes}`} /><span class="vote-no" style={`flex:${totals.no}`} /><span class="vote-abstain" style={`flex:${totals.abstain}`} /></span><span>{totals.yes} Ja · {totals.no} Nein</span></span> : <span><Icon name="info" size={12} /> Abstimmungsnachweis noch offen</span>}<a href={`/${data.dataset}/gesetze/${law.id}/`} class="text-link">Gesetz & Belege <Icon name="arrow" size={13} /></a></div>
+<article class="activity-card" data-filter-item data-search={`${law.title} ${law.summary} ${law.citation} ${law.tags.map(t => topics[t]).join(' ')}`} data-party={parties.map(p => p.party.id).join(' ')} data-topic={law.tags.join(' ')} data-status={parties.length ? 'linked' : 'pending'}>
+  <div class="activity-card-main">
+    <div class="activity-top"><span><Icon name="clock" size={12} /> {formatDate(law.published_at)}</span><span class="status reviewed">Verkündet</span>{law.tags.map(t => <span class="tag">{topics[t]}</span>)}</div>
+    <h2><a href={detailUrl}>{law.title}</a></h2>
+    <div class="party-links" aria-label="Programmverknüpfungen nach Partei">
+      {parties.map(({ party, items }) => <details class="party-link-group">
+        <summary><span class="party-dot" style={`background:${party.color}`} />{party.short_name}<span class="link-count">{items.length}</span></summary>
+        <ul>{items.map(({ criterion, impact }) => <li><a href={`/${data.dataset}/kriterien/${criterion.id}/#${impact.id}`}><span>{criterion.title}</span><strong class:list={[{ negative: impact.score < 0 }]}>{impact.score > 0 ? '+' : ''}{impact.score}</strong></a></li>)}</ul>
+      </details>)}
+      {!parties.length && <span class="subtle-link"><Icon name="link" size={13} /> Noch keine belegte Verknüpfung</span>}
+    </div>
+  </div>
+  <div class="activity-card-footer">
+    {vote?.groups.length ? <div class="card-votes">
+      <a class="vote-heading" href={`${detailUrl}#${vote.id}`}>Schlussabstimmung <Icon name="arrow" size={11} /></a>
+      <div class="vote-groups">{vote.groups.map(group => {
+        const { totals, position, label } = groupVotePreview(group, vote.type);
+        const name = data.parties.find(p => p.id === group.party_id)?.short_name ?? group.group;
+        return <a class="vote-group" href={`${detailUrl}#${vote.id}`} aria-label={`${group.group}: ${label}`} title={`${group.group}: ${label}`}>
+          <span>{name}</span>
+          {totals && totals.total > 0 ? <span class="group-vote-bar" aria-hidden="true">
+            <span class="vote-yes" style={`flex:${totals.yes}`} /><span class="vote-no" style={`flex:${totals.no}`} /><span class="vote-abstain" style={`flex:${totals.abstain}`} /><span class="vote-absent" style={`flex:${totals.absent}`} /><span class="vote-invalid" style={`flex:${totals.invalid}`} />
+          </span> : <span class:list={['position-mark', `position-${position}`]} aria-hidden="true" />}
+          <span class="vote-position">{({ yes: 'Ja', no: 'Nein', abstain: 'Enth.', mixed: 'Geteilt', unknown: 'Offen' })[position]}</span>
+        </a>;
+      })}</div>
+    </div> : <a class="vote-heading" href={`${detailUrl}#abstimmungen`}><Icon name="info" size={12} /> {vote ? 'Nur Beschluss belegt' : 'Stimmverhalten offen'}</a>}
+    <a href={detailUrl} class="text-link law-detail-link">Gesetz & Belege <Icon name="arrow" size={13} /></a>
+  </div>
 </article>
+
+<style>
+  .party-links { display: flex; flex-wrap: wrap; align-items: start; gap: 6px; margin-top: 14px; font-size: 11px; }
+  .party-link-group { min-width: 0; max-width: 100%; border: 1px solid var(--border); border-radius: 5px; background: #fbfcfe; }
+  .party-link-group summary { display: flex; align-items: center; gap: 6px; padding: 5px 8px; cursor: pointer; list-style: none; }
+  .party-link-group summary::-webkit-details-marker { display: none; }
+  .party-link-group summary::after { content: '+'; color: var(--muted); }
+  .party-link-group[open] summary::after { content: '−'; }
+  .party-dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+  .link-count { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .party-link-group ul { list-style: none; margin: 0; padding: 4px 8px 8px; max-width: 360px; border-top: 1px solid var(--border); }
+  .party-link-group li + li { margin-top: 6px; }
+  .party-link-group li a { display: flex; align-items: baseline; gap: 10px; justify-content: space-between; }
+  .party-link-group li span { overflow-wrap: anywhere; }
+  .party-link-group strong { color: #387554; white-space: nowrap; }
+  .party-link-group strong.negative { color: #946230; }
+  .party-link-group a:hover, .vote-heading:hover, .vote-group:hover { color: var(--blue); }
+  .activity-card-footer { flex-wrap: wrap; gap: 12px; }
+  .card-votes { flex: 1 1 340px; min-width: 0; }
+  .vote-heading { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; }
+  .vote-groups { display: flex; gap: 8px 16px; flex-wrap: wrap; margin-top: 7px; }
+  .vote-group { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; }
+  .group-vote-bar { width: 48px; height: 5px; display: flex; overflow: hidden; border-radius: 3px; }
+  .vote-invalid { background: #6b6677; }
+  .position-mark { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+  .position-yes { background: #348a69; }
+  .position-no { background: #c26b68; }
+  .position-abstain { background: #c1a457; }
+  .position-mixed { background: linear-gradient(90deg, #348a69 50%, #c26b68 50%); }
+  .position-unknown { border: 1px solid #8a97a6; }
+  .vote-position { color: var(--ink); }
+  .law-detail-link { margin-left: auto; white-space: nowrap; }
+  summary:focus-visible, a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+</style>
