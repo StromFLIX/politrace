@@ -67,7 +67,7 @@
 .timeline-headline span { font-size: 10px; color: var(--muted); }
 .evidence-chart { margin: 0; }
 .chart-unit { font-size: 10px; color: var(--muted); margin-bottom: 5px; }
-.timeline-card, .topic-breakdown { grid-column: 1 / -1; }
+.timeline-card { grid-column: 1 / -1; }
 .chart-scroll { overflow-x: auto; padding-top: 8px; }
 .chart-surface { min-width: 600px; position: relative; }
 .chart-layout { display: grid; grid-template-columns: 43px minmax(0, 1fr); }
@@ -110,9 +110,6 @@
 .jump-laws h4 a:hover { color: var(--blue); }
 .jump-law-counts { font-size: 10px; margin-top: 5px; }
 .jump-evidence { margin-bottom: 16px; }
-@media (min-width: 761px) {
-  .topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
-}
 .chart-date-labels { display: flex; justify-content: space-between; gap: 8px; margin: 7px 0 0 43px; font-size: 10px; color: var(--muted); }
 .chart-legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 19px 0 14px; font-size: 10px; }
 .chart-legend > span { display: flex; gap: 7px; align-items: center; }
@@ -125,17 +122,6 @@
 .insight-details[open] summary { margin-bottom: 16px; }
 .timeline-table td:last-child a { display: block; white-space: normal; min-width: 130px; }
 .timeline-table th[scope="row"] { background: none; }
-.topic-list { margin-top: 10px; }
-.topic-insight { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 8px; padding: 14px 0; border-bottom: 1px solid var(--border); }
-.topic-insight:hover .topic-insight-name > strong { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
-.topic-insight-name, .topic-insight-percent { display: flex; flex-direction: column; }
-.topic-insight-name strong { font-size: 12px; font-weight: 600; }
-.topic-insight-name small, .topic-insight-percent small { font-size: 9px; color: var(--muted); }
-.topic-insight-percent { text-align: right; }
-.topic-insight-percent strong { font-size: 16px; font-weight: 630; }
-.topic-insight .meter { grid-column: 1 / -1; margin: 10px 0 6px; height: 5px; }
-.topic-insight-counts { grid-column: 1 / -1; font-size: 9px; color: var(--muted); line-height: 1.7; }
-.topic-more { border: none; background: none; padding: 14px 0 0; }
 .insight-empty { background: var(--paper); border-radius: 8px; padding: 25px 18px; margin-top: 20px; font-size: 12px; }
 .insight-empty p + p { margin-top: 8px; font-size: 11px; }
 
@@ -203,7 +189,6 @@
   .chart-date-labels { font-size: 9px; }
 }
 @media print {
-  .topic-more { display: none; }
   .chart-scroll { overflow: visible; }
   .chart-surface { min-width: 0; }
   .balance-card, .insight-card { break-inside: avoid; }

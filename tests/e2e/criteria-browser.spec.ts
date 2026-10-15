@@ -11,6 +11,15 @@ async function waitForBrowser(page: Page) {
   await expect(page.getByRole('combobox', { name: 'Kriterien pro Seite' })).toBeVisible();
 }
 
+async function expectTopicImplementation(page: Page, topic: string, party: string) {
+  const selector = `.criterion-row[data-party="${party}"][data-topic~="${topic}"]`;
+  const total = await page.locator(selector).count();
+  const implemented = await page.locator(`${selector}:is([data-status="fulfilled"], [data-status="partial"])`).count();
+  const value = total ? implemented / total * 100 : null;
+  const expected = value === null ? '—' : value > 0 && value < 0.1 ? '<0,1 %' : `${new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 }).format(value)} %`;
+  await expect(page.locator(`[data-topic-link="${topic}"] [data-topic-percent]`)).toHaveText(expected);
+}
+
 test('numbered pages replace rows, reach the final result, and survive refresh and history', async ({ page }, testInfo) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
@@ -53,8 +62,10 @@ test('numbered pages replace rows, reach the final result, and survive refresh a
 test('topic drill-down uses the full topic and preserves honest progress through list filters', async ({ page }, testInfo) => {
   await page.goto(`${partyRoute}?seite=3`);
   await waitForBrowser(page);
+  await page.locator('[data-topic-more]').click();
   const card = page.locator('[data-topic-link="gesundheit"]');
-  const statsBefore = await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered]').allTextContents();
+  await expectTopicImplementation(page, 'gesundheit', 'linke');
+  const statsBefore = await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered], [data-topic-percent]').allTextContents();
   const expected = await page.locator('.criterion-row[data-topic~="gesundheit"]').count();
   await expect(card.locator('[data-topic-total]')).toHaveText(expected.toLocaleString('de-DE'));
   await card.focus();
@@ -66,12 +77,12 @@ test('topic drill-down uses the full topic and preserves honest progress through
   expect(new URL(page.url()).searchParams.get('thema')).toBe('gesundheit');
   expect(await visibleRows(page).evaluateAll(rows => rows.every(row => row.getAttribute('data-topic')?.split(' ').includes('gesundheit')))).toBe(true);
   await page.getByRole('combobox', { name: 'Status', exact: true }).selectOption('fulfilled');
-  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered]').allTextContents()).toEqual(statsBefore);
+  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered], [data-topic-percent]').allTextContents()).toEqual(statsBefore);
   await page.getByRole('searchbox').fill('unfindbarerbegriffxyz');
   await expect(page.getByRole('heading', { name: 'Keine passenden Kriterien' })).toBeVisible();
   await expect(topPages(page)).toBeHidden();
   await expect(page.locator('[data-filter-list]')).toBeHidden();
-  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered]').allTextContents()).toEqual(statsBefore);
+  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered], [data-topic-percent]').allTextContents()).toEqual(statsBefore);
   await page.getByRole('button', { name: 'Filter zurücksetzen' }).click();
   await expect(visibleRows(page)).toHaveCount(20);
   await expect(page.getByRole('searchbox')).toHaveValue('');
@@ -111,6 +122,7 @@ test('cross-party topic counts follow party selection, not the current page or s
   await waitForBrowser(page);
   await expect(page.locator('[data-topic-scope]')).toHaveText('SPD');
   const card = page.locator('[data-topic-link="arbeit"]');
+  await expectTopicImplementation(page, 'arbeit', 'spd');
   const expected = await page.locator('.criterion-row[data-party="spd"][data-topic~="arbeit"]').count();
   await expect(card.locator('[data-topic-total]')).toHaveText(expected.toLocaleString('de-DE'));
   await expect(visibleRows(page)).toHaveCount(50);
@@ -118,6 +130,7 @@ test('cross-party topic counts follow party selection, not the current page or s
   await page.getByRole('combobox', { name: 'Partei', exact: true }).selectOption('linke');
   await expect(page.locator('[data-topic-scope]')).toHaveText('Die Linke');
   expect(new URL(page.url()).searchParams.has('seite')).toBe(false);
+  await expectTopicImplementation(page, 'arbeit', 'linke');
   const linkeCount = await page.locator('.criterion-row[data-party="linke"][data-topic~="arbeit"]').count();
   await expect(card.locator('[data-topic-total]')).toHaveText(linkeCount.toLocaleString('de-DE'));
   const before = await card.textContent();
