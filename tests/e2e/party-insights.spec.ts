@@ -159,7 +159,7 @@ test('chart replaces the separate law ranking and markers open the biggest jumps
   await expect(panel.getByRole('heading', { name: 'Welche Gesetze bewegen am meisten?' })).toHaveCount(0);
   const timeline = panel.locator('.timeline-card');
   await expect(timeline.getByRole('heading', { name: 'Belege über Zeit' })).toBeVisible();
-  await expect(timeline.locator('path[data-score]')).toHaveCount(5);
+  await expect(timeline.locator('path[data-score]')).toHaveCount(4);
   const expectedJumps = [...period.law_effects]
     .sort((a, b) => b.evidence.length - a.evidence.length || a.published_at.localeCompare(b.published_at) || a.id.localeCompare(b.id))
     .slice(0, 3).map(law => ({ date: law.published_at, new_evidence: law.evidence.length,
@@ -215,7 +215,11 @@ test('timeline exposes exact publication events and a single zero baseline witho
   const timeline = panel.locator('.timeline-card');
   await expect(timeline.getByRole('img')).toHaveAccessibleName(`Gestapelte Gesetzesbelege nach Wirkung für Programm ${period.election_year}`);
   await expect(timeline.getByRole('img')).toHaveAccessibleDescription(/Keine historische Umsetzungsquote/);
+  await expect(timeline.getByRole('img')).toHaveAccessibleDescription(/Gemischte Belege \(0\) zählen zur Gesamtzahl/);
   await expect(timeline.locator('figcaption')).toContainText('keine historische Umsetzungsquote');
+  await expect(timeline.locator('figcaption')).toContainText('Gemischte Belege (0) zählen zur Gesamtzahl, werden aber nicht als Unterstützung oder Gegenwirkung dargestellt.');
+  await expect(timeline.locator('path[data-score="0"], .chart-mixed-label')).toHaveCount(0);
+  await expect(timeline.locator('.chart-baseline')).toHaveCount(1);
   await expect(timeline.locator('[data-zero-label]')).toHaveCount(1);
   await expect(timeline.locator('[data-zero-label]')).toHaveText('0');
   await expect(timeline.locator('.chart-zero-baseline')).toHaveCount(1);
@@ -233,6 +237,8 @@ test('timeline exposes exact publication events and a single zero baseline witho
   const last = period.timeline.at(-1)!;
   expect(last.covered).toBe(period.criteria.covered);
   expect(last.opposing).toBeLessThanOrEqual(last.covered);
+  expect(Object.values(last.evidence_by_score).reduce((sum, count) => sum + count, 0)).toBe(period.laws.evidence);
+  await expect(timeline.locator('.timeline-headline > strong')).toHaveText(`${number(period.laws.evidence)} Belege`);
   await timeline.locator('.timeline-values > summary').click();
   await expect(timeline.locator('tbody tr')).toHaveCount(period.timeline.length);
   const cells = timeline.locator('tbody tr').last().locator('td');

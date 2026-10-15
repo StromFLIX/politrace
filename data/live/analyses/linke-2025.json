@@ -126,6 +126,7 @@
     "bgbl-1-2026-286",
     "bgbl-1-2026-289",
     "bgbl-1-2026-29",
+    "bgbl-1-2026-293",
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
     "bgbl-1-2026-33",
@@ -115819,7 +115820,7 @@
     },
     {
       "law_id": "bgbl-1-2026-139",
-      "analysis_sha256": "055f0a17d74d49d9c4177f8ea9054d8145e0ef50fbc5c589cc764eb30cd569dc",
+      "analysis_sha256": "128ee03e7784f09a358adc5557dc3e6e51c7811bca7871ef149422c6bb02f05a",
       "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
@@ -115842,6 +115843,7 @@
         "linke-2025-ac-6e1ec60163e72ca4",
         "linke-2025-ac-6f0b6217917f27ac",
         "linke-2025-ac-77e897320085f2a5",
+        "linke-2025-ac-8139b67eeb680841",
         "linke-2025-ac-88a91f652850cc79",
         "linke-2025-ac-9621af994e84f8bd",
         "linke-2025-ac-97a77ae466b8d6fb",
@@ -115862,7 +115864,7 @@
         "linke-2025-ac-fcd4d095ca15f160",
         "linke-2025-ac-fd1a76fbafd1cf90"
       ],
-      "omitted_count": 1346,
+      "omitted_count": 1345,
       "pairs": [
         {
           "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
@@ -116378,6 +116380,35 @@
             "caveats": [],
             "criterion_id": "linke-2025-ac-77e897320085f2a5",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-8139b67eeb680841",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug regelt Förderungen für Haushalte beim Kauf oder Leasing elektrischer Neufahrzeuge, nicht die Rückforderung betrieblicher Fördergelder wegen Kündigungen; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob weitere einschlägige Vorschriften bestehen.",
+          "input_sha256": "747d900cbd2665c027953aa920725435058654e26c3696b8af025dc087e86358",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "747d900cbd2665c027953aa920725435058654e26c3696b8af025dc087e86358"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Auszug regelt Förderungen für Haushalte beim Kauf oder Leasing elektrischer Neufahrzeuge, nicht die Rückforderung betrieblicher Fördergelder wegen Kündigungen; wegen des unvollständigen Gesetzeskontexts bleibt offen, ob weitere einschlägige Vorschriften bestehen.",
+            "law_passage_id": "bgbl-1-2026-139-p-2870172cf02b54e5",
+            "law_quote": "Förderungen im Rahmen des Programms zur Förderung klimaneutraler Mobilität für Haushalte mit kleinem und mittlerem Einkommen betreffend den Kauf und das Leasing eines erstmals im Inland zugelassenen, elektrisch betriebenen Neufahrzeugs können […] auch mit Wirkung ab dem 1. Januar 2026 gewährt werden",
+            "criterion_quote": "Wenn Betriebe betriebsbedingte Kündigungen aussprechen und sich nicht an Beschäftigungsvereinbarungen halten",
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "linke-2025-ac-8139b67eeb680841",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -168596,6 +168627,355 @@
       ]
     },
     {
+      "law_id": "bgbl-1-2026-293",
+      "analysis_sha256": "d63f0eb61e7962ab0ab4c2e309da85e58721fca70f4a845159fa886056bb2229",
+      "status": "completed",
+      "eligible_count": 1384,
+      "candidate_ids": [
+        "linke-2025-ac-077a825d988dc2e0",
+        "linke-2025-ac-0b64fabc28b0c903",
+        "linke-2025-ac-13efb641a8e315c2",
+        "linke-2025-ac-2d2ad7082c02e890",
+        "linke-2025-ac-44145c3b404c519f",
+        "linke-2025-ac-4d8384d24dfae2d5",
+        "linke-2025-ac-5c1ce3ff9270b86d",
+        "linke-2025-ac-a6f56a3cf15e9dc9",
+        "linke-2025-ac-b046811b6dcd783e",
+        "linke-2025-ac-ba80dabfaaa06e52",
+        "linke-2025-ac-c7f4e7ef9f5cc410",
+        "linke-2025-ac-ca016fdfdcdf2072"
+      ],
+      "omitted_count": 1372,
+      "pairs": [
+        {
+          "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt den Zugang zu Schuldnerberatung, nicht die Wahl des EZB-Führungspersonals oder ihrer Gremien.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt den Zugang zu Schuldnerberatung, nicht die Wahl des EZB-Führungspersonals oder ihrer Gremien.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Führungspersonal und\n-gremien der EZB – wie EZB-Rat, EZB-Direktorium und\nEZB-Präsident*in – sollen vom Europäischen Parlament\ngewählt werden.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-077a825d988dc2e0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-0b64fabc28b0c903",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Schuldnerberatung und enthält keine Bestimmung zur Rückgabe der Gemeinnützigkeit an Organisationen.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Schuldnerberatung und enthält keine Bestimmung zur Rückgabe der Gemeinnützigkeit an Organisationen.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Organisationen, denen die Gemeinnützigkeit für ihre\nselbstlose politische Arbeit entzogen wurde, müssen sie\nzurückerhalten (z. B. Attac oder Campact).",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-0b64fabc28b0c903",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-13efb641a8e315c2",
+          "disposition": "no_supported_link",
+          "rationale": "Der Zugang zu Schuldnerberatungsstellen betrifft keine Kitaplätze oder deren Einkommensunabhängigkeit.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Zugang zu Schuldnerberatungsstellen betrifft keine Kitaplätze oder deren Einkommensunabhängigkeit.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "- Gebührenfreie Kitas: Alle Kinder müssen Zugang zu\n\neinem Platz haben, unabhängig vom Einkommen in den\nFamilien.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-13efb641a8e315c2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Schuldnerberatungsdienste, nicht die Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Schuldnerberatungsdienste, nicht die Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Um die Europäische\nRichtlinie klar zu erfüllen, fordern wir spätestens bis\n2026 einen Mindestlohn von 16 Euro,",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-2d2ad7082c02e890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-44145c3b404c519f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Prüfung von Gesetzesfolgen für Geschlechtergerechtigkeit.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zur Prüfung von Gesetzesfolgen für Geschlechtergerechtigkeit.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Wir wollen alle neuen Gesetze auf ihre Auswirkung auf\n\ndie Geschlechtergerechtigkeit hin untersuchen.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-44145c3b404c519f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-4d8384d24dfae2d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Schuldnerberatung und deren Entgelte; eine Begrenzung des Zuckergehalts regelt es nicht.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz betrifft Schuldnerberatung und deren Entgelte; eine Begrenzung des Zuckergehalts regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Der Zuckergehalt insbesondere in\nSoftdrinks muss geregelt und begrenzt werden, ohne\ndie Verbraucher*innen zu belasten.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-4d8384d24dfae2d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-5c1ce3ff9270b86d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Zuständigkeits- oder Aufsichtsregel zur Kontrolle der EZB durch das Europäische Parlament.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Zuständigkeits- oder Aufsichtsregel zur Kontrolle der EZB durch das Europäische Parlament.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "- Wir fordern, dass die EZB vom Europäischen Parlament\n\nkontrolliert wird",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-5c1ce3ff9270b86d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz weist keine grundlegenden politischen Entscheidungen dem Europaparlament zu.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz weist keine grundlegenden politischen Entscheidungen dem Europaparlament zu.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Grundlegende Entscheidungen\nmüssen vom Europaparlament getroffen werden – statt\n\n\n24\n\n\n\nvon exekutiven Gremien wie Kommission, Eurogruppe\noder Rat.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-a6f56a3cf15e9dc9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zum Initiativrecht des Europäischen Parlaments.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Regelung zum Initiativrecht des Europäischen Parlaments.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Wir wollen, dass das Europäische Parlament endlich das\n\nvolle Initiativrecht bekommt und eigene Gesetzesvorschläge einbringen kann.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-b046811b6dcd783e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ba80dabfaaa06e52",
+          "disposition": "missing_context",
+          "rationale": "§ 1 gewährt bestimmten Verbrauchern Zugang zu Schuldnerberatung, sagt aber nicht, ob die Inanspruchnahme freiwillig ist oder andere Vorschriften Beratung verpflichtend machen.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.82,
+            "rationale": "§ 1 gewährt bestimmten Verbrauchern Zugang zu Schuldnerberatung, sagt aber nicht, ob die Inanspruchnahme freiwillig ist oder andere Vorschriften Beratung verpflichtend machen.",
+            "law_passage_id": "bgbl-1-2026-293-p-a61ae8b674e8cd0f",
+            "law_quote": "Verbraucher, die Schwierigkeiten bei der Erfüllung ihrer finanziellen Verpflichtungen haben oder bei denen\nsolche Schwierigkeiten zu erwarten sind, haben Zugang zu Schuldnerberatungsstellen unter Berücksichtigung der\nbestehenden Beratungsstellen, die in § 3 des Überschuldungsstatistikgesetzes vom 22. Dezember 2011 (BGBl. I\nS. 3083), das durch Artikel 3 Absatz 3 des Gesetzes vom 22. November 2020 (BGBl. I S. 2466) geändert worden ist,\nin der jeweils geltenden Fassung, genannt sind.",
+            "criterion_quote": "Beratungsangebote\nmüssen freiwillig statt verpflichtend sein.",
+            "caveats": [
+              "Der vorgelegte Gesetzeskontext ist ausdrücklich teilweise."
+            ],
+            "criterion_id": "linke-2025-ac-ba80dabfaaa06e52",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-c7f4e7ef9f5cc410",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Schuldnerberatung und enthält keine Bestimmung zur täglichen Arbeitszeit oder zum Acht-Stunden-Tag.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Schuldnerberatung und enthält keine Bestimmung zur täglichen Arbeitszeit oder zum Acht-Stunden-Tag.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Wir verteidigen den 8-Stunden-Tag als Obergrenze",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-c7f4e7ef9f5cc410",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-ca016fdfdcdf2072",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Schuldnerberatungsdienste; es enthält keine Angaben zu finanziellen Spenden an Die Linke.",
+          "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e5763eb983619b08ca85ffe882fb9c15c80cc1a295ae9923434154ff86e8108f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Schuldnerberatungsdienste; es enthält keine Angaben zu finanziellen Spenden an Die Linke.",
+            "law_passage_id": "bgbl-1-2026-293-p-4b3a159b6b940782",
+            "law_quote": "Gesetz über den Zugang zu Schuldnerberatungsdiensten für Verbraucher",
+            "criterion_quote": "Die Linke ist die einzige Partei\nim Bundestag, die keine finanziellen Spenden von\nKonzernen annimmt. Dabei bleibt es.",
+            "caveats": [],
+            "criterion_id": "linke-2025-ac-ca016fdfdcdf2072",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
       "law_id": "bgbl-1-2026-3",
       "analysis_sha256": "926ea083163ac114ce5ee00cdbc2194a963e5dc227177a07047cf334b1f60730",
       "status": "completed",
@@ -200085,7 +200465,7 @@
     },
     {
       "law_id": "bgbl-2-2025-294",
-      "analysis_sha256": "4954296e3a9be57736e6d1d7a911b034209608299037d858dfca4bf7a416d678",
+      "analysis_sha256": "d4785f35884f52ad95e6fb6300d0a449913ca21db703f1450d6f986983627cbe",
       "status": "completed",
       "eligible_count": 1384,
       "candidate_ids": [
@@ -200101,6 +200481,7 @@
         "linke-2025-ac-1a90eec7693fa131",
         "linke-2025-ac-1cac335a21a80587",
         "linke-2025-ac-2953089a6287d5a7",
+        "linke-2025-ac-2a3766d65430f4c3",
         "linke-2025-ac-2a5b59a9a3aa7688",
         "linke-2025-ac-2a7fac2946a15ff5",
         "linke-2025-ac-30d70a8631e76796",
@@ -200160,7 +200541,7 @@
         "linke-2025-ac-fab3012ed972e9dd",
         "linke-2025-ac-fcd4d095ca15f160"
       ],
-      "omitted_count": 1314,
+      "omitted_count": 1313,
       "pairs": [
         {
           "criterion_id": "linke-2025-ac-07c4e05631aed4fb",
@@ -200482,6 +200863,35 @@
             "criterion_quote": "Deutschland muss diplomatische Beziehungen mit der AANES aufnehmen",
             "caveats": [],
             "criterion_id": "linke-2025-ac-2953089a6287d5a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "linke-2025-ac-2a3766d65430f4c3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stimmt einem Ghana-EU-Wirtschaftspartnerschaftsabkommen zu; die vorliegenden Regelungen verankern keine Beschwerdemechanismen im Lieferkettengesetz.",
+          "input_sha256": "5579256d4c1fdea59be75f9ae60802071af1852147225862a6f8592404debb79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5579256d4c1fdea59be75f9ae60802071af1852147225862a6f8592404debb79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz stimmt einem Ghana-EU-Wirtschaftspartnerschaftsabkommen zu; die vorliegenden Regelungen verankern keine Beschwerdemechanismen im Lieferkettengesetz.",
+            "law_passage_id": "bgbl-2-2025-294-p-3506c1235d1f0a2a",
+            "law_quote": "Dem in Brüssel am 28. Juli 2016 von der Bundesrepublik Deutschland unterzeichneten Interims-Wirtschaftspartner schaftsabkommen zwischen Ghana einerseits und der Europäischen Union* und ihren Mitgliedstaaten andererseits wird zugestimmt. Das Abkommen wird nachstehend veröffentlicht.",
+            "criterion_quote": "fordern wir ein stärkeres Lieferkettengesetz, das\nBeschwerdemechanismen für Betroffene",
+            "caveats": [
+              "Der bereitgestellte Gesetzes- und Abkommenstext ist teilweise unvollständig."
+            ],
+            "criterion_id": "linke-2025-ac-2a3766d65430f4c3",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -250344,45 +250754,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8236,
+    "calls": 8264,
     "cache_hits": 326,
     "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.589792,
-    "reported_cost_calls": 7554,
+    "reported_cost_usd": 31.615708,
+    "reported_cost_calls": 7581,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
-    "unknown_cost_reserved_usd": 3.970558,
-    "unknown_cost_calls": 682,
+    "unknown_cost_reserved_usd": 3.975844,
+    "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.56035,
-    "prompt_tokens": 82241027,
-    "completion_tokens": 14428155,
+    "budget_exposure_usd": 35.591552,
+    "prompt_tokens": 82421725,
+    "completion_tokens": 14463609,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 302,
-        "reported_cost_usd": 7.647513599999998,
+        "calls": 303,
+        "reported_cost_usd": 7.651491599999998,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 142,
-        "reported_cost_usd": 1.7823105000000008,
+        "calls": 143,
+        "reported_cost_usd": 1.785653500000001,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4315,
-        "reported_cost_usd": 5.048999247499996,
-        "unknown_cost_reserved_usd": 2.8815740500000033,
-        "pending_reserved_usd": 0
+        "calls": 4341,
+        "reported_cost_usd": 5.0675946899999955,
+        "unknown_cost_reserved_usd": 2.886860200000003,
+        "pending_reserved_usd": 1.734723475976807e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
