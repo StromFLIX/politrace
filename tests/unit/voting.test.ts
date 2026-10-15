@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { getData } from '../../src/lib/data';
 import { voteTotals } from '../../src/lib/metrics';
-import { comparableVotes, comparisonOutcome, groupPosition, publicVote, votingComparisons, votingCoverage, votingPatterns } from '../../src/lib/voting';
+import { comparableVotes, comparisonHighlights, comparisonOutcome, groupPosition, publicVote, votingComparisons, votingCoverage, votingPatterns } from '../../src/lib/voting';
 import type { Data, GroupVote, Vote } from '../../src/lib/types';
 
 const group = (position: GroupVote['position'] = 'yes'): GroupVote => ({
@@ -52,6 +52,26 @@ describe('positions are evidence, not coalition/majority guesses', () => {
     ['yes', 0, 'contextual'], ['mixed', -1, 'mixed'],
   ] as const)('compares %s with signed law effect %s without judging motives', (position, score, outcome) => {
     expect(comparisonOutcome(group(position), score)).toBe(outcome);
+  });
+});
+
+describe('comparison highlights', () => {
+  it('prioritizes tensions, then recency, without repeating laws or mutating the full list', () => {
+    const [base] = votingComparisons(fixture());
+    const row = (id: string, law: string, date: string, outcome: typeof base.outcome) =>
+      ({ ...base, id, law: { ...base.law, id: law }, vote: { ...base.vote, date }, outcome });
+    const rows = [
+      row('compatible', 'law-a', '2025-06-01', 'consistent'),
+      row('older-tension', 'law-b', '2025-03-01', 'tension'),
+      row('newer-tension', 'law-c', '2025-05-01', 'tension'),
+      row('same-law', 'law-c', '2025-05-01', 'tension'),
+      row('neutral', 'law-d', '2025-02-01', 'neutral'),
+    ];
+    expect(comparisonHighlights(rows, 3).map(c => c.id)).toEqual(['newer-tension', 'older-tension', 'compatible']);
+    expect(rows[0].id).toBe('compatible');
+    expect(comparisonHighlights(rows, 8)).toHaveLength(4);
+    expect(comparisonHighlights(rows, 0)).toEqual([]);
+    expect(comparisonHighlights([], 3)).toEqual([]);
   });
 });
 

@@ -81,6 +81,20 @@ export type VotingComparison = {
   // Exact named counts, not a majority claim; null for non-named decisions.
   consistent_ballots: number | null; tension_ballots: number | null;
 };
+// A labelled preview, not a representative sample or a count of broken promises.
+// Prefer potential tensions, then recent votes; show each law only once.
+export function comparisonHighlights(comparisons: VotingComparison[], limit: number): VotingComparison[] {
+  const ranked = [...comparisons].sort((a, b) =>
+    Number(b.outcome === 'tension') - Number(a.outcome === 'tension') ||
+    b.vote.date.localeCompare(a.vote.date) || a.id.localeCompare(b.id));
+  const laws = new Set<string>();
+  return ranked.filter(c => {
+    if (laws.has(c.law.id)) return false;
+    laws.add(c.law.id);
+    return true;
+  }).slice(0, limit);
+}
+
 const comparisonCache = new WeakMap<Data, VotingComparison[]>();
 export function votingComparisons(data: Data): VotingComparison[] {
   const cached = comparisonCache.get(data);

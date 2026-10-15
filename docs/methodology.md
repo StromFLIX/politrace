@@ -61,6 +61,8 @@ Votes have independent official evidence: DIP publication links and decisions, p
 
 Only a unique confirmed final whole-law vote can be compared with an accepted Sol-final or editorial law effect. The programme must have existed and been eligible at the vote date as well as promulgation. Yes on a negative effect or no on a positive effect is a **potential tension**, not proof of a broken promise; compatible direction is not fulfilment. Mixed law effects, abstentions, absences and invalid ballots do not establish opposition. Split factions retain their actual ballots, not a majority label.
 
+Party pages preview up to three comparisons from different laws, prioritizing potential tensions and then the most recent vote (stable ID breaks ties). This is an explicitly labelled selection, not a representative sample, a ranking of political importance or a count of independent broken promises. Quotes, rationale and evidence remain expandable; the full overview retains all comparisons and filters, including the selected party and programme year.
+
 Patterns count distinct evidenced laws; programme comparisons count law × criterion × faction. Several criteria can concern one law and are not independent cases. No party ranking or promises-broken percentage is computed. Source coverage is the imported law corpus, not all Bundestag business. See [the voting evidence specification](voting.md) for exact matching, exclusions, provenance, API and correction behaviour.
 
 ## Migration and recovery

@@ -69,6 +69,38 @@ test('non-named decisions expose protocol positions without inventing counts or 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
+test('party comparison preview is compact, expandable and links to the full scoped list', async ({ page, request, isMobile }) => {
+  const { items } = await (await request.get('/api/v1/live/voting-comparisons.json')).json();
+  const partyId = items[0].party_id;
+  await page.goto(`/live/parteien/${partyId}/`);
+  const section = page.locator('[data-period-panel]:visible [data-voting-comparisons]');
+  const year = await page.locator('[data-period-panel]:visible').getAttribute('data-period-panel');
+  const { items: programs } = await (await request.get('/api/v1/live/programs.json')).json();
+  const programIds = programs.filter((p: { party_id: string; election_year: number }) => p.party_id === partyId && String(p.election_year) === year).map((p: { id: string }) => p.id);
+  const eligible = items.filter((c: { party_id: string; program_id: string }) => c.party_id === partyId && programIds.includes(c.program_id));
+  const cards = section.locator('[data-comparison-row]');
+  await expect(cards).toHaveCount(Math.min(3, new Set(eligible.map((c: { law_id: string }) => c.law_id)).size));
+  await expect(section.locator('details[open]')).toHaveCount(0);
+  const first = cards.first();
+  await expect(first.locator('.comparison-snapshot')).toContainText('Stimmverhalten');
+  await expect(first.locator('blockquote').first()).not.toBeVisible();
+  if (eligible.some((c: { outcome: string }) => c.outcome === 'tension')) await expect(first).toHaveAttribute('data-outcome', 'tension');
+  expect((await first.boundingBox())!.height).toBeLessThan(isMobile ? 380 : 300);
+  const summary = first.locator('summary');
+  await summary.focus();
+  await page.keyboard.press('Enter');
+  await expect(first.locator('blockquote').first()).toBeVisible();
+  await expect(first.getByRole('link', { name: /Originalprogramm/ })).toBeVisible();
+  await expect(first.getByRole('link', { name: 'Amtlich verkündeter Gesetzestext' })).toBeVisible();
+  await summary.click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await section.getByRole('link', { name: /Alle .* Vergleiche ansehen/ }).click();
+  await expect(page.getByLabel('Partei', { exact: true })).toHaveValue(partyId);
+  await expect(page.getByLabel('Programmjahr', { exact: true })).toHaveValue(year!);
+  await expect(page.locator('[data-comparison-row]:visible')).toHaveCount(eligible.length);
+});
+
 test('programme comparisons remain filterable, traceable and non-accusatory', async ({ page, request }) => {
   const { items } = await (await request.get('/api/v1/live/voting-comparisons.json')).json();
   expect(items.length).toBeGreaterThan(0);
