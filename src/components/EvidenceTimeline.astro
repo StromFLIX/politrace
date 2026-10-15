@@ -20,7 +20,6 @@ const scores = last?.evidence_by_score;
 const maximum = Math.max(1, (scores?.[1] ?? 0) + (scores?.[2] ?? 0), (scores?.[-1] ?? 0) + (scores?.[-2] ?? 0));
 const magnitude = 10 ** Math.floor(Math.log10(maximum));
 const ceiling = Math.ceil(maximum / magnitude / 2) * magnitude * 2;
-const neutralCeiling = Math.max(1, scores?.[0] ?? 0);
 const timestamp = (date: string) => new Date(`${date}T00:00:00Z`).getTime();
 const start = first ? timestamp(first.date) : 0;
 const duration = last ? timestamp(last.date) - start || 1 : 1;
@@ -37,9 +36,9 @@ jumps.forEach((point, index) => {
   const occupied = jumps.slice(0, index).flatMap((other, i) => Math.abs(x(other.date) - x(point.date)) < 40 ? [markerRows[i]] : []);
   markerRows.push([0, 1, 2].find(row => !occupied.includes(row)) ?? 0);
 });
-const bounds = (point: Point, score: Impact['score']): [number, number] => {
+type DirectionalScore = Exclude<Impact['score'], 0>;
+const bounds = (point: Point, score: DirectionalScore): [number, number] => {
   const counts = point.evidence_by_score;
-  if (score === 0) return [388, 388 - counts[0] / neutralCeiling * 32];
   const y = score > 0 ? positiveY : negativeY;
   const inner = Math.abs(score) === 2 ? 0 : counts[score > 0 ? 2 : -2];
   return [y(inner), y(inner + counts[score])];
@@ -47,7 +46,7 @@ const bounds = (point: Point, score: Impact['score']): [number, number] => {
 // Two step boundaries in opposite directions form a real stacked area. Reverse
 // traversal keeps every exact-date jump at the same x-coordinate on both boundaries.
 // Flat spans retain the last known count; do not invent gradual evidence arrivals.
-const area = (score: Impact['score']) => {
+const area = (score: DirectionalScore) => {
   const upper = timeline.map(point => [x(point.date), bounds(point, score)[1]]);
   const lower = timeline.map(point => [x(point.date), bounds(point, score)[0]]);
   const forward = upper.map(([px, py], index) => `${index ? 'H' : 'M'}${px.toFixed(2)}${index ? 'V' : ' '}${py.toFixed(2)}`).join(' ');
@@ -69,7 +68,6 @@ const lawById = new Map(insights.law_effects.map(law => [law.id, law]));
         <div class="chart-surface">
           <div class="chart-direction chart-negative-label">Gegenwirkung ↓ · Anzahl Belege</div>
           <div class="chart-direction chart-positive-label">Unterstützung ↑ · Anzahl Belege</div>
-          <div class="chart-direction chart-mixed-label">Gemischt (0) · eigene Skala: 0–{number(neutralCeiling)}</div>
           <div class="chart-layout">
             <div class="chart-y-labels" aria-hidden="true">
               <span data-zero-label style={`top:${zeroY}px`}>0</span>
@@ -77,13 +75,13 @@ const lawById = new Map(insights.law_effects.map(law => [law.id, law]));
               {[ceiling, ceiling / 2].map(value => <span style={`top:${positiveY(value)}px`}>+{number(value)}</span>)}
             </div>
             <div class="chart-plot">
-              <svg viewBox="0 0 600 400" preserveAspectRatio="none" role="img" aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`}>
+              <svg viewBox="0 0 600 350" preserveAspectRatio="none" role="img" aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`}>
                 <title id={`${id}-title`}>Gestapelte Gesetzesbelege nach Wirkung für Programm {year}</title>
-                <desc id={`${id}-description`}>Heutige akzeptierte Belege, kumuliert an den exakten Veröffentlichungsdaten der Gesetze auf einer durchgehenden Zeitachse. +2 setzt direkt um, +1 unterstützt teilweise, −2 widerspricht direkt, −1 erschwert, 0 ist gemischt. Unterstützung wächst über der gemeinsamen Nulllinie, Gegenwirkung darunter; beide nutzen dieselbe Anzahlskala. Gemischte Belege nutzen eine eigene Skala. Keine historische Umsetzungsquote. Die drei markierten Einzelgesetze haben die meisten Belege. Datumswerte und Gesetze stehen unter dem Diagramm.</desc>
+                <desc id={`${id}-description`}>Heutige akzeptierte Belege, kumuliert an den exakten Veröffentlichungsdaten der Gesetze auf einer durchgehenden Zeitachse. +2 setzt direkt um, +1 unterstützt teilweise, −2 widerspricht direkt, −1 erschwert, 0 ist gemischt. Unterstützung wächst über der gemeinsamen Nulllinie, Gegenwirkung darunter; beide nutzen dieselbe Anzahlskala. Gemischte Belege (0) zählen zur Gesamtzahl und stehen in Legende und Datentabelle, werden aber nicht als Unterstützung oder Gegenwirkung dargestellt. Keine historische Umsetzungsquote. Die drei markierten Einzelgesetze haben die meisten Belege. Datumswerte und Gesetze stehen unter dem Diagramm.</desc>
                 {[0, ceiling / 2, ceiling].flatMap(value => [negativeY(value), positiveY(value)]).map(y => <line x1="8" x2="592" y1={y} y2={y} class="chart-grid-line" vector-effect="non-scaling-stroke" />)}
-                {bands.map(band => <path d={area(band.score)} class={`chart-score chart-score-${band.tone}`} data-score={band.score} />)}
-                {[zeroY, 388].map(y => <line x1="8" x2="592" y1={y} y2={y} class={`chart-baseline${y === zeroY ? ' chart-zero-baseline' : ''}`} vector-effect="non-scaling-stroke" />)}
-                {jumps.map(point => <line x1={x(point.date)} x2={x(point.date)} y1="28" y2="388" class="chart-jump-line" vector-effect="non-scaling-stroke" />)}
+                {bands.map(band => band.score !== 0 && <path d={area(band.score)} class={`chart-score chart-score-${band.tone}`} data-score={band.score} />)}
+                <line x1="8" x2="592" y1={zeroY} y2={zeroY} class="chart-baseline chart-zero-baseline" vector-effect="non-scaling-stroke" />
+                {jumps.map(point => <line x1={x(point.date)} x2={x(point.date)} y1="28" y2={negativeY(ceiling)} class="chart-jump-line" vector-effect="non-scaling-stroke" />)}
               </svg>
               {jumps.map((point, index) => <a class="chart-jump-marker" data-jump-marker href={`#${id}-jump-${index + 1}`} style={`left:${x(point.date) / 6}%;top:${markerRows[index] * 30}px`} aria-label={`Gesetz auf Rang ${index + 1}: ${lawById.get(point.law_ids[0])!.title}, ${formatDate(point.date)}, ${number(point.new_evidence)} neue Belege. Gesetz und Quellen ansehen.`} title={`${lawById.get(point.law_ids[0])!.title} · ${formatDate(point.date)} · ${number(point.new_evidence)} neue Belege`}>{index + 1}</a>)}
             </div>
@@ -92,7 +90,7 @@ const lawById = new Map(insights.law_effects.map(law => [law.id, law]));
         </div>
       </div>
       <div class="chart-legend">{bands.map(band => <span><i class={`chart-score-${band.tone}`} />{band.label}<strong>{number(scores?.[band.score] ?? 0)}</strong></span>)}</div>
-      <figcaption>Rekonstruktion aus den heute akzeptierten Belegen nach Gesetzesdatum, <strong>keine historische Umsetzungsquote</strong>. Jeder Beleg zählt einmal, ein Kriterium kann mehrere Belege haben. +2 bezeichnet die direkte Umsetzung durch ein einzelnes Gesetz, nicht automatisch die Gesamtbewertung des Kriteriums. Spätere Gegenwirkungen löschen frühere Belege nicht.</figcaption>
+      <figcaption>Rekonstruktion aus den heute akzeptierten Belegen nach Gesetzesdatum, <strong>keine historische Umsetzungsquote</strong>. Jeder Beleg zählt einmal, ein Kriterium kann mehrere Belege haben. Gemischte Belege (0) zählen zur Gesamtzahl, werden aber nicht als Unterstützung oder Gegenwirkung dargestellt. +2 bezeichnet die direkte Umsetzung durch ein einzelnes Gesetz, nicht automatisch die Gesamtbewertung des Kriteriums. Spätere Gegenwirkungen löschen frühere Belege nicht.</figcaption>
     </figure>
     <div class="timeline-jumps" data-period-anchor="gesetzeswirkung" id={active ? 'gesetzeswirkung' : undefined}>
       <h3>Die drei Gesetze mit dem größten Einfluss auf den Verlauf</h3>
