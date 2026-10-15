@@ -74,6 +74,14 @@ export function topicProgress(records: ProgressRecord[]): Map<string, TopicProgr
   return summaries;
 }
 
+export const topicPreviewSize = 5;
+
+// Use the same evidence-first ordering for SSR and party-scoped browser updates.
+export function rankedTopics(summaries: Map<string, TopicProgress>) {
+  return [...summaries].sort(([a, left], [b, right]) =>
+    right.covered - left.covered || right.total - left.total || a.localeCompare(b));
+}
+
 export function progressLabel(summary: TopicProgress): string {
   const counts = summary.counts;
   return `${counts.fulfilled} gesetzlich umgesetzt, ${counts.partial} teilweise umgesetzt, ${counts.contradicted} widersprochen, ${counts.mixed} gemischte Wirkung, ${counts.unassessed} offen`;

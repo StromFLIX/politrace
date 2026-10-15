@@ -1,5 +1,6 @@
-import { defaultPageSize, matchingRecords, pageLinks, paginate, parsePage, parsePageSize, progressLabel, topicProgress } from '../lib/criteria-browser';
+import { defaultPageSize, matchingRecords, pageLinks, paginate, parsePage, parsePageSize, progressLabel, rankedTopics, topicPreviewSize, topicProgress } from '../lib/criteria-browser';
 import { searchText } from '../lib/program-reader-search';
+import { formatPercentage, percentage } from '../lib/party-insights';
 import type { AssessmentStatus } from '../lib/types';
 
 const number = (value: number) => value.toLocaleString('de-DE');
@@ -21,6 +22,10 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]'))
   const navigations = [...root.querySelectorAll<HTMLElement>('[data-pagination]')];
   const topicCards = [...root.querySelectorAll<HTMLAnchorElement>('[data-topic-link]')];
   const overview = root.querySelector<HTMLDetailsElement>('[data-topic-overview]');
+  const topicGrid = root.querySelector<HTMLElement>('[data-topic-grid]');
+  const topicMore = root.querySelector<HTMLButtonElement>('[data-topic-more]');
+  let topicsExpanded = false;
+  let topicOrder = topicCards.map(card => card.dataset.topicLink).join(',');
   const resultsHeading = root.querySelector<HTMLElement>('[data-results-start]');
   let page = 1;
   let pageSize: number = defaultPageSize;
@@ -107,11 +112,19 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]'))
     // Only party (and the enclosing programme year) scopes the progress denominator.
     // A fulfilled-only filter must never turn a topic into "100% implemented".
     const summaries = topicProgress(records.filter(record => !selected.party || record.parties.includes(selected.party)));
-    let topicCount = 0;
+    const ranked = rankedTopics(summaries);
+    const topicCount = ranked.length;
+    const preview = new Set(ranked.slice(0, topicPreviewSize).map(([topic]) => topic));
+    const order = ranked.map(([topic]) => topic).join(',');
+    if (topicGrid && order !== topicOrder) {
+      const cards = new Map(topicCards.map(card => [card.dataset.topicLink, card]));
+      ranked.forEach(([topic]) => { const card = cards.get(topic); if (card) topicGrid.append(card); });
+      topicOrder = order;
+    }
     for (const card of topicCards) {
       const topic = card.dataset.topicLink!;
       const summary = summaries.get(topic);
-      card.hidden = !summary;
+      card.hidden = !summary || (!topicsExpanded && !preview.has(topic) && selected.topic !== topic);
       card.classList.toggle('is-selected', selected.topic === topic);
       if (selected.topic === topic) card.setAttribute('aria-current', 'true');
       else card.removeAttribute('aria-current');
@@ -120,7 +133,7 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]'))
       url.hash = resultsHeading?.id || '';
       card.href = url.href;
       if (!summary) continue;
-      topicCount++;
+      card.querySelector('[data-topic-percent]')!.textContent = formatPercentage(percentage(summary.counts.fulfilled, summary.total));
       card.querySelector('[data-topic-total]')!.textContent = number(summary.total);
       card.querySelector('[data-topic-covered]')!.textContent = number(summary.covered);
       card.querySelector('[data-topic-meter]')!.setAttribute('aria-label', progressLabel(summary));
@@ -130,6 +143,11 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]'))
       card.querySelectorAll<HTMLElement>('[data-topic-segment]').forEach(segment => {
         segment.style.flex = String(summary.counts[segment.dataset.topicSegment as AssessmentStatus]);
       });
+    }
+    if (topicMore) {
+      topicMore.hidden = topicCount <= topicPreviewSize;
+      topicMore.setAttribute('aria-expanded', String(topicsExpanded));
+      topicMore.textContent = topicsExpanded ? 'Weniger Themen anzeigen' : `Alle ${topicCount} Themen anzeigen`;
     }
     const scope = root.querySelector('[data-topic-scope]');
     const partyControl = controls.find(control => control.name === 'partei');
@@ -177,6 +195,10 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-filter-root]'))
     controls.forEach(control => control.value = '');
     changeFilters('pushState');
     form.querySelector<HTMLInputElement>('input[type="search"]')?.focus();
+  });
+  topicMore?.addEventListener('click', () => {
+    topicsExpanded = !topicsExpanded;
+    render();
   });
   root.addEventListener('click', event => {
     if (!(event.target instanceof Element)) return;

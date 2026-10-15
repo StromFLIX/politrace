@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { getData } from '../../src/lib/data';
 import { criterionOutcomes, metrics } from '../../src/lib/metrics';
-import { matchingRecords, pageLinks, paginate, parsePage, parsePageSize, progressLabel, topicProgress } from '../../src/lib/criteria-browser';
+import { matchingRecords, pageLinks, paginate, parsePage, parsePageSize, progressLabel, rankedTopics, topicProgress } from '../../src/lib/criteria-browser';
 import { searchText } from '../../src/lib/program-reader-search';
 
 describe('bounded, complete pagination', () => {
@@ -84,6 +84,18 @@ describe('honest topic progress', () => {
     expect(summaries.has('gesundheit')).toBe(false);
     expect(topicProgress([]).size).toBe(0);
     expect(progressLabel(summaries.get('arbeit')!)).toContain('1 gemischte Wirkung, 1 offen');
+  });
+
+  it('ranks by evidence coverage, then total criteria and stable topic ID', () => {
+    const summaries = topicProgress([
+      { topics: ['popular', 'z', 'a'], status: 'unassessed', covered: false },
+      { topics: ['popular', 'z', 'a'], status: 'fulfilled', covered: true },
+      { topics: ['popular'], status: 'unassessed', covered: false },
+      { topics: ['evidence'], status: 'partial', covered: true },
+      { topics: ['evidence'], status: 'mixed', covered: true },
+    ]);
+    expect(rankedTopics(summaries).map(([topic]) => topic)).toEqual(['evidence', 'popular', 'a', 'z']);
+    expect(rankedTopics(new Map())).toEqual([]);
   });
 
   it('agrees with existing metrics for each topic and never merges programme periods', () => {

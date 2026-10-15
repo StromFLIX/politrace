@@ -53,8 +53,9 @@ test('numbered pages replace rows, reach the final result, and survive refresh a
 test('topic drill-down uses the full topic and preserves honest progress through list filters', async ({ page }, testInfo) => {
   await page.goto(`${partyRoute}?seite=3`);
   await waitForBrowser(page);
+  await page.locator('[data-topic-more]').click();
   const card = page.locator('[data-topic-link="gesundheit"]');
-  const statsBefore = await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered]').allTextContents();
+  const statsBefore = await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered], [data-topic-percent]').allTextContents();
   const expected = await page.locator('.criterion-row[data-topic~="gesundheit"]').count();
   await expect(card.locator('[data-topic-total]')).toHaveText(expected.toLocaleString('de-DE'));
   await card.focus();
@@ -66,12 +67,12 @@ test('topic drill-down uses the full topic and preserves honest progress through
   expect(new URL(page.url()).searchParams.get('thema')).toBe('gesundheit');
   expect(await visibleRows(page).evaluateAll(rows => rows.every(row => row.getAttribute('data-topic')?.split(' ').includes('gesundheit')))).toBe(true);
   await page.getByRole('combobox', { name: 'Status', exact: true }).selectOption('fulfilled');
-  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered]').allTextContents()).toEqual(statsBefore);
+  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered], [data-topic-percent]').allTextContents()).toEqual(statsBefore);
   await page.getByRole('searchbox').fill('unfindbarerbegriffxyz');
   await expect(page.getByRole('heading', { name: 'Keine passenden Kriterien' })).toBeVisible();
   await expect(topPages(page)).toBeHidden();
   await expect(page.locator('[data-filter-list]')).toBeHidden();
-  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered]').allTextContents()).toEqual(statsBefore);
+  expect(await card.locator('[data-topic-status], [data-topic-total], [data-topic-covered], [data-topic-percent]').allTextContents()).toEqual(statsBefore);
   await page.getByRole('button', { name: 'Filter zurücksetzen' }).click();
   await expect(visibleRows(page)).toHaveCount(20);
   await expect(page.getByRole('searchbox')).toHaveValue('');

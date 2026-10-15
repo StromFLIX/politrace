@@ -115,26 +115,42 @@ test('dashboard drill-down resets pagination and preserves browser history', asy
   await expect(panel.locator('[data-result-count]')).toHaveText(resultCount(period.criteria.unknown, period.criteria.total));
 });
 
-test('topic breakdown expands and links to the selected programme topic', async ({ page, request }) => {
+test('one merged topic overview combines balance, evidence and criterion drill-down', async ({ page, request }) => {
   const { period, panel } = await openParty(page, request);
-  await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(Math.min(5, period.topics.length));
+  await expect(panel.locator('[data-topic-overview]')).toHaveCount(1);
+  await expect(panel.locator('[data-topic-insight], .topic-breakdown')).toHaveCount(0);
+  await expect(panel.getByText('Wo steht welches Thema?', { exact: true })).toHaveCount(1);
+  await expect(panel.locator('[data-topic-link]:visible')).toHaveCount(Math.min(5, period.topics.length));
+  expect(await panel.locator('[data-topic-link]').evaluateAll(cards => cards.map(card => card.getAttribute('data-topic-link'))))
+    .toEqual(period.topics.map(topic => topic.topic));
+  for (const topic of period.topics) {
+    const card = panel.locator(`[data-topic-link="${topic.topic}"]`);
+    await expect(card.locator('[data-topic-percent]')).toHaveText(percent(topic.fulfilment_percent));
+    await expect(card.locator('[data-topic-total]')).toHaveText(number(topic.total));
+    await expect(card.locator('[data-topic-covered]')).toHaveText(number(topic.covered));
+    for (const [status, key] of Object.entries(statuses)) {
+      await expect(card.locator(`[data-topic-status="${status}"]`)).toHaveText(number(topic[key]));
+    }
+  }
   const more = panel.locator('[data-topic-more]');
   if (period.topics.length > 5) {
-    await more.click();
+    await more.focus();
+    await page.keyboard.press('Enter');
     await expect(more).toHaveAttribute('aria-expanded', 'true');
-    await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(period.topics.length);
+    await expect(panel.locator('[data-topic-link]:visible')).toHaveCount(period.topics.length);
     await more.click();
     await expect(more).toHaveAttribute('aria-expanded', 'false');
-    await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(5);
+    await expect(panel.locator('[data-topic-link]:visible')).toHaveCount(5);
   }
   const topic = period.topics[0];
-  await panel.locator(`[data-topic-insight="${topic.topic}"]`).click();
+  await panel.locator(`[data-topic-link="${topic.topic}"]`).click();
   await expect(panel.getByRole('combobox', { name: 'Thema', exact: true })).toHaveValue(topic.topic);
   await expect(panel.locator('[data-result-count]')).toHaveText(resultCount(topic.total, period.criteria.total));
   await expect(panel.locator('.criterion-row:visible')).toHaveCount(Math.min(defaultPageSize, topic.total));
+  await expect(panel.locator('[data-results-start]')).toBeFocused();
   await page.reload();
   await expect(panel.getByRole('combobox', { name: 'Thema', exact: true })).toHaveValue(topic.topic);
-  expect(new URL(page.url()).hash).toBe('#kriterien');
+  expect(new URL(page.url()).hash).toBe(`#kriterien-${period.election_year}-ergebnisse`);
 });
 
 test('chart replaces the separate law ranking and markers open the biggest jumps', async ({ page, request }) => {
@@ -255,7 +271,7 @@ test.describe('without JavaScript', () => {
     const jump = panel.locator('[data-timeline-jump]').first();
     await jump.locator(':scope > summary').click();
     await expect(jump.locator('[data-jump-law]:visible')).toHaveCount(1);
-    await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(period.topics.length);
+    await expect(panel.locator('[data-topic-link]:visible')).toHaveCount(period.topics.length);
     await expect(panel.locator('.criterion-row:visible')).toHaveCount(period.criteria.total);
     await expect(panel.locator('[data-topic-more]')).toBeHidden();
     await expect(panel.locator('noscript .notice')).toBeVisible();
