@@ -117,7 +117,8 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
   const topics = [...new Set(criteria.flatMap(c => c.tags))].map(topic => {
     const subset = criteria.filter(c => c.tags.includes(topic));
     const topicStats = metrics(subset, impacts, [...active.values()]);
-    return { topic, ...topicStats, fulfilment_percent: percentage(topicStats.fulfilled, topicStats.total) };
+    return { topic, ...topicStats, implementation_percent: percentage(topicStats.fulfilled + topicStats.partial, topicStats.total),
+      fulfilment_percent: percentage(topicStats.fulfilled, topicStats.total) };
   }).sort((a, b) => b.covered - a.covered || b.total - a.total || a.topic.localeCompare(b.topic));
   const acceptedIds = new Set(impacts.map(i => i.id));
   const assessmentDates = criteria.filter(c => c.assessment.status !== 'unassessed' &&
@@ -126,7 +127,8 @@ export function partyInsights(data: Pick<Data, 'criteria' | 'impacts' | 'laws'>,
   return {
     program_ids: [...active.keys()].sort(), period_start: start, laws_through: through,
     last_assessed_at: assessmentDates.sort().at(-1) ?? null,
-    criteria: stats, fulfilment_percent: percentage(stats.fulfilled, stats.total), coverage_percent: percentage(stats.covered, stats.total),
+    criteria: stats, implementation_percent: percentage(stats.fulfilled + stats.partial, stats.total),
+    fulfilment_percent: percentage(stats.fulfilled, stats.total), coverage_percent: percentage(stats.covered, stats.total),
     laws: { total: lawEffects.length, supporting: lawEffects.filter(l => l.supporting > 0).length,
       opposing: lawEffects.filter(l => l.opposing > 0).length, mixed: lawEffects.filter(l => l.direction === 'mixed').length,
       evidence: impacts.length },

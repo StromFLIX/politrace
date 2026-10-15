@@ -29,23 +29,24 @@ const lawCounts = [
   <div class="insight-section-heading"><div><div class="eyebrow">Programm {year} · Die Bilanz</div><h2 id={`balance-heading-${year}`}>Was aus den Zusagen geworden ist</h2></div>{insights.last_assessed_at && <p class="insight-updated"><Icon name="clock" size={13} /> Letzte Bewertung: <time datetime={insights.last_assessed_at}>{formatDate(insights.last_assessed_at)}</time></p>}</div>
   <div class="balance-card">
     <div class="balance-overview">
-      <div class="fulfilment-headline"><span class="insight-caption">Gesetzlich umgesetzt</span><strong data-fulfilment>{formatPercentage(insights.fulfilment_percent)}</strong><span>{number(stats.fulfilled)} von <a href={criteriaUrl()} data-criteria-filter>{number(stats.total)} prüfbaren Kriterien</a></span></div>
-      <div class="balance-explanation"><h3>Umgesetzt, teilweise – oder gegenläufig?</h3><p>Jedes Kriterium zählt genau einmal. Die Gesamtbewertung berücksichtigt alle zugehörigen Gesetze, nicht nur einzelne positive Effekte.</p><a class="text-link" href="/methodik/#parteibilanz">So lesen sich die Zahlen <Icon name="arrow" size={13} /></a></div>
+      <div class="implementation-headline"><span class="insight-caption">Ganz oder teilweise umgesetzt</span><strong data-implementation>{formatPercentage(insights.implementation_percent)}</strong><span>{number(stats.fulfilled + stats.partial)} von <a href={criteriaUrl()} data-criteria-filter>{number(stats.total)} prüfbaren Kriterien</a></span><small>{number(stats.fulfilled)} ganz · {number(stats.partial)} teilweise</small></div>
+      <div class="balance-explanation"><h3>Auch teilweise Umsetzung zählt.</h3><p>Die Hauptzahl zählt ganz und teilweise umgesetzte Kriterien zusammen – jedes genau einmal, bezogen auf alle Kriterien. Die Gesamtbewertung berücksichtigt alle zugehörigen Gesetze, nicht nur einzelne positive Effekte.</p><a class="text-link" href="/methodik/#parteibilanz">So lesen sich die Zahlen <Icon name="arrow" size={13} /></a></div>
       <div class="coverage-headline"><span class="insight-caption"><Icon name="link" size={14} /> Belegabdeckung</span><strong data-coverage>{formatPercentage(insights.coverage_percent)}</strong><span>{number(stats.covered)} Kriterien mit Gesetzesbelegen</span><small>{number(stats.total - stats.covered)} noch ohne Beleg</small></div>
     </div>
     <Meter stats={stats} />
     <div class="criterion-status-grid">{statuses.map(status => <a class:list={['criterion-status-card', status.id]} href={criteriaUrl({ status: status.id })} data-criteria-filter data-insight-status={status.id}>
-      <div class="criterion-status-top"><Icon name={status.icon} size={17} /><span>{formatPercentage(percentage(status.value, stats.total))}</span></div>
-      <strong data-status-count>{number(status.value)}</strong><span class="criterion-status-label">{status.label}</span><small>{status.detail}</small><span class="status-drilldown">Kriterien ansehen <Icon name="chevron" size={11} /></span>
+      <div class="criterion-status-top"><Icon name={status.icon} size={17} /><span><span data-status-count>{number(status.value)}</span> Kriterien</span></div>
+      <strong data-status-percent>{formatPercentage(percentage(status.value, stats.total))}</strong><span class="criterion-status-label">{status.label}</span><small>{status.detail}</small><span class="status-drilldown">Kriterien ansehen <Icon name="chevron" size={11} /></span>
     </a>)}</div>
     <p class="balance-note">„Offen“ bedeutet nicht gescheitert. Belegabdeckung ist nicht Umsetzung; gesetzliche Umsetzung ist noch kein Nachweis der Wirkung im Alltag.</p>
   </div>
 
   <div class="law-summary" aria-label="Gesetzeswirkungen im ausgewählten Programm">
-    <div class="law-summary-grid">{lawCounts.map(item => <a href="#gesetzeswirkung" class:list={['law-kpi', item.id || 'all']} aria-label={`${item.label}: ${number(item.value)}. Gesetzeswirkungen im Zeitdiagramm ansehen.`}>
-      <div><span class="law-kpi-icon"><Icon name={item.icon} size={18} /></span><strong data-law-total={item.id || 'all'}>{number(item.value)}</strong></div><span>{item.label}</span>
+    <div class="law-summary-grid">{lawCounts.map(item => <a href="#gesetzeswirkung" class:list={['law-kpi', item.id || 'all']} aria-label={`${item.label}: ${item.id ? `${formatPercentage(percentage(item.value, insights.laws.total))}, ${number(item.value)} von ${number(insights.laws.total)} belegten Gesetzen` : number(item.value)}. Gesetzeswirkungen im Zeitdiagramm ansehen.`}>
+      <div><span class="law-kpi-icon"><Icon name={item.icon} size={18} /></span><strong data-law-total={!item.id ? 'all' : undefined} data-law-percent={item.id || undefined}>{item.id ? formatPercentage(percentage(item.value, insights.laws.total)) : number(item.value)}</strong></div><span>{item.label}</span>
+      {item.id ? <small><span data-law-total={item.id}>{number(item.value)}</span> von {number(insights.laws.total)} belegten Gesetzen</small> : <small>Unterschiedliche Gesetze</small>}
     </a>)}</div>
-    <p>Gezählt werden unterschiedliche Gesetze mit akzeptierten Belegen. Ein Gesetz kann mehrere Kriterien unterstützen und anderen widersprechen; die Wirkungsgruppen überlappen. Daraus folgt keine Aussage über das Abstimmungsverhalten der Partei.</p>
+    <p>Die Anteile beziehen sich auf alle Gesetze mit akzeptierten Belegen für dieses Programm, nicht auf Kriterien oder alle verabschiedeten Gesetze. Ein Gesetz kann mehrere Kriterien unterstützen und anderen widersprechen; die Wirkungsgruppen überlappen und ergeben zusammen nicht 100 %. Daraus folgt keine Aussage über das Abstimmungsverhalten der Partei.</p>
   </div>
 
   <div class="insights-grid">
@@ -56,7 +57,7 @@ const lawCounts = [
       {insights.topics.length ? <>
         <div class="topic-list" id={`topic-list-${year}`}>{insights.topics.map(topic => <a class="topic-insight" href={criteriaUrl({ thema: topic.topic })} data-criteria-filter data-topic-insight={topic.topic}>
           <div class="topic-insight-name"><strong>{topics[topic.topic] ?? topic.topic}</strong><small>{number(topic.covered)} von {number(topic.total)} Kriterien mit Beleg</small></div>
-          <div class="topic-insight-percent"><strong>{formatPercentage(topic.fulfilment_percent)}</strong><small>umgesetzt</small></div>
+          <div class="topic-insight-percent"><strong>{formatPercentage(topic.implementation_percent)}</strong><small>ganz oder teilweise<br />umgesetzt</small></div>
           <Meter stats={topic} />
           <span class="topic-insight-counts">{number(topic.fulfilled)} umgesetzt · {number(topic.partial)} teilweise · {number(topic.contradicted)} widersprochen · {number(topic.mixed)} gemischt · {number(topic.unknown)} offen</span>
         </a>)}</div>

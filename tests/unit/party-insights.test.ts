@@ -42,10 +42,10 @@ function fixture() {
 describe('party insight denominators and accepted evidence', () => {
   it('keeps empty and unknown different; never invents a timeline without evidence', () => {
     const f = fixture();
-    expect(f.report()).toMatchObject({ criteria: { total: 0 }, fulfilment_percent: null, coverage_percent: null, timeline: [], law_effects: [] });
+    expect(f.report()).toMatchObject({ criteria: { total: 0 }, implementation_percent: null, fulfilment_percent: null, coverage_percent: null, timeline: [], law_effects: [] });
     f.criterion('open');
     f.law('unlinked', '2025-04-01');
-    expect(f.report()).toMatchObject({ criteria: { total: 1, unknown: 1 }, fulfilment_percent: 0, coverage_percent: 0, timeline: [] });
+    expect(f.report()).toMatchObject({ criteria: { total: 1, unknown: 1 }, implementation_percent: 0, fulfilment_percent: 0, coverage_percent: 0, timeline: [] });
   });
 
   it('counts all five criterion states, not the sum or maximum of law scores', () => {
@@ -57,9 +57,19 @@ describe('party insight denominators and accepted evidence', () => {
     }
     const r = f.report();
     expect(r.criteria).toMatchObject({ total: 5, fulfilled: 1, partial: 1, contradicted: 1, mixed: 1, unknown: 1, covered: 4 });
-    expect(r.fulfilment_percent).toBe(20);
+    expect(r.implementation_percent).toBe(40);
+    expect(r.fulfilment_percent).toBe(20); // Keep the strict API measure backwards-compatible.
     expect(r.coverage_percent).toBe(80);
     expect(r.laws).toMatchObject({ total: 1, supporting: 1, opposing: 0, evidence: 4 });
+  });
+
+  it('counts partial implementation once, without weighting it or adding positive law effects', () => {
+    const f = fixture();
+    const c = f.criterion('partial', 'partial');
+    f.criterion('open');
+    f.impact(c, f.law('first', '2025-04-01'), 1);
+    f.impact(c, f.law('second', '2025-05-01'), 2);
+    expect(f.report()).toMatchObject({ criteria: { total: 2, partial: 1, fulfilled: 0 }, implementation_percent: 50, fulfilment_percent: 0 });
   });
 
   it.each(['draft', 'rejected', 'missing_context', 'editorially_rejected', 'wrong_model'] as const)('excludes %s links from counts and history', disposition => {
@@ -69,7 +79,7 @@ describe('party insight denominators and accepted evidence', () => {
     else if (disposition === 'editorially_rejected') i.review.status = 'rejected';
     else if (disposition === 'wrong_model') i.evaluation!.model = 'openai/gpt-6-luna';
     else i.evaluation!.status = disposition;
-    expect(f.report()).toMatchObject({ criteria: { total: 1, covered: 0, fulfilled: 0, unknown: 1 }, laws: { total: 0 }, timeline: [] });
+    expect(f.report()).toMatchObject({ criteria: { total: 1, covered: 0, fulfilled: 0, unknown: 1 }, implementation_percent: 0, laws: { total: 0 }, timeline: [] });
   });
 
   it('respects editorial corrections without inventing machine or human approvals', () => {
@@ -218,8 +228,8 @@ describe('law reach and the reconstructed evidence timeline', () => {
     f.criterion('open', 'unassessed', ['arbeit']);
     f.criterion('uncovered', 'unassessed', ['klima']);
     f.impact(c, f.law('example', '2025-03-01'));
-    expect(f.report().topics.map(t => [t.topic, t.total, t.covered, t.partial, t.unknown])).toEqual([
-      ['arbeit', 2, 1, 1, 1], ['soziales', 1, 1, 1, 0], ['klima', 1, 0, 0, 1],
+    expect(f.report().topics.map(t => [t.topic, t.total, t.covered, t.partial, t.unknown, t.implementation_percent, t.fulfilment_percent])).toEqual([
+      ['arbeit', 2, 1, 1, 1, 50, 0], ['soziales', 1, 1, 1, 0, 100, 0], ['klima', 1, 0, 0, 1, 0, 0],
     ]);
   });
 
@@ -229,6 +239,8 @@ describe('law reach and the reconstructed evidence timeline', () => {
       const report = partyInsights(data, [program]);
       const { total, fulfilled, partial, contradicted, mixed, unknown, covered } = report.criteria;
       expect(fulfilled + partial + contradicted + mixed + unknown).toBe(total);
+      expect(report.implementation_percent).toBe(total ? (fulfilled + partial) / total * 100 : null);
+      expect(report.fulfilment_percent).toBe(total ? fulfilled / total * 100 : null);
       if (report.timeline.length) {
         const last = report.timeline.at(-1)!;
         expect(last.covered).toBe(covered);

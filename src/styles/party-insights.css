@@ -15,11 +15,12 @@
 .insight-updated { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; font-size: 10px; }
 .balance-card { border: 1px solid var(--border); border-radius: var(--radius); background: linear-gradient(115deg, #f8faff, #fff 65%); padding: 28px; }
 .balance-overview { display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; gap: 30px; }
-.fulfilment-headline, .coverage-headline { display: flex; flex-direction: column; align-items: flex-start; }
+.implementation-headline, .coverage-headline { display: flex; flex-direction: column; align-items: flex-start; }
 .insight-caption { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
-.fulfilment-headline > strong { font-size: 54px; letter-spacing: -.055em; line-height: 1.3; font-weight: 660; }
-.fulfilment-headline > span:last-child { font-size: 11px; color: var(--muted); }
-.fulfilment-headline a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+.implementation-headline > strong { font-size: 54px; letter-spacing: -.055em; line-height: 1.3; font-weight: 660; }
+.implementation-headline > span:not(.insight-caption) { font-size: 11px; color: var(--muted); }
+.implementation-headline > small { font-size: 10px; color: var(--muted); margin-top: 4px; }
+.implementation-headline a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 .balance-explanation h3 { font-size: 15px; line-height: 1.5; letter-spacing: -.025em; }
 .balance-explanation p { font-size: 11px; margin: 8px 0; }
 .balance-explanation .text-link { font-size: 10px; }
@@ -48,10 +49,11 @@
 .law-kpi.supporting { --tone: var(--fulfilled); }
 .law-kpi.opposing { --tone: var(--contradicted); }
 .law-kpi.mixed { --tone: var(--mixed); }
-.law-kpi > div { display: flex; align-items: center; gap: 12px; }
+.law-kpi > div { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
 .law-kpi-icon { display: grid; place-items: center; width: 30px; height: 30px; color: var(--tone); border-radius: 7px; background: color-mix(in srgb, var(--tone) 8%, white); }
 .law-kpi strong { font-size: 26px; font-weight: 630; line-height: 1.2; letter-spacing: -.035em; }
 .law-kpi > span { display: block; font-size: 11px; color: var(--muted); margin-top: 8px; }
+.law-kpi > small { display: block; font-size: 10px; color: var(--muted); margin-top: 4px; }
 .law-kpi:hover > span { color: var(--tone); text-decoration: underline; text-underline-offset: 3px; }
 .law-summary > p { font-size: 10px; margin-top: 18px; border-top: 1px solid var(--border); padding-top: 13px; max-width: 100%; }
 .insights-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); align-items: start; gap: 20px; margin-bottom: 22px; }
@@ -166,7 +168,7 @@
   .insight-section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
   .insight-section-heading h2 { font-size: 23px; }
   .balance-card { padding: 20px; }
-  .fulfilment-headline > strong { font-size: 43px; }
+  .implementation-headline > strong { font-size: 43px; }
   .coverage-headline { padding-left: 18px; }
   .coverage-headline > strong { font-size: 27px; }
   .criterion-status-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
@@ -192,7 +194,7 @@
 @media (max-width: 390px) {
   .balance-card, .insight-card { padding: 17px; }
   .balance-overview { gap: 14px; }
-  .fulfilment-headline > strong { font-size: 38px; }
+  .implementation-headline > strong { font-size: 38px; }
   .insight-caption { font-size: 10px; }
   .coverage-headline { padding-left: 14px; }
   .coverage-headline > strong { font-size: 25px; }

@@ -10,6 +10,7 @@ const number = (value: number) => value.toLocaleString('de-DE');
 const resultCount = (matched: number, total: number) => matched
   ? `1–${number(Math.min(defaultPageSize, matched))} von ${number(matched)} Kriterien${matched !== total ? ` (${number(total)} insgesamt)` : ''}`
   : `0 von ${number(total)} Kriterien`;
+const share = (count: number, total: number) => total ? count / total * 100 : null;
 const percent = (value: number | null) => value === null ? '—' : value > 0 && value < 0.1 ? '<0,1 %' :
   `${new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 }).format(value)} %`;
 const statuses = { fulfilled: 'fulfilled', partial: 'partial', contradicted: 'contradicted', mixed: 'mixed', unassessed: 'unknown' } as const;
@@ -51,12 +52,20 @@ test('party balances match their exported programme counts, including empty part
     await expect(dashboard).toBeVisible();
     for (const [status, key] of Object.entries(statuses)) {
       await expect(dashboard.locator(`[data-insight-status="${status}"] [data-status-count]`)).toHaveText(number(period.criteria[key]));
+      await expect(dashboard.locator(`[data-insight-status="${status}"] > [data-status-percent]`)).toHaveText(percent(share(period.criteria[key], period.criteria.total)));
     }
     expect(Object.values(statuses).reduce((sum, key) => sum + period.criteria[key], 0)).toBe(period.criteria.total);
-    await expect(dashboard.locator('[data-fulfilment]')).toHaveText(percent(period.fulfilment_percent));
+    expect(period.implementation_percent).toBe(share(period.criteria.fulfilled + period.criteria.partial, period.criteria.total));
+    await expect(dashboard.locator('[data-implementation]')).toHaveText(percent(period.implementation_percent));
+    await expect(dashboard.locator('.implementation-headline .insight-caption')).toHaveText('Ganz oder teilweise umgesetzt');
+    await expect(dashboard.locator('.implementation-headline > small')).toHaveText(`${number(period.criteria.fulfilled)} ganz · ${number(period.criteria.partial)} teilweise`);
     await expect(dashboard.locator('[data-coverage]')).toHaveText(percent(period.coverage_percent));
     for (const [key, value] of Object.entries({ all: period.laws.total, supporting: period.laws.supporting, opposing: period.laws.opposing, mixed: period.laws.mixed })) {
       await expect(dashboard.locator(`[data-law-total="${key}"]`)).toHaveText(number(value));
+      if (key !== 'all') {
+        await expect(dashboard.locator(`[data-law-percent="${key}"]`)).toHaveText(percent(share(value, period.laws.total)));
+        await expect(dashboard.locator(`.law-kpi.${key} > small`)).toHaveText(`${number(value)} von ${number(period.laws.total)} belegten Gesetzen`);
+      }
     }
     await fitsViewport(page);
     for (const anchor of ['bilanz', 'zeitverlauf', 'gesetzeswirkung', 'kriterien']) {
@@ -65,6 +74,28 @@ test('party balances match their exported programme counts, including empty part
     }
   }
   expect(errors).toEqual([]);
+});
+
+test('overview cards lead with fully or partially implemented percentages on both overviews', async ({ page, request }) => {
+  const { programs } = await (await request.get('/api/v1/sources/bundestag-21.json')).json();
+  const exports = await Promise.all(programs.map(async ({ party_id: id }: { party_id: string }) => ({ id, ...await partyExport(request, id) })));
+  for (const route of ['/', '/live/parteien/']) {
+    await page.goto(route);
+    for (const { id, insights } of exports) {
+      for (const period of insights.periods) {
+        const card = page.locator(`[data-period-panel="${period.election_year}"] .party-card[href="/live/parteien/${id}/?jahr=${period.election_year}"]`);
+        const { fulfilled, partial, total, covered } = period.criteria;
+        await expect(card.locator('[data-card-implementation]')).toHaveText(percent(share(fulfilled + partial, total)));
+        await expect(card.locator('.metric-caption')).toHaveText(total ? 'Ganz oder teilweise umgesetzt' : 'Noch kein Programm importiert');
+        await expect(card.locator('.card-implementation-counts')).toHaveText(`${number(fulfilled + partial)} von ${number(total)} Kriterien · ${number(fulfilled)} ganz · ${number(partial)} teilweise`);
+        await expect(card.locator('.card-coverage')).toHaveText(`${percent(share(covered, total))} mit Gesetzesbelegen · ${number(covered)} von ${number(total)}`);
+      }
+    }
+    for (const width of [320, 390, 768, 1440]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await fitsViewport(page);
+    }
+  }
 });
 
 test('status cards clear unrelated filters and open shareable criterion results', async ({ page, request }) => {
@@ -84,7 +115,7 @@ test('status cards clear unrelated filters and open shareable criterion results'
   await page.reload();
   await expect(panel.getByRole('combobox', { name: 'Status', exact: true })).toHaveValue('unassessed');
   await expect(panel.locator('.criterion-row:visible')).toHaveCount(Math.min(defaultPageSize, period.criteria.unknown));
-  await panel.locator('.fulfilment-headline [data-criteria-filter]').click();
+  await panel.locator('.implementation-headline [data-criteria-filter]').click();
   await expect(panel.getByRole('combobox', { name: 'Status', exact: true })).toHaveValue('');
   await expect(panel.locator('[data-result-count]')).toHaveText(resultCount(period.criteria.total, period.criteria.total));
 });
@@ -126,6 +157,10 @@ test('topic breakdown expands and links to the selected programme topic', async 
     await more.click();
     await expect(more).toHaveAttribute('aria-expanded', 'false');
     await expect(panel.locator('[data-topic-insight]:visible')).toHaveCount(5);
+  }
+  for (const topic of period.topics) {
+    expect(topic.implementation_percent).toBe(share(topic.fulfilled + topic.partial, topic.total));
+    await expect(panel.locator(`[data-topic-insight="${topic.topic}"] .topic-insight-percent > strong`)).toHaveText(percent(topic.implementation_percent));
   }
   const topic = period.topics[0];
   await panel.locator(`[data-topic-insight="${topic.topic}"]`).click();
