@@ -114469,7 +114469,7 @@
     {
       "law_id": "bgbl-1-2026-47",
       "analysis_sha256": "0e84288155ff143d3c3a0c42cb312b6dd8b4842abb27715c4125e2fa6add8844",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-02f01da483e6a1de",
@@ -115471,6 +115471,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "afd-2025-ac-fa57f56d16b8bec1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-fbf2b30a6ae2a444",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge regeln unter anderem Güterkraftverkehrslizenzen und Kontrollen, schaffen aber keine innerstädtischen Parkmöglichkeiten.",
+          "input_sha256": "bceaba86c6f9b2c6bf1320b00ec57f5b06217b55a717064339e940376063e498",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bceaba86c6f9b2c6bf1320b00ec57f5b06217b55a717064339e940376063e498"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorgelegten Auszüge regeln unter anderem Güterkraftverkehrslizenzen und Kontrollen, schaffen aber keine innerstädtischen Parkmöglichkeiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Gleichzeitig fordert die AfD den Erhalt und Ausbau von\n\ninnerstädtischen Fahrspuren und Parkraum",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-fbf2b30a6ae2a444",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -155483,7 +155510,7 @@
     {
       "law_id": "bgbl-2-2026-49",
       "analysis_sha256": "792f7d5152811a69e1148039859cd0d28944fe5a16f27d1fd518564e138bde12",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-1f9e6294a991ed05",
@@ -156133,6 +156160,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "afd-2025-ac-e71e7ae531c6cbdd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e80010756ab8620b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Änderungen des Londoner Protokolls zur CO₂-Verbringung und weist keine wolfsfreien Gebiete aus.",
+          "input_sha256": "d8bd68763dc07eb7473bb1e38acfd98641d7ed75279781f317a093a705d6b160",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d8bd68763dc07eb7473bb1e38acfd98641d7ed75279781f317a093a705d6b160"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Änderungen des Londoner Protokolls zur CO₂-Verbringung und weist keine wolfsfreien Gebiete aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die AfD wird die Möglichkeit einer Bestandsregulierung und die Ausweisung von wolfsfreien Gebieten umsetzen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e80010756ab8620b",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -169523,45 +169577,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8340,
-    "cache_hits": 326,
-    "subdivision_cache_hits": 0,
+    "calls": 8368,
+    "cache_hits": 327,
+    "subdivision_cache_hits": 1,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.706476,
-    "reported_cost_calls": 7657,
+    "reported_cost_usd": 31.980392,
+    "reported_cost_calls": 7685,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.68232,
-    "prompt_tokens": 83306371,
-    "completion_tokens": 14608370,
+    "budget_exposure_usd": 35.956236,
+    "prompt_tokens": 83632083,
+    "completion_tokens": 14643140,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 303,
-        "reported_cost_usd": 7.651491599999998,
+        "calls": 313,
+        "reported_cost_usd": 7.855004099999998,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 143,
-        "reported_cost_usd": 1.785653500000001,
+        "calls": 146,
+        "reported_cost_usd": 1.839896250000001,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4417,
-        "reported_cost_usd": 5.158362512499996,
+        "calls": 4432,
+        "reported_cost_usd": 5.174523199999995,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "pending_reserved_usd": 3.469446951953614e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

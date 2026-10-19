@@ -117712,7 +117712,7 @@
     {
       "law_id": "bgbl-1-2026-304",
       "analysis_sha256": "18a0a9531074c078ea89ebcb43ffaf28093f56a16f3e980688d7634a9054bf8d",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -117874,6 +117874,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-091488700f11bcf7",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0d132f5c68035cc9",
+          "disposition": "proposed_link",
+          "rationale": "Bei bestimmten Zulassungen von Deponien nach der Industrieemissionsrichtlinie muss die effiziente Nutzung materieller Ressourcen einschließlich Wiederverwendung sichergestellt sein. Das fördert effizienteren Materialeinsatz in diesem Bereich.",
+          "input_sha256": "5695d7130c156e96f611e0dedeb94dd21a4d5e04f943c1df8d1e1197eb0b644a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "45bdcfe36c3e019fd3caeda7aa8fb06016308e1743c2aa16f5fbd991bfe5c0d8"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5695d7130c156e96f611e0dedeb94dd21a4d5e04f943c1df8d1e1197eb0b644a"
+            }
+          ],
+          "impact_id": "impact-e9101da06261a8f6",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.95,
+            "rationale": "Bei bestimmten Zulassungen von Deponien nach der Industrieemissionsrichtlinie muss die effiziente Nutzung materieller Ressourcen einschließlich Wiederverwendung sichergestellt sein. Das fördert effizienteren Materialeinsatz in diesem Bereich.",
+            "law_passage_id": "bgbl-1-2026-304-p-0938864e6e947fb3",
+            "law_quote": "1. materielle Ressourcen und Wasser effizient genutzt werden, auch durch Wiederverwendung, und",
+            "criterion_quote": "und\neffizienterem Materialeinsatz.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-0d132f5c68035cc9",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -124030,7 +124062,7 @@
     {
       "law_id": "bgbl-1-2026-47",
       "analysis_sha256": "5d2075ccbc8b27aee5fabdfc5569ea11c1106a2255914bd7a06d1ad7e3a430be",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025194af967aeca7",
@@ -124652,6 +124684,36 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-91cad7bb84b0b5ee",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge regeln unter anderem Berufszugang und Lizenzen im Güter- und Personenverkehr, belegen aber keine Reform der Fahrausbildung; die erforderlichen Beschluss- oder Umsetzungsunterlagen liegen ebenfalls nicht vor.",
+          "input_sha256": "bceaba86c6f9b2c6bf1320b00ec57f5b06217b55a717064339e940376063e498",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bceaba86c6f9b2c6bf1320b00ec57f5b06217b55a717064339e940376063e498"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.76,
+            "rationale": "Die Auszüge regeln unter anderem Berufszugang und Lizenzen im Güter- und Personenverkehr, belegen aber keine Reform der Fahrausbildung; die erforderlichen Beschluss- oder Umsetzungsunterlagen liegen ebenfalls nicht vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Vor dem Hintergrund erhöhter Quoten nicht bestandener\nPrüfungen und steigender Preise werden wir die **Fahrausbildung samt Theorieunterricht im Sinne**\n**von Verkehrssicherheit und Effizienz reformieren**, auch mit dem Ziel, die Kosten der Fahrausbildung\nspürbar zu senken.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist als teilweise gekennzeichnet.",
+              "Beschluss- oder Umsetzungsunterlagen sind nicht enthalten."
+            ],
+            "criterion_id": "spd-2025-ac-91cad7bb84b0b5ee",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-95960732a1ce7497",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz enthält keine außenpolitische Position zur Befolgung der Resolution 1701 durch Konfliktparteien.",
@@ -125264,6 +125326,33 @@
             ],
             "criterion_id": "spd-2025-ac-dddc49a76826354c",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-eba33becf2d6e215",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Auszüge enthalten keine Elektrifizierungsmaßnahmen am Schienennetz; sie betreffen Güterkraftverkehr und Personenbeförderungsrecht.",
+          "input_sha256": "bceaba86c6f9b2c6bf1320b00ec57f5b06217b55a717064339e940376063e498",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "bceaba86c6f9b2c6bf1320b00ec57f5b06217b55a717064339e940376063e498"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge enthalten keine Elektrifizierungsmaßnahmen am Schienennetz; sie betreffen Güterkraftverkehr und Personenbeförderungsrecht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir machen unser Schienennetz durch Digitalisierung, Elektrifizierung\nund Lärmschutz wieder leistungsfähig und zukunftsfest.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-eba33becf2d6e215",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -163865,7 +163954,7 @@
     {
       "law_id": "bgbl-2-2026-60",
       "analysis_sha256": "6c252af7ca8557e8e7bfb78bab9dfacb05c8b302fb338b12f6a66a1cec6c1638",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-025ec9e0d20be79c",
@@ -168214,6 +168303,35 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-ec49acd6eabd3098",
+          "disposition": "no_supported_link",
+          "rationale": "In den vorgelegten Vertragspassagen ist keine Maßnahme zum Denkmalschutz erkennbar.",
+          "input_sha256": "693ad8dd29ee745b606a80ae587fa036a3cf4212e214f9e50d56d4134fdc37b5",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "693ad8dd29ee745b606a80ae587fa036a3cf4212e214f9e50d56d4134fdc37b5"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "In den vorgelegten Vertragspassagen ist keine Maßnahme zum Denkmalschutz erkennbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden den Denkmalschutz stärken",
+            "caveats": [
+              "Der Gesetzeskontext ist teilweise."
+            ],
+            "criterion_id": "spd-2025-ac-ec49acd6eabd3098",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-ecc6dd3e59fe0630",
           "disposition": "no_supported_link",
           "rationale": "Der Vertrag sieht Klimazusammenarbeit und eine Ausrichtung von Finanzströmen auf niedrige Emissionen vor, belegt aber keine tatsächlich getätigten Klimaschutzinvestitionen.",
@@ -168318,6 +168436,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-efee70dc1a068156",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-f4384f3c9416da52",
+          "disposition": "missing_context",
+          "rationale": "Der Vertrag sieht Zusammenarbeit zur beschleunigten Entwicklung von Energieinfrastruktur in der Nordsee vor. Er tritt jedoch erst mit dem Austausch der Ratifikationsurkunden in Kraft; ob dieser erfolgt ist oder entsprechende Maßnahmen umgesetzt wurden, ist nicht belegt.",
+          "input_sha256": "51d74b7d56511f3e2a3ada975cb6c828bf286945863e991fa8cfeb8cb427bba6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "693ad8dd29ee745b606a80ae587fa036a3cf4212e214f9e50d56d4134fdc37b5"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "51d74b7d56511f3e2a3ada975cb6c828bf286945863e991fa8cfeb8cb427bba6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Der Vertrag sieht Zusammenarbeit zur beschleunigten Entwicklung von Energieinfrastruktur in der Nordsee vor. Er tritt jedoch erst mit dem Austausch der Ratifikationsurkunden in Kraft; ob dieser erfolgt ist oder entsprechende Maßnahmen umgesetzt wurden, ist nicht belegt.",
+            "law_passage_id": "bgbl-2-2026-60-p-bf0d341971f04835",
+            "law_quote": "(3) Angesichts ihrer führenden Rolle in der Nordsee arbeiten\nsie zusammen, um die Entwicklung von Infrastruktur in den Bereichen Offshore-Windenergie, Elektrizität, Wasserstoff und Kohlendioxid zu beschleunigen.",
+            "criterion_quote": "modernisieren unsere Infrastrukturen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-f4384f3c9416da52",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -170843,7 +170993,7 @@
     {
       "law_id": "bgbl-2-2026-8",
       "analysis_sha256": "8e0456dc428daea458fe224146504f295e15c90da72781a8327bf4fdbc903331",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-00fd956fd51d10ba",
@@ -173798,6 +173948,33 @@
             ],
             "criterion_id": "spd-2025-ac-40938903ca075cba",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-428141d79d2359e9",
+          "disposition": "no_supported_link",
+          "rationale": "Die allgemeine Zusammenarbeit zu Menschenrechten und Geschlechtergleichstellung setzt keine vollständige Umsetzung der Istanbul-Konvention fest.",
+          "input_sha256": "4f9d5c9ab83b7cc7c7d2906bfe484e86b83ff63c111f16ba3198e7234b3c807f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4f9d5c9ab83b7cc7c7d2906bfe484e86b83ff63c111f16ba3198e7234b3c807f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die allgemeine Zusammenarbeit zu Menschenrechten und Geschlechtergleichstellung setzt keine vollständige Umsetzung der Istanbul-Konvention fest.",
+            "law_passage_id": "bgbl-2-2026-8-p-af63e175eba99fa3",
+            "law_quote": "Die Vertragsparteien arbeiten bei der Förderung und dem Schutz der Menschenrechte […] sowie bei der Stärkung der demokratischen Grundsätze und der Rechtsstaatlichkeit, der Förderung der Gleichstellung der Geschlechter und der Bekämpfung aller Formen der Diskriminierung zusammen.",
+            "criterion_quote": "Wir setzen uns für eine vollständige Umsetzung\nder Istanbul-Konvention ein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-428141d79d2359e9",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -182437,45 +182614,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8340,
-    "cache_hits": 326,
-    "subdivision_cache_hits": 0,
+    "calls": 8368,
+    "cache_hits": 327,
+    "subdivision_cache_hits": 1,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.706476,
-    "reported_cost_calls": 7657,
+    "reported_cost_usd": 31.980392,
+    "reported_cost_calls": 7685,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.68232,
-    "prompt_tokens": 83306371,
-    "completion_tokens": 14608370,
+    "budget_exposure_usd": 35.956236,
+    "prompt_tokens": 83632083,
+    "completion_tokens": 14643140,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 303,
-        "reported_cost_usd": 7.651491599999998,
+        "calls": 313,
+        "reported_cost_usd": 7.855004099999998,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 143,
-        "reported_cost_usd": 1.785653500000001,
+        "calls": 146,
+        "reported_cost_usd": 1.839896250000001,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4417,
-        "reported_cost_usd": 5.158362512499996,
+        "calls": 4432,
+        "reported_cost_usd": 5.174523199999995,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 6.938893903907228e-18
+        "pending_reserved_usd": 3.469446951953614e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
