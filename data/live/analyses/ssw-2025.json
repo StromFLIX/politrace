@@ -129,6 +129,7 @@
     "bgbl-1-2026-293",
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
+    "bgbl-1-2026-304",
     "bgbl-1-2026-33",
     "bgbl-1-2026-34",
     "bgbl-1-2026-39",
@@ -33360,7 +33361,7 @@
     },
     {
       "law_id": "bgbl-1-2025-257",
-      "analysis_sha256": "ecfe4d38db44faec41d14d4f640a20b7fd46b297d28fe5262fe63c83ceb52389",
+      "analysis_sha256": "5535d9a8532e14e103e034bf7439eaba31ee0ff6e35ff2f796365a706fbe6bd8",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -33386,9 +33387,10 @@
         "ssw-2025-ac-bcc46c82e6385930",
         "ssw-2025-ac-e22d0ff8510c2f23",
         "ssw-2025-ac-e9817a7ab2be7c50",
+        "ssw-2025-ac-f151b6f50bd5e519",
         "ssw-2025-ac-f5846933e1cbf713"
       ],
-      "omitted_count": 988,
+      "omitted_count": 987,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-1202000f6c12d216",
@@ -33997,6 +33999,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-e9817a7ab2be7c50",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f151b6f50bd5e519",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug regelt befristete Abweichungen für Wohnbauvorhaben, belegt aber kein Bundesförderprogramm; da der Gesetzeskontext ausdrücklich unvollständig ist, lässt sich die Einrichtung solcher Programme nicht abschließend beurteilen.",
+          "input_sha256": "33aacc07b64e170dc437fae5c093ad1e8371f2482e397fc241a78fe7e4e2a514",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33aacc07b64e170dc437fae5c093ad1e8371f2482e397fc241a78fe7e4e2a514"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Der Auszug regelt befristete Abweichungen für Wohnbauvorhaben, belegt aber kein Bundesförderprogramm; da der Gesetzeskontext ausdrücklich unvollständig ist, lässt sich die Einrichtung solcher Programme nicht abschließend beurteilen.",
+            "law_passage_id": "bgbl-1-2025-257-p-0bdc43355aeebf5a",
+            "law_quote": "Mit Zustimmung der Gemeinde kann bis zum Ablauf des 31. Dezember 2030 von den Vorschriften dieses Gesetzbuchs oder den aufgrund dieses Gesetzbuchs erlassenen Vorschriften abgewichen werden",
+            "criterion_quote": "neue Förderprogramme des Bundes zu schaffen, die Kommunen Anreize geben, Wohnungsrenovierungen und -Neubauten ganzheitlich, energieeffizient und generationsgerecht zu planen.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-f151b6f50bd5e519",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -48739,7 +48770,7 @@
     },
     {
       "law_id": "bgbl-1-2025-340",
-      "analysis_sha256": "a8888edb7b8a918810ad7c340eb90073b8a959532a59bc6357e630ba460a6e2f",
+      "analysis_sha256": "785d939ff488d7304d852ba3fc80d538fd042f4c419bd3c24a4a8412eb9821a7",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -48780,6 +48811,7 @@
         "ssw-2025-ac-ae69d74a39192ed2",
         "ssw-2025-ac-aecc1a0f4789c2e7",
         "ssw-2025-ac-b0c7bd20d490ed3e",
+        "ssw-2025-ac-b2c5bfe2eb8eecc9",
         "ssw-2025-ac-c2286d0679f58e26",
         "ssw-2025-ac-d07dff38a2b54e53",
         "ssw-2025-ac-daf621be637df34f",
@@ -48787,9 +48819,10 @@
         "ssw-2025-ac-e9817a7ab2be7c50",
         "ssw-2025-ac-ee967859c2cfe1cb",
         "ssw-2025-ac-f12ecaffbd3072cc",
+        "ssw-2025-ac-f7eecdb8e4d6f67e",
         "ssw-2025-ac-ff015c83fe59acb4"
       ],
-      "omitted_count": 966,
+      "omitted_count": 964,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0609372edec829d8",
@@ -49803,6 +49836,35 @@
           "verification": null
         },
         {
+          "criterion_id": "ssw-2025-ac-b2c5bfe2eb8eecc9",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen steuerrechtliche Änderungen und belegen keine Maßnahme zum Ersatz von LNG in der Seefahrt; wegen des nur teilweise vorliegenden Gesetzestextes bleibt offen, ob weitere Vorschriften darauf eingehen.",
+          "input_sha256": "cde1423e14265917ae854019beccd3666755dd3b05d79e81a8fe7faacab46c79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cde1423e14265917ae854019beccd3666755dd3b05d79e81a8fe7faacab46c79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge betreffen steuerrechtliche Änderungen und belegen keine Maßnahme zum Ersatz von LNG in der Seefahrt; wegen des nur teilweise vorliegenden Gesetzestextes bleibt offen, ob weitere Vorschriften darauf eingehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Außerdem wollen\nwir in der Seefahrt die Ablösung von LNG durch saubere Kraftstoffe und moderne\nTechnologien forcieren.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-b2c5bfe2eb8eecc9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "ssw-2025-ac-c2286d0679f58e26",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Änderungen regeln keine transparente Darstellung staatlicher Beschaffungen, Subventionen oder Förderungen.",
@@ -49988,6 +50050,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-f12ecaffbd3072cc",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f7eecdb8e4d6f67e",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge belegen keine Berücksichtigung direkter Industrieanschlüsse beim Stromnetzausbau; da der Gesetzestext nur teilweise vorliegt, lässt sich nicht ausschließen, dass weitere Vorschriften diesen Gegenstand betreffen.",
+          "input_sha256": "cde1423e14265917ae854019beccd3666755dd3b05d79e81a8fe7faacab46c79",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cde1423e14265917ae854019beccd3666755dd3b05d79e81a8fe7faacab46c79"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge belegen keine Berücksichtigung direkter Industrieanschlüsse beim Stromnetzausbau; da der Gesetzestext nur teilweise vorliegt, lässt sich nicht ausschließen, dass weitere Vorschriften diesen Gegenstand betreffen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Dabei muss ein direkter Anschluss von Industriekunden wie z. B. Northvolt bedacht\nwerden.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-f7eecdb8e4d6f67e",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -53263,13 +53354,14 @@
     },
     {
       "law_id": "bgbl-1-2025-347",
-      "analysis_sha256": "a1322aa0e64b091c3dd72a45fcc9f0727a8275e65b5d5f5b0ab46386572c5d51",
+      "analysis_sha256": "91cd226230dd8a6744349ea1ecfefe3071738a1d29ff8645d94aead455ee1876",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0879381f0a7fded9",
         "ssw-2025-ac-088f655873a84681",
         "ssw-2025-ac-08a770a757d07759",
+        "ssw-2025-ac-08c34768f661437c",
         "ssw-2025-ac-0cfdbe37d92088bc",
         "ssw-2025-ac-0df087febd44bc9c",
         "ssw-2025-ac-15c98fa54f1ee2f0",
@@ -53358,7 +53450,7 @@
         "ssw-2025-ac-fd5a5a9b26147d5e",
         "ssw-2025-ac-ffda7ee808cda2d0"
       ],
-      "omitted_count": 921,
+      "omitted_count": 920,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0879381f0a7fded9",
@@ -53446,6 +53538,35 @@
               "Der Gesetzeskontext ist als teilweise gekennzeichnet."
             ],
             "criterion_id": "ssw-2025-ac-08a770a757d07759",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-08c34768f661437c",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge belegen kein Förderprogramm des Bundes für Sektorenkopplung; wegen des unvollständigen Gesetzeskontexts ist nicht feststellbar, ob andere Gesetzesteile solche Programme vorsehen.",
+          "input_sha256": "de5d35524c4be16e1518500ea141693424ebe1440b3ea766ed4ddbb103281149",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "de5d35524c4be16e1518500ea141693424ebe1440b3ea766ed4ddbb103281149"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.69,
+            "rationale": "Die Auszüge belegen kein Förderprogramm des Bundes für Sektorenkopplung; wegen des unvollständigen Gesetzeskontexts ist nicht feststellbar, ob andere Gesetzesteile solche Programme vorsehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-08c34768f661437c",
             "disposition": "missing_context"
           },
           "verification": null
@@ -59989,7 +60110,7 @@
     },
     {
       "law_id": "bgbl-1-2025-355",
-      "analysis_sha256": "369d42884af15d225bf3d61e9cd7404dbd14a9d6086619664ea95671aed7ec33",
+      "analysis_sha256": "1bef849ac30d1712ae85342940de37d7921bb56d762326830ba4971638188832",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -60019,6 +60140,7 @@
         "ssw-2025-ac-21daff61397eb8ab",
         "ssw-2025-ac-22eaa42ae98ead95",
         "ssw-2025-ac-236f34bd5a70dac2",
+        "ssw-2025-ac-2376a7443fe6b23b",
         "ssw-2025-ac-23c469cf848d67d8",
         "ssw-2025-ac-248989bb0f5c05c9",
         "ssw-2025-ac-25e9473227ecc453",
@@ -60105,6 +60227,7 @@
         "ssw-2025-ac-929eeed036e88010",
         "ssw-2025-ac-92d205ab63cd5dd4",
         "ssw-2025-ac-94bf851793990fd5",
+        "ssw-2025-ac-972e0a4defd7b98f",
         "ssw-2025-ac-9b44d2875e4b1269",
         "ssw-2025-ac-9eca26e4c367b06b",
         "ssw-2025-ac-a06c155cf01e5c67",
@@ -60190,7 +60313,7 @@
         "ssw-2025-ac-fb229b380b39a744",
         "ssw-2025-ac-ffa24d9ea0b5ec9a"
       ],
-      "omitted_count": 815,
+      "omitted_count": 813,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-01ec9a9c0fe251e1",
@@ -60897,6 +61020,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-236f34bd5a70dac2",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2376a7443fe6b23b",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zur Verabschiedung eines Gewalthilfegesetzes oder zur Finanzierung von Frauenhäusern; der unvollständige Gesetzeskontext erlaubt keine abschließende Prüfung.",
+          "input_sha256": "94f0393fb50f9d591555be36d201697eb5be693be00da2f64b33efc42af7044a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94f0393fb50f9d591555be36d201697eb5be693be00da2f64b33efc42af7044a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zur Verabschiedung eines Gewalthilfegesetzes oder zur Finanzierung von Frauenhäusern; der unvollständige Gesetzeskontext erlaubt keine abschließende Prüfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "und die Finanzierung von\nFrauenhäusern sicherstellt, muss kommen.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "ssw-2025-ac-2376a7443fe6b23b",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -63302,6 +63454,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-94bf851793990fd5",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-972e0a4defd7b98f",
+          "disposition": "missing_context",
+          "rationale": "Die Auszüge regeln unter anderem Datenübermittlung und Verwaltungsabläufe der Sozialversicherung, belegen aber keine Einführung einer Erwerbstätigenversicherung; wegen des unvollständigen Gesetzeskontexts bleibt die Prüfung offen.",
+          "input_sha256": "94f0393fb50f9d591555be36d201697eb5be693be00da2f64b33efc42af7044a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94f0393fb50f9d591555be36d201697eb5be693be00da2f64b33efc42af7044a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Auszüge regeln unter anderem Datenübermittlung und Verwaltungsabläufe der Sozialversicherung, belegen aber keine Einführung einer Erwerbstätigenversicherung; wegen des unvollständigen Gesetzeskontexts bleibt die Prüfung offen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Unser\nlangfristiges Ziel ist ein solidarisches, umlagefinanziertes Versicherungssystem in\nForm einer Erwerbstätigenversicherung, die alle Erwerbstätigen und Einkommensarten einbezieht und geschlechtergerecht ausgestaltet ist.",
+            "caveats": [
+              "Der Gesetzeskontext ist ausdrücklich unvollständig."
+            ],
+            "criterion_id": "ssw-2025-ac-972e0a4defd7b98f",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -87953,7 +88134,7 @@
     },
     {
       "law_id": "bgbl-1-2026-137",
-      "analysis_sha256": "b010fc0a0ae8739af2764153292b922e7615356e2adabc408832b816aa552aa5",
+      "analysis_sha256": "c3d27f85965a38acb9a656f6769126d7fde4b91a30e03cb9d7fe63b6e1671fbd",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -87988,6 +88169,7 @@
         "ssw-2025-ac-52931333f6af6042",
         "ssw-2025-ac-551cad629497ac21",
         "ssw-2025-ac-5599879973d63192",
+        "ssw-2025-ac-5e720231e4f38889",
         "ssw-2025-ac-5e9dff3ed7219df0",
         "ssw-2025-ac-5fc39e66ca65e3aa",
         "ssw-2025-ac-63b11ec77a617fd4",
@@ -88050,7 +88232,7 @@
         "ssw-2025-ac-fa94d276513dbe5c",
         "ssw-2025-ac-fe8cedcc8e6be1ca"
       ],
-      "omitted_count": 919,
+      "omitted_count": 918,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-021550007ab3c528",
@@ -88889,6 +89071,33 @@
               "Die Fortsetzung der Vorschrift nennt Kreislaufwirtschaft sowie Qualität und Innovation als mögliche Aspekte der Markterkundung."
             ],
             "criterion_id": "ssw-2025-ac-5599879973d63192",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5e720231e4f38889",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur internationalen Zusammenarbeit bei der Terrorismusbekämpfung oder zu Geldflüssen an Terrororganisationen.",
+          "input_sha256": "589921d07137bc53211a91b0c4dd9122a32b656840620fd6c2cf56cc4f1a7da3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "589921d07137bc53211a91b0c4dd9122a32b656840620fd6c2cf56cc4f1a7da3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen enthalten keine Regelung zur internationalen Zusammenarbeit bei der Terrorismusbekämpfung oder zu Geldflüssen an Terrororganisationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5e720231e4f38889",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -94752,13 +94961,14 @@
     },
     {
       "law_id": "bgbl-1-2026-143",
-      "analysis_sha256": "71d8be812070c46d743d262e0728d49173e194032a0e48e3c74323a9ba9ca5b9",
+      "analysis_sha256": "1d103f200dffe6f0bf6143016baaa88202a7c80e2391e01668a031b1817787c7",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0604f581e0633eec",
         "ssw-2025-ac-0609372edec829d8",
         "ssw-2025-ac-169e5c0e8666dd18",
+        "ssw-2025-ac-2b7513e659a7b377",
         "ssw-2025-ac-2c71fd3d15190c57",
         "ssw-2025-ac-2fc7922462e1171e",
         "ssw-2025-ac-33092809f6fd1358",
@@ -94790,7 +95000,7 @@
         "ssw-2025-ac-f8fc313bd6dba6b0",
         "ssw-2025-ac-fde6fe7fac025fdb"
       ],
-      "omitted_count": 978,
+      "omitted_count": 977,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0604f581e0633eec",
@@ -94869,6 +95079,35 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2b7513e659a7b377",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführte Regel betrifft die Vermittlung von Nieren bei Überkreuzlebendspenden und enthält keine Vorgabe zur Vermittlung digitaler Konzepte in Schulen.",
+          "input_sha256": "30f64ecdac5270054b58ade075060803edbaa2aee622d7bba38c9367be687cfb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "30f64ecdac5270054b58ade075060803edbaa2aee622d7bba38c9367be687cfb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführte Regel betrifft die Vermittlung von Nieren bei Überkreuzlebendspenden und enthält keine Vorgabe zur Vermittlung digitaler Konzepte in Schulen.",
+            "law_passage_id": "bgbl-1-2026-143-p-e0e28c3b7be0f9b6",
+            "law_quote": "Die Übertragung von Nieren im Rahmen einer Überkreuzlebendnierenspende ist nur zulässig, wenn die Nieren durch die Stelle zur Vermittlung von Nieren im Rahmen der Überkreuzlebendnierenspende unter Beachtung der Regelungen nach § 12 Absatz 3a vermittelt worden sind.",
+            "criterion_quote": "Digitale Konzepte sollen flächendeckend in den Schulen vermittelt werden.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist teilweise."
+            ],
+            "criterion_id": "ssw-2025-ac-2b7513e659a7b377",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -106627,7 +106866,7 @@
     },
     {
       "law_id": "bgbl-1-2026-210a",
-      "analysis_sha256": "e9e5c492f9dc9412f4376675104898e011d981db8a646576819c4eeffb76096d",
+      "analysis_sha256": "bd2bf4108c2c102e0c6caa1714464de3bbae7871dbafe77be0cf5a4312db7d85",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -106669,6 +106908,7 @@
         "ssw-2025-ac-80c7c920890f5d0a",
         "ssw-2025-ac-83922e99d4e5fd79",
         "ssw-2025-ac-8cd42a507f8b921b",
+        "ssw-2025-ac-8f78daf4e2be61c5",
         "ssw-2025-ac-8feddbea1268f72b",
         "ssw-2025-ac-9623457a273042cd",
         "ssw-2025-ac-9730d1d678b06990",
@@ -106694,7 +106934,7 @@
         "ssw-2025-ac-f8cbc67a4e1ed7af",
         "ssw-2025-ac-fde6fe7fac025fdb"
       ],
-      "omitted_count": 949,
+      "omitted_count": 948,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0609372edec829d8",
@@ -107724,6 +107964,33 @@
             "criterion_quote": "Die Bundesregierung muss die Einhaltung der EU-Grundrechtecharta\nimmer wieder dort anmahnen, wo sie nicht eingehalten wird.",
             "caveats": [],
             "criterion_id": "ssw-2025-ac-8cd42a507f8b921b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8f78daf4e2be61c5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften regeln Kapazitätsausschreibungen und belegen weder die Beendigung klimaschädlicher Subventionen noch eine entsprechende Änderung.",
+          "input_sha256": "fbfc50107e434d4a9fdb636f828a7f74ff78a9a1e8a642aeb6b430d4a496db57",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fbfc50107e434d4a9fdb636f828a7f74ff78a9a1e8a642aeb6b430d4a496db57"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Vorschriften regeln Kapazitätsausschreibungen und belegen weder die Beendigung klimaschädlicher Subventionen noch eine entsprechende Änderung.",
+            "law_passage_id": "bgbl-1-2026-210a-p-7e291984dd694ac3",
+            "law_quote": "Nach diesem Gesetz werden die folgenden Ausschreibungen zur Bereitstellung von Kapazität für den Erbringungszeitraum durchgeführt:",
+            "criterion_quote": "Wir wollen **klimaschädliche Subventionen beenden** .",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8f78daf4e2be61c5",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -110845,7 +111112,7 @@
     },
     {
       "law_id": "bgbl-1-2026-222",
-      "analysis_sha256": "4cabed900a30a00a669156f2c6e563ed07126aec3550657719be2156f648ec53",
+      "analysis_sha256": "029b577318c53a0a7a4968e6e1c163801446a7342aefb0c1f7707b5f4cc8897f",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -110886,6 +111153,7 @@
         "ssw-2025-ac-95459b93e2b09d09",
         "ssw-2025-ac-9623457a273042cd",
         "ssw-2025-ac-96bb5de6c7925490",
+        "ssw-2025-ac-9a80c2c9fdba1f71",
         "ssw-2025-ac-a6d37375f78459a0",
         "ssw-2025-ac-ac64279e7e58c13d",
         "ssw-2025-ac-ad7672d8703f0cad",
@@ -110905,7 +111173,7 @@
         "ssw-2025-ac-edc6634fc5ab754f",
         "ssw-2025-ac-f11c1f9e35bbe2b9"
       ],
-      "omitted_count": 956,
+      "omitted_count": 955,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-008a256f05c4a03e",
@@ -111913,6 +112181,35 @@
           "verification": null
         },
         {
+          "criterion_id": "ssw-2025-ac-9a80c2c9fdba1f71",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge betreffen vor allem digitale Register- und Datenübermittlungsregeln; ob das vollständige Gesetz eine Finanzierung der Flüchtlingsarbeit durch den Bund vorsieht, lässt sich anhand des ausdrücklich unvollständigen Gesetzeskontexts nicht feststellen.",
+          "input_sha256": "160d89d45f47b66aac1edc94e799ddb97da1f634c2db0fe5e2ac4ec7c3f59027",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "160d89d45f47b66aac1edc94e799ddb97da1f634c2db0fe5e2ac4ec7c3f59027"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge betreffen vor allem digitale Register- und Datenübermittlungsregeln; ob das vollständige Gesetz eine Finanzierung der Flüchtlingsarbeit durch den Bund vorsieht, lässt sich anhand des ausdrücklich unvollständigen Gesetzeskontexts nicht feststellen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen, dass der Bund die Flüchtlingsarbeit von Ländern und Kommunen angemessen finanziert.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet; fehlende Finanzierungsvorschriften in den Auszügen belegen nicht, dass es solche im vollständigen Gesetz nicht gibt."
+            ],
+            "criterion_id": "ssw-2025-ac-9a80c2c9fdba1f71",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "ssw-2025-ac-a6d37375f78459a0",
           "disposition": "no_supported_link",
           "rationale": "Die Änderungen bauen kein Angebot an kostenlosem, bundesfinanziertem Deutschunterricht für Geflüchtete aus.",
@@ -112908,7 +113205,7 @@
     },
     {
       "law_id": "bgbl-1-2026-224",
-      "analysis_sha256": "18a66c723f59f8efefab7138fedc5a3277346b89dff51da6176ef9ba8b1dff43",
+      "analysis_sha256": "d8b6ba7c57b2278b771dcd2fa421b37bc17ea13803e5095b83d19fed806b7823",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -113023,6 +113320,7 @@
         "ssw-2025-ac-ee967859c2cfe1cb",
         "ssw-2025-ac-eef8d46beed4e78f",
         "ssw-2025-ac-f1196728d3254992",
+        "ssw-2025-ac-f151b6f50bd5e519",
         "ssw-2025-ac-f28b0e6ad3c51184",
         "ssw-2025-ac-f5846933e1cbf713",
         "ssw-2025-ac-f5a0d57ebc16051c",
@@ -113032,7 +113330,7 @@
         "ssw-2025-ac-fa92cffedba14ff3",
         "ssw-2025-ac-fff862a714f27800"
       ],
-      "omitted_count": 892,
+      "omitted_count": 891,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-021550007ab3c528",
@@ -116097,6 +116395,33 @@
             "criterion_quote": "Wir wollen, dass zwischen Niebüll und Westerland mehr Personenzüge verkehren können als heute.",
             "caveats": [],
             "criterion_id": "ssw-2025-ac-f1196728d3254992",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f151b6f50bd5e519",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften schaffen kein Bundesförderprogramm für eine ganzheitliche, energieeffiziente und generationsgerechte Wohnraumentwicklung von Kommunen.",
+          "input_sha256": "8bf6e4e1cfbae0f66351ba57643f99179e748b07f805da17ecd9146abd5a4816",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "8bf6e4e1cfbae0f66351ba57643f99179e748b07f805da17ecd9146abd5a4816"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften schaffen kein Bundesförderprogramm für eine ganzheitliche, energieeffiziente und generationsgerechte Wohnraumentwicklung von Kommunen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "neue Förderprogramme des Bundes zu schaffen, die Kommunen Anreize geben, Wohnungsrenovierungen und -Neubauten ganzheitlich, energieeffizient und generationsgerecht zu planen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-f151b6f50bd5e519",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -134058,6 +134383,1224 @@
       ]
     },
     {
+      "law_id": "bgbl-1-2026-304",
+      "analysis_sha256": "bed10cc5157622d1f83cea63c0bf76886a57f466d1be82d936aa8640350823b7",
+      "status": "partial",
+      "eligible_count": 1011,
+      "candidate_ids": [
+        "ssw-2025-ac-0604f581e0633eec",
+        "ssw-2025-ac-093894fb98b018a6",
+        "ssw-2025-ac-0ef3314a054f78f7",
+        "ssw-2025-ac-10f66b60c215d93e",
+        "ssw-2025-ac-1202000f6c12d216",
+        "ssw-2025-ac-169e5c0e8666dd18",
+        "ssw-2025-ac-18e6c59978d853a3",
+        "ssw-2025-ac-20c1cc00687edbe6",
+        "ssw-2025-ac-23ffd397cdd4c65f",
+        "ssw-2025-ac-26470a22bc29709a",
+        "ssw-2025-ac-289172b9e48412ee",
+        "ssw-2025-ac-2fc7922462e1171e",
+        "ssw-2025-ac-32c5d17cbfc4ba42",
+        "ssw-2025-ac-3a2f7786464151af",
+        "ssw-2025-ac-3df67b777b422bdf",
+        "ssw-2025-ac-44bf77e6712f25c0",
+        "ssw-2025-ac-44e99dcd50024064",
+        "ssw-2025-ac-4602137315fadb99",
+        "ssw-2025-ac-479323e0651e0065",
+        "ssw-2025-ac-54c2ad8a26f1b364",
+        "ssw-2025-ac-54f89978cc963904",
+        "ssw-2025-ac-551ef2d29369a476",
+        "ssw-2025-ac-561fc7732c67796c",
+        "ssw-2025-ac-58aa5c7dd3b1b371",
+        "ssw-2025-ac-592c01b58614ffb2",
+        "ssw-2025-ac-5a184a3d6951b871",
+        "ssw-2025-ac-5b5a1c3fea667e3c",
+        "ssw-2025-ac-5e9dff3ed7219df0",
+        "ssw-2025-ac-6131edd61e344217",
+        "ssw-2025-ac-68f9ed6446c7a4f1",
+        "ssw-2025-ac-6be35440da8f38f9",
+        "ssw-2025-ac-703873682ba080d7",
+        "ssw-2025-ac-724c0701ec58d2b7",
+        "ssw-2025-ac-741bc127c81b9d76",
+        "ssw-2025-ac-78a24a46792ba01e",
+        "ssw-2025-ac-79b73da515d0e366",
+        "ssw-2025-ac-80c7c920890f5d0a",
+        "ssw-2025-ac-822c68555767cede",
+        "ssw-2025-ac-833b1d36ac7d1c58",
+        "ssw-2025-ac-8387d9a51656d471",
+        "ssw-2025-ac-83922e99d4e5fd79",
+        "ssw-2025-ac-8833a584d328a02b",
+        "ssw-2025-ac-89b9c16a8a0bdfed",
+        "ssw-2025-ac-8a820842aef19250",
+        "ssw-2025-ac-8ae32325c47971bc",
+        "ssw-2025-ac-8cd4802851a2fc84",
+        "ssw-2025-ac-919ce9d84a564033",
+        "ssw-2025-ac-91ac7a957c13f63a",
+        "ssw-2025-ac-92d205ab63cd5dd4",
+        "ssw-2025-ac-934204c5b15f2e71",
+        "ssw-2025-ac-9623457a273042cd",
+        "ssw-2025-ac-9730d1d678b06990",
+        "ssw-2025-ac-9a32a82153ce87df",
+        "ssw-2025-ac-9cd757ff55217e11",
+        "ssw-2025-ac-9e917e7e0d14ce96",
+        "ssw-2025-ac-a4554ed0e80f6729",
+        "ssw-2025-ac-a45ffaa0e9812241",
+        "ssw-2025-ac-b0c7bd20d490ed3e",
+        "ssw-2025-ac-b0e5fe694aa0e327",
+        "ssw-2025-ac-b4ff1c082488c334",
+        "ssw-2025-ac-b7b7b0ba0bbf0d9d",
+        "ssw-2025-ac-c035d4144c1286ef",
+        "ssw-2025-ac-d81b3558d8684339",
+        "ssw-2025-ac-de3eea597e45aa10",
+        "ssw-2025-ac-deea410d9228344f",
+        "ssw-2025-ac-dfcd98ad10656977",
+        "ssw-2025-ac-e18a60a8dee545f8",
+        "ssw-2025-ac-e60d69875cfdfad9",
+        "ssw-2025-ac-e7637752b3ae53f6",
+        "ssw-2025-ac-ed909526d2ffd786",
+        "ssw-2025-ac-ee967859c2cfe1cb",
+        "ssw-2025-ac-ee9e584706b8a80e",
+        "ssw-2025-ac-eea09352e9a13a76",
+        "ssw-2025-ac-f308f30847f2a076",
+        "ssw-2025-ac-f8cbc67a4e1ed7af",
+        "ssw-2025-ac-f8d3cf20c155fa77",
+        "ssw-2025-ac-fa14d93f5e10422f",
+        "ssw-2025-ac-ff88c817018eb5a8"
+      ],
+      "omitted_count": 933,
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-0604f581e0633eec",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zu Industrieemissionen betreffen keine Richtlinien zur Gesundheitsversorgung trans*Personen.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zu Industrieemissionen betreffen keine Richtlinien zur Gesundheitsversorgung trans*Personen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-0604f581e0633eec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-093894fb98b018a6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Vorgaben zum Flächenverbrauch oder dessen Stopp.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz enthält keine Vorgaben zum Flächenverbrauch oder dessen Stopp.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-093894fb98b018a6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-0ef3314a054f78f7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht keine Bundesprogramme zum Schutz Jugendlicher im Internet vor.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht keine Bundesprogramme zum Schutz Jugendlicher im Internet vor.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-0ef3314a054f78f7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-10f66b60c215d93e",
+          "disposition": "no_supported_link",
+          "rationale": "Die Umweltvorschriften im Gesetz untersagen nicht den Einsatz von Glyphosat in der Landwirtschaft.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Umweltvorschriften im Gesetz untersagen nicht den Einsatz von Glyphosat in der Landwirtschaft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-10f66b60c215d93e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1202000f6c12d216",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Wohnungsbauinvestitionen oder jährlichen Wohnungsbauzahlen.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Wohnungsbauinvestitionen oder jährlichen Wohnungsbauzahlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-1202000f6c12d216",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die Krisenausnahmen betreffen Emissionsgrenzwerte, nicht Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Krisenausnahmen betreffen Emissionsgrenzwerte, nicht Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-18e6c59978d853a3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur personellen Ausstattung von Behörden für die Terrorismusbekämpfung.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur personellen Ausstattung von Behörden für die Terrorismusbekämpfung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-18e6c59978d853a3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-20c1cc00687edbe6",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Dekarbonisierung von Industrieanlagen weiten den EU-Emissionshandel nicht auf weitere Sektoren oder Staaten aus.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regelungen zur Dekarbonisierung von Industrieanlagen weiten den EU-Emissionshandel nicht auf weitere Sektoren oder Staaten aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-20c1cc00687edbe6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-23ffd397cdd4c65f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften führen keine Emissionsgrenzwerte für den Nord-Ostsee-Kanal ein.",
+          "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0b5da9b5931f7d85777ae70c8354f6507d93120911403531261800233c2cef2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften führen keine Emissionsgrenzwerte für den Nord-Ostsee-Kanal ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-23ffd397cdd4c65f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-26470a22bc29709a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Industrieemissionen; eine dokumentierte Prüfung von EU-Schüler:innenaustauschen ist darin nicht vorgesehen.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Industrieemissionen; eine dokumentierte Prüfung von EU-Schüler:innenaustauschen ist darin nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen, dass der Bund die Steigerung der möglichen Schüler:innenaustausche mit anderen EU-Ländern prüft.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-26470a22bc29709a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-289172b9e48412ee",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Industrieanlagen und Abwasser, nicht die Nutzung oder Wiedervernässung von Niederungen und Moorflächen.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Vorschriften betreffen Industrieanlagen und Abwasser, nicht die Nutzung oder Wiedervernässung von Niederungen und Moorflächen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Nutzung von Niederungen und Moorflächen anpassen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-289172b9e48412ee",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+          "disposition": "missing_context",
+          "rationale": "Der Zweck der geforderten Mindestmengenregelung ist im Kriterium nicht benannt; ohne diesen Bezug lässt sich die Anwendbarkeit des Gesetzes nicht beurteilen.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Zweck der geforderten Mindestmengenregelung ist im Kriterium nicht benannt; ohne diesen Bezug lässt sich die Anwendbarkeit des Gesetzes nicht beurteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "es darf dafür keine Mindestmengenregelung geben.",
+            "caveats": [
+              "Der Bezug von „dafür“ fehlt."
+            ],
+            "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen zur Veröffentlichung von Industrieunterlagen begrenzen nicht Meinungs- oder Pressefreiheit nach Maßgabe der Rechte anderer.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen zur Veröffentlichung von Industrieunterlagen begrenzen nicht Meinungs- oder Pressefreiheit nach Maßgabe der Rechte anderer.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Recht auf freie Meinungsäußerung und die Pressefreiheit dürfen nur dort ihre Grenzen finden, wo andere Menschen dadurch in ihren Rechten beeinträchtigt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-32c5d17cbfc4ba42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3a2f7786464151af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Erbschaftsteuer oder Freibeträgen für kleine und mittlere Unternehmen.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Erbschaftsteuer oder Freibeträgen für kleine und mittlere Unternehmen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "kleine und mittlere Unternehmen durch großzügige Freibeträge schützen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3a2f7786464151af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3df67b777b422bdf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt keine finanzielle Entlastung für Haushalte bei CO₂-steuerbedingten Kosten um.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz setzt keine finanzielle Entlastung für Haushalte bei CO₂-steuerbedingten Kosten um.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Menschen finanziell entlastet werden",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3df67b777b422bdf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44bf77e6712f25c0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Kostenbewertung im Gesetz betrifft Industrieemissionsgrenzwerte, nicht Kosten-Nutzen-Analysen von Verkehrsprojekten oder deren Resilienz.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Kostenbewertung im Gesetz betrifft Industrieemissionsgrenzwerte, nicht Kosten-Nutzen-Analysen von Verkehrsprojekten oder deren Resilienz.",
+            "law_passage_id": "bgbl-1-2026-304-p-8a60625e79059fdb",
+            "law_quote": "Die Kosten für die Einhaltung der BVT-assoziierten Emissionsgrenzwerte umfassen Investitions- und Betriebsaufwendungen.",
+            "criterion_quote": "Resilienz bei der Kosten-Nutzen-Analyse von Verkehrsprojekten berücksichtigt.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44bf77e6712f25c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Erhebung, Verarbeitung oder Nutzung persönlicher Daten bei öffentlichen Aufgaben.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Erhebung, Verarbeitung oder Nutzung persönlicher Daten bei öffentlichen Aufgaben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Erhebung, Verarbeitung und Nutzung persönlicher Daten im Rahmen öffentlicher Aufgaben nicht privatisiert",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-4602137315fadb99",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine externe Prüfung von Bundesgesetzen oder Verordnungen auf Auswirkungen auf Jugendliche ein.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine externe Prüfung von Bundesgesetzen oder Verordnungen auf Auswirkungen auf Jugendliche ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine externe Stelle alle Gesetzesvorhaben und Verordnungen des Bundes auf ihre Auswirkungen auf Jugendliche überprüfen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-4602137315fadb99",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Artikel 6 des Grundgesetzes nicht und enthält keine Regelung zu Kinderrechten im Grundgesetz.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Artikel 6 des Grundgesetzes nicht und enthält keine Regelung zu Kinderrechten im Grundgesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine eigenständige Formulierung unter Artikel 6 des Grundgesetzes",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-54c2ad8a26f1b364",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Industrieemissionen und Abwasser, nicht das Verfahren zur Allgemeinverbindlicherklärung von Tarifverträgen.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Industrieemissionen und Abwasser, nicht das Verfahren zur Allgemeinverbindlicherklärung von Tarifverträgen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das Verfahren zur Allgemeinverbindlichkeitserklärung geltender Tarifverträge erleichtern",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-54c2ad8a26f1b364",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-54f89978cc963904",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stellt keine Bundesmittel für die Vereinbarkeit von Tourismus und Naturschutz bereit.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stellt keine Bundesmittel für die Vereinbarkeit von Tourismus und Naturschutz bereit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Der Bund muss mehr Mittel zur Verfügung stellen, um den Tourismus mit dem Naturschutz vereinbar zu machen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-54f89978cc963904",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-551ef2d29369a476",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Industrieemissionen, nicht den Zeitplan oder die sozialverträgliche Umsetzung eines Kohleausstiegs.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Industrieemissionen, nicht den Zeitplan oder die sozialverträgliche Umsetzung eines Kohleausstiegs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "den Kohleausstieg sozialverträglich und schneller als bisher beabsichtigt umsetzen, idealerweise bis 2030",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-551ef2d29369a476",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-561fc7732c67796c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz schafft keine Förderprogramme für Gebäudesanierungen und enthält keine Förderbedingungen zugunsten von Mieter:innen oder Menschen mit geringem Einkommen.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz schafft keine Förderprogramme für Gebäudesanierungen und enthält keine Förderbedingungen zugunsten von Mieter:innen oder Menschen mit geringem Einkommen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "gezielte Förderprogramme für energieeffiziente Gebäudesanierungen",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-561fc7732c67796c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-58aa5c7dd3b1b371",
+          "disposition": "no_supported_link",
+          "rationale": "Die Abwasseranforderungen des Gesetzes modernisieren keine Düngeverordnung und regeln keine Stickstoff- oder Phosphatüberschüsse aus Düngung.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Abwasseranforderungen des Gesetzes modernisieren keine Düngeverordnung und regeln keine Stickstoff- oder Phosphatüberschüsse aus Düngung.",
+            "law_passage_id": "bgbl-1-2026-304-p-911aad12010e8be6",
+            "law_quote": "Eine Erlaubnis für das Einleiten von Abwasser in Gewässer (Direkteinleitung) darf nur erteilt werden, wenn",
+            "criterion_quote": "eine moderne Düngeverordnung, die Düngeüberschüsse aus Stickstoff und Phosphat reduziert",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-58aa5c7dd3b1b371",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-592c01b58614ffb2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz begrenzt Einleitungen von Abwasser aus erfassten Anlagen und kann Maßnahmen zum Schutz von Trinkwassereinzugsgebieten vorsehen; eine Verringerung von Düngeeinträgen ins Grundwasser regelt es nicht.",
+          "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "555d48911c6c6152f303eeaea0daefda9f7b940d3ab891ba35b81713766dad64"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz begrenzt Einleitungen von Abwasser aus erfassten Anlagen und kann Maßnahmen zum Schutz von Trinkwassereinzugsgebieten vorsehen; eine Verringerung von Düngeeinträgen ins Grundwasser regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-304-p-6bfae507b31ea51f",
+            "law_quote": "In der Erlaubnis sind, soweit erforderlich, auch angemessene Maßnahmen zum Schutz von Trinkwassereinzugsgebieten nach § 2 Nummer 1 der Trinkwassereinzugsgebieteverordnung festzulegen.",
+            "criterion_quote": "Wir wollen die Düngeeinträge ins Grundwasser minimieren.",
+            "caveats": [
+              "Die gesetzlichen Vorgaben betreffen Abwassereinleitungen und nicht ausdrücklich Einträge aus Düngung."
+            ],
+            "criterion_id": "ssw-2025-ac-592c01b58614ffb2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5a184a3d6951b871",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Industrieemissionen und enthält keine Umsetzung einer EU-Meeresbeckenstrategie für die Nordsee.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Industrieemissionen und enthält keine Umsetzung einer EU-Meeresbeckenstrategie für die Nordsee.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5a184a3d6951b871",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5b5a1c3fea667e3c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Kosten oder Preisen des öffentlichen Verkehrs.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Kosten oder Preisen des öffentlichen Verkehrs.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5b5a1c3fea667e3c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5e9dff3ed7219df0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Emissionsvorschriften betreffen Industrieanlagen, nicht Emissionsgrenzwerte für die Schifffahrt.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Emissionsvorschriften betreffen Industrieanlagen, nicht Emissionsgrenzwerte für die Schifffahrt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5e9dff3ed7219df0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6131edd61e344217",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz stattet Behörden nicht mit Personal oder technischen Geräten zur Terrorismusbekämpfung aus.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz stattet Behörden nicht mit Personal oder technischen Geräten zur Terrorismusbekämpfung aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6131edd61e344217",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-68f9ed6446c7a4f1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Mindestlohnregelung und setzt keinen Stundenlohn fest.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Mindestlohnregelung und setzt keinen Stundenlohn fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-68f9ed6446c7a4f1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-6be35440da8f38f9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt keine langfristigen, verbindlichen Klimaziele; es regelt Umweltmanagement und Emissionen bestimmter Anlagen.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz setzt keine langfristigen, verbindlichen Klimaziele; es regelt Umweltmanagement und Emissionen bestimmter Anlagen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-6be35440da8f38f9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-703873682ba080d7",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Ahndung von Verstößen gegen EU-Grundwerte durch Mitgliedstaaten.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Ahndung von Verstößen gegen EU-Grundwerte durch Mitgliedstaaten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-703873682ba080d7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-724c0701ec58d2b7",
+          "disposition": "no_supported_link",
+          "rationale": "Für bestimmte Vorhaben verlangt das Gesetz Abfallvermeidungs-, Wiederverwendungs- und Recyclingmaßnahmen; Anreize für Unternehmen zur kreislaufgerechten Produktgestaltung schafft es nicht.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Für bestimmte Vorhaben verlangt das Gesetz Abfallvermeidungs-, Wiederverwendungs- und Recyclingmaßnahmen; Anreize für Unternehmen zur kreislaufgerechten Produktgestaltung schafft es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-724c0701ec58d2b7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-741bc127c81b9d76",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu einem bundesweiten oder europäisch abgestimmten Kormoranmanagement.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu einem bundesweiten oder europäisch abgestimmten Kormoranmanagement.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-741bc127c81b9d76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Sozialleistungen noch deren digitale Beantragung.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Sozialleistungen noch deren digitale Beantragung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-79b73da515d0e366",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine landwirtschaftlichen Förderregelungen oder Zuschüsse zur Transformation von Betrieben.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine landwirtschaftlichen Förderregelungen oder Zuschüsse zur Transformation von Betrieben.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-79b73da515d0e366",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-80c7c920890f5d0a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz legt weder Klimaneutralität bis 2035 noch einen anderen Zeitpunkt für Deutschlands Klimaneutralität fest.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz legt weder Klimaneutralität bis 2035 noch einen anderen Zeitpunkt für Deutschlands Klimaneutralität fest.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-80c7c920890f5d0a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-822c68555767cede",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Mindestlohnregelung und ändert keine Ausnahmen für Jugendliche.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Mindestlohnregelung und ändert keine Ausnahmen für Jugendliche.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-822c68555767cede",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-833b1d36ac7d1c58",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Emissionsüberwachung und Umweltmanagement, nicht Untersuchungsmethoden oder früh greifende Warnstufen.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Emissionsüberwachung und Umweltmanagement, nicht Untersuchungsmethoden oder früh greifende Warnstufen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-833b1d36ac7d1c58",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8387d9a51656d471",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Umwelt- und Energieanforderungen für bestimmte Anlagen, nennt aber weder das Pariser Abkommen noch das 1,5-Grad-Ziel als Zweck oder Maßstab.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Das Gesetz setzt Umwelt- und Energieanforderungen für bestimmte Anlagen, nennt aber weder das Pariser Abkommen noch das 1,5-Grad-Ziel als Zweck oder Maßstab.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8387d9a51656d471",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-83922e99d4e5fd79",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Netzentgelte noch überschüssigen Abschaltstrom oder dessen Nutzung für Wasserstoff.",
+          "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94dcf68eb80695343230180f8013d1f4f627f8c9b1f33125c25cf978eee7737b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Netzentgelte noch überschüssigen Abschaltstrom oder dessen Nutzung für Wasserstoff.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-83922e99d4e5fd79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
       "law_id": "bgbl-1-2026-33",
       "analysis_sha256": "6e78cde9d54c4b675857280ebca3a0ad56864e311e01b765e026c5e7f6e44e25",
       "status": "completed",
@@ -138333,8 +139876,8 @@
     },
     {
       "law_id": "bgbl-1-2026-47",
-      "analysis_sha256": "745609ac6258daba3b9480584c2df2b593fd3c20b08ebb4c7945d0a0c03ae819",
-      "status": "completed",
+      "analysis_sha256": "389a650dfb5c790afd5f08354b9f4779a3e93a8d7ab6c4fb36beff9ac528cc07",
+      "status": "partial",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0604f581e0633eec",
@@ -138397,9 +139940,10 @@
         "ssw-2025-ac-f1196728d3254992",
         "ssw-2025-ac-f23e2ed4575dedc6",
         "ssw-2025-ac-f343474b48b36a87",
-        "ssw-2025-ac-fa92cffedba14ff3"
+        "ssw-2025-ac-fa92cffedba14ff3",
+        "ssw-2025-ac-fa94d276513dbe5c"
       ],
-      "omitted_count": 950,
+      "omitted_count": 949,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0604f581e0633eec",
@@ -181640,8 +183184,8 @@
     },
     {
       "law_id": "bgbl-2-2026-60",
-      "analysis_sha256": "f09f71358c31a31fed870e7b54f0bde749f1c17239ca339c0144c51ee88bb825",
-      "status": "completed",
+      "analysis_sha256": "a9ebdb04d27a1369b7b8a4659d61fce2cebf7b6eca15bfdd290518e345917c9c",
+      "status": "partial",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-042e609909ede8ff",
@@ -181742,6 +183286,7 @@
         "ssw-2025-ac-983bfbbbb9e24df2",
         "ssw-2025-ac-9c28fe48f0da8906",
         "ssw-2025-ac-9cd757ff55217e11",
+        "ssw-2025-ac-9e917e7e0d14ce96",
         "ssw-2025-ac-a173c563180614ef",
         "ssw-2025-ac-a1bf7ef323b5c4e2",
         "ssw-2025-ac-a45ffaa0e9812241",
@@ -181803,7 +183348,7 @@
         "ssw-2025-ac-fe8cedcc8e6be1ca",
         "ssw-2025-ac-ffb4a2f519fbadef"
       ],
-      "omitted_count": 853,
+      "omitted_count": 852,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-042e609909ede8ff",
@@ -189020,8 +190565,8 @@
     },
     {
       "law_id": "bgbl-2-2026-8",
-      "analysis_sha256": "99e6f0b61897db9f9b291dc613a6da2bf0a85db1b8eb2e0529a9c849674414ee",
-      "status": "completed",
+      "analysis_sha256": "1a9a6091178755858b40705e76e24b8dd1e3cad9b71555a43414d08de993d684",
+      "status": "partial",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-001830851a70035a",
@@ -189060,6 +190605,7 @@
         "ssw-2025-ac-1731f721265e6625",
         "ssw-2025-ac-17fb234dda93d79e",
         "ssw-2025-ac-1820261636fbb1af",
+        "ssw-2025-ac-18220df1bf9a7235",
         "ssw-2025-ac-185f373d35a4cd7c",
         "ssw-2025-ac-18e6c59978d853a3",
         "ssw-2025-ac-18f3695d55f9efc2",
@@ -189073,6 +190619,7 @@
         "ssw-2025-ac-1c02489fe2ce57ce",
         "ssw-2025-ac-1cecb7468df95960",
         "ssw-2025-ac-1d17a5a66d100e63",
+        "ssw-2025-ac-1e81e1d982eda8f3",
         "ssw-2025-ac-1ef19e6e4c7090a6",
         "ssw-2025-ac-1f1925b5861358f3",
         "ssw-2025-ac-1f42ac8f3d67f325",
@@ -189088,6 +190635,7 @@
         "ssw-2025-ac-26204011d2d63d24",
         "ssw-2025-ac-26470a22bc29709a",
         "ssw-2025-ac-2654f388ebc6e686",
+        "ssw-2025-ac-28bf32bebed4c5ac",
         "ssw-2025-ac-2a0c4922c3aa14d5",
         "ssw-2025-ac-2a9cdbe824c451b2",
         "ssw-2025-ac-2acb10fa6de99f7b",
@@ -189152,6 +190700,7 @@
         "ssw-2025-ac-4cc55ddbce49343a",
         "ssw-2025-ac-4d07fa35f59ebaa9",
         "ssw-2025-ac-4dbedb87b83a9be8",
+        "ssw-2025-ac-4e89e4f404601450",
         "ssw-2025-ac-5106bb790aac1e50",
         "ssw-2025-ac-512a579e4f2cc823",
         "ssw-2025-ac-51c34f41809f53c1",
@@ -189214,6 +190763,7 @@
         "ssw-2025-ac-71eacdd141a56df0",
         "ssw-2025-ac-7215224dc3ced921",
         "ssw-2025-ac-724c0701ec58d2b7",
+        "ssw-2025-ac-72f54553a8de86c1",
         "ssw-2025-ac-741bc127c81b9d76",
         "ssw-2025-ac-74a33e9b4cf0c2e1",
         "ssw-2025-ac-74ca7439fac9d8ca",
@@ -189285,6 +190835,7 @@
         "ssw-2025-ac-9730d1d678b06990",
         "ssw-2025-ac-97cde1710b5eba1e",
         "ssw-2025-ac-99893cb65da2ff4b",
+        "ssw-2025-ac-9a2b1d7e44afb5d3",
         "ssw-2025-ac-9a614b36fc559b0c",
         "ssw-2025-ac-9a80c2c9fdba1f71",
         "ssw-2025-ac-9b79b5f6c2ce4e73",
@@ -189444,7 +190995,7 @@
         "ssw-2025-ac-fec82de00d54551c",
         "ssw-2025-ac-ffda7ee808cda2d0"
       ],
-      "omitted_count": 592,
+      "omitted_count": 586,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-001830851a70035a",
@@ -201834,20 +203385,20 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8264,
+    "calls": 8340,
     "cache_hits": 326,
     "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.615708,
-    "reported_cost_calls": 7581,
+    "reported_cost_usd": 31.706476,
+    "reported_cost_calls": 7657,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.591552,
-    "prompt_tokens": 82421725,
-    "completion_tokens": 14463609,
+    "budget_exposure_usd": 35.68232,
+    "prompt_tokens": 83306371,
+    "completion_tokens": 14608370,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
@@ -201869,10 +203420,10 @@
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4341,
-        "reported_cost_usd": 5.0675946899999955,
+        "calls": 4417,
+        "reported_cost_usd": 5.158362512499996,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 6.938893903907228e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

@@ -129,6 +129,7 @@
     "bgbl-1-2026-293",
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
+    "bgbl-1-2026-304",
     "bgbl-1-2026-33",
     "bgbl-1-2026-34",
     "bgbl-1-2026-39",
@@ -38882,7 +38883,7 @@
     },
     {
       "law_id": "bgbl-1-2025-343",
-      "analysis_sha256": "122426a4f6e2a6b6443dd8bde1b417173254cc37d5045a9d548951898c1dd390",
+      "analysis_sha256": "98c9981f7b252dd92f40ad83aa8cca6e7ed95d0e83cff6a5a99d62287ad9f8a0",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -38904,10 +38905,12 @@
         "afd-2025-ac-5b826e6a3c46fe3e",
         "afd-2025-ac-612fd76acae4a6ab",
         "afd-2025-ac-6fa734dee9fad797",
+        "afd-2025-ac-745d0369f0a2d8c9",
         "afd-2025-ac-8c34baf26577e822",
         "afd-2025-ac-9941383ffd7a2c76",
         "afd-2025-ac-afc7f6a21b1b231c",
         "afd-2025-ac-b9300c2729cf6d78",
+        "afd-2025-ac-bb0388e490efdb58",
         "afd-2025-ac-c316f26fcdddc5d0",
         "afd-2025-ac-c3e7024a97dcaaa2",
         "afd-2025-ac-c44f79c4a10cfd42",
@@ -38916,7 +38919,7 @@
         "afd-2025-ac-d71fe8429512e925",
         "afd-2025-ac-e6a7205977ccf50d"
       ],
-      "omitted_count": 654,
+      "omitted_count": 652,
       "pairs": [
         {
           "criterion_id": "afd-2025-ac-00e85309c1e9e0b6",
@@ -39415,6 +39418,35 @@
           "verification": null
         },
         {
+          "criterion_id": "afd-2025-ac-745d0369f0a2d8c9",
+          "disposition": "missing_context",
+          "rationale": "§ 21 erlaubt zwar begrenzte Zulagen nach § 45 BBesG für Beamtinnen und Beamte sowie Soldatinnen und Soldaten, nennt aber weder Überstunden noch Polizei- oder Rettungskräfte; der Inhalt der verwiesenen Vorschrift fehlt.",
+          "input_sha256": "6d81a6a004f46c999ec53b9b9d8ec8b7734399033a858a128aaa8f0700970da2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d81a6a004f46c999ec53b9b9d8ec8b7734399033a858a128aaa8f0700970da2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 21 erlaubt zwar begrenzte Zulagen nach § 45 BBesG für Beamtinnen und Beamte sowie Soldatinnen und Soldaten, nennt aber weder Überstunden noch Polizei- oder Rettungskräfte; der Inhalt der verwiesenen Vorschrift fehlt.",
+            "law_passage_id": "bgbl-1-2025-343-p-7e6858556292b8f3",
+            "law_quote": "Innerhalb eines Kapitels dürfen Zulagen nach § 45 des Bundesbesoldungsgesetzes für Beamtinnen und Beamte bis zur Höhe von 0,1 Prozent der veranschlagten Ausgaben der Titel 422 .1 geleistet werden.",
+            "criterion_quote": "sowie weitere Zulagen für Überstunden",
+            "caveats": [
+              "Die rechtliche Grundlage und Anwendbarkeit der Zulagen nach § 45 BBesG sind im bereitgestellten Material nicht enthalten."
+            ],
+            "criterion_id": "afd-2025-ac-745d0369f0a2d8c9",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "afd-2025-ac-8c34baf26577e822",
           "disposition": "missing_context",
           "rationale": "Die Auszüge regeln nicht, wie Präsidien im Parlamentsbetrieb bestellt werden; der übrige Gesetzestext fehlt.",
@@ -39526,6 +39558,35 @@
               "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
             ],
             "criterion_id": "afd-2025-ac-b9300c2729cf6d78",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bb0388e490efdb58",
+          "disposition": "missing_context",
+          "rationale": "§ 21 erlaubt begrenzte Zulagen nach § 45 BBesG, führt aber keine Sondereinsätze oder Zulagen für Polizei- und Rettungskräfte an; der Inhalt der verwiesenen Vorschrift fehlt.",
+          "input_sha256": "6d81a6a004f46c999ec53b9b9d8ec8b7734399033a858a128aaa8f0700970da2",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "6d81a6a004f46c999ec53b9b9d8ec8b7734399033a858a128aaa8f0700970da2"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "§ 21 erlaubt begrenzte Zulagen nach § 45 BBesG, führt aber keine Sondereinsätze oder Zulagen für Polizei- und Rettungskräfte an; der Inhalt der verwiesenen Vorschrift fehlt.",
+            "law_passage_id": "bgbl-1-2025-343-p-7e6858556292b8f3",
+            "law_quote": "Innerhalb eines Kapitels dürfen Zulagen nach § 45 des Bundesbesoldungsgesetzes für Beamtinnen und Beamte bis zur Höhe von 0,1 Prozent der veranschlagten Ausgaben der Titel 422 .1 geleistet werden.",
+            "criterion_quote": "und Sondereinsätze für Polizei und Rettungskräfte.",
+            "caveats": [
+              "Die rechtliche Grundlage und Anwendbarkeit der Zulagen nach § 45 BBesG sind im bereitgestellten Material nicht enthalten."
+            ],
+            "criterion_id": "afd-2025-ac-bb0388e490efdb58",
             "disposition": "missing_context"
           },
           "verification": null
@@ -85014,7 +85075,7 @@
     },
     {
       "law_id": "bgbl-1-2026-210a",
-      "analysis_sha256": "4b0cbd4e3acac8327de2317b6689653aa9d585b7a4f212aafe42326adcc8d3a7",
+      "analysis_sha256": "c4343aac3e30a11066aaeb8bd99f0531115b9a4fbf96388a4553ed908a8a3f0f",
       "status": "completed",
       "eligible_count": 683,
       "candidate_ids": [
@@ -85034,6 +85095,7 @@
         "afd-2025-ac-305ab126a08b3e38",
         "afd-2025-ac-314eaf2a6654c742",
         "afd-2025-ac-35522939359f038f",
+        "afd-2025-ac-35625392fb84714d",
         "afd-2025-ac-3c32e29d5e7509ef",
         "afd-2025-ac-3d4fabf00ca59d44",
         "afd-2025-ac-3ecb4e06969a95a8",
@@ -85072,7 +85134,7 @@
         "afd-2025-ac-e989b6b0054e67dd",
         "afd-2025-ac-edfc43e7f652efc2"
       ],
-      "omitted_count": 630,
+      "omitted_count": 629,
       "pairs": [
         {
           "criterion_id": "afd-2025-ac-0279b7be6c194326",
@@ -85504,6 +85566,33 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "afd-2025-ac-35522939359f038f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-35625392fb84714d",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Vorschriften betreffen Kapazitätsausschreibungen für die Stromversorgung; eine Verlagerung der Zuständigkeit für den Gewässerschutz ist darin nicht belegt.",
+          "input_sha256": "fbfc50107e434d4a9fdb636f828a7f74ff78a9a1e8a642aeb6b430d4a496db57",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "fbfc50107e434d4a9fdb636f828a7f74ff78a9a1e8a642aeb6b430d4a496db57"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Vorschriften betreffen Kapazitätsausschreibungen für die Stromversorgung; eine Verlagerung der Zuständigkeit für den Gewässerschutz ist darin nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-210a-p-7e291984dd694ac3",
+            "law_quote": "Nach diesem Gesetz werden die folgenden Ausschreibungen zur Bereitstellung von Kapazität für den Erbringungszeitraum durchgeführt:",
+            "criterion_quote": "Der Gewässerschutz gehört nicht in die Hände der EU, sondern nach\n\nDeutschland und in die einzelnen Bundesländer.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-35625392fb84714d",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -108255,6 +108344,1139 @@
       ]
     },
     {
+      "law_id": "bgbl-1-2026-304",
+      "analysis_sha256": "ea496544fd9179a754336aa3b9069ed493052f6d8291f96e591ae227b5625006",
+      "status": "completed",
+      "eligible_count": 683,
+      "candidate_ids": [
+        "afd-2025-ac-0279b7be6c194326",
+        "afd-2025-ac-034d554252504e2e",
+        "afd-2025-ac-04a21fe7b2c76abd",
+        "afd-2025-ac-0c023dbdda078d2f",
+        "afd-2025-ac-25e51b6a8ad7ee2a",
+        "afd-2025-ac-263e5eae108f909e",
+        "afd-2025-ac-2b46043d805de451",
+        "afd-2025-ac-2f31f275a64bb87b",
+        "afd-2025-ac-305ab126a08b3e38",
+        "afd-2025-ac-3ecb4e06969a95a8",
+        "afd-2025-ac-41ae06ae27ccc7a7",
+        "afd-2025-ac-5aeb82535522e134",
+        "afd-2025-ac-5c04828dfb3f4e19",
+        "afd-2025-ac-67d8492243814ad2",
+        "afd-2025-ac-689debb2f1541896",
+        "afd-2025-ac-6c6bc5145e42d7f3",
+        "afd-2025-ac-71742a7bdaa80d32",
+        "afd-2025-ac-755932e3054f13dd",
+        "afd-2025-ac-90efa2e8cb08f1ab",
+        "afd-2025-ac-9941383ffd7a2c76",
+        "afd-2025-ac-9bfa08676a910982",
+        "afd-2025-ac-9f0acd96d213e216",
+        "afd-2025-ac-a28d46aa457d59e2",
+        "afd-2025-ac-a295803a7bc56c49",
+        "afd-2025-ac-a69c870856dff6c0",
+        "afd-2025-ac-add19fe6acad6729",
+        "afd-2025-ac-ae7963ac2593edcb",
+        "afd-2025-ac-b2e7f7af5bfe0173",
+        "afd-2025-ac-b3fe68e6744d44b8",
+        "afd-2025-ac-bae7e231ad8376d5",
+        "afd-2025-ac-c44f79c4a10cfd42",
+        "afd-2025-ac-c726cd97a2caf7e2",
+        "afd-2025-ac-d1ab034443235036",
+        "afd-2025-ac-daaad3b8f19659fc",
+        "afd-2025-ac-df5ffaf63e53109a",
+        "afd-2025-ac-e5a358546e6934a8",
+        "afd-2025-ac-e6a7205977ccf50d",
+        "afd-2025-ac-e71e7ae531c6cbdd",
+        "afd-2025-ac-e989b6b0054e67dd",
+        "afd-2025-ac-e9db001fb39bf890"
+      ],
+      "omitted_count": 643,
+      "pairs": [
+        {
+          "criterion_id": "afd-2025-ac-0279b7be6c194326",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen zu Industrieanlagen enthalten keine Strafvorschrift für öffentliche Kalifatsforderungen.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen zu Industrieanlagen enthalten keine Strafvorschrift für öffentliche Kalifatsforderungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die von Teilen der in Deutschland lebenden Muslime auf Veranstaltungen und Demonstrationen erhobene öffentliche Forderung nach der Einrichtung eines Kalifats … ist unter Strafe zu stellen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0279b7be6c194326",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-034d554252504e2e",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ändert zwar das UVP-Gesetz, doch der vorgelegte Auszug zur Änderung der Anlage 1 zeigt nicht, ob Ersatzbauten von der Umweltverträglichkeitsprüfung ausgenommen werden.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.76,
+            "rationale": "Das Gesetz ändert zwar das UVP-Gesetz, doch der vorgelegte Auszug zur Änderung der Anlage 1 zeigt nicht, ob Ersatzbauten von der Umweltverträglichkeitsprüfung ausgenommen werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dem Wegfall der Umweltverträglichkeitsprüfung bei Ersatzbauten.",
+            "caveats": [
+              "Der einschlägige Inhalt der geänderten Anlage 1 ist im Auszug nicht enthalten."
+            ],
+            "criterion_id": "afd-2025-ac-034d554252504e2e",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-04a21fe7b2c76abd",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug nennt schriftliche Prüfungen als Teil von Zulassungs- und Bescheinigungsverfahren; welchen Zulassungsbereich und welche Gutachter dies betrifft, ist daraus nicht ersichtlich.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.92,
+            "rationale": "Der Auszug nennt schriftliche Prüfungen als Teil von Zulassungs- und Bescheinigungsverfahren; welchen Zulassungsbereich und welche Gutachter dies betrifft, ist daraus nicht ersichtlich.",
+            "law_passage_id": "bgbl-1-2026-304-p-ccb18a77e735145b",
+            "law_quote": "schriftliche Prüfungen allgemein oder für bestimmte Fachgebiete oder für bestimmte Zulassungsbereiche als unselbständigen Teil der Zulassungs- und Bescheinigungsverfahren",
+            "criterion_quote": "Die Anforderungen an Gutachten und Gutachter müssen klar und einheitlich definiert und durch ein Zulassungsverfahren sichergestellt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-04a21fe7b2c76abd",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen zu Industrieemissions- und Umweltrecht regeln keine Bezugsdauer des Arbeitslosengeldes.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen zu Industrieemissions- und Umweltrecht regeln keine Bezugsdauer des Arbeitslosengeldes.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Grundsätzlich soll der Anspruch auf Arbeitslosengeld für Personen, die ab 2026 erstmalig eine sozialversicherungspflichtige Beschäftigung aufnehmen, erst nach drei vollen Beitragsjahren eintreten und zunächst auf sechs Monate beschränkt werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-0c023dbdda078d2f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen legen kein deutsches Rentenniveau fest und enthalten keine Regelung zur Angleichung an westeuropäische Rentenniveaus.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen legen kein deutsches Rentenniveau fest und enthalten keine Regelung zur Angleichung an westeuropäische Rentenniveaus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "in mehreren Schritten das durchschnittliche Rentenniveau der westeuropäischen Länder zu erreichen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-25e51b6a8ad7ee2a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-263e5eae108f909e",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen zu Industrieanlagen enthalten keine Anspruchsvoraussetzung für Leistungen aus der Arbeitslosenversicherung.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen zu Industrieanlagen enthalten keine Anspruchsvoraussetzung für Leistungen aus der Arbeitslosenversicherung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Einen Anspruch auf Leistungen aus der Arbeitslosenversicherung soll nur haben, wer die Arbeitslosigkeit nicht selbst herbeigeführt hat.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-263e5eae108f909e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2b46043d805de451",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen zu Industrieanlagen und Umweltprüfungen schaffen kein System zur regionalen Überwachung oder Korrektur von Wildtierbeständen.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen zu Industrieanlagen und Umweltprüfungen schaffen kein System zur regionalen Überwachung oder Korrektur von Wildtierbeständen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Über aktives Management werden problematische Wildtier-Bestandsgrößen zeitnah regional überwacht und korrigiert werden können.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2b46043d805de451",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelungen zur Durchführung von Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelungen zur Durchführung von Volksabstimmungen nach Artikel 20 Absatz 2 GG.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die rechtlichen Voraussetzungen zur Durchführung der im Art. 20 Abs. 2 GG vorgesehenen Volksabstimmungen zu schaffen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-2f31f275a64bb87b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Industrieemissionen und Umweltrecht, nicht die Überprüfung oder Streichung von Corona-Gesetzen und -Richtlinien.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen Industrieemissionen und Umweltrecht, nicht die Überprüfung oder Streichung von Corona-Gesetzen und -Richtlinien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die im Zusammenhang mit der Corona-Krise geänderten Gesetze und Richtlinien sind zu überprüfen und gegebenenfalls zu streichen.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-305ab126a08b3e38",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen enthalten keine Sprachvorgaben für Migranten oder Fristen zum Erwerb des B2-Niveaus.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen enthalten keine Sprachvorgaben für Migranten oder Fristen zum Erwerb des B2-Niveaus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "mindestens auf B2-Niveau, in angemessener Zeit, in der Regel innerhalb von 2 Jahren, in Ausnahmefällen innerhalb von 5 Jahren",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-3ecb4e06969a95a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-41ae06ae27ccc7a7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Industrieemissionen und Umweltmanagement, nicht die Überwachung des Gentechnikeinsatzes in der Landwirtschaft.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Vorschriften betreffen Industrieemissionen und Umweltmanagement, nicht die Überwachung des Gentechnikeinsatzes in der Landwirtschaft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "der Einsatz von Gentechnik in der landwirtschaftlichen Praxis streng überwacht",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-41ae06ae27ccc7a7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5aeb82535522e134",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Genehmigungen und Anforderungen für Industrieanlagen; eine Reduzierung bürokratischer Vorschriften für Seehäfen ist nicht geregelt.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Genehmigungen und Anforderungen für Industrieanlagen; eine Reduzierung bürokratischer Vorschriften für Seehäfen ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "bürokratischen Vorschriften, insbesondere von belastenden Klimaschutzbestimmungen",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5aeb82535522e134",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-5c04828dfb3f4e19",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorgabe zum Einsatz weniger gefährlicher Stoffe betrifft die Umweltleistung von Anlagen, ordnet aber keine evidenzbasierte Bewertung der Risiken einzelner Stoffe an.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Vorgabe zum Einsatz weniger gefährlicher Stoffe betrifft die Umweltleistung von Anlagen, ordnet aber keine evidenzbasierte Bewertung der Risiken einzelner Stoffe an.",
+            "law_passage_id": "bgbl-1-2026-304-p-99e75579e416e008",
+            "law_quote": "Einsatz weniger gefährlicher Stoffe, einschließlich des geringeren Einsatzes besonders besorgniserregender Stoffe",
+            "criterion_quote": "eine evidenzbasierte Bewertung der Risiken einzelner Stoffe",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-5c04828dfb3f4e19",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-67d8492243814ad2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Verlängerung der Regelstudienzeit für Studierende mit Kindern.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Verlängerung der Regelstudienzeit für Studierende mit Kindern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Für Studenten mit Kindern soll die Regelstudienzeit auf Antrag um bis zu 6 Semester verlängert werden.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-67d8492243814ad2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-689debb2f1541896",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Europäischen Charta der Regional- oder Minderheitensprachen.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen enthalten keine Regelung zur Europäischen Charta der Regional- oder Minderheitensprachen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "dass die Europäische Charta der Regional- oder Minderheitensprachen eingehalten wird.",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-689debb2f1541896",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-6c6bc5145e42d7f3",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorgabe zum Einsatz weniger gefährlicher Stoffe regelt keinen wiederholten Nutzencheck für Gentechnik in der landwirtschaftlichen Praxis.",
+          "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "94b979ce85e0d53414518167af30d432ef29682af1b66b37d8930c0121260b8d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die Vorgabe zum Einsatz weniger gefährlicher Stoffe regelt keinen wiederholten Nutzencheck für Gentechnik in der landwirtschaftlichen Praxis.",
+            "law_passage_id": "bgbl-1-2026-304-p-99e75579e416e008",
+            "law_quote": "Einsatz weniger gefährlicher Stoffe, einschließlich des geringeren Einsatzes besonders besorgniserregender Stoffe",
+            "criterion_quote": "stets auf seinen tatsächlichen Nutzen überprüft werden",
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-6c6bc5145e42d7f3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu Industrieemissionen und Krisenabweichungen bei Anlagen; eine Überprüfung Corona-bedingt geänderter Gesetze oder Richtlinien ist nicht geregelt.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu Industrieemissionen und Krisenabweichungen bei Anlagen; eine Überprüfung Corona-bedingt geänderter Gesetze oder Richtlinien ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-71742a7bdaa80d32",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-755932e3054f13dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Industrieanlagen und Umweltgenehmigungen; zur Duldung oder zu Aufenthaltsrechten enthält der Text keine Regelung.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Industrieanlagen und Umweltgenehmigungen; zur Duldung oder zu Aufenthaltsrechten enthält der Text keine Regelung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-755932e3054f13dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Industrieemissionen, nicht biologische Altersfeststellungen oder die Anwendung des Jugendstrafrechts.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Industrieemissionen, nicht biologische Altersfeststellungen oder die Anwendung des Jugendstrafrechts.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-90efa2e8cb08f1ab",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Umweltanforderungen für Anlagen; eine Zuweisung staatlicher Finanzierung nach dem Konnexitätsprinzip ist nicht geregelt.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Umweltanforderungen für Anlagen; eine Zuweisung staatlicher Finanzierung nach dem Konnexitätsprinzip ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9941383ffd7a2c76",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9bfa08676a910982",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine asylrechtlichen Regelungen oder Verfahren für Personen aus Herkunftsländern.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine asylrechtlichen Regelungen oder Verfahren für Personen aus Herkunftsländern.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9bfa08676a910982",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-9f0acd96d213e216",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält Umweltanforderungen für Industrieanlagen, aber keine Regelungen zur Haltung von Rindern oder deren Benachteiligung gegenüber Laufställen.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält Umweltanforderungen für Industrieanlagen, aber keine Regelungen zur Haltung von Rindern oder deren Benachteiligung gegenüber Laufställen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-9f0acd96d213e216",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a28d46aa457d59e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zu Industrieemissionen und Genehmigungen; Schulpflicht und Bildungspflicht werden nicht behandelt.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zu Industrieemissionen und Genehmigungen; Schulpflicht und Bildungspflicht werden nicht behandelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a28d46aa457d59e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a295803a7bc56c49",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Umweltgenehmigungen und Anlagenüberwachung, nicht die parlamentarische Kontrolle durch Fraktionen.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Umweltgenehmigungen und Anlagenüberwachung, nicht die parlamentarische Kontrolle durch Fraktionen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a295803a7bc56c49",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-a69c870856dff6c0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Industrieemissionen und Genehmigungen; eine Priorisierung von Rückführungen ist nicht vorgesehen.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Industrieemissionen und Genehmigungen; eine Priorisierung von Rückführungen ist nicht vorgesehen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-a69c870856dff6c0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-add19fe6acad6729",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Umweltanforderungen und Überwachung von Industrieanlagen, nicht Kabotage- oder Sozialvorschriften für ausländische Spediteure oder die Nutzung von Maut- und Fahrtenschreiberdaten hierfür.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Umweltanforderungen und Überwachung von Industrieanlagen, nicht Kabotage- oder Sozialvorschriften für ausländische Spediteure oder die Nutzung von Maut- und Fahrtenschreiberdaten hierfür.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-add19fe6acad6729",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu staatlichen Einzahlungen in ETF- oder Aktienfonds-Sparpläne für Kinder.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu staatlichen Einzahlungen in ETF- oder Aktienfonds-Sparpläne für Kinder.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-ae7963ac2593edcb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b2e7f7af5bfe0173",
+          "disposition": "no_supported_link",
+          "rationale": "Der Text macht bestimmte Genehmigungsaktualisierungen im Umweltbereich zugänglich; eine allgemeine Veröffentlichung von Entscheidungen in eigener Sache regelt er nicht.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Text macht bestimmte Genehmigungsaktualisierungen im Umweltbereich zugänglich; eine allgemeine Veröffentlichung von Entscheidungen in eigener Sache regelt er nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b2e7f7af5bfe0173",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
+          "disposition": "no_supported_link",
+          "rationale": "Für Umweltmanagementsysteme von Industrieanlagen werden unter anderem Ziele zur Nutzung und Erzeugung erneuerbarer Energien erwähnt; ein Nachweis für Erzeugungsanlagen mit Ausschluss von Vorrangeinspeisung und Subvention wird nicht verlangt.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Für Umweltmanagementsysteme von Industrieanlagen werden unter anderem Ziele zur Nutzung und Erzeugung erneuerbarer Energien erwähnt; ein Nachweis für Erzeugungsanlagen mit Ausschluss von Vorrangeinspeisung und Subvention wird nicht verlangt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-b3fe68e6744d44b8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Volksabstimmungen oder zur Änderung parlamentarisch beschlossener Gesetze durch das Volk.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Volksabstimmungen oder zur Änderung parlamentarisch beschlossener Gesetze durch das Volk.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-bae7e231ad8376d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+          "disposition": "no_supported_link",
+          "rationale": "Die Erwähnung zivilgesellschaftlicher Organisationen betrifft die Zusammensetzung eines Umweltgutachterausschusses; eine detaillierte Prüfung von NGOs und ihren Projekten ist nicht geregelt.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Erwähnung zivilgesellschaftlicher Organisationen betrifft die Zusammensetzung eines Umweltgutachterausschusses; eine detaillierte Prüfung von NGOs und ihren Projekten ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c44f79c4a10cfd42",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine strafrechtliche Regelung zu sogenannten Friedensrichtern oder deren Tätigkeit.",
+          "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ef06b2d45786e5418a48e8c1a7f68d40d29aea08dc16794f0fd2e234e27b68d6"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine strafrechtliche Regelung zu sogenannten Friedensrichtern oder deren Tätigkeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-c726cd97a2caf7e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-d1ab034443235036",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Industrieemissionen; eine Änderung des Einkommensteuertarifs ist nicht geregelt.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Industrieemissionen; eine Änderung des Einkommensteuertarifs ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-d1ab034443235036",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-daaad3b8f19659fc",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Regelungen betreffen Industrieemissionen; eine Erforschung von Bodenerosionen oder Windschleppen wird nicht angeordnet.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Regelungen betreffen Industrieemissionen; eine Erforschung von Bodenerosionen oder Windschleppen wird nicht angeordnet.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-daaad3b8f19659fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-df5ffaf63e53109a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Schlachtstandards oder deren Anwendung auf Importware.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Schlachtstandards oder deren Anwendung auf Importware.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-df5ffaf63e53109a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e5a358546e6934a8",
+          "disposition": "no_supported_link",
+          "rationale": "Regelmäßige Taktungen für Transitverbindungen oder die Rollende Landstraße werden nicht geregelt.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Regelmäßige Taktungen für Transitverbindungen oder die Rollende Landstraße werden nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e5a358546e6934a8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder die Verteilung von Zuwanderungskosten noch das Konnexitätsprinzip zwischen staatlichen Ebenen.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder die Verteilung von Zuwanderungskosten noch das Konnexitätsprinzip zwischen staatlichen Ebenen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e6a7205977ccf50d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e71e7ae531c6cbdd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Umweltvorschriften betreffen Industrieanlagen und Deponien; eine Ausweitung oder Begrenzung von Naturschutz-Kernzonen ist nicht geregelt.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Umweltvorschriften betreffen Industrieanlagen und Deponien; eine Ausweitung oder Begrenzung von Naturschutz-Kernzonen ist nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e71e7ae531c6cbdd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e989b6b0054e67dd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen zu Umweltgutachtern betreffen Zulassung und Qualifikation für Umweltmanagement beziehungsweise Nachhaltigkeitsberichte, nicht einheitliche Anforderungen an Gutachten und Gutachter allgemein.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Änderungen zu Umweltgutachtern betreffen Zulassung und Qualifikation für Umweltmanagement beziehungsweise Nachhaltigkeitsberichte, nicht einheitliche Anforderungen an Gutachten und Gutachter allgemein.",
+            "law_passage_id": "bgbl-1-2026-304-p-b67363791aff54f6",
+            "law_quote": "Die Zulassung umfasst die Befugnis, freiwillige Nachhaltigkeitsberichte zu überprüfen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e989b6b0054e67dd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "afd-2025-ac-e9db001fb39bf890",
+          "disposition": "no_supported_link",
+          "rationale": "Eine gesetzliche Entnahme wegen der Invasivität einer Art wird in den vorgelegten Regelungen nicht festgelegt.",
+          "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5f55073e109aa0eb92ce311c2aa74c61aa288c361225c24c76771537acbfd6bd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Eine gesetzliche Entnahme wegen der Invasivität einer Art wird in den vorgelegten Regelungen nicht festgelegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "afd-2025-ac-e9db001fb39bf890",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
       "law_id": "bgbl-1-2026-33",
       "analysis_sha256": "6dbfcc53beebbe1bf3e7e838091ebc25b62cefaa2262dc04185946bf475ec6aa",
       "status": "completed",
@@ -113246,8 +114468,8 @@
     },
     {
       "law_id": "bgbl-1-2026-47",
-      "analysis_sha256": "4832cd5af188f408c958449e50d026bd7db9c3ba54fe8ea9be14af4ac7b454ce",
-      "status": "completed",
+      "analysis_sha256": "0e84288155ff143d3c3a0c42cb312b6dd8b4842abb27715c4125e2fa6add8844",
+      "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-02f01da483e6a1de",
@@ -113285,9 +114507,10 @@
         "afd-2025-ac-f0313b9392200a5e",
         "afd-2025-ac-f52b1fcc193dd523",
         "afd-2025-ac-fa57f56d16b8bec1",
+        "afd-2025-ac-fbf2b30a6ae2a444",
         "afd-2025-ac-fbf7f0d834f43d6f"
       ],
-      "omitted_count": 647,
+      "omitted_count": 646,
       "pairs": [
         {
           "criterion_id": "afd-2025-ac-02f01da483e6a1de",
@@ -154259,8 +155482,8 @@
     },
     {
       "law_id": "bgbl-2-2026-49",
-      "analysis_sha256": "993cd2629de455e246ec973a5a826ed9014d5fd408ea0441f93eefb239055e28",
-      "status": "completed",
+      "analysis_sha256": "792f7d5152811a69e1148039859cd0d28944fe5a16f27d1fd518564e138bde12",
+      "status": "partial",
       "eligible_count": 683,
       "candidate_ids": [
         "afd-2025-ac-1f9e6294a991ed05",
@@ -154286,11 +155509,12 @@
         "afd-2025-ac-e28ee195fc806f5b",
         "afd-2025-ac-e5a358546e6934a8",
         "afd-2025-ac-e71e7ae531c6cbdd",
+        "afd-2025-ac-e80010756ab8620b",
         "afd-2025-ac-e9db001fb39bf890",
         "afd-2025-ac-ec384f1f6afc05fe",
         "afd-2025-ac-fc03416c5c41dc7a"
       ],
-      "omitted_count": 657,
+      "omitted_count": 656,
       "pairs": [
         {
           "criterion_id": "afd-2025-ac-1f9e6294a991ed05",
@@ -168299,20 +169523,20 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8264,
+    "calls": 8340,
     "cache_hits": 326,
     "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.615708,
-    "reported_cost_calls": 7581,
+    "reported_cost_usd": 31.706476,
+    "reported_cost_calls": 7657,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.591552,
-    "prompt_tokens": 82421725,
-    "completion_tokens": 14463609,
+    "budget_exposure_usd": 35.68232,
+    "prompt_tokens": 83306371,
+    "completion_tokens": 14608370,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
@@ -168334,10 +169558,10 @@
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4341,
-        "reported_cost_usd": 5.0675946899999955,
+        "calls": 4417,
+        "reported_cost_usd": 5.158362512499996,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 0
+        "pending_reserved_usd": 6.938893903907228e-18
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
