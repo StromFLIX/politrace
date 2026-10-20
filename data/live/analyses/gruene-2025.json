@@ -130,6 +130,9 @@
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
     "bgbl-1-2026-304",
+    "bgbl-1-2026-307",
+    "bgbl-1-2026-308",
+    "bgbl-1-2026-309",
     "bgbl-1-2026-33",
     "bgbl-1-2026-34",
     "bgbl-1-2026-39",
@@ -46617,10 +46620,11 @@
     },
     {
       "law_id": "bgbl-1-2025-161",
-      "analysis_sha256": "e87ad9f89a936cf795cc6866ab509a98b9ce44e6b55b8e2b72af68347d79da74",
+      "analysis_sha256": "a9b2de09c9514cdc5e4d1e045cfb90db96720e529bbee594a201d695454aa76e",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
+        "gruene-2025-ac-07cef0a4a722af92",
         "gruene-2025-ac-11f109820a9b4a2c",
         "gruene-2025-ac-2f91f06bf7db60fc",
         "gruene-2025-ac-405fc1a172a79b93",
@@ -46639,8 +46643,37 @@
         "gruene-2025-ac-efda0f94f9264f0c",
         "gruene-2025-ac-ff32d7668df232bf"
       ],
-      "omitted_count": 1623,
+      "omitted_count": 1622,
       "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-07cef0a4a722af92",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge betreffen Abschreibungen und die Besteuerung nicht entnommener Gewinne; ob das Gesetz an anderer Stelle die Erbschaftsteuer nach dem genannten Modell reformiert, ist wegen des unvollständigen Gesetzestextes nicht feststellbar.",
+          "input_sha256": "0ae17db5567b0a9f43fe0ea9c69627b4a70e4b1cef93fd75cde2c5b3f4dfbe6b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ae17db5567b0a9f43fe0ea9c69627b4a70e4b1cef93fd75cde2c5b3f4dfbe6b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Auszüge betreffen Abschreibungen und die Besteuerung nicht entnommener Gewinne; ob das Gesetz an anderer Stelle die Erbschaftsteuer nach dem genannten Modell reformiert, ist wegen des unvollständigen Gesetzestextes nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "eine Reform der Erbschaftssteuer\nhin zu einem Modell mit personenbezogenem Lebensfreibetrag,",
+            "caveats": [
+              "Der Gesetzestext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-07cef0a4a722af92",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "gruene-2025-ac-11f109820a9b4a2c",
           "disposition": "no_supported_link",
@@ -57850,7 +57883,7 @@
     },
     {
       "law_id": "bgbl-1-2025-257",
-      "analysis_sha256": "6c15995a278e37e3b0a6c4ab4df669b9178a57a87dda911333574eb80b6f4f88",
+      "analysis_sha256": "415821977990cce735358c116b5ce26edfb4c0705c62bf67e6461b9e57e401e7",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -57906,13 +57939,14 @@
         "gruene-2025-ac-f180c2e3e9a3c7df",
         "gruene-2025-ac-f2298a8b7ec9d747",
         "gruene-2025-ac-f415c000fce7a158",
+        "gruene-2025-ac-f44b6fd10f894095",
         "gruene-2025-ac-f4aed0c94506d48f",
         "gruene-2025-ac-f52f4489ddfa7f01",
         "gruene-2025-ac-f77f50b65d39712c",
         "gruene-2025-ac-fbe1836b3ee721f4",
         "gruene-2025-ac-ff32d7668df232bf"
       ],
-      "omitted_count": 1583,
+      "omitted_count": 1582,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-0b5c8aba71c4e19c",
@@ -59403,6 +59437,33 @@
               "Kein Nachweis eines Effekts bedeutet nicht den Nachweis, dass das Gesetz keinerlei Auswirkungen hat."
             ],
             "criterion_id": "gruene-2025-ac-f415c000fce7a158",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-f44b6fd10f894095",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen erleichtern unter Bedingungen Wohnungsbauvorhaben und Abweichungen vom Baugesetzbuch; eine Barrierefreiheit von Bundesgebäuden oder eine Zehnjahresfrist regeln sie nicht.",
+          "input_sha256": "9223e7455ca556288f2720178035da0d4449cc230dca50a5733ea1afe3caf181",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9223e7455ca556288f2720178035da0d4449cc230dca50a5733ea1afe3caf181"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen erleichtern unter Bedingungen Wohnungsbauvorhaben und Abweichungen vom Baugesetzbuch; eine Barrierefreiheit von Bundesgebäuden oder eine Zehnjahresfrist regeln sie nicht.",
+            "law_passage_id": "bgbl-1-2025-257-p-0bdc43355aeebf5a",
+            "law_quote": "Mit Zustimmung der Gemeinde kann bis zum Ablauf des 31. Dezember 2030 von den Vorschriften dieses Gesetzbuchs […] abgewichen werden, wenn […] die Abweichung […] einem der folgenden Vorhaben dient",
+            "criterion_quote": "Die Gebäude des Bundes wollen wir innerhalb von zehn Jahren barrierefrei machen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-f44b6fd10f894095",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -106313,7 +106374,7 @@
     },
     {
       "law_id": "bgbl-1-2025-362",
-      "analysis_sha256": "150cafabe917364696e3fbce03b4d4f4fe4b19285184237bd4484fd3735d4a2d",
+      "analysis_sha256": "2ccc248ca7dcf99d44bb0caa17938c00670ccc8baeea83b040ccc07969dd395a",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -106323,6 +106384,7 @@
         "gruene-2025-ac-2f91f06bf7db60fc",
         "gruene-2025-ac-3161863c4ded2fc2",
         "gruene-2025-ac-405fc1a172a79b93",
+        "gruene-2025-ac-4bf5a56ffc45c97b",
         "gruene-2025-ac-508f5b09f1154b09",
         "gruene-2025-ac-5a3f3bcea8582f86",
         "gruene-2025-ac-66701eefd5d7572d",
@@ -106340,7 +106402,7 @@
         "gruene-2025-ac-efda0f94f9264f0c",
         "gruene-2025-ac-f1453238e8e8b424"
       ],
-      "omitted_count": 1618,
+      "omitted_count": 1617,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-18410875c83cec8d",
@@ -106502,6 +106564,35 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "gruene-2025-ac-405fc1a172a79b93",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-4bf5a56ffc45c97b",
+          "disposition": "no_supported_link",
+          "rationale": "Der bereitgestellte Gesetzestext regelt Bundeszuschüsse zur Rentenversicherung, nicht ein Recht auf Freiwilligendienst; ein entsprechender Zusammenhang ist nicht belegt.",
+          "input_sha256": "3eaabf10e7bbd174fea635bfd572a359af5e1323b74fa07046fc3910784a2395",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3eaabf10e7bbd174fea635bfd572a359af5e1323b74fa07046fc3910784a2395"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der bereitgestellte Gesetzestext regelt Bundeszuschüsse zur Rentenversicherung, nicht ein Recht auf Freiwilligendienst; ein entsprechender Zusammenhang ist nicht belegt.",
+            "law_passage_id": "bgbl-1-2025-362-p-20f6e8f183a44f83",
+            "law_quote": "(1) Der Bund leistet zu den Ausgaben der allgemeinen Rentenversicherung Zuschüsse.",
+            "criterion_quote": "Wir wollen ein Recht auf einen Freiwilligendienst verankern und die Plätze im\nBundesfreiwilligendienst entsprechend\nausbauen und verlässlich finanzieren.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet; die bereitgestellten Textstellen belegen jedoch keine Regelung zu Freiwilligendiensten."
+            ],
+            "criterion_id": "gruene-2025-ac-4bf5a56ffc45c97b",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -135884,10 +135975,11 @@
     },
     {
       "law_id": "bgbl-1-2026-112",
-      "analysis_sha256": "66f00431ccf50969c27ee3a8624d6bd0a2ebb9a44e279de22f4739c466098f00",
+      "analysis_sha256": "9e86a2dbb05ce152c2bd6e034c3657ac5a3fc4ecd8e1d6789b64c1e48df14b69",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
+        "gruene-2025-ac-029cc7d27968dd17",
         "gruene-2025-ac-03bac71bcf0e41db",
         "gruene-2025-ac-0a1af4cd5f950b00",
         "gruene-2025-ac-1a31bddf759f2794",
@@ -135921,8 +136013,37 @@
         "gruene-2025-ac-fc5bdacd0dec528b",
         "gruene-2025-ac-fcf22d69a1985267"
       ],
-      "omitted_count": 1608,
+      "omitted_count": 1607,
       "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-029cc7d27968dd17",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge betreffen AZR-Datenübermittlungen im GEAS-Verfahren; ob andere, hier nicht enthaltene Teile des Gesetzes ein Bleiberecht für Opfer von Menschenhandel regeln, ist nicht feststellbar.",
+          "input_sha256": "e20932ec75414049d888c59dd199518a4eccde69caa2beb641b79b4f8321ebea",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e20932ec75414049d888c59dd199518a4eccde69caa2beb641b79b4f8321ebea"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Auszüge betreffen AZR-Datenübermittlungen im GEAS-Verfahren; ob andere, hier nicht enthaltene Teile des Gesetzes ein Bleiberecht für Opfer von Menschenhandel regeln, ist nicht feststellbar.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Opfer von Menschenhandel sollen ein sicheres Bleiberecht bekommen, unabhängig von ihrer Aussagebereitschaft im Strafverfahren.",
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-029cc7d27968dd17",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "gruene-2025-ac-03bac71bcf0e41db",
           "disposition": "no_supported_link",
@@ -151349,7 +151470,7 @@
     },
     {
       "law_id": "bgbl-1-2026-157",
-      "analysis_sha256": "7a2d2222b00a9bc3caa4262de2279862c026f820ed13d0fe921084145b438d83",
+      "analysis_sha256": "5d65915bb0933a1aa02d9a91a0be538e428370222b78089c2d7220fa3ee37ded",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -151371,9 +151492,10 @@
         "gruene-2025-ac-ba2f274814060628",
         "gruene-2025-ac-c381ee138630c89b",
         "gruene-2025-ac-da71209d8b0a0e57",
-        "gruene-2025-ac-dc85455aed3d87d0"
+        "gruene-2025-ac-dc85455aed3d87d0",
+        "gruene-2025-ac-fa4a5d606a1c07ac"
       ],
-      "omitted_count": 1621,
+      "omitted_count": 1620,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-18410875c83cec8d",
@@ -151903,6 +152025,35 @@
             "caveats": [],
             "criterion_id": "gruene-2025-ac-dc85455aed3d87d0",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-fa4a5d606a1c07ac",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz regelt die Zusammenarbeit von BfDI und Bundesnetzagentur bei der Datenverordnung, sagt aber nichts über eine dauerhafte Struktur der Datenschutzkonferenz aus; dafür fehlen einschlägige Regelungen oder weitere Quellen.",
+          "input_sha256": "f83dec7198459e4399cb39175df1c4918d87bd6136851a5d49bf73ca06bad728",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "f83dec7198459e4399cb39175df1c4918d87bd6136851a5d49bf73ca06bad728"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt die Zusammenarbeit von BfDI und Bundesnetzagentur bei der Datenverordnung, sagt aber nichts über eine dauerhafte Struktur der Datenschutzkonferenz aus; dafür fehlen einschlägige Regelungen oder weitere Quellen.",
+            "law_passage_id": "bgbl-1-2026-157-p-fe9606b92a705119",
+            "law_quote": "Die Bundesnetzagentur und die oder der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit arbeiten zur Erfüllung ihrer Aufgaben im Rahmen ihrer jeweiligen Zuständigkeiten aus der Datenverordnung und aus diesem Gesetz kooperativ und vertrauensvoll zusammen.",
+            "criterion_quote": "Zudem\nstärken wir die Datenschutzkonferenz\nals gemeinsame Koordinationsstelle der\nDatenschutzaufsichtsbehörden von Bund\nund Ländern und verleihen ihr eine dauerhafte Struktur.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-fa4a5d606a1c07ac",
+            "disposition": "missing_context"
           },
           "verification": null
         }
@@ -160727,10 +160878,11 @@
     },
     {
       "law_id": "bgbl-1-2026-207",
-      "analysis_sha256": "e4ffa5cb78643a036fbde2ec00bda243efdcf35925d4d20577aa75b7bd219901",
+      "analysis_sha256": "2df6a485397a85bbd6800ee703927df64a85a288bd91242ed9db66e5f7b11bd8",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
+        "gruene-2025-ac-0079c7c9415ccf00",
         "gruene-2025-ac-018af3bc7f6c1560",
         "gruene-2025-ac-0462008eb15e408e",
         "gruene-2025-ac-073fe4ac1d08af1d",
@@ -160791,6 +160943,7 @@
         "gruene-2025-ac-c381ee138630c89b",
         "gruene-2025-ac-c7948164ce5ba932",
         "gruene-2025-ac-c9a733e57ee922c1",
+        "gruene-2025-ac-cfde9366b7785ac2",
         "gruene-2025-ac-d9da28de6fd658bc",
         "gruene-2025-ac-da71209d8b0a0e57",
         "gruene-2025-ac-dba9d14fb929f9f9",
@@ -160806,8 +160959,35 @@
         "gruene-2025-ac-f73cbc67b52a3503",
         "gruene-2025-ac-f74b260b019cca3b"
       ],
-      "omitted_count": 1566,
+      "omitted_count": 1564,
       "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-0079c7c9415ccf00",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln Verpackungsrecht und enthalten keine Bestimmung zur Beratung im Festivalförderfonds.",
+          "input_sha256": "b287bb81ed97a3c3317d430e6276120ee0db3409c5d0cb83e4d1efcec6bfbd5b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b287bb81ed97a3c3317d430e6276120ee0db3409c5d0cb83e4d1efcec6bfbd5b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen regeln Verpackungsrecht und enthalten keine Bestimmung zur Beratung im Festivalförderfonds.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sie erweitern wir um eine\nKonzeptförderung sowie um Beratung\nund Wissensvermittlung.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-0079c7c9415ccf00",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "gruene-2025-ac-018af3bc7f6c1560",
           "disposition": "proposed_link",
@@ -162453,6 +162633,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-cfde9366b7785ac2",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Passagen regeln Verpackungsrecht und enthalten keine Bestimmung zur Wissensvermittlung im Festivalförderfonds.",
+          "input_sha256": "b287bb81ed97a3c3317d430e6276120ee0db3409c5d0cb83e4d1efcec6bfbd5b",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b287bb81ed97a3c3317d430e6276120ee0db3409c5d0cb83e4d1efcec6bfbd5b"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Passagen regeln Verpackungsrecht und enthalten keine Bestimmung zur Wissensvermittlung im Festivalförderfonds.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "sie erweitern wir um eine\nKonzeptförderung sowie um Beratung\nund Wissensvermittlung.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-cfde9366b7785ac2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-d9da28de6fd658bc",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz regelt weder Bus- und Bahnangebote noch deren Zuverlässigkeit.",
@@ -162834,7 +163041,7 @@
     },
     {
       "law_id": "bgbl-1-2026-210a",
-      "analysis_sha256": "7ffc417d10bbf0b690c3184428d25b951b53520a2cc287e67712aa523c3d3da2",
+      "analysis_sha256": "a55bdc7066a31dc883b63da4da1daae1d292fa164a24d4b1bcffc48747af8ad6",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -162940,12 +163147,13 @@
         "gruene-2025-ac-f350b689dc2f6492",
         "gruene-2025-ac-f440c2960f69ad28",
         "gruene-2025-ac-f51a31164dc1649b",
+        "gruene-2025-ac-f73cbc67b52a3503",
         "gruene-2025-ac-f75eccd0737d9511",
         "gruene-2025-ac-f7cb6475536cd44c",
         "gruene-2025-ac-f84c29a6e6f63463",
         "gruene-2025-ac-fa09a7ef8340b564"
       ],
-      "omitted_count": 1534,
+      "omitted_count": 1533,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-07967e6c5e0ba879",
@@ -165826,6 +166034,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-f73cbc67b52a3503",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Bestimmungen regeln Kapazitätsausschreibungen und deren Finanzierung, schaffen aber keine erkennbare zusätzliche Beteiligungsmöglichkeit für Kommunen an Energieprojekten oder zusätzliche kommunale Vorteile daraus.",
+          "input_sha256": "e0af26028984b19fe852b396cec5b158162c974b1c87caf6f91162183e1e55b0",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e0af26028984b19fe852b396cec5b158162c974b1c87caf6f91162183e1e55b0"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Bestimmungen regeln Kapazitätsausschreibungen und deren Finanzierung, schaffen aber keine erkennbare zusätzliche Beteiligungsmöglichkeit für Kommunen an Energieprojekten oder zusätzliche kommunale Vorteile daraus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir haben die Möglichkeiten der Kommunen, von Energieprojekten zu profitieren, gestärkt und werden sie weiter ausbauen.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-f73cbc67b52a3503",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-f75eccd0737d9511",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Passagen enthalten keinen Beleg für eine gemeinsam mit den Bundesländern vereinbarte Neuauflage des Pakts für den Rechtsstaat.",
@@ -168570,7 +168805,7 @@
     },
     {
       "law_id": "bgbl-1-2026-222",
-      "analysis_sha256": "0e8041a92a8a6c2b8c295a8822f22e1b459d480e0caf20cd32327825e9d66a74",
+      "analysis_sha256": "1732309a7bbce39a3be6e8ba6fdfe6166e0926e2a29a692a46490e6168ffc56b",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -168656,6 +168891,7 @@
         "gruene-2025-ac-b417351eda71e059",
         "gruene-2025-ac-bc23618ccf7d8410",
         "gruene-2025-ac-bd382c753e533478",
+        "gruene-2025-ac-c00e6d0cf922b2b7",
         "gruene-2025-ac-c3c21a0cff11ec0b",
         "gruene-2025-ac-c3d8110c16d9fc02",
         "gruene-2025-ac-c58307b8c5bdbb55",
@@ -168680,7 +168916,7 @@
         "gruene-2025-ac-fc5bdacd0dec528b",
         "gruene-2025-ac-fcf22d69a1985267"
       ],
-      "omitted_count": 1535,
+      "omitted_count": 1534,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-028c6a3c32eb8619",
@@ -170995,6 +171231,35 @@
             ],
             "criterion_id": "gruene-2025-ac-bd382c753e533478",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-c00e6d0cf922b2b7",
+          "disposition": "missing_context",
+          "rationale": "Der operative Wortlaut von Artikel 12 fehlt; trotz des Hinweises auf ein kombiniertes Verfahren für Aufenthalt und Arbeit lässt sich der Effekt auf Arbeitsaufnahme und Weiterqualifizierung nicht bestimmen.",
+          "input_sha256": "753126c6a38e2a378ca6a9f702718fb3f537aabdc8fe637b91b35123df02892a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "753126c6a38e2a378ca6a9f702718fb3f537aabdc8fe637b91b35123df02892a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der operative Wortlaut von Artikel 12 fehlt; trotz des Hinweises auf ein kombiniertes Verfahren für Aufenthalt und Arbeit lässt sich der Effekt auf Arbeitsaufnahme und Weiterqualifizierung nicht bestimmen.",
+            "law_passage_id": "bgbl-1-2026-222-p-0ad9d236ff597a10",
+            "law_quote": "Dieser Artikel dient der Umsetzung der Richtlinie (EU) 2024/1233 des Europäischen Parlaments und des Rates vom 24. April 2024 über ein einheitliches Verfahren zur Beantragung einer kombinierten Erlaubnis für Drittstaatsangehörige, sich im Hoheitsgebiet eines Mitgliedstaats aufzuhalten und zu arbeiten",
+            "criterion_quote": "Wir wollen die\nArbeitsaufnahme und Weiterqualifizierungsmöglichkeiten unbürokratisch und\ngut kombinierbar gestalten.",
+            "caveats": [
+              "Der bereitgestellte Gesetzestext enthält hierzu nur einen Umsetzungshinweis, nicht den Regelungswortlaut."
+            ],
+            "criterion_id": "gruene-2025-ac-c00e6d0cf922b2b7",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -193307,13 +193572,14 @@
     },
     {
       "law_id": "bgbl-1-2026-275",
-      "analysis_sha256": "310e315b75f5e37cf0b64304253ea138d6dfba0bc6f1761b16273134b42020dc",
+      "analysis_sha256": "e3b3a8707b03435664eedd038ee9a3cb45fa8752549a89dc916e8211b9062651",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-03647966d753b236",
         "gruene-2025-ac-03bac71bcf0e41db",
         "gruene-2025-ac-03e247146dffc45c",
+        "gruene-2025-ac-044486809b589539",
         "gruene-2025-ac-091c6aabff165f44",
         "gruene-2025-ac-0f70f27316275342",
         "gruene-2025-ac-12823b7a84a00cc9",
@@ -193419,7 +193685,7 @@
         "gruene-2025-ac-fbb91e9b83b26a46",
         "gruene-2025-ac-fdc3a65e23226398"
       ],
-      "omitted_count": 1533,
+      "omitted_count": 1532,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-03647966d753b236",
@@ -193504,6 +193770,36 @@
               "Der bereitgestellte Gesetzestext ist ausdrücklich unvollständig."
             ],
             "criterion_id": "gruene-2025-ac-03e247146dffc45c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-044486809b589539",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz sieht für qualifizierte langfristige Aktieninvestitionen eine Kapitalanforderung von 22 Prozent des angenommenen Wertverlusts vor. Ob Start-ups und Scale-ups darunter fallen, lässt sich ohne die hier fehlenden Voraussetzungen des Absatzes 1 nicht feststellen.",
+          "input_sha256": "7d03aabe3629a09e4520faa5538b9c31c35ccdde97f15130752d7429775d3887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7d03aabe3629a09e4520faa5538b9c31c35ccdde97f15130752d7429775d3887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Gesetz sieht für qualifizierte langfristige Aktieninvestitionen eine Kapitalanforderung von 22 Prozent des angenommenen Wertverlusts vor. Ob Start-ups und Scale-ups darunter fallen, lässt sich ohne die hier fehlenden Voraussetzungen des Absatzes 1 nicht feststellen.",
+            "law_passage_id": "bgbl-1-2026-275-p-3487fe5b956f03fb",
+            "law_quote": "Sind die Voraussetzungen nach Absatz 1 erfüllt, entspricht die Kapitalanforderung für langfristige Aktieninvestments dem Verlust an Basiseigenmitteln, der sich bei einem sofortigen Rückgang des Werts aller Investitionen, die als langfristige Aktieninvestments behandelt werden, um 22 Prozent ergeben würde.",
+            "criterion_quote": "Wir wollen es Versicherungen, Rentenkassen und Privatpersonen erleichtern, in Start-ups und Scale-ups zu investieren, sofern die Höhe der Investments einem vertretbaren Risiko entspricht.",
+            "caveats": [
+              "Die Voraussetzungen nach Absatz 1 sind im bereitgestellten Auszug nicht enthalten.",
+              "Der Auszug belegt keine Anwendung auf Start-ups oder Scale-ups."
+            ],
+            "criterion_id": "gruene-2025-ac-044486809b589539",
             "disposition": "missing_context"
           },
           "verification": null
@@ -200661,7 +200957,7 @@
     },
     {
       "law_id": "bgbl-1-2026-304",
-      "analysis_sha256": "c2d11fe8883f3d340724c833cf7a2d46527028bfc129238e79ad7ddb92116d34",
+      "analysis_sha256": "d327a151088fce3a92166ca89b3f550a08b13a09795dfaff7cf862fb15dc7c17",
       "status": "completed",
       "eligible_count": 1640,
       "candidate_ids": [
@@ -200769,6 +201065,7 @@
         "gruene-2025-ac-cfecb5161186cfba",
         "gruene-2025-ac-d02fa9cb8bdb2067",
         "gruene-2025-ac-d1002e5df04edbd0",
+        "gruene-2025-ac-d3c5a4a3358789c4",
         "gruene-2025-ac-d5595cc6eda9cc32",
         "gruene-2025-ac-d6b8c49d9e1f2d6c",
         "gruene-2025-ac-d6f602d90579b256",
@@ -200795,7 +201092,7 @@
         "gruene-2025-ac-ff32d7668df232bf",
         "gruene-2025-ac-ffae57aef1d82c00"
       ],
-      "omitted_count": 1511,
+      "omitted_count": 1510,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-018af3bc7f6c1560",
@@ -203673,6 +203970,33 @@
           "verification": null
         },
         {
+          "criterion_id": "gruene-2025-ac-d3c5a4a3358789c4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Industrieemissionen und belegt weder die Fortführung der Förderung im Aktionsprogramm Natürlicher Klimaschutz noch eine entgegenstehende Änderung.",
+          "input_sha256": "ea7dd92f1b3c2b4f35c60b125f225752a0cdab4d9b198542dd1fbfea1aa27a1a",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ea7dd92f1b3c2b4f35c60b125f225752a0cdab4d9b198542dd1fbfea1aa27a1a"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz regelt Industrieemissionen und belegt weder die Fortführung der Förderung im Aktionsprogramm Natürlicher Klimaschutz noch eine entgegenstehende Änderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Die Förderung schonender Bodenbearbeitung und mechanischer Unkrautregulierung im Aktionsprogramm Natürlicher Klimaschutz führen wir weiter.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d3c5a4a3358789c4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "gruene-2025-ac-d5595cc6eda9cc32",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz betrifft Industrieemissionen und dokumentiert keine europäische Zusammenarbeit in der Meeres- oder Polarforschung.",
@@ -204350,6 +204674,974 @@
           "verification": null
         }
       ]
+    },
+    {
+      "law_id": "bgbl-1-2026-307",
+      "analysis_sha256": "75ff469fa52ad3ed01fe26d16dde5133b1b17afca5a0a0fe5c6498cb82aa649b",
+      "status": "completed",
+      "eligible_count": 1640,
+      "candidate_ids": [
+        "gruene-2025-ac-216ad73eb9d10e97",
+        "gruene-2025-ac-281228f5bf1c1137",
+        "gruene-2025-ac-2f91f06bf7db60fc",
+        "gruene-2025-ac-405fc1a172a79b93",
+        "gruene-2025-ac-92900d23dc28bbb0",
+        "gruene-2025-ac-96e012241374ecc1",
+        "gruene-2025-ac-a7755a498f746eaa",
+        "gruene-2025-ac-bf608dc56d4106cf",
+        "gruene-2025-ac-c6f440c50c532ffb",
+        "gruene-2025-ac-ccfc8e4108bd2200",
+        "gruene-2025-ac-d7f697e787f85aba",
+        "gruene-2025-ac-efda0f94f9264f0c"
+      ],
+      "omitted_count": 1628,
+      "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-216ad73eb9d10e97",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Kindergeld und dessen Prüfung, nicht die Auszahlung von Einnahmen als Klimageld.",
+          "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Regelungen betreffen Kindergeld und dessen Prüfung, nicht die Auszahlung von Einnahmen als Klimageld.",
+            "law_passage_id": "bgbl-1-2026-307-p-6c948936ec636ae5",
+            "law_quote": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+            "criterion_quote": "Einen Großteil dieser Einnahmen werden\nwir als sozial gestaffeltes Klimageld an\nMenschen mit niedrigen und mittleren Einkommen auszahlen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-216ad73eb9d10e97",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-281228f5bf1c1137",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln Kindergeld, nicht die Auszahlung von Arbeitgeberbeiträgen bei einem Verzicht auf freiwillige Rentenbeiträge.",
+          "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen regeln Kindergeld, nicht die Auszahlung von Arbeitgeberbeiträgen bei einem Verzicht auf freiwillige Rentenbeiträge.",
+            "law_passage_id": "bgbl-1-2026-307-p-6c948936ec636ae5",
+            "law_quote": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+            "criterion_quote": "Dafür werden wir den Arbeitgeberbeitrag\nzur Arbeitslosen- und Rentenversicherung\nan die Arbeitnehmer*innen auszahlen, falls\nsie sich gegen freiwillige Beiträge in die\nRentenversicherung entscheiden.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-281228f5bf1c1137",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2f91f06bf7db60fc",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Kindergeldverfahren und enthalten keine Regelung zur Aufteilung einer Pflegeleistung.",
+          "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen Kindergeldverfahren und enthalten keine Regelung zur Aufteilung einer Pflegeleistung.",
+            "law_passage_id": "bgbl-1-2026-307-p-6c948936ec636ae5",
+            "law_quote": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+            "criterion_quote": "Die Leistung\nsoll so ausgestaltet sein, dass mehrere\nPersonen sich die Pflege teilen können.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-2f91f06bf7db60fc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-405fc1a172a79b93",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Kindergeld und enthält keine dokumentierten Schritte zu einem Antrag auf Feststellung der Verfassungswidrigkeit der AfD.",
+          "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3dceb784897d9e502d7b22e9997b022ffdc71cfeb190be04eda9e3d5aef8199f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Kindergeld und enthält keine dokumentierten Schritte zu einem Antrag auf Feststellung der Verfassungswidrigkeit der AfD.",
+            "law_passage_id": "bgbl-1-2026-307-p-6c948936ec636ae5",
+            "law_quote": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+            "criterion_quote": "Wir fordern Bundestag, Bundesrat und die\nBundesregierung auf, aus ihren Erkenntnissen parteiübergreifend Konsequenzen\nzu ziehen und zügig auf einen Antrag zur\nFeststellung der Verfassungswidrigkeit der\nAfD hinzuwirken.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "gruene-2025-ac-405fc1a172a79b93",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-92900d23dc28bbb0",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz ermöglicht einen Antragsverzicht beim Kindergeld nur in den Fällen des § 69 Satz 3; deren Voraussetzungen sind im vorliegenden Text nicht enthalten, sodass die Reichweite der Maßnahme nicht beurteilt werden kann.",
+          "input_sha256": "628ad5616aa595f2f730cad7b156e3f73bae16b4cd3720f15e8e10467aad5ca7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "628ad5616aa595f2f730cad7b156e3f73bae16b4cd3720f15e8e10467aad5ca7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.89,
+            "rationale": "Das Gesetz ermöglicht einen Antragsverzicht beim Kindergeld nur in den Fällen des § 69 Satz 3; deren Voraussetzungen sind im vorliegenden Text nicht enthalten, sodass die Reichweite der Maßnahme nicht beurteilt werden kann.",
+            "law_passage_id": "bgbl-1-2026-307-p-dd0c76d653dca9b6",
+            "law_quote": "Die Familienkasse kann in den Fällen des § 69 Satz 3 auf einen Antrag verzichten.",
+            "criterion_quote": "Niemand muss kompliziert\nbeantragen, was einfach und nach klaren\nRegeln und Kriterien direkt ausgezahlt\nwerden kann.",
+            "caveats": [
+              "Die Voraussetzungen der Fälle nach § 69 Satz 3 sind nicht mitgeliefert."
+            ],
+            "criterion_id": "gruene-2025-ac-92900d23dc28bbb0",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-96e012241374ecc1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Kindergeld und enthält keine Regelung zu Artikel 7 EUV oder zu Mehrheitsentscheidungen in dessen Verfahren.",
+          "input_sha256": "628ad5616aa595f2f730cad7b156e3f73bae16b4cd3720f15e8e10467aad5ca7",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "628ad5616aa595f2f730cad7b156e3f73bae16b4cd3720f15e8e10467aad5ca7"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Kindergeld und enthält keine Regelung zu Artikel 7 EUV oder zu Mehrheitsentscheidungen in dessen Verfahren.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir wollen das Rechtsstaatsverfahren\nnach Artikel 7 des EU-Vertrags nutzbar\nmachen, indem in allen Stufen des Verfahrens Entscheidungen mit qualifizierter\nMehrheit getroffen werden können.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-96e012241374ecc1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-a7755a498f746eaa",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften betreffen Kindergeld und Datenverarbeitung; kurze Fristen oder eine Zustimmungsfiktion für arbeitsbezogene Genehmigungen regeln sie nicht.",
+          "input_sha256": "305d986618450ddc2a5ac22eff325b2609f7330f6b78a8855f0ad1f76d1199bb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "305d986618450ddc2a5ac22eff325b2609f7330f6b78a8855f0ad1f76d1199bb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Die vorgelegten Vorschriften betreffen Kindergeld und Datenverarbeitung; kurze Fristen oder eine Zustimmungsfiktion für arbeitsbezogene Genehmigungen regeln sie nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-a7755a498f746eaa",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-bf608dc56d4106cf",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften führen keine pauschale Steuerbefreiung für Aufwandsentschädigungen im Ehrenamt ein; die genannten Steuerdaten dienen der Prüfung und Durchführung der Einkommensbesteuerung.",
+          "input_sha256": "305d986618450ddc2a5ac22eff325b2609f7330f6b78a8855f0ad1f76d1199bb",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "305d986618450ddc2a5ac22eff325b2609f7330f6b78a8855f0ad1f76d1199bb"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Die vorgelegten Vorschriften führen keine pauschale Steuerbefreiung für Aufwandsentschädigungen im Ehrenamt ein; die genannten Steuerdaten dienen der Prüfung und Durchführung der Einkommensbesteuerung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-bf608dc56d4106cf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-c6f440c50c532ffb",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Kindergeld und enthält keine Maßnahme zum digitalen Kinder- oder Jugendschutz.",
+          "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Kindergeld und enthält keine Maßnahme zum digitalen Kinder- oder Jugendschutz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-c6f440c50c532ffb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-ccfc8e4108bd2200",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft Kindergeld; eine Möglichkeit, Arbeitsvisa online zu beantragen, regelt es nicht.",
+          "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft Kindergeld; eine Möglichkeit, Arbeitsvisa online zu beantragen, regelt es nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-ccfc8e4108bd2200",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-d7f697e787f85aba",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Kindergeldverfahren und enthalten keine Klarstellung zu politischen Äußerungen gemeinnütziger Organisationen.",
+          "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen betreffen Kindergeldverfahren und enthalten keine Klarstellung zu politischen Äußerungen gemeinnütziger Organisationen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d7f697e787f85aba",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-efda0f94f9264f0c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Vorschriften zum Kindergeld; eine Zusatzvereinbarung zum Berlin-Bonn-Gesetz ist nicht Gegenstand seiner Regelungen.",
+          "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "cc3907a40a24fc13cc1aef93f243e8bd2669a74c76e3f6375d2fcdde553776de"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Vorschriften zum Kindergeld; eine Zusatzvereinbarung zum Berlin-Bonn-Gesetz ist nicht Gegenstand seiner Regelungen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-efda0f94f9264f0c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
+      "law_id": "bgbl-1-2026-308",
+      "analysis_sha256": "99df46b80b5b4ec9463b368ae3609ba4eefa19b92d0fce2bf92c526602aa1eaf",
+      "status": "partial",
+      "eligible_count": 1640,
+      "candidate_ids": [
+        "gruene-2025-ac-00b2a8122cbfa847",
+        "gruene-2025-ac-03a4bde55eea83ea",
+        "gruene-2025-ac-0f70f27316275342",
+        "gruene-2025-ac-10ebfa8b3f3139de",
+        "gruene-2025-ac-1d743deba02b3b81",
+        "gruene-2025-ac-1e8e3c810fb734f7",
+        "gruene-2025-ac-2b0e8c220ee7107f",
+        "gruene-2025-ac-2b32bbca77171e91",
+        "gruene-2025-ac-2e738a2f54674a2d",
+        "gruene-2025-ac-3608da24cc186dc5",
+        "gruene-2025-ac-412fd15f8267a947",
+        "gruene-2025-ac-43520fee8669b5d6",
+        "gruene-2025-ac-4777a042857a75fe",
+        "gruene-2025-ac-490b754c4827e509",
+        "gruene-2025-ac-59300970a80a73b9",
+        "gruene-2025-ac-61b7563e6565d52c",
+        "gruene-2025-ac-6658ef27f39d4bec",
+        "gruene-2025-ac-78a50f1f7420ee8a",
+        "gruene-2025-ac-87505b1a4bccfc21",
+        "gruene-2025-ac-96e012241374ecc1",
+        "gruene-2025-ac-9a221e10b9280890",
+        "gruene-2025-ac-9a24b70f579f3428",
+        "gruene-2025-ac-9f1f012cd1612f16",
+        "gruene-2025-ac-9fecea51135d3505",
+        "gruene-2025-ac-aafb68cb992c05fb",
+        "gruene-2025-ac-aedd16b1c57f72eb",
+        "gruene-2025-ac-b646bb80680fe428",
+        "gruene-2025-ac-b812ff30aca0ec89",
+        "gruene-2025-ac-bc9b401981b6afb6",
+        "gruene-2025-ac-becf7196eaada958",
+        "gruene-2025-ac-d9043fc41bfb1b62",
+        "gruene-2025-ac-d958f845dc3d414a",
+        "gruene-2025-ac-d9d84db53e1faa1d",
+        "gruene-2025-ac-da71209d8b0a0e57",
+        "gruene-2025-ac-e5b2dfd33ae99817",
+        "gruene-2025-ac-e7ce1c6bc32de99c",
+        "gruene-2025-ac-ef74c434b2d98d35",
+        "gruene-2025-ac-f39619d658f54ee8"
+      ],
+      "omitted_count": 1602,
+      "pairs": [
+        {
+          "criterion_id": "gruene-2025-ac-00b2a8122cbfa847",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt Antisemitismus und weitere Formen gruppenbezogener Menschenfeindlichkeit als Förderziele, weist aber keine Projekte mit solchen Inhalten von der Förderung zurück.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.93,
+            "rationale": "Das Gesetz nennt Antisemitismus und weitere Formen gruppenbezogener Menschenfeindlichkeit als Förderziele, weist aber keine Projekte mit solchen Inhalten von der Förderung zurück.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-00b2a8122cbfa847",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-03a4bde55eea83ea",
+          "disposition": "no_supported_link",
+          "rationale": "Die Förderung von Sportveranstaltungen belegt keine offizielle Unterstützung einer deutschen Bewerbung um Olympische und Paralympische Spiele.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Förderung von Sportveranstaltungen belegt keine offizielle Unterstützung einer deutschen Bewerbung um Olympische und Paralympische Spiele.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-03a4bde55eea83ea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-0f70f27316275342",
+          "disposition": "no_supported_link",
+          "rationale": "Das Sportfördergesetz enthält keine Regelung zur Verteilung von Einnahmen aus europäischen Instrumenten an den EU-Haushalt.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Sportfördergesetz enthält keine Regelung zur Verteilung von Einnahmen aus europäischen Instrumenten an den EU-Haushalt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-0f70f27316275342",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-1d743deba02b3b81",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht sportwissenschaftliche Forschung, richtet sie aber nicht auf Erscheinungsformen und Ausprägungen von Diskriminierung aus.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz ermöglicht sportwissenschaftliche Forschung, richtet sie aber nicht auf Erscheinungsformen und Ausprägungen von Diskriminierung aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-1d743deba02b3b81",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-1e8e3c810fb734f7",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine gemeinsame ergebnisoffene Beratung über Änderungen am Prostituiertenschutzgesetz.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine gemeinsame ergebnisoffene Beratung über Änderungen am Prostituiertenschutzgesetz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-1e8e3c810fb734f7",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2b0e8c220ee7107f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regeln zur Förderung von Sportstätten belegen nicht, dass vorhandene Sportstätten in eine Bewerbung einbezogen werden.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Regeln zur Förderung von Sportstätten belegen nicht, dass vorhandene Sportstätten in eine Bewerbung einbezogen werden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-2b0e8c220ee7107f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2b32bbca77171e91",
+          "disposition": "no_supported_link",
+          "rationale": "Antiziganismus wird als Ziel der Sportförderung genannt; eine bundesweite Erfassung antiziganistischer Vorfälle regelt das Gesetz nicht.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Antiziganismus wird als Ziel der Sportförderung genannt; eine bundesweite Erfassung antiziganistischer Vorfälle regelt das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-2b32bbca77171e91",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-2e738a2f54674a2d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz errichtet eine Spitzensport-Agentur, verankert aber kein Amt einer oder eines Bundestierschutzbeauftragten.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz errichtet eine Spitzensport-Agentur, verankert aber kein Amt einer oder eines Bundestierschutzbeauftragten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-2e738a2f54674a2d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-3608da24cc186dc5",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Vorschriften enthalten keine Anerkennung des E-Sports als gemeinnützig.",
+          "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "36cecc49f2e1d6619fd77c00985221e790699ce561c11fb0ebbe9e9a71642779"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorgelegten Vorschriften enthalten keine Anerkennung des E-Sports als gemeinnützig.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-3608da24cc186dc5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-b646bb80680fe428",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz macht Förderentscheidungen der Spitzensport-Agentur transparent, regelt aber keine Transparenz internationaler Sportverbände.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz macht Förderentscheidungen der Spitzensport-Agentur transparent, regelt aber keine Transparenz internationaler Sportverbände.",
+            "law_passage_id": "bgbl-1-2026-308-p-17247c9cd2c53406",
+            "law_quote": "die Transparenz von und die Information über Förderentscheidungen",
+            "criterion_quote": "mehr Transparenz schaffen",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-b646bb80680fe428",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-b812ff30aca0ec89",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz weist keine Flächen der Nord- oder Ostsee als unberührte Natur aus.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz weist keine Flächen der Nord- oder Ostsee als unberührte Natur aus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "In mindestens einem Zehntel der deutschen Nord- und Ostsee soll die Natur völlig unberührt bleiben.",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-b812ff30aca0ec89",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-bc9b401981b6afb6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Steuerregel für Erträge aus der Ausrichtung Olympischer Spiele.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Steuerregel für Erträge aus der Ausrichtung Olympischer Spiele.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Diejenigen, die von der Ausrichtung der Olympischen Spiele finanziell profitieren, sollen auf die Erträge Steuern zahlen",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-bc9b401981b6afb6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-becf7196eaada958",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt weder Pflegestudiengänge noch deren Weiterentwicklung.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt weder Pflegestudiengänge noch deren Weiterentwicklung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Das Studium der Pflege wollen wir weiterentwickeln und stärken",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-becf7196eaada958",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-d958f845dc3d414a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine gesetzliche Absicherung von Bürgerräten oder demokratischen Verfahren zu Beratungsergebnissen.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine gesetzliche Absicherung von Bürgerräten oder demokratischen Verfahren zu Beratungsergebnissen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "gesetzlich abzusichern, inklusive demokratischer Verfahren zu einzelnen Beratungsergebnissen",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d958f845dc3d414a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-d9d84db53e1faa1d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz richtet keine Enquetekommission Inklusion ein.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz richtet keine Enquetekommission Inklusion ein.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir richten eine Enquetekommission Inklusion ein",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-d9d84db53e1faa1d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-da71209d8b0a0e57",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz betrifft die Sportförderung in Deutschland und enthält keine Maßnahmen zur politischen Transformation Syriens.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz betrifft die Sportförderung in Deutschland und enthält keine Maßnahmen zur politischen Transformation Syriens.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "für einen friedlichen und demokratischen Transformationsprozess",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-da71209d8b0a0e57",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-e5b2dfd33ae99817",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine kommunalen Veranstaltungsgebühren für Ausrichter oder sonstige finanziell Profitierende.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine kommunalen Veranstaltungsgebühren für Ausrichter oder sonstige finanziell Profitierende.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die für Veranstaltungen üblichen kommunalen Gebühren entrichten",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-e5b2dfd33ae99817",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-e7ce1c6bc32de99c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Förderung von Mental-Health-Coaches an Schulen.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Förderung von Mental-Health-Coaches an Schulen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Mit den Mental Health Coaches und ihren Gruppenangeboten an weiterführenden Schulen",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-e7ce1c6bc32de99c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-ef74c434b2d98d35",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahmen zur Förderung des Ehrenamts im Bevölkerungsschutz.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahmen zur Förderung des Ehrenamts im Bevölkerungsschutz.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "das Ehrenamt bei der Freiwilligen Feuerwehr, dem Technischen Hilfswerk und den Hilfsorganisationen unterstützen und fördern",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-ef74c434b2d98d35",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "gruene-2025-ac-f39619d658f54ee8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Diversitätsziele des Gesetzes beziehen sich auf Sportförderung; Richtlinien für kulturelle Förderungen werden nicht geregelt.",
+          "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "01142121720a4eaaf4f514f0604b6b383ae569611a45c42c5e742f13081e3a6f"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Diversitätsziele des Gesetzes beziehen sich auf Sportförderung; Richtlinien für kulturelle Förderungen werden nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-308-p-6804c0ba954004f7",
+            "law_quote": "die Gleichstellung von Frauen und Männern und die Stärkung der Diversität",
+            "criterion_quote": "durch geeignete Richtlinien dazu beitragen, dass die gesellschaftliche Diversität in der Kultur angemessen repräsentiert wird",
+            "caveats": [],
+            "criterion_id": "gruene-2025-ac-f39619d658f54ee8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
+      "law_id": "bgbl-1-2026-309",
+      "analysis_sha256": "5a7049520df9c39a275e55d135dc1f69ecb9be8df065ee2d39a68158330edca8",
+      "status": "partial",
+      "eligible_count": 1640,
+      "candidate_ids": [
+        "gruene-2025-ac-11f109820a9b4a2c",
+        "gruene-2025-ac-508f5b09f1154b09",
+        "gruene-2025-ac-5f2329bbd94d0fef",
+        "gruene-2025-ac-66c4711905559896",
+        "gruene-2025-ac-96e012241374ecc1",
+        "gruene-2025-ac-b9a97b13b731a28e",
+        "gruene-2025-ac-c381ee138630c89b",
+        "gruene-2025-ac-d8748882b63b0c18",
+        "gruene-2025-ac-e5ad6924c53df062",
+        "gruene-2025-ac-ea02c3e070a8c0dd",
+        "gruene-2025-ac-efda0f94f9264f0c",
+        "gruene-2025-ac-ff32d7668df232bf"
+      ],
+      "omitted_count": 1628,
+      "pairs": []
     },
     {
       "law_id": "bgbl-1-2026-33",
@@ -207306,8 +208598,8 @@
     },
     {
       "law_id": "bgbl-1-2026-40",
-      "analysis_sha256": "3275fae55f8afc1c668bcdd9b2add86d2595c60a38fd03b360464cb350d67da3",
-      "status": "completed",
+      "analysis_sha256": "ed4e232bcbbec419bffbad484cd85ec061e01e5de0fd54d8a5255ac8d2117f35",
+      "status": "partial",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-04dca3eb5d16a574",
@@ -207363,6 +208655,7 @@
         "gruene-2025-ac-a4822add0d0a6963",
         "gruene-2025-ac-a6da6ea61c351914",
         "gruene-2025-ac-a7755a498f746eaa",
+        "gruene-2025-ac-a87ea5b364cdbffc",
         "gruene-2025-ac-a9b7ff88069c099c",
         "gruene-2025-ac-aa97c4078e13581c",
         "gruene-2025-ac-ac5d00df3c267524",
@@ -207388,7 +208681,7 @@
         "gruene-2025-ac-f6df7f289b27e369",
         "gruene-2025-ac-f7bbe487600677f5"
       ],
-      "omitted_count": 1563,
+      "omitted_count": 1562,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-04dca3eb5d16a574",
@@ -216012,8 +217305,8 @@
     },
     {
       "law_id": "bgbl-1-2026-7",
-      "analysis_sha256": "8b788311409a3d05bdc411e9ce7b14213c30f67e807ff5cff47045749a3af2c7",
-      "status": "completed",
+      "analysis_sha256": "4dad45f63a66b7ad0549384ea8e6f9ee1255ee190307f2147412d133254500cd",
+      "status": "partial",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-01a00335cc3e7f3d",
@@ -216222,6 +217515,7 @@
         "gruene-2025-ac-e02e0f036f1dd09e",
         "gruene-2025-ac-e0d6f62108e26538",
         "gruene-2025-ac-e19f11d1c5caa2a9",
+        "gruene-2025-ac-e4327daf69b32430",
         "gruene-2025-ac-e4df194553f81d44",
         "gruene-2025-ac-e75e3357ac15f065",
         "gruene-2025-ac-e7b6fefbaec282bd",
@@ -216244,7 +217538,7 @@
         "gruene-2025-ac-f95bb132cee83aa0",
         "gruene-2025-ac-fb66ab95917718f6"
       ],
-      "omitted_count": 1413,
+      "omitted_count": 1412,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-01a00335cc3e7f3d",
@@ -253540,8 +254834,8 @@
     },
     {
       "law_id": "bgbl-2-2025-297",
-      "analysis_sha256": "0e9168a856c58dd0ff65d86cd26560a5ccb13ec1a6d3dd9cd396afa10a8da8e3",
-      "status": "completed",
+      "analysis_sha256": "ec66ffd8923fa1ff19f28e212d213636dd7549502f6fc53b942ded854049351d",
+      "status": "partial",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-014e78925505702e",
@@ -253630,6 +254924,7 @@
         "gruene-2025-ac-6bf4c4f4b9e4243f",
         "gruene-2025-ac-6c636510adb21abd",
         "gruene-2025-ac-6d5027289fc550f9",
+        "gruene-2025-ac-733657006ff703ba",
         "gruene-2025-ac-78777e88b1bf798a",
         "gruene-2025-ac-78a852b60b56c1e8",
         "gruene-2025-ac-78f68209a3ced8e5",
@@ -253733,7 +255028,7 @@
         "gruene-2025-ac-fbbe1f55a62dece5",
         "gruene-2025-ac-fe3861a0ad593cf0"
       ],
-      "omitted_count": 1452,
+      "omitted_count": 1451,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-014e78925505702e",
@@ -269125,8 +270420,8 @@
     },
     {
       "law_id": "bgbl-2-2026-49",
-      "analysis_sha256": "f62b80113ff86e0394bd766d3771717608996218e36a7cdae1b83b98ec881312",
-      "status": "completed",
+      "analysis_sha256": "33593080f051fc82914fcbed9769c7c646d936e20ed8aa1399410a9efbb5e0f1",
+      "status": "partial",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-0203fa88f6490ef5",
@@ -269150,6 +270445,7 @@
         "gruene-2025-ac-46ab8d76cf2ae586",
         "gruene-2025-ac-46b993ea943963c4",
         "gruene-2025-ac-4c3ca6f9ffc30022",
+        "gruene-2025-ac-4e504418a0ec1ffe",
         "gruene-2025-ac-517a86cd95264149",
         "gruene-2025-ac-58e57b69b736beea",
         "gruene-2025-ac-622e2f6704540962",
@@ -269218,7 +270514,7 @@
         "gruene-2025-ac-fed9b54802088e8a",
         "gruene-2025-ac-ff32d7668df232bf"
       ],
-      "omitted_count": 1552,
+      "omitted_count": 1551,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-0203fa88f6490ef5",
@@ -271645,8 +272941,8 @@
     },
     {
       "law_id": "bgbl-2-2026-60",
-      "analysis_sha256": "058ce1b6b493fe54fff0896a2a7ccfbae3956944f9393dfb06b01558b7915676",
-      "status": "completed",
+      "analysis_sha256": "c461b654f7b102efcaac1e5dbd3c89ac58e7fb3157eb0f74a36e365319c686d3",
+      "status": "partial",
       "eligible_count": 1640,
       "candidate_ids": [
         "gruene-2025-ac-02f2b73430f03bcf",
@@ -271897,6 +273193,7 @@
         "gruene-2025-ac-9abb5dd4345eb5c5",
         "gruene-2025-ac-9b3fa5de44de938a",
         "gruene-2025-ac-9cd7a77ba78893b8",
+        "gruene-2025-ac-a02b4dd5a670576c",
         "gruene-2025-ac-a11df537cae35d91",
         "gruene-2025-ac-a16f4edaad09885d",
         "gruene-2025-ac-a18407ad16a54dd3",
@@ -272056,7 +273353,7 @@
         "gruene-2025-ac-ff1ceed223db8e8f",
         "gruene-2025-ac-ffae57aef1d82c00"
       ],
-      "omitted_count": 1234,
+      "omitted_count": 1233,
       "pairs": [
         {
           "criterion_id": "gruene-2025-ac-02f2b73430f03bcf",
@@ -307700,20 +308997,20 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8368,
+    "calls": 8441,
     "cache_hits": 327,
-    "subdivision_cache_hits": 1,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.980392,
-    "reported_cost_calls": 7685,
+    "reported_cost_usd": 32.047647,
+    "reported_cost_calls": 7758,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.956236,
-    "prompt_tokens": 83632083,
-    "completion_tokens": 14643140,
+    "budget_exposure_usd": 36.023491,
+    "prompt_tokens": 84256855,
+    "completion_tokens": 14756920,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
@@ -307735,10 +309032,10 @@
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4432,
-        "reported_cost_usd": 5.174523199999995,
+        "calls": 4505,
+        "reported_cost_usd": 5.241778019999994,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 3.469446951953614e-18
+        "pending_reserved_usd": 1.5612511283791264e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

@@ -130,6 +130,9 @@
     "bgbl-1-2026-3",
     "bgbl-1-2026-30",
     "bgbl-1-2026-304",
+    "bgbl-1-2026-307",
+    "bgbl-1-2026-308",
+    "bgbl-1-2026-309",
     "bgbl-1-2026-33",
     "bgbl-1-2026-34",
     "bgbl-1-2026-39",
@@ -66623,7 +66626,7 @@
     },
     {
       "law_id": "bgbl-1-2025-362",
-      "analysis_sha256": "40405128868e8036697a788dfc21cb822a39edd27efc4e317615c5696e30a68f",
+      "analysis_sha256": "56fba2149306acb0365568e32de0888426d8b8456e6386cb9dc45ce90392e0aa",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -66638,6 +66641,7 @@
         "ssw-2025-ac-af31b06d80321489",
         "ssw-2025-ac-af7f1d8ba77f1278",
         "ssw-2025-ac-b0c7bd20d490ed3e",
+        "ssw-2025-ac-ba84b78dab69c617",
         "ssw-2025-ac-cb281c552c4eac51",
         "ssw-2025-ac-d8547ae35cbfb2c1",
         "ssw-2025-ac-ea7f849fc17bc85d",
@@ -66645,7 +66649,7 @@
         "ssw-2025-ac-f57743a94ad27de4",
         "ssw-2025-ac-fde6fe7fac025fdb"
       ],
-      "omitted_count": 994,
+      "omitted_count": 993,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-15b41ad4f5295a34",
@@ -66940,6 +66944,35 @@
             "criterion_quote": null,
             "caveats": [],
             "criterion_id": "ssw-2025-ac-b0c7bd20d490ed3e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ba84b78dab69c617",
+          "disposition": "no_supported_link",
+          "rationale": "Die angeführte Regelung betrifft Bundeszuschüsse zur allgemeinen Rentenversicherung, nicht Forschung zu Rassismus oder Antisemitismus.",
+          "input_sha256": "3eaabf10e7bbd174fea635bfd572a359af5e1323b74fa07046fc3910784a2395",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "3eaabf10e7bbd174fea635bfd572a359af5e1323b74fa07046fc3910784a2395"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die angeführte Regelung betrifft Bundeszuschüsse zur allgemeinen Rentenversicherung, nicht Forschung zu Rassismus oder Antisemitismus.",
+            "law_passage_id": "bgbl-1-2025-362-p-20f6e8f183a44f83",
+            "law_quote": "(1) Der Bund leistet zu den Ausgaben der allgemeinen Rentenversicherung Zuschüsse.",
+            "criterion_quote": "Wir wollen **mehr Forschung zu Rassismus und Antisemitismus** und die Bundesmittel hierfür aufstocken.",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet; die bereitgestellten Textstellen belegen jedoch keine Regelung zu Forschung über Rassismus oder Antisemitismus."
+            ],
+            "criterion_id": "ssw-2025-ac-ba84b78dab69c617",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -68051,10 +68084,11 @@
     },
     {
       "law_id": "bgbl-1-2025-369",
-      "analysis_sha256": "9dec1986c3ac47232561183d589356e38afca049b409d7ed39f7f6fa059cbe71",
+      "analysis_sha256": "9af094b01dc113e04a542f65f2d3ea4aebb996e4353d60ad747806685b7c4552",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
+        "ssw-2025-ac-053fe8f32c4c335a",
         "ssw-2025-ac-15c98fa54f1ee2f0",
         "ssw-2025-ac-169e5c0e8666dd18",
         "ssw-2025-ac-1bd911531f674100",
@@ -68089,8 +68123,35 @@
         "ssw-2025-ac-eadce8b32b658db2",
         "ssw-2025-ac-edc6634fc5ab754f"
       ],
-      "omitted_count": 978,
+      "omitted_count": 977,
       "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-053fe8f32c4c335a",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Gesetzespassagen betreffen die Bekämpfung von Schwarzarbeit und regeln keine Finanzierung oder Ausweitung der deutsch-dänischen Pendler:innenberatung.",
+          "input_sha256": "b0cf12ca8f587b3ca0adce64baf9d520ced4de771b4b89634cbf99423432d901",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "b0cf12ca8f587b3ca0adce64baf9d520ced4de771b4b89634cbf99423432d901"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorgelegten Gesetzespassagen betreffen die Bekämpfung von Schwarzarbeit und regeln keine Finanzierung oder Ausweitung der deutsch-dänischen Pendler:innenberatung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„…damit diese wichtige Arbeit auch in Zukunft fortgesetzt und auf die Fehmarnbeltregion ausgeweitet werden kann.“",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-053fe8f32c4c335a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "ssw-2025-ac-15c98fa54f1ee2f0",
           "disposition": "no_supported_link",
@@ -79423,7 +79484,7 @@
     },
     {
       "law_id": "bgbl-1-2026-107",
-      "analysis_sha256": "d7eea1b5280b5354d75d75b1b7c82e563b27b28be2af286fd8c7f29dc30d4eb3",
+      "analysis_sha256": "70f46c72daea3922a533f8941ade63381f567e5aec10e267405c6c52d0aadddd",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -79512,6 +79573,7 @@
         "ssw-2025-ac-810bf771d2fd288e",
         "ssw-2025-ac-822c68555767cede",
         "ssw-2025-ac-8d963979e300a329",
+        "ssw-2025-ac-8f1730b1d0979995",
         "ssw-2025-ac-8feddbea1268f72b",
         "ssw-2025-ac-916deb3c5ba32f56",
         "ssw-2025-ac-92d205ab63cd5dd4",
@@ -79580,7 +79642,7 @@
         "ssw-2025-ac-fde6fe7fac025fdb",
         "ssw-2025-ac-ffa24d9ea0b5ec9a"
       ],
-      "omitted_count": 859,
+      "omitted_count": 858,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-001830851a70035a",
@@ -81965,6 +82027,33 @@
             ],
             "criterion_id": "ssw-2025-ac-8d963979e300a329",
             "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8f1730b1d0979995",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Erneuerung der EU-Gleichstellungsstrategie und regelt keine Maßnahmen zu deren Schwerpunktsetzung auf die Erwerbsbeteiligung von Frauen.",
+          "input_sha256": "9ffedc9b0e6a810d1b080888433a537efb3ab472dbe13df1f9c423a140a68612",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9ffedc9b0e6a810d1b080888433a537efb3ab472dbe13df1f9c423a140a68612"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Erneuerung der EU-Gleichstellungsstrategie und regelt keine Maßnahmen zu deren Schwerpunktsetzung auf die Erwerbsbeteiligung von Frauen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen die **Erneuerung der EU-Gleichstellungsstrategie** . Der Fokus sollte\nbesonders auf Maßnahmen zur Stärkung der Erwerbsbeteiligung von Frauen liegen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8f1730b1d0979995",
+            "disposition": "no_supported_link"
           },
           "verification": null
         },
@@ -92359,13 +92448,14 @@
     },
     {
       "law_id": "bgbl-1-2026-14",
-      "analysis_sha256": "3bd9f54803782cad13589416153528e7813b55c68e6e3a9b323f3302449ebb8c",
+      "analysis_sha256": "c2b60cda7f7227f4e86f104743193d6ee86e5968225ce4246861b4c73a252cc1",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-0173f5f13f6580e1",
         "ssw-2025-ac-0604f581e0633eec",
         "ssw-2025-ac-0c0a887928638ac8",
+        "ssw-2025-ac-11e84d9f674a30f2",
         "ssw-2025-ac-169e5c0e8666dd18",
         "ssw-2025-ac-19f86cea9e118d78",
         "ssw-2025-ac-1b31f4a8eafe6f82",
@@ -92410,7 +92500,7 @@
         "ssw-2025-ac-f57743a94ad27de4",
         "ssw-2025-ac-fab645bc4c8de766"
       ],
-      "omitted_count": 965,
+      "omitted_count": 964,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0173f5f13f6580e1",
@@ -92490,6 +92580,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-0c0a887928638ac8",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-11e84d9f674a30f2",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug enthält keine Regelung zu Mandatssplitting oder einer Mandatspause für Abgeordnete; wegen des als unvollständig ausgewiesenen Gesetzeskontexts lässt sich eine Regelung an anderer Stelle nicht ausschließen.",
+          "input_sha256": "da5ed8a5ca2ec9a851da58ba3f92cd9f935a6b2e344578f5cd9d0976e2ddf960",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "da5ed8a5ca2ec9a851da58ba3f92cd9f935a6b2e344578f5cd9d0976e2ddf960"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Der Auszug enthält keine Regelung zu Mandatssplitting oder einer Mandatspause für Abgeordnete; wegen des als unvollständig ausgewiesenen Gesetzeskontexts lässt sich eine Regelung an anderer Stelle nicht ausschließen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen, dass die Möglichkeit des **Mandatssplittings** für Eltern ermöglicht wird.\nAuch Abgeordnete sollen ihren Job pausieren können, wenn sie ein Kind bekommen\nhaben.",
+            "caveats": [
+              "Unvollständiger Gesetzeskontext."
+            ],
+            "criterion_id": "ssw-2025-ac-11e84d9f674a30f2",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -95933,10 +96052,11 @@
     },
     {
       "law_id": "bgbl-1-2026-148",
-      "analysis_sha256": "a75b8697609fc60ad850544b2cfb3a2c6323a3601220f9d07db87d7b6e0b78f6",
+      "analysis_sha256": "2f0f0dcc065974ae88dc09c4ebbc2e6dc61727cce99301074f68a13972093e20",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
+        "ssw-2025-ac-12bdb9cfe08e6fa0",
         "ssw-2025-ac-169e5c0e8666dd18",
         "ssw-2025-ac-18e6c59978d853a3",
         "ssw-2025-ac-2256d5c26d05d932",
@@ -95964,8 +96084,35 @@
         "ssw-2025-ac-fa92cffedba14ff3",
         "ssw-2025-ac-fa94d276513dbe5c"
       ],
-      "omitted_count": 985,
+      "omitted_count": 984,
       "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-12bdb9cfe08e6fa0",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt intelligente Verkehrssysteme im Straßenverkehr und deren Schnittstellen; eine Regelung zum Güterausbau auf der Marschbahn oder zum Schutz der Personenverkehrsqualität enthält der angeführte Anwendungsbereich nicht.",
+          "input_sha256": "4c99ecc476821cae48c734ecd85755b9c338bf69099c2b034c6179d5d6c2d598",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "4c99ecc476821cae48c734ecd85755b9c338bf69099c2b034c6179d5d6c2d598"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt intelligente Verkehrssysteme im Straßenverkehr und deren Schnittstellen; eine Regelung zum Güterausbau auf der Marschbahn oder zum Schutz der Personenverkehrsqualität enthält der angeführte Anwendungsbereich nicht.",
+            "law_passage_id": "bgbl-1-2026-148-p-912ab48c50178dcb",
+            "law_quote": "Dieses Gesetz ist anzuwenden auf intelligente Verkehrssysteme im Straßenverkehr und deren Schnittstellen zu anderen Verkehrsträgern und bei der Datenbereitstellung über den Nationalen Zugangspunkt.",
+            "criterion_quote": "Der Ausbau für den Güterverkehr darf die Qualität des Personenverkehrs auf der Marschbahn nicht beeinträchtigen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-12bdb9cfe08e6fa0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
           "disposition": "no_supported_link",
@@ -117239,7 +117386,7 @@
     },
     {
       "law_id": "bgbl-1-2026-226",
-      "analysis_sha256": "bdc5d2185dfb48e19f9a43de5659b55c66c59cfb3e549241995a82ce113710ba",
+      "analysis_sha256": "ee34b0d985a326bf28182960318bdbbe443820633fcf9ef1cb2751a3f7313361",
       "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
@@ -117374,10 +117521,11 @@
         "ssw-2025-ac-f8d3cf20c155fa77",
         "ssw-2025-ac-fa14d93f5e10422f",
         "ssw-2025-ac-fca0b2c2a47e3dcf",
+        "ssw-2025-ac-fe8cedcc8e6be1ca",
         "ssw-2025-ac-ff015c83fe59acb4",
         "ssw-2025-ac-ffda7ee808cda2d0"
       ],
-      "omitted_count": 878,
+      "omitted_count": 877,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-0476f5b6670d3679",
@@ -120992,6 +121140,35 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-fca0b2c2a47e3dcf",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-fe8cedcc8e6be1ca",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zu Selbstverpflichtungen bei öffentlichen Aufträgen oder Anschaffungen; wegen des ausdrücklich unvollständigen Gesetzeskontexts ist eine abschließende Prüfung nicht möglich.",
+          "input_sha256": "09f3c14d6a2837f8026318ccfe50d95c47504914179f8d9064509f4a3cd6c804",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "09f3c14d6a2837f8026318ccfe50d95c47504914179f8d9064509f4a3cd6c804"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die vorliegenden Auszüge enthalten keine Regelung zu Selbstverpflichtungen bei öffentlichen Aufträgen oder Anschaffungen; wegen des ausdrücklich unvollständigen Gesetzeskontexts ist eine abschließende Prüfung nicht möglich.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bei Aufträgen oder Anschaffungen aus öffentlicher Hand fordern wir entsprechende Selbstverpflichtungen.",
+            "caveats": [
+              "Der Gesetzeskontext ist als unvollständig gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-fe8cedcc8e6be1ca",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -136610,6 +136787,427 @@
           "verification": null
         }
       ]
+    },
+    {
+      "law_id": "bgbl-1-2026-307",
+      "analysis_sha256": "3d4f0e876756635231520693f692000ecc3a81a94f5734c90a368b466175d5da",
+      "status": "partial",
+      "eligible_count": 1011,
+      "candidate_ids": [
+        "ssw-2025-ac-169e5c0e8666dd18",
+        "ssw-2025-ac-227813c37898e757",
+        "ssw-2025-ac-2acb10fa6de99f7b",
+        "ssw-2025-ac-2fc7922462e1171e",
+        "ssw-2025-ac-3df67b777b422bdf",
+        "ssw-2025-ac-44e99dcd50024064",
+        "ssw-2025-ac-479323e0651e0065",
+        "ssw-2025-ac-5178bdfcb5f5cd39",
+        "ssw-2025-ac-58e8f273a4df01f0",
+        "ssw-2025-ac-59cae407933961b3",
+        "ssw-2025-ac-69714d8ee0817a6b",
+        "ssw-2025-ac-78a24a46792ba01e",
+        "ssw-2025-ac-8feddbea1268f72b",
+        "ssw-2025-ac-9623457a273042cd"
+      ],
+      "omitted_count": 997,
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vorschriften betreffen Kindergeldverfahren und Datenübermittlungen, nicht Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+          "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vorschriften betreffen Kindergeldverfahren und Datenübermittlungen, nicht Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Bürgerliche Freiheits- und Persönlichkeitsrechte dürfen nur dann zugunsten der Handlungsmöglichkeiten von Sicherheitsbehörden eingeschränkt werden",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-227813c37898e757",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert keine Steuersätze für Einkommen oder Gewinne; die Änderungen am Einkommensteuergesetz betreffen Kindergeldprüfung und Datenverarbeitung.",
+          "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert keine Steuersätze für Einkommen oder Gewinne; die Änderungen am Einkommensteuergesetz betreffen Kindergeldprüfung und Datenverarbeitung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Steuersätze für diese Kategorie sollen auf ein angemessenes Niveau angehoben werden",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-227813c37898e757",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2acb10fa6de99f7b",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen am Sechsten Buch Sozialgesetzbuch regeln Datenübermittlungen an Familienkassen, nicht die Prüfung oder Einführung eines Rentenmodells.",
+          "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Änderungen am Sechsten Buch Sozialgesetzbuch regeln Datenübermittlungen an Familienkassen, nicht die Prüfung oder Einführung eines Rentenmodells.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "prüfen, ob das schwedische Rentenmodell mit seiner Kombination aus Umlagefinanzierung und Kapitaldeckung auch in Deutschland eingeführt werden kann",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2acb10fa6de99f7b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zu Mindestmengenregelungen für den im Kriterium genannten Zweck.",
+          "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zu Mindestmengenregelungen für den im Kriterium genannten Zweck.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "es darf dafür keine Mindestmengenregelung geben.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2fc7922462e1171e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3df67b777b422bdf",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Maßnahme zur Entlastung bei CO₂-steuerbedingten Kosten für Mobilität oder Wohnen.",
+          "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Maßnahme zur Entlastung bei CO₂-steuerbedingten Kosten für Mobilität oder Wohnen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "die Menschen finanziell entlastet werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3df67b777b422bdf",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+          "disposition": "missing_context",
+          "rationale": "Der Auszug nennt Datenübermittlungen zwischen öffentlichen Stellen, klärt wegen seines ausdrücklich teilweisen Umfangs aber nicht, ob weitere Erhebungs-, Verarbeitungs- oder Nutzungsvorgänge privatisiert sind.",
+          "input_sha256": "7b5f754dc050967816087ba1c202711d94de4eaa64132d7699220d0309e28c83",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "7b5f754dc050967816087ba1c202711d94de4eaa64132d7699220d0309e28c83"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Der Auszug nennt Datenübermittlungen zwischen öffentlichen Stellen, klärt wegen seines ausdrücklich teilweisen Umfangs aber nicht, ob weitere Erhebungs-, Verarbeitungs- oder Nutzungsvorgänge privatisiert sind.",
+            "law_passage_id": "bgbl-1-2026-307-p-bf09c09f2bf21dce",
+            "law_quote": "Die Datenstelle der Rentenversicherung darf den Familienkassen in einem automatisierten Abrufverfahren die zur Überprüfung des Anspruchs auf Kindergeld erforderlichen Daten übermitteln",
+            "criterion_quote": "Wir wollen, dass die Erhebung, Verarbeitung und Nutzung persönlichen Daten im Rahmen öffentlicher Aufgaben nicht privatisiert wird.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-44e99dcd50024064",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Einkommensteuergesetz, verankert aber keine Kinderrechte eigenständig in Artikel 6 GG.",
+          "input_sha256": "c93e8eaedd31d88ee9915ef6ddbd0a89907811578f1fcae984eb500b7f984399",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c93e8eaedd31d88ee9915ef6ddbd0a89907811578f1fcae984eb500b7f984399"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert das Einkommensteuergesetz, verankert aber keine Kinderrechte eigenständig in Artikel 6 GG.",
+            "law_passage_id": "bgbl-1-2026-307-p-f71868671d1e90b7",
+            "law_quote": "Änderung des Einkommensteuergesetzes",
+            "criterion_quote": "Kinderrechte im Grundgesetz verankern und fordern eine eigenständige Formulierung unter Artikel 6 des Grundgesetzes",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5178bdfcb5f5cd39",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgelegten Änderungen betreffen Kindergeld und Sozialdaten; eine Novellierung des § 13b BauGB oder eine stärkere Umweltprüfung ist darin nicht belegt.",
+          "input_sha256": "ac1cbbddc273bfe5752f6fb17f87d57082b88e7d9aa7f630c16b10c3867e0b0d",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ac1cbbddc273bfe5752f6fb17f87d57082b88e7d9aa7f630c16b10c3867e0b0d"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Änderungen betreffen Kindergeld und Sozialdaten; eine Novellierung des § 13b BauGB oder eine stärkere Umweltprüfung ist darin nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-307-p-f71868671d1e90b7",
+            "law_quote": "**Änderung des Einkommensteuergesetzes**",
+            "criterion_quote": "Wir wollen den **§ 13b im Baugesetzbuch novellieren** . Hier muss ein größerer Schwerpunkt auf der Umweltprüfung liegen, um den Flächenfraß einzudämmen, denn Boden ist nicht unendlich.",
+            "caveats": [
+              "Der bereitgestellte Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "ssw-2025-ac-5178bdfcb5f5cd39",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-59cae407933961b3",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt antragsloses Kindergeld ein und regelt dazu unter anderem Datenübermittlungen; kostenlosen Zugang zu Sport- oder Kulturangeboten schafft es nicht. Es tritt am 1. Januar 2027 in Kraft.",
+          "input_sha256": "ff4c0e6f011c05186d82ce1152946f437f4dfbf9b09d67de798f71c405cd0257",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ff4c0e6f011c05186d82ce1152946f437f4dfbf9b09d67de798f71c405cd0257"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt antragsloses Kindergeld ein und regelt dazu unter anderem Datenübermittlungen; kostenlosen Zugang zu Sport- oder Kulturangeboten schafft es nicht. Es tritt am 1. Januar 2027 in Kraft.",
+            "law_passage_id": "bgbl-1-2026-307-p-6c948936ec636ae5",
+            "law_quote": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-59cae407933961b3",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Kindergeld und zugehörige Datenverarbeitung, nicht ein gesetzliches Recht auf schnelles Internet. Es tritt am 1. Januar 2027 in Kraft.",
+          "input_sha256": "ff4c0e6f011c05186d82ce1152946f437f4dfbf9b09d67de798f71c405cd0257",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "ff4c0e6f011c05186d82ce1152946f437f4dfbf9b09d67de798f71c405cd0257"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Kindergeld und zugehörige Datenverarbeitung, nicht ein gesetzliches Recht auf schnelles Internet. Es tritt am 1. Januar 2027 in Kraft.",
+            "law_passage_id": "bgbl-1-2026-307-p-6c948936ec636ae5",
+            "law_quote": "Gesetz zur Einführung eines antragslosen Kindergeldes",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz erlaubt automatisierte Datenabrufe zur Anspruchsprüfung; ob diese Regelung eine Speicherung ohne Richtervorbehalt oder konkreten Anhaltspunkt zulässt, geht aus dem Auszug nicht hervor.",
+          "input_sha256": "44b01a6f12ee94da2e1715a3db2c6e23dbe0e252046fee3076b1a5415132d4cc",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "44b01a6f12ee94da2e1715a3db2c6e23dbe0e252046fee3076b1a5415132d4cc"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz erlaubt automatisierte Datenabrufe zur Anspruchsprüfung; ob diese Regelung eine Speicherung ohne Richtervorbehalt oder konkreten Anhaltspunkt zulässt, geht aus dem Auszug nicht hervor.",
+            "law_passage_id": "bgbl-1-2026-307-p-bf09c09f2bf21dce",
+            "law_quote": "Zur Überprüfung der in diesem Abschnitt geregelten Ansprüche darf die Familienkasse die erforderlichen Daten automatisiert abrufen.",
+            "criterion_quote": "Speicherungen von personenbezogenen Daten sind für uns nur mit Richtervorbehalt\nvorstellbar und auch nur dann, wenn es hierfür einen konkreten Anhaltspunkt gibt.",
+            "caveats": [
+              "Der vorgelegte Gesetzesauszug regelt Datenübermittlungen und -abrufe, nicht ausdrücklich die Voraussetzungen einer Datenspeicherung."
+            ],
+            "criterion_id": "ssw-2025-ac-8feddbea1268f72b",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9623457a273042cd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Regelungen betreffen Kindergeld, Steuerdaten und automatisierte Datenabrufe; sie führen keine Speicherung von IP-Adressen oder Telekommunikationsdaten ein und belegen auch nicht, dass eine solche Speicherung unterbleibt.",
+          "input_sha256": "9de2681d2699693c303c340a46c3b08a842699ff6df1db9739c55e110cbf7fb3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9de2681d2699693c303c340a46c3b08a842699ff6df1db9739c55e110cbf7fb3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.95,
+            "rationale": "Die Regelungen betreffen Kindergeld, Steuerdaten und automatisierte Datenabrufe; sie führen keine Speicherung von IP-Adressen oder Telekommunikationsdaten ein und belegen auch nicht, dass eine solche Speicherung unterbleibt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Keine Vorratsdatenspeicherung",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9623457a273042cd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
+    },
+    {
+      "law_id": "bgbl-1-2026-308",
+      "analysis_sha256": "179b3e2fa41a69279b7867d8112395bcd416e83f19a7795c032d7b079b9c4b03",
+      "status": "partial",
+      "eligible_count": 1011,
+      "candidate_ids": [
+        "ssw-2025-ac-001830851a70035a",
+        "ssw-2025-ac-0173f5f13f6580e1",
+        "ssw-2025-ac-0df087febd44bc9c",
+        "ssw-2025-ac-15b41ad4f5295a34",
+        "ssw-2025-ac-169e5c0e8666dd18",
+        "ssw-2025-ac-1820261636fbb1af",
+        "ssw-2025-ac-190b96ae538aac4c",
+        "ssw-2025-ac-25e9473227ecc453",
+        "ssw-2025-ac-2e0799b3e1464f11",
+        "ssw-2025-ac-345e6d051dcea95a",
+        "ssw-2025-ac-435f39ff682c6e55",
+        "ssw-2025-ac-43f10fddc6f5bc3c",
+        "ssw-2025-ac-53d6b034d544f460",
+        "ssw-2025-ac-5462414d3881204a",
+        "ssw-2025-ac-557bfce485c85b0f",
+        "ssw-2025-ac-582c3093fe843afc",
+        "ssw-2025-ac-5f142b612957a3a4",
+        "ssw-2025-ac-69739d0c7470cddc",
+        "ssw-2025-ac-782c388a9d94beec",
+        "ssw-2025-ac-798a1a4b536ded72",
+        "ssw-2025-ac-810bf771d2fd288e",
+        "ssw-2025-ac-96e4b050202186b9",
+        "ssw-2025-ac-9a614b36fc559b0c",
+        "ssw-2025-ac-af7f1d8ba77f1278",
+        "ssw-2025-ac-affed9ad51b415d5",
+        "ssw-2025-ac-b24eca8601eb4da4",
+        "ssw-2025-ac-b2e5c207f03e5161",
+        "ssw-2025-ac-bec8238427417cea",
+        "ssw-2025-ac-d81b3558d8684339",
+        "ssw-2025-ac-d9fb81be87a3c130",
+        "ssw-2025-ac-dc49fa1e3f327e7c",
+        "ssw-2025-ac-edc6634fc5ab754f",
+        "ssw-2025-ac-f69cb0796ddd4e6c",
+        "ssw-2025-ac-f906594c8812d5a1"
+      ],
+      "omitted_count": 977,
+      "pairs": []
+    },
+    {
+      "law_id": "bgbl-1-2026-309",
+      "analysis_sha256": "566e998e9677c5e79af39094cfe76042b71499911c16de8671bfd6c0f94486b9",
+      "status": "partial",
+      "eligible_count": 1011,
+      "candidate_ids": [
+        "ssw-2025-ac-227813c37898e757",
+        "ssw-2025-ac-399bee3f9ce21b5f",
+        "ssw-2025-ac-3ac1eb757978308f",
+        "ssw-2025-ac-479323e0651e0065",
+        "ssw-2025-ac-5c4d273177e2abb6",
+        "ssw-2025-ac-68f9ed6446c7a4f1",
+        "ssw-2025-ac-69714d8ee0817a6b",
+        "ssw-2025-ac-83922e99d4e5fd79",
+        "ssw-2025-ac-8ff082ff5eb55d41",
+        "ssw-2025-ac-e74cd12ecbe032c8",
+        "ssw-2025-ac-ea7f849fc17bc85d",
+        "ssw-2025-ac-ee967859c2cfe1cb"
+      ],
+      "omitted_count": 999,
+      "pairs": []
     },
     {
       "law_id": "bgbl-1-2026-33",
@@ -184222,8 +184820,8 @@
     },
     {
       "law_id": "bgbl-2-2026-60",
-      "analysis_sha256": "a9ebdb04d27a1369b7b8a4659d61fce2cebf7b6eca15bfdd290518e345917c9c",
-      "status": "completed",
+      "analysis_sha256": "baa691da544c2c04431984feaa18fa39300cb16a2178383aff9a1174f7c3e9f2",
+      "status": "partial",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-042e609909ede8ff",
@@ -184240,6 +184838,7 @@
         "ssw-2025-ac-175efba8b079cce8",
         "ssw-2025-ac-18220df1bf9a7235",
         "ssw-2025-ac-18f3695d55f9efc2",
+        "ssw-2025-ac-190b96ae538aac4c",
         "ssw-2025-ac-19ef4fd5201c8a43",
         "ssw-2025-ac-1b3bf2be65bbde00",
         "ssw-2025-ac-1e81e1d982eda8f3",
@@ -184386,7 +184985,7 @@
         "ssw-2025-ac-fe8cedcc8e6be1ca",
         "ssw-2025-ac-ffb4a2f519fbadef"
       ],
-      "omitted_count": 852,
+      "omitted_count": 851,
       "pairs": [
         {
           "criterion_id": "ssw-2025-ac-042e609909ede8ff",
@@ -204626,20 +205225,20 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8368,
+    "calls": 8441,
     "cache_hits": 327,
-    "subdivision_cache_hits": 1,
+    "subdivision_cache_hits": 0,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 31.980392,
-    "reported_cost_calls": 7685,
+    "reported_cost_usd": 32.047647,
+    "reported_cost_calls": 7758,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 35.956236,
-    "prompt_tokens": 83632083,
-    "completion_tokens": 14643140,
+    "budget_exposure_usd": 36.023491,
+    "prompt_tokens": 84256855,
+    "completion_tokens": 14756920,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
@@ -204661,10 +205260,10 @@
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4432,
-        "reported_cost_usd": 5.174523199999995,
+        "calls": 4505,
+        "reported_cost_usd": 5.241778019999994,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 3.469446951953614e-18
+        "pending_reserved_usd": 1.5612511283791264e-17
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
