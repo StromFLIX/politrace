@@ -136791,7 +136791,7 @@
     {
       "law_id": "bgbl-1-2026-307",
       "analysis_sha256": "3d4f0e876756635231520693f692000ecc3a81a94f5734c90a368b466175d5da",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-169e5c0e8666dd18",
@@ -137032,6 +137032,38 @@
           "verification": null
         },
         {
+          "criterion_id": "ssw-2025-ac-58e8f273a4df01f0",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 auf einen Kindergeldantrag verzichten. Damit kann eine bürokratische Antragshürde beim Kindergeld entfallen; der Verzicht ist nicht verpflichtend und betrifft keine weiteren Leistungen.",
+          "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0702f9c8b66e269cbf0e330d07f38bd7cf9dc727e17f38cfc4c08121927ca0e8"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586"
+            }
+          ],
+          "impact_id": "impact-8ef4e3d4dfe81b96",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.88,
+            "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 auf einen Kindergeldantrag verzichten. Damit kann eine bürokratische Antragshürde beim Kindergeld entfallen; der Verzicht ist nicht verpflichtend und betrifft keine weiteren Leistungen.",
+            "law_passage_id": "bgbl-1-2026-307-p-dd0c76d653dca9b6",
+            "law_quote": "(2) Die Familienkasse kann in den Fällen des § 69 Satz 3 auf einen Antrag verzichten. Das Eingangsdatum\nder Mitteilung des Bundeszentralamts für Steuern tritt dann an die Stelle des Eingangsdatums des Antrags.",
+            "criterion_quote": "**bürokratische Hürden**\n**abbauen**",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-58e8f273a4df01f0",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "ssw-2025-ac-59cae407933961b3",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz führt antragsloses Kindergeld ein und regelt dazu unter anderem Datenübermittlungen; kostenlosen Zugang zu Sport- oder Kulturangeboten schafft es nicht. Es tritt am 1. Januar 2027 in Kraft.",
@@ -137082,6 +137114,38 @@
             "caveats": [],
             "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Januar 2027 sieht die Regelung für Kindergeld eine elektronische Antragstellung über eine amtliche Schnittstelle vor; die Familienkasse kann bei einem unterschriebenen schriftlichen Antrag darauf verzichten. Andere Leistungen und Fördermöglichkeiten sind davon nicht erfasst.",
+          "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "76d375dd08188b2a987e7da790b5e22fe15a9faf5c54cdcbca761fa7769c789a"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586"
+            }
+          ],
+          "impact_id": "impact-4ea0d927a2fed9ac",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.96,
+            "rationale": "Ab 1. Januar 2027 sieht die Regelung für Kindergeld eine elektronische Antragstellung über eine amtliche Schnittstelle vor; die Familienkasse kann bei einem unterschriebenen schriftlichen Antrag darauf verzichten. Andere Leistungen und Fördermöglichkeiten sind davon nicht erfasst.",
+            "law_passage_id": "bgbl-1-2026-307-p-a1132a1906cbf375",
+            "law_quote": "Das Kindergeld ist bei der zuständigen Familienkasse elektronisch nach amtlich vorgeschriebenem\nDatensatz über die amtlich vorgeschriebene Schnittstelle zu beantragen; die Familienkasse kann auf die\nelektronische Antragstellung verzichten, wenn das Kindergeld schriftlich beantragt und der Antrag vom\nBerechtigten eigenhändig unterschrieben wird.",
+            "criterion_quote": "damit diese Leistungen auch digital beantragt werden können.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-78a24a46792ba01e",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -137146,7 +137210,7 @@
     {
       "law_id": "bgbl-1-2026-308",
       "analysis_sha256": "179b3e2fa41a69279b7867d8112395bcd416e83f19a7795c032d7b079b9c4b03",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-001830851a70035a",
@@ -137185,12 +137249,945 @@
         "ssw-2025-ac-f906594c8812d5a1"
       ],
       "omitted_count": 977,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-001830851a70035a",
+          "disposition": "no_supported_link",
+          "rationale": "Die Fördermöglichkeiten betreffen Sport; eine langfristige Bundesfinanzierung ehrenamtlich getragener sozialer oder kultureller Projekte wird nicht geregelt.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Fördermöglichkeiten betreffen Sport; eine langfristige Bundesfinanzierung ehrenamtlich getragener sozialer oder kultureller Projekte wird nicht geregelt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-001830851a70035a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-0173f5f13f6580e1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur deutsch-dänischen Pendler:innenberatung oder zu deren Finanzierung.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur deutsch-dänischen Pendler:innenberatung oder zu deren Finanzierung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-0173f5f13f6580e1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-0df087febd44bc9c",
+          "disposition": "missing_context",
+          "rationale": "Die vorliegenden unvollständigen Gesetzesauszüge enthalten keine E-Sport-Definition; ob das Gesetz eine maßgebliche Definition festlegt, lässt sich damit nicht beurteilen.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.76,
+            "rationale": "Die vorliegenden unvollständigen Gesetzesauszüge enthalten keine E-Sport-Definition; ob das Gesetz eine maßgebliche Definition festlegt, lässt sich damit nicht beurteilen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [
+              "Der Gesetzestext liegt nur teilweise vor."
+            ],
+            "criterion_id": "ssw-2025-ac-0df087febd44bc9c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-15b41ad4f5295a34",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung, die Frauen und Kindern ein Recht auf Schutz vor Gewalt oder einen einheitlichen Finanzierungsrahmen für Frauenhäuser einräumt.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung, die Frauen und Kindern ein Recht auf Schutz vor Gewalt oder einen einheitlichen Finanzierungsrahmen für Frauenhäuser einräumt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-15b41ad4f5295a34",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Sportförderung, nicht Voraussetzungen für Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Sportförderung, nicht Voraussetzungen für Einschränkungen von Freiheits- und Persönlichkeitsrechten durch Sicherheitsbehörden.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-169e5c0e8666dd18",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Änderung des Wahlalters bei Bundestagswahlen.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Änderung des Wahlalters bei Bundestagswahlen.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-1820261636fbb1af",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-190b96ae538aac4c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Förderregelungen betreffen Sportmaßnahmen und begründen keine institutionelle statt projektbezogene Bundesförderung für Minderheitenorganisationen.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Die Förderregelungen betreffen Sportmaßnahmen und begründen keine institutionelle statt projektbezogene Bundesförderung für Minderheitenorganisationen.",
+            "law_passage_id": "bgbl-1-2026-308-p-35d123f6d3466c53",
+            "law_quote": "(1) Der Bund kann weitere Projekte, Maßnahmen oder Institutionen fördern, soweit diese der gesamtstaatlichen\nRepräsentation dienen.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-190b96ae538aac4c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-25e9473227ecc453",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht Sportförderung, enthält aber keine passgenauen Maßnahmen für Kinder mit pandemiebedingten Defiziten oder zusätzliche Sportaktivitäten für diese Gruppe.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.97,
+            "rationale": "Das Gesetz ermöglicht Sportförderung, enthält aber keine passgenauen Maßnahmen für Kinder mit pandemiebedingten Defiziten oder zusätzliche Sportaktivitäten für diese Gruppe.",
+            "law_passage_id": "bgbl-1-2026-308-p-22505ab2795705e5",
+            "law_quote": "(2) Der Bund kann weitere Maßnahmen und Projekte von gesamtstaatlicher Bedeutung im Sport fördern.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-25e9473227ecc453",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-2e0799b3e1464f11",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Förderregelung zur Ausrüstung von Bestandsfahrzeugen mit ETCS-On-Board-Units.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Förderregelung zur Ausrüstung von Bestandsfahrzeugen mit ETCS-On-Board-Units.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-2e0799b3e1464f11",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-345e6d051dcea95a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt keine elektronische Fußfessel für Täter ein und regelt keine entsprechende Einschränkung ihrer Bewegungsfreiheit.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz führt keine elektronische Fußfessel für Täter ein und regelt keine entsprechende Einschränkung ihrer Bewegungsfreiheit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-345e6d051dcea95a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-435f39ff682c6e55",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz sieht Fördermöglichkeiten für Trainer-Aus- und -Weiterbildung sowie sportwissenschaftliche Projekte vor, aber keine Förderung weiterer Spezialisierungen von Pflegefachkräften.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz sieht Fördermöglichkeiten für Trainer-Aus- und -Weiterbildung sowie sportwissenschaftliche Projekte vor, aber keine Förderung weiterer Spezialisierungen von Pflegefachkräften.",
+            "law_passage_id": "bgbl-1-2026-308-p-2f6037dd2d98e310",
+            "law_quote": "(1) Bundessportfachverbände können unter Beachtung von § 1 gefördert werden. Die Förderung soll den in § 1\nAbsatz 3 genannten Zielen dienen. Im Bereich der Berufsqualifikationen können Aus-, Weiter- und Fortbildungen für\nTrainerinnen und Trainer der Bundessportfachverbände gefördert werden.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-435f39ff682c6e55",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-43f10fddc6f5bc3c",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt Antiziganismus als Gegenstand der Sportförderung, regelt aber keine finanzielle oder strukturelle Ausstattung des Bundesbeauftragtenamts.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz nennt Antiziganismus als Gegenstand der Sportförderung, regelt aber keine finanzielle oder strukturelle Ausstattung des Bundesbeauftragtenamts.",
+            "law_passage_id": "bgbl-1-2026-308-p-cd04ddd789e5f467",
+            "law_quote": "4. die Verhütung und die Bekämpfung von Extremismus, Rassismus, Antisemitismus, Muslimfeindlichkeit,\nAntiziganismus und anderen Formen gruppenbezogener Menschenfeindlichkeit,",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-43f10fddc6f5bc3c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-53d6b034d544f460",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorgesehene Evaluation betrifft die Sportförderung; eine Evaluation der Gesetzgebung zu Abmahnungen wird nicht geregelt.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgesehene Evaluation betrifft die Sportförderung; eine Evaluation der Gesetzgebung zu Abmahnungen wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-308-p-f75200a8745640a1",
+            "law_quote": "(1) Die Bundesregierung berichtet dem Deutschen Bundestag sechs Jahre nach Inkrafttreten dieses Gesetzes\nüber die durch dieses Gesetz erzielten Wirkungen in Bezug auf die Stärkung des Spitzensports in Deutschland",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-53d6b034d544f460",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5462414d3881204a",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz führt Geschlechtergleichstellung als Ziel der Sportförderung auf, regelt aber weder paritätische Besetzung öffentlicher Kulturfördergremien noch eine entsprechende bundesweite Vorgabe.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz führt Geschlechtergleichstellung als Ziel der Sportförderung auf, regelt aber weder paritätische Besetzung öffentlicher Kulturfördergremien noch eine entsprechende bundesweite Vorgabe.",
+            "law_passage_id": "bgbl-1-2026-308-p-6804c0ba954004f7",
+            "law_quote": "1. die Gleichstellung von Frauen und Männern und die Stärkung der Diversität,",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5462414d3881204a",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-557bfce485c85b0f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz fördert unter anderem professionelle Verbandsstrukturen im Spitzensport, regelt aber keinen Aufbau einer Liga- oder Turnierstruktur.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz fördert unter anderem professionelle Verbandsstrukturen im Spitzensport, regelt aber keinen Aufbau einer Liga- oder Turnierstruktur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-557bfce485c85b0f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-582c3093fe843afc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Sportfördergesetz enthält keine Regelung zur Bundesförderung politischer Stiftungen nationaler Minderheiten.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Sportfördergesetz enthält keine Regelung zur Bundesförderung politischer Stiftungen nationaler Minderheiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-582c3093fe843afc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5f142b612957a3a4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt Antisemitismus als gesellschaftliches Ziel der Sportförderung, regelt aber keine Aufklärung über israelbezogenen Antisemitismus.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz nennt Antisemitismus als gesellschaftliches Ziel der Sportförderung, regelt aber keine Aufklärung über israelbezogenen Antisemitismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5f142b612957a3a4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-69739d0c7470cddc",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine außenpolitischen Regelungen zur Zweistaatenlösung oder zur Anerkennung Palästinas.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine außenpolitischen Regelungen zur Zweistaatenlösung oder zur Anerkennung Palästinas.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-69739d0c7470cddc",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-782c388a9d94beec",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Sportförderung, erkennt E-Sport aber nicht ausdrücklich als offizielle Sportart an.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Sportförderung, erkennt E-Sport aber nicht ausdrücklich als offizielle Sportart an.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-782c388a9d94beec",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-798a1a4b536ded72",
+          "disposition": "no_supported_link",
+          "rationale": "Die Gleichstellung von Frauen und Männern kann bei bestimmten Sportförderungen berücksichtigt werden; eine Erhöhung des Frauenanteils in Führungspositionen regelt das Gesetz nicht.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Gleichstellung von Frauen und Männern kann bei bestimmten Sportförderungen berücksichtigt werden; eine Erhöhung des Frauenanteils in Führungspositionen regelt das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-798a1a4b536ded72",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-810bf771d2fd288e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Mitwirkung des Bundes in der Bund-Länder-Kommission Antiziganismus.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Mitwirkung des Bundes in der Bund-Länder-Kommission Antiziganismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-810bf771d2fd288e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-96e4b050202186b9",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur gleichberechtigten Bundesförderung politischer Stiftungen nationaler Minderheiten.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur gleichberechtigten Bundesförderung politischer Stiftungen nationaler Minderheiten.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-96e4b050202186b9",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-9a614b36fc559b0c",
+          "disposition": "no_supported_link",
+          "rationale": "Die geregelten Sportfördermaßnahmen betreffen keine aktive Gedenkstättenarbeit.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die geregelten Sportfördermaßnahmen betreffen keine aktive Gedenkstättenarbeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-9a614b36fc559b0c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-af7f1d8ba77f1278",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ermöglicht sportwissenschaftliche Forschungsförderung, erhöht aber keine Bundesmittel für Forschung zu Rassismus und Antisemitismus.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ermöglicht sportwissenschaftliche Forschungsförderung, erhöht aber keine Bundesmittel für Forschung zu Rassismus und Antisemitismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-af7f1d8ba77f1278",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-affed9ad51b415d5",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Fördermaßnahmen für Erinnerungskultur.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Fördermaßnahmen für Erinnerungskultur.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-affed9ad51b415d5",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b24eca8601eb4da4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine finanzielle Förderung der Melde- und Informationsstelle Antiziganismus.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine finanzielle Förderung der Melde- und Informationsstelle Antiziganismus.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-b24eca8601eb4da4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-b2e5c207f03e5161",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt keine Förderung grenzüberschreitender Kulturarbeit.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt keine Förderung grenzüberschreitender Kulturarbeit.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-b2e5c207f03e5161",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-bec8238427417cea",
+          "disposition": "no_supported_link",
+          "rationale": "Zuwendungsempfänger im Sport müssen gegen Gewalt vorgehen; eine dauerhafte Finanzierung von Präventionsarbeit in Einrichtungen der Behindertenhilfe regelt das Gesetz nicht.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Zuwendungsempfänger im Sport müssen gegen Gewalt vorgehen; eine dauerhafte Finanzierung von Präventionsarbeit in Einrichtungen der Behindertenhilfe regelt das Gesetz nicht.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-bec8238427417cea",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d81b3558d8684339",
+          "disposition": "no_supported_link",
+          "rationale": "Das Sportfördergesetz enthält keine Regelungen zur Infrastrukturplanung oder zu deren Beteiligungs-, Klage- und Umweltschutzgarantien.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Sportfördergesetz enthält keine Regelungen zur Infrastrukturplanung oder zu deren Beteiligungs-, Klage- und Umweltschutzgarantien.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d81b3558d8684339",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-d9fb81be87a3c130",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz enthält keine Regelung zur Versetzung von Steuerbeamt:innen in unterbesetzte Fachabteilungen oder die Steuerfahndung.",
+          "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c092ff1e04efd60d1d1ecfd99bb206b16cf5866a4c0a20e0f330e36498060f5c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz enthält keine Regelung zur Versetzung von Steuerbeamt:innen in unterbesetzte Fachabteilungen oder die Steuerfahndung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-d9fb81be87a3c130",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-dc49fa1e3f327e7c",
+          "disposition": "missing_context",
+          "rationale": "Das Gesetz erlaubt mehrjährige Förderung von Bundessportfachverbänden, doch aus den vorliegenden Textstellen geht nicht hervor, ob E-Sport-Programme darunterfallen oder fortgeführt werden.",
+          "input_sha256": "21fedc314f361789a71121faf11b74c6d11e25020ba2a20114bd7c6edd318cbd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fedc314f361789a71121faf11b74c6d11e25020ba2a20114bd7c6edd318cbd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.94,
+            "rationale": "Das Gesetz erlaubt mehrjährige Förderung von Bundessportfachverbänden, doch aus den vorliegenden Textstellen geht nicht hervor, ob E-Sport-Programme darunterfallen oder fortgeführt werden.",
+            "law_passage_id": "bgbl-1-2026-308-p-091ff7518f2e17bb",
+            "law_quote": "Die Förderung kann unter Beachtung der haushalts- und zuwendungsrechtlichen Voraussetzungen mehrjährig gewährt werden.",
+            "criterion_quote": "Förderprogramme, die es zu verstetigen gilt.",
+            "caveats": [
+              "Die Anwendbarkeit der Förderregelung auf E-Sport ist anhand der vorliegenden Texte nicht feststellbar."
+            ],
+            "criterion_id": "ssw-2025-ac-dc49fa1e3f327e7c",
+            "disposition": "missing_context"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+          "disposition": "no_supported_link",
+          "rationale": "Die vorliegenden Bestimmungen regeln Sportförderung und die Spitzensport-Agentur; eine Einführung des verlangten Verbandsklagerechts für Minderheiten ist darin nicht belegt.",
+          "input_sha256": "21fedc314f361789a71121faf11b74c6d11e25020ba2a20114bd7c6edd318cbd",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "21fedc314f361789a71121faf11b74c6d11e25020ba2a20114bd7c6edd318cbd"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die vorliegenden Bestimmungen regeln Sportförderung und die Spitzensport-Agentur; eine Einführung des verlangten Verbandsklagerechts für Minderheiten ist darin nicht belegt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-edc6634fc5ab754f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f69cb0796ddd4e6c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Bekämpfung von Rassismus und Antisemitismus ist ein bei bestimmten Bundesförderungen im Sport zu berücksichtigendes Ziel. Eine gezielte Zuweisung staatlicher Gelder für politische Bildung oder Demokratieinitiativen regelt die Vorschrift nicht.",
+          "input_sha256": "33913763c5fc0e617f2762ce6560399bafea626bb0429d69a9cb5d40cb8844aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "0ee6e5579ebaea98e08260f354a99a07b059cf4ff573ab55f15707e339c0fd24"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33913763c5fc0e617f2762ce6560399bafea626bb0429d69a9cb5d40cb8844aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Die Bekämpfung von Rassismus und Antisemitismus ist ein bei bestimmten Bundesförderungen im Sport zu berücksichtigendes Ziel. Eine gezielte Zuweisung staatlicher Gelder für politische Bildung oder Demokratieinitiativen regelt die Vorschrift nicht.",
+            "law_passage_id": "bgbl-1-2026-308-p-cd04ddd789e5f467",
+            "law_quote": "4. die Verhütung und die Bekämpfung von Extremismus, Rassismus, Antisemitismus, Muslimfeindlichkeit,\nAntiziganismus und anderen Formen gruppenbezogener Menschenfeindlichkeit,",
+            "criterion_quote": "Wir wollen staatliche Gelder für politische Bildung und Demokratieinitiativen gezielt\nauf Maßnahmen lenken, die sich **aktiv gegen Rassismus, Antisemitismus und**\n**jede Form der Diskriminierung** stellen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-f69cb0796ddd4e6c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-f906594c8812d5a1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt die gleichberechtigte Teilhabe von Menschen mit Behinderungen an Sportaktivitäten als Ziel bestimmter Bundesförderungen. Eine Umsetzung der UN-Behindertenrechtskonvention auf Bundes-, Landes- und kommunaler Ebene ist damit nicht belegt.",
+          "input_sha256": "33913763c5fc0e617f2762ce6560399bafea626bb0429d69a9cb5d40cb8844aa",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "598cb8002ba50bfb00a3e8af1492772eb44e6c18459a772668c7f5ffe6533acd"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "33913763c5fc0e617f2762ce6560399bafea626bb0429d69a9cb5d40cb8844aa"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.88,
+            "rationale": "Das Gesetz nennt die gleichberechtigte Teilhabe von Menschen mit Behinderungen an Sportaktivitäten als Ziel bestimmter Bundesförderungen. Eine Umsetzung der UN-Behindertenrechtskonvention auf Bundes-, Landes- und kommunaler Ebene ist damit nicht belegt.",
+            "law_passage_id": "bgbl-1-2026-308-p-2a6f9d32efa3f470",
+            "law_quote": "3. die Inklusion und die gleichberechtigte Teilhabe an Sportaktivitäten von Menschen mit Behinderungen,",
+            "criterion_quote": "Hierzu muss die\nUN-Konvention über die Rechte von Menschen mit Behinderungen auf Bundes-,\nLandes- und kommunaler Ebene konsequent umgesetzt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-f906594c8812d5a1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-309",
       "analysis_sha256": "566e998e9677c5e79af39094cfe76042b71499911c16de8671bfd6c0f94486b9",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-227813c37898e757",
@@ -137207,7 +138204,332 @@
         "ssw-2025-ac-ee967859c2cfe1cb"
       ],
       "omitted_count": 999,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "ssw-2025-ac-227813c37898e757",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung setzt Tabaksteuersätze fest, nicht Steuersätze für hohe Einkommen oder Gewinne.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung setzt Tabaksteuersätze fest, nicht Steuersätze für hohe Einkommen oder Gewinne.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "die Steuersätze für diese Kategorie sollen auf ein angemessenes Niveau angehoben werden",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-227813c37898e757",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-399bee3f9ce21b5f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung regelt Tabaksteuersätze, nicht den Mindestlohn je Stunde.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung regelt Tabaksteuersätze, nicht den Mindestlohn je Stunde.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "mindestens 15 Euro pro Stunde",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-399bee3f9ce21b5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-3ac1eb757978308f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft das Tabaksteuerrecht und reformiert das Ehegatt:innensplitting nicht.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung betrifft das Tabaksteuerrecht und reformiert das Ehegatt:innensplitting nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Reform des Ehegatt:innensplittings hin zu einem Familiensplitting",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-3ac1eb757978308f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-479323e0651e0065",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft Tabaksteuer und enthält keine Ergänzung des Artikels 6 des Grundgesetzes zu Kinderrechten.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung betrifft Tabaksteuer und enthält keine Ergänzung des Artikels 6 des Grundgesetzes zu Kinderrechten.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Kinderrechte im Grundgesetz verankern",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-479323e0651e0065",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-5c4d273177e2abb6",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert das Tabaksteuerrecht; eine Änderung des Sparer-Pauschbetrags ist nicht vorgesehen.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert das Tabaksteuerrecht; eine Änderung des Sparer-Pauschbetrags ist nicht vorgesehen.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Zweitens wollen wir den Sparer-Pauschbetrag deutlich erhöhen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-5c4d273177e2abb6",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-68f9ed6446c7a4f1",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tabaksteuern und regeln weder den Mindestlohn noch dessen Höhe.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen Tabaksteuern und regeln weder den Mindestlohn noch dessen Höhe.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Wir wollen einen armutsfesten Mindestlohn in Höhe von mindestens 15 Euro pro Stunde.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-68f9ed6446c7a4f1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuerregelungen; eine gesetzliche Regelung eines Rechts auf schnelles Internet enthält es nicht.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Tabaksteuerregelungen; eine gesetzliche Regelung eines Rechts auf schnelles Internet enthält es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Das Recht auf schnelles Internet gehört zur Daseinsvorsorge und muss gesetzlich geregelt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-69714d8ee0817a6b",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-83922e99d4e5fd79",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen regeln Tabaksteuersätze und Steuerzeichen, nicht Netzentgelte oder Abschaltstrom.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen regeln Tabaksteuersätze und Steuerzeichen, nicht Netzentgelte oder Abschaltstrom.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Dafür muss dieser Strom bis mindestens 2028 netzentgeltfrei bleiben, um den Hochlauf der Wasserstoffwirtschaft zu fördern.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-83922e99d4e5fd79",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-8ff082ff5eb55d41",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuerregelungen und enthält keine steuerliche Erleichterung für Homeoffice.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Tabaksteuerregelungen und enthält keine steuerliche Erleichterung für Homeoffice.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "eine steuerliche Erleichterung des Homeoffice.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-8ff082ff5eb55d41",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-e74cd12ecbe032c8",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tabaksteuern; eine steuerliche Absetzbarkeit von Gewerkschaftsbeiträgen wird nicht geregelt.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen Tabaksteuern; eine steuerliche Absetzbarkeit von Gewerkschaftsbeiträgen wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Wir wollen, dass Gewerkschaftsmitglieder ihren Gewerkschaftsbeitrag über den Arbeitnehmer-Pauschbetrag hinaus steuerlich geltend machen können.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-e74cd12ecbe032c8",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ea7f849fc17bc85d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer- und Übergangsregelungen, schafft aber keinen Rahmen für Arbeitszeit- oder Arbeitsortformen.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz ändert Tabaksteuer- und Übergangsregelungen, schafft aber keinen Rahmen für Arbeitszeit- oder Arbeitsortformen.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Wir wollen, dass neue Arbeitszeit- und Arbeitsortformen in einen gesetzlichen Regelungsrahmen überführt werden.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ea7f849fc17bc85d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderungen betreffen Tabaksteuerrecht und enthalten keine Regelung zur grenzüberschreitenden Nutzung von Bundesförderprogrammen.",
+          "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "5ad1bb109cf36cecf50a9f5f5a9dbc7ddfd1656d1de791665354ba73bea68887"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderungen betreffen Tabaksteuerrecht und enthalten keine Regelung zur grenzüberschreitenden Nutzung von Bundesförderprogrammen.",
+            "law_passage_id": "bgbl-1-2026-309-p-1530bddb39f7ca2f",
+            "law_quote": "Gesetz zur Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Wir wollen ermöglichen, dass wirtschaftliche Bundesförderprogramme bis zu einem Umfang von 20 % auch grenzüberschreitend eingesetzt werden dürfen.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-ee967859c2cfe1cb",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-33",
@@ -184821,7 +186143,7 @@
     {
       "law_id": "bgbl-2-2026-60",
       "analysis_sha256": "baa691da544c2c04431984feaa18fa39300cb16a2178383aff9a1174f7c3e9f2",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 1011,
       "candidate_ids": [
         "ssw-2025-ac-042e609909ede8ff",
@@ -185363,6 +186685,33 @@
             "criterion_quote": "Wir wollen, dass wichtige **Ausbildungszentren für die maritime Wirtschaft** wie das\nMaritime Zentrum an der Hochschule Flensburg oder die Seefahrtschule Flensburg\nverlässlich **gefördert** werden.",
             "caveats": [],
             "criterion_id": "ssw-2025-ac-18f3695d55f9efc2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "ssw-2025-ac-190b96ae538aac4c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vertragsauszüge enthalten keine Regelung zur Bundesförderung von Minderheitenorganisationen oder zur Umstellung auf institutionelle Förderung.",
+          "input_sha256": "55f4b6cbf107155035b1c750cec70c936c7333488ba25732fb8297e3d8e57099",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "55f4b6cbf107155035b1c750cec70c936c7333488ba25732fb8297e3d8e57099"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vertragsauszüge enthalten keine Regelung zur Bundesförderung von Minderheitenorganisationen oder zur Umstellung auf institutionelle Förderung.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "- Wir wollen, dass die Organisationen der Minderheiten eine **angemessene**\n**institutionelle Förderung** vom Bund bekommen **statt** der bisherigen **Projekt-**\n**förderung** . Dies gilt insbesondere für die friesische Volksgruppe, die bei ihrer\nkulturellen Arbeit große finanzielle Herausforderungen hat.",
+            "caveats": [],
+            "criterion_id": "ssw-2025-ac-190b96ae538aac4c",
             "disposition": "no_supported_link"
           },
           "verification": null
@@ -205225,45 +206574,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8441,
-    "cache_hits": 327,
-    "subdivision_cache_hits": 0,
+    "calls": 8486,
+    "cache_hits": 330,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 32.047647,
-    "reported_cost_calls": 7758,
+    "reported_cost_usd": 32.221821,
+    "reported_cost_calls": 7803,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 36.023491,
-    "prompt_tokens": 84256855,
-    "completion_tokens": 14756920,
+    "budget_exposure_usd": 36.197664,
+    "prompt_tokens": 84739926,
+    "completion_tokens": 14831839,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 313,
-        "reported_cost_usd": 7.855004099999998,
+        "calls": 317,
+        "reported_cost_usd": 7.953052349999997,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 146,
-        "reported_cost_usd": 1.839896250000001,
+        "calls": 149,
+        "reported_cost_usd": 1.874389000000001,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4505,
-        "reported_cost_usd": 5.241778019999994,
+        "calls": 4543,
+        "reported_cost_usd": 5.283410812499994,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 1.5612511283791264e-17
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",

@@ -119297,7 +119297,7 @@
     {
       "law_id": "bgbl-1-2026-307",
       "analysis_sha256": "bb5d03a9ff6a818c8f13af98fbeddb5db767a823d830e7dada5b563c595a1cac",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-07f8e6809ae6ce30",
@@ -119421,6 +119421,38 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-387d9bbf1fdcdcc0",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3fe78ed2f5d9bc46",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 Kindergeld ohne Antrag bearbeiten. Das unterstützt eine automatische Leistungsgewährung teilweise; eine automatische Auszahlung ist nicht vorgeschrieben.",
+          "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c46bcde38bbc1030b59d6ea6807455b916bb30f1ab605b82829e6bc7d60a2a0c"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586"
+            }
+          ],
+          "impact_id": "impact-cd463ae35a3ad229",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.91,
+            "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 Kindergeld ohne Antrag bearbeiten. Das unterstützt eine automatische Leistungsgewährung teilweise; eine automatische Auszahlung ist nicht vorgeschrieben.",
+            "law_passage_id": "bgbl-1-2026-307-p-dd0c76d653dca9b6",
+            "law_quote": "(2) Die Familienkasse kann in den Fällen des § 69 Satz 3 auf einen Antrag verzichten. Das Eingangsdatum\nder Mitteilung des Bundeszentralamts für Steuern tritt dann an die Stelle des Eingangsdatums des Antrags.",
+            "criterion_quote": "Wo möglich sollen Leistungen automatisch beantragt und ausgezahlt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3fe78ed2f5d9bc46",
+            "disposition": "proposed_link"
           },
           "verification": null
         },
@@ -119560,6 +119592,70 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 auf einen Kindergeldantrag verzichten und stattdessen das Eingangsdatum der behördlichen Mitteilung zugrunde legen. Das ermöglicht eine Bearbeitung ohne zusätzlichen Antrag, verpflichtet aber nicht zur automatischen Gewährung.",
+          "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586"
+            }
+          ],
+          "impact_id": "impact-deded4568c1847b3",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.97,
+            "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 auf einen Kindergeldantrag verzichten und stattdessen das Eingangsdatum der behördlichen Mitteilung zugrunde legen. Das ermöglicht eine Bearbeitung ohne zusätzlichen Antrag, verpflichtet aber nicht zur automatischen Gewährung.",
+            "law_passage_id": "bgbl-1-2026-307-p-dd0c76d653dca9b6",
+            "law_quote": "(2) Die Familienkasse kann in den Fällen des § 69 Satz 3 auf einen Antrag verzichten. Das Eingangsdatum\nder Mitteilung des Bundeszentralamts für Steuern tritt dann an die Stelle des Eingangsdatums des Antrags.",
+            "criterion_quote": "Leistungen wie das Kindergeld sollen automatisch gewährt werden. Die Verwaltung prüft\neigenständig, welche Ansprüche bestehen, und leitet diese ohne zusätzliche Anträge ein.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-cf136cd05cc9ce44",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+          "disposition": "proposed_link",
+          "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 einen Kindergeldantrag entfallen lassen und die behördliche Mitteilung an dessen Stelle setzen. Das unterstützt die Bearbeitung ohne Antragstellung, regelt aber keine automatische Antragstellung.",
+          "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e8fef09e5dfeabd7b926f4b7af0d8a31ff0bb8efd0d6cf0135ef83cf51eba123"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "e7658747a293e69c77b7285caf1ae59ccb0c0ac460a9c3ad3e0657cf1b1a8586"
+            }
+          ],
+          "impact_id": "impact-60708db103e41267",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.97,
+            "rationale": "Ab 1. Januar 2027 kann die Familienkasse in den Fällen des § 69 Satz 3 einen Kindergeldantrag entfallen lassen und die behördliche Mitteilung an dessen Stelle setzen. Das unterstützt die Bearbeitung ohne Antragstellung, regelt aber keine automatische Antragstellung.",
+            "law_passage_id": "bgbl-1-2026-307-p-dd0c76d653dca9b6",
+            "law_quote": "(2) Die Familienkasse kann in den Fällen des § 69 Satz 3 auf einen Antrag verzichten. Das Eingangsdatum\nder Mitteilung des Bundeszentralamts für Steuern tritt dann an die Stelle des Eingangsdatums des Antrags.",
+            "criterion_quote": "Wo möglich sollen Leistungen automatisch beantragt und ausgezahlt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d2e1fc81879488aa",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-f6a98f03441c1607",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz regelt Kindergeldanträge und Datenabrufe; es enthält keine Regelung zur Außen- oder Entwicklungspolitik oder zu gleichen Rechten und Möglichkeiten.",
@@ -119591,7 +119687,7 @@
     {
       "law_id": "bgbl-1-2026-308",
       "analysis_sha256": "9bfe8c5280201915907b9419bf7e31485945861a17af90fcc6fdb0edc52b17e3",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-091488700f11bcf7",
@@ -120107,6 +120203,38 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-d74c66f08670d35a",
+          "disposition": "proposed_link",
+          "rationale": "Der Bund fördert den Sport von Menschen mit geistigen Behinderungen; dabei ist die gesellschaftliche Anerkennung inklusiven Sports ein Maßstab. Das unterstützt inklusive Strategien im Sport, nicht jedoch die Förderung kultureller Bildung.",
+          "input_sha256": "67b33be14c32c4a1b4072c9921562a0309f76567a859273c36ca4c2437c60597",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "c1484a83f87974bfe4af36590889eba58b027b9d39e2714b5955b3cd0b68fccd"
+            },
+            {
+              "model": "openai/gpt-6-sol",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "67b33be14c32c4a1b4072c9921562a0309f76567a859273c36ca4c2437c60597"
+            }
+          ],
+          "impact_id": "impact-3c6ef57b5ca4b0ac",
+          "judgment": {
+            "supported": true,
+            "score": 1,
+            "confidence": 0.83,
+            "rationale": "Der Bund fördert den Sport von Menschen mit geistigen Behinderungen; dabei ist die gesellschaftliche Anerkennung inklusiven Sports ein Maßstab. Das unterstützt inklusive Strategien im Sport, nicht jedoch die Förderung kultureller Bildung.",
+            "law_passage_id": "bgbl-1-2026-308-p-54318e858349b414",
+            "law_quote": "Der Bund fördert den Sport der Menschen mit geistigen Behinderungen. Die erfolgreiche Vertretung\nDeutschlands im Bereich des Sports der Menschen mit geistigen Behinderungen bemisst sich insbesondere an\nder Sichtbarkeit sowie der gesellschaftlichen Anerkennung und Akzeptanz des inklusiven Sports sowie der\nerfolgreichen Teilnahme an den Special Olympics World Games.",
+            "criterion_quote": "und dass kulturelle Bildung und inklusive Strategien gefördert werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-d74c66f08670d35a",
+            "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-d9afdfbcc75253e8",
           "disposition": "no_supported_link",
           "rationale": "Das Gesetz enthält keine Regelung zur Anerkennung ausländischer Abschlüsse oder Qualifikationen.",
@@ -120159,13 +120287,67 @@
             "disposition": "no_supported_link"
           },
           "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-eb1a7fb8927b8a93",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz nennt die Bekämpfung von Rassismus als Ziel der Sportförderung, verankert aber keine Stelle einer Anti-Rassismus-Beauftragten.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.96,
+            "rationale": "Das Gesetz nennt die Bekämpfung von Rassismus als Ziel der Sportförderung, verankert aber keine Stelle einer Anti-Rassismus-Beauftragten.",
+            "law_passage_id": "bgbl-1-2026-308-p-cd04ddd789e5f467",
+            "law_quote": "4. die Verhütung und die Bekämpfung von Extremismus, Rassismus, Antisemitismus, Muslimfeindlichkeit,\nAntiziganismus und anderen Formen gruppenbezogener Menschenfeindlichkeit,",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-eb1a7fb8927b8a93",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ed43bdf1b6414aa4",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Sportförderung und enthält keine Regelung zu Gleichstellung oder Parität in Führungspositionen der Privatwirtschaft.",
+          "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "468cdd0d298ec7f5f8f7b741e0151daca202c460fbd84b43c098bbcf8c7eebd3"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz regelt Sportförderung und enthält keine Regelung zu Gleichstellung oder Parität in Führungspositionen der Privatwirtschaft.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ed43bdf1b6414aa4",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
         }
       ]
     },
     {
       "law_id": "bgbl-1-2026-309",
       "analysis_sha256": "ff59a32ecc073a48e76957f185021233ab041d4932b373e7a5337d0963ad1b78",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-10357256c05003e2",
@@ -120182,7 +120364,332 @@
         "spd-2025-ac-e5f88c458391b34c"
       ],
       "omitted_count": 775,
-      "pairs": []
+      "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-10357256c05003e2",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer-Tarife, darunter den Zigarettentarif; eine Sicherung des gesetzlichen Rentenniveaus regelt es nicht.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Tabaksteuer-Tarife, darunter den Zigarettentarif; eine Sicherung des gesetzlichen Rentenniveaus regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-f92863c8c46d9a74",
+            "law_quote": "a) vorbehaltlich der Buchstaben b bis e 18,57 Cent je Stück und 21,05 Prozent des Kleinverkaufspreises,",
+            "criterion_quote": "Wir sorgen dafür, dass das Niveau der **gesetzlichen Rentenversicherung** dauerhaft bei mindestens\n48 Prozent gesichert wird.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-10357256c05003e2",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-151b29689891bd19",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz setzt Tabaksteuer-Tarife fest, unter anderem für Zigaretten; eine Entlastung beim Netto vom Brutto für 95 Prozent der Steuerzahlenden regelt es nicht.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Das Gesetz setzt Tabaksteuer-Tarife fest, unter anderem für Zigaretten; eine Entlastung beim Netto vom Brutto für 95 Prozent der Steuerzahlenden regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-f92863c8c46d9a74",
+            "law_quote": "a) vorbehaltlich der Buchstaben b bis e 18,57 Cent je Stück und 21,05 Prozent des Kleinverkaufspreises,",
+            "criterion_quote": "**Wir wollen, dass 95 Prozent der Steuerzahlenden mehr Netto vom Brutto haben.**",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-151b29689891bd19",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-1ea29f9d36cefcac",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer-Tarife, darunter gestaffelte Tarife ab 2027; öffentliche Entwicklungsleistungen oder die ODA-Quote regelt es nicht.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Tabaksteuer-Tarife, darunter gestaffelte Tarife ab 2027; öffentliche Entwicklungsleistungen oder die ODA-Quote regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-8ad8b4a93bf9a9ff",
+            "law_quote": "b) für den Zeitraum vom 1. Januar 2027 bis zum 31. Dezember 2027 14,34 Cent je Stück und 21,05 Prozent",
+            "criterion_quote": "Wir wollen, dass mindestens **0,7**\n**Prozent des Bruttonationaleinkommens (BNE) für öffentliche Entwicklungsleistungen** (ODA-Quote)\nbereitgestellt werden.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-1ea29f9d36cefcac",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-257211065367d48e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz regelt Tabaksteuer-Tarife, nicht die Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz regelt Tabaksteuer-Tarife, nicht die Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": "bgbl-1-2026-309-p-f92863c8c46d9a74",
+            "law_quote": "a) vorbehaltlich der Buchstaben b bis e 18,57 Cent je Stück und 21,05 Prozent des Kleinverkaufspreises,",
+            "criterion_quote": "Dementsprechend muss der Mindestlohn spätestens ab 2026 bei 15 Euro liegen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-257211065367d48e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-2cbb5eca4d1d156d",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer-Tarife; ein steuerliches Anreizsystem für die Filmförderung führt es nicht ein.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Tabaksteuer-Tarife; ein steuerliches Anreizsystem für die Filmförderung führt es nicht ein.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Wir setzen uns daher für eine umfassende Reform der Filmförderung, bestehend aus\neinem steuerlichen Anreizsystem",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-2cbb5eca4d1d156d",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer-Tarife und enthält Übergangsregeln zu Steuerzeichen; Mietpreisregeln oder deren Anwendungsbereich regelt es nicht.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Tabaksteuer-Tarife und enthält Übergangsregeln zu Steuerzeichen; Mietpreisregeln oder deren Anwendungsbereich regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "auch für Immobilien, die\nbis 2019 bezogen wurden, gelten",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-3cff0c761f7e496e",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer-Tarife; die Umsetzung der Entgelttransparenzrichtlinie behandelt es nicht.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Tabaksteuer-Tarife; die Umsetzung der Entgelttransparenzrichtlinie behandelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "deswegen die EU-Entgelttransparenzrichtlinie bis 2026 in nationales Recht umsetzen.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-4eabc2a9a0537a61",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+          "disposition": "no_supported_link",
+          "rationale": "Das Gesetz ändert Tabaksteuer-Tarife; Artikel 3 Absatz 3 des Grundgesetzes und die genannten Diskriminierungsmerkmale regelt es nicht.",
+          "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "d910763593ccf260f3ac01ff84e7dfa4586a4f9fdd54f81531f68e0660081343"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Das Gesetz ändert Tabaksteuer-Tarife; Artikel 3 Absatz 3 des Grundgesetzes und die genannten Diskriminierungsmerkmale regelt es nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Wir wollen den **Schutz vor Diskriminierung im Grundgesetz (GG) explizit auf sexuelle Orientierung**\n**und geschlechtliche Identität erweitern** . Artikel 3 Abs. 3 GG werden wir daher entsprechend\nerweitern.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-95d3188e9179bea1",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft Tabaksteuer und Steuerzeichen; eine steuer- und abgabenfreie Auszahlung eines Führerscheinzuschusses wird nicht geregelt.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung betrifft Tabaksteuer und Steuerzeichen; eine steuer- und abgabenfreie Auszahlung eines Führerscheinzuschusses wird nicht geregelt.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "einen Führerscheinzuschuss von bis zu 2.000 Euro steuer- und abgabenfrei",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-a7bc503e7e3f9fb0",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-c242913d648b92fd",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung setzt Tabaksteuersätze fest, nicht die Höhe des gesetzlichen Mindestlohns.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung setzt Tabaksteuersätze fest, nicht die Höhe des gesetzlichen Mindestlohns.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "an mindestens 60 Prozent des mittleren Einkommens in Deutschland",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-c242913d648b92fd",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-ccc64bfa792d789f",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung regelt Tabaksteuer, nicht den Mehrwertsteuersatz für Lebensmittel.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung regelt Tabaksteuer, nicht den Mehrwertsteuersatz für Lebensmittel.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "Senkung der Mehrwertsteuer für Lebensmittel auf fünf Prozent.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-ccc64bfa792d789f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-e5f88c458391b34c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Änderung betrifft Tabaksteuer; eine Senkung des ermäßigten Mehrwertsteuersatzes für Lebensmittel enthält sie nicht.",
+          "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "66181c1f222083df477fac864291a6c964934d4a0448220faf43042862abb5fe"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.98,
+            "rationale": "Die Änderung betrifft Tabaksteuer; eine Senkung des ermäßigten Mehrwertsteuersatzes für Lebensmittel enthält sie nicht.",
+            "law_passage_id": "bgbl-1-2026-309-p-44a2216f94d78bbb",
+            "law_quote": "Änderung des Tabaksteuergesetzes",
+            "criterion_quote": "den ermäßigten Mehrwertsteuersatz für Lebensmittel von sieben Prozent auf fünf Prozent senken",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-e5f88c458391b34c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        }
+      ]
     },
     {
       "law_id": "bgbl-1-2026-33",
@@ -141607,7 +142114,7 @@
     {
       "law_id": "bgbl-1-2026-98",
       "analysis_sha256": "39e890fc9ea14dbc31e2b89b8869e91927ed3758f8b0d2ae1f3409eef1bcb7e4",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-01603982d11b31ad",
@@ -141795,6 +142302,35 @@
             ],
             "criterion_id": "spd-2025-ac-07f8e6809ae6ce30",
             "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-0ebdac2cd84d7a96",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge betreffen Krankenhausplanung und -finanzierung; da der Gesetzeskontext ausdrücklich unvollständig ist, lässt sich nicht feststellen, ob das Gesetz Altersgrenzen für die genannten Produkte einführt.",
+          "input_sha256": "2edd6ef7f43b707981ac21bf4ca4d4211c2bc238792ae15d81cef019b145233c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2edd6ef7f43b707981ac21bf4ca4d4211c2bc238792ae15d81cef019b145233c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge betreffen Krankenhausplanung und -finanzierung; da der Gesetzeskontext ausdrücklich unvollständig ist, lässt sich nicht feststellen, ob das Gesetz Altersgrenzen für die genannten Produkte einführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„Werbebeschränkungen und Altersgrenzen für EnergyDrinks, Alkohol, Einweg-Zigaretten und neuartige Nikotinprodukte.“",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-0ebdac2cd84d7a96",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -142520,6 +143056,35 @@
             "caveats": [],
             "criterion_id": "spd-2025-ac-60324cc39524539a",
             "disposition": "proposed_link"
+          },
+          "verification": null
+        },
+        {
+          "criterion_id": "spd-2025-ac-60fc5223746838ff",
+          "disposition": "missing_context",
+          "rationale": "Die vorgelegten Auszüge betreffen Krankenhausplanung und -finanzierung; da der Gesetzeskontext ausdrücklich unvollständig ist, lässt sich nicht feststellen, ob das Gesetz Werbebeschränkungen für die genannten Produkte einführt.",
+          "input_sha256": "2edd6ef7f43b707981ac21bf4ca4d4211c2bc238792ae15d81cef019b145233c",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "2edd6ef7f43b707981ac21bf4ca4d4211c2bc238792ae15d81cef019b145233c"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die vorgelegten Auszüge betreffen Krankenhausplanung und -finanzierung; da der Gesetzeskontext ausdrücklich unvollständig ist, lässt sich nicht feststellen, ob das Gesetz Werbebeschränkungen für die genannten Produkte einführt.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "„Werbebeschränkungen und Altersgrenzen für EnergyDrinks, Alkohol, Einweg-Zigaretten und neuartige Nikotinprodukte.“",
+            "caveats": [
+              "Der Gesetzeskontext ist als teilweise gekennzeichnet."
+            ],
+            "criterion_id": "spd-2025-ac-60fc5223746838ff",
+            "disposition": "missing_context"
           },
           "verification": null
         },
@@ -164995,7 +165560,7 @@
     {
       "law_id": "bgbl-2-2026-60",
       "analysis_sha256": "0a945a1b6a6b288d015413c43fb8708e3dabf2e8623de10bd94b083a4d55d8ba",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-020564b181b1dd7c",
@@ -165161,6 +165726,33 @@
       ],
       "omitted_count": 627,
       "pairs": [
+        {
+          "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+          "disposition": "no_supported_link",
+          "rationale": "Die Vertragsauszüge regeln keine Arbeit der Mindestlohnkommission und keine Berücksichtigung europäischen Rechts beim Mindestlohn.",
+          "input_sha256": "55f4b6cbf107155035b1c750cec70c936c7333488ba25732fb8297e3d8e57099",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "55f4b6cbf107155035b1c750cec70c936c7333488ba25732fb8297e3d8e57099"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.99,
+            "rationale": "Die Vertragsauszüge regeln keine Arbeit der Mindestlohnkommission und keine Berücksichtigung europäischen Rechts beim Mindestlohn.",
+            "law_passage_id": null,
+            "law_quote": null,
+            "criterion_quote": "Wir werden\ndafür sorgen, dass dieses europäische Recht von der Mindestlohnkommission künftig berücksichtigt\nwird.",
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-020564b181b1dd7c",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
         {
           "criterion_id": "spd-2025-ac-025ec9e0d20be79c",
           "disposition": "no_supported_link",
@@ -172035,7 +172627,7 @@
     {
       "law_id": "bgbl-2-2026-8",
       "analysis_sha256": "4778413143787ce79029f72ea797d9392223c0c3133021748d266653111c4405",
-      "status": "partial",
+      "status": "completed",
       "eligible_count": 787,
       "candidate_ids": [
         "spd-2025-ac-00fd956fd51d10ba",
@@ -178946,6 +179538,33 @@
           "verification": null
         },
         {
+          "criterion_id": "spd-2025-ac-9acf9c66d6a26f5f",
+          "disposition": "no_supported_link",
+          "rationale": "Das Abkommen erkennt menschenwürdige Arbeit als Ziel der Sozialpolitik an, verpflichtet Fahrdienstleister in den vorliegenden Bestimmungen aber nicht zur Einhaltung bestimmter sozialer Standards.",
+          "input_sha256": "9fa5bccb131c353a828db44ef1eee8e217d8a4bbe516308be6a6a3a2e513b253",
+          "generation": [
+            {
+              "model": "openai/gpt-6-luna",
+              "prompt_version": "politrace-evidence-v3",
+              "input_sha256": "9fa5bccb131c353a828db44ef1eee8e217d8a4bbe516308be6a6a3a2e513b253"
+            }
+          ],
+          "impact_id": null,
+          "judgment": {
+            "supported": false,
+            "score": null,
+            "confidence": 0.91,
+            "rationale": "Das Abkommen erkennt menschenwürdige Arbeit als Ziel der Sozialpolitik an, verpflichtet Fahrdienstleister in den vorliegenden Bestimmungen aber nicht zur Einhaltung bestimmter sozialer Standards.",
+            "law_passage_id": "bgbl-2-2026-8-p-7d19085e07719c5c",
+            "law_quote": "Die Vertragsparteien erkennen an, dass die Verbesserung des Lebensstandards, die Schaffung hochwertiger Arbeitsplätze sowie die Förderung menschenwürdiger Arbeit im Mittelpunkt der Beschäftigungs- und Sozialpolitik stehen sollten.",
+            "criterion_quote": null,
+            "caveats": [],
+            "criterion_id": "spd-2025-ac-9acf9c66d6a26f5f",
+            "disposition": "no_supported_link"
+          },
+          "verification": null
+        },
+        {
           "criterion_id": "spd-2025-ac-9b154c4ce555237b",
           "disposition": "no_supported_link",
           "rationale": "Die vorgelegten Bestimmungen regeln keine Finanzierung kommunaler Wohnungsbaugesellschaften, Energieversorger oder Verkehrsunternehmen über den Deutschlandfonds.",
@@ -183657,45 +184276,45 @@
   "cost": {
     "model": "openai/gpt-6-luna",
     "review_model": "openai/gpt-6-sol",
-    "calls": 8441,
-    "cache_hits": 327,
-    "subdivision_cache_hits": 0,
+    "calls": 8486,
+    "cache_hits": 330,
+    "subdivision_cache_hits": 4,
     "funded_credit_retries": 0,
-    "reported_cost_usd": 32.047647,
-    "reported_cost_calls": 7758,
+    "reported_cost_usd": 32.221821,
+    "reported_cost_calls": 7803,
     "pending_reserved_usd": 0.0,
     "in_flight_calls": 0,
     "unknown_cost_reserved_usd": 3.975844,
     "unknown_cost_calls": 683,
     "cost_accounting_complete": false,
-    "budget_exposure_usd": 36.023491,
-    "prompt_tokens": 84256855,
-    "completion_tokens": 14756920,
+    "budget_exposure_usd": 36.197664,
+    "prompt_tokens": 84739926,
+    "completion_tokens": 14831839,
     "max_usd": 47.84228986249995,
     "breakdown": {
       "openai/gpt-6-sol:final_links": {
         "model": "openai/gpt-6-sol",
         "stage": "final_links",
-        "calls": 313,
-        "reported_cost_usd": 7.855004099999998,
+        "calls": 317,
+        "reported_cost_usd": 7.953052349999997,
         "unknown_cost_reserved_usd": 1.3183898417423734e-15,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:overall_assessments": {
         "model": "openai/gpt-6-sol",
         "stage": "overall_assessments",
-        "calls": 146,
-        "reported_cost_usd": 1.839896250000001,
+        "calls": 149,
+        "reported_cost_usd": 1.874389000000001,
         "unknown_cost_reserved_usd": 0.07319300000000017,
         "pending_reserved_usd": 0
       },
       "openai/gpt-6-luna:screening": {
         "model": "openai/gpt-6-luna",
         "stage": "screening",
-        "calls": 4505,
-        "reported_cost_usd": 5.241778019999994,
+        "calls": 4543,
+        "reported_cost_usd": 5.283410812499994,
         "unknown_cost_reserved_usd": 2.886860200000003,
-        "pending_reserved_usd": 1.5612511283791264e-17
+        "pending_reserved_usd": 0
       },
       "openai/gpt-6-sol:screening": {
         "model": "openai/gpt-6-sol",
