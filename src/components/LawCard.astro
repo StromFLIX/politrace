@@ -1,12 +1,16 @@
 ---
 import Icon from './Icon.astro';
 import { topics, formatDate } from '../lib/data';
-import { cardVote, groupVotePreview, partyLinks } from '../lib/law-card';
+import { cardVotes, groupVotePreview, partyLinks } from '../lib/law-card';
+import { coverageLabels, stageLabels } from '../lib/voting';
 import type { Law, Data } from '../lib/types';
 interface Props { law: Law; data: Data }
 const { law, data } = Astro.props;
 const parties = partyLinks(data, law.id);
-const vote = cardVote(data, law.id);
+const votes = cardVotes(data, law.id);
+const coverage = data.votingCoverage?.items.find(row => row.law_id === law.id);
+const coverageWarning = coverage && ['ambiguous', 'source_error', 'source_changed'].includes(coverage.status)
+  ? coverageLabels[coverage.status] : null;
 const detailUrl = `/${data.dataset}/gesetze/${law.id}/`;
 ---
 <article class="activity-card" data-filter-item data-search={`${law.title} ${law.summary} ${law.citation} ${law.tags.map(t => topics[t]).join(' ')}`} data-party={parties.map(p => p.party.id).join(' ')} data-topic={law.tags.join(' ')} data-status={parties.length ? 'linked' : 'pending'}>
@@ -22,9 +26,14 @@ const detailUrl = `/${data.dataset}/gesetze/${law.id}/`;
     </div>
   </div>
   <div class="activity-card-footer">
-    {vote?.groups.length ? <div class="card-votes">
-      <a class="vote-heading" href={`${detailUrl}#${vote.id}`}>Schlussabstimmung <Icon name="arrow" size={11} /></a>
-      <div class="vote-groups">{vote.groups.map(group => {
+    {votes.length ? <div class="card-votes">
+      {coverageWarning && <a class="vote-warning" href={`${detailUrl}#abstimmungen`}>{coverageWarning}</a>}
+      {votes.length > 1 && votes.every(v => v.stage === 'final_passage') && <span class="vote-warning">Mehrere Schlussabstimmungen · keine eindeutige Vergleichsgrundlage</span>}
+      {votes.map(vote => <div class="card-vote" data-vote-id={vote.id}>
+      <a class="vote-heading" href={`${detailUrl}#${vote.id}`}>{stageLabels[vote.stage ?? 'unknown']} · {formatDate(vote.date)} <Icon name="arrow" size={11} /></a>
+      {vote.evidence?.law_match === 'exact_title' && <span class="vote-warning">Vorläufige Gesetzeszuordnung (exakter Titel)</span>}
+      {vote.scope === 'partial_law' && <span class="vote-warning">Nur Teile des Gesetzes</span>}
+      {vote.groups.length ? <div class="vote-groups">{vote.groups.map(group => {
         const { totals, position, label } = groupVotePreview(group, vote.type);
         const name = data.parties.find(p => p.id === group.party_id)?.short_name ?? group.group;
         return <a class="vote-group" href={`${detailUrl}#${vote.id}`} aria-label={`${group.group}: ${label}`} title={`${group.group}: ${label}`}>
@@ -34,8 +43,9 @@ const detailUrl = `/${data.dataset}/gesetze/${law.id}/`;
           </span> : <span class:list={['position-mark', `position-${position}`]} aria-hidden="true" />}
           <span class="vote-position">{({ yes: 'Ja', no: 'Nein', abstain: 'Enth.', mixed: 'Geteilt', unknown: 'Offen' })[position]}</span>
         </a>;
-      })}</div>
-    </div> : <a class="vote-heading" href={`${detailUrl}#abstimmungen`}><Icon name="info" size={12} /> {vote ? 'Nur Beschluss belegt' : 'Stimmverhalten offen'}</a>}
+      })}</div> : <span class="vote-warning">Nur Beschluss belegt · Stimmverhalten offen</span>}
+      </div>)}
+    </div> : <a class="vote-heading" href={`${detailUrl}#abstimmungen`}><Icon name="info" size={12} /> {coverageWarning ?? 'Stimmverhalten offen'}</a>}
     <a href={detailUrl} class="text-link law-detail-link">Gesetz & Belege <Icon name="arrow" size={13} /></a>
   </div>
 </article>
@@ -58,6 +68,8 @@ const detailUrl = `/${data.dataset}/gesetze/${law.id}/`;
   .party-link-group a:hover, .vote-heading:hover, .vote-group:hover { color: var(--blue); }
   .activity-card-footer { flex-wrap: wrap; gap: 12px; }
   .card-votes { flex: 1 1 340px; min-width: 0; }
+  .card-vote + .card-vote { border-top: 1px solid var(--border); margin-top: 9px; padding-top: 9px; }
+  .vote-warning { display: block; font-size: 10px; margin-top: 4px; }
   .vote-heading { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; }
   .vote-groups { display: flex; gap: 8px 16px; flex-wrap: wrap; margin-top: 7px; }
   .vote-group { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; }

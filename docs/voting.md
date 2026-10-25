@@ -68,7 +68,9 @@ Pattern denominators are explicit:
 - Faction positions: distinct laws with a unique confirmed final decision and an explicit faction position.
 - Programme comparisons: **law × criterion × faction**. Multiple criteria on one law are correlated; these are not independent breaches or a party ranking. There is no percentage-of-promises-broken metric.
 
-Citizen entry points: `/live/abstimmungen/`, individual law/criterion pages, and party pages scoped to the selected programme year. Law pages expose searchable/filterable individual ballots, original protocol quotes, source links, JSON and correction links. Without JavaScript, all published rows and source links remain accessible.
+The Activity feed displays publishable official voting evidence independently of programme-comparison eligibility. It prefers final decisions, retaining all of them when there are several; if no final decision is published, it shows the available decisions with their actual stages. Exact-title law matches are visibly provisional, partial-law scope and unresolved coverage warnings remain explicit, and decision-only records are not presented as faction positions. These previews do not relax any comparison rules or fill missing factions or counts.
+
+Citizen entry points: `/live/aktivitaet/`, `/live/abstimmungen/`, individual law/criterion pages, and party pages scoped to the selected programme year. Law pages expose searchable/filterable individual ballots, original protocol quotes, source links, JSON and correction links. Without JavaScript, all published rows and source links remain accessible.
 
 API endpoints (static snapshots, not live parliamentary services):
 
